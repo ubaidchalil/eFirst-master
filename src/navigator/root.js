@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { createStackNavigator, createAppContainer, createBottomTabNavigator, DrawerNavigator } from "react-navigation";
 import HomeScreen from "../components/dashboard";
-import DocumentAttestationScreen from "../components/service/documentattestation";
+import DocumentAttestation from "../components/service/documentattestation";
+import SelectService from "../components/service/selectservice";
 import UserActions from "../components/service/useractions";
 import AuthStack from "./accountstack";
 import SideBar from '../SideBar';
@@ -10,9 +11,10 @@ import Profile from '../components/profile/profile';
 
 const Tabs = createBottomTabNavigator({
   HomeScreen: { screen: HomeScreen },
-  RequestService: { screen: DocumentAttestationScreen },
+  RequestService: { screen: SelectService },
   MyRequests: { screen: UserActions },
-  Profile : { screen: Profile }
+  Profile : { screen: Profile },
+  DocumentAttestation : { screen: DocumentAttestation },
 },
 {
   tabBarComponent: BottomBar,
@@ -40,12 +42,6 @@ const root = createStackNavigator({
   },
   Home: {
     screen: Drawer,
-    navigationOptions: {
-      header:null
-    }
-  },
-  DocumentAttestationScreen: {
-    screen: DocumentAttestationScreen,
     navigationOptions: {
       header:null
     }

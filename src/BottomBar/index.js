@@ -19,7 +19,7 @@ export default class FooterTabsExample extends Component {
             <TouchableOpacity  onPress={this.navigateToScreen('HomeScreen')} style={{ alignItems:'center',  flex:1 }}  >
               <View  >
                 <Icon style={{ alignSelf:'center' }} name="speedometer" />
-                <Text>Dashboard</Text>
+                <Text>Dashboards</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={{ alignItems:'center',  flex:1, borderRightColor: '#7F8C8D', borderRightWidth: 1, borderLeftColor: '#7F8C8D', borderLeftWidth: 1  }}

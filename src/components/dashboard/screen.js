@@ -88,7 +88,7 @@ export default ({ navigation, dashboard }) => (
             </Button>
           </Left>
           <Body>
-            <Title>Dashboard</Title>
+            <Title>Dashboards</Title>
           </Body>
           <Right>
             <Button transparent>
