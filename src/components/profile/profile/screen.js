@@ -1,6 +1,23 @@
 import React, { Component } from "react";
 import { View, TouchableOpacity, StyleSheet } from "react-native";
-import { Container, Header, Content, List, Icon, Left,  H3, Thumbnail, Text, Button , Grid, Col, Row, Form, Item, Input} from 'native-base';
+import {
+  Container,
+  Header,
+  Content,
+  List,
+  Icon,
+  Left,
+  H3,
+  Thumbnail,
+  Text,
+  Button,
+  Grid,
+  Col,
+  Row,
+  Form,
+  Item,
+  Input
+} from "native-base";
 
 export default ({ navigation, user }) => {
   return (
