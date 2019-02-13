@@ -52,7 +52,8 @@ export default class ListIconExample extends Component {
               <Text style={styles.text} >My Services</Text>
             </Body>
           </ListItem>
-          <ListItem icon style={styles.listIem} >
+          <ListItem icon style={styles.listIem}
+           onPress={this.navigateToScreen('Profile')} >
             <Left style={styles.left}>
                 <Icon style={styles.icon} name="arrow-dropright" />
             </Left>

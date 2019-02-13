@@ -1,22 +1,10 @@
 import React, { Component } from "react";
-import { View, Image, StyleSheet } from "react-native";
-import {
-  Container,
-  Content,
-  Icon,
-  Input,
-  Text,
-  Button,
-  StyleProvider
-} from "native-base";
-import getTheme from "../../../../native-base-theme/components";
-import material from "../../../../native-base-theme/variables/material";
-import Greeting from "./useractionitems";
+import { View, TouchableOpacity, StyleSheet } from "react-native";
+import { Container, Header, Content, List, Icon, Left,  H3, Thumbnail, Text, Button , Grid, Col, Row, Form, Item, Input} from 'native-base';
 
 export default ({ navigation, user }) => {
   return (
     <Container>
-      <Header />
       <Content>
         <View style={{ flexDirection: "row", padding: 10 }}>
           <View
