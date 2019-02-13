@@ -4,11 +4,8 @@ import HomeScreen from "../components/dashboard";
 import DocumentAttestationScreen from "../components/service/documentattestation";
 import UserActions from "../components/service/useractions";
 import AuthStack from "./accountstack";
-import RootHeader from "../components/styled/Headers/RootHeader";
-
 import SideBar from '../SideBar';
 import BottomBar from '../BottomBar';
-
 
 const Tabs = createBottomTabNavigator({
   HomeScreen: { screen: HomeScreen },
