@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import { View, TouchableOpacity, StyleSheet } from "react-native";
+
 import {
   Container,
   Header,
   Content,
-  List,
+  Body,
   Icon,
   Left,
+  Title,
+  Right,
   H3,
   Thumbnail,
   Text,
@@ -18,10 +21,36 @@ import {
   Item,
   Input
 } from "native-base";
+import { NavigationActions } from "react-navigation";
 
 export default ({ navigation, user }) => {
+  navigateToScreen = route => {
+    const navigateAction = NavigationActions.navigate({
+      routeName: route
+    });
+    navigation.dispatch(navigateAction);
+  };
+
   return (
     <Container>
+      <Header style={{ backgroundColor: "#003366" }}>
+        <Left>
+          <Button transparent onPress={() => navigation.openDrawer()}>
+            <Icon name="menu" />
+          </Button>
+        </Left>
+        <Body>
+          <Title>Manage Profile</Title>
+        </Body>
+        <Right>
+          <Button transparent>
+            <Icon name="notifications" />
+          </Button>
+          <Button transparent onPress={() => this.navigateToScreen("Profile")}>
+            <Icon name="contact" />
+          </Button>
+        </Right>
+      </Header>
       <Content>
         <View style={{ flexDirection: "row", padding: 10 }}>
           <View

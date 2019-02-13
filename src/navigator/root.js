@@ -1,18 +1,34 @@
 import React, { Component } from "react";
 import { createStackNavigator, createAppContainer, createBottomTabNavigator, DrawerNavigator } from "react-navigation";
 import HomeScreen from "../components/dashboard";
-import DocumentAttestationScreen from "../components/service/documentattestation";
+import DocumentAttestation from "../components/service/documentattestation";
+import SelectService from "../components/service/selectservice";
 import UserActions from "../components/service/useractions";
 import AuthStack from "./accountstack";
 import SideBar from '../SideBar';
 import BottomBar from '../BottomBar';
 import Profile from '../components/profile/profile';
 
+export const RequestServiceStack = createStackNavigator({
+  SelectService: {
+    screen: SelectService,
+    navigationOptions: {
+      header: null
+    }
+  },
+  DocumentAttestation: {
+    screen: DocumentAttestation,
+    navigationOptions: {
+      header:null
+    }
+  }
+});
+
 const Tabs = createBottomTabNavigator({
   HomeScreen: { screen: HomeScreen },
-  RequestService: { screen: DocumentAttestationScreen },
+  RequestService: { screen: RequestServiceStack },
   MyRequests: { screen: UserActions },
-  Profile : { screen: Profile }
+  Profile : { screen: Profile },
 },
 {
   tabBarComponent: BottomBar,
@@ -29,8 +45,6 @@ const Drawer = DrawerNavigator({
   drawerWidth: 250
 });
 
-
-
 const root = createStackNavigator({
   Auth: {
     screen: AuthStack,
@@ -40,12 +54,6 @@ const root = createStackNavigator({
   },
   Home: {
     screen: Drawer,
-    navigationOptions: {
-      header:null
-    }
-  },
-  DocumentAttestationScreen: {
-    screen: DocumentAttestationScreen,
     navigationOptions: {
       header:null
     }

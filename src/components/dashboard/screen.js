@@ -18,6 +18,7 @@ import {
 } from "native-base";
 import getTheme from "../../../native-base-theme/components";
 import material from "../../../native-base-theme/variables/material";
+
 let styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
@@ -38,7 +39,6 @@ let styles = StyleSheet.create({
   },
   card_outer: {
     height: 150,
-    backgroundColor: "#FEF8A2",
     alignItems: "center"
   },
   card_inner: {
@@ -70,11 +70,34 @@ let styles = StyleSheet.create({
   },
   card_content_left: {
     fontSize: 13,
-    color: "yellow"
   },
   card_content_right: {
     fontSize: 13,
     color: "#515A5A"
+  },
+  required_bgcolor: {
+    backgroundColor: "#FDEBD0",
+  },
+  required_updates_color: {
+    color: "#D4AC0D"
+  },
+  review_bgcolor: {
+    backgroundColor: "#AED6F1",
+  },
+  review_updates_color: {
+    color: "#21618C"
+  },
+  completed_bgcolor: {
+    backgroundColor: "#D5F5E3",
+  },
+  completed_updates_color: {
+    color: "#28B463"
+  },
+  rejected_bgcolor: {
+    backgroundColor: "#FADBD8",
+  },
+  rejected_updates_color: {
+    color: "#CB4335"
   }
 });
 
@@ -88,19 +111,19 @@ export default ({ navigation, dashboard }) => (
             </Button>
           </Left>
           <Body>
-            <Title>Dashboard</Title>
+            <Title>Dashboards</Title>
           </Body>
           <Right>
             <Button transparent>
               <Icon name='notifications' />
             </Button>
             <Button transparent>
-              <Icon name='contact' />
+              <Icon name='contact' onPress={() => navigation.navigate("Profile")} />
             </Button>
           </Right>
         </Header>
       <Content>
-        <View style={styles.card_outer}>
+        <View style={[styles.card_outer,styles.required_bgcolor]}>
           <View style={styles.card_inner}>
             <View style={styles.card_image_container}>
               <Image
@@ -108,13 +131,48 @@ export default ({ navigation, dashboard }) => (
                 style={styles.card_image}
               />
             </View>
-            <View style={styles.card_content_outer}>
+            <View style={[styles.card_content_outer]}>
               <View>
                 <Text style={styles.catd_content_main}>Action Required</Text>
               </View>
               {dashboard.data && (
                 <View style={{ flexDirection: "row" }}>
-                  <Text style={styles.card_content_left}>
+                  <Text style={[styles.card_content_left,styles.required_updates_color]}>
+                    {dashboard.data.Tiles.ActionRequiredNewUpdateCount} Updates
+                  </Text>
+                  <Text style={styles.card_content_right}>
+                    {" "}
+                    | {dashboard.data.Tiles.ActionRequiredTotalUpdateCount}{" "}
+                    Updates
+                  </Text>
+                </View>
+              )}
+            </View>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("MyRequests", { statusId: 1 });
+              }}
+            >
+              <Icon style={{ color: "#515A5A" }} name="arrow-dropright" />
+            </TouchableOpacity>
+          </View>
+        </View>
+        
+        <View style={[styles.card_outer,styles.review_bgcolor]}>
+          <View style={styles.card_inner}>
+            <View style={styles.card_image_container}>
+              <Image
+                source={require("../../Assets/tickets/ticket_review.png")}
+                style={styles.card_image}
+              />
+            </View>
+            <View style={[styles.card_content_outer]}>
+              <View>
+                <Text style={styles.catd_content_main}>In Review</Text>
+              </View>
+              {dashboard.data && (
+                <View style={{ flexDirection: "row" }}>
+                  <Text style={[styles.card_content_left,styles.review_updates_color]}>
                     {dashboard.data.Tiles.ActionRequiredNewUpdateCount} Updates
                   </Text>
                   <Text style={styles.card_content_right}>
@@ -134,6 +192,79 @@ export default ({ navigation, dashboard }) => (
             </TouchableOpacity>
           </View>
         </View>
+        
+        
+        <View style={[styles.card_outer,styles.completed_bgcolor]}>
+          <View style={styles.card_inner}>
+            <View style={styles.card_image_container}>
+              <Image
+                source={require("../../Assets/tickets/ticket_completed.png")}
+                style={styles.card_image}
+              />
+            </View>
+            <View style={[styles.card_content_outer]}>
+              <View>
+                <Text style={styles.catd_content_main}>Completed</Text>
+              </View>
+              {dashboard.data && (
+                <View style={{ flexDirection: "row" }}>
+                  <Text style={[styles.card_content_left,styles.completed_updates_color]}>
+                    {dashboard.data.Tiles.ActionRequiredNewUpdateCount} Updates
+                  </Text>
+                  <Text style={styles.card_content_right}>
+                    {" "}
+                    | {dashboard.data.Tiles.ActionRequiredTotalUpdateCount}{" "}
+                    Updates
+                  </Text>
+                </View>
+              )}
+            </View>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("MyRequests", { statusId: 2 });
+              }}
+            >
+              <Icon style={{ color: "#515A5A" }} name="arrow-dropright" />
+            </TouchableOpacity>
+          </View>
+        </View>
+        
+        
+        <View style={[styles.card_outer,styles.rejected_bgcolor]}>
+          <View style={styles.card_inner}>
+            <View style={styles.card_image_container}>
+              <Image
+                source={require("../../Assets/tickets/ticket_rejected.png")}
+                style={styles.card_image}
+              />
+            </View>
+            <View style={[styles.card_content_outer]}>
+              <View>
+                <Text style={styles.catd_content_main}>Rejected</Text>
+              </View>
+              {dashboard.data && (
+                <View style={{ flexDirection: "row" }}>
+                  <Text style={[styles.card_content_left,styles.rejected_updates_color]}>
+                    {dashboard.data.Tiles.ActionRequiredNewUpdateCount} Updates
+                  </Text>
+                  <Text style={styles.card_content_right}>
+                    {" "}
+                    | {dashboard.data.Tiles.ActionRequiredTotalUpdateCount}{" "}
+                    Updates
+                  </Text>
+                </View>
+              )}
+            </View>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("MyRequests", { statusId: 2 });
+              }}
+            >
+              <Icon style={{ color: "#515A5A" }} name="arrow-dropright" />
+            </TouchableOpacity>
+          </View>
+        </View>
+        
       </Content>
     </Container>
   </StyleProvider>

@@ -3,7 +3,7 @@ import { View, TouchableOpacity } from 'react-native';
 import { Container, Footer, FooterTab, Button, Text, Icon } from 'native-base';
 import {NavigationActions} from 'react-navigation';
 
-export default class FooterTabsExample extends Component {  
+export default class FooterTabs extends Component {  
 
   navigateToScreen = (route) => () => {
     const navigateAction = NavigationActions.navigate({
@@ -15,24 +15,24 @@ export default class FooterTabsExample extends Component {
   render() {
     return (
         <Footer>
-          <FooterTab style={{ backgroundColor: 'white', elevation: 5, borderTopColor: '#7F8C8D', borderTopWidth: 1, justifyContent: 'space-around'}}>
+          <FooterTab style={{ backgroundColor: 'white', borderTopColor:'#F2F3F4', borderTopWidth:2, elevation: 1,shadowColor: '#000',shadowRadius: 2, shadowOffset: { width: 0, height: 3 }, shadowOpacity: 1,  justifyContent: 'space-around'}}>
             <TouchableOpacity  onPress={this.navigateToScreen('HomeScreen')} style={{ alignItems:'center',  flex:1 }}  >
               <View  >
-                <Icon style={{ alignSelf:'center' }} name="speedometer" />
-                <Text>Dashboard</Text>
+                <Icon style={{ alignSelf:'center', color: '#003366' }} name="speedometer" />
+                <Text style={{ alignSelf:'center', color: '#003366', fontSize: 13 }}>Dashboard</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={{ alignItems:'center',  flex:1, borderRightColor: '#7F8C8D', borderRightWidth: 1, borderLeftColor: '#7F8C8D', borderLeftWidth: 1  }}
+            <TouchableOpacity style={{ alignItems:'center',  flex:1, borderRightColor: '#D7DBDD', borderRightWidth: 1, borderLeftColor: '#D7DBDD', borderLeftWidth: 1  }}
               onPress={this.navigateToScreen('RequestService')}  >
               <View >
-                <Icon style={{ alignSelf:'center' }} name="add" />
-                <Text>Request service</Text>
+                <Icon style={{ alignSelf:'center', color: '#003366' }} name="add" />
+                <Text style={{ alignSelf:'center', color: '#003366', fontSize: 13 }}>Request service</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={{ alignItems:'center', flex:1 }} onPress={this.navigateToScreen('MyRequests')}  >
               <View  >
-                <Icon style={{ alignSelf:'center' }} name="list-box" />
-                <Text>My Requests</Text>
+                <Icon style={{ alignSelf:'center', color: '#003366' }} name="list-box" />
+                <Text style={{ alignSelf:'center', color: '#003366', fontSize: 13 }}>My Requests</Text>
               </View>
             </TouchableOpacity>
           </FooterTab>

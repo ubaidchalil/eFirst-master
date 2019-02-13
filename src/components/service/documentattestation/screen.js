@@ -16,8 +16,10 @@ import {
   Header,
   Left,
   Right,
-  Body
+  Body,
+  Title
 } from "native-base";
+import {NavigationActions} from 'react-navigation';
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
@@ -69,8 +71,34 @@ const DocumentAttestation = ({
       token: token.token
     });
   };
+  
+  navigateToScreen = (route) => {
+    const navigateAction = NavigationActions.navigate({
+      routeName: route
+    });
+    navigation.dispatch(navigateAction);
+  }
+
   return (
     <Container>
+    <Header style={{ backgroundColor: '#003366' }} >
+        <Left>
+          <Button transparent onPress={() => navigation.openDrawer()} >
+            <Icon name='menu' />
+          </Button>
+        </Left>
+        <Body>
+          <Title>My Services</Title>
+        </Body>
+        <Right>
+          <Button transparent>
+            <Icon name='notifications' />
+          </Button>
+          <Button transparent onPress={() => this.navigateToScreen("Profile")}>
+            <Icon name='contact' />
+          </Button>
+        </Right>
+      </Header>
       <Header style={{ backgroundColor: "#F7F9F9", height: 50 }}>
         <Body>
           <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
@@ -203,37 +231,26 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <ListItem style={[styles.item_margin, { borderBottomWidth: 0 }]}>
-              <TouchableOpacity
-                onPress={() => {
-                  if (attestationrate.data) {
-                    setFieldValue("Rate", attestationrate.data.Rate);
-                  }
-                  setFieldValue("PickUpandDropOption", "Direct Delivery");
-                }}
-              >
-                <Radio
+            <ListItem style={[styles.item_margin, { borderBottomWidth: 0 }]}
+            onPress={() => {
+              if (attestationrate.data) {
+                setFieldValue("Rate", attestationrate.data.Rate);
+              }
+              setFieldValue("PickUpandDropOption", "Direct Delivery");
+            }}
+            >
+                <Radio  
                   selected={values.PickUpandDropOption == "Direct Delivery"}
                 />
                 <Body>
                   <Text>Direct Delivery</Text>
                 </Body>
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  if (attestationrate.data) {
-                    setFieldValue("Rate", attestationrate.data.Rate + 28);
-                  }
-                  setFieldValue("PickUpandDropOption", "Through Courier");
-                }}
-              >
                 <Radio
                   selected={values.PickUpandDropOption == "Through Courier"}
                 />
                 <Body>
                   <Text>Through Courier</Text>
                 </Body>
-              </TouchableOpacity>
             </ListItem>
             <View>
               <Text
