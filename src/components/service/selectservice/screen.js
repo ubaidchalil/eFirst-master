@@ -1,11 +1,38 @@
 import React, { Component } from 'react';
-import { View, TouchableOpacity, StyleSheet } from 'react-native';
-import { Container, Content, Item, H3, Text, Button,StyleProvider, Icon } from 'native-base';
+import { View, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { Container, Content, Item, H3, Text, Button,Header, Left, Right, Title, Body, Icon } from 'native-base';
+import {NavigationActions} from 'react-navigation';
 
 export default ({ navigation }) => {
-  
+
+  navigateToScreen = (route) => {
+    const navigateAction = NavigationActions.navigate({
+      routeName: route
+    });
+    navigation.dispatch(navigateAction);
+  }
+
+
   return (
     <Container>
+    <Header style={{ backgroundColor: '#003366' }} >
+        <Left>
+          <Button transparent onPress={() => navigation.openDrawer()} >
+            <Icon name='menu' />
+          </Button>
+        </Left>
+        <Body>
+          <Title>My Services</Title>
+        </Body>
+        <Right>
+          <Button transparent>
+            <Icon name='notifications' />
+          </Button>
+          <Button transparent onPress={() => this.navigateToScreen("Profile")}>
+            <Icon name='contact' />
+          </Button>
+        </Right>
+      </Header>
       <Content style={{padding: 10}} >
         <View style={styles.main} >
           <View style={styles.title} >
@@ -15,7 +42,7 @@ export default ({ navigation }) => {
               <Text style={styles.body_text}>Lorem Ipsum</Text>
           </View>
           <View style={styles.footer} >
-              <TouchableOpacity  onPress={() => navigation.navigate("DocumentAttestation")} >
+              <TouchableOpacity  onPress={() => this.navigateToScreen("DocumentAttestation")} >
                   <Text style={styles.footer_text}>Apply Now</Text>
               </TouchableOpacity>
           </View>

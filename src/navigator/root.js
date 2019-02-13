@@ -9,12 +9,26 @@ import SideBar from '../SideBar';
 import BottomBar from '../BottomBar';
 import Profile from '../components/profile/profile';
 
+export const RequestServiceStack = createStackNavigator({
+  SelectService: {
+    screen: SelectService,
+    navigationOptions: {
+      header: null
+    }
+  },
+  DocumentAttestation: {
+    screen: DocumentAttestation,
+    navigationOptions: {
+      header:null
+    }
+  }
+});
+
 const Tabs = createBottomTabNavigator({
   HomeScreen: { screen: HomeScreen },
-  RequestService: { screen: SelectService },
+  RequestService: { screen: RequestServiceStack },
   MyRequests: { screen: UserActions },
   Profile : { screen: Profile },
-  DocumentAttestation : { screen: DocumentAttestation },
 },
 {
   tabBarComponent: BottomBar,
@@ -30,8 +44,6 @@ const Drawer = DrawerNavigator({
   contentComponent: SideBar,
   drawerWidth: 250
 });
-
-
 
 const root = createStackNavigator({
   Auth: {

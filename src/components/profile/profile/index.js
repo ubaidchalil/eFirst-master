@@ -27,7 +27,7 @@ class Container extends Component {
       }
     };
   }
-  render = () => <Profile user={this.state} />;
+  render = () => <Profile user={this.state}  {...this.props} />;
 }
 
 export default connect()(Container);
