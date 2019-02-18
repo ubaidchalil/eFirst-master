@@ -55,7 +55,7 @@ export default ({ navigation }) => {
               <Text style={styles.body_text}>Lorem Ipsum..</Text>
           </View>
           <View style={styles.footer} >
-              <TouchableOpacity >
+              <TouchableOpacity onPress={() => this.navigateToScreen("LanguageTranslation")}  >
                   <Text style={styles.footer_text}>Apply Now</Text>
               </TouchableOpacity>
           </View>

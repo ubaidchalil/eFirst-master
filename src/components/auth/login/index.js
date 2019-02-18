@@ -21,7 +21,7 @@ class Container extends Component {
   componentDidUpdate() {
     if (!this.props.login.loading) {
       if (this.props.token) {
-        this.props.navigation.navigate("DocumentAttestationScreen");
+        this.props.navigation.navigate("Home");
       } else {
         Alert.alert("Alert", "Entered username or password is incorrect");
       }

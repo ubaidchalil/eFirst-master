@@ -5,7 +5,7 @@ let styles = StyleSheet.create({
   outer_card: {
     flexDirection: "row",
     borderColor: "#F39C12",
-    borderWidth: 2,
+    borderWidth: 1,
     borderRadius: 18,
     flex: 1,
     padding: 8,
@@ -22,7 +22,7 @@ let styles = StyleSheet.create({
     padding: 5
   },
   inner_top_text: {
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: "bold"
   },
   inner_bottom: {
@@ -48,6 +48,7 @@ let styles = StyleSheet.create({
 const UserActonItem = ({ service }) => (
   <View style={{ padding: 10 }}>
     <View style={styles.outer_card}>
+
       <View style={[styles.inner_card, styles.card_date]}>
         <View style={styles.inner_top}>
           <Text style={styles.inner_top_text}> Date </Text>

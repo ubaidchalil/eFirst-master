@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import { Container, Picker, Content, Form, Item, Input, Icon, CheckBox, Text, ListItem, Button, Textarea, Header, Left, Right, Body } from 'native-base';
+var ImagePicker = require('react-native-image-picker');
+
 export default class FormExample extends Component {
+
 
   constructor(props) {
     super(props);
@@ -76,6 +79,43 @@ export default class FormExample extends Component {
           <Picker.Item label={document.document_name} value={document.document_id} />
         );
     });
+  }
+
+  openImgPicker = () => {
+    console.log(ImagePicker);
+    const options = {
+        title: 'Select Avatar',
+        customButtons: [{ name: 'fb', title: 'Choose Photo from Facebook' }],
+        storageOptions: {
+          skipBackup: true,
+          path: 'images',
+        },
+      };
+      
+      /**
+       * The first arg is the options object for customization (it can also be null or omitted for default options),
+       * The second arg is the callback which sends object: response (more info in the API Reference)
+       */
+      ImagePicker.showImagePicker(options, (response) => {
+        console.log('Response = ', response);
+      
+        if (response.didCancel) {
+          console.log('User cancelled image picker');
+        } else if (response.error) {
+          console.log('ImagePicker Error: ', response.error);
+        } else if (response.customButton) {
+          console.log('User tapped custom button: ', response.customButton);
+        } else {
+          const source = { uri: response.uri };
+      
+          // You can also display the image using data:
+          // const source = { uri: 'data:image/jpeg;base64,' + response.data };
+      
+          this.setState({
+            avatarSource: source,
+          });
+        }
+      });
   }
 
   render() {
@@ -167,7 +207,9 @@ export default class FormExample extends Component {
               </Item>
               <View style={{ alignItems: 'center', marginTop: 7 }}>
                 <View style={{ flexDirection: 'row', borderWidth:1, borderColor:'#CACFD2', borderRadius: 10 }}>
-                  <Button transparent dark style={{ alignItems:'center' }} >
+                  <Button transparent dark style={{ alignItems:'center' }}
+                  onPress={()=> this.openImgPicker()}
+                  >
                     <Icon name="camera" />
                     <Text>Camera</Text>
                   </Button>
