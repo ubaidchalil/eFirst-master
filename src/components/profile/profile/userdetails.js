@@ -94,7 +94,7 @@ const UserDetails = ({ values, userdetails }) => {
 };
 
 export default withFormik({
-  mapPropsToValues: ({ registerUser, userdetails }) => ({
+  mapPropsToValues: ({ updateUserDetails, userdetails }) => ({
     UserName: userdetails.username,
     Designation: userdetails.designation,
     ShowEditUser: false

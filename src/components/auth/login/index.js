@@ -6,22 +6,16 @@ import { loginUser } from "../action";
 import { StateComponent } from "../../styled/components";
 
 class Container extends Component {
-  componentDidMount = () => {
+  componentDidMount() {
     if (this.props.token) {
       this.props.navigation.navigate("Home");
     }
-  };
-  // 	componentDidUpdate(prevProps){
-  // 		if (prevProps.login.loading === true && this.props.login.loading === false) {
-  // 			if(this.props.token){
-  // 				console.log(this.props.login.loading,this.props.token)
-  // 			}
-  // 		}
-  //   }
+  }
+
   componentDidUpdate() {
     if (!this.props.login.loading) {
       if (this.props.token) {
-        this.props.navigation.navigate("DocumentAttestationScreen");
+        this.props.navigation.navigate("Home");
       } else {
         Alert.alert("Alert", "Entered username or password is incorrect");
       }
