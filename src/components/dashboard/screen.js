@@ -236,7 +236,7 @@ export default ({ navigation, dashboard }) => (
             </View>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate("MyRequests", { statusId: 2 });
+                navigation.navigate("MyRequests", { statusId: 3 });
               }}
             >
               <Icon style={{ color: "#515A5A" }} name="arrow-dropright" />
@@ -275,7 +275,7 @@ export default ({ navigation, dashboard }) => (
             </View>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate("MyRequests", { statusId: 2 });
+                navigation.navigate("MyRequests", { statusId: 4 });
               }}
             >
               <Icon style={{ color: "#515A5A" }} name="arrow-dropright" />
