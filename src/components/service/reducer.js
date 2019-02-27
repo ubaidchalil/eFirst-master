@@ -3,9 +3,20 @@ import {
   countryState,
   documentTypeState,
   attesstationRateState,
-  servicesState
+  servicesState,
+  documentLanguageState,
+  certificateTypeState,
+  langTransState,
+  serviceRequestState
 } from "./action";
+
 const initialDocumentAttestation = {
+  loading: false,
+  succuss: null,
+  error: null
+};
+
+const initialLangTranslation = {
   loading: false,
   succuss: null,
   error: null
@@ -32,7 +43,28 @@ const initialDocumentType = {
   error: null
 };
 
+const initialCertificateType = {
+  loading: false,
+  data: [],
+  succuss: null,
+  error: null
+};
+
+const initialDocumentLanguage = {
+  loading: false,
+  data: [],
+  succuss: null,
+  error: null
+};
+
 const initialAttestationRate = {
+  loading: false,
+  data: null,
+  succuss: null,
+  error: null
+};
+
+const initialServiceRequest = {
   loading: false,
   data: null,
   succuss: null,
@@ -49,6 +81,19 @@ export const documentattestation = (
     case attestationState.SUCCESS:
       return { ...state, success: action.state };
     case attestationState.ERROR:
+      return { ...state, error: action.state };
+    default:
+      return state;
+  }
+};
+
+export const langtranslation = (state = initialLangTranslation, action) => {
+  switch (action.type) {
+    case langTransState.LOADING:
+      return { ...state, loading: action.state };
+    case langTransState.SUCCESS:
+      return { ...state, success: action.state };
+    case langTransState.ERROR:
       return { ...state, error: action.state };
     default:
       return state;
@@ -109,6 +154,51 @@ export const attestationrate = (state = initialAttestationRate, action) => {
     case attesstationRateState.SUCCESS:
       return { ...state, success: action.state };
     case attesstationRateState.ERROR:
+      return { ...state, error: action.state };
+    default:
+      return state;
+  }
+};
+
+export const documentlanguage = (state = initialDocumentLanguage, action) => {
+  switch (action.type) {
+    case documentLanguageState.LOADING:
+      return { ...state, loading: action.state };
+    case documentLanguageState.DONE:
+      return { ...state, data: action.state };
+    case documentLanguageState.SUCCESS:
+      return { ...state, success: action.state };
+    case documentLanguageState.ERROR:
+      return { ...state, error: action.state };
+    default:
+      return state;
+  }
+};
+
+export const certificatetype = (state = initialCertificateType, action) => {
+  switch (action.type) {
+    case certificateTypeState.LOADING:
+      return { ...state, loading: action.state };
+    case certificateTypeState.DONE:
+      return { ...state, data: action.state };
+    case certificateTypeState.SUCCESS:
+      return { ...state, success: action.state };
+    case certificateTypeState.ERROR:
+      return { ...state, error: action.state };
+    default:
+      return state;
+  }
+};
+
+export const servicerequest = (state = initialServiceRequest, action) => {
+  switch (action.type) {
+    case serviceRequestState.LOADING:
+      return { ...state, loading: action.state };
+    case serviceRequestState.DONE:
+      return { ...state, data: action.state };
+    case serviceRequestState.SUCCESS:
+      return { ...state, success: action.state };
+    case serviceRequestState.ERROR:
       return { ...state, error: action.state };
     default:
       return state;

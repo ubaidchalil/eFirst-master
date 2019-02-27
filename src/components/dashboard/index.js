@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import HomeScreen from "./screen";
 import { DashboardData } from "./action";
+import { profileData } from "../profile/action";
 
 class Container extends Component {
   componentDidMount = () => {
-    this.props.DashboardData(this.props.token.token);
+    const { token } = this.props.token;
+    this.props.DashboardData(token);
+    this.props.profileData(token);
   };
   render = () => <HomeScreen {...this.props} />;
 }
@@ -15,7 +18,8 @@ const mapStateToProps = ({ dashboard, token }) => ({
   token
 });
 const mapDispatchToProps = dispatch => ({
-  DashboardData: payload => dispatch(DashboardData(payload))
+  DashboardData: payload => dispatch(DashboardData(payload)),
+  profileData: payload => dispatch(profileData(payload))
 });
 
 export default connect(
