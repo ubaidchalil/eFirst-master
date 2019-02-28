@@ -21,7 +21,15 @@ import {
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
-const ContactDetails = ({ values, contactdetail }) => {
+const ContactDetails = ({
+  handleSubmit,
+  setFieldValue,
+  handleBlur,
+  values,
+  errors,
+  touched,
+  contactdetail
+}) => {
   return (
     <View>
       <View
@@ -38,11 +46,15 @@ const ContactDetails = ({ values, contactdetail }) => {
           style={{ alignSelf: "flex-end", flex: 1, alignItems: "flex-end" }}
         >
           {!values.ShowEditContact ? (
-            <TouchableOpacity onPress={() => this.EditOfficeDts()}>
+            <TouchableOpacity
+              onPress={() => setFieldValue("ShowEditContact", true)}
+            >
               <Icon style={{ color: "black" }} name="create" />
             </TouchableOpacity>
           ) : (
-            <TouchableOpacity onPress={() => this.SaveOfficeDts()}>
+            <TouchableOpacity
+              onPress={() => setFieldValue("ShowEditContact", false)}
+            >
               <Icon style={{ color: "black" }} name="checkmark" />
             </TouchableOpacity>
           )}
@@ -155,10 +167,10 @@ export default withFormik({
   validateOnChange: false,
 
   validationSchema: Yup.object().shape({
-    ShowEditContact: yup.boolean(),
+    ShowEditContact: Yup.boolean(),
     Phone: Yup.string().when("ShowEditContact", {
       is: true,
-      then: yup.string().required("Must enter company name")
+      then: Yup.string().required("Must enter company name")
     })
   }),
 
@@ -167,3 +179,10 @@ export default withFormik({
     values.registerUser({ FirstName, Email, Password, ConfirmPassword });
   }
 })(ContactDetails);
+
+const styles = {
+  text_detail: {
+    padding: 5,
+    color: "#808B96"
+  }
+};

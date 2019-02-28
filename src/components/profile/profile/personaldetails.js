@@ -21,7 +21,15 @@ import {
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
-const PersonalDetails = ({ values, personaldetails }) => {
+const PersonalDetails = ({
+  personaldetail,
+  handleSubmit,
+  setFieldValue,
+  handleBlur,
+  values,
+  errors,
+  touched
+}) => {
   return (
     <View>
       <View
@@ -38,11 +46,15 @@ const PersonalDetails = ({ values, personaldetails }) => {
           style={{ alignSelf: "flex-end", flex: 1, alignItems: "flex-end" }}
         >
           {!values.ShowEditPersonal ? (
-            <TouchableOpacity onPress={() => this.EditOfficeDts()}>
+            <TouchableOpacity
+              onPress={() => setFieldValue("ShowEditPersonal", true)}
+            >
               <Icon style={{ color: "black" }} name="create" />
             </TouchableOpacity>
           ) : (
-            <TouchableOpacity onPress={() => this.SaveOfficeDts()}>
+            <TouchableOpacity
+              onPress={() => setFieldValue("ShowEditPersonal", false)}
+            >
               <Icon style={{ color: "black" }} name="checkmark" />
             </TouchableOpacity>
           )}
@@ -109,10 +121,10 @@ export default withFormik({
   validateOnChange: false,
 
   validationSchema: Yup.object().shape({
-    ShowEditPersonal: yup.boolean(),
+    ShowEditPersonal: Yup.boolean(),
     DOB: Yup.string().when("ShowEditPersonal", {
       is: true,
-      then: yup.string().required("Must enter DOB")
+      then: Yup.string().required("Must enter DOB")
     })
   }),
 
@@ -121,3 +133,10 @@ export default withFormik({
     values.registerUser({ FirstName, Email, Password, ConfirmPassword });
   }
 })(PersonalDetails);
+
+const styles = {
+  text_detail: {
+    padding: 5,
+    color: "#808B96"
+  }
+};

@@ -21,7 +21,15 @@ import {
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
-const OfficeDetails = ({ values, officedetail }) => {
+const OfficeDetails = ({
+  handleSubmit,
+  setFieldValue,
+  handleBlur,
+  values,
+  errors,
+  touched,
+  officedetail
+}) => {
   return (
     <View>
       <View
@@ -38,11 +46,15 @@ const OfficeDetails = ({ values, officedetail }) => {
           style={{ alignSelf: "flex-end", flex: 1, alignItems: "flex-end" }}
         >
           {!values.ShowEditOffice ? (
-            <TouchableOpacity onPress={() => this.EditOfficeDts()}>
+            <TouchableOpacity
+              onPress={() => setFieldValue("ShowEditOffice", true)}
+            >
               <Icon style={{ color: "black" }} name="create" />
             </TouchableOpacity>
           ) : (
-            <TouchableOpacity onPress={() => this.SaveOfficeDts()}>
+            <TouchableOpacity
+              onPress={() => setFieldValue("ShowEditOffice", false)}
+            >
               <Icon style={{ color: "black" }} name="checkmark" />
             </TouchableOpacity>
           )}
@@ -157,10 +169,10 @@ export default withFormik({
   validateOnChange: false,
 
   validationSchema: Yup.object().shape({
-    ShowEditOffice: yup.boolean(),
+    ShowEditOffice: Yup.boolean(),
     Company: Yup.string().when("ShowEditOffice", {
       is: true,
-      then: yup.string().required("Must enter company name")
+      then: Yup.string().required("Must enter company name")
     })
   }),
 
@@ -169,3 +181,10 @@ export default withFormik({
     values.registerUser({ FirstName, Email, Password, ConfirmPassword });
   }
 })(OfficeDetails);
+
+const styles = {
+  text_detail: {
+    padding: 5,
+    color: "#808B96"
+  }
+};

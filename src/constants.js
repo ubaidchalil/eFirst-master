@@ -53,7 +53,7 @@ export const SERVICE_REQUEST_URL = "https://api.efirst.ae/ServiceRequest/Get";
 /// FAQ URLS ///
 
 export const FAQ_CAT_URL = "https://api.efirst.ae/FAQ/GetFAQCategory";
-export const FAQ = "https://api.efirst.ae/FAQ/GetFAQ";
+export const FAQ_URL = "https://api.efirst.ae/FAQ/GetFAQ";
 
 /// SUPPORT URLS ///
 

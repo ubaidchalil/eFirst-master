@@ -14,6 +14,8 @@ import AuthStack from "./accountstack";
 import SideBar from "../SideBar";
 import BottomBar from "../BottomBar";
 import Profile from "../components/profile/profile";
+import FAQ from "../components/faq";
+import Support from "../components/support";
 
 export const RequestServiceStack = createStackNavigator({
   SelectService: {
@@ -31,7 +33,7 @@ export const RequestServiceStack = createStackNavigator({
   LanguageTranslation: {
     screen: LanguageTranslation,
     navigationOptions: {
-      header:null
+      header: null
     }
   }
 });
@@ -41,7 +43,9 @@ const Tabs = createBottomTabNavigator(
     HomeScreen: { screen: HomeScreen },
     RequestService: { screen: RequestServiceStack },
     MyRequests: { screen: UserActions },
-    Profile: { screen: Profile }
+    Profile: { screen: Profile },
+    FAQ: { screen: FAQ },
+    Support: { screen: Support }
   },
   {
     tabBarComponent: BottomBar,

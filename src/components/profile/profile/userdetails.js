@@ -21,7 +21,15 @@ import {
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
-const UserDetails = ({ values, userdetail }) => {
+const UserDetails = ({
+  handleSubmit,
+  setFieldValue,
+  handleBlur,
+  values,
+  errors,
+  touched,
+  userdetail
+}) => {
   return (
     <View style={{ flexDirection: "row", padding: 10 }}>
       <View
@@ -61,7 +69,7 @@ const UserDetails = ({ values, userdetail }) => {
             />
           </Item>
         )}
-        {!user.ShowEditUser ? (
+        {!values.ShowEditUser ? (
           <Text note>{userdetail.Designation}</Text>
         ) : (
           <Item>
@@ -81,12 +89,16 @@ const UserDetails = ({ values, userdetail }) => {
         <Text style={{ color: "red" }}>Rejected Services : 0</Text>
       </View>
       <View style={{ flex: 0.1, alignContent: "flex-end" }}>
-        {!user.ShowEditUser ? (
-          <TouchableOpacity onPress={() => this.EditUser()}>
+        {!values.ShowEditUser ? (
+          <TouchableOpacity
+            onPress={() => setFieldValue("ShowEditUser", false)}
+          >
             <Icon style={{ color: "black" }} name="create" />
           </TouchableOpacity>
         ) : (
-          <TouchableOpacity onPress={() => this.SaveUser()}>
+          <TouchableOpacity
+            onPress={() => setFieldValue("ShowEditUser", false)}
+          >
             <Icon style={{ color: "black" }} name="checkmark" />
           </TouchableOpacity>
         )}
@@ -104,10 +116,10 @@ export default withFormik({
   validateOnChange: false,
 
   validationSchema: Yup.object().shape({
-    ShowEditUser: yup.boolean(),
+    ShowEditUser: Yup.boolean(),
     FirstName: Yup.string().when("ShowEditUser", {
       is: true,
-      then: yup.string().required("Must enter user name")
+      then: Yup.string().required("Must enter user name")
     })
   }),
 
