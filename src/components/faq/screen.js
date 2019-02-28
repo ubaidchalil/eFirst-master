@@ -106,6 +106,7 @@ export default class FAQ extends Component {
             horizontal={true}
             renderItem={({ item, index }) => (
               <TouchableOpacity
+                key={index}
                 onPress={() => this._onTabListPressed(index, item)}
               >
                 <Text

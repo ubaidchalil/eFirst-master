@@ -90,9 +90,7 @@ const UserDetails = ({
       </View>
       <View style={{ flex: 0.1, alignContent: "flex-end" }}>
         {!values.ShowEditUser ? (
-          <TouchableOpacity
-            onPress={() => setFieldValue("ShowEditUser", false)}
-          >
+          <TouchableOpacity onPress={() => setFieldValue("ShowEditUser", true)}>
             <Icon style={{ color: "black" }} name="create" />
           </TouchableOpacity>
         ) : (

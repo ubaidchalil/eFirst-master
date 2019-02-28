@@ -114,14 +114,14 @@ export default class ListIconExample extends Component {
               <Text style={styles.text}>Support</Text>
             </Body>
           </ListItem>
-          <ListItem icon style={styles.listIem}>
+          {/* <ListItem icon style={styles.listIem}>
             <Left style={styles.left}>
               <Icon style={styles.icon} name="arrow-dropright" />
             </Left>
             <Body style={styles.body}>
               <Text style={styles.text}>Share</Text>
             </Body>
-          </ListItem>
+          </ListItem> */}
         </Content>
       </Container>
     );
