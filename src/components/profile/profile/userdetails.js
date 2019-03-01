@@ -18,18 +18,8 @@ import {
   Item,
   Input
 } from "native-base";
-import { withFormik } from "formik";
-import * as Yup from "yup";
-import { Color } from "../../../constants";
-const UserDetails = ({
-  handleSubmit,
-  setFieldValue,
-  handleBlur,
-  values,
-  errors,
-  touched,
-  userdetail
-}) => {
+
+const UserDetails = ({ values, userdetails }) => {
   return (
     <View style={{ flexDirection: "row", padding: 10 }}>
       <View
@@ -55,22 +45,22 @@ const UserDetails = ({
       </View>
       <View style={{ alignItems: "flex-start", flex: 0.75, padding: 5 }}>
         {!values.ShowEditUser ? (
-          <H3>{userdetail.FirstName}</H3>
+          <H3>{userdetails.username}</H3>
         ) : (
           <Item>
             <Input
-              placeholder="FirstName"
-              name="FirstName"
+              placeholder="Username"
+              name="username"
               label="User Name"
-              onChangeText={value => setFieldValue("FirstName", value)}
-              value={values.FirstName}
-              error={touched.FirstName && errors.FirstName}
+              onChangeText={value => setFieldValue("UserName", value)}
+              value={values.UserName}
+              error={touched.UserName && errors.UserName}
               underlineColor={Color.secondary}
             />
           </Item>
         )}
-        {!values.ShowEditUser ? (
-          <Text note>{userdetail.Designation}</Text>
+        {!user.ShowEditUser ? (
+          <Text note>{userdetails.designation}</Text>
         ) : (
           <Item>
             <Input
@@ -89,14 +79,12 @@ const UserDetails = ({
         <Text style={{ color: "red" }}>Rejected Services : 0</Text>
       </View>
       <View style={{ flex: 0.1, alignContent: "flex-end" }}>
-        {!values.ShowEditUser ? (
-          <TouchableOpacity onPress={() => setFieldValue("ShowEditUser", true)}>
+        {!user.ShowEditUser ? (
+          <TouchableOpacity onPress={() => this.EditUser()}>
             <Icon style={{ color: "black" }} name="create" />
           </TouchableOpacity>
         ) : (
-          <TouchableOpacity
-            onPress={() => setFieldValue("ShowEditUser", false)}
-          >
+          <TouchableOpacity onPress={() => this.SaveUser()}>
             <Icon style={{ color: "black" }} name="checkmark" />
           </TouchableOpacity>
         )}
@@ -106,23 +94,23 @@ const UserDetails = ({
 };
 
 export default withFormik({
-  mapPropsToValues: ({ updateUserDetails, userdetail }) => ({
-    FirstName: userdetail.FirstName,
-    Designation: userdetail.Designation,
+  mapPropsToValues: ({ registerUser, userdetails }) => ({
+    UserName: userdetails.username,
+    Designation: userdetails.designation,
     ShowEditUser: false
   }),
   validateOnChange: false,
 
   validationSchema: Yup.object().shape({
-    ShowEditUser: Yup.boolean(),
-    FirstName: Yup.string().when("ShowEditUser", {
+    ShowEditUser: yup.boolean(),
+    UserName: Yup.string().when("ShowEditUser", {
       is: true,
-      then: Yup.string().required("Must enter user name")
+      then: yup.string().required("Must enter user name")
     })
   }),
 
   handleSubmit: (values, { setSubmitting }) => {
-    const { FirstName } = values;
+    const { UserName } = values;
     values.registerUser({ FirstName, Email, Password, ConfirmPassword });
   }
 })(UserDetails);

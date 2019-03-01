@@ -3,11 +3,7 @@ import {
   DOCUMENT_TYPE_URL,
   COUNTRIES_URL,
   DOC_ATTESTATION_CREATE_URL,
-  SERVICES_DATA_URL,
-  LANGTRANS_URL,
-  CERTTYPE_URL,
-  DOCLANG_URL,
-  SERVICE_REQUEST_URL
+  SERVICES_DATA_URL
 } from "../../constants";
 
 export const attestationState = {
@@ -16,26 +12,12 @@ export const attestationState = {
   ERROR: "ATTEST_ERROR"
 };
 
-export const langTransState = {
-  LOADING: "LANGTRANS_LOADING",
-  SUCCESS: "LANGTRANS_SUCCESS",
-  ERROR: "LANGTRANS_ERROR"
-};
-
 export const servicesState = {
   LOADING: "SERVICES_LOADING",
   SUCCESS: "SERVICES_SUCCESS",
   ERROR: "SERVICES_ERROR",
   DONE: "SERVICES_DONE"
 };
-
-export const serviceRequestState = {
-  LOADING: "SERVICES_REQ_LOADING",
-  SUCCESS: "SERVICES_REQ_SUCCESS",
-  ERROR: "SERVICES_REQ_ERROR",
-  DONE: "SERVICES_REQ_DONE"
-};
-
 export const countryState = {
   LOADING: "COUNTRY_LOADING",
   SUCCESS: "COUNTRY_SUCCESS",
@@ -48,28 +30,12 @@ export const documentTypeState = {
   ERROR: "DOCTYPE_ERROR",
   DONE: "DOCTYPE_DONE"
 };
-
-export const documentLanguageState = {
-  LOADING: "DOCLANG_LOADING",
-  SUCCESS: "DOCLANG_SUCCESS",
-  ERROR: "DOCLANG_ERROR",
-  DONE: "DOCLANG_DONE"
-};
-
-export const certificateTypeState = {
-  LOADING: "CERTTYPE_LOADING",
-  SUCCESS: "CERTTYPE_SUCCESS",
-  ERROR: "CERTTYPE_ERROR",
-  DONE: "CERTTYPE_DONE"
-};
-
 export const attesstationRateState = {
   LOADING: "ATTRATE_LOADING",
   SUCCESS: "ATTRATE_SUCCESS",
   ERROR: "ATTRATE_ERROR",
   DONE: "ATTRATE_DONE"
 };
-
 export const checkResult = (result, dispatch, setError) => {
   if (result.status) {
     return true;
@@ -139,71 +105,6 @@ export const docAttestationCreate = payload => dispatch => {
       }));
     },
     attestationState,
-    dispatch
-  );
-};
-
-export const doclangTransCreate = payload => dispatch => {
-  const { token, ...bodyData } = payload;
-  const body = JSON.stringify(bodyData);
-  console.log("Body", body);
-  return openFetcher(
-    async () => {
-      const result = await fetch(LANGTRANS_URL, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
-        },
-        body
-      });
-      return result.json().then(data => ({
-        data: data,
-        status: result.ok
-      }));
-    },
-    langTransState,
-    dispatch
-  );
-};
-
-export const getdoclanguage = token => dispatch => {
-  return Fetcher(
-    async () => {
-      const result = await fetch(DOCLANG_URL, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          Authorization: `Bearer ${token}`
-        }
-      });
-      return result.json().then(data => ({
-        data: data,
-        status: result.ok
-      }));
-    },
-    documentLanguageState,
-    dispatch
-  );
-};
-
-export const getcertificateType = token => dispatch => {
-  return Fetcher(
-    async () => {
-      const result = await fetch(CERTTYPE_URL, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          Authorization: `Bearer ${token}`
-        }
-      });
-      return result.json().then(data => ({
-        data: data,
-        status: result.ok
-      }));
-    },
-    certificateTypeState,
     dispatch
   );
 };
@@ -295,27 +196,6 @@ export const servicesData = ({ statusId, token }) => dispatch => {
       }));
     },
     servicesState,
-    dispatch
-  );
-};
-
-export const serviceRequestData = ({ serviceId, token }) => dispatch => {
-  return Fetcher(
-    async () => {
-      const result = await fetch(`${SERVICE_REQUEST_URL}?id=${serviceId}`, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          Authorization: `Bearer ${token}`
-        }
-      });
-
-      return result.json().then(data => ({
-        data: data,
-        status: result.ok
-      }));
-    },
-    serviceRequestState,
     dispatch
   );
 };

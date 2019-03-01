@@ -1,31 +1,9 @@
-import { PROFILE_URL } from "../../constants";
-
+import { PROFILE_DATA_URL } from "../../constants";
 export const profileState = {
   LOADING: "PROFILE_LOADING",
   SUCCESS: "PROFILE_SUCCESS",
   ERROR: "PROFILE_ERROR",
   DONE: "PROFILE_DONE"
-};
-
-export const userProfileState = {
-  LOADING: "USRPFL_LOADING",
-  SUCCESS: "USRPRFL_SUCCESS",
-  ERROR: "USRPRFL_ERROR"
-};
-export const userContactDetailState = {
-  LOADING: "USRCONTDETL_LOADING",
-  SUCCESS: "USRCONTDETL_SUCCESS",
-  ERROR: "USRCONTDETL_ERROR"
-};
-export const userPersonalDetailState = {
-  LOADING: "USRPRDETL_LOADING",
-  SUCCESS: "USRPRDETL_SUCCESS",
-  ERROR: "USRPRDETL_ERROR"
-};
-export const userOfficeAddressState = {
-  LOADING: "USROFCADD_LOADING",
-  SUCCESS: "USROFCADD_SUCCESS",
-  ERROR: "USROFCADD_ERROR"
 };
 export const checkResult = (result, dispatch, setError) => {
   if (result.status) {
@@ -57,123 +35,10 @@ const Fetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(false, type.LOADING));
 };
 
-const openFetcher = async (fetchData, type, dispatch) => {
-  dispatch(setInStore(true, type.LOADING));
-  dispatch(setInStore(null, type.ERROR));
-  try {
-    const result = await fetchData();
-    if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
-      dispatch(setInStore(true, type.SUCCESS));
-    } else {
-      dispatch(setInStore(false, type.SUCCESS));
-    }
-  } catch (error) {
-    dispatch(setInStore(false, type.SUCCESS));
-    dispatch(setInStore(error, type.ERROR));
-  }
-  dispatch(setInStore(false, type.LOADING));
-};
-
-export const userProfileCreate = payload => dispatch => {
-  const { token, ...bodyData } = payload;
-  const body = JSON.stringify(bodyData);
-  return openFetcher(
-    async () => {
-      const result = await fetch(DOC_ATTESTATION_CREATE_URL, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
-        },
-        body
-      });
-      return result.json().then(data => ({
-        data: data,
-        status: result.ok
-      }));
-    },
-    userProfileState,
-    dispatch
-  );
-};
-
-export const userPersonalDetailCreate = payload => dispatch => {
-  const { token, ...bodyData } = payload;
-  const body = JSON.stringify(bodyData);
-  return openFetcher(
-    async () => {
-      const result = await fetch(DOC_ATTESTATION_CREATE_URL, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
-        },
-        body
-      });
-      return result.json().then(data => ({
-        data: data,
-        status: result.ok
-      }));
-    },
-    userPersonalDetailState,
-    dispatch
-  );
-};
-
-export const userConatctDetailCreate = payload => dispatch => {
-  const { token, ...bodyData } = payload;
-  const body = JSON.stringify(bodyData);
-  return openFetcher(
-    async () => {
-      const result = await fetch(DOC_ATTESTATION_CREATE_URL, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
-        },
-        body
-      });
-      return result.json().then(data => ({
-        data: data,
-        status: result.ok
-      }));
-    },
-    userContactDetailState,
-    dispatch
-  );
-};
-
-export const userOfficeAddressCreate = payload => dispatch => {
-  const { token, ...bodyData } = payload;
-  const body = JSON.stringify(bodyData);
-  return openFetcher(
-    async () => {
-      const result = await fetch(DOC_ATTESTATION_CREATE_URL, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
-        },
-        body
-      });
-      return result.json().then(data => ({
-        data: data,
-        status: result.ok
-      }));
-    },
-    userOfficeAddressState,
-    dispatch
-  );
-};
-
 export const profileData = token => dispatch => {
   return Fetcher(
     async () => {
-      const result = await fetch(PROFILE_URL, {
+      const result = await fetch(PROFILE_DATA_URL, {
         method: "GET",
         headers: {
           Accept: "application/json",

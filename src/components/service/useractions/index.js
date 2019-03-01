@@ -10,11 +10,7 @@ class Container extends Component {
       : null;
     const token = this.props.token.token;
     this.props.servicesData({ statusId, token });
-    console.log("statusId", statusId);
   };
-  componentDidUpdate() {
-    console.log("loaded");
-  }
   render = () => <UserActions {...this.props} />;
 }
 

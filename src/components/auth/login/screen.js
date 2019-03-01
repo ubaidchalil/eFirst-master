@@ -101,7 +101,7 @@ const LoginForm = ({
           </Button>
 
           <Button
-            style={styles.marginTop}
+            style={[styles.marginTop,{ backgroundColor: "#183E61" }]}
             onPress={() => navigation.navigate("ForgetPassword")}
             full
             rounded

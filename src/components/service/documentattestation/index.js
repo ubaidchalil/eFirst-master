@@ -9,11 +9,20 @@ import {
 } from "../action";
 
 class Container extends Component {
+
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+      showPopUp : false
+    }
+  }
+
   componentDidMount = () => {
     this.props.getCountries(this.props.token.token);
     this.props.documentationTypes(this.props.token.token);
   };
-  render = () => <DocumentAttestation {...this.props} />;
+  render = () => <DocumentAttestation {...this.props} state={this.state} />;
 }
 const mapStateToProps = ({
   countries,

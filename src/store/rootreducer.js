@@ -12,25 +12,8 @@ import {
   attestationrate,
   documenttypes,
   services,
-  documentattestation,
-  langtranslation,
-  documentlanguage,
-  translatelanguage,
-  certificatetype,
-  servicerequest
+  documentattestation
 } from "../components/service/reducer";
-
-import { faq, faqcategory } from "../components/faq/reducer";
-
-import { support } from "../components/support/reducer";
-
-import {
-  profile,
-  usercontactdetail,
-  userofficeadress,
-  userpersonaldetail,
-  userprofile
-} from "../components/profile/reducer";
 
 import { dashboard } from "../components/dashboard/reducer";
 
@@ -47,19 +30,7 @@ const config = {
     "documenttypes",
     "dashboard",
     "documentattestation",
-    "services",
-    "langtranslation",
-    "documentlanguage",
-    "certificatetype",
-    "profile",
-    "usercontactdetail",
-    "userofficeadress",
-    "userpersonaldetail",
-    "userprofile",
-    "support",
-    "faq",
-    "faqcategory",
-    "servicerequest"
+    "services"
   ]
 };
 
@@ -73,19 +44,7 @@ const combinedReducers = {
   documenttypes,
   dashboard,
   documentattestation,
-  services,
-  langtranslation,
-  documentlanguage,
-  certificatetype,
-  profile,
-  usercontactdetail,
-  userofficeadress,
-  userpersonaldetail,
-  userprofile,
-  support,
-  faq,
-  faqcategory,
-  servicerequest
+  services
 };
 
 export default persistCombineReducers(config, combinedReducers);

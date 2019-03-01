@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { Container, Content, Item, H3, Text, Button,Header, Left, Right, Title, Body, Icon } from 'native-base';
 import {NavigationActions} from 'react-navigation';
+import MyHeader from '../../../Header'
 
 export default ({ navigation }) => {
 
@@ -15,24 +16,7 @@ export default ({ navigation }) => {
 
   return (
     <Container>
-    <Header style={{ backgroundColor: '#003366' }} >
-        <Left>
-          <Button transparent onPress={() => navigation.openDrawer()} >
-            <Icon name='menu' />
-          </Button>
-        </Left>
-        <Body>
-          <Title>My Services</Title>
-        </Body>
-        <Right>
-          <Button transparent>
-            <Icon name='notifications' />
-          </Button>
-          <Button transparent onPress={() => this.navigateToScreen("Profile")}>
-            <Icon name='contact' />
-          </Button>
-        </Right>
-      </Header>
+    <MyHeader navigation={navigation} header="My Services" />
       <Content style={{padding: 10}} >
         <View style={styles.main} >
           <View style={styles.title} >
@@ -77,7 +61,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderBottomWidth: 1,
     borderBottomColor: '#ABB2B9',
-    backgroundColor: '#003366',
+    backgroundColor: '#183E61',
     borderTopRightRadius: 13,
     borderTopLeftRadius: 13,
   },
@@ -87,7 +71,7 @@ const styles = StyleSheet.create({
     color: 'white'
   },
   body: {
-    backgroundColor: '#003366',
+    backgroundColor: '#183E61',
     padding: 15,
   },
   body_text: {
