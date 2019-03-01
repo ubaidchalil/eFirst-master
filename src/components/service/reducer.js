@@ -7,7 +7,8 @@ import {
   documentLanguageState,
   certificateTypeState,
   langTransState,
-  serviceRequestState
+  serviceRequestState,
+  translationRateState
 } from "./action";
 
 const initialDocumentAttestation = {
@@ -64,9 +65,21 @@ const initialAttestationRate = {
   error: null
 };
 
-const initialServiceRequest = {
+const initialTranslationRate = {
   loading: false,
   data: null,
+  succuss: null,
+  error: null
+};
+
+const initialServiceRequest = {
+  loading: false,
+  messages: null,
+  messageIds: [],
+  documents: [],
+  srDetail: null,
+  srInfo: null,
+  srNotes: [],
   succuss: null,
   error: null
 };
@@ -124,6 +137,21 @@ export const countries = (state = initialCountry, action) => {
     case countryState.SUCCESS:
       return { ...state, success: action.state };
     case countryState.ERROR:
+      return { ...state, error: action.state };
+    default:
+      return state;
+  }
+};
+
+export const translationrate = (state = initialTranslationRate, action) => {
+  switch (action.type) {
+    case translationRateState.LOADING:
+      return { ...state, loading: action.state };
+    case translationRateState.DONE:
+      return { ...state, data: action.state };
+    case translationRateState.SUCCESS:
+      return { ...state, success: action.state };
+    case translationRateState.ERROR:
       return { ...state, error: action.state };
     default:
       return state;
@@ -194,8 +222,32 @@ export const servicerequest = (state = initialServiceRequest, action) => {
   switch (action.type) {
     case serviceRequestState.LOADING:
       return { ...state, loading: action.state };
-    case serviceRequestState.DONE:
-      return { ...state, data: action.state };
+    case serviceRequestState.DONE: {
+      const {
+        DocumentList,
+        SRNotes,
+        Messages,
+        SRDetail: { SRDataJson, ...SRDetail }
+      } = action.state;
+      const messageList = Messages.reduce((r, a) => {
+        r[a.NoteID] = r[a.NoteID] || [];
+        r[a.NoteID].push(a);
+        return r;
+      }, {});
+
+      var srInfo = SRDataJson;
+      if (typeof srInfo == "string") {
+        srInfo = JSON.parse(SRDataJson);
+      }
+      return {
+        ...state,
+        messages: messageList,
+        documents: DocumentList,
+        srNotes: SRNotes,
+        srDetail: SRDetail,
+        srInfo: srInfo
+      };
+    }
     case serviceRequestState.SUCCESS:
       return { ...state, success: action.state };
     case serviceRequestState.ERROR:

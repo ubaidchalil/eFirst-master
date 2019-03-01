@@ -7,7 +7,8 @@ import {
   LANGTRANS_URL,
   CERTTYPE_URL,
   DOCLANG_URL,
-  SERVICE_REQUEST_URL
+  SERVICE_REQUEST_URL,
+  TRANSLATION_PRICE_URL
 } from "../../constants";
 
 export const attestationState = {
@@ -70,6 +71,13 @@ export const attesstationRateState = {
   DONE: "ATTRATE_DONE"
 };
 
+export const translationRateState = {
+  LOADING: "TRARATE_LOADING",
+  SUCCESS: "TRARATE_SUCCESS",
+  ERROR: "TRARATE_ERROR",
+  DONE: "TRARATE_DONE"
+};
+
 export const checkResult = (result, dispatch, setError) => {
   if (result.status) {
     return true;
@@ -88,6 +96,7 @@ const openFetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
+    console.log(result);
     if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
       dispatch(setInStore(true, type.SUCCESS));
     } else {
@@ -133,6 +142,7 @@ export const docAttestationCreate = payload => dispatch => {
         },
         body
       });
+
       return result.json().then(data => ({
         data: data,
         status: result.ok
@@ -144,20 +154,21 @@ export const docAttestationCreate = payload => dispatch => {
 };
 
 export const doclangTransCreate = payload => dispatch => {
-  const { token, ...bodyData } = payload;
-  const body = JSON.stringify(bodyData);
-  console.log("Body", body);
+  const { token, data } = payload;
+
+  console.log("Body", data);
   return openFetcher(
     async () => {
       const result = await fetch(LANGTRANS_URL, {
         method: "POST",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json",
+          "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`
         },
-        body
+        data
       });
+      console.log(result);
       return result.json().then(data => ({
         data: data,
         status: result.ok
@@ -274,6 +285,37 @@ export const attestationPrice = ({
       }));
     },
     attesstationRateState,
+    dispatch
+  );
+};
+
+export const translationPrice = ({
+  fromLanguage,
+  toLanguage,
+  token
+}) => dispatch => {
+  console.log(
+    `${TRANSLATION_PRICE_URL}?fromLanguage=${fromLanguage}&toLanguage=${toLanguage}`
+  );
+  return Fetcher(
+    async () => {
+      const result = await fetch(
+        `${TRANSLATION_PRICE_URL}?fromLanguage=${fromLanguage}&toLanguage=${toLanguage}`,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            Authorization: `Bearer ${token}`
+          }
+        }
+      );
+
+      return result.json().then(data => ({
+        data: data,
+        status: result.ok
+      }));
+    },
+    translationRateState,
     dispatch
   );
 };

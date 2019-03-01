@@ -17,7 +17,8 @@ import {
   documentlanguage,
   translatelanguage,
   certificatetype,
-  servicerequest
+  servicerequest,
+  translationrate
 } from "../components/service/reducer";
 
 import { faq, faqcategory } from "../components/faq/reducer";
@@ -59,7 +60,8 @@ const config = {
     "support",
     "faq",
     "faqcategory",
-    "servicerequest"
+    "servicerequest",
+    "translationrate"
   ]
 };
 
@@ -85,7 +87,8 @@ const combinedReducers = {
   support,
   faq,
   faqcategory,
-  servicerequest
+  servicerequest,
+  translationrate
 };
 
 export default persistCombineReducers(config, combinedReducers);

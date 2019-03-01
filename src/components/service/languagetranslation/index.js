@@ -1,9 +1,39 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import LanguageTranslation from "./screen";
+import { connect } from "react-redux";
+import {
+  getdoclanguage,
+  documentationTypes,
+  translationPrice,
+  doclangTransCreate
+} from "../action";
 
 class Container extends Component {
-  render = () => <LanguageTranslation  {...this.props} />;
+  componentDidMount = () => {
+    this.props.getdoclanguage(this.props.token.token);
+    this.props.documentationTypes(this.props.token.token);
+  };
+  render = () => <LanguageTranslation {...this.props} />;
 }
+const mapStateToProps = ({
+  documentlanguage,
+  translationrate,
+  documenttypes,
+  token
+}) => ({
+  documentlanguage,
+  translationrate,
+  documenttypes,
+  token
+});
+const mapDispatchToProps = dispatch => ({
+  translationPrice: payload => dispatch(translationPrice(payload)),
+  getdoclanguage: payload => dispatch(getdoclanguage(payload)),
+  documentationTypes: payload => dispatch(documentationTypes(payload)),
+  doclangTransCreate: payload => dispatch(doclangTransCreate(payload))
+});
 
-export default connect()(Container);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Container);

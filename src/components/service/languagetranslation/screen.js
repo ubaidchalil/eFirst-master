@@ -19,16 +19,25 @@ import {
   Body
 } from "native-base";
 import { NavigationActions } from "react-navigation";
+import { withFormik } from "formik";
+import * as Yup from "yup";
+import { Color } from "../../../constants";
 var ImagePicker = require("react-native-image-picker");
 
-export default ({ navigation }) => {
-  // navigateToScreen = (route) => {
-  //   const navigateAction = NavigationActions.navigate({
-  //     routeName: route
-  //   });
-  //   navigation.dispatch(navigateAction);
-  // }
-
+const LanguageTranslation = ({
+  handleSubmit,
+  setFieldValue,
+  handleBlur,
+  values,
+  errors,
+  touched,
+  translationPrice,
+  documentlanguage,
+  translationrate,
+  documenttypes,
+  token,
+  navigation
+}) => {
   openImgPicker = () => {
     console.log(ImagePicker);
     const options = {
@@ -54,7 +63,7 @@ export default ({ navigation }) => {
         console.log("User tapped custom button: ", response.customButton);
       } else {
         const source = { uri: response.uri };
-
+        values.Files.push(response);
         // You can also display the image using data:
         // const source = { uri: 'data:image/jpeg;base64,' + response.data };
 
@@ -62,7 +71,29 @@ export default ({ navigation }) => {
       }
     });
   };
-
+  const renderTranslationLanguage = () =>
+    documentlanguage.data.map(language => (
+      <Picker.Item
+        key={language.LanguageID}
+        label={language.LanguageName}
+        value={language.LanguageID}
+      />
+    ));
+  const languageTranslationRateByLanguages = (toLanguage, fromLanguage) => {
+    translationPrice({
+      toLanguage,
+      fromLanguage,
+      token: token.token
+    });
+  };
+  const renderDocumentTypes = () =>
+    documenttypes.data.map(doc => (
+      <Picker.Item
+        key={doc.DocumentTypeId}
+        label={doc.DocumentTypeName}
+        value={doc.DocumentTypeId}
+      />
+    ));
   return (
     <Container>
       <Header style={{ backgroundColor: "#F7F9F9", height: 50 }}>
@@ -82,17 +113,70 @@ export default ({ navigation }) => {
         <ScrollView>
           <Form>
             <Item>
-              <Input placeholder="Name" />
+              <Input
+                placeholder="Name"
+                name="CustomerName"
+                label="Name"
+                onChangeText={value => setFieldValue("CustomerName", value)}
+                value={values.CustomerName}
+                error={touched.CustomerName && errors.CustomerName}
+                underlineColor={Color.secondary}
+              />
+              {errors.CustomerName && (
+                <Text visible={errors.CustomerName}>{errors.CustomerName}</Text>
+              )}
             </Item>
             <Item style={styles.item_margin}>
-              <Input placeholder="Email" />
+              <Input
+                placeholder="Email"
+                name="Email"
+                label="Email"
+                onChangeText={value => setFieldValue("Email", value)}
+                value={values.Email}
+                error={touched.Email && errors.Email}
+                underlineColor={Color.secondary}
+              />
+              {errors.Email && (
+                <Text visible={errors.Email}>{errors.Email}</Text>
+              )}
             </Item>
             <Item style={styles.item_margin}>
-              <Input placeholder="Mobile" />
-              <Input placeholder="Office" />
+              <Input
+                placeholder="Mobile"
+                name="PersonalPhone"
+                label="Mobile"
+                onChangeText={value => setFieldValue("PersonalPhone", value)}
+                value={values.PersonalPhone}
+                error={touched.PersonalPhone && errors.PersonalPhone}
+                underlineColor={Color.secondary}
+              />
+              {errors.PersonalPhone && (
+                <Text visible={errors.PersonalPhone}>
+                  {errors.PersonalPhone}
+                </Text>
+              )}
+              <Input
+                placeholder="Office"
+                name="Office"
+                label="Office"
+                onChangeText={value => setFieldValue("OfficePhone", value)}
+                value={values.OfficePhone}
+                error={touched.OfficePhone && errors.OfficePhone}
+                underlineColor={Color.secondary}
+              />
             </Item>
             <Item style={styles.item_margin}>
-              <Textarea rowSpan={5} placeholder="Address" underline />
+              <Textarea
+                rowSpan={5}
+                placeholder="Address"
+                underline
+                name="Address"
+                label="Address"
+                onChangeText={value => setFieldValue("Address", value)}
+                value={values.Address}
+                error={touched.Address && errors.Address}
+                underlineColor={Color.secondary}
+              />
             </Item>
             <Item style={styles.item_margin}>
               <Picker
@@ -102,7 +186,18 @@ export default ({ navigation }) => {
                 placeholder="Document Type"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
-              />
+                selectedValue={values.SelectedDocumentTypeId}
+                onValueChange={value =>
+                  setFieldValue("SelectedDocumentTypeId", value)
+                }
+              >
+                {renderDocumentTypes()}
+              </Picker>
+              {errors.SelectedDocumentTypeId && (
+                <Text visible={errors.SelectedDocumentTypeId}>
+                  {errors.SelectedDocumentTypeId}
+                </Text>
+              )}
             </Item>
             <Item style={styles.item_margin}>
               <Picker
@@ -112,7 +207,22 @@ export default ({ navigation }) => {
                 placeholder="Document Language"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
-              />
+                selectedValue={values.SelectedFromDocumentLanguageId}
+                onValueChange={value => {
+                  setFieldValue("SelectedFromDocumentLanguageId", value);
+                  languageTranslationRateByLanguages(
+                    value,
+                    values.SelectedToDocumentLanguageId
+                  );
+                }}
+              >
+                {renderTranslationLanguage()}
+              </Picker>
+              {errors.SelectedFromDocumentLanguageId && (
+                <Text visible={errors.SelectedFromDocumentLanguageId}>
+                  {errors.SelectedFromDocumentLanguageId}
+                </Text>
+              )}
             </Item>
             <Item style={styles.item_margin}>
               <Picker
@@ -122,10 +232,34 @@ export default ({ navigation }) => {
                 placeholder="Document to be Translated"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
-              />
+                selectedValue={values.SelectedToDocumentLanguageId}
+                onValueChange={value => {
+                  setFieldValue("SelectedToDocumentLanguageId", value);
+                  languageTranslationRateByLanguages(
+                    values.SelectedFromDocumentLanguageId,
+                    value
+                  );
+                }}
+              >
+                {renderTranslationLanguage()}
+              </Picker>
+              {errors.SelectedFromDocumentLanguageId && (
+                <Text visible={errors.SelectedFromDocumentLanguageId}>
+                  {errors.SelectedFromDocumentLanguageId}
+                </Text>
+              )}
             </Item>
             <ListItem style={[styles.item_margin, { borderBottomWidth: 0 }]}>
-              <CheckBox checked={true} />
+              <CheckBox
+                checked={values.LegalStamp}
+                onPress={() => {
+                  if (values.LegalStamp) {
+                    setFieldValue("LegalStamp", false);
+                  } else {
+                    setFieldValue("LegalStamp", true);
+                  }
+                }}
+              />
               <Body>
                 <Text>Legal Stamp</Text>
               </Body>
@@ -174,10 +308,16 @@ export default ({ navigation }) => {
                   fontWeight: "bold"
                 }}
               >
-                Rate : 200 AED
+                Rate :{" "}
+                {translationrate.data
+                  ? values.LegalStamp == true
+                    ? translationrate.data.Rate + 24
+                    : translationrate.data.Rate
+                  : 0}{" "}
+                AED
               </Text>
             </View>
-            <Button full rounded>
+            <Button full rounded onPress={handleSubmit}>
               <Text> Pay Now </Text>
             </Button>
           </Form>
@@ -186,6 +326,74 @@ export default ({ navigation }) => {
     </Container>
   );
 };
+
+export default withFormik({
+  mapPropsToValues: ({
+    translationPrice,
+    documentlanguage,
+    translationrate,
+    documenttypes,
+    token,
+    doclangTransCreate
+  }) => ({
+    CustomerName: "",
+    Email: "",
+    PersonalPhone: "",
+    OfficePhone: "",
+    Address: "",
+    SelectedDocumentTypeId: "",
+    SelectedFromDocumentLanguageId: "",
+    SelectedToDocumentLanguageId: "",
+    LegalStamp: false,
+    Files: [],
+    doclangTransCreate
+  }),
+  validateOnChange: false,
+
+  validationSchema: Yup.object().shape({
+    CustomerName: Yup.string()
+      .min(3, "Must be longer than 3 characters")
+      .required("Required"),
+    Email: Yup.string()
+      .min(4, "Must be longer than 4 characters")
+      .email("Email not valid")
+      .required("Required"),
+    PersonalPhone: Yup.string().required("Required"),
+    SelectedDocumentTypeId: Yup.string().required("Required"),
+    SelectedFromDocumentLanguageId: Yup.string().required("Required"),
+    SelectedToDocumentLanguageId: Yup.string().required("Required")
+  }),
+
+  handleSubmit: (values, { props }) => {
+    const { translationrate } = props;
+    const token = props.token.token;
+    var Rate = translationrate.data
+      ? values.LegalStamp == true
+        ? translationrate.data.Rate + 28
+        : translationrate.data.Rate
+      : 0;
+    let data = new FormData();
+    data.append("CustomerName", values.CustomerName);
+    data.append("Email", values.Email);
+    data.append("PersonalPhone", values.PersonalPhone);
+    data.append("OfficePhone", values.OfficePhone);
+    data.append("Address", values.Address);
+    data.append("SelectedDocumentTypeId", values.SelectedDocumentTypeId);
+    data.append(
+      "SelectedFromDocumentLanguageId",
+      values.SelectedFromDocumentLanguageId
+    );
+    data.append(
+      "SelectedToDocumentLanguageId",
+      values.SelectedToDocumentLanguageId
+    );
+    data.append("LegalStamp", values.LegalStamp);
+    data.append("Files", values.Files);
+    data.append("Rate", Rate);
+
+    return values.doclangTransCreate({ data, token });
+  }
+})(LanguageTranslation);
 
 const styles = StyleSheet.create({
   main: {

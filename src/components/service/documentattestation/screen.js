@@ -19,7 +19,7 @@ import {
   Body,
   Title
 } from "native-base";
-import {NavigationActions} from 'react-navigation';
+import { NavigationActions } from "react-navigation";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
@@ -71,20 +71,20 @@ const DocumentAttestation = ({
       token: token.token
     });
   };
-  
-  navigateToScreen = (route) => {
+
+  navigateToScreen = route => {
     const navigateAction = NavigationActions.navigate({
       routeName: route
     });
     navigation.dispatch(navigateAction);
-  }
+  };
 
   return (
     <Container>
-    <Header style={{ backgroundColor: '#003366' }} >
+      <Header style={{ backgroundColor: "#003366" }}>
         <Left>
-          <Button transparent onPress={() => navigation.openDrawer()} >
-            <Icon name='menu' />
+          <Button transparent onPress={() => navigation.openDrawer()}>
+            <Icon name="menu" />
           </Button>
         </Left>
         <Body>
@@ -92,10 +92,10 @@ const DocumentAttestation = ({
         </Body>
         <Right>
           <Button transparent>
-            <Icon name='notifications' />
+            <Icon name="notifications" />
           </Button>
           <Button transparent onPress={() => this.navigateToScreen("Profile")}>
-            <Icon name='contact' />
+            <Icon name="contact" />
           </Button>
         </Right>
       </Header>
@@ -231,26 +231,27 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <ListItem style={[styles.item_margin, { borderBottomWidth: 0 }]}
-            onPress={() => {
-              if (attestationrate.data) {
-                setFieldValue("Rate", attestationrate.data.Rate);
-              }
-              setFieldValue("PickUpandDropOption", "Direct Delivery");
-            }}
+            <ListItem
+              style={[styles.item_margin, { borderBottomWidth: 0 }]}
+              onPress={() => {
+                if (attestationrate.data) {
+                  setFieldValue("Rate", attestationrate.data.Rate);
+                }
+                setFieldValue("PickUpandDropOption", "Direct Delivery");
+              }}
             >
-                <Radio  
-                  selected={values.PickUpandDropOption == "Direct Delivery"}
-                />
-                <Body>
-                  <Text>Direct Delivery</Text>
-                </Body>
-                <Radio
-                  selected={values.PickUpandDropOption == "Through Courier"}
-                />
-                <Body>
-                  <Text>Through Courier</Text>
-                </Body>
+              <Radio
+                selected={values.PickUpandDropOption == "Direct Delivery"}
+              />
+              <Body>
+                <Text>Direct Delivery</Text>
+              </Body>
+              <Radio
+                selected={values.PickUpandDropOption == "Through Courier"}
+              />
+              <Body>
+                <Text>Through Courier</Text>
+              </Body>
             </ListItem>
             <View>
               <Text
