@@ -23,7 +23,14 @@ import {
 } from "native-base";
 import { NavigationActions } from "react-navigation";
 
-export default ({ navigation, user }) => {
+export default ({
+  navigation,
+  user,
+  userdetail,
+  personaldetail,
+  contactdetail,
+  officedetail
+}) => {
   navigateToScreen = route => {
     const navigateAction = NavigationActions.navigate({
       routeName: route

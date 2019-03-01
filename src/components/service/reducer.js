@@ -58,7 +58,8 @@ const initialServiceRequest = {
   documents: [],
   srDetail: null,
   srInfo: null,
-  srNotes: [],
+  messageList: [],
+  statusList: [],
   succuss: null,
   error: null
 };
@@ -205,11 +206,14 @@ export const servicerequest = (state = initialServiceRequest, action) => {
       if (typeof srInfo == "string") {
         srInfo = JSON.parse(SRDataJson);
       }
+      const srMessage = SRNotes.filter(({ NoteType }) => NoteType === 5);
+      const srStaus = SRNotes.filter(({ NoteType }) => NoteType !== 5);
       return {
         ...state,
         messages: messageList,
         documents: DocumentList,
-        srNotes: SRNotes,
+        messageList: srMessage,
+        statusList: srStaus,
         srDetail: SRDetail,
         srInfo: srInfo
       };

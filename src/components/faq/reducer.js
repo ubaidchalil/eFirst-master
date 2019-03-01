@@ -36,7 +36,6 @@ export const faq = (state = initialFAQ, action) => {
 
     case faqState.DONE: {
       if (state.data) {
-        console.log(state.data);
         return { ...state, data: [...state.data, ...[action.state]] };
       } else return { ...state, data: [action.state] };
     }
