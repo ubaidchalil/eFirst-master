@@ -17,45 +17,27 @@ import {
 import getTheme from "../../../../native-base-theme/components";
 import material from "../../../../native-base-theme/variables/material";
 import Greeting from "./useractionitems";
+import MyHeader from '../../../Header'
 
 export default ({ navigation, services }) => {
   const renderList = () =>
     services.data.map(service => <Greeting service={service} />);
 
-  navigateToScreen = route => {
-    const navigateAction = NavigationActions.navigate({
-      routeName: route
-    });
-    navigation.dispatch(navigateAction);
-  };
-
+    navigateToScreen = (route) => {
+      const navigateAction = NavigationActions.navigate({
+        routeName: route
+      });
+      navigation.dispatch(navigateAction);
+    }
+    
   return (
     <StyleProvider style={getTheme(material)}>
       <Container>
-        <Header style={{ backgroundColor: "#003366" }}>
-          <Left>
-            <Button transparent onPress={() => navigation.openDrawer()}>
-              <Icon name="menu" />
-            </Button>
-          </Left>
-          <Body>
-            <Title>My Services</Title>
-          </Body>
-          <Right>
-            <Button transparent>
-              <Icon name="notifications" />
-            </Button>
-            <Button
-              transparent
-              onPress={() => this.navigateToScreen("Profile")}
-            >
-              <Icon name="contact" />
-            </Button>
-          </Right>
-        </Header>
+        
+      <MyHeader navigation={navigation} header="User Acions" />
         <Content>
           {services.data.map(service => (
-            <Greeting service={service} navigation={navigation} />
+            <Greeting service={service} navigation={navigation}  />
           ))}
         </Content>
       </Container>

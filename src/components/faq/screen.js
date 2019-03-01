@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import MyHeader from '../../Header'
 import {
   Container,
   Header,
@@ -78,8 +79,10 @@ export default class FAQ extends Component {
   }
 
   render() {
+    const navigation = this.props.navigation;
     return (
       <Container>
+        <MyHeader navigation={navigation} header="FAQ" />
         <Content>
           <Item style={{ paddingHorizontal: 10 }}>
             <Input placeholder="Search" />

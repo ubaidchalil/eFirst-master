@@ -41,7 +41,7 @@ const PersonalDetails = ({
           flexDirection: "row"
         }}
       >
-        <Text>Personal Details </Text>
+        <Text style={{ fontSize: 13 }} >Personal Details </Text>
         <View
           style={{ alignSelf: "flex-end", flex: 1, alignItems: "flex-end" }}
         >
@@ -49,13 +49,13 @@ const PersonalDetails = ({
             <TouchableOpacity
               onPress={() => setFieldValue("ShowEditPersonal", true)}
             >
-              <Icon style={{ color: "black" }} name="create" />
+              <Icon style={{ color: "black" , fontSize:20 }} name="create" />
             </TouchableOpacity>
           ) : (
             <TouchableOpacity
               onPress={() => setFieldValue("ShowEditPersonal", false)}
             >
-              <Icon style={{ color: "black" }} name="checkmark" />
+              <Icon style={{ color: "black" , fontSize:20 }} name="checkmark" />
             </TouchableOpacity>
           )}
         </View>
@@ -78,6 +78,7 @@ const PersonalDetails = ({
                     value={values.DOB}
                     error={touched.DOB && errors.DOB}
                     underlineColor={Color.secondary}
+                    style={{fontSize:13}}
                   >
                     {personaldetail.DOB}
                   </Input>
@@ -99,6 +100,7 @@ const PersonalDetails = ({
                     value={values.Gender}
                     error={touched.Gender && errors.Gender}
                     underlineColor={Color.secondary}
+                    style={{fontSize:13}}
                   >
                     {personaldetail.Gender}
                   </Input>
@@ -137,6 +139,7 @@ export default withFormik({
 const styles = {
   text_detail: {
     padding: 5,
-    color: "#808B96"
+    color: "#808B96",
+    fontSize: 13
   }
 };

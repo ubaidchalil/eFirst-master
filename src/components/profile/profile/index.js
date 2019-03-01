@@ -24,6 +24,7 @@ import UserDetail from "./userdetails";
 import ContactDetail from "./contactdetails";
 import PersonalDetail from "./personaldetails";
 import OfficeDetail from "./officedetails";
+import MyHeader from '../../../Header';
 
 class Container1 extends Component {
   constructor(props) {
@@ -54,30 +55,7 @@ class Container1 extends Component {
 
   render = () => (
     <Container>
-      <Header style={{ backgroundColor: "#003366" }}>
-        <Left>
-          <Button
-            transparent
-            onPress={() => this.props.navigation.openDrawer()}
-          >
-            <Icon name="menu" />
-          </Button>
-        </Left>
-        <Body>
-          <Title>Manage Profile</Title>
-        </Body>
-        <Right>
-          <Button transparent>
-            <Icon name="notifications" />
-          </Button>
-          <Button
-            transparent
-            onPress={() => this.props.navigation.navigate("Profile")}
-          >
-            <Icon name="contact" />
-          </Button>
-        </Right>
-      </Header>
+    <MyHeader navigation={this.props.navigation} header="Manage Profile" />  
       <Content>
         <UserDetail userdetail={this.props.userdetail} />
         <PersonalDetail personaldetail={this.props.personaldetail} />

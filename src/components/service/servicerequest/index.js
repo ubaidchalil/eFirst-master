@@ -26,6 +26,9 @@ import IconMaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Modal from "react-native-modal";
 import { serviceRequestData } from "../action";
 import { connect } from "react-redux";
+import MyHeader from '../../../Header'
+
+
 class ServiceDetails extends Component {
   constructor(props) {
     super(props);
@@ -93,28 +96,7 @@ class ServiceDetails extends Component {
           <Modal isVisible={this.state.showPopUp}>
             {this._renderModalContent()}
           </Modal>
-          <Header style={{ backgroundColor: "#F7F9F9", height: 50 }}>
-            <Body>
-              <Text style={{ fontSize: 12, marginLeft: 5 }}>
-                {srDetail ? srDetail.SRTitle : ""}
-              </Text>
-              <Text note style={{ fontSize: 10, marginLeft: 5 }}>
-                {srDetail ? srDetail.CreatedDate : ""}
-              </Text>
-            </Body>
-            <Right>
-              <TouchableOpacity
-                onPress={() => this.setState({ showPopUp: true })}
-              >
-                <View style={{ flexDirection: "row" }}>
-                  <IconMaterialIcons
-                    name="chat"
-                    style={{ fontSize: 20, color: "black" }}
-                  />
-                </View>
-              </TouchableOpacity>
-            </Right>
-          </Header>
+      <MyHeader navigation={this.props.navigation} header="Service Details" />
           <Tabs>
             <Tab heading="Details">
               <Details />

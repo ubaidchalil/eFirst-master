@@ -23,6 +23,7 @@ import material from "../../../native-base-theme/variables/material";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../constants";
+import MyHeader from '../../Header'
 
 const renderList = () => {
   return data.map((datum, index) => {
@@ -57,9 +58,11 @@ const Support = ({
   values,
   errors,
   touched,
-  token
+  token,
+  navigation
 }) => (
   <Container>
+  <MyHeader navigation={navigation} header="Support" />
     <Content style={{ padding: 10 }}>
       <ScrollView>
         <Form>
@@ -111,7 +114,7 @@ const Support = ({
           <Item style={styles.item_margin}>
             <Textarea
               rowSpan={5}
-              placeholder="Message"
+              placeholder="Address"
               name="Message"
               label="Message"
               onChangeText={value => setFieldValue("Message", value)}
@@ -124,7 +127,7 @@ const Support = ({
               <Text visible={errors.Message}>{errors.Message}</Text>
             )}
           </Item>
-          <Button onPress={handleSubmit} style={{ marginTop: 10 }} full rounded>
+          <Button onPress={handleSubmit} style={{ marginTop: 10,backgroundColor:"#183E61"  }} full rounded>
             <Text> Pay Now </Text>
           </Button>
         </Form>
@@ -174,10 +177,10 @@ const styles = {
     marginTop: 10,
     borderWidth: 1,
     borderRadius: 8,
-    borderColor: "#BDC3C7",
+    borderColor: "#ECF0F1",
     padding: 10,
     flexDirection: "row"
   },
-  label: { fontSize: 16 },
-  value: { color: "#A6ACAF", fontSize: 16 }
+  label: { fontSize: 13 },
+  value: { color: "#A6ACAF", fontSize: 13 }
 };

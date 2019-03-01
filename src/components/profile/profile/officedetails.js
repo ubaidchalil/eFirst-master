@@ -41,7 +41,7 @@ const OfficeDetails = ({
           flexDirection: "row"
         }}
       >
-        <Text>Office Details </Text>
+        <Text style={{fontSize:13}} >Office Details </Text>
         <View
           style={{ alignSelf: "flex-end", flex: 1, alignItems: "flex-end" }}
         >
@@ -49,13 +49,13 @@ const OfficeDetails = ({
             <TouchableOpacity
               onPress={() => setFieldValue("ShowEditOffice", true)}
             >
-              <Icon style={{ color: "black" }} name="create" />
+              <Icon style={{ color: "black" , fontSize:20 }} name="create" />
             </TouchableOpacity>
           ) : (
             <TouchableOpacity
               onPress={() => setFieldValue("ShowEditOffice", false)}
             >
-              <Icon style={{ color: "black" }} name="checkmark" />
+              <Icon style={{ color: "black" , fontSize:20 }} name="checkmark" />
             </TouchableOpacity>
           )}
         </View>
@@ -78,6 +78,7 @@ const OfficeDetails = ({
                     value={values.Company}
                     error={touched.Company && errors.Company}
                     underlineColor={Color.secondary}
+                    style={{fontSize:13}}
                   >
                     {officedetail.Company}
                   </Input>
@@ -99,6 +100,7 @@ const OfficeDetails = ({
                     value={values.CompanyPhone}
                     error={touched.CompanyPhone && errors.CompanyPhone}
                     underlineColor={Color.secondary}
+                    style={{fontSize:13}}
                   >
                     {officedetail.CompanyPhone}
                   </Input>
@@ -122,6 +124,7 @@ const OfficeDetails = ({
                     value={values.CompanyEmail}
                     error={touched.CompanyEmail && errors.CompanyEmail}
                     underlineColor={Color.secondary}
+                    style={{fontSize:13}}
                   >
                     {officedetail.CompanyEmail}
                   </Input>
@@ -145,6 +148,7 @@ const OfficeDetails = ({
                     value={values.CompanyWebsite}
                     error={touched.CompanyWebsite && errors.CompanyWebsite}
                     underlineColor={Color.secondary}
+                    style={{fontSize:13}}
                   >
                     {officedetail.CompanyWebsite}
                   </Input>
@@ -185,6 +189,7 @@ export default withFormik({
 const styles = {
   text_detail: {
     padding: 5,
-    color: "#808B96"
+    color: "#808B96",
+    fontSize: 13
   }
 };
