@@ -10,33 +10,13 @@ import {
 } from "native-base";
 
 import GridList from "react-native-grid-list";
-
-export default class Details extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [
-        {
-          document_id: "1",
-          document_name: "Document Name"
-        },
-        {
-          document_id: "2",
-          document_name: "Document Name"
-        },
-        {
-          document_id: "3",
-          document_name: "Document Name"
-        }
-      ]
-    };
-  }
-
+import { connect } from "react-redux";
+class Documents extends Component {
   renderItem = ({ item, index }) => (
     <View style={styles.doc_main}>
       <Image
         style={styles.image}
-        source={require("../../../Assets/document.png")}
+        source={require("../../../../Assets/document.png")}
       />
       <Text
         style={{
@@ -46,18 +26,19 @@ export default class Details extends Component {
           fontSize: 18
         }}
       >
-        {item.document_name}
+        {item.FileName}
       </Text>
     </View>
   );
 
   render() {
+    const { documents } = this.props;
     return (
       <Container>
         <Content style={{ padding: 10 }}>
           <GridList
             showSeparator
-            data={this.state.data}
+            data={documents}
             numColumns={2}
             renderItem={this.renderItem}
             itemStyle={{ height: 220, padding: 5 }}
@@ -81,3 +62,13 @@ const styles = StyleSheet.create({
     height: 120
   }
 });
+
+const mapStateToProps = ({ servicerequest: { documents } }) => ({
+  documents
+});
+const mapDispatchToProps = dispatch => ({});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Documents);

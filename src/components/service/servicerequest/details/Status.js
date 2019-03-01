@@ -21,10 +21,15 @@ let styles = StyleSheet.create({
   }
 });
 
-const Status = ({ status }) => (
-  <View style={styles.outer_main}>
-    <Text style={styles.description_text}> {status.status} </Text>
-    <Text style={styles.date_text}> {status.date} </Text>
-  </View>
-);
+const renderStatus = statusList => {
+  console.log(statusList);
+  return statusList.map(status => (
+    <View style={styles.outer_main}>
+      <Text style={styles.description_text}> {status.Comment} </Text>
+      <Text style={styles.date_text}> {status.CreatedDate} </Text>
+    </View>
+  ));
+};
+
+const Status = ({ statusList }) => <View>{renderStatus(statusList)}</View>;
 export default Status;

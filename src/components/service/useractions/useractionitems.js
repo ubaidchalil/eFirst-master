@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableHighlight } from "react-native";
 
 let styles = StyleSheet.create({
   outer_card: {
@@ -45,10 +45,9 @@ let styles = StyleSheet.create({
   }
 });
 
-const UserActonItem = ({ service }) => (
+const UserActonItem = ({ service, navigation }) => (
   <View style={{ padding: 10 }}>
     <View style={styles.outer_card}>
-
       <View style={[styles.inner_card, styles.card_date]}>
         <View style={styles.inner_top}>
           <Text style={styles.inner_top_text}> Date </Text>
@@ -69,25 +68,32 @@ const UserActonItem = ({ service }) => (
           </Text>
         </View>
       </View>
-
-      <View style={[styles.inner_card, styles.card_status]}>
-        <View style={styles.inner_top}>
-          <Text style={styles.inner_top_text}> Process </Text>
+      <TouchableHighlight
+        onPress={() =>
+          navigation.navigate("ServiceDetail", { serviceId: service.SRID })
+        }
+      >
+        <View style={[styles.inner_card, styles.card_status]}>
+          <View style={styles.inner_top}>
+            <Text style={styles.inner_top_text}> Process </Text>
+          </View>
+          <View
+            style={{
+              padding: 3,
+              borderWidth: 2,
+              borderColor: "#F1C40F",
+              borderRadius: 10
+            }}
+          >
+            <Text
+              style={{ fontSize: 14, color: "#F1C40F", textAlign: "center" }}
+            >
+              {" "}
+              {service.ProcessName}{" "}
+            </Text>
+          </View>
         </View>
-        <View
-          style={{
-            padding: 3,
-            borderWidth: 2,
-            borderColor: "#F1C40F",
-            borderRadius: 10
-          }}
-        >
-          <Text style={{ fontSize: 14, color: "#F1C40F", textAlign: "center" }}>
-            {" "}
-            {service.ProcessName}{" "}
-          </Text>
-        </View>
-      </View>
+      </TouchableHighlight>
     </View>
   </View>
 );

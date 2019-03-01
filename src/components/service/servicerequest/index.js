@@ -17,15 +17,16 @@ import {
   Right,
   Icon
 } from "native-base";
-import getTheme from "../../../native-base-theme/components";
-import material from "../../../native-base-theme/variables/material";
-import Details from "./Details";
-import Documents from "./Documents";
-import SRDetails from "./SRDetails";
+import getTheme from "../../../../native-base-theme/components";
+import material from "../../../../native-base-theme/variables/material";
+import Details from "./details";
+import Documents from "./documents";
+import SRInfo from "./srdetails";
 import IconMaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Modal from "react-native-modal";
-
-export default class ServiceDetails extends Component {
+import { serviceRequestData } from "../action";
+import { connect } from "react-redux";
+class ServiceDetails extends Component {
   constructor(props) {
     super(props);
 
@@ -33,6 +34,13 @@ export default class ServiceDetails extends Component {
       showPopUp: false
     };
     this._renderModalContent = this._renderModalContent.bind(this);
+  }
+  componentDidMount() {
+    const serviceId = this.props.navigation.state.params
+      ? this.props.navigation.state.params.serviceId
+      : null;
+    const token = this.props.token.token;
+    this.props.serviceRequestData({ serviceId, token });
   }
 
   _renderModalContent = () => (
@@ -78,6 +86,7 @@ export default class ServiceDetails extends Component {
   );
 
   render() {
+    const { srDetail } = this.props;
     return (
       <StyleProvider style={getTheme(material)}>
         <Container>
@@ -87,10 +96,10 @@ export default class ServiceDetails extends Component {
           <Header style={{ backgroundColor: "#F7F9F9", height: 50 }}>
             <Body>
               <Text style={{ fontSize: 12, marginLeft: 5 }}>
-                Family Visa - VISI0192 July
+                {srDetail ? srDetail.SRTitle : ""}
               </Text>
               <Text note style={{ fontSize: 10, marginLeft: 5 }}>
-                23, 2018 - 11:30
+                {srDetail ? srDetail.CreatedDate : ""}
               </Text>
             </Body>
             <Right>
@@ -114,7 +123,7 @@ export default class ServiceDetails extends Component {
               <Documents />
             </Tab>
             <Tab heading="SR Details">
-              <SRDetails />
+              <SRInfo />
             </Tab>
           </Tabs>
         </Container>
@@ -130,3 +139,16 @@ const styles = {
     borderColor: "rgba(0, 0, 0, 0.1)"
   }
 };
+
+const mapStateToProps = ({ servicerequest: { srDetail }, token }) => ({
+  srDetail,
+  token
+});
+const mapDispatchToProps = dispatch => ({
+  serviceRequestData: payload => dispatch(serviceRequestData(payload))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ServiceDetails);

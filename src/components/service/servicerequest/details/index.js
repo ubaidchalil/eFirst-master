@@ -16,33 +16,8 @@ import {
 } from "native-base";
 import Messages from "./Message";
 import Status from "./Status";
-
-export default class Details extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [
-        {
-          id: "1",
-          user: "Username",
-          date: "August 15, 2018",
-          message: "Lorem Ipsum"
-        },
-        {
-          id: "2",
-          user: "Super Admin",
-          date: "August 16, 2018",
-          message: "Lorem Ipsum is simple"
-        }
-      ],
-      status: {
-        status: "Assigned to Application Process",
-        date: "December 28, 2018 10:14 AM",
-        type: 1
-      }
-    };
-  }
-
+import { connect } from "react-redux";
+class Details extends Component {
   render() {
     let styles = StyleSheet.create({
       outer_main: {
@@ -64,30 +39,28 @@ export default class Details extends Component {
       title_reply_view: { flex: 0.3 },
       title_reply_txt: { textAlign: "right", color: "#3498DB" }
     });
-
+    const { messages, messageList, statusList } = this.props;
     return (
       <Container>
         <Content style={{ padding: 10 }}>
-          <Messages messages={this.state.data} />
+          <Messages messages={messages} messageList={messageList} />
 
-          <Status status={this.state.status} />
+          <Status statusList={statusList} />
         </Content>
       </Container>
     );
   }
 }
-const mapStateToProps = ({ dashboard, token }) => ({
-  dashboard,
-  token
+const mapStateToProps = ({
+  servicerequest: { messages, messageList, statusList }
+}) => ({
+  messages,
+  messageList,
+  statusList
 });
-const mapDispatchToProps = dispatch => ({
-  DashboardData: payload => dispatch(DashboardData(payload)),
-  profileData: payload => dispatch(profileData(payload)),
-  FAQCategoryData: payload => dispatch(FAQCategoryData(payload)),
-  ClearFaq: () => dispatch(clearFaq())
-});
+const mapDispatchToProps = dispatch => ({});
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Container);
+)(Details);

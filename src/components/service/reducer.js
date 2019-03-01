@@ -245,9 +245,9 @@ export const servicerequest = (state = initialServiceRequest, action) => {
       return {
         ...state,
         messages: messageList,
-        documents: DocumentList,
-        messageList: srMessage,
-        statusList: srStaus,
+        documents: DocumentList ? DocumentList : [],
+        messageList: srMessage ? srMessage : [],
+        statusList: srStaus ? srStaus : [],
         srDetail: SRDetail,
         srInfo: srInfo
       };
