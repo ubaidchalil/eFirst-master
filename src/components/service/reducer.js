@@ -10,7 +10,14 @@ import {
   serviceRequestState,
   translationRateState
 } from "./action";
+
 const initialDocumentAttestation = {
+  loading: false,
+  succuss: null,
+  error: null
+};
+
+const initialLangTranslation = {
   loading: false,
   succuss: null,
   error: null
@@ -31,6 +38,20 @@ const initialServices = {
 };
 
 const initialDocumentType = {
+  loading: false,
+  data: [],
+  succuss: null,
+  error: null
+};
+
+const initialCertificateType = {
+  loading: false,
+  data: [],
+  succuss: null,
+  error: null
+};
+
+const initialDocumentLanguage = {
   loading: false,
   data: [],
   succuss: null,
@@ -74,6 +95,19 @@ export const documentattestation = (
     case attestationState.SUCCESS:
       return { ...state, success: action.state };
     case attestationState.ERROR:
+      return { ...state, error: action.state };
+    default:
+      return state;
+  }
+};
+
+export const langtranslation = (state = initialLangTranslation, action) => {
+  switch (action.type) {
+    case langTransState.LOADING:
+      return { ...state, loading: action.state };
+    case langTransState.SUCCESS:
+      return { ...state, success: action.state };
+    case langTransState.ERROR:
       return { ...state, error: action.state };
     default:
       return state;

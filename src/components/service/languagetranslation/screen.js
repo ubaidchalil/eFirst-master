@@ -19,7 +19,6 @@ import {
   Right,
   Body
 } from "native-base";
-import { NavigationActions } from "react-navigation";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";

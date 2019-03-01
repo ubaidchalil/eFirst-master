@@ -15,11 +15,22 @@ import {
   documentattestation,
   langtranslation,
   documentlanguage,
-  translatelanguage,
   certificatetype,
   servicerequest,
   translationrate
 } from "../components/service/reducer";
+
+import { faq, faqcategory } from "../components/faq/reducer";
+
+import { support } from "../components/support/reducer";
+
+import {
+  profile,
+  usercontactdetail,
+  userofficeadress,
+  userpersonaldetail,
+  userprofile
+} from "../components/profile/reducer";
 
 import { dashboard } from "../components/dashboard/reducer";
 
