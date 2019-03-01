@@ -17,7 +17,6 @@ export const setInStore = (state, type) => ({
   type,
   state
 });
-
 const Fetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(true, type.LOADING));
   dispatch(setInStore(null, type.ERROR));

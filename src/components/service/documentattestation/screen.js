@@ -23,10 +23,17 @@ import { NavigationActions } from "react-navigation";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
+import Modal from "react-native-modal";
+import MyHeader from "../../../Header";
 
 const styles = {
   item_margin: {
     marginTop: 5
+  },
+  modalContent: {
+    backgroundColor: "white",
+    borderRadius: 13,
+    borderColor: "rgba(0, 0, 0, 0.1)"
   }
 };
 
@@ -42,7 +49,8 @@ const DocumentAttestation = ({
   attestationrate,
   token,
   attestationPrice,
-  navigation
+  navigation,
+  state
 }) => {
   const renderDocumentCountries = () =>
     countries.data.map(country => (
@@ -61,9 +69,11 @@ const DocumentAttestation = ({
         value={doc.DocumentTypeId}
       />
     ));
+
   componentDidUpdate = () => {
     console.log(attestationPrice);
   };
+
   const attestationRateByCountryandDCType = (CountryId, CertificateType) => {
     attestationPrice({
       CountryId: CountryId,
@@ -79,26 +89,73 @@ const DocumentAttestation = ({
     navigation.dispatch(navigateAction);
   };
 
+  _renderModalContent = state => (
+    <View style={styles.modalContent}>
+      <Item style={{ flexDirection: "row", padding: 7 }}>
+        <View
+          style={{
+            flexDirection: "row",
+            fontSize: 17,
+            padding: 10,
+            paddingHorizontal: 15,
+            flex: 0.9,
+            fontWeight: "bold"
+          }}
+        >
+          <Icon style={{ color: "#F1C40F" }} name="alert" />
+          <Text style={{ fontSize: 17, fontWeight: "bold" }}>Info</Text>
+        </View>
+        <TouchableOpacity
+          style={{ flex: 0.1 }}
+          onPress={() => {
+            state.showPopUp = false;
+          }}
+        >
+          <Icon name="close" />
+        </TouchableOpacity>
+      </Item>
+      <View style={{ padding: 20 }}>
+        <Text style={{ fontSize: 13, lineHeight: 20, paddingHorizontal: 10 }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </Text>
+        <Text
+          style={{ paddingTop: 5, fontSize: 13, lineHeight: 20, padding: 10 }}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </Text>
+        <Text
+          style={{
+            paddingTop: 5,
+            fontSize: 13,
+            fontWeight: "bold",
+            paddingHorizontal: 10
+          }}
+        >
+          AED : 75/PAGE
+        </Text>
+        <Text
+          style={{
+            paddingTop: 5,
+            fontSize: 13,
+            fontWeight: "bold",
+            paddingHorizontal: 10,
+            paddingBottom: 10
+          }}
+        >
+          SERVICE CHARGE: AED 105 (VAT INCLUDED)
+        </Text>
+      </View>
+    </View>
+  );
+
   return (
     <Container>
-      <Header style={{ backgroundColor: "#003366" }}>
-        <Left>
-          <Button transparent onPress={() => navigation.openDrawer()}>
-            <Icon name="menu" />
-          </Button>
-        </Left>
-        <Body>
-          <Title>My Services</Title>
-        </Body>
-        <Right>
-          <Button transparent>
-            <Icon name="notifications" />
-          </Button>
-          <Button transparent onPress={() => this.navigateToScreen("Profile")}>
-            <Icon name="contact" />
-          </Button>
-        </Right>
-      </Header>
+      <MyHeader navigation={navigation} header="My Services" />
+
       <Header style={{ backgroundColor: "#F7F9F9", height: 50 }}>
         <Body>
           <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
@@ -106,13 +163,20 @@ const DocumentAttestation = ({
           </Text>
         </Body>
         <Right>
-          <View style={{ flexDirection: "row" }}>
-            <Icon name="alert" style={{ fontSize: 20, color: "#F39C12" }} />
-            <Text> Info</Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => {
+              state.showPopUp = true;
+            }}
+          >
+            <View style={{ flexDirection: "row" }}>
+              <Icon name="alert" style={{ fontSize: 20, color: "#F39C12" }} />
+              <Text> Info</Text>
+            </View>
+          </TouchableOpacity>
         </Right>
       </Header>
       <Content style={{ padding: 10 }}>
+        <Modal isVisible={state.showPopUp}>{this._renderModalContent()}</Modal>
         <ScrollView>
           <Form>
             <Item>
@@ -198,6 +262,7 @@ const DocumentAttestation = ({
                   );
                 }}
               >
+                <Picker.Item key="0" label="Select Country" value="0" />
                 {renderDocumentCountries()}
               </Picker>
               {errors.SelectedCountryId && (
@@ -223,6 +288,7 @@ const DocumentAttestation = ({
                   );
                 }}
               >
+                <Picker.Item key="0" label="Select type" value="0" />
                 {renderDocumentCertTypes()}
               </Picker>
               {errors.SelectedCertificateType && (
@@ -271,7 +337,12 @@ const DocumentAttestation = ({
                 AED
               </Text>
             </View>
-            <Button full rounded onPress={() => handleSubmit(attestationrate)}>
+            <Button
+              style={{ backgroundColor: "#183E61", marginBottom: 50 }}
+              full
+              rounded
+              onPress={() => handleSubmit(attestationrate)}
+            >
               <Text> Pay Now </Text>
             </Button>
           </Form>

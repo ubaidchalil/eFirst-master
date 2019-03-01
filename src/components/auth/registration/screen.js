@@ -111,7 +111,7 @@ const RegistrationForm = ({
             <Text>Register</Text>
           </Button>
           <Button
-            style={styles.marginTop}
+            style={[styles.marginTop,{ backgroundColor: "#183E61" }]}
             onPress={() => navigation.navigate("Login")}
             full
             rounded

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import MyHeader from "../../../Header";
 import { View, ScrollView, StyleSheet } from "react-native";
 import {
   Container,
@@ -96,6 +97,7 @@ const LanguageTranslation = ({
     ));
   return (
     <Container>
+      <MyHeader navigation={navigation} header="My Services" />
       <Header style={{ backgroundColor: "#F7F9F9", height: 50 }}>
         <Body>
           <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
@@ -299,6 +301,7 @@ const LanguageTranslation = ({
                 </Button>
               </View>
             </View>
+
             <View>
               <Text
                 style={{

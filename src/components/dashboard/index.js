@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import HomeScreen from "./screen";
 import { DashboardData } from "./action";
+
 import { profileData } from "../profile/action";
 import { serviceRequestData } from "../service/action";
 import { FAQCategoryData, clearFaq } from "../faq/action";
@@ -16,6 +17,7 @@ class Container extends Component {
     const serviceId = 121;
     this.props.serviceRequestData({ serviceId, token });
   };
+
   render = () => <HomeScreen {...this.props} />;
 }
 
