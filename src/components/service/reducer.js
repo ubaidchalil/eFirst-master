@@ -8,7 +8,8 @@ import {
   certificateTypeState,
   langTransState,
   serviceRequestState,
-  translationRateState
+  translationRateState,
+  messageState
 } from "./action";
 
 const initialDocumentAttestation = {
@@ -18,6 +19,12 @@ const initialDocumentAttestation = {
 };
 
 const initialLangTranslation = {
+  loading: false,
+  succuss: null,
+  error: null
+};
+
+const initialMessage = {
   loading: false,
   succuss: null,
   error: null
@@ -108,6 +115,19 @@ export const langtranslation = (state = initialLangTranslation, action) => {
     case langTransState.SUCCESS:
       return { ...state, success: action.state };
     case langTransState.ERROR:
+      return { ...state, error: action.state };
+    default:
+      return state;
+  }
+};
+
+export const message = (state = initialMessage, action) => {
+  switch (action.type) {
+    case messageState.LOADING:
+      return { ...state, loading: action.state };
+    case messageState.SUCCESS:
+      return { ...state, success: action.state };
+    case messageState.ERROR:
       return { ...state, error: action.state };
     default:
       return state;

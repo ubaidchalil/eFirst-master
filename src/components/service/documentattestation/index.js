@@ -9,13 +9,11 @@ import {
 } from "../action";
 
 class Container extends Component {
-
-  constructor(props)
-  {
+  constructor(props) {
     super(props);
     this.state = {
-      showPopUp : false
-    }
+      showPopUp: false
+    };
   }
 
   componentDidMount = () => {
@@ -29,12 +27,14 @@ const mapStateToProps = ({
   documenttypes,
   attestationrate,
   documentattestation,
+  profile,
   token
 }) => ({
   countries,
   documenttypes,
   attestationrate,
   documentattestation,
+  profile,
   token
 });
 const mapDispatchToProps = dispatch => ({

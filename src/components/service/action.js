@@ -8,7 +8,8 @@ import {
   CERTTYPE_URL,
   DOCLANG_URL,
   SERVICE_REQUEST_URL,
-  TRANSLATION_PRICE_URL
+  TRANSLATION_PRICE_URL,
+  MESSAGE_URL
 } from "../../constants";
 
 export const attestationState = {
@@ -21,6 +22,12 @@ export const langTransState = {
   LOADING: "LANGTRANS_LOADING",
   SUCCESS: "LANGTRANS_SUCCESS",
   ERROR: "LANGTRANS_ERROR"
+};
+
+export const messageState = {
+  LOADING: "MESSAGE_LOADING",
+  SUCCESS: "MESSAGE_SUCCESS",
+  ERROR: "MESSAGE_ERROR"
 };
 
 export const servicesState = {
@@ -152,11 +159,31 @@ export const docAttestationCreate = payload => dispatch => {
     dispatch
   );
 };
-
+export const sendOrReplyMessage = payload => dispatch => {
+  const { token, ...bodyData } = payload;
+  const body = JSON.stringify(bodyData);
+  return openFetcher(
+    async () => {
+      const result = await fetch(MESSAGE_URL, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
+        body
+      });
+      return result.json().then(data => ({
+        data: data,
+        status: result.ok
+      }));
+    },
+    messageState,
+    dispatch
+  );
+};
 export const doclangTransCreate = payload => dispatch => {
   const { token, data } = payload;
-
-  console.log("Body", data);
   return openFetcher(
     async () => {
       const result = await fetch(LANGTRANS_URL, {

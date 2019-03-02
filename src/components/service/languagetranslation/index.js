@@ -19,12 +19,14 @@ const mapStateToProps = ({
   documentlanguage,
   translationrate,
   documenttypes,
-  token
+  token,
+  profile
 }) => ({
   documentlanguage,
   translationrate,
   documenttypes,
-  token
+  token,
+  profile
 });
 const mapDispatchToProps = dispatch => ({
   translationPrice: payload => dispatch(translationPrice(payload)),

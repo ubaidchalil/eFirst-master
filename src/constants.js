@@ -58,3 +58,7 @@ export const FAQ_URL = "https://api.efirst.ae/FAQ/GetFAQ";
 /// SUPPORT URLS ///
 
 export const SUPPORT_URL = "https://api.efirst.ae/Support/Post";
+
+/// MESSAGE URLS ///
+
+export const MESSAGE_URL = "https://api.efirst.ae/Message/Post";
