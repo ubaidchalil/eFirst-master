@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, TouchableOpacity, StyleSheet } from "react-native";
+import MyHeader from '../../../Header'
 
 import {
   Container,
@@ -23,14 +24,7 @@ import {
 } from "native-base";
 import { NavigationActions } from "react-navigation";
 
-export default ({
-  navigation,
-  user,
-  userdetail,
-  personaldetail,
-  contactdetail,
-  officedetail
-}) => {
+export default ({ navigation, user }) => {
   navigateToScreen = route => {
     const navigateAction = NavigationActions.navigate({
       routeName: route
@@ -40,24 +34,7 @@ export default ({
 
   return (
     <Container>
-      <Header style={{ backgroundColor: "#003366" }}>
-        <Left>
-          <Button transparent onPress={() => navigation.openDrawer()}>
-            <Icon name="menu" />
-          </Button>
-        </Left>
-        <Body>
-          <Title>Manage Profile</Title>
-        </Body>
-        <Right>
-          <Button transparent>
-            <Icon name="notifications" />
-          </Button>
-          <Button transparent onPress={() => this.navigateToScreen("Profile")}>
-            <Icon name="contact" />
-          </Button>
-        </Right>
-      </Header>
+    <MyHeader navigation={navigation} header="Manage Profiles" />  
       <Content>
         <View style={{ flexDirection: "row", padding: 10 }}>
           <View

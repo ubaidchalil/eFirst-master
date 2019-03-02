@@ -46,7 +46,8 @@ const UserDetails = ({
             style={{
               textAlign: "center",
               padding: 3,
-              textDecorationLine: "underline"
+              textDecorationLine: "underline",
+              fontSize: 13
             }}
           >
             Change Photo
@@ -66,6 +67,7 @@ const UserDetails = ({
               value={values.FirstName}
               error={touched.FirstName && errors.FirstName}
               underlineColor={Color.secondary}
+              style={{fontSize:13}}
             />
           </Item>
         )}
@@ -81,25 +83,26 @@ const UserDetails = ({
               value={values.Designation}
               error={touched.Designation && errors.Designation}
               underlineColor={Color.secondary}
+              style={{fontSize:13}}
             />
           </Item>
         )}
-        <Text style={{ color: "blue" }}>Open Services : 0</Text>
-        <Text style={{ color: "green" }}>Completed Services : 0</Text>
-        <Text style={{ color: "red" }}>Rejected Services : 0</Text>
+        <Text style={{ color: "blue", fontSize: 13 }}>Open Services : 0</Text>
+        <Text style={{ color: "green", fontSize: 13 }}>Completed Services : 0</Text>
+        <Text style={{ color: "red", fontSize: 13 }}>Rejected Services : 0</Text>
       </View>
       <View style={{ flex: 0.1, alignContent: "flex-end" }}>
         {!values.ShowEditUser ? (
           <TouchableOpacity
             onPress={() => setFieldValue("ShowEditUser", false)}
           >
-            <Icon style={{ color: "black" }} name="create" />
+            <Icon style={{ color: "black" , fontSize:20 }} name="create" />
           </TouchableOpacity>
         ) : (
           <TouchableOpacity
             onPress={() => setFieldValue("ShowEditUser", false)}
           >
-            <Icon style={{ color: "black" }} name="checkmark" />
+            <Icon style={{ color: "black" , fontSize:20 }} name="checkmark" />
           </TouchableOpacity>
         )}
       </View>
