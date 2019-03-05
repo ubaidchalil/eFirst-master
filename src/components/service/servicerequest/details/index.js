@@ -17,7 +17,6 @@ import {
 import Messages from "./Message";
 import Status from "./Status";
 import { connect } from "react-redux";
-
 class Details extends Component {
   render() {
     const {

@@ -4,19 +4,19 @@ import { View, Text, StyleSheet } from "react-native";
 let styles = StyleSheet.create({
   outer_main: {
     borderColor: "#3498DB",
-    borderWidth: 2,
+    borderWidth: 1,
     padding: 10,
     borderRadius: 10,
     marginTop: 15
   },
   description_text: {
     color: "#3498DB",
-    fontSize: 18,
+    fontSize: 14,
     padding: 3
   },
   date_text: {
     color: "#B2BABB",
-    fontSize: 16,
+    fontSize: 12,
     padding: 3
   }
 });
