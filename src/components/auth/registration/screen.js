@@ -79,6 +79,20 @@ const RegistrationForm = ({
           </Item>
           <Item style={styles.marginTop}>
             <Input
+              placeholder="Mobile"
+              name="MobileNumber"
+              label="Mobile"
+              onChangeText={value => setFieldValue("MobileNumber", value)}
+              value={values.MobileNumber}
+              error={touched.MobileNumber && errors.MobileNumber}
+              underlineColor={Color.secondary}
+            />
+            {errors.MobileNumber && (
+              <Text visible={errors.MobileNumber}>{errors.MobileNumber}</Text>
+            )}
+          </Item>
+          <Item style={styles.marginTop}>
+            <Input
               placeholder="Password"
               name="password"
               label="Password"
@@ -111,7 +125,7 @@ const RegistrationForm = ({
             <Text>Register</Text>
           </Button>
           <Button
-            style={[styles.marginTop,{ backgroundColor: "#183E61" }]}
+            style={[styles.marginTop, { backgroundColor: "#183E61" }]}
             onPress={() => navigation.navigate("Login")}
             full
             rounded
@@ -129,6 +143,7 @@ export default withFormik({
     FirstName: "",
     Email: "",
     Password: "",
+    MobileNumber: "",
     ConfirmPassword: "",
     registerUser
   }),
@@ -142,6 +157,7 @@ export default withFormik({
       .min(4, "Must be longer than 4 characters")
       .email("Invalid")
       .required("Required"),
+    MobileNumber: Yup.string().required("Required"),
     Password: Yup.string()
       .min(4, "Must be longer than 4 characters")
       .required("Required"),
@@ -151,7 +167,19 @@ export default withFormik({
   }),
 
   handleSubmit: (values, { setSubmitting }) => {
-    const { FirstName, Email, Password, ConfirmPassword } = values;
-    values.registerUser({ FirstName, Email, Password, ConfirmPassword });
+    const {
+      FirstName,
+      Email,
+      Password,
+      ConfirmPassword,
+      MobileNumber
+    } = values;
+    values.registerUser({
+      FirstName,
+      Email,
+      Password,
+      ConfirmPassword,
+      MobileNumber
+    });
   }
 })(RegistrationForm);
