@@ -30,7 +30,6 @@ let styles = StyleSheet.create({
 });
 
 const renderMessageList = ({ messageList, messages }) => {
-  console.log(messageList);
   return messageList.map(item => (
     <View style={styles.outer_main}>
       <View style={styles.title_view}>

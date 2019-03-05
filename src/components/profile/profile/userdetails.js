@@ -67,7 +67,7 @@ const UserDetails = ({
               value={values.FirstName}
               error={touched.FirstName && errors.FirstName}
               underlineColor={Color.secondary}
-              style={{fontSize:13}}
+              style={{ fontSize: 13 }}
             />
           </Item>
         )}
@@ -83,26 +83,30 @@ const UserDetails = ({
               value={values.Designation}
               error={touched.Designation && errors.Designation}
               underlineColor={Color.secondary}
-              style={{fontSize:13}}
+              style={{ fontSize: 13 }}
             />
           </Item>
         )}
         <Text style={{ color: "blue", fontSize: 13 }}>Open Services : 0</Text>
-        <Text style={{ color: "green", fontSize: 13 }}>Completed Services : 0</Text>
-        <Text style={{ color: "red", fontSize: 13 }}>Rejected Services : 0</Text>
+        <Text style={{ color: "green", fontSize: 13 }}>
+          Completed Services : 0
+        </Text>
+        <Text style={{ color: "red", fontSize: 13 }}>
+          Rejected Services : 0
+        </Text>
       </View>
       <View style={{ flex: 0.1, alignContent: "flex-end" }}>
         {!values.ShowEditUser ? (
           <TouchableOpacity
             onPress={() => setFieldValue("ShowEditUser", false)}
           >
-            <Icon style={{ color: "black" , fontSize:20 }} name="create" />
+            <Icon style={{ color: "black", fontSize: 20 }} name="create" />
           </TouchableOpacity>
         ) : (
           <TouchableOpacity
             onPress={() => setFieldValue("ShowEditUser", false)}
           >
-            <Icon style={{ color: "black" , fontSize:20 }} name="checkmark" />
+            <Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
           </TouchableOpacity>
         )}
       </View>
@@ -126,8 +130,9 @@ export default withFormik({
     })
   }),
 
-  handleSubmit: (values, { setSubmitting }) => {
-    const { FirstName } = values;
-    values.registerUser({ FirstName, Email, Password, ConfirmPassword });
+  handleSubmit: (values, { props }) => {
+    const token = props.token.token;
+    const { FirstName, Designation } = values;
+    values.registerUser({ FirstName, Designation });
   }
 })(UserDetails);

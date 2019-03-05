@@ -41,7 +41,7 @@ const ContactDetails = ({
           flexDirection: "row"
         }}
       >
-        <Text style={{ fontSize:13 }}>Contact Details </Text>
+        <Text style={{ fontSize: 13 }}>Contact Details </Text>
         <View
           style={{ alignSelf: "flex-end", flex: 1, alignItems: "flex-end" }}
         >
@@ -49,13 +49,13 @@ const ContactDetails = ({
             <TouchableOpacity
               onPress={() => setFieldValue("ShowEditContact", true)}
             >
-              <Icon style={{ color: "black" , fontSize:20 }} name="create" />
+              <Icon style={{ color: "black", fontSize: 20 }} name="create" />
             </TouchableOpacity>
           ) : (
             <TouchableOpacity
               onPress={() => setFieldValue("ShowEditContact", false)}
             >
-              <Icon style={{ color: "black" , fontSize:20 }} name="checkmark" />
+              <Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
             </TouchableOpacity>
           )}
         </View>
@@ -78,7 +78,7 @@ const ContactDetails = ({
                     value={values.Phone}
                     error={touched.Phone && errors.Phone}
                     underlineColor={Color.secondary}
-                    style={{fontSize:13}}
+                    style={{ fontSize: 13 }}
                   >
                     {contactdetail.Phone}
                   </Input>
@@ -100,7 +100,7 @@ const ContactDetails = ({
                     value={values.Website}
                     error={touched.Website && errors.Website}
                     underlineColor={Color.secondary}
-                    style={{fontSize:13}}
+                    style={{ fontSize: 13 }}
                   >
                     {contactdetail.Website}
                   </Input>
@@ -176,9 +176,10 @@ export default withFormik({
     })
   }),
 
-  handleSubmit: (values, { setSubmitting }) => {
-    const { FirstName } = values;
-    values.registerUser({ FirstName, Email, Password, ConfirmPassword });
+  handleSubmit: (values, { props }) => {
+    const token = props.token.token;
+    const { Phone, Email, Website, Addressline1 } = values;
+    values.registerUser({ Phone, Email, Website, Addressline1 });
   }
 })(ContactDetails);
 
@@ -186,6 +187,6 @@ const styles = {
   text_detail: {
     padding: 5,
     color: "#808B96",
-    fontSize:13
+    fontSize: 13
   }
 };

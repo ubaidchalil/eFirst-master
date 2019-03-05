@@ -18,6 +18,7 @@ import {
   Item,
   Input
 } from "native-base";
+import DateTimePicker from "react-native-modal-datetime-picker";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
@@ -30,6 +31,12 @@ const PersonalDetails = ({
   errors,
   touched
 }) => {
+  const ShowDateTimePicker = () => setFieldValue("IsDatePickerVisible", true);
+  const HideDateTimePicker = () => setFieldValue("IsDatePickerVisible", false);
+  const HandleDatePicked = date => {
+    setFieldValue("DOB", new Date(date).toDateString());
+    HideDateTimePicker();
+  };
   return (
     <View>
       <View
@@ -41,7 +48,7 @@ const PersonalDetails = ({
           flexDirection: "row"
         }}
       >
-        <Text style={{ fontSize: 13 }} >Personal Details </Text>
+        <Text style={{ fontSize: 13 }}>Personal Details </Text>
         <View
           style={{ alignSelf: "flex-end", flex: 1, alignItems: "flex-end" }}
         >
@@ -49,13 +56,16 @@ const PersonalDetails = ({
             <TouchableOpacity
               onPress={() => setFieldValue("ShowEditPersonal", true)}
             >
-              <Icon style={{ color: "black" , fontSize:20 }} name="create" />
+              <Icon style={{ color: "black", fontSize: 20 }} name="create" />
             </TouchableOpacity>
           ) : (
             <TouchableOpacity
-              onPress={() => setFieldValue("ShowEditPersonal", false)}
+              onPress={() => {
+                handleSubmit;
+                setFieldValue("ShowEditPersonal", false);
+              }}
             >
-              <Icon style={{ color: "black" , fontSize:20 }} name="checkmark" />
+              <Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
             </TouchableOpacity>
           )}
         </View>
@@ -71,6 +81,7 @@ const PersonalDetails = ({
               ) : (
                 <Item>
                   <Input
+                    onTouchStart={ShowDateTimePicker}
                     placeholder="Birthday"
                     name="DOB"
                     label="Birthday"
@@ -78,7 +89,7 @@ const PersonalDetails = ({
                     value={values.DOB}
                     error={touched.DOB && errors.DOB}
                     underlineColor={Color.secondary}
-                    style={{fontSize:13}}
+                    style={{ fontSize: 13 }}
                   >
                     {personaldetail.DOB}
                   </Input>
@@ -100,7 +111,7 @@ const PersonalDetails = ({
                     value={values.Gender}
                     error={touched.Gender && errors.Gender}
                     underlineColor={Color.secondary}
-                    style={{fontSize:13}}
+                    style={{ fontSize: 13 }}
                   >
                     {personaldetail.Gender}
                   </Input>
@@ -109,6 +120,11 @@ const PersonalDetails = ({
             </Col>
           </Row>
         </Grid>
+        <DateTimePicker
+          isVisible={values.IsDatePickerVisible}
+          onConfirm={HandleDatePicked}
+          onCancel={HideDateTimePicker}
+        />
       </View>
     </View>
   );
@@ -118,7 +134,8 @@ export default withFormik({
   mapPropsToValues: ({ updateUserDetails, personaldetail }) => ({
     DOB: personaldetail.DOB,
     Gender: personaldetail.Gender,
-    ShowEditPersonal: false
+    ShowEditPersonal: false,
+    IsDatePickerVisible: false
   }),
   validateOnChange: false,
 
@@ -130,9 +147,10 @@ export default withFormik({
     })
   }),
 
-  handleSubmit: (values, { setSubmitting }) => {
-    const { FirstName } = values;
-    values.registerUser({ FirstName, Email, Password, ConfirmPassword });
+  handleSubmit: (values, { props }) => {
+    const token = props.token.token;
+    const { DOB, Gender } = values;
+    values.registerUser({ DOB, Gender });
   }
 })(PersonalDetails);
 

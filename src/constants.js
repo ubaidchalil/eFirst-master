@@ -45,9 +45,11 @@ export const USER_OFFADDRESS_CREATE_URL =
   "https://api.efirst.ae/Profile/SaveUserOfficeAddress";
 
 /// SERVICE REQUEST URLS ///
-
+export const SERVICEREQUEST_LIST_URL =
+  "https://api.efirst.ae/ServiceRequest/GetServiceRequestForSRList?filterOption=0";
 export const SERVICES_DATA_URL =
   "https://api.efirst.ae/ServiceRequest/GetSRByStatus";
+
 export const SERVICE_REQUEST_URL = "https://api.efirst.ae/ServiceRequest/Get";
 
 /// FAQ URLS ///

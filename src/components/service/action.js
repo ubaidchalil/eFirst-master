@@ -9,7 +9,8 @@ import {
   DOCLANG_URL,
   SERVICE_REQUEST_URL,
   TRANSLATION_PRICE_URL,
-  MESSAGE_URL
+  MESSAGE_URL,
+  SERVICEREQUEST_LIST_URL
 } from "../../constants";
 
 export const attestationState = {
@@ -184,6 +185,9 @@ export const sendOrReplyMessage = payload => dispatch => {
 };
 export const doclangTransCreate = payload => dispatch => {
   const { token, data } = payload;
+
+  const body = data;
+  console.log(body);
   return openFetcher(
     async () => {
       const result = await fetch(LANGTRANS_URL, {
@@ -193,7 +197,7 @@ export const doclangTransCreate = payload => dispatch => {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`
         },
-        data
+        body
       });
       console.log(result);
       return result.json().then(data => ({
@@ -348,9 +352,12 @@ export const translationPrice = ({
 };
 
 export const servicesData = ({ statusId, token }) => dispatch => {
+  const url = statusId
+    ? `${SERVICES_DATA_URL}?statusId=${statusId}`
+    : `${SERVICEREQUEST_LIST_URL}`;
   return Fetcher(
     async () => {
-      const result = await fetch(`${SERVICES_DATA_URL}?statusId=${statusId}`, {
+      const result = await fetch(url, {
         method: "GET",
         headers: {
           Accept: "application/json",

@@ -14,8 +14,6 @@ class Container extends Component {
     this.props.profileData(token);
     this.props.ClearFaq();
     this.props.FAQCategoryData(token);
-    const serviceId = 121;
-    this.props.serviceRequestData({ serviceId, token });
   };
 
   render = () => <HomeScreen {...this.props} />;
@@ -29,8 +27,7 @@ const mapDispatchToProps = dispatch => ({
   DashboardData: payload => dispatch(DashboardData(payload)),
   profileData: payload => dispatch(profileData(payload)),
   FAQCategoryData: payload => dispatch(FAQCategoryData(payload)),
-  ClearFaq: () => dispatch(clearFaq()),
-  serviceRequestData: payload => dispatch(serviceRequestData(payload))
+  ClearFaq: () => dispatch(clearFaq())
 });
 
 export default connect(

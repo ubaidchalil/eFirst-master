@@ -18,12 +18,13 @@ import {
   Right,
   Body
 } from "native-base";
+
 import getTheme from "../../../native-base-theme/components";
 import material from "../../../native-base-theme/variables/material";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../constants";
-import MyHeader from '../../Header'
+import MyHeader from "../../Header";
 
 const renderList = () => {
   return data.map((datum, index) => {
@@ -55,6 +56,7 @@ const Support = ({
   handleSubmit,
   setFieldValue,
   handleBlur,
+  support,
   values,
   errors,
   touched,
@@ -62,7 +64,7 @@ const Support = ({
   navigation
 }) => (
   <Container>
-  <MyHeader navigation={navigation} header="Support" />
+    <MyHeader navigation={navigation} header="Support" />
     <Content style={{ padding: 10 }}>
       <ScrollView>
         <Form>
@@ -127,7 +129,12 @@ const Support = ({
               <Text visible={errors.Message}>{errors.Message}</Text>
             )}
           </Item>
-          <Button onPress={handleSubmit} style={{ marginTop: 10,backgroundColor:"#183E61"  }} full rounded>
+          <Button
+            onPress={handleSubmit}
+            style={{ marginTop: 10, backgroundColor: "#183E61" }}
+            full
+            rounded
+          >
             <Text> Pay Now </Text>
           </Button>
         </Form>
@@ -139,14 +146,13 @@ const Support = ({
 );
 
 export default withFormik({
-  mapPropsToValues: ({ loginUser, token }) => ({
+  mapPropsToValues: ({ supportCreate, token }) => ({
     CustomerName: "",
     CustomerMail: "",
     PersonalPhone: "",
     OfficePhone: "",
     Message: "",
-    loginUser,
-    token
+    supportCreate
   }),
   validateOnChange: false,
 
@@ -155,17 +161,9 @@ export default withFormik({
     Message: Yup.string().required("Required")
   }),
 
-  handleSubmit: (values, { setSubmitting }) => {
-    var formBody = [];
-    for (var property in values) {
-      if (property !== "loginUser") {
-        var encodedKey = encodeURIComponent(property);
-        var encodedValue = encodeURIComponent(values[property]);
-        formBody.push(encodedKey + "=" + encodedValue);
-      }
-    }
-    formBody = formBody.join("&");
-    return values.loginUser(formBody);
+  handleSubmit: (values, { props }) => {
+    const token = props.token.token;
+    return values.supportCreate({ ...values, token });
   }
 })(Support);
 

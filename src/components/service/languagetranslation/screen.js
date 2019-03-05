@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MyHeader from "../../../Header";
-import { View, ScrollView, StyleSheet } from "react-native";
+import { View, ScrollView, StyleSheet, Platform } from "react-native";
 import {
   Container,
   Picker,
@@ -38,13 +38,13 @@ const LanguageTranslation = ({
   token,
   navigation
 }) => {
-  openImgPicker = () => {
+  openlaunchCamera = () => {
     console.log(ImagePicker);
     const options = {
       title: "Select Avatar",
       storageOptions: {
-        skipBackup: true,
-        path: "images"
+        cameraRoll: true,
+        waitUntilSaved: true
       }
     };
 
@@ -52,7 +52,32 @@ const LanguageTranslation = ({
      * The first arg is the options object for customization (it can also be null or omitted for default options),
      * The second arg is the callback which sends object: response (more info in the API Reference)
      */
-    ImagePicker.showImagePicker(options, response => {
+    // ImagePicker.showImagePicker(options, response => {
+    //   console.log("Response = ", response);
+
+    //   if (response.didCancel) {
+    //     console.log("User cancelled image picker");
+    //   } else if (response.error) {
+    //     console.log("ImagePicker Error: ", response.error);
+    //   } else if (response.customButton) {
+    //     console.log("User tapped custom button: ", response.customButton);
+    //   } else {
+    //     const source = { uri: response.uri };
+    //     const file = {
+    //       data: `data:${response.type};base64,${response.data}`,
+    //       type: response.type,
+    //       name: response.fileName
+    //     };
+    //     // values.Files.push(file);
+    //     setFieldValue("Files", file);
+    //     // You can also display the image using data:
+    //     // const source = { uri: 'data:image/jpeg;base64,' + response.data };
+
+    //     console.log(source);
+    //   }
+    // });
+
+    ImagePicker.launchCamera(options, response => {
       console.log("Response = ", response);
 
       if (response.didCancel) {
@@ -63,7 +88,13 @@ const LanguageTranslation = ({
         console.log("User tapped custom button: ", response.customButton);
       } else {
         const source = { uri: response.uri };
-        values.Files.push(response);
+        const file = {
+          data: `data:${response.type};base64,${response.data}`,
+          type: response.type,
+          name: response.fileName
+        };
+        // values.Files.push(file);
+        setFieldValue("Files", file);
         // You can also display the image using data:
         // const source = { uri: 'data:image/jpeg;base64,' + response.data };
 
@@ -71,6 +102,72 @@ const LanguageTranslation = ({
       }
     });
   };
+
+  openImagePicker = () => {
+    console.log(ImagePicker);
+    const options = {
+      title: "Select Avatar",
+      storageOptions: {
+        cameraRoll: true,
+        waitUntilSaved: true
+      }
+    };
+
+    /**
+     * The first arg is the options object for customization (it can also be null or omitted for default options),
+     * The second arg is the callback which sends object: response (more info in the API Reference)
+     */
+    // ImagePicker.showImagePicker(options, response => {
+    //   console.log("Response = ", response);
+
+    //   if (response.didCancel) {
+    //     console.log("User cancelled image picker");
+    //   } else if (response.error) {
+    //     console.log("ImagePicker Error: ", response.error);
+    //   } else if (response.customButton) {
+    //     console.log("User tapped custom button: ", response.customButton);
+    //   } else {
+    //     const source = { uri: response.uri };
+    //     const file = {
+    //       data: `data:${response.type};base64,${response.data}`,
+    //       type: response.type,
+    //       name: response.fileName
+    //     };
+    //     // values.Files.push(file);
+    //     setFieldValue("Files", file);
+    //     // You can also display the image using data:
+    //     // const source = { uri: 'data:image/jpeg;base64,' + response.data };
+
+    //     console.log(source);
+    //   }
+    // });
+
+    ImagePicker.launchImageLibrary(options, response => {
+      console.log("Response = ", response);
+
+      if (response.didCancel) {
+        console.log("User cancelled image picker");
+      } else if (response.error) {
+        console.log("ImagePicker Error: ", response.error);
+      } else if (response.customButton) {
+        console.log("User tapped custom button: ", response.customButton);
+      } else {
+        const source = { uri: response.uri };
+        const file = {
+          data: `data:${response.type};base64,${response.data}`,
+          type: response.type,
+          name: response.fileName
+        };
+        // values.Files.push(file);
+        setFieldValue("Files", file);
+        // You can also display the image using data:
+        // const source = { uri: 'data:image/jpeg;base64,' + response.data };
+
+        console.log(source);
+      }
+    });
+  };
+
   const renderTranslationLanguage = () =>
     documentlanguage.data.map(language => (
       <Picker.Item
@@ -281,7 +378,7 @@ const LanguageTranslation = ({
                   transparent
                   dark
                   style={{ alignItems: "center" }}
-                  onPress={() => this.openImgPicker()}
+                  onPress={() => this.openlaunchCamera()}
                 >
                   <Icon name="camera" />
                   <Text>Camera</Text>
@@ -294,6 +391,7 @@ const LanguageTranslation = ({
                     borderLeftColor: "#CACFD2",
                     alignItems: "center"
                   }}
+                  onPress={() => this.openImagePicker()}
                 >
                   <Icon name="albums" />
                   <Text>Album</Text>
@@ -348,7 +446,7 @@ export default withFormik({
     SelectedFromDocumentLanguageId: "",
     SelectedToDocumentLanguageId: "",
     LegalStamp: false,
-    Files: [],
+    Files: null,
     doclangTransCreate
   }),
   validateOnChange: false,
@@ -393,7 +491,8 @@ export default withFormik({
     data.append("LegalStamp", values.LegalStamp);
     data.append("Files", values.Files);
     data.append("Rate", Rate);
-
+    data.append("ServiceId", 1);
+    data.append("ServiceName", "ServiceName");
     return values.doclangTransCreate({ data, token });
   }
 })(LanguageTranslation);

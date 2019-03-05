@@ -26,9 +26,9 @@ import IconMaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Modal from "react-native-modal";
 import { serviceRequestData } from "../action";
 import { connect } from "react-redux";
-import MyHeader from '../../../Header'
-
-
+import MyHeader from "../../../Header";
+import Loader from "../../styled/loader";
+import AlertView from "../../styled/alert-view";
 class ServiceDetails extends Component {
   constructor(props) {
     super(props);
@@ -89,14 +89,40 @@ class ServiceDetails extends Component {
   );
 
   render() {
-    const { srDetail } = this.props;
+    const { srDetail, loading, error } = this.props;
     return (
       <StyleProvider style={getTheme(material)}>
         <Container>
+          <Loader loading={loading} />
           <Modal isVisible={this.state.showPopUp}>
             {this._renderModalContent()}
           </Modal>
-      <MyHeader navigation={this.props.navigation} header="Service Details" />
+          <MyHeader
+            navigation={this.props.navigation}
+            header="Service Details"
+          />
+          <Header style={{ backgroundColor: "#F7F9F9", height: 50 }}>
+            <Body>
+              <Text style={{ fontSize: 12, marginLeft: 5 }}>
+                {srDetail ? srDetail.SRTitle : ""}
+              </Text>
+              <Text note style={{ fontSize: 10, marginLeft: 5 }}>
+                {srDetail ? srDetail.CreatedDate : ""}
+              </Text>
+            </Body>
+            <Right>
+              <TouchableOpacity
+                onPress={() => this.setState({ showPopUp: true })}
+              >
+                <View style={{ flexDirection: "row" }}>
+                  <IconMaterialIcons
+                    name="chat"
+                    style={{ fontSize: 20, color: "black" }}
+                  />
+                </View>
+              </TouchableOpacity>
+            </Right>
+          </Header>
           <Tabs>
             <Tab heading="Details">
               <Details />
@@ -108,6 +134,7 @@ class ServiceDetails extends Component {
               <SRInfo />
             </Tab>
           </Tabs>
+          {error && <AlertView type="error" />}
         </Container>
       </StyleProvider>
     );
@@ -122,8 +149,9 @@ const styles = {
   }
 };
 
-const mapStateToProps = ({ servicerequest: { srDetail }, token }) => ({
+const mapStateToProps = ({ servicerequest: { srDetail, loading }, token }) => ({
   srDetail,
+  loading,
   token
 });
 const mapDispatchToProps = dispatch => ({
