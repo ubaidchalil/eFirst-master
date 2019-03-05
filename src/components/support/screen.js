@@ -135,7 +135,7 @@ const Support = ({
             full
             rounded
           >
-            <Text> Pay Now </Text>
+            <Text> Submit </Text>
           </Button>
         </Form>
 

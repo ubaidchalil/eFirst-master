@@ -29,7 +29,7 @@ let styles = StyleSheet.create({
   title_reply_txt: { textAlign: "right", color: "#3498DB" }
 });
 
-const renderMessageList = ({ messageList, messages }) => {
+const renderMessageList = ({ messageList, messages, MessageModal }) => {
   return messageList.map(item => (
     <View style={styles.outer_main}>
       <View style={styles.title_view}>
@@ -37,7 +37,7 @@ const renderMessageList = ({ messageList, messages }) => {
           <Text style={styles.title_msg_text}>{item.NoteTitle} </Text>
         </View>
         <View style={styles.title_reply_view}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => MessageModal(0, item.NoteID)}>
             <Text style={styles.title_reply_txt}>Reply</Text>
           </TouchableOpacity>
         </View>
@@ -52,8 +52,8 @@ const renderMessageList = ({ messageList, messages }) => {
   ));
 };
 
-const Message = ({ messageList, messages }) => (
-  <View>{renderMessageList({ messageList, messages })}</View>
+const Message = ({ messageList, messages, MessageModal }) => (
+  <View>{renderMessageList({ messageList, messages, MessageModal })}</View>
 );
 export default Message;
 

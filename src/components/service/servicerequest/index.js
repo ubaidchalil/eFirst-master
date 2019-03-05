@@ -23,8 +23,8 @@ import Details from "./details";
 import Documents from "./documents";
 import SRInfo from "./srdetails";
 import IconMaterialIcons from "react-native-vector-icons/MaterialIcons";
-import Modal from "react-native-modal";
-import { serviceRequestData } from "../action";
+import { serviceRequestData, sendOrReplyMessage } from "../action";
+import PostMessage from "./postmessage";
 import { connect } from "react-redux";
 import MyHeader from "../../../Header";
 import Loader from "../../styled/loader";
@@ -34,9 +34,12 @@ class ServiceDetails extends Component {
     super(props);
 
     this.state = {
-      showPopUp: false
+      SRID: 0,
+      NoteID: 0,
+      IsVisible: false
     };
-    this._renderModalContent = this._renderModalContent.bind(this);
+    this.hideModal = this.hideModal.bind(this);
+    this.MessageModal = this.MessageModal.bind(this);
   }
   componentDidMount() {
     const serviceId = this.props.navigation.state.params
@@ -45,58 +48,33 @@ class ServiceDetails extends Component {
     const token = this.props.token.token;
     this.props.serviceRequestData({ serviceId, token });
   }
-
-  _renderModalContent = () => (
-    <View style={styles.modalContent}>
-      <Item style={{ flexDirection: "row", padding: 7 }}>
-        <Text
-          style={{
-            fontSize: 17,
-            padding: 10,
-            paddingHorizontal: 15,
-            flex: 0.9,
-            fontWeight: "bold"
-          }}
-        >
-          Send A Message
-        </Text>
-        <TouchableOpacity
-          style={{ flex: 0.1 }}
-          onPress={() => this.setState({ showPopUp: false })}
-        >
-          <Icon name="close" />
-        </TouchableOpacity>
-      </Item>
-      <View style={{ padding: 15 }}>
-        <Form>
-          <Item>
-            <Input placeholder="Message Title" />
-          </Item>
-          <Item style={styles.item_margin}>
-            <Textarea rowSpan={5} placeholder="Message" underline />
-          </Item>
-          <Button
-            style={{ marginTop: 10 }}
-            full
-            rounded
-            onPress={() => this.setState({ showPopUp: false })}
-          >
-            <Text> SEND </Text>
-          </Button>
-        </Form>
-      </View>
-    </View>
-  );
-
+  MessageModal = (SRID, NoteID) => {
+    this.setState({
+      SRID,
+      NoteID,
+      IsVisible: true
+    });
+  };
+  hideModal() {
+    this.setState({
+      IsVisible: false
+    });
+  }
   render() {
-    const { srDetail, loading, error } = this.props;
+    const { srDetail, loading, error, message } = this.props;
+    const dtError = error || message.error;
+    const success = message.success;
+    const SRID = srDetail ? srDetail.SRID : 0;
     return (
       <StyleProvider style={getTheme(material)}>
         <Container>
           <Loader loading={loading} />
-          <Modal isVisible={this.state.showPopUp}>
-            {this._renderModalContent()}
-          </Modal>
+          <PostMessage
+            token={this.props.token}
+            handle={this.hideModal}
+            action={this.state}
+            SendMessage={this.props.sendOrReplyMessage}
+          />
           <MyHeader
             navigation={this.props.navigation}
             header="Service Details"
@@ -111,9 +89,7 @@ class ServiceDetails extends Component {
               </Text>
             </Body>
             <Right>
-              <TouchableOpacity
-                onPress={() => this.setState({ showPopUp: true })}
-              >
+              <TouchableOpacity onPress={() => this.MessageModal(SRID, 0)}>
                 <View style={{ flexDirection: "row" }}>
                   <IconMaterialIcons
                     name="chat"
@@ -125,7 +101,7 @@ class ServiceDetails extends Component {
           </Header>
           <Tabs>
             <Tab heading="Details">
-              <Details />
+              <Details MessageModal={this.MessageModal} />
             </Tab>
             <Tab heading="Documents">
               <Documents />
@@ -134,7 +110,8 @@ class ServiceDetails extends Component {
               <SRInfo />
             </Tab>
           </Tabs>
-          {error && <AlertView type="error" />}
+          {dtError && <AlertView type="error" />}
+          {success && <AlertView type="success" />}
         </Container>
       </StyleProvider>
     );
@@ -149,13 +126,20 @@ const styles = {
   }
 };
 
-const mapStateToProps = ({ servicerequest: { srDetail, loading }, token }) => ({
+const mapStateToProps = ({
+  servicerequest: { srDetail, loading, error },
+  token,
+  message
+}) => ({
   srDetail,
   loading,
-  token
+  error,
+  token,
+  message
 });
 const mapDispatchToProps = dispatch => ({
-  serviceRequestData: payload => dispatch(serviceRequestData(payload))
+  serviceRequestData: payload => dispatch(serviceRequestData(payload)),
+  sendOrReplyMessage: payload => dispatch(sendOrReplyMessage(payload))
 });
 
 export default connect(

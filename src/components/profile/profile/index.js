@@ -24,63 +24,49 @@ import UserDetail from "./userdetails";
 import ContactDetail from "./contactdetails";
 import PersonalDetail from "./personaldetails";
 import OfficeDetail from "./officedetails";
-import MyHeader from '../../../Header';
-
+import MyHeader from "../../../Header";
+import Loader from "../../styled/loader";
+import AlertView from "../../styled/alert-view";
 class Container1 extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      showEditUser: false,
-      showEditPersonalDts: false,
-      showEditOfficeDts: false,
-      user: {
-        username: "User Name",
-        designation: "Project Manager"
-      },
-      persaonal_details: {
-        phone: "=91 000000000",
-        email: "email@domain.in",
-        website: "email@domain.in",
-        address: "Diera, Dubai, UAE"
-      },
-      office_details: {
-        company: "Company Name",
-        email: "email@domain.in",
-        website: "email@domain.in",
-        address: "Diera, Dubai, UAE"
-      }
-    };
-    console.log(props);
   }
 
-  render = () => (
-    <Container>
-    <MyHeader navigation={this.props.navigation} header="Manage Profile" />  
-      <Content>
-        <UserDetail userdetail={this.props.userdetail} />
-        <PersonalDetail personaldetail={this.props.personaldetail} />
-        <ContactDetail contactdetail={this.props.contactdetail} />
-        <OfficeDetail officedetail={this.props.officedetail} />
-      </Content>
-    </Container>
-  );
+  render = () => {
+    const { profile } = this.props;
+    const { loading, error, success } = profile;
+    return (
+      <Container>
+        <MyHeader navigation={this.props.navigation} header="Manage Profile" />
+        <Content>
+          <Loader loading={loading} />
+          <UserDetail userdetail={this.props.userdetail} />
+          <PersonalDetail personaldetail={this.props.personaldetail} />
+          <ContactDetail contactdetail={this.props.contactdetail} />
+          <OfficeDetail officedetail={this.props.officedetail} />
+          {error && <AlertView type="error" />}
+          {success && <AlertView type="success" />}
+        </Content>
+      </Container>
+    );
+  };
 }
 const mapStateToProps = ({
   token,
   profile: {
-    data: { userdetail, personaldetail, contactdetail, officedetail }
+    data: { userdetail, personaldetail, contactdetail, officedetail },
+    loading,
+    error,
+    success
   }
 }) => ({
   token,
+  profile,
   userdetail,
   personaldetail,
   contactdetail,
   officedetail
 });
-const mapDispatchToProps = dispatch => ({
-  loginUser: data => dispatch(loginUser(data))
-});
-
 export default connect(
   mapStateToProps,
   mapDispatchToProps

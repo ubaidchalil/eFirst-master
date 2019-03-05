@@ -9,7 +9,7 @@ import {
 } from "../action";
 import { View } from "react-native";
 import Loader from "../../styled/loader";
-
+import AlertView from "../../styled/alert-view";
 class Container extends Component {
   componentDidMount = () => {
     this.props.getdoclanguage(this.props.token.token);
@@ -17,12 +17,27 @@ class Container extends Component {
   };
   render = () => {
     const {
-      documentattestation: { loading }
+      documentlanguage,
+      translationrate,
+      documenttypes,
+      token
     } = this.props;
+
+    const loading =
+      documentlanguage.loading ||
+      translationrate.loading ||
+      documenttypes.loading;
+
+    const error =
+      documentlanguage.error || translationrate.error || documenttypes.error;
+
+    const success = documentlanguage.success;
     return (
       <View style={{ flex: 1 }}>
         <Loader loading={loading} />
         <LanguageTranslation {...this.props} state={this.state} />
+        {error && <AlertView type="error" />}
+        {success && <AlertView type="success" />}
       </View>
     );
   };

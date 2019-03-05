@@ -162,7 +162,9 @@ export const docAttestationCreate = payload => dispatch => {
 };
 export const sendOrReplyMessage = payload => dispatch => {
   const { token, ...bodyData } = payload;
+
   const body = JSON.stringify(bodyData);
+  console.log(body);
   return openFetcher(
     async () => {
       const result = await fetch(MESSAGE_URL, {
@@ -187,7 +189,6 @@ export const doclangTransCreate = payload => dispatch => {
   const { token, data } = payload;
 
   const body = data;
-  console.log(body);
   return openFetcher(
     async () => {
       const result = await fetch(LANGTRANS_URL, {
