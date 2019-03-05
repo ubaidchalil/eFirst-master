@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import HomeScreen from "./screen";
 import { DashboardData } from "./action";
-
+import { View } from "react-native";
 import { profileData } from "../profile/action";
 import { serviceRequestData } from "../service/action";
 import { FAQCategoryData, clearFaq } from "../faq/action";
-
+import AlertView from "../styled/alert-view";
+import Loader from "../styled/loader";
 class Container extends Component {
   componentDidMount = () => {
     const { token } = this.props.token;
@@ -16,7 +17,17 @@ class Container extends Component {
     this.props.FAQCategoryData(token);
   };
 
-  render = () => <HomeScreen {...this.props} />;
+  render = () => {
+    const { dashboard } = this.props;
+    const { loading, error } = dashboard;
+    return (
+      <View style={{ flex: 1 }}>
+        <Loader loading={loading} />
+        <HomeScreen {...this.props} />
+        {error && <AlertView type="error" />}
+      </View>
+    );
+  };
 }
 
 const mapStateToProps = ({ dashboard, token }) => ({

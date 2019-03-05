@@ -33,8 +33,34 @@ class Container1 extends Component {
   }
 
   render = () => {
-    const { profile } = this.props;
-    const { loading, error, success } = profile;
+    const {
+      profile,
+      usercontactdetail,
+      userofficeadress,
+      userpersonaldetail,
+      userprofile
+    } = this.props;
+
+    const loading =
+      usercontactdetail.loading ||
+      userofficeadress.loading ||
+      userpersonaldetail.loading ||
+      userprofile.loading ||
+      profile.loading;
+
+    const error =
+      usercontactdetail.error ||
+      userofficeadress.error ||
+      userpersonaldetail.error ||
+      userprofile.error ||
+      profile.error;
+
+    const success =
+      usercontactdetail.success ||
+      userofficeadress.success ||
+      userpersonaldetail.success ||
+      userprofile.success;
+
     return (
       <Container>
         <MyHeader navigation={this.props.navigation} header="Manage Profile" />
@@ -44,9 +70,9 @@ class Container1 extends Component {
           <PersonalDetail personaldetail={this.props.personaldetail} />
           <ContactDetail contactdetail={this.props.contactdetail} />
           <OfficeDetail officedetail={this.props.officedetail} />
-          {error && <AlertView type="error" />}
-          {success && <AlertView type="success" />}
         </Content>
+        {error && <AlertView type="error" />}
+        {success && <AlertView type="success" />}
       </Container>
     );
   };
@@ -55,19 +81,22 @@ const mapStateToProps = ({
   token,
   profile: {
     data: { userdetail, personaldetail, contactdetail, officedetail },
-    loading,
-    error,
-    success
-  }
+    ...profile
+  },
+  usercontactdetail,
+  userofficeadress,
+  userpersonaldetail,
+  userprofile
 }) => ({
   token,
   profile,
   userdetail,
   personaldetail,
   contactdetail,
-  officedetail
+  officedetail,
+  usercontactdetail,
+  userofficeadress,
+  userpersonaldetail,
+  userprofile
 });
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Container1);
+export default connect(mapStateToProps)(Container1);

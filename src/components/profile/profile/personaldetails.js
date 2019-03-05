@@ -90,9 +90,7 @@ const PersonalDetails = ({
                     error={touched.DOB && errors.DOB}
                     underlineColor={Color.secondary}
                     style={{ fontSize: 13 }}
-                  >
-                    {personaldetail.DOB}
-                  </Input>
+                  />
                 </Item>
               )}
             </Col>
@@ -112,9 +110,7 @@ const PersonalDetails = ({
                     error={touched.Gender && errors.Gender}
                     underlineColor={Color.secondary}
                     style={{ fontSize: 13 }}
-                  >
-                    {personaldetail.Gender}
-                  </Input>
+                  />
                 </Item>
               )}
             </Col>
