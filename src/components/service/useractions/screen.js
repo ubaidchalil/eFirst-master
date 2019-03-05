@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, TouchableOpacity  } from "react-native";
 import {
   Container,
   Content,
@@ -17,7 +17,7 @@ import {
 import getTheme from "../../../../native-base-theme/components";
 import material from "../../../../native-base-theme/variables/material";
 import Greeting from "./useractionitems";
-import MyHeader from '../../../Header'
+import MyHeader from '../../../Header';
 
 export default ({ navigation, services }) => {
   const renderList = () =>
@@ -35,9 +35,16 @@ export default ({ navigation, services }) => {
       <Container>
         
       <MyHeader navigation={navigation} header="User Acions" />
-        <Content>
+        <Content style={{ padding:5 }} >
           {services.data.map(service => (
+            
+                <TouchableOpacity
+                onPress={() =>
+                  navigation.navigate("ServiceDetail", { serviceId: service.SRID })
+                }
+              >
             <Greeting service={service} navigation={navigation}  />
+            </TouchableOpacity>
           ))}
         </Content>
       </Container>

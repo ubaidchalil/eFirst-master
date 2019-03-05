@@ -10,7 +10,7 @@ export default class ListIconExample extends Component {
       routeName: route
     });
     this.props.navigation.dispatch(navigateAction);
-   // this.props.navigation.dispatch(DrawerActions.closeDrawer());
+    this.props.navigation.dispatch(DrawerActions.closeDrawer());
   }
 
   render() {
@@ -34,7 +34,8 @@ export default class ListIconExample extends Component {
           </View>
         </View>
         <Content style={{ backgroundColor:'#003366' }} >
-          <ListItem icon style={styles.listIem} >
+          <ListItem icon style={styles.listIem} 
+           onPress={this.navigateToScreen('HomeScreen')}  >
             <Left style={styles.left}>
                 <Icon style={styles.icon} name="arrow-dropright" />
             </Left>
@@ -89,11 +90,13 @@ const styles = {
     backgroundColor:'#003366',
     height: 70,
     padding: 0,
+    marginLeft : 0
   //  borderBottomWidth: 1,
   //  borderBottomColor: 'white'
   },
   icon: {
-    color:'white' 
+    color:'white' ,
+    marginLeft: 20
   },
   text: {
     color:'white' 

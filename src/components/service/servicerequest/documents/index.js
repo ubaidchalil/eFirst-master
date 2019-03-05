@@ -22,8 +22,9 @@ class Documents extends Component {
         style={{
           textAlign: "center",
           padding: 5,
+          marginTop:5, 
           color: "#515A5A",
-          fontSize: 18
+          fontSize: 14
         }}
       >
         {item.FileName}
@@ -54,12 +55,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#E5E8E8",
     borderRadius: 10,
     padding: 20,
-    height: 200,
+    height: 150,
     alignItems: "center"
   },
   image: {
-    width: 120,
-    height: 120
+    width: 80,
+    height: 80
   }
 });
 

@@ -43,7 +43,7 @@ let styles = StyleSheet.create({
 });
 
 const UserActonItem = ({ service, navigation }) => (
-  <View style={{ padding: 10 }}>
+  <View style={{ padding: 5 }}>
     <View style={styles.outer_card}>
 
       <View style={[styles.inner_card, styles.card_date]}>
@@ -67,11 +67,6 @@ const UserActonItem = ({ service, navigation }) => (
         </View>
       </View>
 
-      <TouchableOpacity
-        onPress={() =>
-          navigation.navigate("ServiceDetail", { serviceId: service.SRID })
-        }
-      >
       <View style={[styles.inner_card, styles.card_status]}>
         <View style={styles.inner_top}>
           <Text style={styles.inner_top_text}> Process </Text>
@@ -90,7 +85,6 @@ const UserActonItem = ({ service, navigation }) => (
           </Text>
         </View>
       </View>
-      </TouchableOpacity>
     </View>
   </View>
 );

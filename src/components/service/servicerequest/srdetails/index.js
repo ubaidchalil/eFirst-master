@@ -9,51 +9,44 @@ import {
   Button,
   StyleProvider
 } from "native-base";
-import { connect } from "react-redux";
-class SRInfo extends Component {
+
+export default class Details extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [
+        {
+          label: "Name",
+          value: "Username"
+        },
+        {
+          label: "E-mail",
+          value: "examplw@mail.com"
+        },
+        {
+          label: "Phone",
+          value: "00-0000-0000"
+        }
+      ]
+    };
+  }
+
+  renderList() {
+    return this.state.data.map(datum => {
+      return (
+        <View style={styles.item_border}>
+          <Text style={styles.label}>{datum.label} </Text>
+          <Text style={styles.value}> {datum.value} </Text>
+        </View>
+      );
+    });
+  }
+
   render() {
-    const {
-      srInfo: { CustomerName, Email, PersonalPhone, Address, TotalRate }
-    } = this.props;
     return (
       <Container>
         <Content style={{ padding: 10 }}>
-          <ScrollView>
-            <View style={styles.item_border}>
-              <Text style={styles.label}>Name : </Text>
-              <Text style={styles.value}> {CustomerName} </Text>
-            </View>
-            <View style={styles.item_border}>
-              <Text style={styles.label}>E-mail : </Text>
-              <Text style={styles.value}> {Email} </Text>
-            </View>
-            <View style={styles.item_border}>
-              <Text style={styles.label}>Phone : </Text>
-              <Text style={styles.value}> {PersonalPhone} </Text>
-            </View>
-            <View style={styles.item_border}>
-              <Text style={styles.label}>Address : </Text>
-              <Text style={styles.value}> {Address} </Text>
-            </View>
-            <View style={styles.item_border}>
-              <Text style={styles.label}>Country : </Text>
-              <Text style={styles.value}> India </Text>
-            </View>
-            <View style={styles.item_border}>
-              <Text style={styles.label}>Certificate Type : </Text>
-              <Text style={styles.value}> Text </Text>
-            </View>
-            <View style={styles.item_border}>
-              <Text style={styles.label}>
-                Document Pickup and Drop Location :
-              </Text>
-              <Text style={styles.value}> Text</Text>
-            </View>
-            <View style={styles.item_border}>
-              <Text style={styles.label}>Rate :</Text>
-              <Text style={styles.value}> {TotalRate} </Text>
-            </View>
-          </ScrollView>
+          <ScrollView>{this.renderList()}</ScrollView>
         </Content>
       </Container>
     );
@@ -65,20 +58,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
     borderWidth: 1,
     borderRadius: 8,
-    borderColor: "#BDC3C7",
-    padding: 10,
+    borderColor: "#E5E8E8",
+    padding: 8,
     flexDirection: "row"
   },
-  label: { fontSize: 16 },
-  value: { color: "#A6ACAF", fontSize: 16 }
+  label: { fontSize: 13 },
+  value: { color: "#A6ACAF", fontSize: 13 }
 });
-
-const mapStateToProps = ({ servicerequest: { srInfo } }) => ({
-  srInfo
-});
-const mapDispatchToProps = dispatch => ({});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SRInfo);

@@ -48,6 +48,15 @@ class ServiceDetails extends Component {
     const token = this.props.token.token;
     this.props.serviceRequestData({ serviceId, token });
   }
+
+  
+  componentDidUdate() {
+    const serviceId = this.props.navigation.state.params
+      ? this.props.navigation.state.params.serviceId
+      : null;
+    const token = this.props.token.token;
+    this.props.serviceRequestData({ serviceId, token });
+  }
   MessageModal = (SRID, NoteID) => {
     this.setState({
       SRID,

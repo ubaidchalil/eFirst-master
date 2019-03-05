@@ -11,18 +11,17 @@ import {
 let styles = StyleSheet.create({
   outer_main: {
     borderColor: "#F4D03F",
-    borderWidth: 2,
+    borderWidth: 1,
     borderRadius: 13
   },
   title_view: {
     borderBottomColor: "#F4D03F",
-    borderBottomWidth: 2,
+    borderBottomWidth: 1,
     flexDirection: "row",
-    padding: 10
+    padding: 8
   },
   title_msg_view: {
-    flex: 0.7,
-    padding: 5
+    flex: 0.7
   },
   title_msg_text: { color: "#F4D03F" },
   title_reply_view: { flex: 0.3 },
@@ -47,10 +46,20 @@ const renderMessageList = ({ messageList, messages, MessageModal }) => {
         renderItem={({ item, index }) => (
           <MessageItem message={item} index length={messageList.length} />
         )}
+        ItemSeparatorComponent={this.renderSeparator}
       />
     </View>
   ));
 };
+
+renderSeparator = () => (
+  <View
+    style={{
+      height: 1,
+      backgroundColor: '#E5E8E8'
+    }}
+  />
+);
 
 const Message = ({ messageList, messages, MessageModal }) => (
   <View>{renderMessageList({ messageList, messages, MessageModal })}</View>
@@ -64,28 +73,24 @@ class MessageItem extends React.PureComponent {
     return (
       <View
         style={[
-          { flexDirection: "row", padding: 10 },
-          index < length && {
-            borderBottomColor: "#CACFD2",
-            borderBottomWidth: 1
-          }
+          { flexDirection: "row", padding: 10 }
         ]}
       >
         <View style={{ width: 60, padding: 10 }}>
           <Image
-            style={{ height: 30, width: 20, resizeMode: "stretch" }}
+            style={{ height: 20, width: 15, resizeMode: "stretch" }}
             source={require("../../../../Assets/serviceDetail_user.png")}
           />
         </View>
         <View style={{}}>
-          <Text style={{ fontSize: 15, fontWeight: "bold", padding: 1 }}>
+          <Text style={{ fontSize: 12, fontWeight: "bold", padding: 1, color: 'black' }}>
             {message.CreatedBy}
           </Text>
-          <Text style={{ fontSize: 13, color: "#707B7C", padding: 1 }}>
+          <Text style={{ fontSize: 10, color: "#707B7C", padding: 1 }}>
             {message.CreatedDate}{" "}
           </Text>
           <Text
-            style={{ fontSize: 13, color: "#707B7C", padding: 3, marginTop: 5 }}
+            style={{ fontSize: 10, color: "#707B7C", padding: 3, marginTop: 5 }}
           >
             {message.MessageContent}{" "}
           </Text>

@@ -13,6 +13,15 @@ class Container extends Component {
     const token = this.props.token.token;
     this.props.servicesData({ statusId, token });
   };
+  
+  componentDidUpdate = () => {
+    const statusId = this.props.navigation.state.params
+      ? this.props.navigation.state.params.statusId
+      : null;
+    const token = this.props.token.token;
+    this.props.servicesData({ statusId, token });
+  };
+
   render = () => {
     const {
       services: { loading, error }

@@ -62,6 +62,6 @@ const styles = StyleSheet.create({
     padding: 10,
     flexDirection: "row"
   },
-  label: { fontSize: 16 },
-  value: { color: "#A6ACAF", fontSize: 16 }
+  label: { fontSize: 13 },
+  value: { color: "#A6ACAF", fontSize: 13 }
 });
