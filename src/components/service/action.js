@@ -187,7 +187,7 @@ export const sendOrReplyMessage = payload => dispatch => {
 };
 export const doclangTransCreate = payload => dispatch => {
   const { token, data } = payload;
-
+  console.log(data);
   const body = data;
   return openFetcher(
     async () => {
@@ -200,7 +200,6 @@ export const doclangTransCreate = payload => dispatch => {
         },
         body
       });
-      console.log(result);
       return result.json().then(data => ({
         data: data,
         status: result.ok

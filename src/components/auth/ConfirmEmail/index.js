@@ -20,7 +20,7 @@ class Container extends Component {
       }
     }
   }
-  render = () => <ForgetPasswordScreen {...this.props} />;
+  render = () => <ConfirmEmail {...this.props} />;
 }
 
 const mapStateToProps = ({ forgetpassword }) => ({

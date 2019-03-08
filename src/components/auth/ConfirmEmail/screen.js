@@ -50,7 +50,7 @@ const ConfirmEmail = ({
         <View style={styles.formContent}>
           <Item style={styles.marginTop}>
             <Input
-              placeholder="Verifica"
+              placeholder="VerificationC"
               name="email"
               label="Email"
               onChangeText={value => setFieldValue("Email", value)}

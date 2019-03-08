@@ -397,6 +397,7 @@ export default withFormik({
         ? attestationrate.data.Rate + 28
         : attestationrate.data.Rate
       : 0;
-    return values.docAttestationCreate({ ...values, Rate, token });
+    const ServiceName = "ATTESTATION";
+    return values.docAttestationCreate({ ...values, Rate, ServiceName, token });
   }
 })(DocumentAttestation);

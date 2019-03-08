@@ -20,18 +20,23 @@ class Container extends Component {
       documentlanguage,
       translationrate,
       documenttypes,
-      token
+      token,
+      langtranslation
     } = this.props;
 
     const loading =
       documentlanguage.loading ||
       translationrate.loading ||
-      documenttypes.loading;
+      documenttypes.loading ||
+      langtranslation.loading;
 
     const error =
-      documentlanguage.error || translationrate.error || documenttypes.error;
+      documentlanguage.error ||
+      translationrate.error ||
+      documenttypes.error ||
+      langtranslation.error;
 
-    const success = documentlanguage.success;
+    const success = langtranslation.success;
     return (
       <View style={{ flex: 1 }}>
         <Loader loading={loading} />
@@ -47,13 +52,15 @@ const mapStateToProps = ({
   translationrate,
   documenttypes,
   token,
-  profile
+  profile,
+  langtranslation
 }) => ({
   documentlanguage,
   translationrate,
   documenttypes,
   token,
-  profile
+  profile,
+  langtranslation
 });
 const mapDispatchToProps = dispatch => ({
   translationPrice: payload => dispatch(translationPrice(payload)),

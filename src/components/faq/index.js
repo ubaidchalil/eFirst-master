@@ -10,7 +10,7 @@ class Container extends Component {
     const { faq } = this.props;
     const { loading, error } = faq;
     return (
-      <View>
+      <View style={{ flex: 1 }}>
         <Loader loading={loading} />
         <FAQ {...this.props} />
         {error && <AlertView type="error" />}

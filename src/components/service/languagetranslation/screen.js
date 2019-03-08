@@ -48,35 +48,6 @@ const LanguageTranslation = ({
       }
     };
 
-    /**
-     * The first arg is the options object for customization (it can also be null or omitted for default options),
-     * The second arg is the callback which sends object: response (more info in the API Reference)
-     */
-    // ImagePicker.showImagePicker(options, response => {
-    //   console.log("Response = ", response);
-
-    //   if (response.didCancel) {
-    //     console.log("User cancelled image picker");
-    //   } else if (response.error) {
-    //     console.log("ImagePicker Error: ", response.error);
-    //   } else if (response.customButton) {
-    //     console.log("User tapped custom button: ", response.customButton);
-    //   } else {
-    //     const source = { uri: response.uri };
-    //     const file = {
-    //       data: `data:${response.type};base64,${response.data}`,
-    //       type: response.type,
-    //       name: response.fileName
-    //     };
-    //     // values.Files.push(file);
-    //     setFieldValue("Files", file);
-    //     // You can also display the image using data:
-    //     // const source = { uri: 'data:image/jpeg;base64,' + response.data };
-
-    //     console.log(source);
-    //   }
-    // });
-
     ImagePicker.launchCamera(options, response => {
       console.log("Response = ", response);
 
@@ -88,11 +59,19 @@ const LanguageTranslation = ({
         console.log("User tapped custom button: ", response.customButton);
       } else {
         const source = { uri: response.uri };
-        const file = {
-          data: `data:${response.type};base64,${response.data}`,
-          type: response.type,
-          name: response.fileName
-        };
+
+        const file =
+          Platform.OS === "ios"
+            ? {
+                data: `data:${response.type};base64,${response.data}`,
+                type: response.type,
+                name: response.fileName
+              }
+            : {
+                uri: uri,
+                type: response.type,
+                name: response.fileName
+              };
         // values.Files.push(file);
         setFieldValue("Files", file);
         // You can also display the image using data:
@@ -113,35 +92,6 @@ const LanguageTranslation = ({
       }
     };
 
-    /**
-     * The first arg is the options object for customization (it can also be null or omitted for default options),
-     * The second arg is the callback which sends object: response (more info in the API Reference)
-     */
-    // ImagePicker.showImagePicker(options, response => {
-    //   console.log("Response = ", response);
-
-    //   if (response.didCancel) {
-    //     console.log("User cancelled image picker");
-    //   } else if (response.error) {
-    //     console.log("ImagePicker Error: ", response.error);
-    //   } else if (response.customButton) {
-    //     console.log("User tapped custom button: ", response.customButton);
-    //   } else {
-    //     const source = { uri: response.uri };
-    //     const file = {
-    //       data: `data:${response.type};base64,${response.data}`,
-    //       type: response.type,
-    //       name: response.fileName
-    //     };
-    //     // values.Files.push(file);
-    //     setFieldValue("Files", file);
-    //     // You can also display the image using data:
-    //     // const source = { uri: 'data:image/jpeg;base64,' + response.data };
-
-    //     console.log(source);
-    //   }
-    // });
-
     ImagePicker.launchImageLibrary(options, response => {
       console.log("Response = ", response);
 
@@ -153,11 +103,18 @@ const LanguageTranslation = ({
         console.log("User tapped custom button: ", response.customButton);
       } else {
         const source = { uri: response.uri };
-        const file = {
-          data: `data:${response.type};base64,${response.data}`,
-          type: response.type,
-          name: response.fileName
-        };
+        const file =
+          Platform.OS === "ios"
+            ? {
+                data: `data:${response.type};base64,${response.data}`,
+                type: response.type,
+                name: response.fileName
+              }
+            : {
+                uri: response.uri,
+                type: response.type,
+                name: response.fileName
+              };
         // values.Files.push(file);
         setFieldValue("Files", file);
         // You can also display the image using data:
@@ -492,7 +449,7 @@ export default withFormik({
     data.append("Files", values.Files);
     data.append("Rate", Rate);
     data.append("ServiceId", 1);
-    data.append("ServiceName", "ServiceName");
+    data.append("ServiceName", "TRANSLATIONre");
     return values.doclangTransCreate({ data, token });
   }
 })(LanguageTranslation);
