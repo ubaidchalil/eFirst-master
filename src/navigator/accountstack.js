@@ -5,20 +5,21 @@ import Home from "../components/dashboard";
 import RootHeader from "../components/styled/Headers/RootHeader";
 import Registration from "../components/auth/registration";
 import ForgetPassword from "../components/auth/forgetpassword";
-// import ForgetPassword from "../components/auth/forgetpassword";
+import ConfirmEmail from "../components/auth/confirmmail";
 
 const accountStack = createStackNavigator(
   {
-    Auth : Login,
-    Registration : Registration,
-    ForgetPassword : ForgetPassword
+    Auth: Login,
+    Registration: Registration,
+    ForgetPassword: ForgetPassword,
+    ConfirmEmail: ConfirmEmail
   },
   {
     initialRouteName: "Auth",
     swipeEnabled: false,
-    headerMode: 'none',
+    headerMode: "none",
     navigationOptions: {
-      headerVisible: false,
+      headerVisible: false
     }
   }
 );

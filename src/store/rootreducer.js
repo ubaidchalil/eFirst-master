@@ -4,7 +4,8 @@ import {
   login,
   token,
   registration,
-  forgetpassword
+  forgetpassword,
+  confirmemail
 } from "../components/auth/reducer";
 
 import {
@@ -62,7 +63,8 @@ const config = {
     "faqcategory",
     "servicerequest",
     "translationrate",
-    "message"
+    "message",
+    "confirmemail"
   ]
 };
 
@@ -90,7 +92,8 @@ const combinedReducers = {
   faqcategory,
   servicerequest,
   translationrate,
-  message
+  message,
+  confirmemail
 };
 
 export default persistCombineReducers(config, combinedReducers);

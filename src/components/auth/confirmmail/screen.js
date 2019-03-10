@@ -35,8 +35,7 @@ const ConfirmEmail = ({
   values,
   errors,
   touched,
-  navigation,
-  resetPasswordUser
+  navigation
 }) => (
   <StyleProvider style={getTheme(material)}>
     <Container>
@@ -50,15 +49,15 @@ const ConfirmEmail = ({
         <View style={styles.formContent}>
           <Item style={styles.marginTop}>
             <Input
-              placeholder="VerificationC"
-              name="email"
-              label="Email"
-              onChangeText={value => setFieldValue("Email", value)}
-              value={values.Email}
-              error={touched.Email && errors.Email}
+              placeholder="Verification Code"
+              name="code"
+              label="Verification Code"
+              onChangeText={value => setFieldValue("code", value)}
+              value={values.code}
+              error={touched.code && errors.code}
               underlineColor={Color.secondary}
             />
-            {errors.Email && <Text visible={errors.Email}>{errors.Email}</Text>}
+            {errors.code && <Text visible={errors.code}>{errors.code}</Text>}
           </Item>
           <Button
             style={[styles.marginTop, { backgroundColor: "#183E61" }]}
@@ -74,21 +73,23 @@ const ConfirmEmail = ({
   </StyleProvider>
 );
 export default withFormik({
-  mapPropsToValues: ({ resetPasswordUser }) => ({
-    VerificationCode: "",
-    resetPasswordUser
+  mapPropsToValues: ({ confirmEmail }) => ({
+    code: "",
+    confirmEmail
   }),
   validateOnChange: false,
   validationSchema: Yup.object().shape({
-    Email: Yup.string()
-      .min(4, "Must be longer than 4 characters")
-      .email("Invalid")
-      .required("Required")
+    code: Yup.string().required("Required")
   }),
 
-  handleSubmit: (values, { resetForm, setSubmitting }) => {
-    const { Email } = values;
-    values.resetPasswordUser({ Email });
+  handleSubmit: (values, { resetForm, setSubmitting, props }) => {
+    const { code } = values;
+    const { registration } = props;
+    console.log(props);
+    const {
+      data: { Id }
+    } = registration;
+    values.confirmEmail({ code, userid: Id });
     setSubmitting(false);
     resetForm();
   }

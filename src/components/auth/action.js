@@ -1,18 +1,34 @@
-import { LOGIN_URL, REGISTER_URL, RESET_PASSWORD } from "../../constants";
+import {
+  LOGIN_URL,
+  REGISTER_URL,
+  RESET_PASSWORD,
+  CONFIRM_EMAIL_URL
+} from "../../constants";
 
 export const registrationState = {
   LOADING: "REGISTRATION_LOADING",
-  ERROR: "REGISTRATION_ERROR"
+  ERROR: "REGISTRATION_ERROR",
+  DONE: "REGISTRATION_DONE",
+  SUCCESS: "REGISTRATION_SUCCESS"
 };
+
 export const loginState = {
   LOADING: "LOGIN_LOADING",
   ERROR: "LOGIN_ERROR"
 };
+
+export const confirmEmailState = {
+  LOADING: "CONFIRM_EMAIL_LOADING",
+  ERROR: "CONFIRM_EMAIL_ERROR",
+  SUCCESS: "CONFIRM_EMAIL_SUCCESS"
+};
+
 export const forgetpasswordState = {
   LOADING: "FORGET_LOADING",
   SUCCESS: "FORGET_SUCCESS",
   ERROR: "FORGET_ERROR"
 };
+
 export const tokenState = {
   DONE: "USER_LOGGED",
   CLEAR: "USER_LOGGED_OUT"
@@ -77,8 +93,9 @@ const openRegFetcher = async (fetchData, type, dispatch) => {
       if (!result.data) {
         dispatch(setInStore(false, type.LOADING));
         dispatch(setInStore("Something wrong...", type.ERROR));
-        dispatch(clearData());
       } else {
+        dispatch(setInStore(result.data, type.DONE));
+        dispatch(setInStore(true, type.SUCCESS));
         dispatch(setInStore(false, type.LOADING));
       }
     } else {
@@ -92,7 +109,7 @@ const openRegFetcher = async (fetchData, type, dispatch) => {
   }
 };
 
-const openForgetFetcher = async (fetchData, type, dispatch) => {
+const openFetcher2 = async (fetchData, type, dispatch) => {
   dispatch(setInStore(true, type.LOADING));
   dispatch(setInStore(null, type.ERROR));
   try {
@@ -133,8 +150,7 @@ export const loginUser = formBody => dispatch => {
 
 export const registerUser = payload => dispatch => {
   const body = JSON.stringify(payload);
-  console.log(body);
-  return openFetcher(
+  return openRegFetcher(
     async () => {
       const result = await fetch(REGISTER_URL, {
         method: "POST",
@@ -144,21 +160,42 @@ export const registerUser = payload => dispatch => {
         },
         body
       });
-      //console.log(result.json());
       return result.json().then(data => ({
         data: data,
         status: result.ok
       }));
-      //return {data:result.json(),status:result.ok};
     },
     registrationState,
     dispatch
   );
 };
 
+export const confirmEmail = payload => dispatch => {
+  const { code, userid } = payload;
+  const url = `${CONFIRM_EMAIL_URL}?userId=${userid}&code=${code}`;
+  console.log(url);
+  return openFetcher2(
+    async () => {
+      const result = await fetch(url, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        }
+      });
+      return result.json().then(data => ({
+        data: data,
+        status: result.ok
+      }));
+    },
+    confirmEmailState,
+    dispatch
+  );
+};
+
 export const resetPasswordUser = payload => dispatch => {
   const body = JSON.stringify(payload);
-  return openForgetFetcher(
+  return openFetcher2(
     async () => {
       const result = await fetch(RESET_PASSWORD, {
         method: "POST",
@@ -168,12 +205,10 @@ export const resetPasswordUser = payload => dispatch => {
         },
         body
       });
-      //console.log(result.json());
       return result.json().then(data => ({
         data: data,
         status: result.ok
       }));
-      //return {data:result.json(),status:result.ok};
     },
     forgetpasswordState,
     dispatch

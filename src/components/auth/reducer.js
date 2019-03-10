@@ -2,26 +2,34 @@ import {
   loginState,
   tokenState,
   registrationState,
-  forgetpasswordState
+  forgetpasswordState,
+  confirmEmailState
 } from "./action";
 
-const defaulTokenState = null;
+const defaulToken = null;
 
-const defaultRegisterState = {
+const defaultRegister = {
+  error: null,
+  loading: false,
+  data: null,
+  success: true
+};
+const defaultLogin = {
   error: null,
   loading: false
 };
-const defaultLoginState = {
-  error: null,
-  loading: false
-};
-const defaultForgetPasswordtate = {
+const defaultForgetPassword = {
   error: null,
   success: null,
   loading: false
 };
 
-export const token = (state = defaulTokenState, action) => {
+const defaultConfirmEmail = {
+  error: null,
+  success: null,
+  loading: false
+};
+export const token = (state = defaulToken, action) => {
   switch (action.type) {
     case tokenState.DONE:
       const tokenData = Array.isArray(action.data)
@@ -32,24 +40,26 @@ export const token = (state = defaulTokenState, action) => {
         username: tokenData.userName
       };
     case tokenState.CLEAR:
-      return defaulTokenState;
+      return defaulToken;
     default:
       return state;
   }
 };
 
-export const registration = (state = defaultRegisterState, action) => {
+export const registration = (state = defaultRegister, action) => {
   switch (action.type) {
     case registrationState.ERROR:
       return { ...state, error: action.state };
     case registrationState.LOADING:
       return { ...state, loading: action.state };
+    case registrationState.DONE:
+      return { ...state, data: action.state };
     default:
       return state;
   }
 };
 
-export const login = (state = defaultLoginState, action) => {
+export const login = (state = defaultLogin, action) => {
   switch (action.type) {
     case loginState.ERROR:
       return { ...state, error: action.state };
@@ -60,13 +70,26 @@ export const login = (state = defaultLoginState, action) => {
   }
 };
 
-export const forgetpassword = (state = defaultForgetPasswordtate, action) => {
+export const forgetpassword = (state = defaultForgetPassword, action) => {
   switch (action.type) {
     case forgetpasswordState.ERROR:
       return { ...state, error: action.state };
     case forgetpasswordState.LOADING:
       return { ...state, loading: action.state };
     case forgetpasswordState.SUCCESS:
+      return { ...state, success: action.state };
+    default:
+      return state;
+  }
+};
+
+export const confirmemail = (state = defaultConfirmEmail, action) => {
+  switch (action.type) {
+    case confirmEmailState.ERROR:
+      return { ...state, error: action.state };
+    case confirmEmailState.LOADING:
+      return { ...state, loading: action.state };
+    case confirmEmailState.SUCCESS:
       return { ...state, success: action.state };
     default:
       return state;

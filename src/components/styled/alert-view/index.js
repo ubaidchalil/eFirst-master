@@ -2,18 +2,36 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 export default class AlertView extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: true
+    };
+  }
+  componentDidMount() {
+    setTimeout(this.hideview, 5000);
+  }
+  hideview = () => {
+    this.setState({ visible: false });
+  };
   render() {
-    const { type } = this.props;
+    const { type, message } = this.props;
     const backgroundColor = type === "success" ? "blue" : "red";
     const text =
       type === "success"
-        ? "Succesfully updated !"
+        ? message
+          ? message
+          : "Succesfully updated !"
+        : message
+        ? message
         : "Oops! Something went wrong!";
     return (
       <View>
-        <View style={[styles.bottomView, { backgroundColor }]}>
-          <Text style={styles.textStyle}>{text}.</Text>
-        </View>
+        {this.state.visible && (
+          <View style={[styles.bottomView, { backgroundColor }]}>
+            <Text style={styles.textStyle}>{text}.</Text>
+          </View>
+        )}
       </View>
     );
   }

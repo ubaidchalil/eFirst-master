@@ -9,6 +9,7 @@ export const LOGIN_URL = "https://api.efirst.ae/Token";
 export const RESET_PASSWORD_URL =
   "https://api.efirst.ae/Account/ForgotPassword";
 export const REGISTER_URL = "https://api.efirst.ae/Account/Register";
+export const CONFIRM_EMAIL_URL = "https://api.efirst.ae/Account/ConfirmEmail";
 
 /// DASHBOARD URLS ///
 
