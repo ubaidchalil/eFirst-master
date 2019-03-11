@@ -79,6 +79,13 @@ const Support = ({
               underlineColor={Color.secondary}
             />
           </Item>
+          <Item style={{ borderBottomWidth: 0 }} >
+              {errors.CustomerName && (
+                <Text style={{ color:'red' }}  visible={errors.CustomerName}>
+                  {errors.CustomerName}
+                </Text>
+              )}
+          </Item>
           <Item style={styles.item_margin}>
             <Input
               placeholder="Email"
@@ -90,6 +97,13 @@ const Support = ({
               underlineColor={Color.secondary}
             />
           </Item>
+          <Item style={{ borderBottomWidth: 0 }} >
+              {errors.CustomerMail && (
+                <Text style={{ color:'red' }}  visible={errors.CustomerMail}>
+                  {errors.CustomerMail}
+                </Text>
+              )}
+          </Item>
           <Item style={styles.item_margin}>
             <Input
               placeholder="Mobile"
@@ -100,9 +114,6 @@ const Support = ({
               error={touched.PersonalPhone && errors.PersonalPhone}
               underlineColor={Color.secondary}
             />
-            {errors.PersonalPhone && (
-              <Text visible={errors.PersonalPhone}>{errors.PersonalPhone}</Text>
-            )}
             <Input
               placeholder="Office"
               name="OfficePhone"
@@ -112,6 +123,18 @@ const Support = ({
               error={touched.OfficePhone && errors.OfficePhone}
               underlineColor={Color.secondary}
             />
+          </Item>
+          <Item style={{ borderBottomWidth: 0 }} >
+              {errors.PersonalPhone && (
+                <Text style={{ color:'red' }}  visible={errors.PersonalPhone}>
+                  {errors.PersonalPhone}
+                </Text>
+              )}
+              {errors.OfficePhone && (
+                <Text style={{ color:'red' }}  visible={errors.OfficePhone}>
+                  {errors.OfficePhone}
+                </Text>
+              )}
           </Item>
           <Item style={styles.item_margin}>
             <Textarea
@@ -125,9 +148,13 @@ const Support = ({
               underlineColor={Color.secondary}
               underline
             />
-            {errors.Message && (
-              <Text visible={errors.Message}>{errors.Message}</Text>
-            )}
+          </Item>
+          <Item style={{ borderBottomWidth: 0 }} >
+              {errors.Message && (
+                <Text style={{ color:'red' }}  visible={errors.Message}>
+                  {errors.Message}
+                </Text>
+              )}
           </Item>
           <Button
             onPress={handleSubmit}

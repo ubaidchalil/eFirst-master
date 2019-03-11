@@ -29,6 +29,7 @@ import { connect } from "react-redux";
 import MyHeader from "../../../Header";
 import Loader from "../../styled/loader";
 import AlertView from "../../styled/alert-view";
+
 class ServiceDetails extends Component {
   constructor(props) {
     super(props);
@@ -47,7 +48,19 @@ class ServiceDetails extends Component {
       : null;
     const token = this.props.token.token;
     this.props.serviceRequestData({ serviceId, token });
+    alert("loading service id: "+ serviceId + "")
   }
+  
+  shouldComponentUpdate(nextProps, nextState){
+   if(nextProps.navigation.state.params.serviceId != this.props.navigation.state.params.serviceId){
+      const serviceId = nextProps.navigation.state.params
+        ? nextProps.navigation.state.params.serviceId
+        : null;
+      const token = nextProps.token.token;
+      nextProps.serviceRequestData({ serviceId, token });
+    }
+    return nextProps.navigation.state.params.serviceId != this.props.navigation.state.params.serviceId;
+ }
 
   // componentDidUdate() {
   //   const serviceId = this.props.navigation.state.params

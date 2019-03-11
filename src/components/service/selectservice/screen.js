@@ -26,7 +26,7 @@ export default ({ navigation }) => {
               <Text style={styles.body_text}>Lorem Ipsum</Text>
           </View>
           <View style={styles.footer} >
-              <TouchableOpacity  onPress={() => this.navigateToScreen("DocumentAttestation")} >
+              <TouchableOpacity  onPress={() => navigation.navigate("DocumentAttestation")} >
                   <Text style={styles.footer_text}>Apply Now</Text>
               </TouchableOpacity>
           </View>
@@ -39,7 +39,7 @@ export default ({ navigation }) => {
               <Text style={styles.body_text}>Lorem Ipsum..</Text>
           </View>
           <View style={styles.footer} >
-              <TouchableOpacity onPress={() => this.navigateToScreen("LanguageTranslation")}  >
+              <TouchableOpacity onPress={() => navigation.navigate("LanguageTranslation")}  >
                   <Text style={styles.footer_text}>Apply Now</Text>
               </TouchableOpacity>
           </View>
