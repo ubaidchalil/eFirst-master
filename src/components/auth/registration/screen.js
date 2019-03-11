@@ -61,9 +61,13 @@ const RegistrationForm = ({
               error={touched.FirstName && errors.FirstName}
               underlineColor={Color.secondary}
             />
-            {errors.FirstName && (
-              <Text visible={errors.FirstName}>{errors.FirstName}</Text>
-            )}
+          </Item>
+          <Item style={{ borderBottomWidth: 0 }} >
+              {errors.FirstName && (
+                <Text style={{ color:'red' }}  visible={errors.FirstName}>
+                  {errors.FirstName}
+                </Text>
+              )}
           </Item>
           <Item style={styles.marginTop}>
             <Input
@@ -75,7 +79,13 @@ const RegistrationForm = ({
               error={touched.Email && errors.Email}
               underlineColor={Color.secondary}
             />
-            {errors.Email && <Text visible={errors.Email}>{errors.Email}</Text>}
+          </Item>
+          <Item style={{ borderBottomWidth: 0 }} >
+              {errors.Email && (
+                <Text style={{ color:'red' }}  visible={errors.Email}>
+                  {errors.Email}
+                </Text>
+              )}
           </Item>
           <Item style={styles.marginTop}>
             <Input
@@ -87,9 +97,13 @@ const RegistrationForm = ({
               error={touched.MobileNumber && errors.MobileNumber}
               underlineColor={Color.secondary}
             />
-            {errors.MobileNumber && (
-              <Text visible={errors.MobileNumber}>{errors.MobileNumber}</Text>
-            )}
+          </Item>
+          <Item style={{ borderBottomWidth: 0 }} >
+              {errors.MobileNumber && (
+                <Text style={{ color:'red' }}  visible={errors.MobileNumber}>
+                  {errors.MobileNumber}
+                </Text>
+              )}
           </Item>
           <Item style={styles.marginTop}>
             <Input
@@ -101,9 +115,13 @@ const RegistrationForm = ({
               error={touched.Password && errors.Password}
               underlineColor={Color.secondary}
             />
-            {errors.Password && (
-              <Text visible={errors.Password}>{errors.Password}</Text>
-            )}
+          </Item>
+          <Item style={{ borderBottomWidth: 0 }} >
+              {errors.Password && (
+                <Text style={{ color:'red' }}  visible={errors.Password}>
+                  {errors.Password}
+                </Text>
+              )}
           </Item>
           <Item style={styles.marginTop}>
             <Input
@@ -115,11 +133,13 @@ const RegistrationForm = ({
               error={touched.ConfirmPassword && errors.ConfirmPassword}
               underlineColor={Color.secondary}
             />
-            {errors.ConfirmPassword && (
-              <Text visible={errors.ConfirmPassword}>
-                {errors.ConfirmPassword}
-              </Text>
-            )}
+          </Item>
+          <Item style={{ borderBottomWidth: 0 }} >
+              {errors.ConfirmPassword && (
+                <Text style={{ color:'red' }}  visible={errors.ConfirmPassword}>
+                  {errors.ConfirmPassword}
+                </Text>
+              )}
           </Item>
           <Button style={styles.marginTop} onPress={handleSubmit} full rounded>
             <Text>Register</Text>

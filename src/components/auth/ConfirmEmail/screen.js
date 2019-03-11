@@ -35,7 +35,8 @@ const ConfirmEmail = ({
   values,
   errors,
   touched,
-  navigation
+  navigation,
+  resetPasswordUser
 }) => (
   <StyleProvider style={getTheme(material)}>
     <Container>
@@ -49,19 +50,20 @@ const ConfirmEmail = ({
         <View style={styles.formContent}>
           <Item style={styles.marginTop}>
             <Input
-              placeholder="Verification Code"
-              name="code"
-              label="Verification Code"
-              onChangeText={value => setFieldValue("code", value)}
-              value={values.code}
-              error={touched.code && errors.code}
+              placeholder="VerificationC"
+              name="email"
+              label="Email"
+              onChangeText={value => setFieldValue("Email", value)}
+              value={values.Email}
+              error={touched.Email && errors.Email}
               underlineColor={Color.secondary}
             />
+            {errors.Email && <Text visible={errors.Email}>{errors.Email}</Text>}
           </Item>
           <Item style={{ borderBottomWidth: 0 }} >
-              {errors.code && (
-                <Text style={{ color:'red' }}  visible={errors.code}>
-                  {errors.code}
+              {errors.Email && (
+                <Text style={{ color:'red' }}  visible={errors.Email}>
+                  {errors.Email}
                 </Text>
               )}
           </Item>
@@ -79,23 +81,21 @@ const ConfirmEmail = ({
   </StyleProvider>
 );
 export default withFormik({
-  mapPropsToValues: ({ confirmEmail }) => ({
-    code: "",
-    confirmEmail
+  mapPropsToValues: ({ resetPasswordUser }) => ({
+    VerificationCode: "",
+    resetPasswordUser
   }),
   validateOnChange: false,
   validationSchema: Yup.object().shape({
-    code: Yup.string().required("Required")
+    Email: Yup.string()
+      .min(4, "Must be longer than 4 characters")
+      .email("Invalid")
+      .required("Required")
   }),
 
-  handleSubmit: (values, { resetForm, setSubmitting, props }) => {
-    const { code } = values;
-    const { registration } = props;
-    console.log(props);
-    const {
-      data: { Id }
-    } = registration;
-    values.confirmEmail({ code, userid: Id });
+  handleSubmit: (values, { resetForm, setSubmitting }) => {
+    const { Email } = values;
+    values.resetPasswordUser({ Email });
     setSubmitting(false);
     resetForm();
   }

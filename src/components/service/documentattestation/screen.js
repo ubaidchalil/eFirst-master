@@ -156,12 +156,12 @@ const DocumentAttestation = ({
     <Container>
       <MyHeader navigation={navigation} header="My Services" />
 
-      <Header style={{ backgroundColor: "#F7F9F9", height: 50 }}>
-        <Body>
+      <View style={{ backgroundColor: "#F7F9F9", flexDirection:'row', paddingHorizontal: 10, paddingVertical:10 }}>
+        <Left>
           <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
             DOCUMENT ATTESTATION
           </Text>
-        </Body>
+        </Left>
         <Right>
           <TouchableOpacity
             onPress={() => {
@@ -174,7 +174,7 @@ const DocumentAttestation = ({
             </View>
           </TouchableOpacity>
         </Right>
-      </Header>
+      </View>
       <Content style={{ padding: 10 }}>
         <Modal isVisible={state.showPopUp}>{this._renderModalContent()}</Modal>
         <ScrollView>
@@ -189,9 +189,13 @@ const DocumentAttestation = ({
                 error={touched.CustomerName && errors.CustomerName}
                 underlineColor={Color.secondary}
               />
-              {errors.CustomerName && (
-                <Text visible={errors.CustomerName}>{errors.CustomerName}</Text>
-              )}
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }} >
+                  {errors.CustomerName && (
+                    <Text style={{ color:'red' }}  visible={errors.CustomerName}>
+                      {errors.CustomerName}
+                    </Text>
+                  )}
             </Item>
             <Item style={styles.item_margin}>
               <Input
@@ -203,9 +207,13 @@ const DocumentAttestation = ({
                 error={touched.Email && errors.Email}
                 underlineColor={Color.secondary}
               />
-              {errors.Email && (
-                <Text visible={errors.Email}>{errors.Email}</Text>
-              )}
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }} >
+                  {errors.Email && (
+                    <Text style={{ color:'red' }}  visible={errors.Email}>
+                      {errors.Email}
+                    </Text>
+                  )}
             </Item>
             <Item style={styles.item_margin}>
               <Input
@@ -217,11 +225,6 @@ const DocumentAttestation = ({
                 error={touched.PersonalPhone && errors.PersonalPhone}
                 underlineColor={Color.secondary}
               />
-              {errors.PersonalPhone && (
-                <Text visible={errors.PersonalPhone}>
-                  {errors.PersonalPhone}
-                </Text>
-              )}
               <Input
                 placeholder="Office"
                 name="Office"
@@ -231,6 +234,18 @@ const DocumentAttestation = ({
                 error={touched.OfficePhone && errors.OfficePhone}
                 underlineColor={Color.secondary}
               />
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }} >
+                {errors.PersonalPhone && (
+                  <Text style={{ color:'red' }}  visible={errors.PersonalPhone}>
+                    {errors.PersonalPhone}
+                  </Text>
+                )}
+                {errors.OfficePhone && (
+                  <Text style={{ color:'red' }}  visible={errors.OfficePhone}>
+                    {errors.OfficePhone}
+                  </Text>
+                )}
             </Item>
             <Item style={styles.item_margin}>
               <Textarea
@@ -245,7 +260,14 @@ const DocumentAttestation = ({
                 underlineColor={Color.secondary}
               />
             </Item>
-            <Item style={styles.item_margin}>
+            <Item style={{ borderBottomWidth: 0 }} >
+                {errors.Address && (
+                  <Text style={{ color:'red' }}  visible={errors.Address}>
+                    {errors.Address}
+                  </Text>
+                )}
+            </Item>
+            <Item  picker style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -265,13 +287,15 @@ const DocumentAttestation = ({
                 <Picker.Item key="0" label="Select Country" value="0" />
                 {renderDocumentCountries()}
               </Picker>
-              {errors.SelectedCountryId && (
-                <Text visible={errors.SelectedCountryId}>
-                  {errors.SelectedCountryId}
-                </Text>
-              )}
             </Item>
-            <Item style={styles.item_margin}>
+            <Item style={{ borderBottomWidth: 0 }} >
+                {errors.SelectedCountryId && (
+                  <Text style={{ color:'red' }}  visible={errors.SelectedCountryId}>
+                    {errors.SelectedCountryId}
+                  </Text>
+                )}
+            </Item>
+            <Item  picker style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -291,11 +315,13 @@ const DocumentAttestation = ({
                 <Picker.Item key="0" label="Select type" value="0" />
                 {renderDocumentCertTypes()}
               </Picker>
-              {errors.SelectedCertificateType && (
-                <Text visible={errors.SelectedCertificateType}>
-                  {errors.SelectedCertificateType}
-                </Text>
-              )}
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }} >
+                {errors.SelectedCountryId && (
+                  <Text style={{ color:'red' }}  visible={errors.SelectedCountryId}>
+                    {errors.SelectedCountryId}
+                  </Text>
+                )}
             </Item>
             <ListItem
               style={[styles.item_margin, { borderBottomWidth: 0 }]}

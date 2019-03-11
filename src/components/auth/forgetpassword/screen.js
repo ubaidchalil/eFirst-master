@@ -58,7 +58,13 @@ const ResetPasswordForm = ({
               error={touched.Email && errors.Email}
               underlineColor={Color.secondary}
             />
-            {errors.Email && <Text visible={errors.Email}>{errors.Email}</Text>}
+          </Item>
+          <Item style={{ borderBottomWidth: 0 }} >
+              {errors.Email && (
+                <Text style={{ color:'red' }}  visible={errors.Email}>
+                  {errors.Email}
+                </Text>
+              )}
           </Item>
           <Button style={[styles.marginTop,{ backgroundColor: "#183E61" }]} onPress={handleSubmit} full rounded>
             <Text>Register</Text>

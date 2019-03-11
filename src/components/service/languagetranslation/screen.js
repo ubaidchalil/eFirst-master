@@ -151,19 +151,19 @@ const LanguageTranslation = ({
   return (
     <Container>
       <MyHeader navigation={navigation} header="My Services" />
-      <Header style={{ backgroundColor: "#F7F9F9", height: 50 }}>
-        <Body>
+      <View style={{ backgroundColor: "#F7F9F9", height: 25, flexDirection: "row", paddingHorizontal: 10, paddingVertical:10}}>
+        <Left>
           <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
             LANGUAGE TRANSLATION
           </Text>
-        </Body>
+        </Left>
         <Right>
           <View style={{ flexDirection: "row" }}>
             <Icon name="alert" style={{ fontSize: 20, color: "#F39C12" }} />
             <Text> Info</Text>
           </View>
         </Right>
-      </Header>
+      </View>
       <Content style={{ padding: 10 }}>
         <ScrollView>
           <Form>
@@ -177,8 +177,10 @@ const LanguageTranslation = ({
                 error={touched.CustomerName && errors.CustomerName}
                 underlineColor={Color.secondary}
               />
+              </Item>
+            <Item style={{ borderBottomWidth: 0 }} >
               {errors.CustomerName && (
-                <Text visible={errors.CustomerName}>{errors.CustomerName}</Text>
+                <Text style={{ color:'red' }}  visible={errors.CustomerName}>{errors.CustomerName}</Text>
               )}
             </Item>
             <Item style={styles.item_margin}>
@@ -191,8 +193,10 @@ const LanguageTranslation = ({
                 error={touched.Email && errors.Email}
                 underlineColor={Color.secondary}
               />
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }} >
               {errors.Email && (
-                <Text visible={errors.Email}>{errors.Email}</Text>
+                <Text style={{ color:'red' }}  visible={errors.Email}>{errors.Email}</Text>
               )}
             </Item>
             <Item style={styles.item_margin}>
@@ -205,12 +209,7 @@ const LanguageTranslation = ({
                 error={touched.PersonalPhone && errors.PersonalPhone}
                 underlineColor={Color.secondary}
               />
-              {errors.PersonalPhone && (
-                <Text visible={errors.PersonalPhone}>
-                  {errors.PersonalPhone}
-                </Text>
-              )}
-              <Input
+            <Input
                 placeholder="Office"
                 name="Office"
                 label="Office"
@@ -219,6 +218,18 @@ const LanguageTranslation = ({
                 error={touched.OfficePhone && errors.OfficePhone}
                 underlineColor={Color.secondary}
               />
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }} >
+                {errors.PersonalPhone && (
+                  <Text style={{ color:'red' }}  visible={errors.PersonalPhone}>
+                    {errors.PersonalPhone}
+                  </Text>
+                )}
+                {errors.OfficePhone && (
+                  <Text style={{ color:'red' }}  visible={errors.OfficePhone}>
+                    {errors.OfficePhone}
+                  </Text>
+                )}
             </Item>
             <Item style={styles.item_margin}>
               <Textarea
@@ -233,11 +244,18 @@ const LanguageTranslation = ({
                 underlineColor={Color.secondary}
               />
             </Item>
-            <Item style={styles.item_margin}>
+            <Item style={{ borderBottomWidth: 0 }} >
+                {errors.Address && (
+                  <Text style={{ color:'red' }}  visible={errors.Address}>
+                    {errors.Address}
+                  </Text>
+                )}
+            </Item>
+            <Item  picker style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }}
+                style={{ width: undefined }} 
                 placeholder="Document Type"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
@@ -246,15 +264,18 @@ const LanguageTranslation = ({
                   setFieldValue("SelectedDocumentTypeId", value)
                 }
               >
+              <Picker.Item key="0" label="Select type" value="0" />
                 {renderDocumentTypes()}
               </Picker>
-              {errors.SelectedDocumentTypeId && (
-                <Text visible={errors.SelectedDocumentTypeId}>
-                  {errors.SelectedDocumentTypeId}
-                </Text>
-              )}
             </Item>
-            <Item style={styles.item_margin}>
+            <Item style={{ borderBottomWidth: 0 }} >
+                {errors.SelectedDocumentTypeId && (
+                  <Text style={{ color:'red' }}  visible={errors.SelectedDocumentTypeId}>
+                    {errors.SelectedDocumentTypeId}
+                  </Text>
+                )}
+            </Item>
+            <Item  picker style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -271,15 +292,18 @@ const LanguageTranslation = ({
                   );
                 }}
               >
+              <Picker.Item key="0" label="Select language" value="0" />
                 {renderTranslationLanguage()}
               </Picker>
-              {errors.SelectedFromDocumentLanguageId && (
-                <Text visible={errors.SelectedFromDocumentLanguageId}>
-                  {errors.SelectedFromDocumentLanguageId}
-                </Text>
-              )}
             </Item>
-            <Item style={styles.item_margin}>
+            <Item style={{ borderBottomWidth: 0 }} >
+                  {errors.SelectedFromDocumentLanguageId && (
+                    <Text style={{ color:'red' }}  visible={errors.SelectedFromDocumentLanguageId}>
+                      {errors.SelectedFromDocumentLanguageId}
+                    </Text>
+                  )}
+            </Item>
+            <Item  picker style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -298,11 +322,13 @@ const LanguageTranslation = ({
               >
                 {renderTranslationLanguage()}
               </Picker>
-              {errors.SelectedFromDocumentLanguageId && (
-                <Text visible={errors.SelectedFromDocumentLanguageId}>
-                  {errors.SelectedFromDocumentLanguageId}
-                </Text>
-              )}
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }} >
+                  {errors.SelectedFromDocumentLanguageId && (
+                    <Text style={{ color:'red' }}  visible={errors.SelectedFromDocumentLanguageId}>
+                      {errors.SelectedFromDocumentLanguageId}
+                    </Text>
+                  )}
             </Item>
             <ListItem style={[styles.item_margin, { borderBottomWidth: 0 }]}>
               <CheckBox
@@ -322,6 +348,17 @@ const LanguageTranslation = ({
             <Item style={{ borderBottomWidth: 0 }}>
               <Text>Upload File </Text>
             </Item>
+            <View>
+              <Text
+                style={{
+                  textAlign: "center",
+                  color: "#B2BABB",
+                  padding: 10
+                }}
+              >
+              Filename
+              </Text>
+            </View>
             <View style={{ alignItems: "center", marginTop: 7 }}>
               <View
                 style={{
@@ -356,6 +393,7 @@ const LanguageTranslation = ({
               </View>
             </View>
 
+
             <View>
               <Text
                 style={{
@@ -374,7 +412,12 @@ const LanguageTranslation = ({
                 AED
               </Text>
             </View>
-            <Button full rounded onPress={handleSubmit}>
+            <Button
+              style={{ backgroundColor: "#183E61", marginBottom: 50 }}
+              full
+              rounded
+              onPress={() => handleSubmit}
+            >
               <Text> Pay Now </Text>
             </Button>
           </Form>

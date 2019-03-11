@@ -13,7 +13,18 @@ class Container extends Component {
     const token = this.props.token.token;
     this.props.servicesData({ statusId, token });
   };
-
+/*
+  shouldComponentUpdate(nextProps, nextState){
+    if(nextProps.navigation.state.params.statusId != this.props.navigation.state.params.statusId){
+       const statusId = nextProps.navigation.state.params
+         ? nextProps.navigation.state.params.statusId
+         : null;
+       const token = nextProps.token.token;
+       nextProps.servicesData({ statusId, token });
+     }
+     return nextProps.navigation.state.params.statusId != this.props.navigation.state.params.statusId;
+  }
+  */
   // componentDidUpdate = () => {
   //   const statusId = this.props.navigation.state.params
   //     ? this.props.navigation.state.params.statusId
