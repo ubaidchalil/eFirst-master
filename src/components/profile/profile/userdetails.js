@@ -21,6 +21,7 @@ import {
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
+var ImagePicker = require("react-native-image-picker");
 const UserDetails = ({
   handleSubmit,
   setFieldValue,
@@ -30,6 +31,37 @@ const UserDetails = ({
   touched,
   userdetail
 }) => {
+  const selectPhotoTapped = () => {
+    const options = {
+      quality: 1.0,
+      maxWidth: 500,
+      maxHeight: 500,
+      storageOptions: {
+        skipBackup: true
+      }
+    };
+
+    ImagePicker.showImagePicker(options, response => {
+      console.log("Response = ", response);
+
+      if (response.didCancel) {
+        console.log("User cancelled photo picker");
+      } else if (response.error) {
+        console.log("ImagePicker Error: ", response.error);
+      } else if (response.customButton) {
+        console.log("User tapped custom button: ", response.customButton);
+      } else {
+        let source = { uri: response.uri };
+
+        // You can also display the image using data:
+        // let source = { uri: 'data:image/jpeg;base64,' + response.data };
+
+        this.setState({
+          avatarSource: source
+        });
+      }
+    });
+  };
   return (
     <View style={{ flexDirection: "row", padding: 10 }}>
       <View
@@ -41,7 +73,7 @@ const UserDetails = ({
         }}
       >
         <Thumbnail large source={require("./userProfile.png")} />
-        <TouchableOpacity>
+        <TouchableOpacity onPress={selectPhotoTapped}>
           <Text
             style={{
               textAlign: "center",

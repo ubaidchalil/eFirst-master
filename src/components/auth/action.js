@@ -85,6 +85,7 @@ export const openFetcher = async (fetchData, type, dispatch) => {
 
 const openRegFetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(true, type.LOADING));
+  h;
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
@@ -114,6 +115,7 @@ const openFetcher2 = async (fetchData, type, dispatch) => {
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
+    console.log(result);
     if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
       dispatch(setInStore(true, type.SUCCESS));
     } else {
