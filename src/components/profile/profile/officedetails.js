@@ -52,9 +52,7 @@ const OfficeDetails = ({
               <Icon style={{ color: "black", fontSize: 20 }} name="create" />
             </TouchableOpacity>
           ) : (
-            <TouchableOpacity
-              onPress={() => setFieldValue("ShowEditOffice", false)}
-            >
+            <TouchableOpacity onPress={handleSubmit}>
               <Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
             </TouchableOpacity>
           )}
@@ -84,6 +82,13 @@ const OfficeDetails = ({
                   </Input>
                 </Item>
               )}
+              <Item style={{ borderBottomWidth: 0 }}>
+                {errors.Company && (
+                  <Text style={{ color: "red" }} visible={errors.Company}>
+                    {errors.Company}
+                  </Text>
+                )}
+              </Item>
             </Col>
             <Col>
               {!values.ShowEditOffice ? (
@@ -163,31 +168,29 @@ const OfficeDetails = ({
 };
 
 export default withFormik({
-  mapPropsToValues: ({ updateUserDetails, officedetail }) => ({
+  mapPropsToValues: ({ userOfficeAddressCreate, officedetail }) => ({
     Company: officedetail.Company,
     CompanyEmail: officedetail.CompanyEmail,
     CompanyPhone: officedetail.CompanyPhone,
     CompanyWebsite: officedetail.CompanyWebsite,
-    ShowEditOffice: false
+    ShowEditOffice: false,
+    userOfficeAddressCreate
   }),
   validateOnChange: false,
 
   validationSchema: Yup.object().shape({
-    ShowEditOffice: Yup.boolean(),
-    Company: Yup.string().when("ShowEditOffice", {
-      is: true,
-      then: Yup.string().required("Must enter company name")
-    })
+    Company: Yup.string().required("Required")
   }),
 
   handleSubmit: (values, { props }) => {
     const token = props.token.token;
     const { Company, CompanyEmail, CompanyPhone, CompanyWebsite } = values;
-    values.registerUser({
+    values.userOfficeAddressCreate({
       Company,
       CompanyEmail,
       CompanyPhone,
-      CompanyWebsite
+      CompanyWebsite,
+      token
     });
   }
 })(OfficeDetails);

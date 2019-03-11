@@ -127,11 +127,12 @@ const PersonalDetails = ({
 };
 
 export default withFormik({
-  mapPropsToValues: ({ updateUserDetails, personaldetail }) => ({
+  mapPropsToValues: ({ userPersonalDetailCreate, personaldetail }) => ({
     DOB: personaldetail.DOB,
     Gender: personaldetail.Gender,
     ShowEditPersonal: false,
-    IsDatePickerVisible: false
+    IsDatePickerVisible: false,
+    userPersonalDetailCreate
   }),
   validateOnChange: false,
 
@@ -146,7 +147,7 @@ export default withFormik({
   handleSubmit: (values, { props }) => {
     const token = props.token.token;
     const { DOB, Gender } = values;
-    values.registerUser({ DOB, Gender });
+    values.userPersonalDetailCreate({ DOB, Gender, token });
   }
 })(PersonalDetails);
 

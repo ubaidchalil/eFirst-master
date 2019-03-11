@@ -27,6 +27,12 @@ import OfficeDetail from "./officedetails";
 import MyHeader from "../../../Header";
 import Loader from "../../styled/loader";
 import AlertView from "../../styled/alert-view";
+import {
+  userConatctDetailCreate,
+  userOfficeAddressCreate,
+  userPersonalDetailCreate,
+  userProfileCreate
+} from "../action";
 class Container1 extends Component {
   constructor(props) {
     super(props);
@@ -66,10 +72,22 @@ class Container1 extends Component {
         <MyHeader navigation={this.props.navigation} header="Manage Profile" />
         <Content>
           <Loader loading={loading} />
-          <UserDetail userdetail={this.props.userdetail} />
-          <PersonalDetail personaldetail={this.props.personaldetail} />
-          <ContactDetail contactdetail={this.props.contactdetail} />
-          <OfficeDetail officedetail={this.props.officedetail} />
+          <UserDetail
+            userdetail={this.props.userdetail}
+            userProfileCreate={userProfileCreate}
+          />
+          <PersonalDetail
+            personaldetail={this.props.personaldetail}
+            userPersonalDetailCreate={userPersonalDetailCreate}
+          />
+          <ContactDetail
+            contactdetail={this.props.contactdetail}
+            userConatctDetailCreate={userConatctDetailCreate}
+          />
+          <OfficeDetail
+            officedetail={this.props.officedetail}
+            userOfficeAddressCreate={userOfficeAddressCreate}
+          />
         </Content>
         {error && <AlertView type="error" />}
         {success && <AlertView type="success" />}
@@ -77,6 +95,15 @@ class Container1 extends Component {
     );
   };
 }
+const mapDispatchToProps = dispatch => ({
+  userConatctDetailCreate: payload =>
+    dispatch(userConatctDetailCreate(payload)),
+  userOfficeAddressCreate: payload =>
+    dispatch(userOfficeAddressCreate(payload)),
+  userPersonalDetailCreate: payload =>
+    dispatch(userPersonalDetailCreate(payload)),
+  userProfileCreate: payload => dispatch(userProfileCreate(payload))
+});
 const mapStateToProps = ({
   token,
   profile: {
@@ -99,4 +126,7 @@ const mapStateToProps = ({
   userpersonaldetail,
   userprofile
 });
-export default connect(mapStateToProps)(Container1);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Container1);

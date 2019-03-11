@@ -53,7 +53,10 @@ const ContactDetails = ({
             </TouchableOpacity>
           ) : (
             <TouchableOpacity
-              onPress={() => setFieldValue("ShowEditContact", false)}
+              onPress={() => {
+                handleSubmit;
+                setFieldValue("ShowEditContact", false);
+              }}
             >
               <Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
             </TouchableOpacity>
@@ -159,12 +162,13 @@ const ContactDetails = ({
 };
 
 export default withFormik({
-  mapPropsToValues: ({ updateUserDetails, contactdetail }) => ({
+  mapPropsToValues: ({ userConatctDetailCreate, contactdetail }) => ({
     Phone: contactdetail.Phone,
     Email: contactdetail.Email,
     Website: contactdetail.Website,
     Addressline1: contactdetail.Addressline1,
-    ShowEditContact: false
+    ShowEditContact: false,
+    userConatctDetailCreate
   }),
   validateOnChange: false,
 
@@ -179,7 +183,13 @@ export default withFormik({
   handleSubmit: (values, { props }) => {
     const token = props.token.token;
     const { Phone, Email, Website, Addressline1 } = values;
-    values.registerUser({ Phone, Email, Website, Addressline1 });
+    values.userConatctDetailCreate({
+      Phone,
+      Email,
+      Website,
+      Addressline1,
+      token
+    });
   }
 })(ContactDetails);
 

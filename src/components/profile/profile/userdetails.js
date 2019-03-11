@@ -52,13 +52,23 @@ const UserDetails = ({
         console.log("User tapped custom button: ", response.customButton);
       } else {
         let source = { uri: response.uri };
-
+        const pic =
+          Platform.OS === "ios"
+            ? {
+                data: `data:${response.type};base64,${response.data}`,
+                type: response.type,
+                name: response.fileName
+              }
+            : {
+                uri: uri,
+                type: response.type,
+                name: response.fileName
+              };
+        // values.Files.push(file);
+        setFieldValue("ProfilePic", pic);
+        setFieldValue("ImageUrl", source);
         // You can also display the image using data:
         // let source = { uri: 'data:image/jpeg;base64,' + response.data };
-
-        this.setState({
-          avatarSource: source
-        });
       }
     });
   };
@@ -72,7 +82,7 @@ const UserDetails = ({
           alignItems: "center"
         }}
       >
-        <Thumbnail large source={require("./userProfile.png")} />
+        <Thumbnail large source={values.ImageUrl} />
         <TouchableOpacity onPress={selectPhotoTapped}>
           <Text
             style={{
@@ -136,7 +146,10 @@ const UserDetails = ({
           </TouchableOpacity>
         ) : (
           <TouchableOpacity
-            onPress={() => setFieldValue("ShowEditUser", false)}
+            onPress={() => {
+              setFieldValue("ShowEditUser", false);
+              handleSubmit;
+            }}
           >
             <Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
           </TouchableOpacity>
@@ -147,10 +160,13 @@ const UserDetails = ({
 };
 
 export default withFormik({
-  mapPropsToValues: ({ updateUserDetails, userdetail }) => ({
+  mapPropsToValues: ({ userProfileCreate, userdetail }) => ({
     FirstName: userdetail.FirstName,
     Designation: userdetail.Designation,
-    ShowEditUser: false
+    ImageUrl: require("./userProfile.png"),
+    ProfilePic: "",
+    ShowEditUser: false,
+    userProfileCreate
   }),
   validateOnChange: false,
 
@@ -164,7 +180,7 @@ export default withFormik({
 
   handleSubmit: (values, { props }) => {
     const token = props.token.token;
-    const { FirstName, Designation } = values;
-    values.registerUser({ FirstName, Designation });
+    const { FirstName, Designation, ProfilePic } = values;
+    values.userProfileCreate({ FirstName, Designation, ProfilePic, token });
   }
 })(UserDetails);
