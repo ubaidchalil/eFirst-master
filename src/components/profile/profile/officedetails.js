@@ -30,6 +30,10 @@ const OfficeDetails = ({
   touched,
   officedetail
 }) => {
+  const submit = () => {
+    handleSubmit();
+    setFieldValue("ShowEditOffice", false);
+  };
   return (
     <View>
       <View
@@ -52,7 +56,7 @@ const OfficeDetails = ({
               <Icon style={{ color: "black", fontSize: 20 }} name="create" />
             </TouchableOpacity>
           ) : (
-            <TouchableOpacity onPress={handleSubmit}>
+            <TouchableOpacity onPress={submit}>
               <Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
             </TouchableOpacity>
           )}
@@ -77,9 +81,7 @@ const OfficeDetails = ({
                     error={touched.Company && errors.Company}
                     underlineColor={Color.secondary}
                     style={{ fontSize: 13 }}
-                  >
-                    {officedetail.Company}
-                  </Input>
+                  />
                 </Item>
               )}
               <Item style={{ borderBottomWidth: 0 }}>
@@ -106,9 +108,7 @@ const OfficeDetails = ({
                     error={touched.CompanyPhone && errors.CompanyPhone}
                     underlineColor={Color.secondary}
                     style={{ fontSize: 13 }}
-                  >
-                    {officedetail.CompanyPhone}
-                  </Input>
+                  />
                 </Item>
               )}
             </Col>
@@ -130,9 +130,7 @@ const OfficeDetails = ({
                     error={touched.CompanyEmail && errors.CompanyEmail}
                     underlineColor={Color.secondary}
                     style={{ fontSize: 13 }}
-                  >
-                    {officedetail.CompanyEmail}
-                  </Input>
+                  />
                 </Item>
               )}
             </Col>
@@ -154,9 +152,7 @@ const OfficeDetails = ({
                     error={touched.CompanyWebsite && errors.CompanyWebsite}
                     underlineColor={Color.secondary}
                     style={{ fontSize: 13 }}
-                  >
-                    {officedetail.CompanyWebsite}
-                  </Input>
+                  />
                 </Item>
               )}
             </Col>
@@ -169,10 +165,12 @@ const OfficeDetails = ({
 
 export default withFormik({
   mapPropsToValues: ({ userOfficeAddressCreate, officedetail }) => ({
-    Company: officedetail.Company,
-    CompanyEmail: officedetail.CompanyEmail,
-    CompanyPhone: officedetail.CompanyPhone,
-    CompanyWebsite: officedetail.CompanyWebsite,
+    Company: officedetail.Company ? officedetail.Company : "",
+    CompanyEmail: officedetail.CompanyEmail ? officedetail.CompanyEmail : "",
+    CompanyPhone: officedetail.CompanyPhone ? officedetail.CompanyPhone : "",
+    CompanyWebsite: officedetail.CompanyWebsite
+      ? officedetail.CompanyWebsite
+      : "",
     ShowEditOffice: false,
     userOfficeAddressCreate
   }),
@@ -185,6 +183,8 @@ export default withFormik({
   handleSubmit: (values, { props }) => {
     const token = props.token.token;
     const { Company, CompanyEmail, CompanyPhone, CompanyWebsite } = values;
+    console.log(props);
+    console.log(values);
     values.userOfficeAddressCreate({
       Company,
       CompanyEmail,
@@ -202,3 +202,14 @@ const styles = {
     fontSize: 13
   }
 };
+
+{
+  /* <TouchableOpacity
+onPress={() => {
+  handleSubmit;
+  setFieldValue("ShowEditOffice", false);
+}}
+>
+<Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
+</TouchableOpacity> */
+}

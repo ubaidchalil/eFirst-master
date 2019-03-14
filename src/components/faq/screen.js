@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
-import MyHeader from '../../Header'
+import MyHeader from "../../Header";
 import {
   Container,
   Header,
@@ -29,6 +29,7 @@ export default class FAQ extends Component {
   }
 
   componentDidMount() {
+    console.log("sddsssds");
     const { data } = this.props;
     const { faq } = data[0];
     this.setState({ selectedTabIndex: 0, data, faq });

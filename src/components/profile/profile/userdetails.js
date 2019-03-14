@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, TouchableOpacity, StyleSheet } from "react-native";
+import { View, TouchableOpacity, Platform } from "react-native";
 import {
   Container,
   Header,
@@ -60,15 +60,13 @@ const UserDetails = ({
                 name: response.fileName
               }
             : {
-                uri: uri,
+                uri: response.uri,
                 type: response.type,
                 name: response.fileName
               };
-        // values.Files.push(file);
         setFieldValue("ProfilePic", pic);
+        setFieldValue("ProfilePicName", response.fileName);
         setFieldValue("ImageUrl", source);
-        // You can also display the image using data:
-        // let source = { uri: 'data:image/jpeg;base64,' + response.data };
       }
     });
   };
@@ -83,18 +81,20 @@ const UserDetails = ({
         }}
       >
         <Thumbnail large source={values.ImageUrl} />
-        <TouchableOpacity onPress={selectPhotoTapped}>
-          <Text
-            style={{
-              textAlign: "center",
-              padding: 3,
-              textDecorationLine: "underline",
-              fontSize: 13
-            }}
-          >
-            Change Photo
-          </Text>
-        </TouchableOpacity>
+        {values.ShowEditUser && (
+          <TouchableOpacity onPress={selectPhotoTapped}>
+            <Text
+              style={{
+                textAlign: "center",
+                padding: 3,
+                textDecorationLine: "underline",
+                fontSize: 13
+              }}
+            >
+              Change Photo
+            </Text>
+          </TouchableOpacity>
+        )}
       </View>
       <View style={{ alignItems: "flex-start", flex: 0.75, padding: 5 }}>
         {!values.ShowEditUser ? (
@@ -139,16 +139,14 @@ const UserDetails = ({
       </View>
       <View style={{ flex: 0.1, alignContent: "flex-end" }}>
         {!values.ShowEditUser ? (
-          <TouchableOpacity
-            onPress={() => setFieldValue("ShowEditUser", false)}
-          >
+          <TouchableOpacity onPress={() => setFieldValue("ShowEditUser", true)}>
             <Icon style={{ color: "black", fontSize: 20 }} name="create" />
           </TouchableOpacity>
         ) : (
           <TouchableOpacity
             onPress={() => {
               setFieldValue("ShowEditUser", false);
-              handleSubmit;
+              handleSubmit();
             }}
           >
             <Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
@@ -164,7 +162,8 @@ export default withFormik({
     FirstName: userdetail.FirstName,
     Designation: userdetail.Designation,
     ImageUrl: require("./userProfile.png"),
-    ProfilePic: "",
+    ProfilePicName: "",
+    ProfilePic: null,
     ShowEditUser: false,
     userProfileCreate
   }),
@@ -180,7 +179,12 @@ export default withFormik({
 
   handleSubmit: (values, { props }) => {
     const token = props.token.token;
-    const { FirstName, Designation, ProfilePic } = values;
-    values.userProfileCreate({ FirstName, Designation, ProfilePic, token });
+    const { FirstName, Designation, ProfilePic, ProfilePicName } = values;
+    let data = new FormData();
+    data.append("FirstName", FirstName);
+    data.append("Designation", Designation);
+    data.append("ProfilePicName", ProfilePicName);
+    data.append("ProfilePic", ProfilePic);
+    values.userProfileCreate({ data, token });
   }
 })(UserDetails);

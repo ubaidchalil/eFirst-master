@@ -61,7 +61,7 @@ const PersonalDetails = ({
           ) : (
             <TouchableOpacity
               onPress={() => {
-                handleSubmit;
+                handleSubmit();
                 setFieldValue("ShowEditPersonal", false);
               }}
             >
@@ -76,7 +76,7 @@ const PersonalDetails = ({
             <Col>
               {!values.ShowEditPersonal ? (
                 <Text style={styles.text_detail}>
-                  Birthday: {personaldetail.DOB}
+                  Birthday: {personaldetail.Dob}
                 </Text>
               ) : (
                 <Item>
@@ -128,7 +128,7 @@ const PersonalDetails = ({
 
 export default withFormik({
   mapPropsToValues: ({ userPersonalDetailCreate, personaldetail }) => ({
-    DOB: personaldetail.DOB,
+    DOB: personaldetail.Dob,
     Gender: personaldetail.Gender,
     ShowEditPersonal: false,
     IsDatePickerVisible: false,

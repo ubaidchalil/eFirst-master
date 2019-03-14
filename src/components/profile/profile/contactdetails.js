@@ -54,7 +54,7 @@ const ContactDetails = ({
           ) : (
             <TouchableOpacity
               onPress={() => {
-                handleSubmit;
+                handleSubmit();
                 setFieldValue("ShowEditContact", false);
               }}
             >
@@ -82,36 +82,10 @@ const ContactDetails = ({
                     error={touched.Phone && errors.Phone}
                     underlineColor={Color.secondary}
                     style={{ fontSize: 13 }}
-                  >
-                    {contactdetail.Phone}
-                  </Input>
+                  />
                 </Item>
               )}
             </Col>
-            <Col>
-              {!values.ShowEditContact ? (
-                <Text style={styles.text_detail}>
-                  Phone: {contactdetail.Website}
-                </Text>
-              ) : (
-                <Item>
-                  <Input
-                    placeholder="Phone"
-                    name="Phone"
-                    label="Phone"
-                    onChangeText={value => setFieldValue("Website", value)}
-                    value={values.Website}
-                    error={touched.Website && errors.Website}
-                    underlineColor={Color.secondary}
-                    style={{ fontSize: 13 }}
-                  >
-                    {contactdetail.Website}
-                  </Input>
-                </Item>
-              )}
-            </Col>
-          </Row>
-          <Row>
             <Col>
               {!values.ShowEditContact ? (
                 <Text style={styles.text_detail}>
@@ -127,12 +101,33 @@ const ContactDetails = ({
                     value={values.Email}
                     error={touched.Email && errors.Email}
                     underlineColor={Color.secondary}
-                  >
-                    {contactdetail.Email}
-                  </Input>
+                  />
                 </Item>
               )}
             </Col>
+          </Row>
+          <Row>
+            <Col>
+              {!values.ShowEditContact ? (
+                <Text style={styles.text_detail}>
+                  Website: {contactdetail.Website}
+                </Text>
+              ) : (
+                <Item>
+                  <Input
+                    placeholder="Website"
+                    name="Website"
+                    label="Website"
+                    onChangeText={value => setFieldValue("Website", value)}
+                    value={values.Website}
+                    error={touched.Website && errors.Website}
+                    underlineColor={Color.secondary}
+                    style={{ fontSize: 13 }}
+                  />
+                </Item>
+              )}
+            </Col>
+
             <Col>
               {!values.ShowEditContact ? (
                 <Text style={styles.text_detail}>
@@ -148,9 +143,7 @@ const ContactDetails = ({
                     value={values.Addressline1}
                     error={touched.Addressline1 && errors.Addressline1}
                     underlineColor={Color.secondary}
-                  >
-                    {contactdetail.Addressline1}
-                  </Input>
+                  />
                 </Item>
               )}
             </Col>

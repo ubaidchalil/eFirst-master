@@ -1,4 +1,10 @@
-import { PROFILE_URL } from "../../constants";
+import {
+  PROFILE_URL,
+  USER_CONTDETL_CREATE_URL,
+  USER_OFFADDRESS_CREATE_URL,
+  USER_PERSDETL_CREATE_URL,
+  USER_PROFILE_CREATE_URL
+} from "../../constants";
 
 export const profileState = {
   LOADING: "PROFILE_LOADING",
@@ -42,6 +48,7 @@ export const setInStore = (state, type) => ({
 const Fetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(true, type.LOADING));
   dispatch(setInStore(null, type.ERROR));
+  dispatch(setInStore(false, type.SUCCESS));
   try {
     const result = await fetchData();
     if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
@@ -60,6 +67,7 @@ const Fetcher = async (fetchData, type, dispatch) => {
 const openFetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(true, type.LOADING));
   dispatch(setInStore(null, type.ERROR));
+  dispatch(setInStore(false, type.SUCCESS));
   try {
     const result = await fetchData();
     if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
@@ -75,15 +83,15 @@ const openFetcher = async (fetchData, type, dispatch) => {
 };
 
 export const userProfileCreate = payload => dispatch => {
-  const { token, ...bodyData } = payload;
-  const body = JSON.stringify(bodyData);
+  const { token, data } = payload;
+  const body = data;
   return openFetcher(
     async () => {
-      const result = await fetch(DOC_ATTESTATION_CREATE_URL, {
+      const result = await fetch(USER_PROFILE_CREATE_URL, {
         method: "POST",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json",
+          "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`
         },
         body
@@ -103,7 +111,7 @@ export const userPersonalDetailCreate = payload => dispatch => {
   const body = JSON.stringify(bodyData);
   return openFetcher(
     async () => {
-      const result = await fetch(DOC_ATTESTATION_CREATE_URL, {
+      const result = await fetch(USER_PERSDETL_CREATE_URL, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -127,7 +135,7 @@ export const userConatctDetailCreate = payload => dispatch => {
   const body = JSON.stringify(bodyData);
   return openFetcher(
     async () => {
-      const result = await fetch(DOC_ATTESTATION_CREATE_URL, {
+      const result = await fetch(USER_CONTDETL_CREATE_URL, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -151,7 +159,7 @@ export const userOfficeAddressCreate = payload => dispatch => {
   const body = JSON.stringify(bodyData);
   return openFetcher(
     async () => {
-      const result = await fetch(DOC_ATTESTATION_CREATE_URL, {
+      const result = await fetch(USER_OFFADDRESS_CREATE_URL, {
         method: "POST",
         headers: {
           Accept: "application/json",

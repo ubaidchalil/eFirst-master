@@ -31,13 +31,42 @@ import {
   userConatctDetailCreate,
   userOfficeAddressCreate,
   userPersonalDetailCreate,
-  userProfileCreate
+  userProfileCreate,
+  profileData
 } from "../action";
 class Container1 extends Component {
   constructor(props) {
     super(props);
   }
+  componentDidUpdate(prevProps, prevState) {
+    const {
+      usercontactdetail,
+      userofficeadress,
+      userpersonaldetail,
+      userprofile
+    } = this.props;
 
+    const contsuccess = usercontactdetail.success;
+    const contprevSuccess = prevProps.usercontactdetail.success;
+
+    const offsuccess = userofficeadress.success;
+    const offprevSuccess = prevProps.userofficeadress.success;
+
+    const perssuccess = userpersonaldetail.success;
+    const persprevSuccess = prevProps.userpersonaldetail.success;
+
+    const profsuccess = userprofile.success;
+    const profprevSuccess = prevProps.userprofile.success;
+
+    if (
+      (contsuccess && contsuccess != contprevSuccess) ||
+      (offsuccess && offsuccess != offprevSuccess) ||
+      (perssuccess && perssuccess != persprevSuccess) ||
+      (profsuccess && profsuccess != profprevSuccess)
+    ) {
+      this.props.profileData(this.props.token.token);
+    }
+  }
   render = () => {
     const {
       profile,
@@ -67,6 +96,13 @@ class Container1 extends Component {
       userpersonaldetail.success ||
       userprofile.success;
 
+    const {
+      userConatctDetailCreate,
+      userOfficeAddressCreate,
+      userPersonalDetailCreate,
+      userProfileCreate
+    } = this.props;
+
     return (
       <Container>
         <MyHeader navigation={this.props.navigation} header="Manage Profile" />
@@ -74,18 +110,22 @@ class Container1 extends Component {
           <Loader loading={loading} />
           <UserDetail
             userdetail={this.props.userdetail}
+            token={this.props.token}
             userProfileCreate={userProfileCreate}
           />
           <PersonalDetail
             personaldetail={this.props.personaldetail}
+            token={this.props.token}
             userPersonalDetailCreate={userPersonalDetailCreate}
           />
           <ContactDetail
             contactdetail={this.props.contactdetail}
+            token={this.props.token}
             userConatctDetailCreate={userConatctDetailCreate}
           />
           <OfficeDetail
             officedetail={this.props.officedetail}
+            token={this.props.token}
             userOfficeAddressCreate={userOfficeAddressCreate}
           />
         </Content>
@@ -96,6 +136,7 @@ class Container1 extends Component {
   };
 }
 const mapDispatchToProps = dispatch => ({
+  profileData: payload => dispatch(profileData(payload)),
   userConatctDetailCreate: payload =>
     dispatch(userConatctDetailCreate(payload)),
   userOfficeAddressCreate: payload =>

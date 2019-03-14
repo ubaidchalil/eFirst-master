@@ -4,7 +4,7 @@ import HomeScreen from "./screen";
 import { DashboardData } from "./action";
 import { View } from "react-native";
 import { profileData } from "../profile/action";
-import { serviceRequestData } from "../service/action";
+import { servicesData } from "../service/action";
 import { FAQCategoryData, clearFaq } from "../faq/action";
 import AlertView from "../styled/alert-view";
 import Loader from "../styled/loader";
@@ -38,7 +38,8 @@ const mapDispatchToProps = dispatch => ({
   DashboardData: payload => dispatch(DashboardData(payload)),
   profileData: payload => dispatch(profileData(payload)),
   FAQCategoryData: payload => dispatch(FAQCategoryData(payload)),
-  ClearFaq: () => dispatch(clearFaq())
+  ClearFaq: () => dispatch(clearFaq()),
+  servicesData: payload => dispatch(servicesData(payload))
 });
 
 export default connect(

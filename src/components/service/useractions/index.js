@@ -5,26 +5,20 @@ import { servicesData } from "../action";
 import { View, StyleSheet, Text } from "react-native";
 import Loader from "../../styled/loader";
 import AlertView from "../../styled/alert-view";
+import { NavigationEvents } from "react-navigation";
 class Container extends Component {
-  componentDidMount = () => {
-    const statusId = this.props.navigation.state.params
-      ? this.props.navigation.state.params.statusId
-      : null;
-    const token = this.props.token.token;
-    this.props.servicesData({ statusId, token });
-  };
-/*
-  shouldComponentUpdate(nextProps, nextState){
-    if(nextProps.navigation.state.params.statusId != this.props.navigation.state.params.statusId){
-       const statusId = nextProps.navigation.state.params
-         ? nextProps.navigation.state.params.statusId
-         : null;
-       const token = nextProps.token.token;
-       nextProps.servicesData({ statusId, token });
-     }
-     return nextProps.navigation.state.params.statusId != this.props.navigation.state.params.statusId;
+  // componentDidMount = () => {
+  //   const statusId = this.props.navigation.state.params
+  //     ? this.props.navigation.state.params.statusId
+  //     : null;
+  //   const token = this.props.token.token;
+  //   this.props.servicesData({ statusId, token });
+  // };
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log(nextProps);
   }
-  */
+
   // componentDidUpdate = () => {
   //   const statusId = this.props.navigation.state.params
   //     ? this.props.navigation.state.params.statusId
