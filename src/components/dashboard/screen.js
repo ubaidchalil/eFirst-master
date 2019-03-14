@@ -132,7 +132,14 @@ export default ({ navigation, dashboard, servicesData, token }) => {
             />
             <Text style={{ color: "white", fontSize: 17, paddingLeft: 8 }}>
               {" "}
-              You have 3 Updates{" "}
+              You have{" "}
+              {dashboard.data
+                ? dashboard.data.Tiles.ActionRequiredNewUpdateCount +
+                  dashboard.data.Tiles.InReviewNewUpdateCount +
+                  dashboard.data.Tiles.CompletedNewUpdateCount +
+                  dashboard.data.Tiles.RejectedNewUpdateCount
+                : 0}{" "}
+              Updates{" "}
             </Text>
           </View>
         </View>

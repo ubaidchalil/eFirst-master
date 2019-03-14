@@ -29,7 +29,8 @@ const UserDetails = ({
   values,
   errors,
   touched,
-  userdetail
+  userdetail,
+  dashboard
 }) => {
   const selectPhotoTapped = () => {
     const options = {
@@ -129,12 +130,26 @@ const UserDetails = ({
             />
           </Item>
         )}
-        <Text style={{ color: "blue", fontSize: 13 }}>Open Services : 0</Text>
+        <Text style={{ color: "blue", fontSize: 13 }}>
+          Open Services :{" "}
+          {dashboard.data
+            ? dashboard.data.Tiles.InReviewNewUpdateCount +
+              dashboard.data.Tiles.InReviewTotalUpdateCount
+            : 0}
+        </Text>
         <Text style={{ color: "green", fontSize: 13 }}>
-          Completed Services : 0
+          Completed Services :{" "}
+          {dashboard.data
+            ? dashboard.data.Tiles.CompletedNewUpdateCount +
+              dashboard.data.Tiles.CompletedTotalUpdateCount
+            : 0}
         </Text>
         <Text style={{ color: "red", fontSize: 13 }}>
-          Rejected Services : 0
+          Rejected Services :{" "}
+          {dashboard.data
+            ? dashboard.data.Tiles.RejectedNewUpdateCount +
+              dashboard.data.Tiles.RejectedTotalUpdateCount
+            : 0}
         </Text>
       </View>
       <View style={{ flex: 0.1, alignContent: "flex-end" }}>

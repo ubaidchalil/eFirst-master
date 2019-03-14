@@ -112,6 +112,7 @@ class Container1 extends Component {
             userdetail={this.props.userdetail}
             token={this.props.token}
             userProfileCreate={userProfileCreate}
+            dashboard={this.props.dashboard}
           />
           <PersonalDetail
             personaldetail={this.props.personaldetail}
@@ -154,7 +155,8 @@ const mapStateToProps = ({
   usercontactdetail,
   userofficeadress,
   userpersonaldetail,
-  userprofile
+  userprofile,
+  dashboard
 }) => ({
   token,
   profile,
@@ -165,7 +167,8 @@ const mapStateToProps = ({
   usercontactdetail,
   userofficeadress,
   userpersonaldetail,
-  userprofile
+  userprofile,
+  dashboard
 });
 export default connect(
   mapStateToProps,

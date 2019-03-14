@@ -15,10 +15,6 @@ class Container extends Component {
   //   this.props.servicesData({ statusId, token });
   // };
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps);
-  }
-
   // componentDidUpdate = () => {
   //   const statusId = this.props.navigation.state.params
   //     ? this.props.navigation.state.params.statusId

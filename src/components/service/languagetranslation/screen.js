@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import MyHeader from "../../../Header";
-import { View, ScrollView, StyleSheet, Platform } from "react-native";
+import {
+  View,
+  ScrollView,
+  StyleSheet,
+  Platform,
+  TouchableOpacity
+} from "react-native";
+
+import Modal from "react-native-modal";
 import {
   Container,
   Picker,
@@ -148,23 +156,100 @@ const LanguageTranslation = ({
         value={doc.DocumentTypeId}
       />
     ));
+  _renderModalContent = state => (
+    <View style={styles.modalContent}>
+      <Item style={{ flexDirection: "row", padding: 7 }}>
+        <View
+          style={{
+            flexDirection: "row",
+            fontSize: 17,
+            padding: 10,
+            paddingHorizontal: 15,
+            flex: 0.9,
+            fontWeight: "bold"
+          }}
+        >
+          <Icon style={{ color: "#F1C40F" }} name="alert" />
+          <Text style={{ fontSize: 17, fontWeight: "bold" }}>Info</Text>
+        </View>
+        <TouchableOpacity
+          style={{ flex: 0.1 }}
+          onPress={() => {
+            setFieldValue("ShowInfo", false);
+          }}
+        >
+          <Icon name="close" />
+        </TouchableOpacity>
+      </Item>
+      <View style={{ padding: 20 }}>
+        <Text style={{ fontSize: 13, lineHeight: 20, paddingHorizontal: 10 }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </Text>
+        <Text
+          style={{ paddingTop: 5, fontSize: 13, lineHeight: 20, padding: 10 }}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </Text>
+        <Text
+          style={{
+            paddingTop: 5,
+            fontSize: 13,
+            fontWeight: "bold",
+            paddingHorizontal: 10
+          }}
+        >
+          AED : 75/PAGE
+        </Text>
+        <Text
+          style={{
+            paddingTop: 5,
+            fontSize: 13,
+            fontWeight: "bold",
+            paddingHorizontal: 10,
+            paddingBottom: 10
+          }}
+        >
+          SERVICE CHARGE: AED 105 (VAT INCLUDED)
+        </Text>
+      </View>
+    </View>
+  );
+
   return (
     <Container>
       <MyHeader navigation={navigation} header="My Services" />
-      <View style={{ backgroundColor: "#F7F9F9", height: 25, flexDirection: "row", paddingHorizontal: 10, paddingVertical:10}}>
-        <Left>
+      <View
+        style={{
+          backgroundColor: "#F7F9F9",
+          flexDirection: "row",
+          paddingHorizontal: 10,
+          paddingVertical: 10
+        }}
+      >
+        <View>
           <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
             LANGUAGE TRANSLATION
           </Text>
-        </Left>
+        </View>
         <Right>
-          <View style={{ flexDirection: "row" }}>
-            <Icon name="alert" style={{ fontSize: 20, color: "#F39C12" }} />
-            <Text> Info</Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => {
+              setFieldValue("ShowInfo", true);
+            }}
+          >
+            <View style={{ flexDirection: "row" }}>
+              <Icon name="alert" style={{ fontSize: 20, color: "#F39C12" }} />
+              <Text> Info</Text>
+            </View>
+          </TouchableOpacity>
         </Right>
       </View>
       <Content style={{ padding: 10 }}>
+        <Modal isVisible={values.ShowInfo}>{this._renderModalContent()}</Modal>
         <ScrollView>
           <Form>
             <Item>
@@ -177,10 +262,12 @@ const LanguageTranslation = ({
                 error={touched.CustomerName && errors.CustomerName}
                 underlineColor={Color.secondary}
               />
-              </Item>
-            <Item style={{ borderBottomWidth: 0 }} >
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }}>
               {errors.CustomerName && (
-                <Text style={{ color:'red' }}  visible={errors.CustomerName}>{errors.CustomerName}</Text>
+                <Text style={{ color: "red" }} visible={errors.CustomerName}>
+                  {errors.CustomerName}
+                </Text>
               )}
             </Item>
             <Item style={styles.item_margin}>
@@ -194,9 +281,11 @@ const LanguageTranslation = ({
                 underlineColor={Color.secondary}
               />
             </Item>
-            <Item style={{ borderBottomWidth: 0 }} >
+            <Item style={{ borderBottomWidth: 0 }}>
               {errors.Email && (
-                <Text style={{ color:'red' }}  visible={errors.Email}>{errors.Email}</Text>
+                <Text style={{ color: "red" }} visible={errors.Email}>
+                  {errors.Email}
+                </Text>
               )}
             </Item>
             <Item style={styles.item_margin}>
@@ -209,7 +298,7 @@ const LanguageTranslation = ({
                 error={touched.PersonalPhone && errors.PersonalPhone}
                 underlineColor={Color.secondary}
               />
-            <Input
+              <Input
                 placeholder="Office"
                 name="Office"
                 label="Office"
@@ -219,17 +308,17 @@ const LanguageTranslation = ({
                 underlineColor={Color.secondary}
               />
             </Item>
-            <Item style={{ borderBottomWidth: 0 }} >
-                {errors.PersonalPhone && (
-                  <Text style={{ color:'red' }}  visible={errors.PersonalPhone}>
-                    {errors.PersonalPhone}
-                  </Text>
-                )}
-                {errors.OfficePhone && (
-                  <Text style={{ color:'red' }}  visible={errors.OfficePhone}>
-                    {errors.OfficePhone}
-                  </Text>
-                )}
+            <Item style={{ borderBottomWidth: 0 }}>
+              {errors.PersonalPhone && (
+                <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
+                  {errors.PersonalPhone}
+                </Text>
+              )}
+              {errors.OfficePhone && (
+                <Text style={{ color: "red" }} visible={errors.OfficePhone}>
+                  {errors.OfficePhone}
+                </Text>
+              )}
             </Item>
             <Item style={styles.item_margin}>
               <Textarea
@@ -244,18 +333,18 @@ const LanguageTranslation = ({
                 underlineColor={Color.secondary}
               />
             </Item>
-            <Item style={{ borderBottomWidth: 0 }} >
-                {errors.Address && (
-                  <Text style={{ color:'red' }}  visible={errors.Address}>
-                    {errors.Address}
-                  </Text>
-                )}
+            <Item style={{ borderBottomWidth: 0 }}>
+              {errors.Address && (
+                <Text style={{ color: "red" }} visible={errors.Address}>
+                  {errors.Address}
+                </Text>
+              )}
             </Item>
-            <Item  picker style={styles.item_margin}>
+            <Item picker style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }} 
+                style={{ width: undefined }}
                 placeholder="Document Type"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
@@ -264,18 +353,21 @@ const LanguageTranslation = ({
                   setFieldValue("SelectedDocumentTypeId", value)
                 }
               >
-              <Picker.Item key="0" label="Select type" value="0" />
+                <Picker.Item key="0" label="Select type" value="0" />
                 {renderDocumentTypes()}
               </Picker>
             </Item>
-            <Item style={{ borderBottomWidth: 0 }} >
-                {errors.SelectedDocumentTypeId && (
-                  <Text style={{ color:'red' }}  visible={errors.SelectedDocumentTypeId}>
-                    {errors.SelectedDocumentTypeId}
-                  </Text>
-                )}
+            <Item style={{ borderBottomWidth: 0 }}>
+              {errors.SelectedDocumentTypeId && (
+                <Text
+                  style={{ color: "red" }}
+                  visible={errors.SelectedDocumentTypeId}
+                >
+                  {errors.SelectedDocumentTypeId}
+                </Text>
+              )}
             </Item>
-            <Item  picker style={styles.item_margin}>
+            <Item picker style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -292,18 +384,21 @@ const LanguageTranslation = ({
                   );
                 }}
               >
-              <Picker.Item key="0" label="Select language" value="0" />
+                <Picker.Item key="0" label="Select language" value="0" />
                 {renderTranslationLanguage()}
               </Picker>
             </Item>
-            <Item style={{ borderBottomWidth: 0 }} >
-                  {errors.SelectedFromDocumentLanguageId && (
-                    <Text style={{ color:'red' }}  visible={errors.SelectedFromDocumentLanguageId}>
-                      {errors.SelectedFromDocumentLanguageId}
-                    </Text>
-                  )}
+            <Item style={{ borderBottomWidth: 0 }}>
+              {errors.SelectedFromDocumentLanguageId && (
+                <Text
+                  style={{ color: "red" }}
+                  visible={errors.SelectedFromDocumentLanguageId}
+                >
+                  {errors.SelectedFromDocumentLanguageId}
+                </Text>
+              )}
             </Item>
-            <Item  picker style={styles.item_margin}>
+            <Item picker style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -323,12 +418,15 @@ const LanguageTranslation = ({
                 {renderTranslationLanguage()}
               </Picker>
             </Item>
-            <Item style={{ borderBottomWidth: 0 }} >
-                  {errors.SelectedFromDocumentLanguageId && (
-                    <Text style={{ color:'red' }}  visible={errors.SelectedFromDocumentLanguageId}>
-                      {errors.SelectedFromDocumentLanguageId}
-                    </Text>
-                  )}
+            <Item style={{ borderBottomWidth: 0 }}>
+              {errors.SelectedFromDocumentLanguageId && (
+                <Text
+                  style={{ color: "red" }}
+                  visible={errors.SelectedFromDocumentLanguageId}
+                >
+                  {errors.SelectedFromDocumentLanguageId}
+                </Text>
+              )}
             </Item>
             <ListItem style={[styles.item_margin, { borderBottomWidth: 0 }]}>
               <CheckBox
@@ -356,7 +454,7 @@ const LanguageTranslation = ({
                   padding: 10
                 }}
               >
-              Filename
+                Filename
               </Text>
             </View>
             <View style={{ alignItems: "center", marginTop: 7 }}>
@@ -393,7 +491,6 @@ const LanguageTranslation = ({
               </View>
             </View>
 
-
             <View>
               <Text
                 style={{
@@ -416,7 +513,7 @@ const LanguageTranslation = ({
               style={{ backgroundColor: "#183E61", marginBottom: 50 }}
               full
               rounded
-              onPress={() => handleSubmit}
+              onPress={handleSubmit}
             >
               <Text> Pay Now </Text>
             </Button>
@@ -447,7 +544,8 @@ export default withFormik({
     SelectedToDocumentLanguageId: "",
     LegalStamp: false,
     Files: null,
-    doclangTransCreate
+    doclangTransCreate,
+    ShowInfo: false
   }),
   validateOnChange: false,
 
@@ -492,7 +590,7 @@ export default withFormik({
     data.append("Files", values.Files);
     data.append("Rate", Rate);
     data.append("ServiceId", 1);
-    data.append("ServiceName", "TRANSLATIONre");
+    data.append("ServiceName", "TRANSLATION");
     return values.doclangTransCreate({ data, token });
   }
 })(LanguageTranslation);
@@ -537,5 +635,13 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 20,
     color: "white"
+  },
+  item_margin: {
+    marginTop: 5
+  },
+  modalContent: {
+    backgroundColor: "white",
+    borderRadius: 13,
+    borderColor: "rgba(0, 0, 0, 0.1)"
   }
 });
