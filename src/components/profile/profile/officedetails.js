@@ -40,25 +40,23 @@ const OfficeDetails = ({
         style={{
           backgroundColor: "#E5E7E9",
           flex: 1,
-          padding: 12,
+          padding: 3,
           paddingHorizontal: 20,
-          flexDirection: "row"
+          flexDirection: "row",
+          justifyContent: "space-between"
         }}
       >
-        <Text style={{ fontSize: 13 }}>Office Details </Text>
+        <Text style={{ fontSize: 15, alignSelf: "center" }}>Office Details </Text>
         <View
-          style={{ alignSelf: "flex-end", flex: 1, alignItems: "flex-end" }}
         >
           {!values.ShowEditOffice ? (
-            <TouchableOpacity
-              onPress={() => setFieldValue("ShowEditOffice", true)}
-            >
-              <Icon style={{ color: "black", fontSize: 20 }} name="create" />
-            </TouchableOpacity>
+            <Button transparent  onPress={() => setFieldValue("ShowEditContact", true)} >
+              <Icon style={{ color:'black',fontSize: 23}} name="create" />
+            </Button>
           ) : (
-            <TouchableOpacity onPress={submit}>
-              <Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
-            </TouchableOpacity>
+            <Button transparent onPress={submit} >
+              <Icon style={{ color:'black',fontSize: 23}} name="checkmark" />
+            </Button>
           )}
         </View>
       </View>

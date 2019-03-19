@@ -25,13 +25,17 @@ export default ({ navigation, header }) => (
         <Button transparent onPress={() => navigation.navigate('DrawerOpen')}>
         <Icon style={{ color:'white' }} name="menu"  />
         </Button>
+        {
+          (header != "Dashboard" &&
         <Button transparent onPress={() => navigation.goBack()}>
-          <IconFontAwesome style={[{ color:'white' }, styles.icon_font_awesome ]} name="angle-left" />
+          <IconFontAwesome style={[{ color:'white', marginLeft:5 }, styles.icon_font_awesome ]} name="angle-left" />
         </Button>
+          )
+        }
       </View>
       </Left>
       <Body >
-        <Title >{header}</Title>
+        <Title style={{ color:'white' }} >{header}</Title>
       </Body>
       <Right>
       <View style={{ flexDirection: "row" }} >
@@ -40,11 +44,11 @@ export default ({ navigation, header }) => (
               style={{ color:'white' }}
               name="notifications" />
         </Button>
-        <Button transparent>
+        <Button transparent onPress={() => navigation.navigate("Profile")}>
             <Icon
             style={{ color:'white' }}
             name="contact"
-            onPress={() => navigation.navigate("Profile")}
+            
             />
         </Button>
       </View>
