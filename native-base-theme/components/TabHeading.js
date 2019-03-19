@@ -7,27 +7,29 @@ export default (variables /*: * */ = variable) => {
 
   const tabHeadingTheme = {
     flexDirection: "row",
-    backgroundColor: variables.tabDefaultBg,
+    backgroundColor: "white",
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    borderLeftWidth: 1,
+    borderLeftColor: "#CCD1D1",
     ".scrollable": {
       paddingHorizontal: 20,
       flex: platform === "android" ? 0 : 1,
       minWidth: platform === "android" ? undefined : 60
     },
     "NativeBase.Text": {
-      color: variables.topTabBarTextColor,
+      color: "black",
       marginHorizontal: 7
     },
     "NativeBase.Icon": {
-      color: variables.topTabBarTextColor,
+      color: "black",
       fontSize: platform === "ios" ? 26 : undefined
     },
     ".active": {
       "NativeBase.Text": {
-        color: variables.topTabBarActiveTextColor,
-        fontWeight: "600"
+        color: "#183E61",
+        fontWeight: "100"
       },
       "NativeBase.Icon": {
         color: variables.topTabBarActiveTextColor

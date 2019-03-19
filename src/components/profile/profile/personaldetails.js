@@ -43,30 +43,26 @@ const PersonalDetails = ({
         style={{
           backgroundColor: "#E5E7E9",
           flex: 1,
-          padding: 12,
+          padding: 3,
           paddingHorizontal: 20,
-          flexDirection: "row"
+          flexDirection: "row",
+          justifyContent: "space-between"
         }}
       >
-        <Text style={{ fontSize: 13 }}>Personal Details </Text>
+        <Text style={{ fontSize: 15, alignSelf: "center" }}>Personal Details </Text>
         <View
-          style={{ alignSelf: "flex-end", flex: 1, alignItems: "flex-end" }}
         >
           {!values.ShowEditPersonal ? (
-            <TouchableOpacity
-              onPress={() => setFieldValue("ShowEditPersonal", true)}
-            >
-              <Icon style={{ color: "black", fontSize: 20 }} name="create" />
-            </TouchableOpacity>
+            <Button transparent  onPress={() => setFieldValue("ShowEditPersonal", true)} >
+              <Icon style={{ color:'black',fontSize: 23}} name="create" />
+            </Button>
           ) : (
-            <TouchableOpacity
-              onPress={() => {
-                handleSubmit();
-                setFieldValue("ShowEditPersonal", false);
-              }}
-            >
-              <Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
-            </TouchableOpacity>
+            <Button transparent  onPress={() => {
+              handleSubmit();
+              setFieldValue("ShowEditPersonal", false);
+            }} >
+              <Icon style={{ color:'black',fontSize: 23}} name="checkmark" />
+            </Button>
           )}
         </View>
       </View>

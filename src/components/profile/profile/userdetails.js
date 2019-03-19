@@ -155,7 +155,7 @@ const UserDetails = ({
       <View style={{ flex: 0.1, alignContent: "flex-end" }}>
         {!values.ShowEditUser ? (
           <TouchableOpacity onPress={() => setFieldValue("ShowEditUser", true)}>
-            <Icon style={{ color: "black", fontSize: 20 }} name="create" />
+            <Icon style={{ color: "black", fontSize: 23 }} name="create" />
           </TouchableOpacity>
         ) : (
           <TouchableOpacity
@@ -164,7 +164,7 @@ const UserDetails = ({
               handleSubmit();
             }}
           >
-            <Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
+            <Icon style={{ color: "black", fontSize: 23 }} name="checkmark" />
           </TouchableOpacity>
         )}
       </View>
