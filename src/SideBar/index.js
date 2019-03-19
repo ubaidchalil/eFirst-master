@@ -71,16 +71,24 @@ class Container1 extends Component {
           </View>
           <View style={{ height: 30, backgroundColor: "yellow" }} />
           <View style={{ flexDirection: "row" }}>
-            <View>
-              <Image
-                src={require("./user_menu.png")}
-                style={{ width: 50, resizeMode: "contain" }}
-              />
+            <View style={{ paddingLeft: 7, paddingRight: 7 }}>
+              {this.props.userdetail.ProfilePic ? (
+                <Thumbnail
+                  small
+                  source={{
+                    uri:
+                      "https://efirst.blob.core.windows.net/profilepic/c8d94856-a3f1-47b9-bb1a-fbd3142907c0.jpg"
+                  }}
+                />
+              ) : (
+                <Thumbnail small source={require("./user_menu.png")} />
+              )}
             </View>
+
             <View>
-              <Text>Ubaid</Text>
+              <Text>{this.props.userdetail.FirstName}</Text>
               <Text note style={{ color: "#183E61" }}>
-                String
+                {this.props.userdetail.Designation}
               </Text>
             </View>
           </View>
@@ -161,8 +169,14 @@ class Container1 extends Component {
   }
 }
 
-const mapStateToProps = ({ profile, token, logout }) => ({
-  profile,
+const mapStateToProps = ({
+  profile: {
+    data: { userdetail }
+  },
+  token,
+  logout
+}) => ({
+  userdetail,
   token,
   logout
 });
