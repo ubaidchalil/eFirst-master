@@ -33,6 +33,7 @@ export const clearFaq = () => dispatch => {
 
 const FetcherCategory = async (fetchData, type, dispatch, token) => {
   dispatch(setInStore(true, type.LOADING));
+  dispatch(setInStore(false, type.SUCCESS));
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
@@ -52,6 +53,7 @@ const FetcherCategory = async (fetchData, type, dispatch, token) => {
 
 const Fetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(true, type.LOADING));
+  dispatch(setInStore(false, type.SUCCESS));
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();

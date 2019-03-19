@@ -8,11 +8,11 @@ import AlertView from "../styled/alert-view";
 class Container extends Component {
   render = () => {
     const { faq } = this.props;
-    const { loading, error, succuss } = faq ? faq : "";
+    const { loading, error, success } = faq ? faq : "";
     return (
       <View style={{ flex: 1 }}>
         <Loader loading={loading} />
-        {succuss && <FAQ {...this.props} />}
+        {success && <FAQ {...this.props} />}
 
         {error && <AlertView type="error" />}
       </View>

@@ -68,18 +68,11 @@ const LanguageTranslation = ({
       } else {
         const source = { uri: response.uri };
 
-        const file =
-          Platform.OS === "ios"
-            ? {
-                data: `data:${response.type};base64,${response.data}`,
-                type: response.type,
-                name: response.fileName
-              }
-            : {
-                uri: uri,
-                type: response.type,
-                name: response.fileName
-              };
+        const file = {
+          uri: response.uri,
+          type: response.type,
+          name: response.fileName
+        };
         // values.Files.push(file);
         setFieldValue("Files", file);
         // You can also display the image using data:
@@ -111,24 +104,13 @@ const LanguageTranslation = ({
         console.log("User tapped custom button: ", response.customButton);
       } else {
         const source = { uri: response.uri };
-        const file =
-          Platform.OS === "ios"
-            ? {
-                data: `data:${response.type};base64,${response.data}`,
-                type: response.type,
-                name: response.fileName
-              }
-            : {
-                uri: response.uri,
-                type: response.type,
-                name: response.fileName
-              };
-        // values.Files.push(file);
+        const file = {
+          uri: response.uri,
+          type: response.type,
+          name: response.fileName
+        };
         setFieldValue("Files", file);
-        // You can also display the image using data:
-        // const source = { uri: 'data:image/jpeg;base64,' + response.data };
-
-        console.log(source);
+        console.log(file);
       }
     });
   };

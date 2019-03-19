@@ -19,7 +19,7 @@ import material from "../../../../native-base-theme/variables/material";
 import Greeting from "./useractionitems";
 import MyHeader from "../../../Header";
 
-export default ({ navigation, services }) => {
+export default ({ navigation, token, services, serviceRequestData }) => {
   const renderList = () =>
     services.data.map(service => <Greeting service={service} />);
 
@@ -30,19 +30,18 @@ export default ({ navigation, services }) => {
     navigation.dispatch(navigateAction);
   };
 
+  const navigateToDetail = serviceId => {
+    const token1 = token.token;
+    serviceRequestData({ serviceId, token: token1 });
+    navigation.navigate("ServiceDetail");
+  };
   return (
     <StyleProvider style={getTheme(material)}>
       <Container>
         <MyHeader navigation={navigation} header="User Acions" />
         <Content style={{ padding: 5 }}>
           {services.data.map(service => (
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate("ServiceDetail", {
-                  serviceId: service.SRID
-                })
-              }
-            >
+            <TouchableOpacity onPress={() => navigateToDetail(service.SRID)}>
               <Greeting service={service} navigation={navigation} />
             </TouchableOpacity>
           ))}

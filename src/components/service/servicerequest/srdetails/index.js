@@ -11,9 +11,53 @@ import {
 } from "native-base";
 import { connect } from "react-redux";
 class SRInfo extends Component {
+  certtificateTypeName = SelectedCertificateType => {
+    const { certificatetype } = this.props;
+    const selectCertType = certificatetype.data.filter(
+      cert => cert.CertificateTypeID == SelectedCertificateType
+    );
+    return selectCertType[0].CertificateTypeName;
+  };
+
+  countryName = SelectedCountryId => {
+    const { countries } = this.props;
+    const selectCountry = countries.data.filter(
+      country => country.CountryID == SelectedCountryId
+    );
+    return selectCountry[0].CountryName;
+  };
+
+  documentTypesName = documentTypeId => {
+    const { documenttypes } = this.props;
+    const selectDocumentType = documenttypes.data.filter(
+      doc => doc.DocumentTypeId == documentTypeId
+    );
+    return selectDocumentType[0].DocumentTypeName;
+  };
+
+  languageName = languageId => {
+    const { documentlanguage } = this.props;
+    const selectedLanguage = documentlanguage.data.filter(
+      lang => lang.LanguageID == languageId
+    );
+    return selectedLanguage[0].LanguageName;
+  };
+
   render() {
     const {
-      srInfo: { CustomerName, Email, PersonalPhone, Address, TotalRate }
+      srInfo: {
+        CustomerName,
+        Email,
+        PersonalPhone,
+        Address,
+        TotalRate,
+        SelectedCountryId,
+        SelectedCertificateType,
+        SelectedDocumentTypeId,
+        SelectedFromDocumentLanguageId,
+        SelectedToDocumentLanguageId,
+        Service: { ServiceName }
+      }
     } = this.props;
     return (
       <Container>
@@ -35,23 +79,78 @@ class SRInfo extends Component {
               <Text style={styles.label}>Address : </Text>
               <Text style={styles.value}> {Address} </Text>
             </View>
-            <View style={styles.item_border}>
-              <Text style={styles.label}>Country : </Text>
-              <Text style={styles.value}> India </Text>
-            </View>
-            <View style={styles.item_border}>
-              <Text style={styles.label}>Certificate Type : </Text>
-              <Text style={styles.value}> Text </Text>
-            </View>
-            <View style={styles.item_border}>
+            {ServiceName === "ATTESTATION" && (
+              <View style={styles.item_border}>
+                <Text style={styles.label}>Country : </Text>
+                <Text style={styles.value}>
+                  {" "}
+                  {this.props.countries.data
+                    ? this.countryName(SelectedCountryId)
+                    : ""}{" "}
+                </Text>
+              </View>
+            )}
+            {ServiceName === "ATTESTATION" && (
+              <View style={styles.item_border}>
+                <Text style={styles.label}>Certificate Type : </Text>
+                <Text style={styles.value}>
+                  {" "}
+                  {this.props.certificatetype.data
+                    ? this.certtificateTypeName(SelectedCertificateType)
+                    : ""}{" "}
+                </Text>
+              </View>
+            )}
+
+            {ServiceName === "TRANSLATION" && (
+              <View style={styles.item_border}>
+                <Text style={styles.label}>Document Type : </Text>
+                <Text style={styles.value}>
+                  {" "}
+                  {this.props.certificatetype.data
+                    ? this.documentTypesName(SelectedDocumentTypeId)
+                    : ""}{" "}
+                </Text>
+              </View>
+            )}
+
+            {ServiceName === "TRANSLATION" && (
+              <View style={styles.item_border}>
+                <Text style={styles.label}>Document Language : </Text>
+                <Text style={styles.value}>
+                  {" "}
+                  {this.props.certificatetype.data
+                    ? this.languageName(SelectedFromDocumentLanguageId)
+                    : ""}{" "}
+                </Text>
+              </View>
+            )}
+
+            {ServiceName === "TRANSLATION" && (
+              <View style={styles.item_border}>
+                <Text style={styles.label}>Document to be Translated : </Text>
+                <Text style={styles.value}>
+                  {" "}
+                  {this.props.certificatetype.data
+                    ? this.languageName(SelectedToDocumentLanguageId)
+                    : ""}{" "}
+                </Text>
+              </View>
+            )}
+
+            {/* <View style={styles.item_border}>
               <Text style={styles.label}>
                 Document Pickup and Drop Location :
               </Text>
               <Text style={styles.value}> Text</Text>
-            </View>
+            </View> */}
             <View style={styles.item_border}>
               <Text style={styles.label}>Rate :</Text>
-              <Text style={styles.value}> {TotalRate} </Text>
+              <Text style={styles.value}>
+                {" "}
+                {TotalRate}
+                {""}AED{" "}
+              </Text>
             </View>
           </ScrollView>
         </Content>
@@ -73,8 +172,18 @@ const styles = StyleSheet.create({
   value: { color: "#A6ACAF", fontSize: 16 }
 });
 
-const mapStateToProps = ({ servicerequest: { srInfo } }) => ({
-  srInfo
+const mapStateToProps = ({
+  servicerequest: { srInfo },
+  certificatetype,
+  countries,
+  documenttypes,
+  documentlanguage
+}) => ({
+  srInfo,
+  certificatetype,
+  countries,
+  documenttypes,
+  documentlanguage
 });
 const mapDispatchToProps = dispatch => ({});
 

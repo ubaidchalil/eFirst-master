@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { Alert } from "react-native";
+import { Alert, View } from "react-native";
 import LoginScreen from "./screen";
 import { connect } from "react-redux";
 import { loginUser } from "../action";
 import { StateComponent } from "../../styled/components";
-
+import AlertView from "../../styled/alert-view";
+import Loader from "../../styled/loader";
 class Container extends Component {
   componentDidMount = () => {
     if (this.props.token) {
@@ -15,27 +16,35 @@ class Container extends Component {
     if (!this.props.login.loading) {
       if (this.props.token) {
         this.props.navigation.navigate("Home");
-      } else {
-        Alert.alert("Alert", "Entered username or password is incorrect");
       }
     }
   }
 
-  render = () =>
-    this.props.login.loading || this.props.login.error ? (
-      <StateComponent
-        loading={this.props.login.loading}
-        error={this.props.login.error}
-        onPress={() => this.props.navigation.navigate.goBack(null)}
-      />
-    ) : (
+  render = () => (
+    <View style={{ flex: 1 }}>
+      <Loader loading={this.props.login.loading} />
       <LoginScreen {...this.props} />
-    );
+      {this.props.confirmemail.success && (
+        <AlertView
+          type="success"
+          message="Verification completed successfully. Pls Login.."
+        />
+      )}
+      {this.props.login.error && (
+        <AlertView
+          type="error"
+          message="Entered username or password is incorrect"
+        />
+      )}
+    </View>
+  );
 }
-const mapStateToProps = ({ token, login }) => ({
+const mapStateToProps = ({ token, login, confirmemail }) => ({
   token,
-  login
+  login,
+  confirmemail
 });
+
 const mapDispatchToProps = dispatch => ({
   loginUser: data => dispatch(loginUser(data))
 });

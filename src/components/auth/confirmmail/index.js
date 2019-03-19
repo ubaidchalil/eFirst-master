@@ -13,7 +13,7 @@ class Container extends Component {
   componentDidUpdate() {
     if (!this.props.confirmemail.loading) {
       if (this.props.confirmemail.success) {
-        this.props.navigation.navigate("Login");
+        this.props.navigation.navigate("Auth");
       }
     }
   }

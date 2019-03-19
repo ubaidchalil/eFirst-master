@@ -54,13 +54,7 @@ const Tabs = createBottomTabNavigator(
     tabBarOptions: {
       activeTintColor: "#4F4F4F",
       inactiveTintColor: "#ddd"
-    },
-    navigationOptions: ({ navigation }) => ({
-      tabBarOnPress: (scene, jumpToIndex) => {
-        console.log("onPress:", scene.route);
-        jumpToIndex(scene.index);
-      }
-    })
+    }
   }
 );
 

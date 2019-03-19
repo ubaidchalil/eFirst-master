@@ -3,65 +3,50 @@ export const Color = {
   secondary: "#b61e89"
 };
 
-/// AUTH URLS ///
+/// BASE URL ///
+const BASE_URL = "https://api.efirst.ae/";
 
-export const LOGIN_URL = "https://api.efirst.ae/Token";
-export const RESET_PASSWORD_URL =
-  "https://api.efirst.ae/Account/ForgotPassword";
-export const REGISTER_URL = "https://api.efirst.ae/Account/Register";
-export const CONFIRM_EMAIL_URL = "https://api.efirst.ae/Account/ConfirmEmail";
+/// AUTH URLS ///
+export const LOGIN_URL = `${BASE_URL}Token`;
+export const RESET_PASSWORD_URL = `${BASE_URL}Account/ForgotPassword`;
+export const REGISTER_URL = `${BASE_URL}Account/Register`;
+export const CONFIRM_EMAIL_URL = `${BASE_URL}Account/ConfirmEmail`;
+export const LOGOUT_URL = `${BASE_URL}Account/Logout`;
 
 /// DASHBOARD URLS ///
-
-export const DASHBOARD_DATA_URL = "https://api.efirst.ae/Dashboard/Get";
+export const DASHBOARD_DATA_URL = `${BASE_URL}Dashboard/Get`;
 
 /// SERVICE URLS ///
-
-export const COUNTRIES_URL = "https://api.efirst.ae/Master/GetAllCountry";
-export const DOCUMENT_TYPE_URL =
-  "https://api.efirst.ae/Master/GetAllDocumentTypes";
-export const ATTESTATION_PRICE_URL =
-  "https://api.efirst.ae/Master/GetAttestationRate";
-export const TRANSLATION_PRICE_URL =
-  "https://api.efirst.ae/Master/GetTranslationRate";
-export const DOC_ATTESTATION_CREATE_URL =
-  "https://api.efirst.ae/Service/CreateDocumentAttestation";
-export const CERTTYPE_URL =
-  "https://api.efirst.ae/Master/GetAllCertificateTypes";
-export const DOCLANG_URL =
-  "https://api.efirst.ae/Master/GetAllDoucmentLanguages";
-export const LANGTRANS_URL =
-  "https://api.efirst.ae/Service/CreateLanguageTranslation";
+export const COUNTRIES_URL = `${BASE_URL}Master/GetAllCountry`;
+export const DOCUMENT_TYPE_URL = `${BASE_URL}Master/GetAllDocumentTypes`;
+export const ATTESTATION_PRICE_URL = `${BASE_URL}Master/GetAttestationRate`;
+export const TRANSLATION_PRICE_URL = `${BASE_URL}Master/GetTranslationRate`;
+export const DOC_ATTESTATION_CREATE_URL = `${BASE_URL}Service/CreateDocumentAttestation`;
+export const CERTTYPE_URL = `${BASE_URL}Master/GetAllCertificateTypes`;
+export const DOCLANG_URL = `${BASE_URL}Master/GetAllDoucmentLanguages`;
+export const LANGTRANS_URL = `${BASE_URL}Service/CreateLanguageTranslation`;
+// export const LANGTRANS_URL =
+//   `http://192.168.43.134:57154/api/test/CreateLanguageTranslation`;
 
 /// PROFILE URLS ///
-
-export const PROFILE_URL = "https://api.efirst.ae/Profile/Get";
-export const USER_PROFILE_CREATE_URL =
-  "https://api.efirst.ae/Profile/SaveUserProfile";
-export const USER_PERSDETL_CREATE_URL =
-  "https://api.efirst.ae/Profile/SaveUserPersonalDetails";
-export const USER_CONTDETL_CREATE_URL =
-  "https://api.efirst.ae/Profile/SaveUserContactDetails";
-export const USER_OFFADDRESS_CREATE_URL =
-  "https://api.efirst.ae/Profile/SaveUserOfficeAddress";
+export const PROFILE_URL = `${BASE_URL}Profile/Get`;
+export const USER_PROFILE_CREATE_URL = `${BASE_URL}Profile/SaveUserProfile`;
+export const USER_PERSDETL_CREATE_URL = `${BASE_URL}Profile/SaveUserPersonalDetails`;
+export const USER_CONTDETL_CREATE_URL = `${BASE_URL}Profile/SaveUserContactDetails`;
+export const USER_OFFADDRESS_CREATE_URL = `${BASE_URL}Profile/SaveUserOfficeAddress`;
 
 /// SERVICE REQUEST URLS ///
-export const SERVICEREQUEST_LIST_URL =
-  "https://api.efirst.ae/ServiceRequest/GetServiceRequestForSRList?filterOption=0";
-export const SERVICES_DATA_URL =
-  "https://api.efirst.ae/ServiceRequest/GetSRByStatus";
+export const SERVICEREQUEST_LIST_URL = `${BASE_URL}ServiceRequest/GetServiceRequestForSRList?filterOption=0`;
+export const SERVICES_DATA_URL = `${BASE_URL}ServiceRequest/GetSRByStatus`;
 
-export const SERVICE_REQUEST_URL = "https://api.efirst.ae/ServiceRequest/Get";
+export const SERVICE_REQUEST_URL = `${BASE_URL}ServiceRequest/Get`;
 
 /// FAQ URLS ///
-
-export const FAQ_CAT_URL = "https://api.efirst.ae/FAQ/GetFAQCategory";
-export const FAQ_URL = "https://api.efirst.ae/FAQ/GetFAQ";
+export const FAQ_CAT_URL = `${BASE_URL}FAQ/GetFAQCategory`;
+export const FAQ_URL = `${BASE_URL}FAQ/GetFAQ`;
 
 /// SUPPORT URLS ///
-
-export const SUPPORT_URL = "https://api.efirst.ae/Support/Post";
+export const SUPPORT_URL = `${BASE_URL}Support/Post`;
 
 /// MESSAGE URLS ///
-
-export const MESSAGE_URL = "https://api.efirst.ae/Message/Post";
+export const MESSAGE_URL = `${BASE_URL}Message/Post`;

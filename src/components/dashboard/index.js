@@ -4,7 +4,13 @@ import HomeScreen from "./screen";
 import { DashboardData } from "./action";
 import { View } from "react-native";
 import { profileData } from "../profile/action";
-import { servicesData } from "../service/action";
+import {
+  servicesData,
+  countries,
+  getcertificateType,
+  getdoclanguage,
+  documentationTypes
+} from "../service/action";
 import { FAQCategoryData, clearFaq } from "../faq/action";
 import AlertView from "../styled/alert-view";
 import Loader from "../styled/loader";
@@ -15,6 +21,10 @@ class Container extends Component {
     this.props.profileData(token);
     this.props.ClearFaq();
     this.props.FAQCategoryData(token);
+    this.props.countries(token);
+    this.props.getcertificateType(token);
+    this.props.getdoclanguage(token);
+    this.props.documentationTypes(token);
   };
 
   render = () => {
@@ -39,7 +49,11 @@ const mapDispatchToProps = dispatch => ({
   profileData: payload => dispatch(profileData(payload)),
   FAQCategoryData: payload => dispatch(FAQCategoryData(payload)),
   ClearFaq: () => dispatch(clearFaq()),
-  servicesData: payload => dispatch(servicesData(payload))
+  servicesData: payload => dispatch(servicesData(payload)),
+  countries: payload => dispatch(countries(payload)),
+  getcertificateType: payload => dispatch(getcertificateType(payload)),
+  getdoclanguage: payload => dispatch(getdoclanguage(payload)),
+  documentationTypes: payload => dispatch(documentationTypes(payload))
 });
 
 export default connect(

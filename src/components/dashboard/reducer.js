@@ -2,7 +2,7 @@ import { dashboardState } from "./action";
 const initialDashboard = {
   loading: false,
   data: null,
-  succuss: null,
+  success: null,
   error: null
 };
 export const dashboard = (state = initialDashboard, action) => {

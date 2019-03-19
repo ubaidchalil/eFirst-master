@@ -17,7 +17,7 @@ export default class AlertView extends Component {
   };
   render() {
     const { type, message } = this.props;
-    const backgroundColor = type === "success" ? "blue" : "red";
+    const backgroundColor = type === "success" ? "#007f00" : "#e22d39";
     const text =
       type === "success"
         ? message

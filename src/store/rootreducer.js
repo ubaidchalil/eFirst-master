@@ -3,6 +3,7 @@ import { persistCombineReducers } from "redux-persist";
 import {
   login,
   token,
+  logout,
   registration,
   forgetpassword,
   confirmemail
@@ -31,7 +32,8 @@ import {
   usercontactdetail,
   userofficeadress,
   userpersonaldetail,
-  userprofile
+  userprofile,
+  changepassword
 } from "../components/profile/reducer";
 
 import { dashboard } from "../components/dashboard/reducer";
@@ -64,7 +66,9 @@ const config = {
     "servicerequest",
     "translationrate",
     "message",
-    "confirmemail"
+    "confirmemail",
+    "logout",
+    "changepassword"
   ]
 };
 
@@ -93,7 +97,9 @@ const combinedReducers = {
   servicerequest,
   translationrate,
   message,
-  confirmemail
+  confirmemail,
+  logout,
+  changepassword
 };
 
 export default persistCombineReducers(config, combinedReducers);

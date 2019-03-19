@@ -2,7 +2,8 @@ import {
   LOGIN_URL,
   REGISTER_URL,
   RESET_PASSWORD,
-  CONFIRM_EMAIL_URL
+  CONFIRM_EMAIL_URL,
+  LOGOUT_URL
 } from "../../constants";
 
 export const registrationState = {
@@ -15,6 +16,13 @@ export const registrationState = {
 export const loginState = {
   LOADING: "LOGIN_LOADING",
   ERROR: "LOGIN_ERROR"
+};
+
+export const logoutState = {
+  LOADING: "LOGOUT_LOADING",
+  ERROR: "LOGOUT_ERROR",
+  SUCCESS: "LOGOUT_SUCCESS",
+  CLEAR: "LOGOUT_CLEAR_STATE"
 };
 
 export const confirmEmailState = {
@@ -34,7 +42,6 @@ export const tokenState = {
   CLEAR: "USER_LOGGED_OUT"
 };
 export const checkResult = (result, dispatch, setError) => {
-  console.log(result);
   if (result.status) {
     return true;
   }
@@ -83,9 +90,29 @@ export const openFetcher = async (fetchData, type, dispatch) => {
   }
 };
 
+export const LogoutFetcher = async (fetchData, type, dispatch) => {
+  dispatch(setInStore(false, type.SUCCESS));
+  dispatch(setInStore(true, type.LOADING));
+  dispatch(setInStore(null, type.ERROR));
+  try {
+    const result = await fetchData();
+    if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
+      dispatch(clearData());
+      dispatch(setInStore(true, type.SUCCESS));
+      dispatch(setInStore(false, type.LOADING));
+    } else {
+      dispatch(setInStore(false, type.LOADING));
+    }
+  } catch (error) {
+    dispatch(clearData());
+    dispatch(setInStore(false, type.LOADING));
+    dispatch(setInStore(error, type.ERROR));
+  }
+};
+
 const openRegFetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(true, type.LOADING));
-  h;
+  dispatch(setInStore(false, type.SUCCESS));
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
@@ -111,6 +138,7 @@ const openRegFetcher = async (fetchData, type, dispatch) => {
 };
 
 const openFetcher2 = async (fetchData, type, dispatch) => {
+  dispatch(setInStore(false, type.SUCCESS));
   dispatch(setInStore(true, type.LOADING));
   dispatch(setInStore(null, type.ERROR));
   try {
@@ -207,6 +235,7 @@ export const resetPasswordUser = payload => dispatch => {
         },
         body
       });
+
       return result.json().then(data => ({
         data: data,
         status: result.ok
@@ -215,4 +244,33 @@ export const resetPasswordUser = payload => dispatch => {
     forgetpasswordState,
     dispatch
   );
+};
+
+export const Logout = token => dispatch => {
+  return LogoutFetcher(
+    async () => {
+      const result = await fetch(LOGOUT_URL, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          Authorization: `Bearer ${token}`
+        }
+      });
+
+      return result.ok
+        ? {
+            status: result.ok
+          }
+        : result.json().then(data => ({
+            data: data,
+            status: result.ok
+          }));
+    },
+    logoutState,
+    dispatch
+  );
+};
+
+export const clearLogoutState = () => dispatch => {
+  dispatch(setInStore(true, logoutState.CLEAR));
 };

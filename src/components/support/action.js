@@ -21,6 +21,7 @@ export const setInStore = (state, type) => ({
 
 const openFetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(true, type.LOADING));
+  dispatch(setInStore(false, type.SUCCESS));
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();

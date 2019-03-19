@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import UserActions from "./screen";
-import { servicesData } from "../action";
+import { servicesData, serviceRequestData } from "../action";
 import { View, StyleSheet, Text } from "react-native";
 import Loader from "../../styled/loader";
 import AlertView from "../../styled/alert-view";
@@ -25,25 +25,37 @@ class Container extends Component {
 
   render = () => {
     const {
-      services: { loading, error }
+      services: { error, loading }
     } = this.props;
 
+    const success =
+      this.props.documentattestation.success ||
+      this.props.langtranslation.success;
     return (
       <View style={styles.container}>
         <Loader loading={loading} />
         <UserActions {...this.props} />
         {error && <AlertView type="error" />}
+        {success && <AlertView type="success" />}
       </View>
     );
   };
 }
 
-const mapStateToProps = ({ services, token }) => ({
+const mapStateToProps = ({
   services,
-  token
+  token,
+  langtranslation,
+  documentattestation
+}) => ({
+  services,
+  token,
+  documentattestation,
+  langtranslation
 });
 const mapDispatchToProps = dispatch => ({
-  servicesData: payload => dispatch(servicesData(payload))
+  servicesData: payload => dispatch(servicesData(payload)),
+  serviceRequestData: payload => dispatch(serviceRequestData(payload))
 });
 
 export default connect(

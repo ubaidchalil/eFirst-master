@@ -23,6 +23,13 @@ export const userContactDetailState = {
   SUCCESS: "USRCONTDETL_SUCCESS",
   ERROR: "USRCONTDETL_ERROR"
 };
+
+export const changePasswordState = {
+  LOADING: "CHANGEPASS_LOADING",
+  SUCCESS: "CHANGEPASS_SUCCESS",
+  ERROR: "CHANGEPASS_ERROR"
+};
+
 export const userPersonalDetailState = {
   LOADING: "USRPRDETL_LOADING",
   SUCCESS: "USRPRDETL_SUCCESS",
@@ -174,6 +181,30 @@ export const userOfficeAddressCreate = payload => dispatch => {
       }));
     },
     userOfficeAddressState,
+    dispatch
+  );
+};
+
+export const changePassword = payload => dispatch => {
+  const { token, ...bodyData } = payload;
+  const body = JSON.stringify(bodyData);
+  return openFetcher(
+    async () => {
+      const result = await fetch(USER_OFFADDRESS_CREATE_URL, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
+        body
+      });
+      return result.json().then(data => ({
+        data: data,
+        status: result.ok
+      }));
+    },
+    changePasswordState,
     dispatch
   );
 };

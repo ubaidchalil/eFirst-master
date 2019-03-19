@@ -3,9 +3,10 @@ import DocumentAttestation from "./screen";
 import { connect } from "react-redux";
 import {
   countries,
-  documentationTypes,
+  getcertificateType,
   attestationPrice,
-  docAttestationCreate
+  docAttestationCreate,
+  servicesData
 } from "../action";
 import Loader from "../../styled/loader";
 import { View } from "react-native";
@@ -21,12 +22,23 @@ class Container extends Component {
 
   componentDidMount = () => {
     this.props.getCountries(this.props.token.token);
-    this.props.documentationTypes(this.props.token.token);
+    this.props.getcertificateType(this.props.token.token);
   };
+  componentDidUpdate() {
+    console.log(this.props);
+    if (!this.props.documentattestation.loading) {
+      if (this.props.documentattestation.success) {
+        const { token } = this.props.token;
+        const statusId = null;
+        this.props.servicesData({ statusId, token });
+        this.props.navigation.navigate("MyRequests");
+      }
+    }
+  }
   render = () => {
     const {
       countries,
-      documenttypes,
+      certificatetype,
       attestationrate,
       documentattestation,
       profile
@@ -35,19 +47,19 @@ class Container extends Component {
     const loading =
       documentattestation.loading ||
       countries.loading ||
-      documenttypes.loading ||
+      certificatetype.loading ||
       attestationrate.loading;
 
     const error =
       documentattestation.error ||
       countries.error ||
-      documenttypes.error ||
+      certificatetype.error ||
       attestationrate.error;
 
     const success = documentattestation.success;
     return (
       <View style={{ flex: 1 }}>
-        <Loader loading={loading} />
+        {/* <Loader loading={loading} /> */}
         <DocumentAttestation {...this.props} state={this.state} />
         {error && <AlertView type="error" />}
         {success && <AlertView type="success" />}
@@ -57,14 +69,14 @@ class Container extends Component {
 }
 const mapStateToProps = ({
   countries,
-  documenttypes,
+  certificatetype,
   attestationrate,
   documentattestation,
   profile,
   token
 }) => ({
   countries,
-  documenttypes,
+  certificatetype,
   attestationrate,
   documentattestation,
   profile,
@@ -73,8 +85,9 @@ const mapStateToProps = ({
 const mapDispatchToProps = dispatch => ({
   attestationPrice: payload => dispatch(attestationPrice(payload)),
   getCountries: payload => dispatch(countries(payload)),
-  documentationTypes: payload => dispatch(documentationTypes(payload)),
-  docAttestationCreate: payload => dispatch(docAttestationCreate(payload))
+  getcertificateType: payload => dispatch(getcertificateType(payload)),
+  docAttestationCreate: payload => dispatch(docAttestationCreate(payload)),
+  servicesData: payload => dispatch(servicesData(payload))
 });
 
 export default connect(

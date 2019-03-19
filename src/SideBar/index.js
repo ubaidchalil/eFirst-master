@@ -14,9 +14,12 @@ import {
   Thumbnail
 } from "native-base";
 import { NavigationActions, DrawerActions } from "react-navigation";
-import { Image, View } from "react-native";
-
-export default class ListIconExample extends Component {
+import { Image, View, ScrollView, TouchableOpacity } from "react-native";
+import { connect } from "react-redux";
+import { Logout, clearLogoutState } from "../components/auth/action";
+import Loader from "../components/styled/loader";
+import { DashboardData } from "../components/dashboard/action";
+class Container1 extends Component {
   navigateToScreen = route => () => {
     const navigateAction = NavigationActions.navigate({
       routeName: route
@@ -24,10 +27,30 @@ export default class ListIconExample extends Component {
     this.props.navigation.dispatch(navigateAction);
     // this.props.navigation.dispatch(DrawerActions.closeDrawer());
   };
+  componentDidUpdate() {
+    console.log(this.props.logout);
+    if (!this.props.logout.loading) {
+      if (this.props.logout.success) {
+        this.props.navigation.navigate("Auth");
+        this.props.clearLogoutState();
+      }
+    }
+  }
 
+  onLogout = () => {
+    const { token } = this.props.token;
+    this.props.Logout(token);
+  };
+
+  loadDashboardData() {
+    const { token } = this.props.token;
+    this.props.DashboardData(token);
+    this.navigateToScreen("HomeScreen");
+  }
   render() {
     return (
       <Container>
+        <Loader loading={this.props.logout.loading} />
         <View
           style={{
             backgroundColor: "white",
@@ -63,71 +86,96 @@ export default class ListIconExample extends Component {
           </View>
         </View>
         <Content style={{ backgroundColor: "#003366" }}>
-          <ListItem
-            icon
-            style={styles.listIem}
-            onPress={this.navigateToScreen("HomeScreen")}
-          >
-            <Left style={styles.left}>
-              <Icon style={styles.icon} name="arrow-dropright" />
-            </Left>
-            <Body style={styles.body}>
-              <Text style={styles.text}>Dashboard</Text>
-            </Body>
-          </ListItem>
-          <ListItem
-            icon
-            style={styles.listIem}
-            onPress={this.navigateToScreen("RequestService")}
-          >
-            <Left style={styles.left}>
-              <Icon style={styles.icon} name="arrow-dropright" />
-            </Left>
-            <Body style={styles.body}>
-              <Text style={styles.text}>My Services</Text>
-            </Body>
-          </ListItem>
-          <ListItem
-            icon
-            style={styles.listIem}
-            onPress={this.navigateToScreen("Profile")}
-          >
-            <Left style={styles.left}>
-              <Icon style={styles.icon} name="arrow-dropright" />
-            </Left>
-            <Body style={styles.body}>
-              <Text style={styles.text}>My Profile</Text>
-            </Body>
-          </ListItem>
-          <ListItem
-            icon
-            style={styles.listIem}
-            onPress={this.navigateToScreen("FAQ")}
-          >
-            <Left style={styles.left}>
-              <Icon style={styles.icon} name="arrow-dropright" />
-            </Left>
-            <Body style={styles.body}>
-              <Text style={styles.text}>FAQ</Text>
-            </Body>
-          </ListItem>
-          <ListItem
-            icon
-            style={styles.listIem}
-            onPress={this.navigateToScreen("Support")}
-          >
-            <Left style={styles.left}>
-              <Icon style={styles.icon} name="arrow-dropright" />
-            </Left>
-            <Body style={styles.body}>
-              <Text style={styles.text}>Support</Text>
-            </Body>
-          </ListItem>
+          <ScrollView>
+            <ListItem
+              icon
+              style={styles.listIem}
+              onPress={() => this.loadDashboardData()}
+            >
+              <Left style={styles.left}>
+                <Icon style={styles.icon} name="arrow-dropright" />
+              </Left>
+              <Body style={styles.body}>
+                <Text style={styles.text}>Dashboard</Text>
+              </Body>
+            </ListItem>
+            <ListItem
+              icon
+              style={styles.listIem}
+              onPress={this.navigateToScreen("RequestService")}
+            >
+              <Left style={styles.left}>
+                <Icon style={styles.icon} name="arrow-dropright" />
+              </Left>
+              <Body style={styles.body}>
+                <Text style={styles.text}>My Services</Text>
+              </Body>
+            </ListItem>
+            <ListItem
+              icon
+              style={styles.listIem}
+              onPress={this.navigateToScreen("Profile")}
+            >
+              <Left style={styles.left}>
+                <Icon style={styles.icon} name="arrow-dropright" />
+              </Left>
+              <Body style={styles.body}>
+                <Text style={styles.text}>My Profile</Text>
+              </Body>
+            </ListItem>
+            <ListItem
+              icon
+              style={styles.listIem}
+              onPress={this.navigateToScreen("FAQ")}
+            >
+              <Left style={styles.left}>
+                <Icon style={styles.icon} name="arrow-dropright" />
+              </Left>
+              <Body style={styles.body}>
+                <Text style={styles.text}>FAQ</Text>
+              </Body>
+            </ListItem>
+            <ListItem
+              icon
+              style={styles.listIem}
+              onPress={this.navigateToScreen("Support")}
+            >
+              <Left style={styles.left}>
+                <Icon style={styles.icon} name="arrow-dropright" />
+              </Left>
+              <Body style={styles.body}>
+                <Text style={styles.text}>Support</Text>
+              </Body>
+            </ListItem>
+          </ScrollView>
         </Content>
+        <View style={styles.bottomView}>
+          <TouchableOpacity onPress={this.props.Logout}>
+            <View>
+              <Text style={styles.textStyle}>Logout</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
       </Container>
     );
   }
 }
+
+const mapStateToProps = ({ profile, token, logout }) => ({
+  profile,
+  token,
+  logout
+});
+const mapDispatchToProps = dispatch => ({
+  Logout: payload => dispatch(Logout(payload)),
+  DashboardData: payload => dispatch(DashboardData(payload)),
+  clearLogoutState: () => dispatch(clearLogoutState())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Container1);
 
 const styles = {
   listIem: {
@@ -154,5 +202,18 @@ const styles = {
     borderBottomWidth: 1,
     borderBottomColor: "#c3c3c3",
     height: 70
+  },
+  bottomView: {
+    width: "100%",
+    height: 35,
+    backgroundColor: "#FF9800",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "absolute",
+    bottom: 0
+  },
+  textStyle: {
+    fontSize: 13,
+    color: "white"
   }
 };

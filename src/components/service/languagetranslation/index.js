@@ -5,7 +5,8 @@ import {
   getdoclanguage,
   documentationTypes,
   translationPrice,
-  doclangTransCreate
+  doclangTransCreate,
+  servicesData
 } from "../action";
 import { View } from "react-native";
 import Loader from "../../styled/loader";
@@ -15,6 +16,16 @@ class Container extends Component {
     this.props.getdoclanguage(this.props.token.token);
     this.props.documentationTypes(this.props.token.token);
   };
+  componentDidUpdate() {
+    if (!this.props.langtranslation.loading) {
+      if (this.props.langtranslation.success) {
+        const { token } = this.props.token;
+        const statusId = null;
+        this.props.servicesData({ statusId, token });
+        this.props.navigation.navigate("MyRequests");
+      }
+    }
+  }
   render = () => {
     const {
       documentlanguage,
@@ -39,7 +50,7 @@ class Container extends Component {
     const success = langtranslation.success;
     return (
       <View style={{ flex: 1 }}>
-        <Loader loading={loading} />
+        {/* <Loader loading={loading} /> */}
         <LanguageTranslation {...this.props} state={this.state} />
         {error && <AlertView type="error" />}
         {success && <AlertView type="success" />}
@@ -66,7 +77,8 @@ const mapDispatchToProps = dispatch => ({
   translationPrice: payload => dispatch(translationPrice(payload)),
   getdoclanguage: payload => dispatch(getdoclanguage(payload)),
   documentationTypes: payload => dispatch(documentationTypes(payload)),
-  doclangTransCreate: payload => dispatch(doclangTransCreate(payload))
+  doclangTransCreate: payload => dispatch(doclangTransCreate(payload)),
+  servicesData: payload => dispatch(servicesData(payload))
 });
 
 export default connect(

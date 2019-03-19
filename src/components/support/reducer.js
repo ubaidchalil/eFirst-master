@@ -2,7 +2,7 @@ import { supportState } from "./action";
 
 const initialSupport = {
   loading: false,
-  succuss: null,
+  success: null,
   error: null
 };
 

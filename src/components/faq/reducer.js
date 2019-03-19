@@ -3,14 +3,14 @@ import { faqCategoryState, faqState } from "./action";
 const initialFAQCategory = {
   loading: false,
   data: null,
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialFAQ = {
   loading: false,
   data: [],
-  succuss: null,
+  success: null,
   error: null
 };
 

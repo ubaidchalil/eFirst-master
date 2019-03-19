@@ -14,68 +14,68 @@ import {
 
 const initialDocumentAttestation = {
   loading: false,
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialLangTranslation = {
   loading: false,
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialMessage = {
   loading: false,
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialCountry = {
   loading: false,
   data: [],
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialServices = {
   loading: false,
   data: [],
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialDocumentType = {
   loading: false,
   data: [],
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialCertificateType = {
   loading: false,
   data: [],
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialDocumentLanguage = {
   loading: false,
   data: [],
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialAttestationRate = {
   loading: false,
   data: null,
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialTranslationRate = {
   loading: false,
   data: null,
-  succuss: null,
+  success: null,
   error: null
 };
 
@@ -88,7 +88,7 @@ const initialServiceRequest = {
   srInfo: null,
   messageList: [],
   statusList: [],
-  succuss: null,
+  success: null,
   error: null
 };
 

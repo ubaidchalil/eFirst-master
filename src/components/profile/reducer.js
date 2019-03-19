@@ -3,30 +3,37 @@ import {
   userProfileState,
   userContactDetailState,
   userOfficeAddressState,
-  userPersonalDetailState
+  userPersonalDetailState,
+  changePasswordState
 } from "./action";
 
 const initialUserProfile = {
   loading: false,
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialUserPersonalDetail = {
   loading: false,
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialUserContactlDetail = {
   loading: false,
-  succuss: null,
+  success: null,
   error: null
 };
 
 const initialUserOfficeAddress = {
   loading: false,
-  succuss: null,
+  success: null,
+  error: null
+};
+
+const initialChangePassword = {
+  loading: false,
+  success: null,
   error: null
 };
 
@@ -38,7 +45,7 @@ const initialProfile = {
     personaldetail: [],
     contactdetail: []
   },
-  succuss: null,
+  success: null,
   error: null
 };
 
@@ -81,6 +88,19 @@ export const usercontactdetail = (
     case userContactDetailState.SUCCESS:
       return { ...state, success: action.state };
     case userContactDetailState.ERROR:
+      return { ...state, error: action.state };
+    default:
+      return state;
+  }
+};
+
+export const changepassword = (state = initialChangePassword, action) => {
+  switch (action.type) {
+    case changePasswordState.LOADING:
+      return { ...state, loading: action.state };
+    case changePasswordState.SUCCESS:
+      return { ...state, success: action.state };
+    case changePasswordState.ERROR:
       return { ...state, error: action.state };
     default:
       return state;

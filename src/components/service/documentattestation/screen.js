@@ -45,7 +45,7 @@ const DocumentAttestation = ({
   errors,
   touched,
   countries,
-  documenttypes,
+  certificatetype,
   attestationrate,
   token,
   attestationPrice,
@@ -61,12 +61,12 @@ const DocumentAttestation = ({
       />
     ));
 
-  const renderDocumentCertTypes = () =>
-    documenttypes.data.map(doc => (
+  const renderCertificateTypes = () =>
+    certificatetype.data.map(cert => (
       <Picker.Item
-        key={doc.DocumentTypeId}
-        label={doc.DocumentTypeName}
-        value={doc.DocumentTypeId}
+        key={cert.CertificateTypeID}
+        label={cert.CertificateTypeName}
+        value={cert.CertificateTypeID}
       />
     ));
 
@@ -323,7 +323,7 @@ const DocumentAttestation = ({
                 }}
               >
                 <Picker.Item key="0" label="Select type" value="0" />
-                {renderDocumentCertTypes()}
+                {renderCertificateTypes()}
               </Picker>
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>

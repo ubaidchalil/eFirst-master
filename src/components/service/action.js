@@ -12,7 +12,6 @@ import {
   MESSAGE_URL,
   SERVICEREQUEST_LIST_URL
 } from "../../constants";
-
 export const attestationState = {
   LOADING: "ATTEST_LOADING",
   SUCCESS: "ATTEST_SUCCESS",
@@ -101,6 +100,7 @@ export const setInStore = (state, type) => ({
 
 const openFetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(true, type.LOADING));
+  dispatch(setInStore(false, type.SUCCESS));
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
@@ -119,6 +119,7 @@ const openFetcher = async (fetchData, type, dispatch) => {
 
 const Fetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(true, type.LOADING));
+  dispatch(setInStore(false, type.SUCCESS));
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
@@ -185,9 +186,9 @@ export const sendOrReplyMessage = payload => dispatch => {
     dispatch
   );
 };
+
 export const doclangTransCreate = payload => dispatch => {
   const { token, data } = payload;
-  console.log(data);
   const body = data;
   return openFetcher(
     async () => {
@@ -205,6 +206,7 @@ export const doclangTransCreate = payload => dispatch => {
         status: result.ok
       }));
     },
+
     langTransState,
     dispatch
   );
