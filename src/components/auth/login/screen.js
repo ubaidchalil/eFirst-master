@@ -114,7 +114,7 @@ const LoginForm = ({
           >
             <Text>Forgot your password?</Text>
           </Button>
-          <View style={{ flexDirection: 'row', borderRadius: 25, elevation:1 }} >
+          <View style={{ flexDirection: 'row', borderRadius: 25, elevation:3 }} >
               <TouchableOpacity style={{ flex:0.5 }}>
                 <View style={{ padding: 15, flexDirection: 'row', justifyContent:'center', borderRightWidth:1, borderColor:"#E5E8E8" }} >
                   <Image source={require('../../../Assets/loginwithFB.png')} style={{ width: 20, height: 20, resizeMode: 'contain' }} />

@@ -16,7 +16,8 @@ import {
   Row,
   Form,
   Item,
-  Input
+  Input,
+  Picker
 } from "native-base";
 import DateTimePicker from "react-native-modal-datetime-picker";
 import { withFormik } from "formik";
@@ -96,17 +97,23 @@ const PersonalDetails = ({
                   Gender: {personaldetail.Gender}
                 </Text>
               ) : (
-                <Item>
-                  <Input
-                    placeholder="Gender"
-                    name="Gender"
-                    label="Gender"
-                    onChangeText={value => setFieldValue("Gender", value)}
-                    value={values.Gender}
-                    error={touched.Gender && errors.Gender}
-                    underlineColor={Color.secondary}
-                    style={{ fontSize: 13 }}
-                  />
+                <Item picker>
+                  
+                  <Picker
+                      mode="dropdown"
+                      iosIcon={<Icon name="arrow-down" />}
+                      style={{ width: undefined }}
+                      placeholder="Gender"
+                      placeholderStyle={{ color: "#bfc6ea" }}
+                      placeholderIconColor="#007aff"
+                      selectedValue={values.Gender}
+                      onValueChange={value => {
+                        setFieldValue("Gender", value);
+                      }}
+                    >
+                    <Picker.Item key="0" label="Male" value="Male" />
+                    <Picker.Item key="1" label="Female" value="Female" />
+                  </Picker>
                 </Item>
               )}
             </Col>

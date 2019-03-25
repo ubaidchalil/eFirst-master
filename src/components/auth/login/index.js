@@ -3,20 +3,19 @@ import { Alert, View } from "react-native";
 import LoginScreen from "./screen";
 import { connect } from "react-redux";
 import { loginUser } from "../action";
+import { StateComponent } from "../../styled/components";
 import AlertView from "../../styled/alert-view";
 import Loader from "../../styled/loader";
-import { DashboardData } from "../../dashboard/action";
 class Container extends Component {
   componentDidMount = () => {
     if (this.props.token) {
-      //this.props.DashboardData(this.props.token);
-      this.props.navigation.navigate("Process");
+      this.props.navigation.navigate("Home");
     }
   };
   componentDidUpdate() {
     if (!this.props.login.loading) {
       if (this.props.token) {
-        this.props.navigation.navigate("Process");
+        this.props.navigation.navigate("Home");
       }
     }
   }
@@ -40,16 +39,14 @@ class Container extends Component {
     </View>
   );
 }
-const mapStateToProps = ({ token, login, confirmemail, dashboard }) => ({
+const mapStateToProps = ({ token, login, confirmemail }) => ({
   token,
   login,
-  confirmemail,
-  dashboard
+  confirmemail
 });
 
 const mapDispatchToProps = dispatch => ({
-  loginUser: data => dispatch(loginUser(data)),
-  DashboardData: payload => dispatch(DashboardData(payload))
+  loginUser: data => dispatch(loginUser(data))
 });
 
 export default connect(
