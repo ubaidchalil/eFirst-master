@@ -29,7 +29,6 @@ export default class FAQ extends Component {
   }
 
   componentDidMount() {
-    console.log("sddsssds");
     const { data } = this.props;
     const { faq } = data[0];
     this.setState({ selectedTabIndex: 0, data, faq });
@@ -85,10 +84,6 @@ export default class FAQ extends Component {
       <Container>
         <MyHeader navigation={navigation} header="FAQ" />
         <Content>
-          <Item style={{ paddingHorizontal: 10 }}>
-            <Input placeholder="Search" />
-            <Icon name="search" />
-          </Item>
           <Item>
             <Text
               style={{
@@ -108,6 +103,7 @@ export default class FAQ extends Component {
             data={this.state.data}
             style={styles.tabList}
             horizontal={true}
+            showsHorizontalScrollIndicator={false}
             renderItem={({ item, index }) => (
               <TouchableOpacity
                 key={index}
@@ -125,6 +121,7 @@ export default class FAQ extends Component {
                 </Text>
               </TouchableOpacity>
             )}
+            extraData={this.state}
           />
           <Accordion
             style={{ borderBottomColor: "#EAEDED", borderBottomWidth: 1 }}

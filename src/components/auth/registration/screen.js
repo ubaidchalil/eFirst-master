@@ -132,6 +132,7 @@ const RegistrationForm = ({
               value={values.ConfirmPassword}
               error={touched.ConfirmPassword && errors.ConfirmPassword}
               underlineColor={Color.secondary}
+              secureTextEntry
             />
           </Item>
           <Item style={{ borderBottomWidth: 0 }}>

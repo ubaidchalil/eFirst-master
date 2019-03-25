@@ -338,24 +338,48 @@ const DocumentAttestation = ({
             </Item>
             <ListItem
               style={[styles.item_margin, { borderBottomWidth: 0 }]}
-              onPress={() => {
-                if (attestationrate.data) {
-                  setFieldValue("Rate", attestationrate.data.Rate);
-                }
-                setFieldValue("PickUpandDropOption", "Direct Delivery");
-              }}
             >
               <Radio
                 selected={values.PickUpandDropOption == "Direct Delivery"}
+                onPress={() => {
+                  if (attestationrate.data) {
+                    setFieldValue("Rate", attestationrate.data.Rate);
+                  }
+                  setFieldValue("PickUpandDropOption", "Direct Delivery");
+                }}
               />
-              <Body>
+              <Body >
+                <TouchableOpacity 
+                  onPress={() => {
+                    if (attestationrate.data) {
+                      setFieldValue("Rate", attestationrate.data.Rate);
+                    }
+                    setFieldValue("PickUpandDropOption", "Direct Delivery");
+                  }}
+                >
                 <Text>Direct Delivery</Text>
+                </TouchableOpacity>
               </Body>
               <Radio
                 selected={values.PickUpandDropOption == "Through Courier"}
+                onPress={() => {
+                  if (attestationrate.data) {
+                    setFieldValue("Rate", attestationrate.data.Rate);
+                  }
+                  setFieldValue("PickUpandDropOption", "Through Courier");
+                }}
               />
-              <Body>
+              <Body >
+                <TouchableOpacity 
+                  onPress={() => {
+                    if (attestationrate.data) {
+                      setFieldValue("Rate", attestationrate.data.Rate);
+                    }
+                    setFieldValue("PickUpandDropOption", "Through Courier");
+                  }}
+                >
                 <Text>Through Courier</Text>
+                </TouchableOpacity>
               </Body>
             </ListItem>
             <View>

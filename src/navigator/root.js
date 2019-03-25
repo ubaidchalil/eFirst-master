@@ -3,7 +3,7 @@ import {
   createStackNavigator,
   createAppContainer,
   createBottomTabNavigator,
-  DrawerNavigator
+  createDrawerNavigator
 } from "react-navigation";
 import HomeScreen from "../components/dashboard";
 import DocumentAttestation from "../components/service/documentattestation";
@@ -20,22 +20,18 @@ import ServiceDetail from "../components/service/servicerequest";
 
 export const RequestServiceStack = createStackNavigator({
   SelectService: {
-    screen: SelectService,
-    navigationOptions: {
-      header: null
-    }
+    screen: SelectService
   },
   DocumentAttestation: {
-    screen: DocumentAttestation,
-    navigationOptions: {
-      header: null
-    }
+    screen: DocumentAttestation
   },
   LanguageTranslation: {
-    screen: LanguageTranslation,
-    navigationOptions: {
-      header: null
-    }
+    screen: LanguageTranslation
+  }
+},
+{
+  defaultNavigationOptions: {
+    header: null
   }
 });
 
@@ -54,11 +50,14 @@ const Tabs = createBottomTabNavigator(
     tabBarOptions: {
       activeTintColor: "#4F4F4F",
       inactiveTintColor: "#ddd"
+    },
+    defaultNavigationOptions: {
+      header: null
     }
   }
 );
 
-const Drawer = DrawerNavigator(
+const Drawer = createDrawerNavigator(
   {
     Tabs
   },
@@ -70,16 +69,16 @@ const Drawer = DrawerNavigator(
 
 const root = createStackNavigator({
   Auth: {
-    screen: AuthStack,
-    navigationOptions: {
-      header: null
-    }
+    screen: AuthStack
   },
   Home: {
-    screen: Drawer,
-    navigationOptions: {
-      header: null
-    }
+    screen: Drawer
+  }
+},
+{
+  defaultNavigationOptions: {
+    header: null
   }
 });
-export default root;
+
+export default createAppContainer(root);

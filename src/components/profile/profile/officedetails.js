@@ -46,20 +46,16 @@ const OfficeDetails = ({
           justifyContent: "space-between"
         }}
       >
-        <Text style={{ fontSize: 15, alignSelf: "center" }}>
-          Office Details{" "}
-        </Text>
-        <View>
+        <Text style={{ fontSize: 15, alignSelf: "center" }}>Office Details </Text>
+        <View
+        >
           {!values.ShowEditOffice ? (
-            <Button
-              transparent
-              onPress={() => setFieldValue("ShowEditOffice", true)}
-            >
-              <Icon style={{ color: "black", fontSize: 23 }} name="create" />
+            <Button transparent  onPress={() => setFieldValue("ShowEditContact", true)} >
+              <Icon style={{ color:'black',fontSize: 23}} name="create" />
             </Button>
           ) : (
-            <Button transparent onPress={submit}>
-              <Icon style={{ color: "black", fontSize: 23 }} name="checkmark" />
+            <Button transparent onPress={submit} >
+              <Icon style={{ color:'black',fontSize: 23}} name="checkmark" />
             </Button>
           )}
         </View>

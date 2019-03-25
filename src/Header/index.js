@@ -22,7 +22,7 @@ export default ({ navigation, header }) => (
   <View style={{ flexDirection: 'row', backgroundColor: "#183E61", height: 60  }}>
       <Left>
       <View style={{ flexDirection: "row" }} >
-        <Button transparent onPress={() => navigation.navigate('DrawerOpen')}>
+        <Button transparent onPress={() => navigation.openDrawer()}>
         <Icon style={{ color:'white' }} name="menu"  />
         </Button>
         {
@@ -39,11 +39,6 @@ export default ({ navigation, header }) => (
       </Body>
       <Right>
       <View style={{ flexDirection: "row" }} >
-        <Button transparent>
-            <Icon
-              style={{ color:'white' }}
-              name="notifications" />
-        </Button>
         <Button transparent onPress={() => navigation.navigate("Profile")}>
             <Icon
             style={{ color:'white' }}

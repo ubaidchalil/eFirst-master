@@ -59,7 +59,7 @@ class Container extends Component {
     const success = documentattestation.success;
     return (
       <View style={{ flex: 1 }}>
-        <Loader loading={loading} />
+        {/* <Loader loading={loading} /> */}
         <DocumentAttestation {...this.props} state={this.state} />
         {error && <AlertView type="error" />}
         {success && <AlertView type="success" />}

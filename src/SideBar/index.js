@@ -10,6 +10,7 @@ import {
   Icon,
   Left,
   Body,
+  Right,
   List,
   Thumbnail
 } from "native-base";
@@ -25,7 +26,7 @@ class Container1 extends Component {
       routeName: route
     });
     this.props.navigation.dispatch(navigateAction);
-    // this.props.navigation.dispatch(DrawerActions.closeDrawer());
+    this.props.navigation.dispatch(DrawerActions.closeDrawer());
   };
   componentDidUpdate() {
     console.log(this.props.logout);
@@ -45,7 +46,7 @@ class Container1 extends Component {
   loadDashboardData() {
     const { token } = this.props.token;
     this.props.DashboardData(token);
-    this.props.navigation.navigate("HomeScreen");
+    this.navigateToScreen("HomeScreen");
   }
   render() {
     return (
@@ -71,112 +72,98 @@ class Container1 extends Component {
           </View>
           <View style={{ height: 30, backgroundColor: "yellow" }} />
           <View style={{ flexDirection: "row" }}>
-            <View style={{ paddingLeft: 7, paddingRight: 7 }}>
-              {this.props.userdetail.ProfilePic ? (
-                <Thumbnail
-                  small
-                  source={{
-                    uri:
-                      "https://efirst.blob.core.windows.net/profilepic/c8d94856-a3f1-47b9-bb1a-fbd3142907c0.jpg"
-                  }}
-                />
-              ) : (
-                <Thumbnail small source={require("./user_menu.png")} />
-              )}
-            </View>
-
             <View>
-              <Text>{this.props.userdetail.FirstName}</Text>
+              <Image
+                src={require("./user_menu.png")}
+                style={{ width: 50, resizeMode: "contain" }}
+              />
+            </View>
+            <View>
+              <Text>Ubaid</Text>
               <Text note style={{ color: "#183E61" }}>
-                {this.props.userdetail.Designation}
+                String
               </Text>
             </View>
           </View>
         </View>
         <Content style={{ backgroundColor: "#003366" }}>
           <ScrollView>
-            <ListItem
-              icon
-              style={styles.listIem}
+            <TouchableOpacity
+              style={styles.listItem}
               onPress={() => this.loadDashboardData()}
             >
-              <Left style={styles.left}>
+              <View style={styles.left}>
                 <Icon style={styles.icon} name="arrow-dropright" />
-              </Left>
-              <Body style={styles.body}>
+              </View>
+              <View style={styles.body}>
                 <Text style={styles.text}>Dashboard</Text>
-              </Body>
-            </ListItem>
-            <ListItem
-              icon
-              style={styles.listIem}
-              onPress={this.navigateToScreen("RequestService")}
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.listItem}
+              onPress={this.navigateToScreen("SelectService")}
             >
-              <Left style={styles.left}>
+              <View style={styles.left}>
                 <Icon style={styles.icon} name="arrow-dropright" />
-              </Left>
-              <Body style={styles.body}>
+              </View>
+              <View style={styles.body}>
                 <Text style={styles.text}>My Services</Text>
-              </Body>
-            </ListItem>
-            <ListItem
-              icon
-              style={styles.listIem}
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.listItem}
               onPress={this.navigateToScreen("Profile")}
             >
-              <Left style={styles.left}>
+              <View style={styles.left}>
                 <Icon style={styles.icon} name="arrow-dropright" />
-              </Left>
-              <Body style={styles.body}>
+              </View>
+              <View style={styles.body}>
                 <Text style={styles.text}>My Profile</Text>
-              </Body>
-            </ListItem>
-            <ListItem
-              icon
-              style={styles.listIem}
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.listItem}
               onPress={this.navigateToScreen("FAQ")}
             >
-              <Left style={styles.left}>
+              <View style={styles.left}>
                 <Icon style={styles.icon} name="arrow-dropright" />
-              </Left>
-              <Body style={styles.body}>
+              </View>
+              <View style={styles.body}>
                 <Text style={styles.text}>FAQ</Text>
-              </Body>
-            </ListItem>
-            <ListItem
-              icon
-              style={styles.listIem}
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.listItem}
               onPress={this.navigateToScreen("Support")}
+            >
+              <View style={styles.left}>
+                <Icon style={styles.icon} name="arrow-dropright" />
+              </View>
+              <View style={styles.body}>
+                <Text style={styles.text}>Support</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.listItem}
+              onPress={this.props.Logout}
             >
               <Left style={styles.left}>
                 <Icon style={styles.icon} name="arrow-dropright" />
               </Left>
               <Body style={styles.body}>
-                <Text style={styles.text}>Support</Text>
+                <Text style={styles.text}>Logout</Text>
               </Body>
-            </ListItem>
+              <Right />
+            </TouchableOpacity>
           </ScrollView>
         </Content>
-        <View style={styles.bottomView}>
-          <TouchableOpacity onPress={this.props.Logout}>
-            <View>
-              <Text style={styles.textStyle}>Logout</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
       </Container>
     );
   }
 }
 
-const mapStateToProps = ({
-  profile: {
-    data: { userdetail }
-  },
-  token,
-  logout
-}) => ({
-  userdetail,
+const mapStateToProps = ({ profile, token, logout }) => ({
+  profile,
   token,
   logout
 });
@@ -192,13 +179,16 @@ export default connect(
 )(Container1);
 
 const styles = {
-  listIem: {
+  listItem: {
     backgroundColor: "#003366",
-    height: 70,
     padding: 0,
-    marginLeft: 0
-    //  borderBottomWidth: 1,
-    //  borderBottomColor: 'white'
+    marginLeft: 0,
+    borderBottomWidth: 1,
+    borderBottomColor: '#5D6D7E',
+    flex: 1,
+    justifyContent: "center",
+    paddingVertical: 20,
+    flexDirection: "row"
   },
   icon: {
     color: "white",
@@ -208,14 +198,10 @@ const styles = {
     color: "white"
   },
   body: {
-    borderBottomWidth: 1,
-    borderBottomColor: "#c3c3c3",
-    height: 70
+    flex: 0.8
   },
   left: {
-    borderBottomWidth: 1,
-    borderBottomColor: "#c3c3c3",
-    height: 70
+    flex:0.2
   },
   bottomView: {
     width: "100%",
