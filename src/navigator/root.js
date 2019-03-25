@@ -18,22 +18,24 @@ import BottomBar from "../BottomBar";
 import Profile from "../components/profile/profile";
 import ServiceDetail from "../components/service/servicerequest";
 
-export const RequestServiceStack = createStackNavigator({
-  SelectService: {
-    screen: SelectService
+export const RequestServiceStack = createStackNavigator(
+  {
+    SelectService: {
+      screen: SelectService
+    },
+    DocumentAttestation: {
+      screen: DocumentAttestation
+    },
+    LanguageTranslation: {
+      screen: LanguageTranslation
+    }
   },
-  DocumentAttestation: {
-    screen: DocumentAttestation
-  },
-  LanguageTranslation: {
-    screen: LanguageTranslation
+  {
+    defaultNavigationOptions: {
+      header: null
+    }
   }
-},
-{
-  defaultNavigationOptions: {
-    header: null
-  }
-});
+);
 
 const Tabs = createBottomTabNavigator(
   {
@@ -67,18 +69,20 @@ const Drawer = createDrawerNavigator(
   }
 );
 
-const root = createStackNavigator({
-  Auth: {
-    screen: AuthStack
+const root = createStackNavigator(
+  {
+    Auth: {
+      screen: AuthStack
+    },
+    Home: {
+      screen: Drawer
+    }
   },
-  Home: {
-    screen: Drawer
+  {
+    defaultNavigationOptions: {
+      header: null
+    }
   }
-},
-{
-  defaultNavigationOptions: {
-    header: null
-  }
-});
+);
 
 export default createAppContainer(root);

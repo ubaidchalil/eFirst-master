@@ -8,4 +8,6 @@ target 'efirst3' do
   # Pods for efirst3
   pod 'GoogleSignIn', '~> 4.4.0'
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
 end

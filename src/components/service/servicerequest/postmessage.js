@@ -4,6 +4,7 @@ import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
 import Modal from "react-native-modal";
+import { inputView } from "../../../../native-base-theme/components/Input";
 import { Text, Button, Input, Textarea, Form, Item, Icon } from "native-base";
 const PostMessage = ({
   handleSubmit,
@@ -17,7 +18,7 @@ const PostMessage = ({
   SRID,
   NoteID,
   handle,
-  action: { IsVisible }
+  action: { IsVisible, Title }
 }) => {
   const SendMessage = () => {
     setFieldValue("IsVisible", false);
@@ -46,20 +47,26 @@ const PostMessage = ({
         <View style={{ padding: 15 }}>
           <Form>
             <Item>
-              <Input
-                placeholder="Message Title"
-                name="MessageTitle"
-                label="Title"
-                onChangeText={value => setFieldValue("MessageTitle", value)}
-                value={values.MessageTitle}
-                error={touched.MessageTitle && errors.MessageTitle}
-                underlineColor={Color.secondary}
-              />
+              {Title ? (
+                <View style={inputView}>
+                  <Text style={{ fontSize: 20, marginTop: 15 }}>{Title}</Text>
+                </View>
+              ) : (
+                <Input
+                  placeholder="Message Title"
+                  name="MessageTitle"
+                  label="Title"
+                  onChangeText={value => setFieldValue("MessageTitle", value)}
+                  value={values.MessageTitle}
+                  error={touched.MessageTitle && errors.MessageTitle}
+                  underlineColor={Color.secondary}
+                />
+              )}
             </Item>
             {errors.MessageTitle && (
               <Text visible={errors.MessageTitle}>{errors.MessageTitle}</Text>
             )}
-            <Item style={styles.item_margin}>
+            <Item>
               <Textarea
                 rowSpan={5}
                 placeholder="Message"

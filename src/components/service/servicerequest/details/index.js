@@ -14,8 +14,11 @@ import {
   Text,
   StyleProvider
 } from "native-base";
-import Messages from "./Message";
-import Status from "./Status";
+// import Messages from "./Message";
+// import Status from "./Status";
+
+import Messages from "./messagedetail";
+import Status from "./statusdetail";
 import { connect } from "react-redux";
 class Details extends Component {
   render() {
@@ -27,17 +30,21 @@ class Details extends Component {
       MessageModal
     } = this.props;
 
-    console.log(MessageModal);
-
     return (
       <Container>
         <Content style={{ padding: 10 }}>
-          <Messages
-            messages={messages}
-            messageList={messageList}
-            MessageModal={MessageModal}
-          />
-          <Status statusList={statusList} />
+          {statusList.map(note => {
+            console.log(note);
+            return note.NoteType == 5 ? (
+              <Messages
+                messages={messages}
+                message={note}
+                MessageModal={MessageModal}
+              />
+            ) : (
+              <Status status={note} />
+            );
+          })}
         </Content>
       </Container>
     );

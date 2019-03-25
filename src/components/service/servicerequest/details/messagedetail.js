@@ -12,7 +12,8 @@ let styles = StyleSheet.create({
   outer_main: {
     borderColor: "#F4D03F",
     borderWidth: 1,
-    borderRadius: 13
+    borderRadius: 13,
+    marginTop: 15
   },
   title_view: {
     borderBottomColor: "#F4D03F",
@@ -28,54 +29,50 @@ let styles = StyleSheet.create({
   title_reply_txt: { textAlign: "right", color: "#3498DB" }
 });
 
-const renderMessageList = ({ messageList, messages, MessageModal }) => {
-  return messageList.map(item => (
+const renderMessageList = ({ message, messages, MessageModal }) => {
+  return (
     <View style={styles.outer_main}>
       <View style={styles.title_view}>
         <View style={styles.title_msg_view}>
-          <Text style={styles.title_msg_text}>{item.NoteTitle} </Text>
+          <Text style={styles.title_msg_text}>{message.NoteTitle} </Text>
         </View>
         <View style={styles.title_reply_view}>
-          <TouchableOpacity onPress={() => MessageModal(0, item.NoteID)}>
+          <TouchableOpacity
+            onPress={() => MessageModal(0, message.NoteID, message.NoteTitle)}
+          >
             <Text style={styles.title_reply_txt}>Reply</Text>
           </TouchableOpacity>
         </View>
       </View>
       <FlatList
-        data={messages[item.NoteID]}
-        renderItem={({ item, index }) => (
-          <MessageItem message={item} index length={messageList.length} />
-        )}
+        data={messages[message.NoteID]}
+        renderItem={({ item, index }) => <MessageItem message={item} />}
         ItemSeparatorComponent={this.renderSeparator}
       />
     </View>
-  ));
+  );
 };
 
 renderSeparator = () => (
   <View
     style={{
       height: 1,
-      backgroundColor: '#E5E8E8'
+      backgroundColor: "#E5E8E8"
     }}
   />
 );
 
-const Message = ({ messageList, messages, MessageModal }) => (
-  <View>{renderMessageList({ messageList, messages, MessageModal })}</View>
+const Message = ({ message, messages, MessageModal }) => (
+  <View>{renderMessageList({ message, messages, MessageModal })}</View>
 );
 export default Message;
 
 class MessageItem extends React.PureComponent {
   render() {
-    const { message, length, index } = this.props;
+    const { message } = this.props;
 
     return (
-      <View
-        style={[
-          { flexDirection: "row", padding: 10 }
-        ]}
-      >
+      <View style={[{ flexDirection: "row", padding: 10 }]}>
         <View style={{ width: 60, padding: 10 }}>
           <Image
             style={{ height: 20, width: 15, resizeMode: "stretch" }}
@@ -83,7 +80,14 @@ class MessageItem extends React.PureComponent {
           />
         </View>
         <View style={{}}>
-          <Text style={{ fontSize: 12, fontWeight: "bold", padding: 1, color: 'black' }}>
+          <Text
+            style={{
+              fontSize: 12,
+              fontWeight: "bold",
+              padding: 1,
+              color: "black"
+            }}
+          >
             {message.CreatedBy}
           </Text>
           <Text style={{ fontSize: 10, color: "#707B7C", padding: 1 }}>

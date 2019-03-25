@@ -37,15 +37,23 @@ class ServiceDetails extends Component {
     this.state = {
       SRID: 0,
       NoteID: 0,
+      Title: null,
       IsVisible: false
     };
     this.hideModal = this.hideModal.bind(this);
     this.MessageModal = this.MessageModal.bind(this);
   }
-  MessageModal = (SRID, NoteID) => {
+  MessageModal = (SRID, NoteID, Title: any) => {
+    if (Title) {
+      console.log("Title", Title);
+    } else {
+      console.log("Title", "Nothing");
+    }
+
     this.setState({
       SRID,
       NoteID,
+      Title,
       IsVisible: true
     });
   };
