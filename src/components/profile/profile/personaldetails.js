@@ -15,6 +15,7 @@ import {
   Col,
   Row,
   Form,
+  Picker,
   Item,
   Input
 } from "native-base";
@@ -49,19 +50,26 @@ const PersonalDetails = ({
           justifyContent: "space-between"
         }}
       >
-        <Text style={{ fontSize: 15, alignSelf: "center" }}>Personal Details </Text>
-        <View
-        >
+        <Text style={{ fontSize: 15, alignSelf: "center" }}>
+          Personal Details{" "}
+        </Text>
+        <View>
           {!values.ShowEditPersonal ? (
-            <Button transparent  onPress={() => setFieldValue("ShowEditPersonal", true)} >
-              <Icon style={{ color:'black',fontSize: 23}} name="create" />
+            <Button
+              transparent
+              onPress={() => setFieldValue("ShowEditPersonal", true)}
+            >
+              <Icon style={{ color: "black", fontSize: 23 }} name="create" />
             </Button>
           ) : (
-            <Button transparent  onPress={() => {
-              handleSubmit();
-              setFieldValue("ShowEditPersonal", false);
-            }} >
-              <Icon style={{ color:'black',fontSize: 23}} name="checkmark" />
+            <Button
+              transparent
+              onPress={() => {
+                handleSubmit();
+                setFieldValue("ShowEditPersonal", false);
+              }}
+            >
+              <Icon style={{ color: "black", fontSize: 23 }} name="checkmark" />
             </Button>
           )}
         </View>
@@ -96,17 +104,22 @@ const PersonalDetails = ({
                   Gender: {personaldetail.Gender}
                 </Text>
               ) : (
-                <Item>
-                  <Input
+                <Item picker>
+                  <Picker
+                    mode="dropdown"
+                    iosIcon={<Icon name="arrow-down" />}
+                    style={{ width: undefined }}
                     placeholder="Gender"
-                    name="Gender"
-                    label="Gender"
-                    onChangeText={value => setFieldValue("Gender", value)}
-                    value={values.Gender}
-                    error={touched.Gender && errors.Gender}
-                    underlineColor={Color.secondary}
-                    style={{ fontSize: 13 }}
-                  />
+                    placeholderStyle={{ color: "#bfc6ea" }}
+                    placeholderIconColor="#007aff"
+                    selectedValue={values.Gender}
+                    onValueChange={value => {
+                      setFieldValue("Gender", value);
+                    }}
+                  >
+                    <Picker.Item key="0" label="Male" value="Male" />
+                    <Picker.Item key="1" label="Female" value="Female" />
+                  </Picker>
                 </Item>
               )}
             </Col>

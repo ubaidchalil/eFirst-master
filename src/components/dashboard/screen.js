@@ -144,7 +144,10 @@ export default ({ navigation, dashboard, servicesData, token }) => {
           </View>
         </View>
 
-        <View style={[styles.card_outer, styles.required_bgcolor]}>
+        <TouchableOpacity
+          onPress={() => loadServiceRequestsByStatus(1)}
+          style={[styles.card_outer, styles.required_bgcolor]}
+        >
           <View style={styles.card_inner}>
             <View style={styles.card_image_container}>
               <Image
@@ -174,16 +177,18 @@ export default ({ navigation, dashboard, servicesData, token }) => {
                 </View>
               )}
             </View>
-            <TouchableOpacity onPress={() => loadServiceRequestsByStatus(1)}>
-              <IconFontAwesome
-                style={[{ color: "#515A5A" }, styles.icon_font_awesome]}
-                name="angle-double-right"
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
 
-        <View style={[styles.card_outer, styles.review_bgcolor]}>
+            <IconFontAwesome
+              style={[{ color: "#515A5A" }, styles.icon_font_awesome]}
+              name="angle-double-right"
+            />
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => loadServiceRequestsByStatus(2)}
+          style={[styles.card_outer, styles.review_bgcolor]}
+        >
           <View style={styles.card_inner}>
             <View style={styles.card_image_container}>
               <Image
@@ -212,16 +217,18 @@ export default ({ navigation, dashboard, servicesData, token }) => {
                 </View>
               )}
             </View>
-            <TouchableOpacity onPress={() => loadServiceRequestsByStatus(2)}>
-              <IconFontAwesome
-                style={[{ color: "#515A5A" }, styles.icon_font_awesome]}
-                name="angle-double-right"
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
 
-        <View style={[styles.card_outer, styles.completed_bgcolor]}>
+            <IconFontAwesome
+              style={[{ color: "#515A5A" }, styles.icon_font_awesome]}
+              name="angle-double-right"
+            />
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => loadServiceRequestsByStatus(2)}
+          style={[styles.card_outer, styles.completed_bgcolor]}
+        >
           <View style={styles.card_inner}>
             <View style={styles.card_image_container}>
               <Image
@@ -250,16 +257,18 @@ export default ({ navigation, dashboard, servicesData, token }) => {
                 </View>
               )}
             </View>
-            <TouchableOpacity onPress={() => loadServiceRequestsByStatus(3)}>
-              <IconFontAwesome
-                style={[{ color: "#515A5A" }, styles.icon_font_awesome]}
-                name="angle-double-right"
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
 
-        <View style={[styles.card_outer, styles.rejected_bgcolor]}>
+            <IconFontAwesome
+              style={[{ color: "#515A5A" }, styles.icon_font_awesome]}
+              name="angle-double-right"
+            />
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => loadServiceRequestsByStatus(4)}
+          style={[styles.card_outer, styles.rejected_bgcolor]}
+        >
           <View style={styles.card_inner}>
             <View style={styles.card_image_container}>
               <Image
@@ -288,14 +297,13 @@ export default ({ navigation, dashboard, servicesData, token }) => {
                 </View>
               )}
             </View>
-            <TouchableOpacity onPress={() => loadServiceRequestsByStatus(4)}>
-              <IconFontAwesome
-                style={[{ color: "#515A5A" }, styles.icon_font_awesome]}
-                name="angle-double-right"
-              />
-            </TouchableOpacity>
+
+            <IconFontAwesome
+              style={[{ color: "#515A5A" }, styles.icon_font_awesome]}
+              name="angle-double-right"
+            />
           </View>
-        </View>
+        </TouchableOpacity>
       </Content>
     </Container>
   );

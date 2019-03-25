@@ -15,6 +15,7 @@ import {
   Header,
   Body,
   Right,
+  Left,
   Icon
 } from "native-base";
 import getTheme from "../../../../native-base-theme/components";
@@ -45,9 +46,7 @@ class ServiceDetails extends Component {
   }
   MessageModal = (SRID, NoteID, Title: any) => {
     if (Title) {
-      console.log("Title", Title);
     } else {
-      console.log("Title", "Nothing");
     }
 
     this.setState({
@@ -81,26 +80,31 @@ class ServiceDetails extends Component {
             navigation={this.props.navigation}
             header="Service Details"
           />
-          <Header style={{ backgroundColor: "#F7F9F9", height: 50 }}>
-            <Body>
+          <View
+            style={{
+              padding: 10,
+              flexDirection: "row",
+              backgroundColor: "#F7F9F9",
+              height: 50
+            }}
+          >
+            <Left>
               <Text style={{ fontSize: 12, marginLeft: 5 }}>
                 {srDetail ? srDetail.SRTitle : ""}
               </Text>
               <Text note style={{ fontSize: 10, marginLeft: 5 }}>
                 {srDetail ? srDetail.CreatedDate : ""}
               </Text>
-            </Body>
+            </Left>
             <Right>
-              <TouchableOpacity onPress={() => this.MessageModal(SRID, 0)}>
-                <View style={{ flexDirection: "row" }}>
-                  <IconMaterialIcons
-                    name="chat"
-                    style={{ fontSize: 20, color: "black" }}
-                  />
-                </View>
-              </TouchableOpacity>
+              <Button transparent onPress={() => this.MessageModal(SRID, 0)}>
+                <IconMaterialIcons
+                  name="chat"
+                  style={{ fontSize: 20, color: "black" }}
+                />
+              </Button>
             </Right>
-          </Header>
+          </View>
           <Tabs>
             <Tab heading="Details">
               <Details MessageModal={this.MessageModal} />
