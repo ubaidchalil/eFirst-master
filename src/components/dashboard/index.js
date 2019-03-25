@@ -17,7 +17,7 @@ import Loader from "../styled/loader";
 class Container extends Component {
   componentDidMount = () => {
     const { token } = this.props.token;
-    //this.props.DashboardData(token);
+    this.props.DashboardData(token);
     this.props.profileData(token);
     this.props.ClearFaq();
     this.props.FAQCategoryData(token);

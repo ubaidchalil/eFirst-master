@@ -45,10 +45,6 @@ class ServiceDetails extends Component {
     this.MessageModal = this.MessageModal.bind(this);
   }
   MessageModal = (SRID, NoteID, Title: any) => {
-    if (Title) {
-    } else {
-    }
-
     this.setState({
       SRID,
       NoteID,

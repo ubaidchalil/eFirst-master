@@ -46,7 +46,6 @@ class Container1 extends Component {
     const { token } = this.props.token;
     this.props.DashboardData(token);
     this.navigateToScreen("HomeScreen");
-    this.props.navigation.dispatch(DrawerActions.closeDrawer());
   }
   render() {
     return (
@@ -198,7 +197,7 @@ const styles = {
     padding: 0,
     marginLeft: 0,
     borderBottomWidth: 1,
-    borderBottomColor: "#5D6D7E",
+    borderBottomColor: '#5D6D7E',
     flex: 1,
     justifyContent: "center",
     paddingVertical: 20,
@@ -215,7 +214,7 @@ const styles = {
     flex: 0.8
   },
   left: {
-    flex: 0.2
+    flex:0.2
   },
   bottomView: {
     width: "100%",

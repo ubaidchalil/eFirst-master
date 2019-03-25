@@ -261,12 +261,13 @@ export const servicerequest = (state = initialServiceRequest, action) => {
         srInfo = JSON.parse(SRDataJson);
       }
       const srMessage = SRNotes.filter(({ NoteType }) => NoteType === 5);
+      const srStaus = SRNotes.filter(({ NoteType }) => NoteType !== 5);
       return {
         ...state,
         messages: messageList,
         documents: DocumentList,
         messageList: srMessage,
-        statusList: SRNotes,
+        statusList: srStaus,
         srDetail: SRDetail,
         srInfo: srInfo
       };
