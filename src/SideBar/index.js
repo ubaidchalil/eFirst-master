@@ -45,7 +45,7 @@ class Container1 extends Component {
   loadDashboardData() {
     const { token } = this.props.token;
     this.props.DashboardData(token);
-    this.navigateToScreen("HomeScreen");
+    this.props.navigation.navigate("HomeScreen");
   }
   render() {
     return (
