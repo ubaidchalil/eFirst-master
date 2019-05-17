@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Alert, View } from "react-native";
 import LoginScreen from "./screen";
 import { connect } from "react-redux";
-import { loginUser } from "../action";
+import { loginUser, getExtLoginUrls } from "../action";
 import { StateComponent } from "../../styled/components";
 import AlertView from "../../styled/alert-view";
 import Loader from "../../styled/loader";
@@ -11,6 +11,7 @@ class Container extends Component {
     if (this.props.token) {
       this.props.navigation.navigate("Home");
     }
+    this.props.getExtLoginUrls("0");
   };
   componentDidUpdate() {
     if (!this.props.login.loading) {
@@ -39,14 +40,16 @@ class Container extends Component {
     </View>
   );
 }
-const mapStateToProps = ({ token, login, confirmemail }) => ({
+const mapStateToProps = ({ token, login, confirmemail, extLoginUrls }) => ({
   token,
   login,
-  confirmemail
+  confirmemail,
+  extLoginUrls
 });
 
 const mapDispatchToProps = dispatch => ({
-  loginUser: data => dispatch(loginUser(data))
+  loginUser: data => dispatch(loginUser(data)),
+  getExtLoginUrls: data => dispatch(getExtLoginUrls(data))
 });
 
 export default connect(

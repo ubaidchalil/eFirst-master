@@ -3,7 +3,11 @@ import {
   REGISTER_URL,
   RESET_PASSWORD,
   CONFIRM_EMAIL_URL,
-  LOGOUT_URL
+  LOGOUT_URL,
+  EXT_USER_INFO_URL,
+  EXT_REGISTER_URL,
+  EXT_LOGIN_URLS_URL,
+  BASE_URL
 } from "../../constants";
 
 export const registrationState = {
@@ -11,6 +15,20 @@ export const registrationState = {
   ERROR: "REGISTRATION_ERROR",
   DONE: "REGISTRATION_DONE",
   SUCCESS: "REGISTRATION_SUCCESS"
+};
+
+export const extUrlState = {
+  LOADING: "EXT_LOGIN_URL_LOADING",
+  ERROR: "EXT_LOGIN_URL_ERROR",
+  DONE: "EXT_LOGIN_URL_DONE",
+  SUCCESS: "EXT_LOGIN_URL_SUCCESS"
+};
+
+export const ExtRegistrationState = {
+  LOADING: "EXT_REGISTRATION_LOADING",
+  ERROR: "EXT_REGISTRATION_ERROR",
+  DONE: "EXT_REGISTRATION_DONE",
+  SUCCESS: "EXT_REGISTRATION_SUCCESS"
 };
 
 export const loginState = {
@@ -41,6 +59,14 @@ export const tokenState = {
   DONE: "USER_LOGGED",
   CLEAR: "USER_LOGGED_OUT"
 };
+
+export const getUserInfoTokenState = {
+  LOADING: "EXT_USER_INFO_LOADING",
+  ERROR: "EXT_USER_INFO_ERROR",
+  DONE: "EXT_USER_INFO_DONE",
+  SUCCESS: "EXT_USER_INFO_SUCCESS"
+};
+
 export const checkResult = (result, dispatch, setError) => {
   if (result.status) {
     return true;
@@ -200,6 +226,31 @@ export const registerUser = payload => dispatch => {
   );
 };
 
+export const extRegisterUser = (payload) => dispatch => {
+  const token = payload.token;
+  console.log("////////////////////token : " + token)
+  const body = JSON.stringify(payload);
+  return openRegFetcher(
+    async () => {
+      const result = await fetch(EXT_REGISTER_URL, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
+        body
+      });
+      return result.json().then(data => ({
+        data: data,
+        status: result.ok
+      }));
+    },
+    ExtRegistrationState,
+    dispatch
+  );
+};
+
 export const confirmEmail = payload => dispatch => {
   const { code, userid } = payload;
   const url = `${CONFIRM_EMAIL_URL}?userId=${userid}&code=${code}`;
@@ -273,4 +324,63 @@ export const Logout = token => dispatch => {
 
 export const clearLogoutState = () => dispatch => {
   dispatch(setInStore(true, logoutState.CLEAR));
+};
+
+
+const getUserInfoFetcher = async (fetchData, type, dispatch) => {
+  dispatch(setInStore(true, type.LOADING));
+  dispatch(setInStore(false, type.SUCCESS));
+  dispatch(setInStore(null, type.ERROR));
+  try {
+    const result = await fetchData();
+    if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
+      dispatch(setInStore(result.data, type.DONE));
+      dispatch(setInStore(true, type.SUCCESS));
+    } else {
+      dispatch(setInStore(false, type.SUCCESS));
+    }
+  } catch (error) {
+    dispatch(setInStore(false, type.SUCCESS));
+    dispatch(setInStore(error, type.ERROR));
+  }
+  dispatch(setInStore(false, type.LOADING));
+};
+
+export const getUserInfo = token => dispatch => {
+  return getUserInfoFetcher(
+    async () => {
+      const result = await fetch(EXT_USER_INFO_URL, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          Authorization: `Bearer ${token}`
+        }
+      });
+      return result.json().then(data => ({
+        data: data,
+        status: result.ok
+      }));
+    },
+    getUserInfoTokenState,
+    dispatch
+  );
+};
+
+export const getExtLoginUrls = token => dispatch => {
+  return getUserInfoFetcher(
+    async () => {
+      const result = await fetch(EXT_LOGIN_URLS_URL + "?returnUrl=" + BASE_URL, {
+        method: "GET",
+        headers: {
+          Accept: "application/json"
+        }
+      });
+      return result.json().then(data => ({
+        data: data,
+        status: result.ok
+      }));
+    },
+    extUrlState,
+    dispatch
+  );
 };

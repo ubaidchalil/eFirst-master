@@ -4,12 +4,34 @@ import {
   registrationState,
   forgetpasswordState,
   confirmEmailState,
-  logoutState
+  logoutState,
+  getUserInfoTokenState,
+  ExtRegistrationState,
+  extUrlState
 } from "./action";
 
 const defaulToken = null;
 
+const defaultGetUserInfoTokenState = {
+  error: null,
+  loading: false,
+  data: null,
+  success: true
+};
+
 const defaultRegister = {
+  error: null,
+  loading: false,
+  data: null,
+  success: true
+};
+const defaultExtRegister = {
+  error: null,
+  loading: false,
+  data: null,
+  success: true
+};
+const defaultExtUrlState = {
   error: null,
   loading: false,
   data: null,
@@ -54,6 +76,19 @@ export const token = (state = defaulToken, action) => {
   }
 };
 
+export const extUserInfo = (state = defaultGetUserInfoTokenState, action) => {
+  switch (action.type) {
+    case getUserInfoTokenState.ERROR:
+      return { ...state, error: action.state };
+    case getUserInfoTokenState.LOADING:
+      return { ...state, loading: action.state };
+    case getUserInfoTokenState.DONE:
+      return { ...state, data: action.state };
+    default:
+      return state;
+  }
+};
+
 export const registration = (state = defaultRegister, action) => {
   switch (action.type) {
     case registrationState.ERROR:
@@ -61,6 +96,33 @@ export const registration = (state = defaultRegister, action) => {
     case registrationState.LOADING:
       return { ...state, loading: action.state };
     case registrationState.DONE:
+      return { ...state, data: action.state };
+    default:
+      return state;
+  }
+};
+
+export const extRegistration = (state = defaultExtRegister, action) => {
+  switch (action.type) {
+    case ExtRegistrationState.ERROR:
+      return { ...state, error: action.state };
+    case ExtRegistrationState.LOADING:
+      return { ...state, loading: action.state };
+    case ExtRegistrationState.DONE:
+      return { ...state, data: action.state };
+    default:
+      return state;
+  }
+};
+
+
+export const extLoginUrls = (state = defaultExtUrlState, action) => {
+  switch (action.type) {
+    case extUrlState.ERROR:
+      return { ...state, error: action.state };
+    case extUrlState.LOADING:
+      return { ...state, loading: action.state };
+    case extUrlState.DONE:
       return { ...state, data: action.state };
     default:
       return state;

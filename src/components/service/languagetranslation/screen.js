@@ -302,10 +302,12 @@ const LanguageTranslation = ({
                 </Text>
               )}
             </Item>
+
+
             <Item style={styles.item_margin}>
               <Textarea
                 rowSpan={5}
-                placeholder="Address"
+                placeholder="Address Line 1"
                 underline
                 name="Address"
                 label="Address"
@@ -322,6 +324,107 @@ const LanguageTranslation = ({
                 </Text>
               )}
             </Item>
+            <Item style={styles.item_margin}>
+              <Textarea
+                rowSpan={5}
+                placeholder="Street Address"
+                underline
+                name="StreetAddress"
+                label="StreetAddress"
+                onChangeText={value => setFieldValue("StreetAddress", value)}
+                value={values.StreetAddress}
+                error={touched.StreetAddress && errors.StreetAddress}
+                underlineColor={Color.secondary}
+              />
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }}>
+              {errors.Address && (
+                <Text style={{ color: "red" }} visible={errors.StreetAddress}>
+                  {errors.StreetAddress}
+                </Text>
+              )}
+            </Item>
+            <Item picker style={styles.item_margin}>
+              <Picker
+                mode="dropdown"
+                iosIcon={<Icon name="arrow-down" />}
+                style={{ width: undefined }}
+                placeholder="State"
+                placeholderStyle={{ color: "#bfc6ea" }}
+                placeholderIconColor="#007aff"
+                selectedValue={values.State}
+                onValueChange={value =>
+                  setFieldValue("State", value)
+                }
+              >
+                <Picker.Item key="0" label="State" value="0" />
+                {renderDocumentTypes()}
+              </Picker>
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }}>
+              {errors.State && (
+                <Text
+                  style={{ color: "red" }}
+                  visible={errors.State}
+                >
+                  {errors.State}
+                </Text>
+              )}
+            </Item>
+            
+            <Item style={styles.item_margin}>
+              <Input
+                placeholder="City"
+                name="City"
+                label="City"
+                onChangeText={value => setFieldValue("City", value)}
+                value={values.City}
+                error={touched.City && errors.City}
+                underlineColor={Color.secondary}
+              />
+              <Input
+                placeholder="PO Box"
+                name="POBox"
+                label="POBox"
+                onChangeText={value => setFieldValue("POBox", value)}
+                value={values.POBox}
+                error={touched.POBox && errors.POBox}
+                underlineColor={Color.secondary}
+              />
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }}>
+              {errors.City && (
+                <Text style={{ color: "red" }} visible={errors.City}>
+                  {errors.City}
+                </Text>
+              )}
+              {errors.POBox && (
+                <Text style={{ color: "red" }} visible={errors.POBox}>
+                  {errors.POBox}
+                </Text>
+              )}
+            </Item>
+            <Item style={styles.item_margin}>
+              <Input
+                placeholder="Country"
+                name="Country"
+                label="Country"
+                onChangeText={value => setFieldValue("Country", value)}
+                value={values.Country}
+                error={touched.Country && errors.Country}
+                underlineColor={Color.secondary}
+              />
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }}>
+              {errors.Country && (
+                <Text style={{ color: "red" }} visible={errors.Country}>
+                  {errors.Country}
+                </Text>
+              )}
+            </Item>
+
+
+            
             <Item picker style={styles.item_margin}>
               <Picker
                 mode="dropdown"

@@ -4,7 +4,7 @@ export const Color = {
 };
 
 /// BASE URL ///
-const BASE_URL = "https://api.efirst.ae/";
+export const BASE_URL = "https://efirstwebsite-api.azurewebsites.net/";
 
 /// AUTH URLS ///
 export const LOGIN_URL = `${BASE_URL}Token`;
@@ -12,6 +12,9 @@ export const RESET_PASSWORD_URL = `${BASE_URL}Account/ForgotPassword`;
 export const REGISTER_URL = `${BASE_URL}Account/Register`;
 export const CONFIRM_EMAIL_URL = `${BASE_URL}Account/ConfirmEmail`;
 export const LOGOUT_URL = `${BASE_URL}Account/Logout`;
+export const EXT_USER_INFO_URL = `${BASE_URL}Account/UserInfo`;
+export const EXT_REGISTER_URL = `${BASE_URL}Account/RegisterExternal`;
+export const EXT_LOGIN_URLS_URL = `${BASE_URL}Account/ExternalLogins`;
 
 /// DASHBOARD URLS ///
 export const DASHBOARD_DATA_URL = `${BASE_URL}Dashboard/Get`;
