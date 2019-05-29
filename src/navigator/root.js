@@ -17,6 +17,7 @@ import SideBar from "../SideBar";
 import BottomBar from "../BottomBar";
 import Profile from "../components/profile/profile";
 import ServiceDetail from "../components/service/servicerequest";
+import VisaServiceStack from "./visaservice_stack";
 
 export const RequestServiceStack = createStackNavigator({
   SelectService: {
@@ -27,6 +28,9 @@ export const RequestServiceStack = createStackNavigator({
   },
   LanguageTranslation: {
     screen: LanguageTranslation
+  },
+  VisaService: {
+    screen: VisaServiceStack
   }
 },
 {
