@@ -25,7 +25,20 @@ class Container extends Component {
     this.props.getcertificateType(this.props.token.token);
   };
   componentDidUpdate() {
-    console.log(this.props);
+    const {
+      countries,
+      certificatetype,
+      attestationrate,
+      documentattestation,
+      profile
+    } = this.props;
+    const loading =
+      documentattestation.loading ||
+      countries.loading ||
+      certificatetype.loading ||
+      attestationrate.loading;
+
+    console.log("Loaiding", loading);
     if (!this.props.documentattestation.loading) {
       if (this.props.documentattestation.success) {
         const { token } = this.props.token;
@@ -59,7 +72,7 @@ class Container extends Component {
     const success = documentattestation.success;
     return (
       <View style={{ flex: 1 }}>
-        <Loader loading={loading} />
+        {/* <Loader loading={loading} /> */}
         <DocumentAttestation {...this.props} state={this.state} />
         {error && <AlertView type="error" />}
         {success && <AlertView type="success" />}

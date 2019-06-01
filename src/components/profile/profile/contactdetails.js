@@ -42,19 +42,26 @@ const ContactDetails = ({
           justifyContent: "space-between"
         }}
       >
-        <Text style={{ fontSize: 15, alignSelf: "center" }}>Contact Details </Text>
-        <View >
-                  {!values.ShowEditContact ? (
-            <Button transparent  onPress={() => setFieldValue("ShowEditContact", true)} 
+        <Text style={{ fontSize: 15, alignSelf: "center" }}>
+          Contact Details{" "}
+        </Text>
+        <View>
+          {!values.ShowEditContact ? (
+            <Button
+              transparent
+              onPress={() => setFieldValue("ShowEditContact", true)}
             >
-              <Icon style={{ color:'black', fontSize: 23 }} name="create" />
+              <Icon style={{ color: "black", fontSize: 23 }} name="create" />
             </Button>
           ) : (
-            <Button transparent  onPress={() => {
-                  handleSubmit();
-                  setFieldValue("ShowEditContact", false);
-                }} >
-              <Icon style={{ color:'black', fontSize: 23 }} name="checkmark" />
+            <Button
+              transparent
+              onPress={() => {
+                handleSubmit();
+                setFieldValue("ShowEditContact", false);
+              }}
+            >
+              <Icon style={{ color: "black", fontSize: 23 }} name="checkmark" />
             </Button>
           )}
         </View>
@@ -128,7 +135,7 @@ const ContactDetails = ({
             <Col>
               {!values.ShowEditContact ? (
                 <Text style={styles.text_detail}>
-                  Website: {contactdetail.Addressline1}
+                  Address : {contactdetail.Addressline1}
                 </Text>
               ) : (
                 <Item>

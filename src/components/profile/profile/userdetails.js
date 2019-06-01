@@ -20,7 +20,8 @@ import {
 } from "native-base";
 import { withFormik } from "formik";
 import * as Yup from "yup";
-import { Color } from "../../../constants";
+import { Color, PROFILE_BASE_URL } from "../../../constants";
+
 var ImagePicker = require("react-native-image-picker");
 const UserDetails = ({
   handleSubmit,
@@ -56,7 +57,7 @@ const UserDetails = ({
         const pic =
           Platform.OS === "ios"
             ? {
-                data: `data:${response.type};base64,${response.data}`,
+                uri: response.uri,
                 type: response.type,
                 name: response.fileName
               }
@@ -81,7 +82,17 @@ const UserDetails = ({
           alignItems: "center"
         }}
       >
-        <Thumbnail large source={values.ImageUrl} />
+        {userdetail.ProfilePic ? (
+          <Thumbnail
+            large
+            source={{
+              uri: `${PROFILE_BASE_URL}${userdetail.ProfilePic}`
+            }}
+          />
+        ) : (
+          <Thumbnail large source={require("./userProfile.png")} />
+        )}
+
         {values.ShowEditUser && (
           <TouchableOpacity onPress={selectPhotoTapped}>
             <Text
@@ -200,6 +211,7 @@ export default withFormik({
     data.append("Designation", Designation);
     data.append("ProfilePicName", ProfilePicName);
     data.append("ProfilePic", ProfilePic);
+    console.log("DATA", data);
     values.userProfileCreate({ data, token });
   }
 })(UserDetails);

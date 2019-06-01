@@ -20,6 +20,7 @@ import { connect } from "react-redux";
 import { Logout, clearLogoutState } from "../components/auth/action";
 import Loader from "../components/styled/loader";
 import { DashboardData } from "../components/dashboard/action";
+import { PROFILE_BASE_URL } from "../constants";
 class Container1 extends Component {
   navigateToScreen = route => () => {
     const navigateAction = NavigationActions.navigate({
@@ -76,8 +77,9 @@ class Container1 extends Component {
                 <Thumbnail
                   small
                   source={{
-                    uri:
-                      "https://efirst.blob.core.windows.net/profilepic/c8d94856-a3f1-47b9-bb1a-fbd3142907c0.jpg"
+                    uri: `${PROFILE_BASE_URL}${
+                      this.props.userdetail.ProfilePic
+                    }`
                   }}
                 />
               ) : (
@@ -197,7 +199,7 @@ const styles = {
     padding: 0,
     marginLeft: 0,
     borderBottomWidth: 1,
-    borderBottomColor: '#5D6D7E',
+    borderBottomColor: "#5D6D7E",
     flex: 1,
     justifyContent: "center",
     paddingVertical: 20,
@@ -214,7 +216,7 @@ const styles = {
     flex: 0.8
   },
   left: {
-    flex:0.2
+    flex: 0.2
   },
   bottomView: {
     width: "100%",

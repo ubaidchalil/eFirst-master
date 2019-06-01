@@ -4,7 +4,9 @@ export const Color = {
 };
 
 /// BASE URL ///
-export const BASE_URL = "https://efirstwebsite-api.azurewebsites.net/";
+export const BASE_URL = "http://api.efirst.ae/";
+export const PROFILE_BASE_URL =
+  "https://efirstdatastorage.blob.core.windows.net/profilepic/";
 
 /// AUTH URLS ///
 export const LOGIN_URL = `${BASE_URL}Token`;
@@ -28,8 +30,6 @@ export const DOC_ATTESTATION_CREATE_URL = `${BASE_URL}Service/CreateDocumentAtte
 export const CERTTYPE_URL = `${BASE_URL}Master/GetAllCertificateTypes`;
 export const DOCLANG_URL = `${BASE_URL}Master/GetAllDoucmentLanguages`;
 export const LANGTRANS_URL = `${BASE_URL}Service/CreateLanguageTranslation`;
-// export const LANGTRANS_URL =
-//   `http://192.168.43.134:57154/api/test/CreateLanguageTranslation`;
 
 /// PROFILE URLS ///
 export const PROFILE_URL = `${BASE_URL}Profile/Get`;

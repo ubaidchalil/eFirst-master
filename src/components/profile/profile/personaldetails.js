@@ -1,20 +1,12 @@
 import React, { Component } from "react";
 import { View, TouchableOpacity, StyleSheet } from "react-native";
 import {
-  Container,
-  Header,
-  Content,
-  List,
   Icon,
-  Left,
-  H3,
-  Thumbnail,
   Text,
   Button,
   Grid,
   Col,
   Row,
-  Form,
   Picker,
   Item,
   Input
@@ -138,13 +130,12 @@ const PersonalDetails = ({
 export default withFormik({
   mapPropsToValues: ({ userPersonalDetailCreate, personaldetail }) => ({
     DOB: personaldetail.Dob,
-    Gender: personaldetail.Gender,
+    Gender: personaldetail.Gender ? personaldetail.Gender : "Male",
     ShowEditPersonal: false,
     IsDatePickerVisible: false,
     userPersonalDetailCreate
   }),
   validateOnChange: false,
-
   validationSchema: Yup.object().shape({
     ShowEditPersonal: Yup.boolean(),
     DOB: Yup.string().when("ShowEditPersonal", {
@@ -152,14 +143,12 @@ export default withFormik({
       then: Yup.string().required("Must enter DOB")
     })
   }),
-
   handleSubmit: (values, { props }) => {
     const token = props.token.token;
     const { DOB, Gender } = values;
     values.userPersonalDetailCreate({ DOB, Gender, token });
   }
 })(PersonalDetails);
-
 const styles = {
   text_detail: {
     padding: 5,

@@ -75,11 +75,15 @@ const DocumentAttestation = ({
   };
 
   const attestationRateByCountryandDCType = (CountryId, CertificateType) => {
-    attestationPrice({
-      CountryId: CountryId,
-      CertificateType: CertificateType,
-      token: token.token
-    });
+    console.log("CountryId", CountryId);
+    console.log("CertificateType", CertificateType);
+    if (CountryId && CertificateType) {
+      attestationPrice({
+        CountryId: CountryId,
+        CertificateType: CertificateType,
+        token: token.token
+      });
+    }
   };
 
   navigateToScreen = route => {
@@ -188,9 +192,9 @@ const DocumentAttestation = ({
           <Form>
             <Item>
               <Input
-                placeholder="Name"
+                placeholder="Name *"
                 name="CustomerName"
-                label="Name"
+                label="Name *"
                 onChangeText={value => setFieldValue("CustomerName", value)}
                 value={values.CustomerName}
                 error={touched.CustomerName && errors.CustomerName}
@@ -206,9 +210,9 @@ const DocumentAttestation = ({
             </Item>
             <Item style={styles.item_margin}>
               <Input
-                placeholder="Email"
+                placeholder="Email *"
                 name="Email"
-                label="Email"
+                label="Email *"
                 onChangeText={value => setFieldValue("Email", value)}
                 value={values.Email}
                 error={touched.Email && errors.Email}
@@ -224,18 +228,18 @@ const DocumentAttestation = ({
             </Item>
             <Item style={styles.item_margin}>
               <Input
-                placeholder="Mobile"
+                placeholder="Mobile *"
                 name="PersonalPhone"
-                label="Mobile"
+                label="Mobile *"
                 onChangeText={value => setFieldValue("PersonalPhone", value)}
                 value={values.PersonalPhone}
                 error={touched.PersonalPhone && errors.PersonalPhone}
                 underlineColor={Color.secondary}
               />
               <Input
-                placeholder="Office"
+                placeholder="Land Phone"
                 name="Office"
-                label="Office"
+                label="Land Phone"
                 onChangeText={value => setFieldValue("OfficePhone", value)}
                 value={values.OfficePhone}
                 error={touched.OfficePhone && errors.OfficePhone}
@@ -254,46 +258,43 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            
-
-
             <Item style={styles.item_margin}>
               <Textarea
                 rowSpan={5}
-                placeholder="Address Line 1"
+                placeholder="Address Line 1 *"
                 underline
-                name="Address"
-                label="Address"
-                onChangeText={value => setFieldValue("Address", value)}
-                value={values.Address}
-                error={touched.Address && errors.Address}
+                name="Address1"
+                label="Address Line 1 *"
+                onChangeText={value => setFieldValue("Address1", value)}
+                value={values.Address1}
+                error={touched.Address1 && errors.Address1}
                 underlineColor={Color.secondary}
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.Address && (
-                <Text style={{ color: "red" }} visible={errors.Address}>
-                  {errors.Address}
+              {errors.Address1 && (
+                <Text style={{ color: "red" }} visible={errors.Address1}>
+                  {errors.Address1}
                 </Text>
               )}
             </Item>
             <Item style={styles.item_margin}>
               <Textarea
                 rowSpan={5}
-                placeholder="Street Address"
+                placeholder="Street Address *"
                 underline
-                name="StreetAddress"
-                label="StreetAddress"
-                onChangeText={value => setFieldValue("StreetAddress", value)}
-                value={values.StreetAddress}
-                error={touched.StreetAddress && errors.StreetAddress}
+                name="Street"
+                label="Street Address *"
+                onChangeText={value => setFieldValue("Street", value)}
+                value={values.Street}
+                error={touched.Street && errors.Street}
                 underlineColor={Color.secondary}
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.Address && (
-                <Text style={{ color: "red" }} visible={errors.StreetAddress}>
-                  {errors.StreetAddress}
+              {errors.Street && (
+                <Text style={{ color: "red" }} visible={errors.Street}>
+                  {errors.Street}
                 </Text>
               )}
             </Item>
@@ -302,34 +303,43 @@ const DocumentAttestation = ({
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
                 style={{ width: undefined }}
-                placeholder="State"
+                placeholder="State *"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
-                selectedValue={values.State}
-                onValueChange={value =>
-                  setFieldValue("State", value)
-                }
+                selectedValue={values.SelectedState}
+                onValueChange={value => setFieldValue("SelectedState", value)}
               >
-                <Picker.Item key="0" label="State" value="0" />
-                {renderDocumentCountries()}
+                <Picker.Item value="0" label="State *" key="0" />
+                <Picker.Item value="Ajman" label="Ajman" key="1" />
+                <Picker.Item value="Abu Dhabi" label="Abu Dhabi" key="2" />
+                <Picker.Item value="Al Fujairah" label="Al Fujairah" key="3" />
+                <Picker.Item value="Sharjah" label="Sharjah" key="4" />
+                <Picker.Item value="Dubai" label="Dubai" key="5" />
+                <Picker.Item
+                  value="Ras Al Khaima"
+                  label="Ras Al Khaima"
+                  key="6"
+                />
+                <Picker.Item
+                  value="Umm Al Qwain"
+                  label="Umm Al Qwain"
+                  key="7"
+                />
               </Picker>
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.State && (
-                <Text
-                  style={{ color: "red" }}
-                  visible={errors.State}
-                >
-                  {errors.State}
+              {errors.SelectedState && (
+                <Text style={{ color: "red" }} visible={errors.SelectedState}>
+                  {errors.SelectedState}
                 </Text>
               )}
             </Item>
-            
+
             <Item style={styles.item_margin}>
               <Input
-                placeholder="City"
+                placeholder="City *"
                 name="City"
-                label="City"
+                label="City *"
                 onChangeText={value => setFieldValue("City", value)}
                 value={values.City}
                 error={touched.City && errors.City}
@@ -337,9 +347,9 @@ const DocumentAttestation = ({
               />
               <Input
                 placeholder="PO Box"
-                name="POBox"
-                label="POBox"
-                onChangeText={value => setFieldValue("POBox", value)}
+                name="Zip"
+                label="PO Box"
+                onChangeText={value => setFieldValue("Zip", value)}
                 value={values.POBox}
                 error={touched.POBox && errors.POBox}
                 underlineColor={Color.secondary}
@@ -351,34 +361,31 @@ const DocumentAttestation = ({
                   {errors.City}
                 </Text>
               )}
-              {errors.POBox && (
-                <Text style={{ color: "red" }} visible={errors.POBox}>
-                  {errors.POBox}
+              {errors.Zip && (
+                <Text style={{ color: "red" }} visible={errors.Zip}>
+                  {errors.Zip}
                 </Text>
               )}
             </Item>
             <Item style={styles.item_margin}>
               <Input
-                placeholder="Country"
-                name="Country"
-                label="Country"
-                onChangeText={value => setFieldValue("Country", value)}
-                value={values.Country}
-                error={touched.Country && errors.Country}
+                placeholder="Country *"
+                name="AddressCountry"
+                label="Country *"
+                onChangeText={value => setFieldValue("AddressCountry", value)}
+                value={values.AddressCountry}
+                error={touched.AddressCountry && errors.AddressCountry}
                 underlineColor={Color.secondary}
+                editable={false}
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.Country && (
-                <Text style={{ color: "red" }} visible={errors.Country}>
-                  {errors.Country}
+              {errors.AddressCountry && (
+                <Text style={{ color: "red" }} visible={errors.AddressCountry}>
+                  {errors.AddressCountry}
                 </Text>
               )}
             </Item>
-
-
-            
-
             <Item picker style={styles.item_margin}>
               <Picker
                 mode="dropdown"
@@ -441,9 +448,7 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <ListItem
-              style={[styles.item_margin, { borderBottomWidth: 0 }]}
-            >
+            <ListItem style={[styles.item_margin, { borderBottomWidth: 0 }]}>
               <Radio
                 selected={values.PickUpandDropOption == "Direct Delivery"}
                 onPress={() => {
@@ -453,8 +458,8 @@ const DocumentAttestation = ({
                   setFieldValue("PickUpandDropOption", "Direct Delivery");
                 }}
               />
-              <Body >
-                <TouchableOpacity 
+              <Body>
+                <TouchableOpacity
                   onPress={() => {
                     if (attestationrate.data) {
                       setFieldValue("Rate", attestationrate.data.Rate);
@@ -462,7 +467,7 @@ const DocumentAttestation = ({
                     setFieldValue("PickUpandDropOption", "Direct Delivery");
                   }}
                 >
-                <Text>Direct Delivery</Text>
+                  <Text>Direct Delivery</Text>
                 </TouchableOpacity>
               </Body>
               <Radio
@@ -474,8 +479,8 @@ const DocumentAttestation = ({
                   setFieldValue("PickUpandDropOption", "Through Courier");
                 }}
               />
-              <Body >
-                <TouchableOpacity 
+              <Body>
+                <TouchableOpacity
                   onPress={() => {
                     if (attestationrate.data) {
                       setFieldValue("Rate", attestationrate.data.Rate);
@@ -483,7 +488,7 @@ const DocumentAttestation = ({
                     setFieldValue("PickUpandDropOption", "Through Courier");
                   }}
                 >
-                <Text>Through Courier</Text>
+                  <Text>Through Courier</Text>
                 </TouchableOpacity>
               </Body>
             </ListItem>
@@ -536,10 +541,15 @@ export default withFormik({
     Email: profile.data.contactdetail.Email,
     PersonalPhone: profile.data.contactdetail.Phone,
     OfficePhone: profile.data.officedetail.FirstName,
-    Address: profile.data.contactdetail.Addressline1,
+    Address1: profile.data.contactdetail.Addressline1,
+    Zip: "",
+    AddressCountry: "United Arab Emirates",
+    Street: "",
+    City: "",
+    SelectedState: "",
     SelectedCountryId: "",
     SelectedCertificateType: "",
-    PickUpandDropOption: "Through Courier",
+    PickUpandDropOption: "Direct Delivery",
     ShowInfo: false,
     docAttestationCreate
   }),
