@@ -565,7 +565,11 @@ export default withFormik({
       .required("Required"),
     PersonalPhone: Yup.string().required("Required"),
     SelectedCountryId: Yup.string().required("Required"),
-    SelectedCertificateType: Yup.string().required("Required")
+    SelectedCertificateType: Yup.string().required("Required"),
+    AddressCountry: Yup.string().required("Required"),
+    Street: Yup.string().required("Required"),
+    City: Yup.string().required("Required"),
+    SelectedState: Yup.string().required("Required")
   }),
 
   handleSubmit: (values, { props }) => {

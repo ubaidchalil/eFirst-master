@@ -124,11 +124,13 @@ const LanguageTranslation = ({
       />
     ));
   const languageTranslationRateByLanguages = (toLanguage, fromLanguage) => {
-    translationPrice({
-      toLanguage,
-      fromLanguage,
-      token: token.token
-    });
+    if (toLanguage && fromLanguage) {
+      translationPrice({
+        toLanguage,
+        fromLanguage,
+        token: token.token
+      });
+    }
   };
   const renderDocumentTypes = () =>
     documenttypes.data.map(doc => (
@@ -236,9 +238,9 @@ const LanguageTranslation = ({
           <Form>
             <Item>
               <Input
-                placeholder="Name"
+                placeholder="Name *"
                 name="CustomerName"
-                label="Name"
+                label="Name *"
                 onChangeText={value => setFieldValue("CustomerName", value)}
                 value={values.CustomerName}
                 error={touched.CustomerName && errors.CustomerName}
@@ -254,9 +256,9 @@ const LanguageTranslation = ({
             </Item>
             <Item style={styles.item_margin}>
               <Input
-                placeholder="Email"
+                placeholder="Email *"
                 name="Email"
-                label="Email"
+                label="Email *"
                 onChangeText={value => setFieldValue("Email", value)}
                 value={values.Email}
                 error={touched.Email && errors.Email}
@@ -272,18 +274,18 @@ const LanguageTranslation = ({
             </Item>
             <Item style={styles.item_margin}>
               <Input
-                placeholder="Mobile"
+                placeholder="Mobile *"
                 name="PersonalPhone"
-                label="Mobile"
+                label="Mobile *"
                 onChangeText={value => setFieldValue("PersonalPhone", value)}
                 value={values.PersonalPhone}
                 error={touched.PersonalPhone && errors.PersonalPhone}
                 underlineColor={Color.secondary}
               />
               <Input
-                placeholder="Office"
+                placeholder="Land Line"
                 name="Office"
-                label="Office"
+                label="Land Line"
                 onChangeText={value => setFieldValue("OfficePhone", value)}
                 value={values.OfficePhone}
                 error={touched.OfficePhone && errors.OfficePhone}
@@ -303,44 +305,43 @@ const LanguageTranslation = ({
               )}
             </Item>
 
-
             <Item style={styles.item_margin}>
               <Textarea
                 rowSpan={5}
                 placeholder="Address Line 1"
                 underline
                 name="Address"
-                label="Address"
-                onChangeText={value => setFieldValue("Address", value)}
-                value={values.Address}
-                error={touched.Address && errors.Address}
+                label="Address Line 1"
+                onChangeText={value => setFieldValue("Address1", value)}
+                value={values.Address1}
+                error={touched.Address1 && errors.Address1}
                 underlineColor={Color.secondary}
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.Address && (
-                <Text style={{ color: "red" }} visible={errors.Address}>
-                  {errors.Address}
+              {errors.Address1 && (
+                <Text style={{ color: "red" }} visible={errors.Address1}>
+                  {errors.Address1}
                 </Text>
               )}
             </Item>
             <Item style={styles.item_margin}>
               <Textarea
                 rowSpan={5}
-                placeholder="Street Address"
+                placeholder="Street Address *"
                 underline
-                name="StreetAddress"
-                label="StreetAddress"
-                onChangeText={value => setFieldValue("StreetAddress", value)}
-                value={values.StreetAddress}
-                error={touched.StreetAddress && errors.StreetAddress}
+                name="Street"
+                label="Street Address *"
+                onChangeText={value => setFieldValue("Street", value)}
+                value={values.Street}
+                error={touched.Street && errors.Street}
                 underlineColor={Color.secondary}
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
               {errors.Address && (
-                <Text style={{ color: "red" }} visible={errors.StreetAddress}>
-                  {errors.StreetAddress}
+                <Text style={{ color: "red" }} visible={errors.Street}>
+                  {errors.Street}
                 </Text>
               )}
             </Item>
@@ -349,34 +350,43 @@ const LanguageTranslation = ({
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
                 style={{ width: undefined }}
-                placeholder="State"
+                placeholder="State *"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
-                selectedValue={values.State}
-                onValueChange={value =>
-                  setFieldValue("State", value)
-                }
+                selectedValue={values.SelectedState}
+                onValueChange={value => setFieldValue("SelectedState", value)}
               >
-                <Picker.Item key="0" label="State" value="0" />
-                {renderDocumentTypes()}
+                <Picker.Item value="0" label="State *" key="0" />
+                <Picker.Item value="Ajman" label="Ajman" key="1" />
+                <Picker.Item value="Abu Dhabi" label="Abu Dhabi" key="2" />
+                <Picker.Item value="Al Fujairah" label="Al Fujairah" key="3" />
+                <Picker.Item value="Sharjah" label="Sharjah" key="4" />
+                <Picker.Item value="Dubai" label="Dubai" key="5" />
+                <Picker.Item
+                  value="Ras Al Khaima"
+                  label="Ras Al Khaima"
+                  key="6"
+                />
+                <Picker.Item
+                  value="Umm Al Qwain"
+                  label="Umm Al Qwain"
+                  key="7"
+                />
               </Picker>
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.State && (
-                <Text
-                  style={{ color: "red" }}
-                  visible={errors.State}
-                >
-                  {errors.State}
+              {errors.SelectedState && (
+                <Text style={{ color: "red" }} visible={errors.SelectedState}>
+                  {errors.SelectedState}
                 </Text>
               )}
             </Item>
-            
+
             <Item style={styles.item_margin}>
               <Input
-                placeholder="City"
+                placeholder="City *"
                 name="City"
-                label="City"
+                label="City *"
                 onChangeText={value => setFieldValue("City", value)}
                 value={values.City}
                 error={touched.City && errors.City}
@@ -384,11 +394,11 @@ const LanguageTranslation = ({
               />
               <Input
                 placeholder="PO Box"
-                name="POBox"
-                label="POBox"
-                onChangeText={value => setFieldValue("POBox", value)}
-                value={values.POBox}
-                error={touched.POBox && errors.POBox}
+                name="Zip"
+                label="PO Box"
+                onChangeText={value => setFieldValue("Zip", value)}
+                value={values.Zip}
+                error={touched.Zip && errors.Zip}
                 underlineColor={Color.secondary}
               />
             </Item>
@@ -398,39 +408,37 @@ const LanguageTranslation = ({
                   {errors.City}
                 </Text>
               )}
-              {errors.POBox && (
-                <Text style={{ color: "red" }} visible={errors.POBox}>
-                  {errors.POBox}
+              {errors.Zip && (
+                <Text style={{ color: "red" }} visible={errors.Zip}>
+                  {errors.Zip}
                 </Text>
               )}
             </Item>
             <Item style={styles.item_margin}>
               <Input
-                placeholder="Country"
-                name="Country"
-                label="Country"
-                onChangeText={value => setFieldValue("Country", value)}
-                value={values.Country}
-                error={touched.Country && errors.Country}
+                placeholder="Country *"
+                name="AddressCountry"
+                label="Country *"
+                onChangeText={value => setFieldValue("AddressCountry", value)}
+                value={values.AddressCountry}
+                error={touched.AddressCountry && errors.AddressCountry}
                 underlineColor={Color.secondary}
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.Country && (
-                <Text style={{ color: "red" }} visible={errors.Country}>
-                  {errors.Country}
+              {errors.AddressCountry && (
+                <Text style={{ color: "red" }} visible={errors.AddressCountry}>
+                  {errors.AddressCountry}
                 </Text>
               )}
             </Item>
 
-
-            
             <Item picker style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
                 style={{ width: undefined }}
-                placeholder="Document Type"
+                placeholder="Document Type *"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
                 selectedValue={values.SelectedDocumentTypeId}
@@ -438,7 +446,7 @@ const LanguageTranslation = ({
                   setFieldValue("SelectedDocumentTypeId", value)
                 }
               >
-                <Picker.Item key="0" label="Select type" value="0" />
+                <Picker.Item key="0" label="Select type *" value="0" />
                 {renderDocumentTypes()}
               </Picker>
             </Item>
@@ -457,7 +465,7 @@ const LanguageTranslation = ({
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
                 style={{ width: undefined }}
-                placeholder="Document Language"
+                placeholder="Document Language *"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
                 selectedValue={values.SelectedFromDocumentLanguageId}
@@ -469,7 +477,7 @@ const LanguageTranslation = ({
                   );
                 }}
               >
-                <Picker.Item key="0" label="Select language" value="0" />
+                <Picker.Item key="0" label="Select language *" value="0" />
                 {renderTranslationLanguage()}
               </Picker>
             </Item>
@@ -488,7 +496,7 @@ const LanguageTranslation = ({
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
                 style={{ width: undefined }}
-                placeholder="Document to be Translated"
+                placeholder="Document to be Translated *"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
                 selectedValue={values.SelectedToDocumentLanguageId}
@@ -623,7 +631,12 @@ export default withFormik({
     Email: profile.data.contactdetail.Email,
     PersonalPhone: profile.data.contactdetail.Phone,
     OfficePhone: profile.data.officedetail.FirstName,
-    Address: profile.data.contactdetail.Addressline1,
+    Address1: profile.data.contactdetail.Addressline1,
+    Zip: "",
+    AddressCountry: "United Arab Emirates",
+    Street: "",
+    City: "",
+    SelectedState: "",
     SelectedDocumentTypeId: "",
     SelectedFromDocumentLanguageId: "",
     SelectedToDocumentLanguageId: "",
@@ -645,7 +658,11 @@ export default withFormik({
     PersonalPhone: Yup.string().required("Required"),
     SelectedDocumentTypeId: Yup.string().required("Required"),
     SelectedFromDocumentLanguageId: Yup.string().required("Required"),
-    SelectedToDocumentLanguageId: Yup.string().required("Required")
+    SelectedToDocumentLanguageId: Yup.string().required("Required"),
+    AddressCountry: Yup.string().required("Required"),
+    Street: Yup.string().required("Required"),
+    City: Yup.string().required("Required"),
+    SelectedState: Yup.string().required("Required")
   }),
 
   handleSubmit: (values, { props }) => {
@@ -661,7 +678,12 @@ export default withFormik({
     data.append("Email", values.Email);
     data.append("PersonalPhone", values.PersonalPhone);
     data.append("OfficePhone", values.OfficePhone);
-    data.append("Address", values.Address);
+    data.append("Address1", values.Address1);
+    data.append("Zip", values.Zip);
+    data.append("AddressCountry", values.AddressCountry);
+    data.append("Street", values.Street);
+    data.append("City", values.City);
+    data.append("SelectedState", values.SelectedState);
     data.append("SelectedDocumentTypeId", values.SelectedDocumentTypeId);
     data.append(
       "SelectedFromDocumentLanguageId",
@@ -676,6 +698,7 @@ export default withFormik({
     data.append("Rate", Rate);
     data.append("ServiceId", 1);
     data.append("ServiceName", "TRANSLATION");
+    console.log(data);
     return values.doclangTransCreate({ data, token });
   }
 })(LanguageTranslation);
