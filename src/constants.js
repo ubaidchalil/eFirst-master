@@ -17,6 +17,7 @@ export const LOGOUT_URL = `${BASE_URL}Account/Logout`;
 export const EXT_USER_INFO_URL = `${BASE_URL}Account/UserInfo`;
 export const EXT_REGISTER_URL = `${BASE_URL}Account/RegisterExternal`;
 export const EXT_LOGIN_URLS_URL = `${BASE_URL}Account/ExternalLogins`;
+export const CHANGE_PASSWORD_URL = `${BASE_URL}Account/ChangePassword`;
 
 /// DASHBOARD URLS ///
 export const DASHBOARD_DATA_URL = `${BASE_URL}Dashboard/Get`;

@@ -135,13 +135,10 @@ export default withFormik({
     MobileNumber: Yup.string().required("Required")
   }),
 
-  handleSubmit: (values, { setSubmitting }) => {
-    const {
-      FirstName,
-      Email,
-      MobileNumber,
-      token
-    } = values;
+  handleSubmit: (values, { setSubmitting, props }) => {
+    const { requestExtRegistration } = props;
+    const { FirstName, Email, MobileNumber, token } = values;
+    requestExtRegistration();
     values.extRegisterUser({
       FirstName,
       Email,

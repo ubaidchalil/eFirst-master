@@ -8,7 +8,7 @@ import ForgetPassword from "../components/auth/forgetpassword";
 import ConfirmEmail from "../components/auth/confirmmail";
 import ExternalLogin from "../components/auth/external";
 import RegisterExternal from "../components/auth/external_register";
-
+import ChangePassword from "../components/auth/changepassword";
 const accountStack = createStackNavigator(
   {
     Auth: Login,
@@ -16,7 +16,8 @@ const accountStack = createStackNavigator(
     ForgetPassword: ForgetPassword,
     ConfirmEmail: ConfirmEmail,
     ExternalLogin: ExternalLogin,
-    RegisterExternal: RegisterExternal
+    RegisterExternal: RegisterExternal,
+    ChangePassword: ChangePassword
   },
   {
     initialRouteName: "Auth",

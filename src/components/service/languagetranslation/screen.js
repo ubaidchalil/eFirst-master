@@ -673,17 +673,16 @@ export default withFormik({
         ? translationrate.data.Rate + 28
         : translationrate.data.Rate
       : 0;
+    const address = `${values.Address1},${values.Street} ${values.City}, ${
+      values.SelectedState
+    } ${values.AddressCountry} ZIP- ${values.Zip}`;
+
     let data = new FormData();
     data.append("CustomerName", values.CustomerName);
     data.append("Email", values.Email);
     data.append("PersonalPhone", values.PersonalPhone);
     data.append("OfficePhone", values.OfficePhone);
-    data.append("Address1", values.Address1);
-    data.append("Zip", values.Zip);
-    data.append("AddressCountry", values.AddressCountry);
-    data.append("Street", values.Street);
-    data.append("City", values.City);
-    data.append("SelectedState", values.SelectedState);
+    data.append("Address", address);
     data.append("SelectedDocumentTypeId", values.SelectedDocumentTypeId);
     data.append(
       "SelectedFromDocumentLanguageId",
@@ -698,7 +697,7 @@ export default withFormik({
     data.append("Rate", Rate);
     data.append("ServiceId", 1);
     data.append("ServiceName", "TRANSLATION");
-    console.log(data);
+
     return values.doclangTransCreate({ data, token });
   }
 })(LanguageTranslation);

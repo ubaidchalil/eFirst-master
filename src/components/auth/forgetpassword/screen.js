@@ -59,15 +59,20 @@ const ResetPasswordForm = ({
               underlineColor={Color.secondary}
             />
           </Item>
-          <Item style={{ borderBottomWidth: 0 }} >
-              {errors.Email && (
-                <Text style={{ color:'red' }}  visible={errors.Email}>
-                  {errors.Email}
-                </Text>
-              )}
+          <Item style={{ borderBottomWidth: 0 }}>
+            {errors.Email && (
+              <Text style={{ color: "red" }} visible={errors.Email}>
+                {errors.Email}
+              </Text>
+            )}
           </Item>
-          <Button style={[styles.marginTop,{ backgroundColor: "#183E61" }]} onPress={handleSubmit} full rounded>
-            <Text>Register</Text>
+          <Button
+            style={[styles.marginTop, { backgroundColor: "#183E61" }]}
+            onPress={handleSubmit}
+            full
+            rounded
+          >
+            <Text>Submit</Text>
           </Button>
         </View>
       </Content>
@@ -75,9 +80,10 @@ const ResetPasswordForm = ({
   </StyleProvider>
 );
 export default withFormik({
-  mapPropsToValues: ({ resetPasswordUser }) => ({
+  mapPropsToValues: ({ resetPasswordUser, setStateEmail }) => ({
     Email: "",
-    resetPasswordUser
+    resetPasswordUser,
+    setStateEmail
   }),
   validateOnChange: false,
   validationSchema: Yup.object().shape({
@@ -89,7 +95,9 @@ export default withFormik({
 
   handleSubmit: (values, { resetForm, setSubmitting }) => {
     const { Email } = values;
+
     values.resetPasswordUser({ Email });
+    values.setStateEmail(Email);
     setSubmitting(false);
     resetForm();
   }

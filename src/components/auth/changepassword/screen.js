@@ -51,7 +51,6 @@ const RegistrationForm = ({
           />
         </View>
         <View style={styles.formContent}>
-          
           <Item style={styles.marginTop}>
             <Input
               placeholder="Code"
@@ -73,26 +72,26 @@ const RegistrationForm = ({
           <Item style={styles.marginTop}>
             <Input
               placeholder="New Password"
-              name="password"
-              label="Password"
-              onChangeText={value => setFieldValue("Password", value)}
-              value={values.Password}
-              error={touched.Password && errors.Password}
+              name="NewPassword"
+              label="New Password"
+              onChangeText={value => setFieldValue("NewPassword", value)}
+              value={values.NewPassword}
+              error={touched.NewPassword && errors.NewPassword}
               underlineColor={Color.secondary}
             />
           </Item>
           <Item style={{ borderBottomWidth: 0 }}>
-            {errors.Password && (
-              <Text style={{ color: "red" }} visible={errors.Password}>
-                {errors.Password}
+            {errors.NewPassword && (
+              <Text style={{ color: "red" }} visible={errors.NewPassword}>
+                {errors.NewPassword}
               </Text>
             )}
           </Item>
           <Item style={styles.marginTop}>
             <Input
               placeholder="Confirm Password"
-              name="password"
-              label="ConfirmPassword"
+              name="ConfirmPassword"
+              label="Confirm Password"
               onChangeText={value => setFieldValue("ConfirmPassword", value)}
               value={values.ConfirmPassword}
               error={touched.ConfirmPassword && errors.ConfirmPassword}
@@ -117,41 +116,28 @@ const RegistrationForm = ({
 );
 
 export default withFormik({
-  mapPropsToValues: ({ registerUser }) => ({
-    FirstName: "",
-    Email: "",
-    Password: "",
-    MobileNumber: "",
+  mapPropsToValues: ({ changePassword }) => ({
+    NewPassword: "",
     ConfirmPassword: "",
-    registerUser
+    Code: "",
+    changePassword
   }),
   validateOnChange: false,
-
   validationSchema: Yup.object().shape({
-   
     Code: Yup.string().required("Required"),
-    Password: Yup.string()
+    NewPassword: Yup.string()
       .min(4, "Must be longer than 4 characters")
       .required("Required"),
     ConfirmPassword: Yup.string()
-      .oneOf([Yup.ref("Password"), null], "Passwords don't match")
+      .oneOf([Yup.ref("NewPassword"), null], "Passwords don't match")
       .required("Required")
   }),
 
-  handleSubmit: (values, { setSubmitting }) => {
-    const {
-      FirstName,
-      Email,
-      Password,
-      ConfirmPassword,
-      MobileNumber
-    } = values;
-    values.registerUser({
-      FirstName,
-      Email,
-      Password,
-      ConfirmPassword,
-      MobileNumber
-    });
+  handleSubmit: (values, { setSubmitting, props }) => {
+    console.log(props);
+    const { Code, NewPassword, ConfirmPassword } = { values };
+    const { Email } = props;
+
+    return values.changePassword({ Code, NewPassword, ConfirmPassword, Email });
   }
 })(RegistrationForm);

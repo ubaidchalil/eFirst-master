@@ -132,7 +132,8 @@ export const profile = (state = initialProfile, action) => {
           userdetail: {
             FirstName: action.state.FirstName,
             Designation: action.state.Designation,
-            ProfilePic: action.state.ProfilePic
+            ProfilePic: action.state.ProfilePic,
+            UserId: action.state.UserId
           },
           contactdetail: {
             Phone: action.state.Phone,

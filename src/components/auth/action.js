@@ -1,13 +1,14 @@
 import {
   LOGIN_URL,
   REGISTER_URL,
-  RESET_PASSWORD,
+  RESET_PASSWORD_URL,
   CONFIRM_EMAIL_URL,
   LOGOUT_URL,
   EXT_USER_INFO_URL,
   EXT_REGISTER_URL,
   EXT_LOGIN_URLS_URL,
-  BASE_URL
+  BASE_URL,
+  CHANGE_PASSWORD_URL
 } from "../../constants";
 
 export const registrationState = {
@@ -55,8 +56,15 @@ export const forgetpasswordState = {
   ERROR: "FORGET_ERROR"
 };
 
+export const forgetchangepasswordState = {
+  LOADING: "CHANGE_PASSWORD_LOADING",
+  SUCCESS: "CHANGE_PASSWORD_SUCCESS",
+  ERROR: "CHANGE_PASSWORD_ERROR"
+};
+
 export const tokenState = {
   DONE: "USER_LOGGED",
+  EXT_DONE: "USER_EXT_DONE",
   CLEAR: "USER_LOGGED_OUT"
 };
 
@@ -79,6 +87,10 @@ const setDone = data => ({
   type: tokenState.DONE,
   data
 });
+export const setExtToken = data => ({
+  type: tokenState.EXT_DONE,
+  data
+});
 export const setInStore = (state, type) => ({
   type,
   state
@@ -93,7 +105,7 @@ export const openFetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
-    console.log(result);
+
     if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
       if (!result.data) {
         dispatch(setInStore(false, type.LOADING));
@@ -164,8 +176,8 @@ const openRegFetcher = async (fetchData, type, dispatch) => {
 };
 
 const openFetcher2 = async (fetchData, type, dispatch) => {
-  dispatch(setInStore(false, type.SUCCESS));
   dispatch(setInStore(true, type.LOADING));
+  dispatch(setInStore(false, type.SUCCESS));
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
@@ -226,9 +238,9 @@ export const registerUser = payload => dispatch => {
   );
 };
 
-export const extRegisterUser = (payload) => dispatch => {
+export const extRegisterUser = payload => dispatch => {
   const token = payload.token;
-  console.log("////////////////////token : " + token)
+  console.log("////////////////////token : " + token);
   const body = JSON.stringify(payload);
   return openRegFetcher(
     async () => {
@@ -278,7 +290,7 @@ export const resetPasswordUser = payload => dispatch => {
   const body = JSON.stringify(payload);
   return openFetcher2(
     async () => {
-      const result = await fetch(RESET_PASSWORD, {
+      const result = await fetch(RESET_PASSWORD_URL, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -293,6 +305,29 @@ export const resetPasswordUser = payload => dispatch => {
       }));
     },
     forgetpasswordState,
+    dispatch
+  );
+};
+
+export const forgetChangePassword = payload => dispatch => {
+  const body = JSON.stringify(payload);
+  return openFetcher2(
+    async () => {
+      const result = await fetch(CHANGE_PASSWORD_URL, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body
+      });
+
+      return result.json().then(data => ({
+        data: data,
+        status: result.ok
+      }));
+    },
+    forgetchangepasswordState,
     dispatch
   );
 };
@@ -325,7 +360,6 @@ export const Logout = token => dispatch => {
 export const clearLogoutState = () => dispatch => {
   dispatch(setInStore(true, logoutState.CLEAR));
 };
-
 
 const getUserInfoFetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(true, type.LOADING));
@@ -369,12 +403,15 @@ export const getUserInfo = token => dispatch => {
 export const getExtLoginUrls = token => dispatch => {
   return getUserInfoFetcher(
     async () => {
-      const result = await fetch(EXT_LOGIN_URLS_URL + "?returnUrl=" + BASE_URL, {
-        method: "GET",
-        headers: {
-          Accept: "application/json"
+      const result = await fetch(
+        EXT_LOGIN_URLS_URL + "?returnUrl=" + BASE_URL,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json"
+          }
         }
-      });
+      );
       return result.json().then(data => ({
         data: data,
         status: result.ok

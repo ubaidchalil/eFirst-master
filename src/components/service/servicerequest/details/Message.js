@@ -29,6 +29,7 @@ let styles = StyleSheet.create({
 });
 
 const renderMessageList = ({ messageList, messages, MessageModal }) => {
+  console.log(messageList);
   return messageList.map(item => (
     <View style={styles.outer_main}>
       <View style={styles.title_view}>
@@ -36,7 +37,9 @@ const renderMessageList = ({ messageList, messages, MessageModal }) => {
           <Text style={styles.title_msg_text}>{item.NoteTitle} </Text>
         </View>
         <View style={styles.title_reply_view}>
-          <TouchableOpacity onPress={() => MessageModal(0, item.NoteID)}>
+          <TouchableOpacity
+            onPress={() => MessageModal(item.SRID, item.NoteID, item.NoteTitle)}
+          >
             <Text style={styles.title_reply_txt}>Reply</Text>
           </TouchableOpacity>
         </View>
@@ -56,7 +59,7 @@ renderSeparator = () => (
   <View
     style={{
       height: 1,
-      backgroundColor: '#E5E8E8'
+      backgroundColor: "#E5E8E8"
     }}
   />
 );
@@ -71,11 +74,7 @@ class MessageItem extends React.PureComponent {
     const { message, length, index } = this.props;
 
     return (
-      <View
-        style={[
-          { flexDirection: "row", padding: 10 }
-        ]}
-      >
+      <View style={[{ flexDirection: "row", padding: 10 }]}>
         <View style={{ width: 60, padding: 10 }}>
           <Image
             style={{ height: 20, width: 15, resizeMode: "stretch" }}
@@ -83,7 +82,14 @@ class MessageItem extends React.PureComponent {
           />
         </View>
         <View style={{}}>
-          <Text style={{ fontSize: 12, fontWeight: "bold", padding: 1, color: 'black' }}>
+          <Text
+            style={{
+              fontSize: 12,
+              fontWeight: "bold",
+              padding: 1,
+              color: "black"
+            }}
+          >
             {message.CreatedBy}
           </Text>
           <Text style={{ fontSize: 10, color: "#707B7C", padding: 1 }}>

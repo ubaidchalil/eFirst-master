@@ -7,7 +7,8 @@ import {
   logoutState,
   getUserInfoTokenState,
   ExtRegistrationState,
-  extUrlState
+  extUrlState,
+  forgetchangepasswordState
 } from "./action";
 
 const defaulToken = null;
@@ -29,7 +30,7 @@ const defaultExtRegister = {
   error: null,
   loading: false,
   data: null,
-  success: true
+  success: false
 };
 const defaultExtUrlState = {
   error: null,
@@ -54,6 +55,12 @@ const defaultForgetPassword = {
   loading: false
 };
 
+const defaultChangePassword = {
+  error: null,
+  success: null,
+  loading: false
+};
+
 const defaultConfirmEmail = {
   error: null,
   success: null,
@@ -67,7 +74,14 @@ export const token = (state = defaulToken, action) => {
         : action.data;
       return {
         token: tokenData.access_token,
-        username: tokenData.userName
+        username: tokenData.userName,
+        logintype: "INTERNAL"
+      };
+    case tokenState.EXT_DONE:
+      return {
+        token: action.data.access_token,
+        username: action.data.username,
+        logintype: "EXTERNAL"
       };
     case tokenState.CLEAR:
       return defaulToken;
@@ -114,7 +128,6 @@ export const extRegistration = (state = defaultExtRegister, action) => {
       return state;
   }
 };
-
 
 export const extLoginUrls = (state = defaultExtUrlState, action) => {
   switch (action.type) {
@@ -166,6 +179,19 @@ export const forgetpassword = (state = defaultForgetPassword, action) => {
     case forgetpasswordState.LOADING:
       return { ...state, loading: action.state };
     case forgetpasswordState.SUCCESS:
+      return { ...state, success: action.state };
+    default:
+      return state;
+  }
+};
+
+export const forgetchangepassword = (state = defaultChangePassword, action) => {
+  switch (action.type) {
+    case forgetchangepasswordState.ERROR:
+      return { ...state, error: action.state };
+    case forgetchangepasswordState.LOADING:
+      return { ...state, loading: action.state };
+    case forgetchangepasswordState.SUCCESS:
       return { ...state, success: action.state };
     default:
       return state;

@@ -58,7 +58,7 @@ class ServiceDetails extends Component {
     });
   }
   render() {
-    const { srDetail, loading, error, message } = this.props;
+    const { srDetail, loading, error, message, profile } = this.props;
     const dtError = error || message.error;
     const success = message.success;
     const SRID = srDetail ? srDetail.SRID : 0;
@@ -71,6 +71,7 @@ class ServiceDetails extends Component {
             handle={this.hideModal}
             action={this.state}
             SendMessage={this.props.sendOrReplyMessage}
+            profile={profile}
           />
           <MyHeader
             navigation={this.props.navigation}
@@ -131,9 +132,11 @@ const styles = {
 const mapStateToProps = ({
   servicerequest: { srDetail, loading, error },
   token,
-  message
+  message,
+  profile
 }) => ({
   srDetail,
+  profile,
   loading,
   error,
   token,

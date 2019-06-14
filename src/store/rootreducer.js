@@ -9,7 +9,8 @@ import {
   confirmemail,
   extUserInfo,
   extRegistration,
-  extLoginUrls
+  extLoginUrls,
+  forgetchangepassword
 } from "../components/auth/reducer";
 
 import {
@@ -74,7 +75,8 @@ const config = {
     "changepassword",
     "extUserInfo",
     "extRegistration",
-    "extLoginUrls"
+    "extLoginUrls",
+    "forgetchangepassword"
   ]
 };
 
@@ -108,7 +110,8 @@ const combinedReducers = {
   changepassword,
   extUserInfo,
   extRegistration,
-  extLoginUrls
+  extLoginUrls,
+  forgetchangepassword
 };
 
 export default persistCombineReducers(config, combinedReducers);

@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { Color } from "../../../constants";
 import Modal from "react-native-modal";
 import { Text, Button, Input, Textarea, Form, Item, Icon } from "native-base";
+
 const PostMessage = ({
   handleSubmit,
   setFieldValue,
@@ -17,15 +18,15 @@ const PostMessage = ({
   SRID,
   NoteID,
   handle,
-  action: { IsVisible }
+  action
 }) => {
   const SendMessage = () => {
-    setFieldValue("IsVisible", false);
+    handle();
     handleSubmit;
   };
 
   return (
-    <Modal isVisible={IsVisible}>
+    <Modal isVisible={action.IsVisible}>
       <View style={styles.modalContent}>
         <Item style={{ flexDirection: "row", padding: 7 }}>
           <Text
@@ -46,15 +47,27 @@ const PostMessage = ({
         <View style={{ padding: 15 }}>
           <Form>
             <Item>
-              <Input
-                placeholder="Message Title"
-                name="MessageTitle"
-                label="Title"
-                onChangeText={value => setFieldValue("MessageTitle", value)}
-                value={values.MessageTitle}
-                error={touched.MessageTitle && errors.MessageTitle}
-                underlineColor={Color.secondary}
-              />
+              {!action.SRID ? (
+                <Input
+                  placeholder="Message Title"
+                  name="MessageTitle"
+                  label="Title"
+                  onChangeText={value => setFieldValue("MessageTitle", value)}
+                  value={values.MessageTitle}
+                  error={touched.MessageTitle && errors.MessageTitle}
+                  underlineColor={Color.secondary}
+                />
+              ) : (
+                <Input
+                  placeholder="Message Title"
+                  name="MessageTitle"
+                  label="Title"
+                  value={action.Title}
+                  error={touched.MessageTitle && errors.MessageTitle}
+                  underlineColor={Color.secondary}
+                  editable={false}
+                />
+              )}
             </Item>
             {errors.MessageTitle && (
               <Text visible={errors.MessageTitle}>{errors.MessageTitle}</Text>
@@ -93,10 +106,11 @@ const PostMessage = ({
 };
 
 export default withFormik({
-  mapPropsToValues: ({ action: { IsVisible }, SendMessage }) => ({
-    MessageTitle: "",
+  enableReinitialize: true,
+  mapPropsToValues: ({ action, SendMessage }) => ({
+    MessageTitle: action.SRID ? action.Title : "",
     MessageContent: "",
-    IsVisible,
+
     SendMessage
   }),
   validateOnChange: false,
@@ -107,7 +121,11 @@ export default withFormik({
   }),
 
   handleSubmit: (values, { props }) => {
+    const { handle } = props;
+    handle();
     const token = props.token.token;
+    const { profile } = props;
+    const { UserId } = profile.data.userdetail;
     const { SRID, NoteID } = props.action;
     const NoteType = SRID ? "NewMessage" : "ReplyMessage";
     const { MessageContent, MessageTitle } = values;
@@ -117,26 +135,11 @@ export default withFormik({
       NoteType,
       MessageContent,
       MessageTitle,
+      CreatedBy: UserId,
       token
     });
   }
 })(PostMessage);
-
-// NoteType: NewMessage
-// MessageTitle: Test
-// MessageContent: gfvvbbmmb
-// SRID: 138
-// NoteID: 0
-// IsAdminMessage: 0
-// CreatedBy: 44
-
-// NoteType: ReplyMessage
-// MessageTitle: Test
-// MessageContent: cghjbnm
-// SRID: 0
-// NoteID: 478
-// IsAdminMessage: 0
-// CreatedBy: 44
 const styles = {
   modalContent: {
     backgroundColor: "white",

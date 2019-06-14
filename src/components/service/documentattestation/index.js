@@ -38,7 +38,6 @@ class Container extends Component {
       certificatetype.loading ||
       attestationrate.loading;
 
-    console.log("Loaiding", loading);
     if (!this.props.documentattestation.loading) {
       if (this.props.documentattestation.success) {
         const { token } = this.props.token;
