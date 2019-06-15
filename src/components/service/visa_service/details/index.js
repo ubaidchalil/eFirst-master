@@ -15,6 +15,8 @@ import {
   Textarea
 } from "native-base";
 import MyHeader from "../../../../Header";
+import { visaServiceCreate } from "../../action";
+import { visaServiceData } from "../../../../visaSrviceData";
 
 class _Container extends Component {
   constructor(props) {
@@ -31,9 +33,23 @@ class _Container extends Component {
     
   }
 
+  saveData = () => {
+    const { token } = this.props.token;
+    const serviceData = JSON.stringify(visaServiceData);
+
+    const docItem = this.props.navigation.state.params.docItem;
+    let data = new FormData();
+    data.append("ServiceData", serviceData);
+    docItem.map((item, index) =>
+      data.append("Files[]", item, item.name)
+    );
+    console.log("data", data);
+    return this.props.visaServiceCreate({ data, token });
+  };
+
   renderPageData = () => {
 
-    return this.props.navigation.state.params.pageData.map((datum) => {
+    return this.props.navigation.state.params.data.pageData.map((datum) => {
       return (
         <Item>
           <Text style={{padding:10, fontWeight:'bold'}} >{datum["Text"]} : </Text>
@@ -104,7 +120,7 @@ class _Container extends Component {
            style={{ backgroundColor: "#183E61", marginBottom: 30, marginTop: 10 }}
            full
            rounded
-           onPress={() => { this.NextOption() }}
+           onPress={() => { this.saveData() }}
         >
             <Text>Next</Text>
           </Button>  
@@ -114,14 +130,10 @@ class _Container extends Component {
   };
 }
 
-const mapStateToProps = ({
-  
-}) => ({
-  
-});
 
+const mapStateToProps = ({ token }) => ({ token });
 const mapDispatchToProps = dispatch => ({
-  
+  visaServiceCreate: payload => dispatch(visaServiceCreate(payload))
 });
 
 export default connect(

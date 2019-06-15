@@ -11,12 +11,24 @@ import {
   TRANSLATION_PRICE_URL,
   MESSAGE_URL,
   SERVICEREQUEST_LIST_URL,
+  UPD_SR_AMT,
+  ACTIVATE_SR,
   VISASERVICE_URL
 } from "../../constants";
+
+export const visaServiceState = {
+  LOADING: "VISA_SERVICE_LOADING",
+  SUCCESS: "VISA_SERVICE_SUCCESS",
+  ERROR: "VISA_SERVICE_ERROR",
+  DONE: "VISA_SERVICE_DONE"
+};
+
 export const attestationState = {
   LOADING: "ATTEST_LOADING",
   SUCCESS: "ATTEST_SUCCESS",
-  ERROR: "ATTEST_ERROR"
+  ERROR: "ATTEST_ERROR",
+  DONE: "ATTEST_DONE",
+  CLEAR: "ATTEST_CLEAR"
 };
 
 export const langTransState = {
@@ -86,11 +98,19 @@ export const translationRateState = {
   DONE: "TRARATE_DONE"
 };
 
-export const visaServiceState = {
-  LOADING: "VISA_SERVICE_LOADING",
-  SUCCESS: "VISA_SERVICE_SUCCESS",
-  ERROR: "VISA_SERVICE_ERROR",
-  DONE: "VISA_SERVICE_DONE"
+export const attestationUpdSRAmtState = {
+  LOADING: "ATTEST_UPD_SRAMT_LOADING",
+  SUCCESS: "ATTEST_UPD_SRAMT_SUCCESS",
+  ERROR: "ATTEST_UPD_SRAMT_ERROR",
+  DONE: "ATTEST_UPD_SRAMT_DONE",
+  CLEAR: "ATTEST_UPD_SRAMT_CLEAR"
+};
+
+export const activateSRState = {
+  LOADING: "ACTIVATE_SR_LOADING",
+  SUCCESS: "ACTIVATE_SR_SUCCESS",
+  ERROR: "ACTIVATE_SR_ERROR",
+  DONE: "ACTIVATE_SR_DONE"
 };
 
 export const checkResult = (result, dispatch, setError) => {
@@ -100,6 +120,10 @@ export const checkResult = (result, dispatch, setError) => {
   dispatch(setError(JSON.stringify(result.data)));
   return false;
 };
+
+export const clearAttestationData = () => ({
+  type: attestationState.CLEAR
+});
 
 export const setInStore = (state, type) => ({
   type,
@@ -112,8 +136,28 @@ const openFetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
-    console.log(result);
+    console.log("result = > "+ JSON.stringify(result));
     if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
+      dispatch(setInStore(true, type.SUCCESS));
+    } else {
+      dispatch(setInStore(false, type.SUCCESS));
+    }
+  } catch (error) {
+    dispatch(setInStore(false, type.SUCCESS));
+    dispatch(setInStore(error, type.ERROR));
+  }
+  dispatch(setInStore(false, type.LOADING));
+};
+
+const openAttestationFetcher = async (fetchData, type, dispatch) => {
+  dispatch(setInStore(true, type.LOADING));
+  dispatch(setInStore(false, type.SUCCESS));
+  dispatch(setInStore(null, type.ERROR));
+  try {
+    const result = await fetchData();
+    console.log("result = > "+ JSON.stringify(result));
+    if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
+      dispatch(setInStore(result.data, type.DONE));
       dispatch(setInStore(true, type.SUCCESS));
     } else {
       dispatch(setInStore(false, type.SUCCESS));
@@ -148,7 +192,7 @@ export const docAttestationCreate = payload => dispatch => {
   const { token, ...bodyData } = payload;
   const body = JSON.stringify(bodyData);
   console.log("Body", body);
-  return openFetcher(
+  return openAttestationFetcher(
     async () => {
       const result = await fetch(DOC_ATTESTATION_CREATE_URL, {
         method: "POST",
@@ -169,31 +213,7 @@ export const docAttestationCreate = payload => dispatch => {
     dispatch
   );
 };
-export const sendOrReplyMessage = payload => dispatch => {
-  const { token, ...bodyData } = payload;
 
-  const body = JSON.stringify(bodyData);
-  console.log(body);
-  return openFetcher(
-    async () => {
-      const result = await fetch(MESSAGE_URL, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
-        },
-        body
-      });
-      return result.json().then(data => ({
-        data: data,
-        status: result.ok
-      }));
-    },
-    messageState,
-    dispatch
-  );
-};
 
 export const visaServiceCreate = payload => dispatch => {
   const { token, data } = payload;
@@ -216,6 +236,87 @@ export const visaServiceCreate = payload => dispatch => {
     },
 
     visaServiceState,
+    dispatch
+  );
+};
+
+export const updAttestationSRAmt = payload => dispatch => {
+  const { token, ...bodyData } = payload;
+  const body = JSON.stringify(bodyData);
+  console.log("Body", "result = > Body : "+body);
+  console.log("Body", "result = > token : "+token);
+  return openAttestationFetcher(
+    async () => {
+      const result = await fetch(UPD_SR_AMT+"?srid="+bodyData.SRID+"&amount="+bodyData.amount, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
+        body
+      });
+
+      return result.json().then(data => ({
+        data: data,
+        status: result.ok
+      }));
+    },
+    attestationUpdSRAmtState,
+    dispatch
+  );
+};
+
+export const activateSR = payload => dispatch => {
+  const { token, srid } = payload;
+  const body = JSON.stringify(srid);
+  console.log("Activate SR", "result = > srid : "+srid);
+  dispatch(clearAttestationData());
+  return openAttestationFetcher(
+    async () => {
+      const result = await fetch(ACTIVATE_SR+"?srid="+srid, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
+        body
+      });
+
+      return result.json().then(data => ({
+        data: data,
+        status: result.ok
+      }));
+    },
+    activateSRState,
+    dispatch
+  );
+};
+
+
+export const sendOrReplyMessage = payload => dispatch => {
+  const { token, ...bodyData } = payload;
+
+  const body = JSON.stringify(bodyData);
+  console.log(body);
+  return openFetcher(
+    async () => {
+      const result = await fetch(MESSAGE_URL, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
+        body
+      });
+      return result.json().then(data => ({
+        data: data,
+        status: result.ok
+      }));
+    },
+    messageState,
     dispatch
   );
 };

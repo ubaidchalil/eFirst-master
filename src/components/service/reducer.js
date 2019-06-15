@@ -10,13 +10,16 @@ import {
   serviceRequestState,
   translationRateState,
   messageState,
+  attestationUpdSRAmtState,
+  activateSRState,
   visaServiceState
 } from "./action";
 
 const initialDocumentAttestation = {
   loading: false,
   success: null,
-  error: null
+  error: null,
+  data: null,
 };
 
 const initialLangTranslation = {
@@ -66,13 +69,6 @@ const initialDocumentLanguage = {
   error: null
 };
 
-const initialVisaService = {
-  loading: false,
-  data: [],
-  success: null,
-  error: null
-};
-
 const initialAttestationRate = {
   loading: false,
   data: null,
@@ -100,6 +96,42 @@ const initialServiceRequest = {
   error: null
 };
 
+const initialAttestationUpdSRAmtState = {
+  loading: false,
+  data: null,
+  success: null,
+  error: null
+};
+
+const initialActivateSRState = {
+  loading: false,
+  data: null,
+  success: null,
+  error: null
+};
+
+const initialVisaService = {
+  loading: false,
+  data: [],
+  success: null,
+  error: null
+};
+
+export const visaservice = (state = initialVisaService, action) => {
+  switch (action.type) {
+    case visaServiceState.LOADING:
+      return { ...state, loading: action.state };
+    case visaServiceState.DONE:
+      return { ...state, data: action.state };
+    case visaServiceState.SUCCESS:
+      return { ...state, success: action.state };
+    case visaServiceState.ERROR:
+      return { ...state, error: action.state };
+    default:
+      return state;
+  }
+};
+
 export const documentattestation = (
   state = initialDocumentAttestation,
   action
@@ -111,6 +143,10 @@ export const documentattestation = (
       return { ...state, success: action.state };
     case attestationState.ERROR:
       return { ...state, error: action.state };
+    case attestationState.DONE:
+      return { ...state, data: action.state };
+    case attestationState.CLEAR:
+      return state;
     default:
       return state;
   }
@@ -129,20 +165,6 @@ export const langtranslation = (state = initialLangTranslation, action) => {
   }
 };
 
-export const visaservice = (state = initialVisaService, action) => {
-  switch (action.type) {
-    case visaServiceState.LOADING:
-      return { ...state, loading: action.state };
-    case visaServiceState.DONE:
-      return { ...state, data: action.state };
-    case visaServiceState.SUCCESS:
-      return { ...state, success: action.state };
-    case visaServiceState.ERROR:
-      return { ...state, error: action.state };
-    default:
-      return state;
-  }
-};
 export const message = (state = initialMessage, action) => {
   switch (action.type) {
     case messageState.LOADING:
@@ -255,6 +277,38 @@ export const certificatetype = (state = initialCertificateType, action) => {
     case certificateTypeState.SUCCESS:
       return { ...state, success: action.state };
     case certificateTypeState.ERROR:
+      return { ...state, error: action.state };
+    default:
+      return state;
+  }
+};
+
+export const docSRAmUpdation = (state = initialAttestationUpdSRAmtState, action) => {
+  switch (action.type) {
+    case attestationUpdSRAmtState.LOADING:
+      return { ...state, loading: action.state };
+    case attestationUpdSRAmtState.DONE:
+      return { ...state, data: action.state };
+    case attestationUpdSRAmtState.SUCCESS:
+      return { ...state, success: action.state };
+    case attestationUpdSRAmtState.ERROR:
+      return { ...state, error: action.state };
+    case attestationUpdSRAmtState.ERROR:
+      return state;
+    default:
+      return state;
+  }
+};
+
+export const srActivation = (state = initialActivateSRState, action) => {
+  switch (action.type) {
+    case activateSRState.LOADING:
+      return { ...state, loading: action.state };
+    case activateSRState.DONE:
+      return { ...state, data: action.state };
+    case activateSRState.SUCCESS:
+      return { ...state, success: action.state };
+    case activateSRState.ERROR:
       return { ...state, error: action.state };
     default:
       return state;

@@ -1,4 +1,4 @@
-import { SUPPORT_URL } from "../../constants";
+import { SUPPORT_URL } from "../../../constants";
 
 export const supportState = {
   LOADING: "SUPPORT_LOADING",

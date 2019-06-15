@@ -50,9 +50,13 @@ class _Container extends Component {
     })
 
     if(this.state.options[option]["title"])
-      this.props.navigation.push('VisaServceType', {options :this.state.options[option], pageData: pageData} )
+      this.props.navigation.push('VisaServceType', {options :this.state.options[option], pageData: pageData, data: this.props.navigation.state.params.data} )
     else
-      this.props.navigation.navigate('VisaServiceDocs', {details :this.state.options[option], pageData: pageData} )
+    {
+      var data = this.props.navigation.state.params.data;
+      data.pageData = pageData;
+      this.props.navigation.navigate('VisaServiceDocs', {details :this.state.options[option], data: data} )
+    }
   }
 
   renderRadio = () => {
@@ -95,14 +99,7 @@ class _Container extends Component {
         </View>
         <Content style={{ padding: 10 }}>
           { this.renderRadio() }
-          
-          <Button
-              style={{ backgroundColor: "#183E61", marginBottom: 50, alignSelf: "flex-end" }}
-              full
-              rounded
-            >
-            <Text>Skip</Text>
-          </Button>  
+           
         </Content>
         </Container>
     );
