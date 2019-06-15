@@ -10,7 +10,8 @@ import {
   SERVICE_REQUEST_URL,
   TRANSLATION_PRICE_URL,
   MESSAGE_URL,
-  SERVICEREQUEST_LIST_URL
+  SERVICEREQUEST_LIST_URL,
+  VISASERVICE_URL
 } from "../../constants";
 export const attestationState = {
   LOADING: "ATTEST_LOADING",
@@ -83,6 +84,13 @@ export const translationRateState = {
   SUCCESS: "TRARATE_SUCCESS",
   ERROR: "TRARATE_ERROR",
   DONE: "TRARATE_DONE"
+};
+
+export const visaServiceState = {
+  LOADING: "VISA_SERVICE_LOADING",
+  SUCCESS: "VISA_SERVICE_SUCCESS",
+  ERROR: "VISA_SERVICE_ERROR",
+  DONE: "VISA_SERVICE_DONE"
 };
 
 export const checkResult = (result, dispatch, setError) => {
@@ -183,6 +191,31 @@ export const sendOrReplyMessage = payload => dispatch => {
       }));
     },
     messageState,
+    dispatch
+  );
+};
+
+export const visaServiceCreate = payload => dispatch => {
+  const { token, data } = payload;
+  const body = data;
+  return openFetcher(
+    async () => {
+      const result = await fetch(VISASERVICE_URL, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`
+        },
+        body
+      });
+      return result.json().then(data => ({
+        data: data,
+        status: result.ok
+      }));
+    },
+
+    visaServiceState,
     dispatch
   );
 };

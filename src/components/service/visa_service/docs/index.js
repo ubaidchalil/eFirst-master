@@ -16,27 +16,31 @@ import {
   Input
 } from "native-base";
 import MyHeader from "../../../../Header";
-import { DocumentPicker, DocumentPickerUtil } from 'react-native-document-picker';
+import {
+  DocumentPicker,
+  DocumentPickerUtil
+} from "react-native-document-picker";
 var ImagePicker = require("react-native-image-picker");
 
 class _Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      submissionType : "Through Courier",
-      docsAttached : []
+      submissionType: "Through Courier",
+      docsAttached: []
     };
   }
 
   componentDidMount = () => {
-    console.log(JSON.stringify(this.props.navigation.state.params.details["IBAN number"]==undefined));
+    console.log(
+      JSON.stringify(
+        this.props.navigation.state.params.details["IBAN number"] == undefined
+      )
+    );
   };
-  componentDidUpdate() {
-    
-  }
+  componentDidUpdate() {}
 
   openlaunchCamera = () => {
-    
     const options = {
       title: "Select Avatar",
       storageOptions: {
@@ -67,98 +71,97 @@ class _Container extends Component {
       }
     });
   };
-  
-  openFile = (doc) => {
+
+  openFile = doc => {
     var _docs = this.state.docsAttached;
-    DocumentPicker.show({
-      filetype: [DocumentPickerUtil.images()],
-    },(error,res) => {
-      // Android
-      console.log(
-         res.uri,
-         res.type, // mime type
-         res.fileName,
-         res.fileSize
-      );
-      console.log(_docs);
-      _docs.push(doc);
-    });
-    this.setState({docsAttached : _docs});
+    DocumentPicker.show(
+      {
+        filetype: [DocumentPickerUtil.images()]
+      },
+      (error, res) => {
+        // Android
+        console.log(
+          res.uri,
+          res.type, // mime type
+          res.fileName,
+          res.fileSize
+        );
+        console.log(_docs);
+        _docs.push(doc);
+      }
+    );
+    this.setState({ docsAttached: _docs });
   };
 
   goToDetails = () => {
     this.props.navigation.navigate("VisaServiceDetails", {
-        pageData: this.props.navigation.state.params.pageData,
-        docs: this.props.navigation.state.params.details.docs,
-        docsAttached: this.state.docsAttached 
-      });
-  }
+      pageData: this.props.navigation.state.params.pageData,
+      docs: this.props.navigation.state.params.details.docs,
+      docsAttached: this.state.docsAttached
+    });
+  };
 
   renderDocs = () => {
-    
-    return this.props.navigation.state.params.details.docs.map((doc) => {
+    return this.props.navigation.state.params.details.docs.map(doc => {
       return (
-        <View style={{marginTop:10}} >
-          <Item style={{ borderBottomWidth: 0, borderTopWidth:1 }}>
-            <Text style={{padding:10}} >{doc} </Text>
+        <View style={{ marginTop: 10 }}>
+          <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }}>
+            <Text style={{ padding: 10 }}>{doc} </Text>
           </Item>
-        <View>
-        <Text
-          style={{
-            textAlign: "center",
-            color: "#B2BABB",
-            padding: 10
-          }}
-        >
-          {(this.state.docsAttached.indexOf(doc)>=0)? "" : "FileName" }
-        </Text>
-      </View>
-      <View style={{ alignItems: "center", marginTop: 7 }}>
-        <View
-          style={{
-            flexDirection: "row",
-            borderWidth: 1,
-            borderColor: "#CACFD2",
-            borderRadius: 10
-          }}
-        >
-          <Button
-            transparent
-            dark
-            style={{ alignItems: "center" }}
-            onPress={() => this.openlaunchCamera()}
-          >
-            <Icon name="camera" />
-            <Text>Camera</Text>
-          </Button>
-          <Button
-            transparent
-            dark
-            style={{
-              borderLeftWidth: 1,
-              borderLeftColor: "#CACFD2",
-              alignItems: "center"
-            }}
-            onPress={() => this.openFile(doc)}
-          >
-            <Icon name="albums" />
-            <Text>Album</Text>
-          </Button>
+          <View>
+            <Text
+              style={{
+                textAlign: "center",
+                color: "#B2BABB",
+                padding: 10
+              }}
+            >
+              {this.state.docsAttached.indexOf(doc) >= 0 ? "" : "FileName"}
+            </Text>
+          </View>
+          <View style={{ alignItems: "center", marginTop: 7 }}>
+            <View
+              style={{
+                flexDirection: "row",
+                borderWidth: 1,
+                borderColor: "#CACFD2",
+                borderRadius: 10
+              }}
+            >
+              <Button
+                transparent
+                dark
+                style={{ alignItems: "center" }}
+                onPress={() => this.openlaunchCamera()}
+              >
+                <Icon name="camera" />
+                <Text>Camera</Text>
+              </Button>
+              <Button
+                transparent
+                dark
+                style={{
+                  borderLeftWidth: 1,
+                  borderLeftColor: "#CACFD2",
+                  alignItems: "center"
+                }}
+                onPress={() => this.openFile(doc)}
+              >
+                <Icon name="albums" />
+                <Text>Album</Text>
+              </Button>
+            </View>
+          </View>
         </View>
-      </View>
-      </View>
-
-
-      )
-    })
-
-  }
+      );
+    });
+  };
 
   render = () => {
     return (
       <Container>
         <MyHeader navigation={this.props.navigation} header="My Services" />
-  
+
         <View
           style={{
             backgroundColor: "#F7F9F9",
@@ -172,94 +175,120 @@ class _Container extends Component {
               Documents
             </Text>
           </View>
-          <Right>
-          </Right>
+          <Right />
         </View>
         <Content>
-         
-        <Item>
-          <Text style={{fontSize:16, padding:10, fontWeight:'bold'}} >Original Document Submission Type</Text>
-        </Item>
-
-        <ListItem onPress={()=>this.setState({submissionType : "Through Courier"})}>
-          <Left>
-            <Text>Through Courier</Text>
-          </Left>
-          <Right>
-            <Radio  selected={this.state.submissionType=="Through Courier"} />
-          </Right>
-        </ListItem>
-
-        <ListItem onPress={()=>this.setState({submissionType : "Direct Submission at Office"})}>
-          <Left>
-            <Text>Direct Submission at Office</Text>
-          </Left>
-          <Right>
-            <Radio selected={this.state.submissionType=="Direct Submission at Office"} />
-          </Right>
-        </ListItem>
-
-        <Item style={{borderBottomWidth:0}} >
-          <Text style={{fontSize:16, padding:10, fontWeight:'bold'}} >Upload Document Copies</Text>
-        </Item>
-         { this.renderDocs() }
-
-         {(this.props.navigation.state.params.details["IBAN number"]!=undefined) ? 
-         (
-           <View>
           <Item>
-            <Text style={{fontSize:16, padding:10, fontWeight:'bold', marginTop: 5}} >IBAN Number</Text>
+            <Text style={{ fontSize: 16, padding: 10, fontWeight: "bold" }}>
+              Original Document Submission Type
+            </Text>
           </Item>
-          <Item >
-              <Input
-                style={{ fontSize: 16 }}
-                placeholder="IBAN Number"
-                name="Iban"
-                label="Iban"
-              />
-            </Item>
-           </View>
-         ) : (<View/>)
-         }
 
-        <Item>
-          <Text style={{fontSize:16, padding:10, fontWeight:'bold'}} >Addition Notes</Text>
-        </Item>
-        <Item >
-              <Textarea
-                rowSpan={5}
-                placeholder="Notes"
-                underline
-                name="notes"
-                label="notes"
-                onChangeText={value => this.props.setFieldValue("notes", value)}
-                value={""}
+          <ListItem
+            onPress={() => this.setState({ submissionType: "Through Courier" })}
+          >
+            <Left>
+              <Text>Through Courier</Text>
+            </Left>
+            <Right>
+              <Radio
+                selected={this.state.submissionType == "Through Courier"}
               />
-        </Item>
+            </Right>
+          </ListItem>
 
-        <Button
-           style={{ backgroundColor: "#183E61", marginBottom: 30, marginTop: 10 }}
-           full
-           rounded
-           onPress={() => { this.goToDetails() }}
-        >
+          <ListItem
+            onPress={() =>
+              this.setState({ submissionType: "Direct Submission at Office" })
+            }
+          >
+            <Left>
+              <Text>Direct Submission at Office</Text>
+            </Left>
+            <Right>
+              <Radio
+                selected={
+                  this.state.submissionType == "Direct Submission at Office"
+                }
+              />
+            </Right>
+          </ListItem>
+
+          <Item style={{ borderBottomWidth: 0 }}>
+            <Text style={{ fontSize: 16, padding: 10, fontWeight: "bold" }}>
+              Upload Document Copies
+            </Text>
+          </Item>
+          {this.renderDocs()}
+
+          {this.props.navigation.state.params.details["IBAN number"] !=
+          undefined ? (
+            <View>
+              <Item>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    padding: 10,
+                    fontWeight: "bold",
+                    marginTop: 5
+                  }}
+                >
+                  IBAN Number
+                </Text>
+              </Item>
+              <Item>
+                <Input
+                  style={{ fontSize: 16 }}
+                  placeholder="IBAN Number"
+                  name="Iban"
+                  label="Iban"
+                />
+              </Item>
+            </View>
+          ) : (
+            <View />
+          )}
+
+          <Item>
+            <Text style={{ fontSize: 16, padding: 10, fontWeight: "bold" }}>
+              Addition Notes
+            </Text>
+          </Item>
+          <Item>
+            <Textarea
+              rowSpan={5}
+              placeholder="Notes"
+              underline
+              name="notes"
+              label="notes"
+              onChangeText={value => this.props.setFieldValue("notes", value)}
+              value={""}
+            />
+          </Item>
+
+          <Button
+            style={{
+              backgroundColor: "#183E61",
+              marginBottom: 30,
+              marginTop: 10
+            }}
+            full
+            rounded
+            onPress={() => {
+              this.goToDetails();
+            }}
+          >
             <Text>Next</Text>
-          </Button>  
+          </Button>
         </Content>
-        </Container>
+      </Container>
     );
   };
 }
 
-const mapStateToProps = ({
-  
-}) => ({
-  
-});
+const mapStateToProps = ({}) => ({});
 
-const mapDispatchToProps = dispatch => ({
-  
-});
+const mapDispatchToProps = dispatch => ({});
 
 export default connect(
   mapStateToProps,

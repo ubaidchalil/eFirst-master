@@ -31,6 +31,7 @@ export const DOC_ATTESTATION_CREATE_URL = `${BASE_URL}Service/CreateDocumentAtte
 export const CERTTYPE_URL = `${BASE_URL}Master/GetAllCertificateTypes`;
 export const DOCLANG_URL = `${BASE_URL}Master/GetAllDoucmentLanguages`;
 export const LANGTRANS_URL = `${BASE_URL}Service/CreateLanguageTranslation`;
+export const VISASERVICE_URL = `${BASE_URL}Service/CreateAmerService`;
 
 /// PROFILE URLS ///
 export const PROFILE_URL = `${BASE_URL}Profile/Get`;

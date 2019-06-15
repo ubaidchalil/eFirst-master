@@ -13,4 +13,6 @@ target 'efirst3' do
 
   pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
 
+  pod 'react-native-document-picker', :path => '../node_modules/react-native-document-picker'
+
 end

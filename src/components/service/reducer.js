@@ -9,7 +9,8 @@ import {
   langTransState,
   serviceRequestState,
   translationRateState,
-  messageState
+  messageState,
+  visaServiceState
 } from "./action";
 
 const initialDocumentAttestation = {
@@ -59,6 +60,13 @@ const initialCertificateType = {
 };
 
 const initialDocumentLanguage = {
+  loading: false,
+  data: [],
+  success: null,
+  error: null
+};
+
+const initialVisaService = {
   loading: false,
   data: [],
   success: null,
@@ -121,6 +129,20 @@ export const langtranslation = (state = initialLangTranslation, action) => {
   }
 };
 
+export const visaservice = (state = initialVisaService, action) => {
+  switch (action.type) {
+    case visaServiceState.LOADING:
+      return { ...state, loading: action.state };
+    case visaServiceState.DONE:
+      return { ...state, data: action.state };
+    case visaServiceState.SUCCESS:
+      return { ...state, success: action.state };
+    case visaServiceState.ERROR:
+      return { ...state, error: action.state };
+    default:
+      return state;
+  }
+};
 export const message = (state = initialMessage, action) => {
   switch (action.type) {
     case messageState.LOADING:

@@ -18,26 +18,28 @@ import BottomBar from "../BottomBar";
 import Profile from "../components/profile/profile";
 import ServiceDetail from "../components/service/servicerequest";
 import VisaServiceStack from "./visaservice_stack";
-
-export const RequestServiceStack = createStackNavigator({
-  SelectService: {
-    screen: SelectService
+import VisaServiceScreen from "../components/service/file_upload";
+export const RequestServiceStack = createStackNavigator(
+  {
+    SelectService: {
+      screen: SelectService
+    },
+    DocumentAttestation: {
+      screen: DocumentAttestation
+    },
+    LanguageTranslation: {
+      screen: LanguageTranslation
+    },
+    VisaService: {
+      screen: VisaServiceStack
+    }
   },
-  DocumentAttestation: {
-    screen: DocumentAttestation
-  },
-  LanguageTranslation: {
-    screen: LanguageTranslation
-  },
-  VisaService: {
-    screen: VisaServiceStack
+  {
+    defaultNavigationOptions: {
+      header: null
+    }
   }
-},
-{
-  defaultNavigationOptions: {
-    header: null
-  }
-});
+);
 
 const Tabs = createBottomTabNavigator(
   {
@@ -47,7 +49,8 @@ const Tabs = createBottomTabNavigator(
     Profile: { screen: Profile },
     FAQ: { screen: FAQ },
     Support: { screen: Support },
-    ServiceDetail: { screen: ServiceDetail }
+    ServiceDetail: { screen: ServiceDetail },
+    VisaServiceScreen: { screen: VisaServiceScreen }
   },
   {
     tabBarComponent: BottomBar,
@@ -71,18 +74,20 @@ const Drawer = createDrawerNavigator(
   }
 );
 
-const root = createStackNavigator({
-  Auth: {
-    screen: AuthStack
+const root = createStackNavigator(
+  {
+    Auth: {
+      screen: AuthStack
+    },
+    Home: {
+      screen: Drawer
+    }
   },
-  Home: {
-    screen: Drawer
+  {
+    defaultNavigationOptions: {
+      header: null
+    }
   }
-},
-{
-  defaultNavigationOptions: {
-    header: null
-  }
-});
+);
 
 export default createAppContainer(root);
