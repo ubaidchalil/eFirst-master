@@ -21,7 +21,7 @@ class _Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+      totalBillAmt : 0
     };
   }
 
@@ -39,17 +39,23 @@ class _Container extends Component {
     var docsAndPayment = this.props.navigation.state.params.docsAndPayment;
     var Documents = [];
 
+    const docsAttached = this.props.navigation.state.params.docsAttached
+
+    _data.TotalBillAmount = this.state.totalBillAmt;
+    _data.CurrencyUsed = "AED";
+    _data.MinimumServiceCharge = 105;
+
     this.props.navigation.state.params.docs.forEach(function(doc){
       Documents.push({
         Text : doc,
         Name : doc.replace(/ /g,''),
-        FileUploaded: docs.indexOf(doc)>=0 ? "YES" : "NO"
+        FileUploaded: docsAttached.indexOf(doc)>=0 ? "YES" : "NO"
       })
     });
 
     docsAndPayment.Documents= Documents;
     pageData.push(docsAndPayment);
-    _data.pageData = pageData;
+    _data.PageData = pageData;
 
     const serviceData = JSON.stringify(_data);
 
@@ -107,6 +113,7 @@ class _Container extends Component {
     this.props.navigation.state.params.docsAndPayment.PriceDetails.forEach(function(item){
         total += parseFloat(item.Value);
       });
+      this.setState({totalBillAmt : total});
       return (
         <Item>
           <Text style={{padding:10, fontWeight:'bold'}} >Total : </Text>
