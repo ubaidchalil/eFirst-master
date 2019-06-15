@@ -78,11 +78,7 @@ export const visaServiceData = {
         Value: "Test Note"
       },
       Notes: { Text: "Notes", Name: "Notes", Value: "" },
-      OriginalDocumentRequired: {
-        Text: "Original Document Required",
-        Name: "OriginalDocumentRequired",
-        Options: ["Sponsors Emirates ID"]
-      },
+
       PriceDetils: [
         {
           Text: "Sponsor File Opening",
@@ -106,11 +102,7 @@ export const visaServiceData = {
           $$hashKey: "object:843"
         }
       ],
-      "Courier Charge": {
-        Text: "Courier Charge",
-        Name: "CourierCharge",
-        Value: "XX (if opt service)"
-      },
+
       Documents: [
         {
           Text: "Sponsors emirates ID",
@@ -189,42 +181,58 @@ export const visaServiceData = {
           IsRequired: false,
           $$hashKey: "object:859"
         }
-      ],
-      ShowHideLogic: {
-        Operator: "AND",
-        Condition: [
-          {
-            ContolName: "VisaServiceQuestion",
-            Operator: "EQUAL",
-            TriggeringValue: "New Visa"
-          },
-          {
-            ContolName: "NewVisaServiceType",
-            Operator: "EQUAL",
-            TriggeringValue: "Entry Permit"
-          },
-          {
-            ContolName: "EntryPermitVisaType",
-            Operator: "EQUAL",
-            TriggeringValue: "Family Visa"
-          },
-          {
-            ContolName: "WhoIsTheSponsorQuestion1",
-            Operator: "EQUAL",
-            TriggeringValue: "Partner/Investor"
-          },
-          {
-            ContolName: "WhomToSponsorQuestion1",
-            Operator: "EQUAL",
-            TriggeringValue: "Husband/Wife"
-          },
-          {
-            ContolName: "Location1",
-            Operator: "EQUAL",
-            TriggeringValue: "Inside Country"
-          }
-        ]
-      }
+      ]
     }
   ]
 };
+
+// export const visaServiceData = {
+//     CustomerName: "Anees",
+//     Email: "thanikalanees@yahoo.com",
+//     PersonalPhone: "+919686957085",
+//     OfficePhone: "23234234",
+//     Address1: "Indirangar, Bangalore",
+//     Zip: "213123",
+//     AddressCountry: "United Arab Emirates",
+//     Street: "234234234\n",
+//     City: "Khalidiya",
+//     SelectedState: "Abu Dhabi",
+//     SelectedCountryId: 5,
+//     pageData: [
+//       { Text: "Select Service", Value: "New Visa" },
+//       { Text: "Select Service", Value: "New Visa" },
+//       { Text: "Service Type", Value: "Entry Permit" },
+//       { Text: "Visa Type", Value: "Partner/Investor Visa" },
+//       { Text: "Location", Value: "Inside Country" }
+//     ],
+//     IBANNumber: { Text: "IBAN Number", value: "" },
+//     AdditionalNotes: { Text: "Additional Notes", value: "gfdggf" },
+//     PriceDetails: [
+//       { Text: "Gov. fees", Value: 535 },
+//       { Text: "Service charge", Value: 105 },
+//       { Text: "Courier Charge", Value: 10 }
+//     ]
+//   };
+//   PriceDetils: [
+//         {
+//           Text: "Sponsor File Opening",
+//           Currency: "AED",
+//           Value: 324,
+//           Comments: "",
+//           $$hashKey: "object:841"
+//         },
+//         {
+//           Text: "Gov. fees",
+//           Currency: "AED",
+//           Value: 4222,
+//           Comments: "(inside country visa)",
+//           $$hashKey: "object:842"
+//         },
+//         {
+//           Text: "Service charge",
+//           Currency: "AED",
+//           Value: 105,
+//           Comments: "(VAT included)",
+//           $$hashKey: "object:843"
+//         }
+//       ],
