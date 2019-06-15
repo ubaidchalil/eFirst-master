@@ -104,24 +104,52 @@ class _Container extends Component {
 
   goToDetails = () => {
     var data = this.props.navigation.state.params.data;
+    var pageData = this.props.navigation.state.params.pageData;
     var price_details = this.props.navigation.state.params.details.PriceDetails;
-    data.IBANNumber = {
+
+    var docsAndPayment = {
+      Text: "Documents and Payment Collection",
+      Name:
+        "PIFV_New_EntryPermit_FamilyVisa_PartnerOrInvestor_HusbandOrWife_InsideCountry",
+      ControlType: "AdditionalDetails",
+      Value: "",
+      IsRequired: false,
+      IsVisible: true,
+    };
+    
+    docsAndPayment.IBANNumber = {
       Text: "IBAN Number",
+      Name: "IBANNumber",
+      IsRequired: false,
       value: this.state.iban
     }
-    data.AdditionalNotes = {
+    docsAndPayment.AdditionalNotes = {
       Text: "Additional Notes",
+      Name: "AdditionalNotes",
+      IsRequired: false,
       value: this.state.notes
     }
+
+    docsAndPayment.OriginalDocumentSubmissionType = {
+      Text: "Original Document Submission Type",
+      Name: "OriginalDocumentSubmissionType",
+      IsRequired: true,
+      Options: ["Through Courier", "Direct Submission at Office"],
+      Value: this.state.submissionType,
+      CourierCharge: 10
+    }
+
     if(this.state.submissionType == "Through Courier")
       price_details.push({ Text: "Courier Charge", Value: this.state.courier_charge })
-    data.PriceDetails = price_details;
+    docsAndPayment.PriceDetails = price_details;
       
     this.props.navigation.navigate("VisaServiceDetails", {
         data: data,
+        pageData: pageData,
         docs: this.props.navigation.state.params.details.docs,
         docsAttached: this.state.docsAttached,
-        docItem: this.state.docItem
+        docItem: this.state.docItem,
+        docsAndPayment: docsAndPayment
       });
   }
 

@@ -36,7 +36,7 @@ export default visa_options = {
             "1 photo (White background)"
           ],
           "PriceDetails": [
-            { Text : "Gov. fees", Value : 535 },
+            { Text : "Gov. fees", Value : 1180 },
             { Text : "Service charge", Value : 105 }
           ]
         },
@@ -90,7 +90,8 @@ export default visa_options = {
                 "Last 3 months bank statement (if available)"
               ],
               "PriceDetails": [
-                { Text : "Gov. fees", Value : 535 },
+                { Text : "Sponsor File Opening", Value : 324 },
+                { Text : "Gov. fees", Value : 4222 },
                 { Text : "Service charge", Value : 105 }
               ],
               "IBAN number": ""
@@ -103,6 +104,438 @@ export default visa_options = {
                 "Sponsor Visa",
                 "Residential ejari (under sponsors name)",
                 "Memorandum of association (MOA)",
+                "Marriage certificate attested",
+                "Sponsored Passport(Front)",
+                "Sponsored Passport(Back)",
+                "1 photo (White background)",
+                "Last 3 months bank statement (if available)"
+              ],
+              "PriceDetails": [
+                { Text : "Sponsor File Opening", Value : 324 },
+                { Text : "Gov. fees", Value : 3575 },
+                { Text : "Service charge", Value : 105 }
+              ],
+              "IBAN number": ""
+            }
+          },
+          "Parents": {
+            "title": "Select Parents",
+            "options": [
+              "Mother",
+              "Father",
+              "Mother & Father"
+            ],
+            "Mother": {
+              "title": "Select Location",
+              "options": [
+                "Inside Country",
+                "Outside Country"
+              ],
+              "Inside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "License",
+                  "Relationship certiﬁcate from embassy (Attested)",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)",
+                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "If divorced (divorce letter)",
+                  "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 6165 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              },
+              "Outside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "License",
+                  "Relationship certiﬁcate from embassy (Attested)",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)",
+                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "If divorced (divorce letter)",
+                  "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 5550 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              }
+            },
+            "Father": {
+              "title": "Select Location",
+              "options": [
+                "Inside Country",
+                "Outside Country"
+              ],
+              "Inside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "License",
+                  "Relationship certiﬁcate from embassy (Attested)",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)",
+                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "If divorced (divorce letter)",
+                  "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 6165 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              },
+              "Outside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "License",
+                  "Relationship certiﬁcate from embassy (Attested)",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)",
+                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "If divorced (divorce letter)",
+                  "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 5550 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              }
+            },
+            "Mother & Father": {
+              "title": "Select Location",
+              "options": [
+                "Inside Country",
+                "Outside Country"
+              ],
+              "Inside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "License",
+                  "Relationship certiﬁcate from embassy (Attested)",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)",
+                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "If divorced (divorce letter)",
+                  "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 6165 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              },
+              "Outside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "License",
+                  "Relationship certiﬁcate from embassy (Attested)",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)",
+                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "If divorced (divorce letter)",
+                  "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 5550 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              }
+            }
+          },
+          "Child": {
+            "title": "Select Child Age",
+            "options": [
+              "Below 18",
+              "Girl Above 18",
+              "Boy 18 - 21",
+              "Boy Above 21"
+            ],
+            "Below 18": {
+              "title": "Select Location",
+              "options": [
+                "Inside Country",
+                "Outside Country"
+              ],
+              "Inside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "Birth certiﬁcate attested",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 4222 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              },
+              "Outside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "Birth certiﬁcate attested",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 3575 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              }
+            },
+            "Girl Above 18": {
+              "title": "Select Location",
+              "options": [
+                "Inside Country",
+                "Outside Country"
+              ],
+              "Inside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "Birth certiﬁcate attested",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)",
+                  "Undertaking Letter from sponsor showing that she is not married"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 4222 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              },
+              "Outside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "Birth certiﬁcate attested",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)",
+                  "Undertaking Letter from sponsor showing that she is not married"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 3575 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              }
+            },
+            "Boy 18 - 21": {
+              "title": "Select Location",
+              "options": [
+                "Inside Country",
+                "Outside Country"
+              ],
+              "Inside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "Birth certiﬁcate attested",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)",
+                  "College certiﬁcate or continuity certiﬁcate of uae"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 4222 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              },
+              "Outside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "Birth certiﬁcate attested",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)",
+                  "College certiﬁcate or continuity certiﬁcate of uae"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 3575 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              }
+            },
+            "Boy Above 21": {
+              "title": "Select Location",
+              "options": [
+                "Inside Country",
+                "Outside Country"
+              ],
+              "Inside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "Birth certiﬁcate attested",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)",
+                  "College certiﬁcate or continuity certiﬁcate of uae"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 4222 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              },
+              "Outside Country": {
+                "docs": [
+                  "Sponsors emirates ID",
+                  "Sponsors Passport(Front)",
+                  "Sponsors Passport(Back)",
+                  "Sponsor Visa",
+                  "Residential ejari (under sponsors name)",
+                  "Memorandum of association (MOA)",
+                  "Birth certiﬁcate attested",
+                  "Sponsored Passport(Front)",
+                  "Sponsored Passport(Back)",
+                  "1 photo (White background)",
+                  "Last 3 months bank statement (if available)",
+                  "College certiﬁcate or continuity certiﬁcate of uae"
+                ],
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 3575 },
+                  { Text : "Service charge", Value : 105 }
+                ],
+                "IBAN number": ""
+              }
+            }
+          }
+        },
+        "Employee": {
+          "title": "Whom to Sponsor?",
+          "options": [
+            "Husband/Wife",
+            "Parents",
+            "Child"
+          ],
+          "Husband/Wife": {
+            "title": "Select Location",
+            "options": [
+              "Inside Country",
+              "Outside Country"
+            ],
+            "Inside Country": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Sponsors Passport(Front)",
+                "Sponsors Passport(Back)",
+                "Sponsor Visa",
+                "Residential ejari (under sponsors name)",
+                "Labour contract",
+                "Marriage certificate attested",
+                "Sponsored Passport(Front)",
+                "Sponsored Passport(Back)",
+                "1 photo (White background)",
+                "Last 3 months bank statement (if available)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 1182 },
+                { Text : "Service charge", Value : 105 }
+              ],
+              "IBAN number": ""
+            },
+            "Outside Country": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Sponsors Passport(Front)",
+                "Sponsors Passport(Back)",
+                "Sponsor Visa",
+                "Residential ejari (under sponsors name)",
+                "Labour contract",
                 "Marriage certificate attested",
                 "Sponsored Passport(Front)",
                 "Sponsored Passport(Back)",
@@ -136,7 +569,6 @@ export default visa_options = {
                   "Sponsors Passport(Back)",
                   "Sponsor Visa",
                   "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport(Front)",
@@ -147,7 +579,10 @@ export default visa_options = {
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
-                "fees": 4222,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 6165 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               },
               "Outside Country": {
@@ -157,7 +592,6 @@ export default visa_options = {
                   "Sponsors Passport(Back)",
                   "Sponsor Visa",
                   "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport(Front)",
@@ -168,7 +602,10 @@ export default visa_options = {
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
-                "fees": 3575,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 5550 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               }
             },
@@ -196,7 +633,10 @@ export default visa_options = {
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
-                "fees": 4222,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 6165 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               },
               "Outside Country": {
@@ -217,388 +657,10 @@ export default visa_options = {
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
-                "fees": 3575,
-                "IBAN number": ""
-              }
-            },
-            "Mother & Father": {
-              "title": "Select Location",
-              "options": [
-                "Inside Country",
-                "Outside Country"
-              ],
-              "Inside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
-                  "License",
-                  "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
-                  "If divorced (divorce letter)",
-                  "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 5550 },
+                  { Text : "Service charge", Value : 105 }
                 ],
-                "fees": 4222,
-                "IBAN number": ""
-              },
-              "Outside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
-                  "License",
-                  "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
-                  "If divorced (divorce letter)",
-                  "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
-                ],
-                "fees": 3575,
-                "IBAN number": ""
-              }
-            }
-          },
-          "Child": {
-            "title": "Select Child Age",
-            "options": [
-              "Below 18",
-              "Girl Above 18",
-              "Boy 18 - 21",
-              "Boy Above 21"
-            ],
-            "Below 18": {
-              "title": "Select Location",
-              "options": [
-                "Inside Country",
-                "Outside Country"
-              ],
-              "Inside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
-                  "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)"
-                ],
-                "fees": 4222,
-                "IBAN number": ""
-              },
-              "Outside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
-                  "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)"
-                ],
-                "fees": 3575,
-                "IBAN number": ""
-              }
-            },
-            "Girl Above 18": {
-              "title": "Select Location",
-              "options": [
-                "Inside Country",
-                "Outside Country"
-              ],
-              "Inside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
-                  "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Undertaking Letter from sponsor showing that she is not married"
-                ],
-                "fees": 4222,
-                "IBAN number": ""
-              },
-              "Outside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
-                  "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Undertaking Letter from sponsor showing that she is not married"
-                ],
-                "fees": 3575,
-                "IBAN number": ""
-              }
-            },
-            "Boy 18 - 21": {
-              "title": "Select Location",
-              "options": [
-                "Inside Country",
-                "Outside Country"
-              ],
-              "Inside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
-                  "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "College certiﬁcate or continuity certiﬁcate of uae"
-                ],
-                "fees": 4222,
-                "IBAN number": ""
-              },
-              "Outside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
-                  "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "College certiﬁcate or continuity certiﬁcate of uae"
-                ],
-                "fees": 3575,
-                "IBAN number": ""
-              }
-            },
-            "Boy Above 21": {
-              "title": "Select Location",
-              "options": [
-                "Inside Country",
-                "Outside Country"
-              ],
-              "Inside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
-                  "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "College certiﬁcate or continuity certiﬁcate of uae"
-                ],
-                "fees": 4222,
-                "IBAN number": ""
-              },
-              "Outside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
-                  "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "College certiﬁcate or continuity certiﬁcate of uae"
-                ],
-                "fees": 3575,
-                "IBAN number": ""
-              }
-            }
-          }
-        },
-        "Employee": {
-          "title": "Whom to Sponsor?",
-          "options": [
-            "Husband/Wife",
-            "Parents",
-            "Child"
-          ],
-          "Husband/Wife": {
-            "title": "Select Location",
-            "options": [
-              "Inside Country",
-              "Outside Country"
-            ],
-            "Inside Country": {
-              "docs": [
-                "Sponsors emirates ID",
-                "Sponsors Passport(Front)",
-                "Sponsors Passport(Back)",
-                "Sponsor Visa",
-                "Residential ejari (under sponsors name)",
-                "Labour contract",
-                "Marriage certificate attested",
-                "Sponsored Passport(Front)",
-                "Sponsored Passport(Back)",
-                "1 photo (White background)",
-                "Last 3 months bank statement (if available)"
-              ],
-              "fees": 4222,
-              "IBAN number": ""
-            },
-            "Outside Country": {
-              "docs": [
-                "Sponsors emirates ID",
-                "Sponsors Passport(Front)",
-                "Sponsors Passport(Back)",
-                "Sponsor Visa",
-                "Residential ejari (under sponsors name)",
-                "Labour contract",
-                "Marriage certificate attested",
-                "Sponsored Passport(Front)",
-                "Sponsored Passport(Back)",
-                "1 photo (White background)",
-                "Last 3 months bank statement (if available)"
-              ],
-              "fees": 3575,
-              "IBAN number": ""
-            }
-          },
-          "Parents": {
-            "title": "Select Parents",
-            "options": [
-              "Mother",
-              "Father",
-              "Mother & Father"
-            ],
-            "Mother": {
-              "title": "Select Location",
-              "options": [
-                "Inside Country",
-                "Outside Country"
-              ],
-              "Inside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "License",
-                  "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
-                  "If divorced (divorce letter)",
-                  "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
-                ],
-                "fees": 4222,
-                "IBAN number": ""
-              },
-              "Outside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "License",
-                  "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
-                  "If divorced (divorce letter)",
-                  "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
-                ],
-                "fees": 3575,
-                "IBAN number": ""
-              }
-            },
-            "Father": {
-              "title": "Select Location",
-              "options": [
-                "Inside Country",
-                "Outside Country"
-              ],
-              "Inside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
-                  "License",
-                  "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
-                  "If divorced (divorce letter)",
-                  "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
-                ],
-                "fees": 4222,
-                "IBAN number": ""
-              },
-              "Outside Country": {
-                "docs": [
-                  "Sponsors emirates ID",
-                  "Sponsors Passport(Front)",
-                  "Sponsors Passport(Back)",
-                  "Sponsor Visa",
-                  "Residential ejari (under sponsors name)",
-                  "Memorandum of association (MOA)",
-                  "License",
-                  "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
-                  "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
-                  "If divorced (divorce letter)",
-                  "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
-                ],
-                "fees": 3575,
                 "IBAN number": ""
               }
             },
@@ -623,7 +685,10 @@ export default visa_options = {
                   "Last 3 months bank statement (if available)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
-                "fees": 4222,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 6165 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               },
               "Outside Country": {
@@ -641,7 +706,10 @@ export default visa_options = {
                   "Last 3 months bank statement (if available)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
-                "fees": 3575,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 5550 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               }
             }
@@ -674,7 +742,10 @@ export default visa_options = {
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 4222,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 1182 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               },
               "Outside Country": {
@@ -691,7 +762,10 @@ export default visa_options = {
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 3575,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 535 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               }
             },
@@ -716,7 +790,10 @@ export default visa_options = {
                   "Last 3 months bank statement (if available)",
                   "Undertaking Letter from sponsor showing that she is not married"
                 ],
-                "fees": 4222,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 1182 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               },
               "Outside Country": {
@@ -734,7 +811,10 @@ export default visa_options = {
                   "Last 3 months bank statement (if available)",
                   "Undertaking Letter from sponsor showing that she is not married"
                 ],
-                "fees": 3575,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 535 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               }
             },
@@ -759,7 +839,10 @@ export default visa_options = {
                   "Last 3 months bank statement (if available)",
                   "College certiﬁcate or continuity certiﬁcate of uae"
                 ],
-                "fees": 4222,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 1182 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               },
               "Outside Country": {
@@ -777,7 +860,10 @@ export default visa_options = {
                   "Last 3 months bank statement (if available)",
                   "College certiﬁcate or continuity certiﬁcate of uae"
                 ],
-                "fees": 3575,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 535 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               }
             },
@@ -802,7 +888,10 @@ export default visa_options = {
                   "Last 3 months bank statement (if available)",
                   "College certiﬁcate or continuity certiﬁcate of uae"
                 ],
-                "fees": 4222,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 1182 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               },
               "Outside Country": {
@@ -820,7 +909,10 @@ export default visa_options = {
                   "Last 3 months bank statement (if available)",
                   "College certiﬁcate or continuity certiﬁcate of uae"
                 ],
-                "fees": 3575,
+                "PriceDetails": [
+                  { Text : "Gov. fees", Value : 535 },
+                  { Text : "Service charge", Value : 105 }
+                ],
                 "IBAN number": ""
               }
             }
@@ -844,7 +936,10 @@ export default visa_options = {
           "Passport (Back)",
           "Sponsor emirates id"
         ],
-        "fees": 4222
+        "PriceDetails": [
+          { Text : "Gov. fees", Value : 682 },
+          { Text : "Service charge", Value : 105 }
+        ],
       },
       "Family Visa": {
         "docs": [
@@ -856,7 +951,10 @@ export default visa_options = {
           "Passport (Back)",
           "Sponsor emirates id"
         ],
-        "fees": 4222
+        "PriceDetails": [
+          { Text : "Gov. fees", Value : 682 },
+          { Text : "Service charge", Value : 105 }
+        ],
       }
     },
     "Visa Stamping": {
@@ -882,7 +980,10 @@ export default visa_options = {
             "Immigration card for company visas",
             "Sponsors visa page for family"
           ],
-          "fees": 4222
+          "PriceDetails": [
+            { Text : "Gov. fees", Value : 850 },
+            { Text : "Service charge", Value : 105 }
+          ],
         },
         "Urgent": {
           "docs": [
@@ -894,7 +995,10 @@ export default visa_options = {
             "Immigration card for company visas",
             "Sponsors visa page for family"
           ],
-          "fees": 4222
+          "PriceDetails": [
+            { Text : "Gov. fees", Value : 970 },
+            { Text : "Service charge", Value : 105 }
+          ],
         }
       },
       "Family Visa": {
@@ -919,7 +1023,10 @@ export default visa_options = {
               "Immigration card for company visas",
               "Sponsors visa page for family"
             ],
-            "fees": 4222
+            "PriceDetails": [
+              { Text : "Gov. fees", Value : 700 },
+              { Text : "Service charge", Value : 105 }
+            ],
           },
           "Urgent": {
             "docs": [
@@ -931,7 +1038,10 @@ export default visa_options = {
               "Immigration card for company visas",
               "Sponsors visa page for family"
             ],
-            "fees": 4222
+            "PriceDetails": [
+              { Text : "Gov. fees", Value : 800 },
+              { Text : "Service charge", Value : 105 }
+            ],
           }
         },
         "Employee": {
@@ -956,7 +1066,10 @@ export default visa_options = {
                 "Immigration card for company visas",
                 "Sponsors visa page for family"
               ],
-              "fees": 4222
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 625 },
+                { Text : "Service charge", Value : 105 }
+              ],
             },
             "Urgent": {
               "docs": [
@@ -968,7 +1081,10 @@ export default visa_options = {
                 "Immigration card for company visas",
                 "Sponsors visa page for family"
               ],
-              "fees": 4222
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 705 },
+                { Text : "Service charge", Value : 105 }
+              ],
             }
           },
           "2 Years": {
@@ -987,7 +1103,10 @@ export default visa_options = {
                 "Immigration card for company visas",
                 "Sponsors visa page for family"
               ],
-              "fees": 4222
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 500 },
+                { Text : "Service charge", Value : 105 }
+              ],
             },
             "Urgent": {
               "docs": [
@@ -999,7 +1118,10 @@ export default visa_options = {
                 "Immigration card for company visas",
                 "Sponsors visa page for family"
               ],
-              "fees": 4222
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 600 },
+                { Text : "Service charge", Value : 105 }
+              ],
             }
           }
         }
@@ -1029,7 +1151,10 @@ export default visa_options = {
               "Sponsors emirates id",
               "Ejari under sponsors name"
             ],
-            "fees": 4222
+            "PriceDetails": [
+              { Text : "Gov. fees", Value : 633 },
+              { Text : "Service charge", Value : 105 }
+            ],
           },
           "Urgent": {
             "docs": [
@@ -1044,7 +1169,10 @@ export default visa_options = {
               "Sponsors emirates id",
               "Ejari under sponsors name"
             ],
-            "fees": 4222
+            "PriceDetails": [
+              { Text : "Gov. fees", Value : 713 },
+              { Text : "Service charge", Value : 105 }
+            ],
           }
         },
         "Employee": {
@@ -1066,7 +1194,10 @@ export default visa_options = {
               "Sponsors emirates id",
               "Ejari under sponsors name"
             ],
-            "fees": 4222
+            "PriceDetails": [
+              { Text : "Gov. fees", Value : 633 },
+              { Text : "Service charge", Value : 105 }
+            ],
           },
           "Urgent": {
             "docs": [
@@ -1081,7 +1212,10 @@ export default visa_options = {
               "Sponsors emirates id",
               "Ejari under sponsors name"
             ],
-            "fees": 4222
+            "PriceDetails": [
+              { Text : "Gov. fees", Value : 713 },
+              { Text : "Service charge", Value : 105 }
+            ],
           }
         }
       }
@@ -1117,7 +1251,14 @@ export default visa_options = {
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
-            "fees": 535
+            "PriceDetails": [
+              { Text : "Entry Permit", Value : 0 },
+              { Text : "Change Status", Value : 0 },
+              { Text : "Stamping", Value : 0 },
+              { Text : "Medical Charges", Value : 324 },
+              { Text : "Insurance", Value : 1550 },
+              { Text : "Emirates ID Price", Value : 274 }
+            ]
           },
           "48 Hours": {
             "docs": [
@@ -1130,7 +1271,14 @@ export default visa_options = {
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
-            "fees": 535
+            "PriceDetails": [
+              { Text : "Entry Permit", Value : 0 },
+              { Text : "Change Status", Value : 0 },
+              { Text : "Stamping", Value : 0 },
+              { Text : "Medical Charges", Value : 440 },
+              { Text : "Insurance", Value : 1550 },
+              { Text : "Emirates ID Price", Value : 274 }
+            ]
           },
           "24  Hours": {
             "docs": [
@@ -1143,7 +1291,14 @@ export default visa_options = {
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
-            "fees": 535
+            "PriceDetails": [
+              { Text : "Entry Permit", Value : 0 },
+              { Text : "Change Status", Value : 0 },
+              { Text : "Stamping", Value : 0 },
+              { Text : "Medical Charges", Value : 550 },
+              { Text : "Insurance", Value : 15500 },
+              { Text : "Emirates ID Price", Value : 274 }
+            ]
           },
           "5 Hours": {
             "docs": [
@@ -1156,7 +1311,14 @@ export default visa_options = {
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
-            "fees": 535
+            "PriceDetails": [
+              { Text : "Entry Permit", Value : 0 },
+              { Text : "Change Status", Value : 0 },
+              { Text : "Stamping", Value : 0 },
+              { Text : "Medical Charges", Value : 752 },
+              { Text : "Insurance", Value : 1550 },
+              { Text : "Emirates ID Price", Value : 274 }
+            ]
           }
         },
         "Outside Country": {
@@ -1178,7 +1340,14 @@ export default visa_options = {
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
-            "fees": 535
+            "PriceDetails": [
+              { Text : "Entry Permit", Value : 0 },
+              { Text : "Change Status", Value : 0 },
+              { Text : "Stamping", Value : 0 },
+              { Text : "Medical Charges", Value : 324 },
+              { Text : "Insurance", Value : 1550 },
+              { Text : "Emirates ID Price", Value : 274 }
+            ]
           },
           "48 Hours": {
             "docs": [
@@ -1191,7 +1360,14 @@ export default visa_options = {
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
-            "fees": 535
+            "PriceDetails": [
+              { Text : "Entry Permit", Value : 0 },
+              { Text : "Change Status", Value : 0 },
+              { Text : "Stamping", Value : 0 },
+              { Text : "Medical Charges", Value : 440 },
+              { Text : "Insurance", Value : 1550 },
+              { Text : "Emirates ID Price", Value : 274 }
+            ]
           },
           "24  Hours": {
             "docs": [
@@ -1204,7 +1380,14 @@ export default visa_options = {
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
-            "fees": 535
+            "PriceDetails": [
+              { Text : "Entry Permit", Value : 0 },
+              { Text : "Change Status", Value : 0 },
+              { Text : "Stamping", Value : 0 },
+              { Text : "Medical Charges", Value : 550 },
+              { Text : "Insurance", Value : 1550 },
+              { Text : "Emirates ID Price", Value : 274 }
+            ]
           },
           "5 Hours": {
             "docs": [
@@ -1217,7 +1400,14 @@ export default visa_options = {
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
-            "fees": 535
+            "PriceDetails": [
+              { Text : "Entry Permit", Value : 0 },
+              { Text : "Change Status", Value : 0 },
+              { Text : "Stamping", Value : 0 },
+              { Text : "Medical Charges", Value : 752 },
+              { Text : "Insurance", Value : 1550 },
+              { Text : "Emirates ID Price", Value : 274 }
+            ]
           }
         }
       },
@@ -1262,7 +1452,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                "PriceDetails": [
+                  { Text : "Entry Permit", Value : 0 },
+                  { Text : "Change Status", Value : 0 },
+                  { Text : "Stamping", Value : 0 },
+                  { Text : "Medical Charges", Value : 752 },
+                  { Text : "Insurance", Value : 780 },
+                  { Text : "Emirates ID Price", Value : 174 }
+                ],
                 "IBAN Number": ""
               },
               "48 Hours": {
@@ -1279,7 +1476,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                "PriceDetails": [
+                  { Text : "Entry Permit", Value : 0 },
+                  { Text : "Change Status", Value : 0 },
+                  { Text : "Stamping", Value : 0 },
+                  { Text : "Medical Charges", Value : 752 },
+                  { Text : "Insurance", Value : 780 },
+                  { Text : "Emirates ID Price", Value : 174 }
+                ],
                 "IBAN Number": ""
               },
               "24  Hours": {
@@ -1296,7 +1500,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                "PriceDetails": [
+                  { Text : "Entry Permit", Value : 0 },
+                  { Text : "Change Status", Value : 0 },
+                  { Text : "Stamping", Value : 0 },
+                  { Text : "Medical Charges", Value : 752 },
+                  { Text : "Insurance", Value : 780 },
+                  { Text : "Emirates ID Price", Value : 174 }
+                ],
                 "IBAN Number": ""
               },
               "5 Hours": {
@@ -1313,7 +1524,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                "PriceDetails": [
+                  { Text : "Entry Permit", Value : 0 },
+                  { Text : "Change Status", Value : 0 },
+                  { Text : "Stamping", Value : 0 },
+                  { Text : "Medical Charges", Value : 752 },
+                  { Text : "Insurance", Value : 780 },
+                  { Text : "Emirates ID Price", Value : 174 }
+                ],
                 "IBAN Number": ""
               }
             },
