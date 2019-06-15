@@ -68,7 +68,7 @@ export default ({ navigation }) => {
           </View>
           <View style={styles.footer}>
             <TouchableOpacity
-              onPress={() => navigation.navigate("VisaServiceScreen")}
+              onPress={() => navigation.navigate("VisaService")}
             >
               <Text style={styles.footer_text}>Apply Now</Text>
             </TouchableOpacity>
