@@ -15,6 +15,7 @@ import {
 import MyHeader from "../../../../Header";
 
 class _Container extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -23,39 +24,49 @@ class _Container extends Component {
         title : "",
         options : []
       },
-      selectedOption : ""
+      selectedOption : "",
+      pageData : []
     };
   }
 
   componentDidMount = () => {
     const options = this.props.navigation.state.params.options;
-    this.setState({options:options});
+    const pageData = this.props.navigation.state.params.pageData;
+    this.setState({options : options});
+    this.setState({pageData : pageData});
   };
+
   componentDidUpdate() {
     
   }
 
-  NextOption = () => {
-    if(this.state.options.options)
-      this.props.navigation.push('VisaServceType', {options :this.state.options[this.state.selectedOption]} )
-      //this.setState({ options: this.state.options[this.state.selectedOption] });
+  NextOption = (option) => {
+    this.setState({selectedOption : option});
+
+    var pageData = this.state.pageData;
+    pageData.push({
+      "Text" : this.state.options.title,
+      "Value" : option
+    })
+
+    if(this.state.options[option]["title"])
+      this.props.navigation.push('VisaServceType', {options :this.state.options[option], pageData: pageData} )
     else
-      alert("End");
+      this.props.navigation.navigate('VisaServiceDocs', {details :this.state.options[option], pageData: pageData} )
   }
 
   renderRadio = () => {
 
     return this.state.options.options.map((option) => {
       return (
-        
-        <ListItem>
-        <Left>
-          <Text>{option}</Text>
-        </Left>
-        <Right>
-          <Radio onPress={()=>this.setState({selectedOption : option})} selected={this.state.selectedOption==option} />
-        </Right>
-      </ListItem>
+        <ListItem onPress={()=>this.NextOption(option)} >
+          <Left>
+            <Text>{option}</Text>
+          </Left>
+          <Right>
+            <Radio selected={this.state.selectedOption==option} />
+          </Right>
+        </ListItem>
       )
     })
 
@@ -75,23 +86,22 @@ class _Container extends Component {
           }}
         >
           <View>
-            <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
+            <Text style={{ color: "#AAACAC", fontSize: 17, marginLeft: 5 }}>
               {this.state.options.title}
             </Text>
           </View>
           <Right>
           </Right>
         </View>
-        <Content>
+        <Content style={{ padding: 10 }}>
           { this.renderRadio() }
           
           <Button
-              style={{ backgroundColor: "#183E61", marginBottom: 50 }}
+              style={{ backgroundColor: "#183E61", marginBottom: 50, alignSelf: "flex-end" }}
               full
               rounded
-              onPress={() => { this.NextOption() }}
             >
-            <Text>Next</Text>
+            <Text>Skip</Text>
           </Button>  
         </Content>
         </Container>
