@@ -9,14 +9,14 @@ import Loader from "../../styled/loader";
 class Container extends Component {
   componentDidMount = () => {
     if (this.props.token) {
-      this.props.navigation.navigate("Home");
+      this.props.navigation.navigate("SplashScreen");
     }
     this.props.getExtLoginUrls("0");
   };
   componentDidUpdate() {
     if (!this.props.login.loading) {
       if (this.props.token) {
-        this.props.navigation.navigate("Home");
+        this.props.navigation.navigate("SplashScreen");
       }
     }
   }

@@ -17,14 +17,9 @@ import Loader from "../styled/loader";
 class Container extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      dashboardDataLoaded: false
-    };
   }
   componentDidMount = () => {
     const { token } = this.props.token;
-    this.props.DashboardData(token);
-    this.setState({ dashboardDataLoaded: true });
     this.props.profileData(token);
     this.props.ClearFaq();
     this.props.FAQCategoryData(token);
@@ -33,36 +28,7 @@ class Container extends Component {
     this.props.getdoclanguage(token);
     this.props.documentationTypes(token);
   };
-  componentDidUpdate() {
-    const { dashboard } = this.props;
-    const { loading, error, data } = dashboard;
-    const { dashboardDataLoaded } = this.state;
-    if (!loading && !error && data && dashboardDataLoaded) {
-      this.setState({ dashboardDataLoaded: false });
-      const {
-        ActionRequiredNewUpdateCount,
-        ActionRequiredTotalUpdateCount,
-        CompletedNewUpdateCount,
-        CompletedTotalUpdateCount,
-        InReviewNewUpdateCount,
-        InReviewTotalUpdateCount,
-        RejectedNewUpdateCount,
-        RejectedTotalUpdateCount
-      } = dashboard.data.Tiles;
-      const total =
-        ActionRequiredNewUpdateCount +
-        ActionRequiredTotalUpdateCount +
-        CompletedNewUpdateCount +
-        CompletedTotalUpdateCount +
-        InReviewNewUpdateCount +
-        InReviewTotalUpdateCount +
-        RejectedNewUpdateCount +
-        RejectedTotalUpdateCount;
-      if (total == 0) {
-        this.props.navigation.navigate("SelectService");
-      }
-    }
-  }
+
   render = () => {
     const { dashboard } = this.props;
     const { loading, error } = dashboard;
