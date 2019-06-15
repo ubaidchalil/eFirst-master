@@ -28,19 +28,41 @@ class _Container extends Component {
 
   saveData = () => {
     const { token } = this.props.token;
-    const dataJson = this.props.navigation.state.params.data;
-    const serviceData = JSON.stringify(dataJson);
+    var _data = this.props.navigation.state.params.data;
+    var pageData = this.props.navigation.state.params.pageData;
+    var docsAndPayment = this.props.navigation.state.params.docsAndPayment;
+    var Documents = [];
 
+    this.props.navigation.state.params.docs.forEach(function(doc){
+      Documents.push({
+        Text : doc,
+        Name : doc.replace(/ /g,''),
+        FileUploaded: docs.indexOf(doc)>=0 ? "YES" : "NO"
+      })
+    });
+
+    docsAndPayment.Documents= Documents;
+    pageData.push(docsAndPayment);
+    _data.pageData = pageData;
+
+    const serviceData = JSON.stringify(_data);
+
+    const docsAttached = this.props.navigation.state.params.docsAttached
     const docItem = this.props.navigation.state.params.docItem;
     let data = new FormData();
     data.append("ServiceData", serviceData);
     docItem.map((item, index) => data.append("Files[]", item, item.name));
     console.log("data", data);
-    return this.props.visaServiceCreate({ data, token });
+   // return this.props.visaServiceCreate({ data, token });
   };
 
   renderPageData = () => {
+<<<<<<< HEAD
     return this.props.navigation.state.params.data.pageData.map(datum => {
+=======
+
+    return this.props.navigation.state.params.pageData.map((datum) => {
+>>>>>>> 0a2d0bd6e6b45969349ed70474ac16a54eabd395
       return (
         <Item>
           <Text style={{ padding: 10, fontWeight: "bold" }}>
@@ -67,8 +89,13 @@ class _Container extends Component {
   };
 
   renderPriceDts = () => {
+<<<<<<< HEAD
     const docs = this.props.navigation.state.params.docsAttached;
     return this.props.navigation.state.params.data.PriceDetails.map(datum => {
+=======
+    const docs = this.props.navigation.state.params.docsAttached
+    return this.props.navigation.state.params.docsAndPayment.PriceDetails.map((datum) => {
+>>>>>>> 0a2d0bd6e6b45969349ed70474ac16a54eabd395
       return (
         <Item>
           <Text style={{ padding: 10, fontWeight: "bold" }}>
@@ -82,6 +109,7 @@ class _Container extends Component {
 
   renderTotalPrice = () => {
     var total = 0;
+<<<<<<< HEAD
     this.props.navigation.state.params.data.PriceDetails.forEach(function(
       item
     ) {
@@ -94,6 +122,18 @@ class _Container extends Component {
       </Item>
     );
   };
+=======
+    this.props.navigation.state.params.docsAndPayment.PriceDetails.forEach(function(item){
+        total += parseFloat(item.Value);
+      });
+      return (
+        <Item>
+          <Text style={{padding:10, fontWeight:'bold'}} >Total : </Text>
+          <Text style={{padding:10, fontWeight:'bold' }} >AED {total}</Text>
+        </Item>
+      )
+  }
+>>>>>>> 0a2d0bd6e6b45969349ed70474ac16a54eabd395
 
   render = () => {
     return (

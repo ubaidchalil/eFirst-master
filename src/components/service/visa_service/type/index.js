@@ -44,18 +44,21 @@ class _Container extends Component {
     this.setState({selectedOption : option});
 
     var pageData = this.state.pageData;
+    var i = 1;
     pageData.push({
-      "Text" : this.state.options.title,
-      "Value" : option
+      Text : this.state.options.title,
+      Name : this.state.options.title.replace(/ /g,'') + i++,
+      Value : option,
+      ControlType: "Radio"
     })
+
 
     if(this.state.options[option]["title"])
       this.props.navigation.push('VisaServceType', {options :this.state.options[option], pageData: pageData, data: this.props.navigation.state.params.data} )
     else
     {
       var data = this.props.navigation.state.params.data;
-      data.pageData = pageData;
-      this.props.navigation.navigate('VisaServiceDocs', {details :this.state.options[option], data: data} )
+      this.props.navigation.navigate('VisaServiceDocs', {details :this.state.options[option], data: data, pageData : pageData} )
     }
   }
 
