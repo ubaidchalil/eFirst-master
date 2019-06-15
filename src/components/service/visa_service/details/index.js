@@ -16,7 +16,6 @@ import {
 } from "native-base";
 import MyHeader from "../../../../Header";
 import { visaServiceCreate } from "../../action";
-import { visaServiceData } from "../../../../visaSrviceData";
 
 class _Container extends Component {
   constructor(props) {
@@ -35,7 +34,8 @@ class _Container extends Component {
 
   saveData = () => {
     const { token } = this.props.token;
-    const serviceData = JSON.stringify(visaServiceData);
+    const dataJson = this.props.navigation.state.params.data;
+    const serviceData = JSON.stringify(dataJson);
 
     const docItem = this.props.navigation.state.params.docItem;
     let data = new FormData();
@@ -71,6 +71,31 @@ class _Container extends Component {
       )
     })
 
+  }
+  
+  renderPriceDts = () => {
+    const docs = this.props.navigation.state.params.docsAttached
+    return this.props.navigation.state.params.data.PriceDetails.map((datum) => {
+      return (
+        <Item>
+          <Text style={{padding:10, fontWeight:'bold'}} >{datum.Text} : </Text>
+          <Text style={{padding:10 }} >AED {datum.Value}</Text>
+        </Item>
+      )
+    })
+  }
+  
+  renderTotalPrice = () => {
+    var total = 0;
+    this.props.navigation.state.params.data.PriceDetails.forEach(function(item){
+        total += parseFloat(item.Value);
+      });
+      return (
+        <Item>
+          <Text style={{padding:10, fontWeight:'bold'}} >Total : </Text>
+          <Text style={{padding:10, fontWeight:'bold' }} >AED {total}</Text>
+        </Item>
+      )
   }
 
   render = () => {
@@ -115,6 +140,17 @@ class _Container extends Component {
           </Right>
         </View>
         { this.renderDocsData() }
+
+        <View>
+            <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
+            Price Details
+            </Text>
+          </View>
+          <Right>
+          </Right>
+        { this.renderPriceDts() }
+        { this.renderTotalPrice() }
+
 
         <Button
            style={{ backgroundColor: "#183E61", marginBottom: 30, marginTop: 10 }}

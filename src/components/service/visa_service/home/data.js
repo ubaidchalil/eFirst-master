@@ -35,7 +35,10 @@ export default visa_options = {
             "Passport (Back)",
             "1 photo (White background)"
           ],
-          "fees": 535
+          "PriceDetails": [
+            { Text : "Gov. fees", Value : 535 },
+            { Text : "Service charge", Value : 105 }
+          ]
         },
         "Outside Country": {
           "docs": [
@@ -47,7 +50,10 @@ export default visa_options = {
             "Passport (Back)",
             "1 photo (White background)"
           ],
-          "fees": 1180
+          "PriceDetails": [
+            { Text : "Gov. fees", Value : 535 },
+            { Text : "Service charge", Value : 105 }
+          ]
         }
       },
       "Family Visa": {
@@ -83,7 +89,10 @@ export default visa_options = {
                 "1 photo (White background)",
                 "Last 3 months bank statement (if available)"
               ],
-              "fees": 4222,
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 535 },
+                { Text : "Service charge", Value : 105 }
+              ],
               "IBAN number": ""
             },
             "Outside Country": {
@@ -100,7 +109,10 @@ export default visa_options = {
                 "1 photo (White background)",
                 "Last 3 months bank statement (if available)"
               ],
-              "fees": 3575,
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 535 },
+                { Text : "Service charge", Value : 105 }
+              ],
               "IBAN number": ""
             }
           },
