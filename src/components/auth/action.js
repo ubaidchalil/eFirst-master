@@ -311,6 +311,7 @@ export const resetPasswordUser = payload => dispatch => {
 
 export const forgetChangePassword = payload => dispatch => {
   const body = JSON.stringify(payload);
+  console.log("body", body);
   return openFetcher2(
     async () => {
       const result = await fetch(CHANGE_PASSWORD_URL, {

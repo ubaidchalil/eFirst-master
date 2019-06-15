@@ -95,8 +95,8 @@ export default withFormik({
 
   handleSubmit: (values, { resetForm, setSubmitting }) => {
     const { Email } = values;
-
-    values.resetPasswordUser({ Email });
+    const TokenFor = "Forget Password";
+    values.resetPasswordUser({ Email, TokenFor });
     values.setStateEmail(Email);
     setSubmitting(false);
     resetForm();

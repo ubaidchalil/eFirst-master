@@ -53,19 +53,19 @@ const RegistrationForm = ({
         <View style={styles.formContent}>
           <Item style={styles.marginTop}>
             <Input
-              placeholder="Code"
-              name="Code"
-              label="Code"
-              onChangeText={value => setFieldValue("Code", value)}
-              value={values.Code}
-              error={touched.Code && errors.Code}
+              placeholder="Token"
+              name="Token"
+              label="Token"
+              onChangeText={value => setFieldValue("Token", value)}
+              value={values.Token}
+              error={touched.Token && errors.Token}
               underlineColor={Color.secondary}
             />
           </Item>
           <Item style={{ borderBottomWidth: 0 }}>
-            {errors.Code && (
-              <Text style={{ color: "red" }} visible={errors.Code}>
-                {errors.Code}
+            {errors.Token && (
+              <Text style={{ color: "red" }} visible={errors.Token}>
+                {errors.Token}
               </Text>
             )}
           </Item>
@@ -119,12 +119,12 @@ export default withFormik({
   mapPropsToValues: ({ changePassword }) => ({
     NewPassword: "",
     ConfirmPassword: "",
-    Code: "",
+    Token: "",
     changePassword
   }),
   validateOnChange: false,
   validationSchema: Yup.object().shape({
-    Code: Yup.string().required("Required"),
+    Token: Yup.string().required("Required"),
     NewPassword: Yup.string()
       .min(4, "Must be longer than 4 characters")
       .required("Required"),
@@ -135,9 +135,13 @@ export default withFormik({
 
   handleSubmit: (values, { setSubmitting, props }) => {
     console.log(props);
-    const { Code, NewPassword, ConfirmPassword } = { values };
+    const { Token, NewPassword } = values;
     const { Email } = props;
 
-    return values.changePassword({ Code, NewPassword, ConfirmPassword, Email });
+    return values.changePassword({
+      Token,
+      NewPassword,
+      Email
+    });
   }
 })(RegistrationForm);
