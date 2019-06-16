@@ -10,8 +10,8 @@ import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View, Alert } from "react-native";
 import { GoogleSignin, statusCodes } from "react-native-google-signin";
 
-const instructions = Platform.select({
-  ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
+const instructions = Platform.select({ 
+     ios: "Press Cmd+R to reload,\n" + "Cmd+D or  shake for dev menu",
   android:
     "Double tap R on your keyboard to reload,\n" +
     "Shake or press menu button for dev menu"
