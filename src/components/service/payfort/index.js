@@ -4,6 +4,7 @@ import { View, WebView } from "react-native";
 import { getUserInfo, activateSR, servicesData } from "../action";
 
 import { WEBSITE_URL } from "../../../constants";
+import Loader from "../../styled/loader";
 
 class Container extends Component {
   constructor(props) {
@@ -41,10 +42,12 @@ class Container extends Component {
   };
 
   render = () => {
+    const { loading } = this.props.srActivation;
     const srid = this.props.navigation.state.params.srid;
     const userid = this.props.navigation.state.params.userid;
     return (
       <View style={{ flex: 1 }}>
+        <Loader loading={loading} />
         <WebView
           source={{
             uri: `https://staging.efirst.ae/MobilePayment/Index?srid=${srid}&userId=${userid}`
