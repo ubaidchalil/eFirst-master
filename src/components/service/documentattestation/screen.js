@@ -573,7 +573,7 @@ export default withFormik({
   }),
 
   handleSubmit: (values, { props }) => {
-    const { attestationrate } = props;
+    const { attestationrate, setRequestedValue } = props;
     const token = props.token.token;
     var Rate = attestationrate.data
       ? values.PickUpandDropOption == "Through Courier"
@@ -581,6 +581,7 @@ export default withFormik({
         : attestationrate.data.Rate
       : 0;
     const ServiceName = "ATTESTATION";
+    setRequestedValue();
     return values.docAttestationCreate({ ...values, Rate, ServiceName, token });
   }
 })(DocumentAttestation);

@@ -25,7 +25,9 @@ import {
   servicerequest,
   translationrate,
   message,
-  visaservice
+  visaservice,
+  docSRAmUpdation,
+  srActivation
 } from "../components/service/reducer";
 
 import { faq, faqcategory } from "../components/faq/reducer";
@@ -78,7 +80,9 @@ const config = {
     "extRegistration",
     "extLoginUrls",
     "forgetchangepassword",
-    "visaservice"
+    "visaservice",
+    "docSRAmUpdation",
+    "srActivation"
   ]
 };
 
@@ -114,7 +118,9 @@ const combinedReducers = {
   extRegistration,
   extLoginUrls,
   forgetchangepassword,
-  visaservice
+  visaservice,
+  docSRAmUpdation,
+  srActivation
 };
 
 export default persistCombineReducers(config, combinedReducers);

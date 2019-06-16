@@ -1,37 +1,44 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { View, WebView } from "react-native";
-import { getUserInfo, activateSR } from '../action'
+import { getUserInfo, activateSR, servicesData } from "../action";
 
-import { WEBSITE_URL } from '../../../constants';
+import { WEBSITE_URL } from "../../../constants";
 
 class Container extends Component {
-
   constructor(props) {
     super(props);
-    this.state = { token : "" };
+    this.state = { token: "", Requested: false };
   }
 
-  componentDidMount = () => {
-    
-  };
+  componentDidMount = () => {};
 
   componentDidUpdate() {
-    
+    if (
+      !this.props.srActivation.loading &&
+      !this.props.srActivation.error &&
+      this.props.srActivation.success &&
+      this.state.Requested
+    ) {
+      this.setState({ Requested: false });
+      const { token } = this.props.token;
+      const statusId = null;
+      this.props.servicesData({ statusId, token });
+      this.props.navigation.navigate("MyRequests");
+    }
   }
 
-  _onNavigationStateChange = (webViewState) => {
-    console.log(webViewState.url)
+  _onNavigationStateChange = webViewState => {
+    console.log(webViewState.url);
     var str = webViewState.url;
     var n = str.indexOf("Success");
     const srid = this.props.navigation.state.params.srid;
-    if(n>=0) 
-    {
-      this.props.activateSR({srid: srid, token: this.props.token.token});
-      this.props.navigation.navigate("MyRequests");
+    if (n >= 0) {
+      this.props.activateSR({ srid: srid, token: this.props.token.token });
+      this.setState({ Requested: true });
     }
-  //    this.props.navigation.navigate("MyRequests");
-  }
+    //    this.props.navigation.navigate("MyRequests");
+  };
 
   render = () => {
     const srid = this.props.navigation.state.params.srid;
@@ -39,9 +46,11 @@ class Container extends Component {
     return (
       <View style={{ flex: 1 }}>
         <WebView
-          source={{uri: `https://staging.efirst.ae/MobilePayment/Index?srid=${srid}&userId=${userid}`}}
+          source={{
+            uri: `https://staging.efirst.ae/MobilePayment/Index?srid=${srid}&userId=${userid}`
+          }}
           userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
-          style={{marginTop: 20}}
+          style={{ marginTop: 20 }}
           onNavigationStateChange={this._onNavigationStateChange.bind(this)}
         />
       </View>
@@ -49,14 +58,16 @@ class Container extends Component {
   };
 }
 
-const mapStateToProps = ({ extUserInfo, token }) => ({
+const mapStateToProps = ({ extUserInfo, token, srActivation }) => ({
   extUserInfo,
-  token
+  token,
+  srActivation
 });
 
 const mapDispatchToProps = dispatch => ({
   getUserInfo: eToken => dispatch(getUserInfo(eToken)),
-  activateSR: eToken => dispatch(activateSR(eToken))
+  activateSR: eToken => dispatch(activateSR(eToken)),
+  servicesData: payload => dispatch(servicesData(payload))
 });
 
 export default connect(

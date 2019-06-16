@@ -38,7 +38,7 @@ export default ({ navigation, token, services, serviceRequestData }) => {
   return (
     <StyleProvider style={getTheme(material)}>
       <Container>
-        <MyHeader navigation={navigation} header="User Acions" />
+        <MyHeader navigation={navigation} header="User Actions" />
         <Content style={{ padding: 5 }}>
           {services.data.map(service => (
             <TouchableOpacity onPress={() => navigateToDetail(service.SRID)}>

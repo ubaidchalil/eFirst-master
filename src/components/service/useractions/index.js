@@ -5,7 +5,7 @@ import { servicesData, serviceRequestData } from "../action";
 import { View, StyleSheet, Text } from "react-native";
 import Loader from "../../styled/loader";
 import AlertView from "../../styled/alert-view";
-import { NavigationEvents } from "react-navigation";
+
 class Container extends Component {
   // componentDidMount = () => {
   //   const statusId = this.props.navigation.state.params
@@ -22,7 +22,9 @@ class Container extends Component {
   //   const token = this.props.token.token;
   //   this.props.servicesData({ statusId, token });
   // };
-
+  componentDidMount = () => {
+    console.log("==== User Action ======");
+  };
   render = () => {
     const {
       services: { error, loading }

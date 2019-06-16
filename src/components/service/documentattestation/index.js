@@ -17,60 +17,93 @@ class Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showPopUp: false
+      showPopUp: false,
+      Requested: false,
+      UpdatedSRAmount: false
     };
   }
-
+  setRequestedValue = () => {
+    this.setState({ Requested: true });
+  };
   componentDidMount = () => {
     this.props.getCountries(this.props.token.token);
     this.props.getcertificateType(this.props.token.token);
   };
   componentDidUpdate() {
-    const {
-      countries,
-      certificatetype,
-      attestationrate,
-      documentattestation,
-      profile
-    } = this.props;
-    const loading =
-      documentattestation.loading ||
-      countries.loading ||
-      certificatetype.loading ||
-      attestationrate.loading;
-
-    console.log("Doc Attest Upd: result = >", JSON.stringify(this.props.documentattestation));
-    if (!this.props.documentattestation.loading) {
-      if (this.props.documentattestation.success) {
-        const { token } = this.props.token;
-        const statusId = null;
-        this.props.servicesData({ statusId, token });
-        console.log("result = > "+ JSON.stringify(this.props.documentattestation.data));
-    //    alert(this.props.documentattestation.data.SRID);
-        var SRID = this.props.documentattestation.data.SRID;
-        if(!this.props.docSRAmUpdation.loading)
-        {
-          if(!this.props.docSRAmUpdation.success && !this.props.docSRAmUpdation.error)
-          {
-            console.log("Requesting UpdSRAmt","result = > "+ JSON.stringify(this.props.docSRAmUpdation));
-            this.props.updAttestationSRAmt({token: this.props.token.token, SRID: SRID, amount: 100});
-          }
-          else{
-            console.log("Request Complete","result = > "+ JSON.stringify(this.props.docSRAmUpdation));
-            if(this.props.docSRAmUpdation.success)
-              this.props.navigation.navigate("PayfortPay",{srid: SRID, userid: "4"});
-              
-              
-          }
-          
-        }
-        
-        
-     //   if(this.props.docSRAmUpdation.success)
-     //     this.props.navigation.navigate("PayfortPay");
-        //this.props.navigation.navigate("MyRequests");
-      }
+    console.log(
+      "Doc Attest Upd: result = >",
+      JSON.stringify(this.props.documentattestation)
+    );
+    if (
+      !this.props.documentattestation.loading &&
+      !this.props.documentattestation.error &&
+      this.props.documentattestation.success &&
+      this.state.Requested
+    ) {
+      this.setState({ Requested: false, UpdatedSRAmount: true });
+      var SRID = this.props.documentattestation.data.SRID;
+      this.props.updAttestationSRAmt({
+        token: this.props.token.token,
+        SRID: SRID,
+        amount: 100
+      });
     }
+    if (
+      !this.props.docSRAmUpdation.loading &&
+      !this.props.docSRAmUpdation.error &&
+      this.props.docSRAmUpdation.success &&
+      this.state.UpdatedSRAmount
+    ) {
+      this.setState({ UpdatedSRAmount: false });
+      const { UserId } = this.props.profile.data.userdetail;
+      var SRID = this.props.documentattestation.data.SRID;
+      this.props.navigation.navigate("PayfortPay", {
+        srid: SRID,
+        userid: UserId
+      });
+    }
+    // if (!this.props.documentattestation.loading) {
+    //   if (this.props.documentattestation.success) {
+    //     const { token } = this.props.token;
+    //     const statusId = null;
+
+    //     console.log(
+    //       "result = > " + JSON.stringify(this.props.documentattestation.data)
+    //     );
+    //     //    alert(this.props.documentattestation.data.SRID);
+    //     var SRID = this.props.documentattestation.data.SRID;
+    //     if (!this.props.docSRAmUpdation.loading) {
+    //       if (
+    //         !this.props.docSRAmUpdation.success &&
+    //         !this.props.docSRAmUpdation.error
+    //       ) {
+    //         console.log(
+    //           "Requesting UpdSRAmt",
+    //           "result = > " + JSON.stringify(this.props.docSRAmUpdation)
+    //         );
+    //         this.props.updAttestationSRAmt({
+    //           token: this.props.token.token,
+    //           SRID: SRID,
+    //           amount: 100
+    //         });
+    //       } else {
+    //         console.log(
+    //           "Request Complete",
+    //           "result = > " + JSON.stringify(this.props.docSRAmUpdation)
+    //         );
+    //         if (this.props.docSRAmUpdation.success)
+    //           this.props.navigation.navigate("PayfortPay", {
+    //             srid: SRID,
+    //             userid: "4"
+    //           });
+    //       }
+    //     }
+
+    //     //   if(this.props.docSRAmUpdation.success)
+    //     //     this.props.navigation.navigate("PayfortPay");
+    //     //this.props.navigation.navigate("MyRequests");
+    //   }
+    // }
   }
   render = () => {
     const {
@@ -97,7 +130,11 @@ class Container extends Component {
     return (
       <View style={{ flex: 1 }}>
         {/* <Loader loading={loading} /> */}
-        <DocumentAttestation {...this.props} state={this.state} />
+        <DocumentAttestation
+          setRequestedValue={this.setRequestedValue}
+          {...this.props}
+          state={this.state}
+        />
         {error && <AlertView type="error" />}
         {success && <AlertView type="success" />}
       </View>

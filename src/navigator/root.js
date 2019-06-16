@@ -9,6 +9,7 @@ import HomeScreen from "../components/dashboard";
 import DocumentAttestation from "../components/service/documentattestation";
 import LanguageTranslation from "../components/service/languagetranslation";
 import SelectService from "../components/service/selectservice";
+import PayfortPay from "../components/service/payfort";
 import UserActions from "../components/service/useractions";
 import FAQ from "../components/faq";
 import Support from "../components/support";
@@ -32,7 +33,11 @@ export const RequestServiceStack = createStackNavigator(
     },
     VisaService: {
       screen: VisaServiceStack
-    }
+    },
+    PayfortPay: {
+      screen: PayfortPay
+    },
+    MyRequests: { screen: UserActions }
   },
   {
     defaultNavigationOptions: {

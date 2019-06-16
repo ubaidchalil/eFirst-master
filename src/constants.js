@@ -32,7 +32,8 @@ export const CERTTYPE_URL = `${BASE_URL}Master/GetAllCertificateTypes`;
 export const DOCLANG_URL = `${BASE_URL}Master/GetAllDoucmentLanguages`;
 export const LANGTRANS_URL = `${BASE_URL}Service/CreateLanguageTranslation`;
 export const VISASERVICE_URL = `${BASE_URL}Service/CreateAmerService`;
-
+export const UPD_SR_AMT = `${BASE_URL}ServiceRequest/UpdateSRAmount`;
+export const ACTIVATE_SR = `${BASE_URL}ServiceRequest/ActivateServiceRequest`;
 /// PROFILE URLS ///
 export const PROFILE_URL = `${BASE_URL}Profile/Get`;
 export const USER_PROFILE_CREATE_URL = `${BASE_URL}Profile/SaveUserProfile`;
