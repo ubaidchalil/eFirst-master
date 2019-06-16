@@ -19,11 +19,12 @@ class Container extends Component {
     this.state = {
       showPopUp: false,
       Requested: false,
-      UpdatedSRAmount: false
+      UpdatedSRAmount: false,
+      SRAmount: "0"
     };
   }
-  setRequestedValue = () => {
-    this.setState({ Requested: true });
+  setRequestedValue = amount => {
+    this.setState({ Requested: true, SRAmount: amount });
   };
   componentDidMount = () => {
     this.props.getCountries(this.props.token.token);
@@ -45,7 +46,7 @@ class Container extends Component {
       this.props.updAttestationSRAmt({
         token: this.props.token.token,
         SRID: SRID,
-        amount: 100
+        amount: this.state.SRAmount
       });
     }
     if (
@@ -62,48 +63,6 @@ class Container extends Component {
         userid: UserId
       });
     }
-    // if (!this.props.documentattestation.loading) {
-    //   if (this.props.documentattestation.success) {
-    //     const { token } = this.props.token;
-    //     const statusId = null;
-
-    //     console.log(
-    //       "result = > " + JSON.stringify(this.props.documentattestation.data)
-    //     );
-    //     //    alert(this.props.documentattestation.data.SRID);
-    //     var SRID = this.props.documentattestation.data.SRID;
-    //     if (!this.props.docSRAmUpdation.loading) {
-    //       if (
-    //         !this.props.docSRAmUpdation.success &&
-    //         !this.props.docSRAmUpdation.error
-    //       ) {
-    //         console.log(
-    //           "Requesting UpdSRAmt",
-    //           "result = > " + JSON.stringify(this.props.docSRAmUpdation)
-    //         );
-    //         this.props.updAttestationSRAmt({
-    //           token: this.props.token.token,
-    //           SRID: SRID,
-    //           amount: 100
-    //         });
-    //       } else {
-    //         console.log(
-    //           "Request Complete",
-    //           "result = > " + JSON.stringify(this.props.docSRAmUpdation)
-    //         );
-    //         if (this.props.docSRAmUpdation.success)
-    //           this.props.navigation.navigate("PayfortPay", {
-    //             srid: SRID,
-    //             userid: "4"
-    //           });
-    //       }
-    //     }
-
-    //     //   if(this.props.docSRAmUpdation.success)
-    //     //     this.props.navigation.navigate("PayfortPay");
-    //     //this.props.navigation.navigate("MyRequests");
-    //   }
-    // }
   }
   render = () => {
     const {

@@ -12,7 +12,11 @@ class Container extends Component {
     this.state = { token: "", Requested: false };
   }
 
-  componentDidMount = () => {};
+  componentDidMount = () => {
+    const srid = this.props.navigation.state.params.srid;
+    this.props.activateSR({ srid: srid, token: this.props.token.token });
+    this.setState({ Requested: true });
+  };
 
   componentDidUpdate() {
     if (

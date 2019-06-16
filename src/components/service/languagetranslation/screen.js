@@ -32,8 +32,6 @@ import * as Yup from "yup";
 import { Color } from "../../../constants";
 var ImagePicker = require("react-native-image-picker");
 
-import { DocumentPicker, DocumentPickerUtil } from 'react-native-document-picker';
-
 const LanguageTranslation = ({
   handleSubmit,
   setFieldValue,
@@ -58,7 +56,6 @@ const LanguageTranslation = ({
       }
     };
 
-    
     ImagePicker.launchCamera(options, response => {
       console.log("Response = ", response);
 
@@ -86,30 +83,37 @@ const LanguageTranslation = ({
     });
   };
 
+  openImagePicker = () => {
+    console.log(ImagePicker);
+    const options = {
+      title: "Select Avatar",
+      storageOptions: {
+        cameraRoll: true,
+        waitUntilSaved: true
+      }
+    };
 
-  openFile = () => {
-      
-    DocumentPicker.show({
-      filetype: [DocumentPickerUtil.images()],
-    },(error,res) => {
-      // Android
-      console.log(
-         res.uri,
-         res.type, // mime type
-         res.fileName,
-         res.fileSize
-      );
-      
-      const file = {
-        uri: res.uri,
-        type: res.type,
-        name: res.fileName
-      };
-      setFieldValue("Files", file);
+    ImagePicker.launchImageLibrary(options, response => {
+      console.log("Response = ", response);
 
+      if (response.didCancel) {
+        console.log("User cancelled image picker");
+      } else if (response.error) {
+        console.log("ImagePicker Error: ", response.error);
+      } else if (response.customButton) {
+        console.log("User tapped custom button: ", response.customButton);
+      } else {
+        const source = { uri: response.uri };
+        const file = {
+          uri: response.uri,
+          type: response.type,
+          name: response.fileName
+        };
+        setFieldValue("Files", file);
+        console.log(file);
+      }
     });
   };
-  
 
   const renderTranslationLanguage = () =>
     documentlanguage.data.map(language => (
@@ -572,7 +576,7 @@ const LanguageTranslation = ({
                     borderLeftColor: "#CACFD2",
                     alignItems: "center"
                   }}
-                  onPress={() => this.openFile()}
+                  onPress={() => this.openImagePicker()}
                 >
                   <Icon name="albums" />
                   <Text>Album</Text>
@@ -662,13 +666,14 @@ export default withFormik({
   }),
 
   handleSubmit: (values, { props }) => {
-    const { translationrate } = props;
+    const { translationrate, setRequestedValue } = props;
     const token = props.token.token;
     var Rate = translationrate.data
       ? values.LegalStamp == true
         ? translationrate.data.Rate + 28
         : translationrate.data.Rate
       : 0;
+    setRequestedValue(Rate);
     const address = `${values.Address1},${values.Street} ${values.City}, ${
       values.SelectedState
     } ${values.AddressCountry} ZIP- ${values.Zip}`;

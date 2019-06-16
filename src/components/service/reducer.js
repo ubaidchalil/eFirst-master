@@ -19,7 +19,7 @@ const initialDocumentAttestation = {
   loading: false,
   success: null,
   error: null,
-  data: null,
+  data: null
 };
 
 const initialLangTranslation = {
@@ -158,6 +158,8 @@ export const langtranslation = (state = initialLangTranslation, action) => {
       return { ...state, loading: action.state };
     case langTransState.SUCCESS:
       return { ...state, success: action.state };
+    case langTransState.DONE:
+      return { ...state, data: action.state };
     case langTransState.ERROR:
       return { ...state, error: action.state };
     default:
@@ -283,7 +285,10 @@ export const certificatetype = (state = initialCertificateType, action) => {
   }
 };
 
-export const docSRAmUpdation = (state = initialAttestationUpdSRAmtState, action) => {
+export const docSRAmUpdation = (
+  state = initialAttestationUpdSRAmtState,
+  action
+) => {
   switch (action.type) {
     case attestationUpdSRAmtState.LOADING:
       return { ...state, loading: action.state };
@@ -293,8 +298,6 @@ export const docSRAmUpdation = (state = initialAttestationUpdSRAmtState, action)
       return { ...state, success: action.state };
     case attestationUpdSRAmtState.ERROR:
       return { ...state, error: action.state };
-    case attestationUpdSRAmtState.ERROR:
-      return state;
     default:
       return state;
   }

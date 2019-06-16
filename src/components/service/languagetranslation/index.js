@@ -13,36 +13,58 @@ import { View } from "react-native";
 import Loader from "../../styled/loader";
 import AlertView from "../../styled/alert-view";
 class Container extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showPopUp: false,
+      Requested: false,
+      UpdatedSRAmount: false,
+      SRAmount: "0"
+    };
+  }
+  setRequestedValue = amount => {
+    this.setState({ Requested: true, SRAmount: amount });
+  };
   componentDidMount = () => {
     this.props.getdoclanguage(this.props.token.token);
     this.props.documentationTypes(this.props.token.token);
   };
+
   componentDidUpdate() {
-    if (!this.props.langtranslation.loading) {
-      if (this.props.langtranslation.success) {
-        const { token } = this.props.token;
-        const statusId = null;
-        this.props.servicesData({ statusId, token });
-        var SRID = this.props.documentattestation.data.SRID;
-        if(!this.props.docSRAmUpdation.loading)
-        {
-          if(!this.props.docSRAmUpdation.success && !this.props.docSRAmUpdation.error)
-          {
-            console.log("Requesting UpdSRAmt","result = > "+ JSON.stringify(this.props.docSRAmUpdation));
-            this.props.updAttestationSRAmt({token: this.props.token.token, SRID: SRID, amount: 100});
-          }
-          else{
-            console.log("Request Complete","result = > "+ JSON.stringify(this.props.docSRAmUpdation));
-            if(this.props.docSRAmUpdation.success)
-              this.props.navigation.navigate("PayfortPay",{srid: SRID, userid: "4"});
-              
-              
-          }
-          
-        }
-      }
+    console.log(
+      "Doc Attest Upd: result = >",
+      JSON.stringify(this.props.langtranslation)
+    );
+    if (
+      !this.props.langtranslation.loading &&
+      !this.props.langtranslation.error &&
+      this.props.langtranslation.success &&
+      this.state.Requested
+    ) {
+      this.setState({ Requested: false, UpdatedSRAmount: true });
+      var SRID = this.props.langtranslation.data.SRID;
+      this.props.updAttestationSRAmt({
+        token: this.props.token.token,
+        SRID: SRID,
+        amount: this.state.SRAmount
+      });
+    }
+    if (
+      !this.props.docSRAmUpdation.loading &&
+      !this.props.docSRAmUpdation.error &&
+      this.props.docSRAmUpdation.success &&
+      this.state.UpdatedSRAmount
+    ) {
+      this.setState({ UpdatedSRAmount: false });
+      const { UserId } = this.props.profile.data.userdetail;
+      var SRID = this.props.langtranslation.data.SRID;
+      this.props.navigation.navigate("PayfortPay", {
+        srid: SRID,
+        userid: UserId
+      });
     }
   }
+
   render = () => {
     const {
       documentlanguage,
@@ -68,7 +90,11 @@ class Container extends Component {
     return (
       <View style={{ flex: 1 }}>
         {/* <Loader loading={loading} /> */}
-        <LanguageTranslation {...this.props} state={this.state} />
+        <LanguageTranslation
+          setRequestedValue={this.setRequestedValue}
+          {...this.props}
+          state={this.state}
+        />
         {error && <AlertView type="error" />}
         {success && <AlertView type="success" />}
       </View>

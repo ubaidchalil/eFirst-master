@@ -27,14 +27,14 @@ export const attestationState = {
   LOADING: "ATTEST_LOADING",
   SUCCESS: "ATTEST_SUCCESS",
   ERROR: "ATTEST_ERROR",
-  DONE: "ATTEST_DONE",
-  CLEAR: "ATTEST_CLEAR"
+  DONE: "ATTEST_DONE"
 };
 
 export const langTransState = {
-  LOADING: "LANGTRANS_LOADING",
-  SUCCESS: "LANGTRANS_SUCCESS",
-  ERROR: "LANGTRANS_ERROR"
+  LOADING: "LANG_TRANS_LOADING",
+  SUCCESS: "LANG_TRANS_SUCCESS",
+  ERROR: "LANG_TRANS_ERROR",
+  DONE: "LANG_TRANS_DONE"
 };
 
 export const messageState = {
@@ -102,8 +102,7 @@ export const attestationUpdSRAmtState = {
   LOADING: "ATTEST_UPD_SRAMT_LOADING",
   SUCCESS: "ATTEST_UPD_SRAMT_SUCCESS",
   ERROR: "ATTEST_UPD_SRAMT_ERROR",
-  DONE: "ATTEST_UPD_SRAMT_DONE",
-  CLEAR: "ATTEST_UPD_SRAMT_CLEAR"
+  DONE: "ATTEST_UPD_SRAMT_DONE"
 };
 
 export const activateSRState = {
@@ -136,7 +135,7 @@ const openFetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
-    console.log("result = > "+ JSON.stringify(result));
+    console.log("result = > " + JSON.stringify(result));
     if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
       dispatch(setInStore(true, type.SUCCESS));
     } else {
@@ -150,12 +149,13 @@ const openFetcher = async (fetchData, type, dispatch) => {
 };
 
 const openAttestationFetcher = async (fetchData, type, dispatch) => {
+  console.log("type", type);
   dispatch(setInStore(true, type.LOADING));
   dispatch(setInStore(false, type.SUCCESS));
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
-    console.log("result = > "+ JSON.stringify(result));
+    console.log("result = > " + JSON.stringify(result));
     if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
       dispatch(setInStore(result.data, type.DONE));
       dispatch(setInStore(true, type.SUCCESS));
@@ -214,11 +214,10 @@ export const docAttestationCreate = payload => dispatch => {
   );
 };
 
-
 export const visaServiceCreate = payload => dispatch => {
   const { token, data } = payload;
   const body = data;
-  return openFetcher(
+  return openAttestationFetcher(
     async () => {
       const result = await fetch(VISASERVICE_URL, {
         method: "POST",
@@ -243,19 +242,22 @@ export const visaServiceCreate = payload => dispatch => {
 export const updAttestationSRAmt = payload => dispatch => {
   const { token, ...bodyData } = payload;
   const body = JSON.stringify(bodyData);
-  console.log("Body", "result = > Body : "+body);
-  console.log("Body", "result = > token : "+token);
+  console.log("Body", "result = > Body : " + body);
+  console.log("Body", "result = > token : " + token);
   return openAttestationFetcher(
     async () => {
-      const result = await fetch(UPD_SR_AMT+"?srid="+bodyData.SRID+"&amount="+bodyData.amount, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
-        },
-        body
-      });
+      const result = await fetch(
+        UPD_SR_AMT + "?srid=" + bodyData.SRID + "&amount=" + bodyData.amount,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`
+          },
+          body
+        }
+      );
 
       return result.json().then(data => ({
         data: data,
@@ -270,11 +272,10 @@ export const updAttestationSRAmt = payload => dispatch => {
 export const activateSR = payload => dispatch => {
   const { token, srid } = payload;
   const body = JSON.stringify(srid);
-  console.log("Activate SR", "result = > srid : "+srid);
-  dispatch(clearAttestationData());
+
   return openAttestationFetcher(
     async () => {
-      const result = await fetch(ACTIVATE_SR+"?srid="+srid, {
+      const result = await fetch(ACTIVATE_SR + "?srid=" + srid, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -293,7 +294,6 @@ export const activateSR = payload => dispatch => {
     dispatch
   );
 };
-
 
 export const sendOrReplyMessage = payload => dispatch => {
   const { token, ...bodyData } = payload;
@@ -324,7 +324,7 @@ export const sendOrReplyMessage = payload => dispatch => {
 export const doclangTransCreate = payload => dispatch => {
   const { token, data } = payload;
   const body = data;
-  return openFetcher(
+  return openAttestationFetcher(
     async () => {
       const result = await fetch(LANGTRANS_URL, {
         method: "POST",

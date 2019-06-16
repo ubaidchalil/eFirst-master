@@ -39,11 +39,14 @@ class ServiceDetails extends Component {
       SRID: 0,
       NoteID: 0,
       Title: null,
-      IsVisible: false
+      IsVisible: false,
+      MessageRequested: false
     };
     this.hideModal = this.hideModal.bind(this);
     this.MessageModal = this.MessageModal.bind(this);
   }
+  changeRequestMessageState = state =>
+    this.setState({ MessageRequested: state });
   MessageModal = (SRID, NoteID, Title: any) => {
     this.setState({
       SRID,
@@ -57,16 +60,29 @@ class ServiceDetails extends Component {
       IsVisible: false
     });
   }
+  componentDidUpdate() {
+    const { error, success, loading } = this.props.message;
+    const { MessageRequested } = this.state;
+    if (!error && !loading && success && MessageRequested) {
+      this.changeRequestMessageState(false);
+      const { srDetail, token } = this.props;
+      const SRID = srDetail ? srDetail.SRID : 0;
+
+      this.props.serviceRequestData({ serviceId: SRID, token: token.token });
+    }
+  }
   render() {
     const { srDetail, loading, error, message, profile } = this.props;
     const dtError = error || message.error;
     const success = message.success;
     const SRID = srDetail ? srDetail.SRID : 0;
+
     return (
       <StyleProvider style={getTheme(material)}>
         <Container>
           <Loader loading={loading} />
           <PostMessage
+            changeRequestMessageState={this.changeRequestMessageState}
             token={this.props.token}
             handle={this.hideModal}
             action={this.state}

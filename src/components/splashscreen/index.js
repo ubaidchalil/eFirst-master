@@ -8,15 +8,21 @@ var ImagePicker = require("react-native-image-picker");
 class SplashScreen extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      dashboardDataLoaded: false
+    };
   }
-  componentWillMount() {
+  componentDidMount() {
     const { token } = this.props.token;
     this.props.DashboardData(token);
+    this.setState({ dashboardDataLoaded: true });
   }
   componentDidUpdate() {
     const { dashboard } = this.props;
     const { loading, error, data } = dashboard;
-    if (!loading && !error && data) {
+    const { dashboardDataLoaded } = this.state;
+    if (!loading && !error && data && dashboardDataLoaded) {
+      this.setState({ dashboardDataLoaded: false });
       const {
         ActionRequiredNewUpdateCount,
         ActionRequiredTotalUpdateCount,

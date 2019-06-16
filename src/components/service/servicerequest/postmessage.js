@@ -47,7 +47,7 @@ const PostMessage = ({
         <View style={{ padding: 15 }}>
           <Form>
             <Item>
-              {!action.SRID ? (
+              {!action.NoteID ? (
                 <Input
                   placeholder="Message Title"
                   name="MessageTitle"
@@ -121,7 +121,7 @@ export default withFormik({
   }),
 
   handleSubmit: (values, { props }) => {
-    const { handle } = props;
+    const { handle, changeRequestMessageState } = props;
     handle();
     const token = props.token.token;
     const { profile } = props;
@@ -129,7 +129,8 @@ export default withFormik({
     const { SRID, NoteID } = props.action;
     const NoteType = SRID ? "NewMessage" : "ReplyMessage";
     const { MessageContent, MessageTitle } = values;
-    return values.SendMessage({
+
+    values.SendMessage({
       SRID,
       NoteID,
       NoteType,
@@ -138,6 +139,7 @@ export default withFormik({
       CreatedBy: UserId,
       token
     });
+    return changeRequestMessageState(true);
   }
 })(PostMessage);
 const styles = {

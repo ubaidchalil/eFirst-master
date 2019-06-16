@@ -110,11 +110,9 @@ const DocumentAttestation = ({
             VISA SERVICE
           </Text>
         </View>
-        <Right>
-        </Right>
+        <Right />
       </View>
       <Content style={{ padding: 10 }}>
-        
         <ScrollView>
           <Form>
             <Item>
@@ -338,7 +336,9 @@ const DocumentAttestation = ({
                 underline
                 name="PassportExpiryDate"
                 label="Passport Expiry Date *"
-                onChangeText={value => setFieldValue("PassportExiryDate", value)}
+                onChangeText={value =>
+                  setFieldValue("PassportExiryDate", value)
+                }
                 value={values.PassportExiryDate}
                 error={touched.Street && errors.PassportExiryDate}
                 underlineColor={Color.secondary}
@@ -346,7 +346,10 @@ const DocumentAttestation = ({
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
               {errors.Street && (
-                <Text style={{ color: "red" }} visible={errors.PassportExiryDate}>
+                <Text
+                  style={{ color: "red" }}
+                  visible={errors.PassportExiryDate}
+                >
                   {errors.PassportExiryDate}
                 </Text>
               )}
@@ -388,9 +391,10 @@ export default withFormik({
     Street: "",
     City: "",
     SelectedState: "",
-    SelectedCountryId: "",
     SelectedCertificateType: "",
     PickUpandDropOption: "Direct Delivery",
+    Nationality: "",
+    PassportExiryDate: "",
     ShowInfo: false,
     docAttestationCreate
   }),
@@ -405,13 +409,12 @@ export default withFormik({
       .email("Email not valid")
       .required("Required"),
     PersonalPhone: Yup.string().required("Required"),
-    SelectedCountryId: Yup.string().required("Required"),
     AddressCountry: Yup.string().required("Required"),
     Street: Yup.string().required("Required"),
     City: Yup.string().required("Required"),
     SelectedState: Yup.string().required("Required"),
-    Nationality:  Yup.string().required("Required"),
-    PassportExiryDate:  Yup.string().required("Required")
+    Nationality: Yup.string().required("Required"),
+    PassportExiryDate: Yup.string().required("Required")
   }),
 
   handleSubmit: (values, { props }) => {
@@ -430,8 +433,12 @@ export default withFormik({
       AddressState: values.SelectedState,
       Nationality: values.Nationality,
       PassportExiryDate: values.PassportExiryDate
-    }
-    console.log("JSON","result = > "+ JSON.stringify(data));
-    navigation.navigate("VisaServceType", { options: visa_options,data : data, pageData : [] }) 
+    };
+    console.log("JSON", "result = > " + JSON.stringify(data));
+    navigation.navigate("VisaServceType", {
+      options: visa_options,
+      data: data,
+      pageData: []
+    });
   }
 })(DocumentAttestation);
