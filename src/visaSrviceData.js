@@ -15,36 +15,24 @@ export const visaServiceData = {
   PageData: [
     {
       Text: "Select Service",
-      Name: "VisaServiceQuestion",
+      Name: "SelectService1",
       Value: "New Visa",
       ControlType: "Radio"
     },
     {
-      Text: "Select Service Type",
-      Name: "NewVisaServiceType",
+      Text: "Service Type",
+      Name: "ServiceType1",
       Value: "Entry Permit",
       ControlType: "Radio"
     },
     {
-      Text: "Select Visa Type",
-      Name: "EntryPermitVisaType",
-      Value: "Family Visa",
+      Text: "Visa Type",
+      Name: "VisaType1",
+      Value: "Partner/Investor Visa",
       ControlType: "Radio"
     },
     {
-      Text: "Who is the Sponsor?",
-      Name: "WhoIsTheSponsorQuestion1",
-      Value: "Partner/Investor",
-      ControlType: "Radio"
-    },
-    {
-      Text: "Whom to Sponsor",
-      Name: "WhomToSponsorQuestion1",
-      Value: "Husband/Wife",
-      ControlType: "Radio"
-    },
-    {
-      Text: "Select Location",
+      Text: "Location",
       Name: "Location1",
       Value: "Inside Country",
       ControlType: "Radio"
@@ -57,129 +45,57 @@ export const visaServiceData = {
       Value: "",
       IsRequired: false,
       IsVisible: true,
-      OriginalDocumentSubmissionType: {
-        Text: "Original Document Submission Type",
-        Name: "OriginalDocumentSubmissionType",
-        IsRequired: true,
-        Options: ["Through Courier", "Direct Submission at Office"],
-        Value: "Through Courier",
-        CourierCharge: 10
-      },
       IBANNumber: {
         Text: "IBAN Number",
         Name: "IBANNumber",
         IsRequired: false,
-        Value: ""
+        value: ""
       },
       AdditionalNotes: {
         Text: "Additional Notes",
         Name: "AdditionalNotes",
         IsRequired: false,
-        Value: "Test Note"
+        value: ""
       },
-      Notes: { Text: "Notes", Name: "Notes", Value: "" },
-
-      PriceDetils: [
-        {
-          Text: "Sponsor File Opening",
-          Currency: "AED",
-          Value: 324,
-          Comments: "",
-          $$hashKey: "object:841"
-        },
-        {
-          Text: "Gov. fees",
-          Currency: "AED",
-          Value: 4222,
-          Comments: "(inside country visa)",
-          $$hashKey: "object:842"
-        },
-        {
-          Text: "Service charge",
-          Currency: "AED",
-          Value: 105,
-          Comments: "(VAT included)",
-          $$hashKey: "object:843"
-        }
+      OriginalDocumentSubmissionType: {
+        Text: "Original Document Submission Type",
+        Name: "OriginalDocumentSubmissionType",
+        IsRequired: true,
+        Options: ["Through Courier", "Direct Submission at Office"],
+        Value: "Direct Submission at Office",
+        CourierCharge: 10
+      },
+      PriceDetails: [
+        { Text: "Gov. fees", Value: 1180 },
+        { Text: "Service charge", Value: 105 }
       ],
-
       Documents: [
         {
           Text: "Sponsors emirates ID",
-          Name: "SponsorsEmiratesID",
-          FileUploaded: "YES",
-          IsRequired: false,
-          $$hashKey: "object:849"
+          Name: "SponsorsemiratesID",
+          FileUploaded: "YES"
         },
+        { Text: "License", Name: "License", FileUploaded: "NO" },
         {
-          Text: "Sponsors passport (Front)",
-          Name: "SponsorsPassport_Front",
-          FileUploaded: "NO",
-          IsRequired: false,
-          $$hashKey: "object:850"
-        },
-        {
-          Text: "Sponsors passport (Back)",
-          Name: "SponsorsPassport_Back",
-          FileUploaded: "NO",
-          IsRequired: false,
-          $$hashKey: "object:851"
-        },
-        {
-          Text: "Sponsor visa",
-          Name: "SponsorVisa",
-          FileUploaded: "NO",
-          IsRequired: false,
-          $$hashKey: "object:852"
-        },
-        {
-          Text: "Residential ejari (under sponsors name)",
-          Name: "ResidentialEjari_UnderSponsorsName",
-          FileUploaded: "NO",
-          IsRequired: false,
-          $$hashKey: "object:853"
+          Text: "Immigration card",
+          Name: "Immigrationcard",
+          FileUploaded: "NO"
         },
         {
           Text: "Memorandum of association (MOA)",
-          Name: "MemorandumOfAssociation_MOA",
-          FileUploaded: "NO",
-          IsRequired: false,
-          $$hashKey: "object:854"
+          Name: "Memorandumofassociation(MOA)",
+          FileUploaded: "NO"
         },
         {
-          Text: "Marriage certi?cate attested",
-          Name: "MarriageCerti?cateAttested",
-          FileUploaded: "NO",
-          IsRequired: false,
-          $$hashKey: "object:855"
+          Text: "Passport (Front)",
+          Name: "Passport(Front)",
+          FileUploaded: "NO"
         },
+        { Text: "Passport (Back)", Name: "Passport(Back)", FileUploaded: "NO" },
         {
-          Text: "Sponsored passport (Front)",
-          Name: "SponsoredPassport_Front",
-          FileUploaded: "NO",
-          IsRequired: false,
-          $$hashKey: "object:856"
-        },
-        {
-          Text: "Sponsored passport (Back)",
-          Name: "SponsoredPassport_Back",
-          FileUploaded: "NO",
-          IsRequired: false,
-          $$hashKey: "object:857"
-        },
-        {
-          Text: "1 photo (white background)",
-          Name: "OnePhoto_WhiteBackground",
-          FileUploaded: "NO",
-          IsRequired: false,
-          $$hashKey: "object:858"
-        },
-        {
-          Text: "Last 3 months bank statement (if available)",
-          Name: "LastThreeMonthsBankStatement_IfAvailable",
-          FileUploaded: "NO",
-          IsRequired: false,
-          $$hashKey: "object:859"
+          Text: "1 photo (White background)",
+          Name: "1photo(Whitebackground)",
+          FileUploaded: "NO"
         }
       ]
     }
@@ -236,3 +152,235 @@ export const visaServiceData = {
 //           $$hashKey: "object:843"
 //         }
 //       ],
+
+export const liveData = {
+  CustomerName: "Sandeep M",
+  Email: "sandeepmadollathil@gmail.com",
+  PersonalPhone: "123456789",
+  OfficePhone: "",
+  Address: "Address Line 1, Address Line 2 Street, City - ",
+  Street: "Street",
+  City: "City",
+  Zip: "1234",
+  AddressCountry: "United Arab Emirates",
+  AddressState: "Abu Dhabi",
+  TotalBillAmount: 4661,
+  CurrencyUsed: "AED",
+  MinimumServiceCharge: 105,
+  PageData: [
+    {
+      Text: "Select Service",
+      Name: "VisaServiceQuestion",
+      Value: "New Visa",
+      ControlType: "Radio"
+    },
+    {
+      Text: "Select Service Type",
+      Name: "NewVisaServiceType",
+      Value: "Entry Permit",
+      ControlType: "Radio"
+    },
+    {
+      Text: "Select Visa Type",
+      Name: "EntryPermitVisaType",
+      Value: "Family Visa",
+      ControlType: "Radio"
+    },
+    {
+      Text: "Who is the Sponsor?",
+      Name: "WhoIsTheSponsorQuestion1",
+      Value: "Partner/Investor",
+      ControlType: "Radio"
+    },
+    {
+      Text: "Whom to Sponsor",
+      Name: "WhomToSponsorQuestion1",
+      Value: "Husband/Wife",
+      ControlType: "Radio"
+    },
+    {
+      Text: "Select Location",
+      Name: "Location1",
+      Value: "Inside Country",
+      ControlType: "Radio"
+    },
+    {
+      Text: "Documents and Payment Collection",
+      Name:
+        "PIFV_New_EntryPermit_FamilyVisa_PartnerOrInvestor_HusbandOrWife_InsideCountry",
+      ControlType: "AdditionalDetails",
+      Value: "",
+      IsRequired: false,
+      IsVisible: true,
+      IBANNumber: {
+        Text: "IBAN Number",
+        Name: "IBANNumber",
+        IsRequired: false,
+        value: ""
+      },
+      AdditionalNotes: {
+        Text: "Additional Notes",
+        Name: "AdditionalNotes",
+        IsRequired: false,
+        value: ""
+      },
+      OriginalDocumentSubmissionType: {
+        Text: "Original Document Submission Type",
+        Name: "OriginalDocumentSubmissionType",
+        IsRequired: true,
+        Options: ["Through Courier", "Direct Submission at Office"],
+        Value: "Direct Submission at Office",
+        CourierCharge: 10
+      },
+      PriceDetails: [
+        { Text: "Gov. fees", Value: 1180 },
+        { Text: "Service charge", Value: 105 }
+      ],
+      Documents: [
+        {
+          Text: "Sponsors emirates ID",
+          Name: "SponsorsemiratesID",
+          FileUploaded: "YES"
+        },
+        { Text: "License", Name: "License", FileUploaded: "NO" },
+        {
+          Text: "Immigration card",
+          Name: "Immigrationcard",
+          FileUploaded: "NO"
+        },
+        {
+          Text: "Memorandum of association (MOA)",
+          Name: "Memorandumofassociation(MOA)",
+          FileUploaded: "NO"
+        },
+        {
+          Text: "Passport (Front)",
+          Name: "Passport(Front)",
+          FileUploaded: "NO"
+        },
+        { Text: "Passport (Back)", Name: "Passport(Back)", FileUploaded: "NO" },
+        {
+          Text: "1 photo (White background)",
+          Name: "1photo(Whitebackground)",
+          FileUploaded: "NO"
+        }
+      ]
+    }
+  ]
+};
+
+const savedData = {
+  CustomerName: "Sandeep M",
+  Email: "sandeepmadollathil@gmail.com",
+  PersonalPhone: "123456789",
+  OfficePhone: "",
+  Address: "Address Line 1, Address Line 2 Street, City - ",
+  Street: "Street",
+  City: "City",
+  Zip: "1234",
+  AddressCountry: "United Arab Emirates",
+  AddressState: "Abu Dhabi",
+  TotalBillAmount: 4661,
+  CurrencyUsed: "AED",
+  MinimumServiceCharge: 105,
+  PageData: [
+    {
+      Text: "Select Service",
+      Name: "VisaServiceQuestion",
+      Value: "New Visa",
+      ControlType: "Radio"
+    },
+    {
+      Text: "Select Service Type",
+      Name: "NewVisaServiceType",
+      Value: "Entry Permit",
+      ControlType: "Radio"
+    },
+    {
+      Text: "Select Visa Type",
+      Name: "EntryPermitVisaType",
+      Value: "Family Visa",
+      ControlType: "Radio"
+    },
+    {
+      Text: "Who is the Sponsor?",
+      Name: "WhoIsTheSponsorQuestion1",
+      Value: "Partner/Investor",
+      ControlType: "Radio"
+    },
+    {
+      Text: "Whom to Sponsor",
+      Name: "WhomToSponsorQuestion1",
+      Value: "Husband/Wife",
+      ControlType: "Radio"
+    },
+    {
+      Text: "Select Location",
+      Name: "Location1",
+      Value: "Inside Country",
+      ControlType: "Radio"
+    },
+    {
+      Text: "Documents and Payment Collection",
+      Name:
+        "PIFV_New_EntryPermit_FamilyVisa_PartnerOrInvestor_HusbandOrWife_InsideCountry",
+      ControlType: "AdditionalDetails",
+      Value: "",
+      IsRequired: false,
+      IsVisible: true,
+      IBANNumber: {
+        Text: "IBAN Number",
+        Name: "IBANNumber",
+        IsRequired: false,
+        value: ""
+      },
+      AdditionalNotes: {
+        Text: "Additional Notes",
+        Name: "AdditionalNotes",
+        IsRequired: false,
+        value: ""
+      },
+      OriginalDocumentSubmissionType: {
+        Text: "Original Document Submission Type",
+        Name: "OriginalDocumentSubmissionType",
+        IsRequired: true,
+        Options: ["Through Courier", "Direct Submission at Office"],
+        Value: "Direct Submission at Office",
+        CourierCharge: 10
+      },
+      PriceDetails: [
+        { Text: "Gov. fees", Value: 1180 },
+        { Text: "Service charge", Value: 105 }
+      ],
+      Documents: [
+        {
+          Text: "Sponsors emirates ID",
+          Name: "SponsorsemiratesID",
+          FileUploaded: "YES"
+        },
+        { Text: "License", Name: "License", FileUploaded: "NO" },
+        {
+          Text: "Immigration card",
+          Name: "Immigrationcard",
+          FileUploaded: "NO"
+        },
+        {
+          Text: "Memorandum of association (MOA)",
+          Name: "Memorandumofassociation(MOA)",
+          FileUploaded: "NO"
+        },
+        {
+          Text: "Passport (Front)",
+          Name: "Passport(Front)",
+          FileUploaded: "NO"
+        },
+        { Text: "Passport (Back)", Name: "Passport(Back)", FileUploaded: "NO" },
+        {
+          Text: "1 photo (White background)",
+          Name: "1photo(Whitebackground)",
+          FileUploaded: "NO"
+        }
+      ]
+    }
+  ]
+};

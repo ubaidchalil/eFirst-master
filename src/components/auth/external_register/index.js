@@ -5,8 +5,11 @@ import { extRegisterUser, getUserInfo, setExtToken } from "../action";
 import { View } from "react-native";
 import Loader from "../../styled/loader";
 import AlertView from "../../styled/alert-view";
+
 class Container extends Component {
   componentDidMount = () => {
+    const { token } = this.props.navigation.state.params;
+    console.log("token", token.trim());
     //if (this.props.user) this.props.navigation.navigate('Profile');
   };
   constructor(props) {
@@ -29,6 +32,7 @@ class Container extends Component {
       ) {
         this.setState({ extRegRequested: false, userInfoChecked: true });
         const { token } = this.props.navigation.state.params;
+        console.log(token);
         this.props.getUserInfo(token);
       }
     }
@@ -40,7 +44,7 @@ class Container extends Component {
         this.props.extUserInfo.data &&
         this.state.userInfoChecked
       ) {
-        if (!this.props.extUserInfo.data.HasRegistered) {
+        if (this.props.extUserInfo.data.HasRegistered) {
           const { token } = this.props.navigation.state.params;
           const { Email } = this.props.extUserInfo.data;
           this.props.token

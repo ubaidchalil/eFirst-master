@@ -382,6 +382,7 @@ const getUserInfoFetcher = async (fetchData, type, dispatch) => {
 };
 
 export const getUserInfo = token => dispatch => {
+  console.log(`Token = > ${token}`);
   return getUserInfoFetcher(
     async () => {
       const result = await fetch(EXT_USER_INFO_URL, {
@@ -391,6 +392,7 @@ export const getUserInfo = token => dispatch => {
           Authorization: `Bearer ${token}`
         }
       });
+      console.log("Result", result);
       return result.json().then(data => ({
         data: data,
         status: result.ok
