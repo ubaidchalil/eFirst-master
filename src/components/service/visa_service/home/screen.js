@@ -23,7 +23,6 @@ import { NavigationActions } from "react-navigation";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../../constants";
-import Modal from "react-native-modal";
 import MyHeader from "../../../../Header";
 import visa_options from "./data";
 
@@ -94,69 +93,6 @@ const DocumentAttestation = ({
     navigation.dispatch(navigateAction);
   };
 
-  _renderModalContent = state => (
-    <View style={styles.modalContent}>
-      <Item style={{ flexDirection: "row", padding: 7 }}>
-        <View
-          style={{
-            flexDirection: "row",
-            fontSize: 17,
-            padding: 10,
-            paddingHorizontal: 15,
-            flex: 0.9,
-            fontWeight: "bold"
-          }}
-        >
-          <Icon style={{ color: "#F1C40F" }} name="alert" />
-          <Text style={{ fontSize: 17, fontWeight: "bold" }}>Info</Text>
-        </View>
-        <TouchableOpacity
-          style={{ flex: 0.1 }}
-          onPress={() => {
-            setFieldValue("ShowInfo", false);
-          }}
-        >
-          <Icon name="close" />
-        </TouchableOpacity>
-      </Item>
-      <View style={{ padding: 20 }}>
-        <Text style={{ fontSize: 13, lineHeight: 20, paddingHorizontal: 10 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
-        </Text>
-        <Text
-          style={{ paddingTop: 5, fontSize: 13, lineHeight: 20, padding: 10 }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
-        </Text>
-        <Text
-          style={{
-            paddingTop: 5,
-            fontSize: 13,
-            fontWeight: "bold",
-            paddingHorizontal: 10
-          }}
-        >
-          AED : 75/PAGE
-        </Text>
-        <Text
-          style={{
-            paddingTop: 5,
-            fontSize: 13,
-            fontWeight: "bold",
-            paddingHorizontal: 10,
-            paddingBottom: 10
-          }}
-        >
-          SERVICE CHARGE: AED 105 (VAT INCLUDED)
-        </Text>
-      </View>
-    </View>
-  );
-
   return (
     <Container>
       <MyHeader navigation={navigation} header="My Services" />
@@ -171,24 +107,14 @@ const DocumentAttestation = ({
       >
         <View>
           <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
-            DOCUMENT ATTESTATION
+            VISA SERVICE
           </Text>
         </View>
         <Right>
-          <TouchableOpacity
-            onPress={() => {
-              setFieldValue("ShowInfo", true);
-            }}
-          >
-            <View style={{ flexDirection: "row" }}>
-              <Icon name="alert" style={{ fontSize: 20, color: "#F39C12" }} />
-              <Text> Info</Text>
-            </View>
-          </TouchableOpacity>
         </Right>
       </View>
       <Content style={{ padding: 10 }}>
-        <Modal isVisible={values.ShowInfo}>{this._renderModalContent()}</Modal>
+        
         <ScrollView>
           <Form>
             <Item>
@@ -387,34 +313,41 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <Item picker style={styles.item_margin}>
-              <Picker
-                mode="dropdown"
-                iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }}
-                placeholder="Country"
-                placeholderStyle={{ color: "#bfc6ea" }}
-                placeholderIconColor="#007aff"
-                selectedValue={values.SelectedCountryId}
-                onValueChange={value => {
-                  setFieldValue("SelectedCountryId", value);
-                  attestationRateByCountryandDCType(
-                    value,
-                    values.SelectedCertificateType
-                  );
-                }}
-              >
-                <Picker.Item key="0" label="Select Country" value="0" />
-                {renderDocumentCountries()}
-              </Picker>
+            <Item style={styles.item_margin}>
+              <Input
+                placeholder="Nationality *"
+                underline
+                name="Nationality"
+                label="Nationality *"
+                onChangeText={value => setFieldValue("Nationality", value)}
+                value={values.Nationality}
+                error={touched.Street && errors.Nationality}
+                underlineColor={Color.secondary}
+              />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.SelectedCountryId && (
-                <Text
-                  style={{ color: "red" }}
-                  visible={errors.SelectedCountryId}
-                >
-                  {errors.SelectedCountryId}
+              {errors.Street && (
+                <Text style={{ color: "red" }} visible={errors.Nationality}>
+                  {errors.Nationality}
+                </Text>
+              )}
+            </Item>
+            <Item style={styles.item_margin}>
+              <Input
+                placeholder="Passport Expiry Date *"
+                underline
+                name="PassportExpiryDate"
+                label="Passport Expiry Date *"
+                onChangeText={value => setFieldValue("PassportExiryDate", value)}
+                value={values.PassportExiryDate}
+                error={touched.Street && errors.PassportExiryDate}
+                underlineColor={Color.secondary}
+              />
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }}>
+              {errors.Street && (
+                <Text style={{ color: "red" }} visible={errors.PassportExiryDate}>
+                  {errors.PassportExiryDate}
                 </Text>
               )}
             </Item>
@@ -476,7 +409,9 @@ export default withFormik({
     AddressCountry: Yup.string().required("Required"),
     Street: Yup.string().required("Required"),
     City: Yup.string().required("Required"),
-    SelectedState: Yup.string().required("Required")
+    SelectedState: Yup.string().required("Required"),
+    Nationality:  Yup.string().required("Required"),
+    PassportExiryDate:  Yup.string().required("Required")
   }),
 
   handleSubmit: (values, { props }) => {
@@ -492,7 +427,9 @@ export default withFormik({
       City: values.City,
       Zip: values.Zip,
       AddressCountry: values.AddressCountry,
-      AddressState: values.SelectedState
+      AddressState: values.SelectedState,
+      Nationality: values.Nationality,
+      PassportExiryDate: values.PassportExiryDate
     }
     console.log("JSON","result = > "+ JSON.stringify(data));
     navigation.navigate("VisaServceType", { options: visa_options,data : data, pageData : [] }) 

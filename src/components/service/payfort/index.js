@@ -1,0 +1,65 @@
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { View, WebView } from "react-native";
+import { getUserInfo, activateSR } from '../action'
+
+import { WEBSITE_URL } from '../../../constants';
+
+class Container extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { token : "" };
+  }
+
+  componentDidMount = () => {
+    
+  };
+
+  componentDidUpdate() {
+    
+  }
+
+  _onNavigationStateChange = (webViewState) => {
+    console.log(webViewState.url)
+    var str = webViewState.url;
+    var n = str.indexOf("Success");
+    const srid = this.props.navigation.state.params.srid;
+    if(n>=0) 
+    {
+      this.props.activateSR({srid: srid, token: this.props.token.token});
+      this.props.navigation.navigate("MyRequests");
+    }
+  //    this.props.navigation.navigate("MyRequests");
+  }
+
+  render = () => {
+    const srid = this.props.navigation.state.params.srid;
+    const userid = this.props.navigation.state.params.userid;
+    return (
+      <View style={{ flex: 1 }}>
+        <WebView
+          source={{uri: `https://staging.efirst.ae/MobilePayment/Index?srid=${srid}&userId=${userid}`}}
+          userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+          style={{marginTop: 20}}
+          onNavigationStateChange={this._onNavigationStateChange.bind(this)}
+        />
+      </View>
+    );
+  };
+}
+
+const mapStateToProps = ({ extUserInfo, token }) => ({
+  extUserInfo,
+  token
+});
+
+const mapDispatchToProps = dispatch => ({
+  getUserInfo: eToken => dispatch(getUserInfo(eToken)),
+  activateSR: eToken => dispatch(activateSR(eToken))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Container);

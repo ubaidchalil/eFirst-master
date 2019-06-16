@@ -16,18 +16,21 @@ import {
 } from "native-base";
 import MyHeader from "../../../../Header";
 import { visaServiceCreate } from "../../action";
-import { visaServiceData } from "../../../../visaSrviceData";
 
 class _Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      totalBillAmt: 0
+      totalBillAmt : 0
     };
   }
 
-  componentDidMount = () => {};
-  componentDidUpdate() {}
+  componentDidMount = () => {
+    
+  };
+  componentDidUpdate() {
+    
+  }
 
   saveData = () => {
     const { token } = this.props.token;
@@ -42,90 +45,87 @@ class _Container extends Component {
     _data.CurrencyUsed = "AED";
     _data.MinimumServiceCharge = 105;
 
-    this.props.navigation.state.params.docs.forEach(function(doc) {
+    this.props.navigation.state.params.docs.forEach(function(doc){
       Documents.push({
-        Text: doc,
-        Name: doc.replace(/ /g, ""),
-        FileUploaded: docsAttached.indexOf(doc) >= 0 ? "YES" : "NO"
-      });
+        Text : doc,
+        Name : doc.replace(/ /g,''),
+        FileUploaded: docsAttached.indexOf(doc)>=0 ? "YES" : "NO"
+      })
     });
 
-    docsAndPayment.Documents = Documents;
+    docsAndPayment.Documents= Documents;
     pageData.push(docsAndPayment);
     _data.PageData = pageData;
+
+    const serviceData = JSON.stringify(_data);
 
     const docItem = this.props.navigation.state.params.docItem;
     let data = new FormData();
     data.append("ServiceData", serviceData);
-    docItem.map((item, index) => data.append("Files[]", item, item.name));
+    docItem.map((item, index) =>
+      data.append("Files[]", item, item.name)
+    );
     console.log("data", data);
-    return this.props.visaServiceCreate({ data, token });
+   // return this.props.visaServiceCreate({ data, token });
   };
 
   renderPageData = () => {
-    return this.props.navigation.state.params.pageData.map(datum => {
+
+    return this.props.navigation.state.params.pageData.map((datum) => {
       return (
         <Item>
-          <Text style={{ padding: 10, fontWeight: "bold" }}>
-            {datum["Text"]} :{" "}
-          </Text>
-          <Text style={{ padding: 10 }}>{datum["Value"]}</Text>
+          <Text style={{padding:10, fontWeight:'bold'}} >{datum["Text"]} : </Text>
+          <Text style={{padding:10 }} >{datum["Value"]}</Text>
         </Item>
-      );
-    });
-  };
+      )
+    })
+
+  }
 
   renderDocsData = () => {
-    const docs = this.props.navigation.state.params.docsAttached;
-    return this.props.navigation.state.params.docs.map(datum => {
+    const docs = this.props.navigation.state.params.docsAttached
+    return this.props.navigation.state.params.docs.map((datum) => {
       return (
         <Item>
-          <Text style={{ padding: 10, fontWeight: "bold" }}>{datum} : </Text>
-          <Text style={{ padding: 10 }}>
-            {docs.indexOf(datum) >= 0 ? "Yes" : "No"}
-          </Text>
+          <Text style={{padding:10, fontWeight:'bold'}} >{datum} : </Text>
+          <Text style={{padding:10 }} >{docs.indexOf(datum)>=0 ? "Yes" : "No"}</Text>
         </Item>
-      );
-    });
-  };
+      )
+    })
 
+  }
+  
   renderPriceDts = () => {
-    const docs = this.props.navigation.state.params.docsAttached;
-    return this.props.navigation.state.params.docsAndPayment.PriceDetails.map(
-      datum => {
-        return (
-          <Item>
-            <Text style={{ padding: 10, fontWeight: "bold" }}>
-              {datum.Text} :{" "}
-            </Text>
-            <Text style={{ padding: 10 }}>AED {datum.Value}</Text>
-          </Item>
-        );
-      }
-    );
-  };
-
+    const docs = this.props.navigation.state.params.docsAttached
+    return this.props.navigation.state.params.docsAndPayment.PriceDetails.map((datum) => {
+      return (
+        <Item>
+          <Text style={{padding:10, fontWeight:'bold'}} >{datum.Text} : </Text>
+          <Text style={{padding:10 }} >AED {datum.Value}</Text>
+        </Item>
+      )
+    })
+  }
+  
   renderTotalPrice = () => {
     var total = 0;
-    this.props.navigation.state.params.docsAndPayment.PriceDetails.forEach(
-      function(item) {
+    this.props.navigation.state.params.docsAndPayment.PriceDetails.forEach(function(item){
         total += parseFloat(item.Value);
-      }
-    );
-    this.setState({ totalBillAmt: total });
-    return (
-      <Item>
-        <Text style={{ padding: 10, fontWeight: "bold" }}>Total : </Text>
-        <Text style={{ padding: 10, fontWeight: "bold" }}>AED {total}</Text>
-      </Item>
-    );
-  };
+      });
+      this.setState({totalBillAmt : total});
+      return (
+        <Item>
+          <Text style={{padding:10, fontWeight:'bold'}} >Total : </Text>
+          <Text style={{padding:10, fontWeight:'bold' }} >AED {total}</Text>
+        </Item>
+      )
+  }
 
   render = () => {
     return (
       <Container>
         <MyHeader navigation={this.props.navigation} header="My Services" />
-
+  
         <View
           style={{
             backgroundColor: "#F7F9F9",
@@ -139,56 +139,56 @@ class _Container extends Component {
               Application Details
             </Text>
           </View>
-          <Right />
+          <Right>
+          </Right>
         </View>
         <Content>
-          {this.renderPageData()}
-
-          <View
-            style={{
-              backgroundColor: "#F7F9F9",
-              flexDirection: "row",
-              paddingHorizontal: 10,
-              paddingVertical: 10
-            }}
-          >
-            <View>
-              <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
-                Documents Uploaded
-              </Text>
-            </View>
-            <Right />
-          </View>
-          {this.renderDocsData()}
-
+         
+        { this.renderPageData() }
+        
+        <View
+          style={{
+            backgroundColor: "#F7F9F9",
+            flexDirection: "row",
+            paddingHorizontal: 10,
+            paddingVertical: 10
+          }}
+        >
           <View>
             <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
-              Price Details
+            Documents Uploaded
             </Text>
           </View>
-          <Right />
-          {this.renderPriceDts()}
-          {this.renderTotalPrice()}
+          <Right>
+          </Right>
+        </View>
+        { this.renderDocsData() }
 
-          <Button
-            style={{
-              backgroundColor: "#183E61",
-              marginBottom: 30,
-              marginTop: 10
-            }}
-            full
-            rounded
-            onPress={() => {
-              this.saveData();
-            }}
-          >
+        <View>
+            <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
+            Price Details
+            </Text>
+          </View>
+          <Right>
+          </Right>
+        { this.renderPriceDts() }
+        { this.renderTotalPrice() }
+
+
+        <Button
+           style={{ backgroundColor: "#183E61", marginBottom: 30, marginTop: 10 }}
+           full
+           rounded
+           onPress={() => { this.saveData() }}
+        >
             <Text>Next</Text>
-          </Button>
+          </Button>  
         </Content>
-      </Container>
+        </Container>
     );
   };
 }
+
 
 const mapStateToProps = ({ token }) => ({ token });
 const mapDispatchToProps = dispatch => ({

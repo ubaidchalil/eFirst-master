@@ -136,7 +136,7 @@ const openFetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
-    console.log(result.data.Result.SRDataJson);
+    console.log("result = > "+ JSON.stringify(result));
     if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
       dispatch(setInStore(true, type.SUCCESS));
     } else {
@@ -155,7 +155,7 @@ const openAttestationFetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
-    console.table(result);
+    console.log("result = > "+ JSON.stringify(result));
     if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
       dispatch(setInStore(result.data, type.DONE));
       dispatch(setInStore(true, type.SUCCESS));
@@ -214,6 +214,7 @@ export const docAttestationCreate = payload => dispatch => {
   );
 };
 
+
 export const visaServiceCreate = payload => dispatch => {
   const { token, data } = payload;
   const body = data;
@@ -242,22 +243,19 @@ export const visaServiceCreate = payload => dispatch => {
 export const updAttestationSRAmt = payload => dispatch => {
   const { token, ...bodyData } = payload;
   const body = JSON.stringify(bodyData);
-  console.log("Body", "result = > Body : " + body);
-  console.log("Body", "result = > token : " + token);
+  console.log("Body", "result = > Body : "+body);
+  console.log("Body", "result = > token : "+token);
   return openAttestationFetcher(
     async () => {
-      const result = await fetch(
-        UPD_SR_AMT + "?srid=" + bodyData.SRID + "&amount=" + bodyData.amount,
-        {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`
-          },
-          body
-        }
-      );
+      const result = await fetch(UPD_SR_AMT+"?srid="+bodyData.SRID+"&amount="+bodyData.amount, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        },
+        body
+      });
 
       return result.json().then(data => ({
         data: data,
@@ -272,11 +270,11 @@ export const updAttestationSRAmt = payload => dispatch => {
 export const activateSR = payload => dispatch => {
   const { token, srid } = payload;
   const body = JSON.stringify(srid);
-  console.log("Activate SR", "result = > srid : " + srid);
+  console.log("Activate SR", "result = > srid : "+srid);
   dispatch(clearAttestationData());
   return openAttestationFetcher(
     async () => {
-      const result = await fetch(ACTIVATE_SR + "?srid=" + srid, {
+      const result = await fetch(ACTIVATE_SR+"?srid="+srid, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -295,6 +293,7 @@ export const activateSR = payload => dispatch => {
     dispatch
   );
 };
+
 
 export const sendOrReplyMessage = payload => dispatch => {
   const { token, ...bodyData } = payload;

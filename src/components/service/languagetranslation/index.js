@@ -6,7 +6,8 @@ import {
   documentationTypes,
   translationPrice,
   doclangTransCreate,
-  servicesData
+  servicesData,
+  updAttestationSRAmt
 } from "../action";
 import { View } from "react-native";
 import Loader from "../../styled/loader";
@@ -22,7 +23,23 @@ class Container extends Component {
         const { token } = this.props.token;
         const statusId = null;
         this.props.servicesData({ statusId, token });
-        this.props.navigation.navigate("MyRequests");
+        var SRID = this.props.documentattestation.data.SRID;
+        if(!this.props.docSRAmUpdation.loading)
+        {
+          if(!this.props.docSRAmUpdation.success && !this.props.docSRAmUpdation.error)
+          {
+            console.log("Requesting UpdSRAmt","result = > "+ JSON.stringify(this.props.docSRAmUpdation));
+            this.props.updAttestationSRAmt({token: this.props.token.token, SRID: SRID, amount: 100});
+          }
+          else{
+            console.log("Request Complete","result = > "+ JSON.stringify(this.props.docSRAmUpdation));
+            if(this.props.docSRAmUpdation.success)
+              this.props.navigation.navigate("PayfortPay",{srid: SRID, userid: "4"});
+              
+              
+          }
+          
+        }
       }
     }
   }
@@ -64,21 +81,24 @@ const mapStateToProps = ({
   documenttypes,
   token,
   profile,
-  langtranslation
+  langtranslation,
+  docSRAmUpdation
 }) => ({
   documentlanguage,
   translationrate,
   documenttypes,
   token,
   profile,
-  langtranslation
+  langtranslation,
+  docSRAmUpdation
 });
 const mapDispatchToProps = dispatch => ({
   translationPrice: payload => dispatch(translationPrice(payload)),
   getdoclanguage: payload => dispatch(getdoclanguage(payload)),
   documentationTypes: payload => dispatch(documentationTypes(payload)),
   doclangTransCreate: payload => dispatch(doclangTransCreate(payload)),
-  servicesData: payload => dispatch(servicesData(payload))
+  servicesData: payload => dispatch(servicesData(payload)),
+  updAttestationSRAmt: payload => dispatch(updAttestationSRAmt(payload))
 });
 
 export default connect(

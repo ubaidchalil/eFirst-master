@@ -6,7 +6,8 @@ import {
   getcertificateType,
   attestationPrice,
   docAttestationCreate,
-  servicesData
+  servicesData,
+  updAttestationSRAmt
 } from "../action";
 import Loader from "../../styled/loader";
 import { View } from "react-native";
@@ -38,12 +39,36 @@ class Container extends Component {
       certificatetype.loading ||
       attestationrate.loading;
 
+    console.log("Doc Attest Upd: result = >", JSON.stringify(this.props.documentattestation));
     if (!this.props.documentattestation.loading) {
       if (this.props.documentattestation.success) {
         const { token } = this.props.token;
         const statusId = null;
         this.props.servicesData({ statusId, token });
-        this.props.navigation.navigate("MyRequests");
+        console.log("result = > "+ JSON.stringify(this.props.documentattestation.data));
+    //    alert(this.props.documentattestation.data.SRID);
+        var SRID = this.props.documentattestation.data.SRID;
+        if(!this.props.docSRAmUpdation.loading)
+        {
+          if(!this.props.docSRAmUpdation.success && !this.props.docSRAmUpdation.error)
+          {
+            console.log("Requesting UpdSRAmt","result = > "+ JSON.stringify(this.props.docSRAmUpdation));
+            this.props.updAttestationSRAmt({token: this.props.token.token, SRID: SRID, amount: 100});
+          }
+          else{
+            console.log("Request Complete","result = > "+ JSON.stringify(this.props.docSRAmUpdation));
+            if(this.props.docSRAmUpdation.success)
+              this.props.navigation.navigate("PayfortPay",{srid: SRID, userid: "4"});
+              
+              
+          }
+          
+        }
+        
+        
+     //   if(this.props.docSRAmUpdation.success)
+     //     this.props.navigation.navigate("PayfortPay");
+        //this.props.navigation.navigate("MyRequests");
       }
     }
   }
@@ -84,22 +109,27 @@ const mapStateToProps = ({
   certificatetype,
   attestationrate,
   documentattestation,
+  docSRAmUpdation,
   profile,
-  token
+  token,
+  srActivation
 }) => ({
   countries,
   certificatetype,
   attestationrate,
   documentattestation,
+  docSRAmUpdation,
   profile,
-  token
+  token,
+  srActivation
 });
 const mapDispatchToProps = dispatch => ({
   attestationPrice: payload => dispatch(attestationPrice(payload)),
   getCountries: payload => dispatch(countries(payload)),
   getcertificateType: payload => dispatch(getcertificateType(payload)),
   docAttestationCreate: payload => dispatch(docAttestationCreate(payload)),
-  servicesData: payload => dispatch(servicesData(payload))
+  servicesData: payload => dispatch(servicesData(payload)),
+  updAttestationSRAmt: payload => dispatch(updAttestationSRAmt(payload))
 });
 
 export default connect(
