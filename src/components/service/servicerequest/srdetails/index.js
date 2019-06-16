@@ -10,6 +10,8 @@ import {
   StyleProvider
 } from "native-base";
 import { connect } from "react-redux";
+import VisaServiceDt from "./visaservicedt";
+
 class SRInfo extends Component {
   certtificateTypeName = SelectedCertificateType => {
     const { certificatetype } = this.props;
@@ -50,19 +52,22 @@ class SRInfo extends Component {
         Email,
         PersonalPhone,
         Address,
-        TotalRate,
+        TotalRate, 
         SelectedCountryId,
         SelectedCertificateType,
         SelectedDocumentTypeId,
         SelectedFromDocumentLanguageId,
-        SelectedToDocumentLanguageId,
-        Service: { ServiceName }
+        SelectedToDocumentLanguageId
       }
     } = this.props;
+    const {
+      srDetail: { ServiceName }
+    } = this.props;
+    const pageData = this.props.srInfo.PageData || null;
     return (
       <Container>
-        <Content style={{ padding: 10 }}>
           <ScrollView>
+        <Content style={{ padding: 10 }}>
             <View style={styles.item_border}>
               <Text style={styles.label}>Name : </Text>
               <Text style={styles.value}> {CustomerName} </Text>
@@ -152,8 +157,11 @@ class SRInfo extends Component {
                 {""}AED{" "}
               </Text>
             </View>
-          </ScrollView>
+            {pageData && (
+             <VisaServiceDt pageData={pageData} />
+            )}
         </Content>
+          </ScrollView>
       </Container>
     );
   }
@@ -173,13 +181,14 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = ({
-  servicerequest: { srInfo },
+  servicerequest: { srInfo, srDetail },
   certificatetype,
   countries,
   documenttypes,
   documentlanguage
 }) => ({
   srInfo,
+  srDetail,
   certificatetype,
   countries,
   documenttypes,
