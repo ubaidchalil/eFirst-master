@@ -8,7 +8,6 @@ import {
   TouchableOpacity
 } from "react-native";
 
-import Modal from "react-native-modal";
 import {
   Container,
   Picker,
@@ -31,6 +30,11 @@ import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
 var ImagePicker = require("react-native-image-picker");
+
+import {
+  DocumentPicker,
+  DocumentPickerUtil
+} from "react-native-document-picker";
 
 const LanguageTranslation = ({
   handleSubmit,
@@ -82,6 +86,33 @@ const LanguageTranslation = ({
       }
     });
   };
+
+  openFile = () => {
+
+    DocumentPicker.show(
+      {
+        filetype: [DocumentPickerUtil.images()]
+      },
+      (error, res) => {
+        // Android
+        console.log(
+          res.uri,
+          res.type, // mime type
+          res.fileName,
+          res.fileSize
+        );
+        
+        const file = {
+          uri: res.uri,
+          type: res.type,
+          name: res.fileName
+        };
+
+        setFieldValue("Files", file);
+      }
+    );
+  };
+
 
   openImagePicker = () => {
     console.log(ImagePicker);
@@ -140,68 +171,6 @@ const LanguageTranslation = ({
         value={doc.DocumentTypeId}
       />
     ));
-  _renderModalContent = state => (
-    <View style={styles.modalContent}>
-      <Item style={{ flexDirection: "row", padding: 7 }}>
-        <View
-          style={{
-            flexDirection: "row",
-            fontSize: 17,
-            padding: 10,
-            paddingHorizontal: 15,
-            flex: 0.9,
-            fontWeight: "bold"
-          }}
-        >
-          <Icon style={{ color: "#F1C40F" }} name="alert" />
-          <Text style={{ fontSize: 17, fontWeight: "bold" }}>Info</Text>
-        </View>
-        <TouchableOpacity
-          style={{ flex: 0.1 }}
-          onPress={() => {
-            setFieldValue("ShowInfo", false);
-          }}
-        >
-          <Icon name="close" />
-        </TouchableOpacity>
-      </Item>
-      <View style={{ padding: 20 }}>
-        <Text style={{ fontSize: 13, lineHeight: 20, paddingHorizontal: 10 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
-        </Text>
-        <Text
-          style={{ paddingTop: 5, fontSize: 13, lineHeight: 20, padding: 10 }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
-        </Text>
-        <Text
-          style={{
-            paddingTop: 5,
-            fontSize: 13,
-            fontWeight: "bold",
-            paddingHorizontal: 10
-          }}
-        >
-          AED : 75/PAGE
-        </Text>
-        <Text
-          style={{
-            paddingTop: 5,
-            fontSize: 13,
-            fontWeight: "bold",
-            paddingHorizontal: 10,
-            paddingBottom: 10
-          }}
-        >
-          SERVICE CHARGE: AED 105 (VAT INCLUDED)
-        </Text>
-      </View>
-    </View>
-  );
 
   return (
     <Container>
@@ -220,20 +189,10 @@ const LanguageTranslation = ({
           </Text>
         </View>
         <Right>
-          <TouchableOpacity
-            onPress={() => {
-              setFieldValue("ShowInfo", true);
-            }}
-          >
-            <View style={{ flexDirection: "row" }}>
-              <Icon name="alert" style={{ fontSize: 20, color: "#F39C12" }} />
-              <Text> Info</Text>
-            </View>
-          </TouchableOpacity>
         </Right>
       </View>
       <Content style={{ padding: 10 }}>
-        <Modal isVisible={values.ShowInfo}>{this._renderModalContent()}</Modal>
+      
         <ScrollView>
           <Form>
             <Item>
@@ -345,7 +304,7 @@ const LanguageTranslation = ({
                 </Text>
               )}
             </Item>
-            <Item picker style={styles.item_margin}>
+            <Item style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -433,7 +392,7 @@ const LanguageTranslation = ({
               )}
             </Item>
 
-            <Item picker style={styles.item_margin}>
+            <Item style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -460,7 +419,7 @@ const LanguageTranslation = ({
                 </Text>
               )}
             </Item>
-            <Item picker style={styles.item_margin}>
+            <Item style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -491,7 +450,7 @@ const LanguageTranslation = ({
                 </Text>
               )}
             </Item>
-            <Item picker style={styles.item_margin}>
+            <Item style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -547,7 +506,7 @@ const LanguageTranslation = ({
                   padding: 10
                 }}
               >
-                Filename
+                {values.Files ? values.Files.name : "Select File"}
               </Text>
             </View>
             <View style={{ alignItems: "center", marginTop: 7 }}>
@@ -576,7 +535,7 @@ const LanguageTranslation = ({
                     borderLeftColor: "#CACFD2",
                     alignItems: "center"
                   }}
-                  onPress={() => this.openImagePicker()}
+                  onPress={() => this.openFile()}
                 >
                   <Icon name="albums" />
                   <Text>Album</Text>

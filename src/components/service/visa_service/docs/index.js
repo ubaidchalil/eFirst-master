@@ -28,6 +28,7 @@ class _Container extends Component {
     this.state = {
       submissionType: "Direct Submission at Office",
       docsAttached: [],
+      docNames: [],
       docItem: [],
       courier_charge: 10,
       notes: "",
@@ -56,6 +57,8 @@ class _Container extends Component {
       console.log("Response = ", response);
 
       var _docs = this.state.docsAttached;
+      var _docNames = this.state.docNames;
+
       if (response.didCancel) {
         console.log("User cancelled image picker");
       } else if (response.error) {
@@ -73,6 +76,10 @@ class _Container extends Component {
         this.state.docItem.push(file);
 
         _docs.push(doc);
+        _docNames[doc] = res.fileName;
+
+        this.setState({docsAttached : _docs});
+        this.setState({docNames : _docNames});
 
         console.log(JSON.stringify(file));
       }
@@ -81,6 +88,8 @@ class _Container extends Component {
 
   openFile = doc => {
     var _docs = this.state.docsAttached;
+    var _docNames = this.state.docNames;
+
     DocumentPicker.show(
       {
         filetype: [DocumentPickerUtil.images()]
@@ -95,6 +104,10 @@ class _Container extends Component {
         );
         console.log(_docs);
         _docs.push(doc);
+        _docNames[doc] = res.fileName;
+
+        this.setState({docsAttached : _docs});
+        this.setState({docNames : _docNames});
 
         const file = {
           uri: res.uri,
@@ -176,7 +189,7 @@ class _Container extends Component {
                 padding: 10
               }}
             >
-              {this.state.docsAttached.indexOf(doc) >= 0 ? "" : "FileName"}
+              {this.state.docNames[doc] || "Select File"}
             </Text>
           </View>
           <View style={{ alignItems: "center", marginTop: 7 }}>

@@ -223,7 +223,7 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <Item picker style={styles.item_margin}>
+            <Item style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}

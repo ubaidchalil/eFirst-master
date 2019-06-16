@@ -30,6 +30,11 @@ const PersonalDetails = ({
     setFieldValue("DOB", new Date(date).toDateString());
     HideDateTimePicker();
   };
+  
+  dateFormat = (date) => {
+    return date.getDate()+"/"+ (date.getMonth()+1)+"/"+date.getFullYear()
+  }
+
   return (
     <View>
       <View
@@ -72,7 +77,7 @@ const PersonalDetails = ({
             <Col>
               {!values.ShowEditPersonal ? (
                 <Text style={styles.text_detail}>
-                  Birthday: {personaldetail.Dob}
+                  Birthday: {this.dateFormat(new Date(personaldetail.Dob))}
                 </Text>
               ) : (
                 <Item>

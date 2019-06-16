@@ -156,13 +156,12 @@ class Container1 extends Component {
               style={styles.listItem}
               onPress={this.props.Logout}
             >
-              <Left style={styles.left}>
+              <View style={styles.left}>
                 <Icon style={styles.icon} name="arrow-dropright" />
-              </Left>
-              <Body style={styles.body}>
+              </View>
+              <View style={styles.body}>
                 <Text style={styles.text}>Logout</Text>
-              </Body>
-              <Right />
+              </View>
             </TouchableOpacity>
           </ScrollView>
         </Content>
