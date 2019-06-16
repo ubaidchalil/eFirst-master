@@ -487,13 +487,12 @@ export default withFormik({
       Email: values.Email,
       PersonalPhone: values.PersonalPhone,
       OfficePhone: values.OfficePhone,
-      Address1: values.Address1,
-      Zip: values.Zip,
-      AddressCountry: values.AddressCountry,
+      Address: values.Address1,
       Street: values.Street,
       City: values.City,
-      SelectedState: values.SelectedState,
-      SelectedCountryId: values.SelectedCountryId
+      Zip: values.Zip,
+      AddressCountry: values.AddressCountry,
+      AddressState: values.SelectedState
     }
     console.log("JSON","result = > "+ JSON.stringify(data));
     navigation.navigate("VisaServceType", { options: visa_options,data : data, pageData : [] }) 

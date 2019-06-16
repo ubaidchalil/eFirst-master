@@ -21,7 +21,9 @@ import { visaServiceData } from "../../../../visaSrviceData";
 class _Container extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      totalBillAmt: 0
+    };
   }
 
   componentDidMount = () => {};
@@ -33,7 +35,13 @@ class _Container extends Component {
     var pageData = this.props.navigation.state.params.pageData;
     var docsAndPayment = this.props.navigation.state.params.docsAndPayment;
     var Documents = [];
+
     const docsAttached = this.props.navigation.state.params.docsAttached;
+
+    _data.TotalBillAmount = this.state.totalBillAmt;
+    _data.CurrencyUsed = "AED";
+    _data.MinimumServiceCharge = 105;
+
     this.props.navigation.state.params.docs.forEach(function(doc) {
       Documents.push({
         Text: doc,
@@ -44,9 +52,7 @@ class _Container extends Component {
 
     docsAndPayment.Documents = Documents;
     pageData.push(docsAndPayment);
-    _data.pageData = pageData;
-    console.log("Data", JSON.stringify(_data));
-    const serviceData = JSON.stringify(visaServiceData);
+    _data.PageData = pageData;
 
     const docItem = this.props.navigation.state.params.docItem;
     let data = new FormData();
@@ -106,6 +112,7 @@ class _Container extends Component {
         total += parseFloat(item.Value);
       }
     );
+    this.setState({ totalBillAmt: total });
     return (
       <Item>
         <Text style={{ padding: 10, fontWeight: "bold" }}>Total : </Text>

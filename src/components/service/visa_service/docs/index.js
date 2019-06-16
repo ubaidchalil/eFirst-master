@@ -43,7 +43,7 @@ class _Container extends Component {
   };
   componentDidUpdate() {}
 
-  openlaunchCamera = () => {
+  openlaunchCamera = doc => {
     const options = {
       title: "Select Avatar",
       storageOptions: {
@@ -192,7 +192,7 @@ class _Container extends Component {
                 transparent
                 dark
                 style={{ alignItems: "center" }}
-                onPress={() => this.openlaunchCamera()}
+                onPress={() => this.openlaunchCamera(doc)}
               >
                 <Icon name="camera" />
                 <Text>Camera</Text>
