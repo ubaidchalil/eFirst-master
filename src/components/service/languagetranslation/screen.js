@@ -50,7 +50,7 @@ const LanguageTranslation = ({
   token,
   navigation
 }) => {
-  openlaunchCamera = () => {
+  openlaunchCamera = (i) => {
     console.log(ImagePicker);
     const options = {
       title: "Select Avatar",
@@ -77,17 +77,20 @@ const LanguageTranslation = ({
           type: response.type,
           name: response.fileName
         };
-        // values.Files.push(file);
-        setFieldValue("Files", file);
-        // You can also display the image using data:
-        // const source = { uri: 'data:image/jpeg;base64,' + response.data };
-
+        
+        var files = values.Files;
+        if(i==0)
+          files.push(file);
+        else
+          files[i] = file;
+        setFieldValue("Files", files);
+        
         console.log(source);
       }
     });
   };
 
-  openFile = () => {
+  openFile = (i) => {
 
     DocumentPicker.show(
       {
@@ -107,11 +110,71 @@ const LanguageTranslation = ({
           type: res.type,
           name: res.fileName
         };
-
-        setFieldValue("Files", file);
+        var files = values.Files;
+        if(i==0)
+          files.push(file);
+        else
+          files[i] = file;
+        setFieldValue("Files", files);
       }
     );
   };
+  
+  renderDocs = (i) => {
+    return values.Files.map(doc => {
+      return (
+        <View style={{ marginTop: 10 }}>
+          <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }}>
+          </Item>
+          <View>
+            <Text
+              style={{
+                textAlign: "center",
+                color: "#B2BABB",
+                padding: 10
+              }}
+            >
+              {doc.name || "Select File"}
+            </Text>
+          </View>
+          <View style={{ alignItems: "center", marginTop: 7 }}>
+            <View
+              style={{
+                flexDirection: "row",
+                borderWidth: 1,
+                borderColor: "#CACFD2",
+                borderRadius: 10
+              }}
+            >
+              <Button
+                transparent
+                dark
+                style={{ alignItems: "center" }}
+                onPress={() => this.openlaunchCamera(i)}
+              >
+                <Icon name="camera" />
+                <Text>Camera</Text>
+              </Button>
+              <Button
+                transparent
+                dark
+                style={{
+                  borderLeftWidth: 1,
+                  borderLeftColor: "#CACFD2",
+                  alignItems: "center"
+                }}
+                onPress={() => this.openFile(i)}
+              >
+                <Icon name="albums" />
+                <Text>Album</Text>
+              </Button>
+            </View>
+          </View>
+        </View>
+      );
+    });
+  };
+
 
 
   openImagePicker = () => {
@@ -241,10 +304,19 @@ const LanguageTranslation = ({
                 error={touched.PersonalPhone && errors.PersonalPhone}
                 underlineColor={Color.secondary}
               />
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }}>
+                {errors.PersonalPhone && (
+                  <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
+                    {errors.PersonalPhone}
+                  </Text>
+                )}
+            </Item>
+            <Item>
               <Input
-                placeholder="Land Line"
+                placeholder="Land Phone"
                 name="Office"
-                label="Land Line"
+                label="Land Phone"
                 onChangeText={value => setFieldValue("OfficePhone", value)}
                 value={values.OfficePhone}
                 error={touched.OfficePhone && errors.OfficePhone}
@@ -252,11 +324,6 @@ const LanguageTranslation = ({
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.PersonalPhone && (
-                <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
-                  {errors.PersonalPhone}
-                </Text>
-              )}
               {errors.OfficePhone && (
                 <Text style={{ color: "red" }} visible={errors.OfficePhone}>
                   {errors.OfficePhone}
@@ -265,8 +332,7 @@ const LanguageTranslation = ({
             </Item>
 
             <Item style={styles.item_margin}>
-              <Textarea
-                rowSpan={5}
+              <Input
                 placeholder="Address Line 1"
                 underline
                 name="Address"
@@ -285,8 +351,7 @@ const LanguageTranslation = ({
               )}
             </Item>
             <Item style={styles.item_margin}>
-              <Textarea
-                rowSpan={5}
+              <Input
                 placeholder="Street Address *"
                 underline
                 name="Street"
@@ -498,50 +563,55 @@ const LanguageTranslation = ({
             <Item style={{ borderBottomWidth: 0 }}>
               <Text>Upload File </Text>
             </Item>
-            <View>
-              <Text
-                style={{
-                  textAlign: "center",
-                  color: "#B2BABB",
-                  padding: 10
-                }}
+            { this.renderDocs() }
+        <View style={{ marginTop: 10 }}>
+          <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }}>
+          </Item>
+          <View>
+            <Text
+              style={{
+                textAlign: "center",
+                color: "#B2BABB",
+                padding: 10
+              }}
+            >
+              Select File
+            </Text>
+          </View>
+          <View style={{ alignItems: "center", marginTop: 7 }}>
+            <View
+              style={{
+                flexDirection: "row",
+                borderWidth: 1,
+                borderColor: "#CACFD2",
+                borderRadius: 10
+              }}
+            >
+              <Button
+                transparent
+                dark
+                style={{ alignItems: "center" }}
+                onPress={() => this.openlaunchCamera(0)}
               >
-                {values.Files ? values.Files.name : "Select File"}
-              </Text>
-            </View>
-            <View style={{ alignItems: "center", marginTop: 7 }}>
-              <View
+                <Icon name="camera" />
+                <Text>Camera</Text>
+              </Button>
+              <Button
+                transparent
+                dark
                 style={{
-                  flexDirection: "row",
-                  borderWidth: 1,
-                  borderColor: "#CACFD2",
-                  borderRadius: 10
+                  borderLeftWidth: 1,
+                  borderLeftColor: "#CACFD2",
+                  alignItems: "center"
                 }}
+                onPress={() => this.openFile(0)}
               >
-                <Button
-                  transparent
-                  dark
-                  style={{ alignItems: "center" }}
-                  onPress={() => this.openlaunchCamera()}
-                >
-                  <Icon name="camera" />
-                  <Text>Camera</Text>
-                </Button>
-                <Button
-                  transparent
-                  dark
-                  style={{
-                    borderLeftWidth: 1,
-                    borderLeftColor: "#CACFD2",
-                    alignItems: "center"
-                  }}
-                  onPress={() => this.openFile()}
-                >
-                  <Icon name="albums" />
-                  <Text>Album</Text>
-                </Button>
-              </View>
+                <Icon name="albums" />
+                <Text>Album</Text>
+              </Button>
             </View>
+          </View>
+        </View>
 
             <View>
               <Text
@@ -600,7 +670,7 @@ export default withFormik({
     SelectedFromDocumentLanguageId: "",
     SelectedToDocumentLanguageId: "",
     LegalStamp: false,
-    Files: null,
+    Files: [],
     doclangTransCreate,
     ShowInfo: false
   }),
