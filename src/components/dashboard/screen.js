@@ -226,7 +226,7 @@ export default ({ navigation, dashboard, servicesData, token }) => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={() => loadServiceRequestsByStatus(2)}
+          onPress={() => loadServiceRequestsByStatus(3)}
           style={[styles.card_outer, styles.completed_bgcolor]}
         >
           <View style={styles.card_inner}>
