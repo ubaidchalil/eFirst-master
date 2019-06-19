@@ -14,6 +14,7 @@ class Container extends Component {
 
   componentDidMount = () => {
     const srid = this.props.navigation.state.params.srid;
+    console.log("srid", srid);
     this.props.activateSR({ srid: srid, token: this.props.token.token });
     this.setState({ Requested: true });
   };

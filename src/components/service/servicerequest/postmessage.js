@@ -108,7 +108,7 @@ const PostMessage = ({
 export default withFormik({
   enableReinitialize: true,
   mapPropsToValues: ({ action, SendMessage }) => ({
-    MessageTitle: action.SRID ? action.Title : "",
+    MessageTitle: action.SRID == 0 ? action.Title : "",
     MessageContent: "",
 
     SendMessage
@@ -127,7 +127,7 @@ export default withFormik({
     const { profile } = props;
     const { UserId } = profile.data.userdetail;
     const { SRID, NoteID } = props.action;
-    const NoteType = SRID ? "NewMessage" : "ReplyMessage";
+    const NoteType = SRID != 0 ? "NewMessage" : "ReplyMessage";
     const { MessageContent, MessageTitle } = values;
 
     values.SendMessage({

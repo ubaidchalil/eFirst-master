@@ -42,6 +42,7 @@ class Container extends Component {
       this.state.Requested
     ) {
       this.setState({ Requested: false, UpdatedSRAmount: true });
+      console.log("this.state", this.state);
       var SRID = this.props.langtranslation.data.SRID;
       this.props.updAttestationSRAmt({
         token: this.props.token.token,

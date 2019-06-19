@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import RegistrationScreen from "./screen";
+import ChangePassword from "./screen";
 import { connect } from "react-redux";
 import { registerUser } from "../action";
 import { View } from "react-native";
@@ -12,9 +12,13 @@ class Container extends Component {
     //if (this.props.user) this.props.navigation.navigate('Profile');
   };
   componentDidUpdate = () => {
-    if (this.props.registration) {
-      if (!this.props.registration.error && !this.props.registration.loading) {
-        this.props.navigation.navigate("ConfirmEmail");
+    if (this.props.forgetchangepassword) {
+      if (
+        !this.props.forgetchangepassword.error &&
+        !this.props.forgetchangepassword.loading &&
+        this.props.forgetchangepassword.success
+      ) {
+        this.props.navigation.navigate("Login");
       }
     }
   };
@@ -24,7 +28,7 @@ class Container extends Component {
     return (
       <View style={{ flex: 1 }}>
         <Loader loading={loading} />
-        <RegistrationScreen {...this.props} Email={Email} />
+        <ChangePassword {...this.props} Email={Email} />
         {error && <AlertView type="error" />}
       </View>
     );

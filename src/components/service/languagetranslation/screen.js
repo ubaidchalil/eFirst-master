@@ -50,8 +50,7 @@ const LanguageTranslation = ({
   token,
   navigation
 }) => {
-  openlaunchCamera = (i) => {
-    console.log(ImagePicker);
+  openlaunchCamera = i => {
     const options = {
       title: "Select Avatar",
       storageOptions: {
@@ -77,55 +76,48 @@ const LanguageTranslation = ({
           type: response.type,
           name: response.fileName
         };
-        
+
         var files = values.Files;
-        if(i==0)
-          files.push(file);
-        else
-          files[i] = file;
+        if (i == 0) files.push(file);
+        else files[i] = file;
         setFieldValue("Files", files);
-        
-        console.log(source);
       }
     });
   };
 
-  openFile = (i) => {
-
+  openFile = i => {
     DocumentPicker.show(
       {
-        filetype: [DocumentPickerUtil.images()]
+        filetype: [DocumentPickerUtil.allFiles()]
       },
       (error, res) => {
-        // Android
-        console.log(
-          res.uri,
-          res.type, // mime type
-          res.fileName,
-          res.fileSize
-        );
-        
-        const file = {
-          uri: res.uri,
-          type: res.type,
-          name: res.fileName
-        };
-        var files = values.Files;
-        if(i==0)
-          files.push(file);
-        else
-          files[i] = file;
-        setFieldValue("Files", files);
+        if (res) {
+          console.log(
+            res.uri,
+            res.type, // mime type
+            res.fileName,
+            res.fileSize
+          );
+
+          const file = {
+            uri: res.uri,
+            type: res.type,
+            name: res.fileName
+          };
+          var files = values.Files;
+          if (i == 0) files.push(file);
+          else files[i] = file;
+          setFieldValue("Files", files);
+        }
       }
     );
   };
-  
-  renderDocs = (i) => {
+
+  renderDocs = i => {
     return values.Files.map(doc => {
       return (
         <View style={{ marginTop: 10 }}>
-          <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }}>
-          </Item>
+          <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }} />
           <View>
             <Text
               style={{
@@ -175,10 +167,7 @@ const LanguageTranslation = ({
     });
   };
 
-
-
   openImagePicker = () => {
-    console.log(ImagePicker);
     const options = {
       title: "Select Avatar",
       storageOptions: {
@@ -251,11 +240,9 @@ const LanguageTranslation = ({
             LANGUAGE TRANSLATION
           </Text>
         </View>
-        <Right>
-        </Right>
+        <Right />
       </View>
       <Content style={{ padding: 10 }}>
-      
         <ScrollView>
           <Form>
             <Item>
@@ -306,11 +293,11 @@ const LanguageTranslation = ({
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-                {errors.PersonalPhone && (
-                  <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
-                    {errors.PersonalPhone}
-                  </Text>
-                )}
+              {errors.PersonalPhone && (
+                <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
+                  {errors.PersonalPhone}
+                </Text>
+              )}
             </Item>
             <Item>
               <Input
@@ -563,55 +550,54 @@ const LanguageTranslation = ({
             <Item style={{ borderBottomWidth: 0 }}>
               <Text>Upload File </Text>
             </Item>
-            { this.renderDocs() }
-        <View style={{ marginTop: 10 }}>
-          <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }}>
-          </Item>
-          <View>
-            <Text
-              style={{
-                textAlign: "center",
-                color: "#B2BABB",
-                padding: 10
-              }}
-            >
-              Select File
-            </Text>
-          </View>
-          <View style={{ alignItems: "center", marginTop: 7 }}>
-            <View
-              style={{
-                flexDirection: "row",
-                borderWidth: 1,
-                borderColor: "#CACFD2",
-                borderRadius: 10
-              }}
-            >
-              <Button
-                transparent
-                dark
-                style={{ alignItems: "center" }}
-                onPress={() => this.openlaunchCamera(0)}
-              >
-                <Icon name="camera" />
-                <Text>Camera</Text>
-              </Button>
-              <Button
-                transparent
-                dark
-                style={{
-                  borderLeftWidth: 1,
-                  borderLeftColor: "#CACFD2",
-                  alignItems: "center"
-                }}
-                onPress={() => this.openFile(0)}
-              >
-                <Icon name="albums" />
-                <Text>Album</Text>
-              </Button>
+            {this.renderDocs()}
+            <View style={{ marginTop: 10 }}>
+              <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }} />
+              <View>
+                <Text
+                  style={{
+                    textAlign: "center",
+                    color: "#B2BABB",
+                    padding: 10
+                  }}
+                >
+                  Select File
+                </Text>
+              </View>
+              <View style={{ alignItems: "center", marginTop: 7 }}>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    borderWidth: 1,
+                    borderColor: "#CACFD2",
+                    borderRadius: 10
+                  }}
+                >
+                  <Button
+                    transparent
+                    dark
+                    style={{ alignItems: "center" }}
+                    onPress={() => this.openlaunchCamera(0)}
+                  >
+                    <Icon name="camera" />
+                    <Text>Camera</Text>
+                  </Button>
+                  <Button
+                    transparent
+                    dark
+                    style={{
+                      borderLeftWidth: 1,
+                      borderLeftColor: "#CACFD2",
+                      alignItems: "center"
+                    }}
+                    onPress={() => this.openFile(0)}
+                  >
+                    <Icon name="albums" />
+                    <Text>Album</Text>
+                  </Button>
+                </View>
+              </View>
             </View>
-          </View>
-        </View>
 
             <View>
               <Text
@@ -625,8 +611,8 @@ const LanguageTranslation = ({
                 Rate :{" "}
                 {translationrate.data
                   ? values.LegalStamp == true
-                    ? translationrate.data.Rate + 24
-                    : translationrate.data.Rate
+                    ? translationrate.data.Rate * values.Files.length + 24
+                    : translationrate.data.Rate * values.Files.length
                   : 0}{" "}
                 AED
               </Text>
@@ -697,11 +683,10 @@ export default withFormik({
   handleSubmit: (values, { props }) => {
     const { translationrate, setRequestedValue } = props;
     const token = props.token.token;
-    var Rate = translationrate.data
-      ? values.LegalStamp == true
-        ? translationrate.data.Rate + 28
-        : translationrate.data.Rate
-      : 0;
+    const docRate = translationrate.data ? translationrate.data.Rate : 0;
+    const totalDocRate = docRate * values.Files.length;
+    var Rate = values.LegalStamp == true ? totalDocRate + 28 : totalDocRate;
+
     setRequestedValue(Rate);
     const address = `${values.Address1},${values.Street} ${values.City}, ${
       values.SelectedState
@@ -723,7 +708,9 @@ export default withFormik({
       values.SelectedToDocumentLanguageId
     );
     data.append("LegalStamp", values.LegalStamp);
-    data.append("Files", values.Files);
+    values.Files.map((item, index) => data.append("Files[]", item, item.name));
+
+    // data.append("Files", values.Files);
     data.append("Rate", Rate);
     data.append("ServiceId", 1);
     data.append("ServiceName", "TRANSLATION");

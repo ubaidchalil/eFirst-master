@@ -51,8 +51,9 @@ class SRInfo extends Component {
         CustomerName,
         Email,
         PersonalPhone,
+        OfficePhone,
         Address,
-        TotalRate, 
+        TotalRate,
         SelectedCountryId,
         SelectedCertificateType,
         SelectedDocumentTypeId,
@@ -60,14 +61,21 @@ class SRInfo extends Component {
         SelectedToDocumentLanguageId
       }
     } = this.props;
-    const {
-      srDetail: { ServiceName }
-    } = this.props;
+
     const pageData = this.props.srInfo.PageData || null;
+    const ServiceName = this.props.srInfo.Service
+      ? this.props.srInfo.Service.ServiceName
+      : this.props.srDetail.ServiceName;
+    const legalStamp = this.props.srInfo.LegalStamp
+      ? this.props.srInfo.LegalStamp
+      : false;
+    const PickUpandDropOption = this.props.srInfo.PickUpandDropOption
+      ? this.props.srInfo.PickUpandDropOption
+      : "";
     return (
       <Container>
-          <ScrollView>
-        <Content style={{ padding: 10 }}>
+        <ScrollView>
+          <Content style={{ padding: 10 }}>
             <View style={styles.item_border}>
               <Text style={styles.label}>Name : </Text>
               <Text style={styles.value}> {CustomerName} </Text>
@@ -80,11 +88,17 @@ class SRInfo extends Component {
               <Text style={styles.label}>Phone : </Text>
               <Text style={styles.value}> {PersonalPhone} </Text>
             </View>
+            {OfficePhone && OfficePhone != "undefined" && (
+              <View style={styles.item_border}>
+                <Text style={styles.label}>Office : </Text>
+                <Text style={styles.value}> {OfficePhone} </Text>
+              </View>
+            )}
             <View style={styles.item_border}>
               <Text style={styles.label}>Address : </Text>
               <Text style={styles.value}> {Address} </Text>
             </View>
-            {ServiceName === "ATTESTATION" && (
+            {ServiceName === "ATTESTATION SERVICE" && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Country : </Text>
                 <Text style={styles.value}>
@@ -95,7 +109,7 @@ class SRInfo extends Component {
                 </Text>
               </View>
             )}
-            {ServiceName === "ATTESTATION" && (
+            {ServiceName === "ATTESTATION SERVICE" && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Certificate Type : </Text>
                 <Text style={styles.value}>
@@ -142,26 +156,30 @@ class SRInfo extends Component {
                 </Text>
               </View>
             )}
-
-            {/* <View style={styles.item_border}>
-              <Text style={styles.label}>
-                Document Pickup and Drop Location :
-              </Text>
-              <Text style={styles.value}> Text</Text>
-            </View> */}
-            <View style={styles.item_border}>
-              <Text style={styles.label}>Rate :</Text>
-              <Text style={styles.value}>
-                {" "}
-                {TotalRate}
-                {""}AED{" "}
-              </Text>
-            </View>
-            {pageData && (
-             <VisaServiceDt pageData={pageData} />
+            {ServiceName === "ATTESTATION SERVICE" && (
+              <View style={styles.item_border}>
+                <Text style={styles.label}>Pick Up & Drop Option : </Text>
+                <Text style={styles.value}> {PickUpandDropOption} </Text>
+              </View>
             )}
-        </Content>
-          </ScrollView>
+            {ServiceName === "TRANSLATION" && (
+              <View style={styles.item_border}>
+                <Text style={styles.label}>Legal Stamp : </Text>
+                <Text style={styles.value}>
+                  {legalStamp == true ? "Yes" : "No"}
+                </Text>
+              </View>
+            )}
+            {ServiceName != "VISA SERVICE" && (
+              <View style={styles.item_border}>
+                <Text style={styles.label}>Bill Amount :</Text>
+                <Text style={styles.value}> {TotalRate} AED </Text>
+              </View>
+            )}
+            <View style={{ marginBottom: 10 }} />
+            {pageData && <VisaServiceDt pageData={pageData} />}
+          </Content>
+        </ScrollView>
       </Container>
     );
   }

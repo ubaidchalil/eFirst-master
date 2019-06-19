@@ -40,11 +40,23 @@ export default ({ navigation, token, services, serviceRequestData }) => {
       <Container>
         <MyHeader navigation={navigation} header="User Actions" />
         <Content style={{ padding: 5 }}>
-          {services.data.map(service => (
-            <TouchableOpacity onPress={() => navigateToDetail(service.SRID)}>
-              <Greeting service={service} navigation={navigation} />
-            </TouchableOpacity>
-          ))}
+          {services.data.length > 0 ? (
+            services.data.map(service => (
+              <TouchableOpacity onPress={() => navigateToDetail(service.SRID)}>
+                <Greeting service={service} navigation={navigation} />
+              </TouchableOpacity>
+            ))
+          ) : (
+            <View
+              style={{
+                flex: 1,
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              <Text>No data available in table</Text>
+            </View>
+          )}
         </Content>
       </Container>
     </StyleProvider>

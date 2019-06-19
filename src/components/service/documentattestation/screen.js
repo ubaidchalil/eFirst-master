@@ -109,8 +109,7 @@ const DocumentAttestation = ({
             DOCUMENT ATTESTATION
           </Text>
         </View>
-        <Right>
-        </Right>
+        <Right />
       </View>
       <Content style={{ padding: 10 }}>
         <ScrollView>
@@ -163,11 +162,11 @@ const DocumentAttestation = ({
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-                {errors.PersonalPhone && (
-                  <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
-                    {errors.PersonalPhone}
-                  </Text>
-                )}
+              {errors.PersonalPhone && (
+                <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
+                  {errors.PersonalPhone}
+                </Text>
+              )}
             </Item>
             <Item>
               <Input
@@ -225,7 +224,7 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <Item  style={styles.item_margin}>
+            <Item style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -313,7 +312,7 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <Item  style={styles.item_margin}>
+            <Item style={styles.item_margin}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -502,6 +501,9 @@ export default withFormik({
   handleSubmit: (values, { props }) => {
     const { attestationrate, setRequestedValue } = props;
     const token = props.token.token;
+    const Address = `${values.Address1},${values.Street} ${values.City}, ${
+      values.SelectedState
+    } ${values.AddressCountry} ZIP- ${values.Zip}`;
     var Rate = attestationrate.data
       ? values.PickUpandDropOption == "Through Courier"
         ? attestationrate.data.Rate + 28
@@ -509,6 +511,12 @@ export default withFormik({
       : 0;
     const ServiceName = "ATTESTATION";
     setRequestedValue(Rate);
-    return values.docAttestationCreate({ ...values, Rate, ServiceName, token });
+    return values.docAttestationCreate({
+      ...values,
+      Address,
+      Rate,
+      ServiceName,
+      token
+    });
   }
 })(DocumentAttestation);

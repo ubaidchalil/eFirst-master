@@ -12,7 +12,8 @@ let styles = StyleSheet.create({
   outer_main: {
     borderColor: "#F4D03F",
     borderWidth: 1,
-    borderRadius: 13
+    borderRadius: 13,
+    marginTop: 15
   },
   title_view: {
     borderBottomColor: "#F4D03F",
@@ -38,7 +39,7 @@ const renderMessageList = ({ messageList, messages, MessageModal }) => {
         </View>
         <View style={styles.title_reply_view}>
           <TouchableOpacity
-            onPress={() => MessageModal(item.SRID, item.NoteID, item.NoteTitle)}
+            onPress={() => MessageModal(0, item.NoteID, item.NoteTitle)}
           >
             <Text style={styles.title_reply_txt}>Reply</Text>
           </TouchableOpacity>

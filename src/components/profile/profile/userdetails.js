@@ -82,7 +82,9 @@ const UserDetails = ({
           alignItems: "center"
         }}
       >
-        {userdetail.ProfilePic ? (
+        {values.ImageUrl ? (
+          <Thumbnail large source={values.ImageUrl} />
+        ) : userdetail.ProfilePic ? (
           <Thumbnail
             large
             source={{
@@ -187,7 +189,7 @@ export default withFormik({
   mapPropsToValues: ({ userProfileCreate, userdetail }) => ({
     FirstName: userdetail.FirstName,
     Designation: userdetail.Designation,
-    ImageUrl: require("./userProfile.png"),
+    ImageUrl: null,
     ProfilePicName: "",
     ProfilePic: null,
     ShowEditUser: false,
