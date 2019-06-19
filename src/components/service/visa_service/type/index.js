@@ -70,8 +70,8 @@ class _Container extends Component {
           <Left>
             <Text>{option}</Text>
           </Left>
-          <Right>
-            <Radio selected={this.state.selectedOption==option} />
+          <Right >
+            <Radio  onPress={()=>this.NextOption(option)}  selected={this.state.selectedOption==option} />
           </Right>
         </ListItem>
       )

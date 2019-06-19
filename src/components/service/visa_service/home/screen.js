@@ -161,6 +161,15 @@ const DocumentAttestation = ({
                 error={touched.PersonalPhone && errors.PersonalPhone}
                 underlineColor={Color.secondary}
               />
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }}>
+                {errors.PersonalPhone && (
+                  <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
+                    {errors.PersonalPhone}
+                  </Text>
+                )}
+            </Item>
+            <Item>
               <Input
                 placeholder="Land Phone"
                 name="Office"
@@ -172,11 +181,6 @@ const DocumentAttestation = ({
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.PersonalPhone && (
-                <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
-                  {errors.PersonalPhone}
-                </Text>
-              )}
               {errors.OfficePhone && (
                 <Text style={{ color: "red" }} visible={errors.OfficePhone}>
                   {errors.OfficePhone}
@@ -184,8 +188,7 @@ const DocumentAttestation = ({
               )}
             </Item>
             <Item style={styles.item_margin}>
-              <Textarea
-                rowSpan={5}
+              <Input
                 placeholder="Address Line 1 *"
                 underline
                 name="Address1"
@@ -204,8 +207,7 @@ const DocumentAttestation = ({
               )}
             </Item>
             <Item style={styles.item_margin}>
-              <Textarea
-                rowSpan={5}
+              <Input
                 placeholder="Street Address *"
                 underline
                 name="Street"

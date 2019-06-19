@@ -31,48 +31,36 @@ export default ({ navigation }) => {
       <Content style={{ padding: 10 }}>
         <View style={styles.main}>
           <View style={styles.title}>
-            <H3 style={styles.title_text}>DOCUMENT ATTESTATION</H3>
+            <H3 style={styles.title_text}>ATTESTATION SERVICE</H3>
           </View>
-          <View style={styles.body}>
-            <Text style={styles.body_text}>Lorem Ipsum</Text>
-          </View>
-          <View style={styles.footer}>
-            <TouchableOpacity
+          
+            <TouchableOpacity style={styles.footer}
               onPress={() => navigation.navigate("DocumentAttestation")}
             >
               <Text style={styles.footer_text}>Apply Now</Text>
             </TouchableOpacity>
-          </View>
         </View>
         <View style={styles.main}>
           <View style={styles.title}>
-            <H3 style={styles.title_text}>LANGUAGE TRANSLATION</H3>
+            <H3 style={styles.title_text}>TRANSLATION SERVICE</H3>
           </View>
-          <View style={styles.body}>
-            <Text style={styles.body_text}>Lorem Ipsum..</Text>
-          </View>
-          <View style={styles.footer}>
-            <TouchableOpacity
+          
+            <TouchableOpacity style={styles.footer}
               onPress={() => navigation.navigate("LanguageTranslation")}
             >
               <Text style={styles.footer_text}>Apply Now</Text>
             </TouchableOpacity>
-          </View>
         </View>
         <View style={styles.main}>
           <View style={styles.title}>
             <H3 style={styles.title_text}>VISA SERVICE</H3>
           </View>
-          <View style={styles.body}>
-            <Text style={styles.body_text}>Lorem Ipsum..</Text>
-          </View>
-          <View style={styles.footer}>
-            <TouchableOpacity
+          
+            <TouchableOpacity style={styles.footer}
               onPress={() => navigation.navigate("VisaService")}
             >
               <Text style={styles.footer_text}>Apply Now</Text>
             </TouchableOpacity>
-          </View>
         </View>
       </Content>
     </Container>

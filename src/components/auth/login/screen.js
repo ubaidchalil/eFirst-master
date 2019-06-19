@@ -117,7 +117,7 @@ const LoginForm = ({
           </Button>
           {!extLoginUrls.error && !extLoginUrls.loading ? (
             <View
-              style={{ flexDirection: "row", borderRadius: 25, elevation: 3 }}
+              style={{ flexDirection: "row", borderRadius: 25, elevation: 1 }}
             >
               <TouchableOpacity
                 onPress={() =>
