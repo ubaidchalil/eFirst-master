@@ -27,7 +27,7 @@ class Documents extends Component {
           fontSize: 14
         }}
       >
-        {item.FileName}
+        {item.FileName.length>12 ? item.FileName.substr(0,12) + "..." : item.FileName}
       </Text>
     </View>
   );
@@ -42,7 +42,7 @@ class Documents extends Component {
             data={documents}
             numColumns={2}
             renderItem={this.renderItem}
-            itemStyle={{ height: 220, padding: 5 }}
+            itemStyle={{ padding: 5 }}
           />
         </Content>
       </Container>
