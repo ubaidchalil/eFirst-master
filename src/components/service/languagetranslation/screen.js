@@ -457,7 +457,7 @@ const LanguageTranslation = ({
                   setFieldValue("SelectedDocumentTypeId", value)
                 }
               >
-                <Picker.Item key="0" label="Select type *" value="0" />
+                <Picker.Item key="0" label="Document Type *" value="" />
                 {renderDocumentTypes()}
               </Picker>
             </Item>
@@ -488,7 +488,7 @@ const LanguageTranslation = ({
                   );
                 }}
               >
-                <Picker.Item key="0" label="Select language *" value="0" />
+                <Picker.Item key="0" label="Document Language *" value="" />
                 {renderTranslationLanguage()}
               </Picker>
             </Item>
@@ -519,6 +519,11 @@ const LanguageTranslation = ({
                   );
                 }}
               >
+                <Picker.Item
+                  key="0"
+                  label="Document to be Translated *"
+                  value=""
+                />
                 {renderTranslationLanguage()}
               </Picker>
             </Item>
@@ -713,7 +718,7 @@ export default withFormik({
     // data.append("Files", values.Files);
     data.append("Rate", Rate);
     data.append("ServiceId", 1);
-    data.append("ServiceName", "TRANSLATION");
+    data.append("ServiceName", "TRANSLATION SERVICE");
 
     return values.doclangTransCreate({ data, token });
   }

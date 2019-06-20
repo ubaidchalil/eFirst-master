@@ -329,7 +329,11 @@ const DocumentAttestation = ({
                   );
                 }}
               >
-                <Picker.Item key="0" label="Select Country" value="0" />
+                <Picker.Item
+                  key="0"
+                  label="Certificate Issued Country *"
+                  value=""
+                />
                 {renderDocumentCountries()}
               </Picker>
             </Item>
@@ -360,7 +364,7 @@ const DocumentAttestation = ({
                   );
                 }}
               >
-                <Picker.Item key="0" label="Select type" value="0" />
+                <Picker.Item key="0" label="Certificate Type *" value="" />
                 {renderCertificateTypes()}
               </Picker>
             </Item>
@@ -509,7 +513,7 @@ export default withFormik({
         ? attestationrate.data.Rate + 28
         : attestationrate.data.Rate
       : 0;
-    const ServiceName = "ATTESTATION";
+    const ServiceName = "ATTESTATION SERVICE";
     setRequestedValue(Rate);
     return values.docAttestationCreate({
       ...values,

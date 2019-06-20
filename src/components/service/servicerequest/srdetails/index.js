@@ -121,7 +121,8 @@ class SRInfo extends Component {
               </View>
             )}
 
-            {ServiceName === "TRANSLATION" && (
+            {(ServiceName === "TRANSLATION SERVICE" ||
+              ServiceName == "TRANSLATION") && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Document Type : </Text>
                 <Text style={styles.value}>
@@ -133,7 +134,8 @@ class SRInfo extends Component {
               </View>
             )}
 
-            {ServiceName === "TRANSLATION" && (
+            {(ServiceName === "TRANSLATION SERVICE" ||
+              ServiceName == "TRANSLATION") && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Document Language : </Text>
                 <Text style={styles.value}>
@@ -145,7 +147,8 @@ class SRInfo extends Component {
               </View>
             )}
 
-            {ServiceName === "TRANSLATION" && (
+            {(ServiceName === "TRANSLATION SERVICE" ||
+              ServiceName == "TRANSLATION") && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Document to be Translated : </Text>
                 <Text style={styles.value}>
@@ -162,7 +165,8 @@ class SRInfo extends Component {
                 <Text style={styles.value}> {PickUpandDropOption} </Text>
               </View>
             )}
-            {ServiceName === "TRANSLATION" && (
+            {(ServiceName === "TRANSLATION SERVICE" ||
+              ServiceName == "TRANSLATION") && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Legal Stamp : </Text>
                 <Text style={styles.value}>
