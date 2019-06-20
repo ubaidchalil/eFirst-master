@@ -94,7 +94,7 @@ const DocumentAttestation = ({
 
   return (
     <Container>
-      <MyHeader navigation={navigation} header="My Services" />
+      <MyHeader navigation={navigation} header="Attestation Service" />
 
       <View
         style={{

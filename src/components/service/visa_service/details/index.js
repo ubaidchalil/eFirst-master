@@ -168,7 +168,7 @@ class _Container extends Component {
     return (
       <Container>
         <Loader loading={loading} />
-        <MyHeader navigation={this.props.navigation} header="My Services" />
+        <MyHeader navigation={this.props.navigation} header="Visa Service" />
 
         <View
           style={{

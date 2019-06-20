@@ -116,7 +116,7 @@ class Container1 extends Component {
                 <Icon style={styles.icon} name="arrow-dropright" />
               </View>
               <View style={styles.body}>
-                <Text style={styles.text}>My Services</Text>
+                <Text style={styles.text}>Request a Service</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity

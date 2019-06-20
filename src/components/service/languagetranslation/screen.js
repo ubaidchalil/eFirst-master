@@ -226,7 +226,7 @@ const LanguageTranslation = ({
 
   return (
     <Container>
-      <MyHeader navigation={navigation} header="My Services" />
+      <MyHeader navigation={navigation} header="Translation Service" />
       <View
         style={{
           backgroundColor: "#F7F9F9",
