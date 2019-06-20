@@ -1456,9 +1456,9 @@ export default visa_options = {
                   { Text : "Entry Permit", Value : 0 },
                   { Text : "Change Status", Value : 0 },
                   { Text : "Stamping", Value : 0 },
-                  { Text : "Medical Charges", Value : 752 },
-                  { Text : "Insurance", Value : 780 },
-                  { Text : "Emirates ID Price", Value : 174 }
+                  { Text : "Medical Charges", Value : 324 },
+                  { Text : "Insurance", Value : 1550 },
+                  { Text : "Emirates ID Price", Value : 274 }
                 ],
                 "IBAN Number": ""
               },
@@ -1480,9 +1480,9 @@ export default visa_options = {
                   { Text : "Entry Permit", Value : 0 },
                   { Text : "Change Status", Value : 0 },
                   { Text : "Stamping", Value : 0 },
-                  { Text : "Medical Charges", Value : 752 },
-                  { Text : "Insurance", Value : 780 },
-                  { Text : "Emirates ID Price", Value : 174 }
+                  { Text : "Medical Charges", Value : 440 },
+                  { Text : "Insurance", Value : 1550 },
+                  { Text : "Emirates ID Price", Value : 274 }
                 ],
                 "IBAN Number": ""
               },
@@ -1504,9 +1504,9 @@ export default visa_options = {
                   { Text : "Entry Permit", Value : 0 },
                   { Text : "Change Status", Value : 0 },
                   { Text : "Stamping", Value : 0 },
-                  { Text : "Medical Charges", Value : 752 },
-                  { Text : "Insurance", Value : 780 },
-                  { Text : "Emirates ID Price", Value : 174 }
+                  { Text : "Medical Charges", Value : 440 },
+                  { Text : "Insurance", Value : 1550 },
+                  { Text : "Emirates ID Price", Value : 274 }
                 ],
                 "IBAN Number": ""
               },
@@ -1529,8 +1529,8 @@ export default visa_options = {
                   { Text : "Change Status", Value : 0 },
                   { Text : "Stamping", Value : 0 },
                   { Text : "Medical Charges", Value : 752 },
-                  { Text : "Insurance", Value : 780 },
-                  { Text : "Emirates ID Price", Value : 174 }
+                  { Text : "Insurance", Value : 1550 },
+                  { Text : "Emirates ID Price", Value : 274 }
                 ],
                 "IBAN Number": ""
               }
@@ -1557,7 +1557,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                "PriceDetails": [
+                  { Text : "Entry Permit", Value : 0 },
+                  { Text : "Change Status", Value : 0 },
+                  { Text : "Stamping", Value : 0 },
+                  { Text : "Medical Charges", Value : 324 },
+                  { Text : "Insurance", Value : 1550 },
+                  { Text : "Emirates ID Price", Value : 274 }
+                ],
                 "IBAN Number": ""
               },
               "48 Hours": {
@@ -1574,7 +1581,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                "PriceDetails": [
+                  { Text : "Entry Permit", Value : 0 },
+                  { Text : "Change Status", Value : 0 },
+                  { Text : "Stamping", Value : 0 },
+                  { Text : "Medical Charges", Value : 440 },
+                  { Text : "Insurance", Value : 1550 },
+                  { Text : "Emirates ID Price", Value : 274 }
+                ],
                 "IBAN Number": ""
               },
               "24  Hours": {
@@ -1591,7 +1605,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                "PriceDetails": [
+                  { Text : "Entry Permit", Value : 0 },
+                  { Text : "Change Status", Value : 0 },
+                  { Text : "Stamping", Value : 0 },
+                  { Text : "Medical Charges", Value : 550 },
+                  { Text : "Insurance", Value : 1550 },
+                  { Text : "Emirates ID Price", Value : 274 }
+                ],
                 "IBAN Number": ""
               },
               "5 Hours": {
@@ -1608,7 +1629,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                "PriceDetails": [
+                  { Text : "Entry Permit", Value : 0 },
+                  { Text : "Change Status", Value : 0 },
+                  { Text : "Stamping", Value : 0 },
+                  { Text : "Medical Charges", Value : 752 },
+                  { Text : "Insurance", Value : 1550 },
+                  { Text : "Emirates ID Price", Value : 274 }
+                ],
                 "IBAN Number": ""
               }
             }
@@ -1652,7 +1680,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -1673,7 +1708,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -1694,7 +1736,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -1715,7 +1764,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -1745,7 +1801,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -1766,7 +1829,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -1787,7 +1857,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -1808,7 +1885,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -1845,7 +1929,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -1866,7 +1957,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -1887,7 +1985,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -1908,7 +2013,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -1938,7 +2050,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -1959,7 +2078,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -1980,7 +2106,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -2001,7 +2134,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -2038,7 +2178,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -2059,7 +2206,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -2080,7 +2234,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -2101,7 +2262,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -2131,7 +2299,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -2152,7 +2327,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -2173,7 +2355,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -2194,7 +2383,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -2236,7 +2432,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -2253,7 +2456,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -2270,7 +2480,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -2287,7 +2504,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -2313,7 +2537,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -2330,7 +2561,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -2347,7 +2585,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -2364,7 +2609,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 966 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -2398,7 +2650,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -2416,7 +2675,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -2434,7 +2700,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -2452,7 +2725,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -2479,7 +2759,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -2497,7 +2784,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -2515,7 +2809,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -2533,7 +2834,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -2567,7 +2875,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -2585,7 +2900,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -2603,7 +2925,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -2621,7 +2950,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -2648,7 +2984,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -2666,7 +3009,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -2684,7 +3034,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -2702,7 +3059,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -2736,7 +3100,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -2754,7 +3125,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -2772,7 +3150,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -2790,7 +3175,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -2817,7 +3209,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -2835,7 +3234,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -2853,7 +3259,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -2871,7 +3284,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 696 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -2913,7 +3333,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 1550 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                 "IBAN Number": ""
               },
               "48 Hours": {
@@ -2930,7 +3357,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 1550 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                 "IBAN Number": ""
               },
               "24  Hours": {
@@ -2947,7 +3381,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 1550 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                 "IBAN Number": ""
               },
               "5 Hours": {
@@ -2964,7 +3405,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 1550 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                 "IBAN Number": ""
               }
             },
@@ -2990,7 +3438,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 1550 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                 "IBAN Number": ""
               },
               "48 Hours": {
@@ -3007,7 +3462,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 1550 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                 "IBAN Number": ""
               },
               "24  Hours": {
@@ -3024,7 +3486,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 1550 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                 "IBAN Number": ""
               },
               "5 Hours": {
@@ -3041,7 +3510,14 @@ export default visa_options = {
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
-                "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 1550 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                 "IBAN Number": ""
               }
             }
@@ -3084,7 +3560,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -3104,7 +3587,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -3124,7 +3614,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -3144,7 +3641,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -3173,7 +3677,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -3193,7 +3704,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -3213,7 +3731,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -3233,7 +3758,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -3243,8 +3775,7 @@ export default visa_options = {
               "options": [
                 "Inside Country",
                 "Outside Country"
-              ],
-              "Inside Country": {
+              ],"Inside Country": {
                 "title": "Medical Certificate Process Speed",
                 "options": [
                   "Normal",
@@ -3269,7 +3800,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -3289,7 +3827,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -3309,7 +3854,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -3329,7 +3881,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -3358,7 +3917,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -3378,7 +3944,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -3398,7 +3971,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -3418,7 +3998,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -3454,7 +4041,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -3474,7 +4068,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -3494,7 +4095,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -3514,7 +4122,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -3543,7 +4158,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -3563,7 +4185,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -3583,7 +4212,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -3603,7 +4239,14 @@ export default visa_options = {
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -3645,7 +4288,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -3662,7 +4312,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -3679,7 +4336,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -3696,7 +4360,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -3722,7 +4393,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -3739,7 +4417,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -3756,7 +4441,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -3773,7 +4465,14 @@ export default visa_options = {
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -3807,7 +4506,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -3825,7 +4531,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -3843,7 +4556,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -3861,7 +4581,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -3888,7 +4615,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -3906,7 +4640,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -3924,7 +4665,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -3942,7 +4690,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -3976,7 +4731,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -3994,7 +4756,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -4012,7 +4781,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -4030,7 +4806,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -4057,7 +4840,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -4075,7 +4865,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -4093,7 +4890,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -4111,7 +4915,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -4145,7 +4956,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -4163,7 +4981,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -4181,7 +5006,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -4199,7 +5031,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               },
@@ -4226,7 +5065,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 324 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "48 Hours": {
@@ -4244,7 +5090,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 440 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "24  Hours": {
@@ -4262,7 +5115,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 550 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 },
                 "5 Hours": {
@@ -4280,7 +5140,14 @@ export default visa_options = {
                     "Last 3 months bank statement (if available)",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
-                  "fees": 535,
+                  "PriceDetails": [
+                    { Text : "Entry Permit", Value : 0 },
+                    { Text : "Change Status", Value : 0 },
+                    { Text : "Stamping", Value : 0 },
+                    { Text : "Medical Charges", Value : 752 },
+                    { Text : "Insurance", Value : 0 },
+                    { Text : "Emirates ID Price", Value : 274 }
+                  ],
                   "IBAN Number": ""
                 }
               }
@@ -4301,7 +5168,47 @@ export default visa_options = {
       "options": [
         "Normal",
         "Urgent"
-      ]
+      ],
+        "Normal": {
+          "docs": [
+            "Sponsors emirates ID",
+            "Trade License, Page 1",
+            "Trade License, Page 2",
+            "Immigration card",
+            "Memorandum of association",
+            "Passport (Front)",
+            "Passport (Back)",
+            "Medical result",
+            "Emirates id application paper",
+            "Insurance",
+            "Visa",
+            "1 photo (white background)"
+          ],
+          "PriceDetails": [
+            { Text : "Gov. fees", Value : 850 },
+            { Text : "Service charge", Value : 105 }
+          ]
+         },
+        "Urgent": {
+          "docs": [
+            "Sponsors emirates ID",
+            "Trade License, Page 1",
+            "Trade License, Page 2",
+            "Immigration card",
+            "Memorandum of association",
+            "Passport (Front)",
+            "Passport (Back)",
+            "Medical result",
+            "Emirates id application paper",
+            "Insurance",
+            "Visa",
+            "1 photo (white background)"
+          ],
+          "PriceDetails": [
+            { Text : "Gov. fees", Value : 850 },
+            { Text : "Service charge", Value : 105 }
+          ]
+         }
     },
     "Family Visa": {
       "title": "Sponsor Type",
@@ -4318,22 +5225,110 @@ export default visa_options = {
         "Partner/Investor": {
           "title": "Visa Duration",
           "options": [
-            "3 Years",
-            "2 Years"
+            "2 Years",
+            "3 Years"
           ],
-          "3 Years": {
-            "title": "Renewal Process Speed",
-            "options": [
-              "Normal",
-              "Urgent"
-            ]
-          },
           "2 Years": {
             "title": "Renewal Process Speed",
             "options": [
               "Normal",
               "Urgent"
-            ]
+            ],
+            "Normal": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "Sponsored passport (Front)",
+                "Sponsored passport (Back)",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 700 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             },
+            "Urgent": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "Sponsored passport (Front)",
+                "Sponsored passport (Back)",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 800 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             }
+          },
+          "3 Years": {
+            "title": "Renewal Process Speed",
+            "options": [
+              "Normal",
+              "Urgent"
+            ],
+            "Normal": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 700 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             },
+            "Urgent": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 800 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             }
           }
         },
         "Employee": {
@@ -4347,14 +5342,102 @@ export default visa_options = {
             "options": [
               "Normal",
               "Urgent"
-            ]
+            ],
+            "Normal": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "Sponsored passport (Front)",
+                "Sponsored passport (Back)",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 700 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             },
+            "Urgent": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "Sponsored passport (Front)",
+                "Sponsored passport (Back)",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 800 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             }
           },
           "2 Years": {
             "title": "Renewal Process Speed",
             "options": [
               "Normal",
               "Urgent"
-            ]
+            ],
+            "Normal": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 700 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             },
+            "Urgent": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 800 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             }
           }
         }
       },
@@ -4375,14 +5458,102 @@ export default visa_options = {
             "options": [
               "Normal",
               "Urgent"
-            ]
+            ],
+            "Normal": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Labour contract",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 545 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             },
+            "Urgent": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Labour contract",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value :  625 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             }
           },
           "2 Years": {
             "title": "Renewal Process Speed",
             "options": [
               "Normal",
               "Urgent"
-            ]
+            ],
+            "Normal": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Labour contract",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 420 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             },
+            "Urgent": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Labour contract",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 520 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             }
           }
         },
         "Employee": {
@@ -4396,14 +5567,102 @@ export default visa_options = {
             "options": [
               "Normal",
               "Urgent"
-            ]
+            ],
+            "Normal": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Labour contract",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 545 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             },
+            "Urgent": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Labour contract",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 625 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             }
           },
           "2 Years": {
             "title": "Renewal Process Speed",
             "options": [
               "Normal",
               "Urgent"
-            ]
+            ],
+            "Normal": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Labour contract",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 420 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             },
+            "Urgent": {
+              "docs": [
+                "Sponsors emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Labour contract",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                { Text : "Gov. fees", Value : 520 },
+                { Text : "Service charge", Value : 105 }
+              ]
+             }
           }
         }
       }
@@ -4420,14 +5679,72 @@ export default visa_options = {
       "options": [
         "Inside Country",
         "Outside Country"
-      ]
+      ],
+        "Inside Country": {
+          "docs": [
+            "Immigration card",
+            "Trade License, Page 1",
+            "Trade License, Page 2",
+            "Visa",
+            "Passport (Front)",
+            "Passport (Back)",
+            "Sponsor's emriates ID",
+            "Share sale agreement"
+          ],
+          "PriceDetails": [
+            { Text : "Gov. fees", Value : 230 },
+            { Text : "Service charge", Value : 105 }
+          ]
+         },
+        "Outside Country": {
+          "docs": [
+            "Immigration card",
+            "Trade License, Page 1",
+            "Trade License, Page 2",
+            "Visa",
+            "Passport (Front)",
+            "Passport (Back)",
+            "Sponsor's emriates ID",
+            "Share sale agreement"
+          ],
+          "PriceDetails": [
+            { Text : "Gov. fees", Value : 328 },
+            { Text : "Service charge", Value : 105 }
+          ]
+         }
     },
     "Family Visa": {
       "title": "Select Location",
       "options": [
         "Inside Country",
         "Outside Country"
-      ]
+      ],
+        "Inside Country": {
+          "docs": [
+            "Sponsor's emriates ID",
+            "Sponsor's visa",
+            "Sponsored passport (Front)",
+            "Sponsored passport (Back)",
+            "Sponsored visa"
+          ],
+          "PriceDetails": [
+            { Text : "Gov. fees", Value : 230 },
+            { Text : "Service charge", Value : 105 }
+          ]
+      },
+      "Outside Country": {
+        "docs": [
+          "Sponsor's emriates ID",
+          "Sponsor's visa",
+          "Sponsored passport (Front)",
+          "Sponsored passport (Back)",
+          "Sponsored visa"
+        ],
+        "PriceDetails": [
+          { Text : "Gov. fees", Value : 328 },
+          { Text : "Service charge", Value : 105 }
+        ]
+    }
     }
   }
 };

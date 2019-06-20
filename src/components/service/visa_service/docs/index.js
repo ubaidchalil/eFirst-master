@@ -233,7 +233,7 @@ class _Container extends Component {
   render = () => {
     return (
       <Container>
-        <MyHeader navigation={this.props.navigation} header="My Services" />
+        <MyHeader navigation={this.props.navigation} header="Visa Service" />
 
         <View
           style={{
