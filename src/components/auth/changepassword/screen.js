@@ -134,10 +134,9 @@ export default withFormik({
   }),
 
   handleSubmit: (values, { setSubmitting, props }) => {
-    console.log(props);
     const { Token, NewPassword } = values;
-    const { Email } = props;
-
+    const { Email, updateState } = props;
+    updateState(true);
     return values.changePassword({
       Token,
       NewPassword,

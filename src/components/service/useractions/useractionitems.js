@@ -22,7 +22,7 @@ let styles = StyleSheet.create({
   inner_top_text: {
     fontSize: 11,
     fontWeight: "bold",
-    color: 'black'
+    color: "black"
   },
   inner_bottom: {
     padding: 3
@@ -42,10 +42,16 @@ let styles = StyleSheet.create({
   }
 });
 
-const UserActonItem = ({ service, navigation }) => (
+const UserActonItem = ({
+  service,
+  navigation,
+  color,
+  backgroundColor,
+  borderColor,
+  statusLabel
+}) => (
   <View style={{ padding: 5 }}>
     <View style={styles.outer_card}>
-
       <View style={[styles.inner_card, styles.card_date]}>
         <View style={styles.inner_top}>
           <Text style={styles.inner_top_text}> Date </Text>
@@ -69,21 +75,24 @@ const UserActonItem = ({ service, navigation }) => (
 
       <View style={[styles.inner_card, styles.card_status]}>
         <View style={styles.inner_top}>
-          <Text style={styles.inner_top_text}> Process </Text>
+          <Text style={styles.inner_top_text}> Status </Text>
         </View>
-        <View
-          style={{
-            padding: 4,
-            borderWidth: 1,
-            borderColor: "#F1C40F",
-            borderRadius: 10
-          }}
-        >
-          <Text style={{ fontSize: 11, color: "#F1C40F", textAlign: "left" }}>
-            {" "}
-            {service.ProcessName}{" "}
-          </Text>
-        </View>
+        {
+          <View
+            style={{
+              padding: 4,
+              borderWidth: 1,
+              borderColor,
+              borderRadius: 10,
+              backgroundColor
+            }}
+          >
+            <Text style={{ fontSize: 11, color, textAlign: "left" }}>
+              {" "}
+              {statusLabel}{" "}
+            </Text>
+          </View>
+        }
       </View>
     </View>
   </View>
