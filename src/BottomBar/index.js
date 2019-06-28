@@ -7,15 +7,11 @@ import IconAntDesign from "react-native-vector-icons/AntDesign";
 import { connect } from "react-redux";
 import { DashboardData } from "../components/dashboard/action";
 class FooterTabs extends Component {
-
-
   navigateToScreen = route => () => {
     const resetAction = NavigationActions.reset({
       index: 0,
-      actions: [
-        NavigationActions.navigate({ routeName: route})
-      ]
-    })
+      actions: [NavigationActions.navigate({ routeName: route })]
+    });
 
     this.props.navigation.dispatch(resetAction);
   };
@@ -23,7 +19,11 @@ class FooterTabs extends Component {
     const { token } = this.props.token;
     const statusId = null;
     this.props.servicesData({ statusId, token });
-    this.props.navigation.navigate("MyRequests");
+
+    this.props.navigation.navigate("MyRequests", {
+      headerTitle: "My Requests",
+      noDataLabel: "No recent service request"
+    });
   }
   loadDashboardData() {
     const { token } = this.props.token;

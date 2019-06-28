@@ -510,7 +510,7 @@ export default withFormik({
     } ${values.AddressCountry} ZIP- ${values.Zip}`;
     var Rate = attestationrate.data
       ? values.PickUpandDropOption == "Through Courier"
-        ? attestationrate.data.Rate + 28
+        ? attestationrate.data.Rate + 5
         : attestationrate.data.Rate
       : 0;
     const ServiceName = "ATTESTATION SERVICE";

@@ -108,8 +108,43 @@ let styles = StyleSheet.create({
 
 export default ({ navigation, dashboard, servicesData, token }) => {
   const loadServiceRequestsByStatus = statusId => {
-    navigation.navigate("MyRequests");
+    navigateToMyRequestWithTitleandLabel(statusId);
     servicesData({ statusId, token: token.token });
+  };
+  const navigateToMyRequestWithTitleandLabel = statusId => {
+    switch (statusId) {
+      case 1: {
+        navigation.navigate("MyRequests", {
+          headerTitle: "Action Required",
+          noDataLabel: "No new action required item available"
+        });
+        break;
+      }
+      case 2: {
+        navigation.navigate("MyRequests", {
+          headerTitle: "In Review",
+          noDataLabel: "Service not requested"
+        });
+        break;
+      }
+
+      case 3: {
+        navigation.navigate("MyRequests", {
+          headerTitle: "Completed",
+          noDataLabel: "No recent Completed service request"
+        });
+        break;
+      }
+      case 4: {
+        navigation.navigate("MyRequests", {
+          headerTitle: "Rejected",
+          noDataLabel: "No recent Rejected service request"
+        });
+        break;
+      }
+      default:
+        break;
+    }
   };
   return (
     <Container>

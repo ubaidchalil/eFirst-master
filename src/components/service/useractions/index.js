@@ -22,9 +22,58 @@ class Container extends Component {
   //   const token = this.props.token.token;
   //   this.props.servicesData({ statusId, token });
   // };
+  constructor(props) {
+    super(props);
+    this.state = {
+      headerTitle: "",
+      noDataLabel: ""
+    };
+  }
   componentDidMount = () => {
-    console.log("==== User Action ======");
+    // this.updateTitleandLabel(statusId);
   };
+  // updateTitleandLabel = statusId => {
+  //   switch (statusId) {
+  //     case 0: {
+  //       this.setState({
+  //         headerTitle: "My Requests",
+  //         noDataLabel: "No recent service request"
+  //       });
+  //       break;
+  //     }
+  //     case 1: {
+  //       this.setState({
+  //         headerTitle: "Action Required",
+  //         noDataLabel: "No new action required item available"
+  //       });
+  //       break;
+  //     }
+  //     case 2: {
+  //       this.setState({
+  //         headerTitle: "In Review",
+  //         noDataLabel: "Service not requested"
+  //       });
+  //       break;
+  //     }
+
+  //     case 3: {
+  //       this.setState({
+  //         headerTitle: "Completed",
+  //         noDataLabel: "No recent Completed service request"
+  //       });
+  //       break;
+  //     }
+  //     case 4: {
+  //       this.setState({
+  //         headerTitle: "Rejected",
+  //         noDataLabel: "No recent Rejected service request"
+  //       });
+  //       break;
+  //     }
+  //     default:
+  //       break;
+  //   }
+  // };
   render = () => {
     const {
       services: { error, loading }
@@ -36,7 +85,7 @@ class Container extends Component {
     return (
       <View style={styles.container}>
         <Loader loading={loading} />
-        <UserActions {...this.props} />
+        <UserActions {...this.props} {...this.props.navigation.state.params} />
         {error && <AlertView type="error" />}
         {success && <AlertView type="success" />}
       </View>

@@ -690,7 +690,7 @@ export default withFormik({
     const token = props.token.token;
     const docRate = translationrate.data ? translationrate.data.Rate : 0;
     const totalDocRate = docRate * values.Files.length;
-    var Rate = values.LegalStamp == true ? totalDocRate + 28 : totalDocRate;
+    var Rate = values.LegalStamp == true ? totalDocRate + 15 : totalDocRate;
 
     setRequestedValue(Rate);
     const address = `${values.Address1},${values.Street} ${values.City}, ${
