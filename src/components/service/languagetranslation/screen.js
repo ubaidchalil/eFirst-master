@@ -620,7 +620,7 @@ const LanguageTranslation = ({
                 Rate :{" "}
                 {translationrate.data
                   ? values.LegalStamp == true
-                    ? translationrate.data.Rate * values.Files.length + 24
+                    ? translationrate.data.Rate * values.Files.length + 15
                     : translationrate.data.Rate * values.Files.length
                   : 0}{" "}
                 AED
