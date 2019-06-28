@@ -12,7 +12,9 @@ import {
   Button,
   Item,
   Icon,
-  Textarea
+  Textarea,
+  CheckBox,
+  Body
 } from "native-base";
 import MyHeader from "../../../../Header";
 import { visaServiceCreate, updAttestationSRAmt } from "../../action";
@@ -23,7 +25,8 @@ class _Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      totalBillAmt: 0
+      totalBillAmt: 0,
+      AgreeTerms: false
     };
   }
 
@@ -111,7 +114,9 @@ class _Container extends Component {
           <Text style={{ padding: 10, fontWeight: "bold" }}>
             {datum["Text"]} :{" "}
           </Text>
-          <Text style={{ padding: 10 }}>{datum["Value"]}</Text>
+          <Right>
+            <Text style={{ padding: 10 }}>{datum["Value"]}</Text>
+          </Right>
         </Item>
       );
     });
@@ -123,16 +128,17 @@ class _Container extends Component {
       return (
         <Item>
           <Text style={{ padding: 10, fontWeight: "bold" }}>{datum} : </Text>
-          <Text style={{ padding: 10 }}>
-            {docs.indexOf(datum) >= 0 ? "Yes" : "No"}
-          </Text>
+          <Right>
+            <Text style={{ padding: 10 }}>
+              {docs.indexOf(datum) >= 0 ? "Yes" : "No"}
+            </Text>
+          </Right>
         </Item>
       );
     });
   };
 
   renderPriceDts = () => {
-    const docs = this.props.navigation.state.params.docsAttached;
     return this.props.navigation.state.params.docsAndPayment.PriceDetils.map(
       datum => {
         return (
@@ -140,7 +146,9 @@ class _Container extends Component {
             <Text style={{ padding: 10, fontWeight: "bold" }}>
               {datum.Text} :{" "}
             </Text>
-            <Text style={{ padding: 10 }}>AED {datum.Value}</Text>
+            <Right>
+              <Text style={{ padding: 10 }}>AED. {datum.Value}</Text>
+            </Right>
           </Item>
         );
       }
@@ -151,9 +159,11 @@ class _Container extends Component {
     return (
       <Item>
         <Text style={{ padding: 10, fontWeight: "bold" }}>Total : </Text>
-        <Text style={{ padding: 10, fontWeight: "bold" }}>
-          AED {this.state.totalBillAmt}
-        </Text>
+        <Right>
+          <Text style={{ padding: 10, fontWeight: "bold" }}>
+            AED {this.state.totalBillAmt}
+          </Text>
+        </Right>
       </Item>
     );
   };
@@ -185,7 +195,7 @@ class _Container extends Component {
           </View>
           <Right />
         </View>
-        <Content>
+        <Content style={{ padding: 10 }} >
           {this.renderPageData()}
 
           <View
@@ -205,6 +215,45 @@ class _Container extends Component {
           </View>
           {this.renderDocsData()}
 
+          <View
+            style={{
+              backgroundColor: "#F7F9F9",
+              flexDirection: "row",
+              paddingHorizontal: 10,
+              paddingVertical: 10
+            }}
+          >
+            <View>
+              <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
+                Notes
+              </Text>
+            </View>
+            <Right />
+          </View>
+          <Text style={{ padding: 10 }}>
+            {this.props.navigation.state.params.docsAndPayment.Notes.Options[0]}
+          </Text>
+
+          <View
+            style={{
+              backgroundColor: "#F7F9F9",
+              flexDirection: "row",
+              paddingHorizontal: 10,
+              paddingVertical: 10
+            }}
+          >
+            <View>
+              <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
+                Original Document Required
+              </Text>
+            </View>
+            <Right />
+          </View>
+          
+          <Text style={{ padding: 10 }}>
+            {this.props.navigation.state.params.docsAndPayment.OriginalDocumentRequired.Options[0]}
+          </Text>
+
           <View>
             <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
               Price Details
@@ -212,13 +261,27 @@ class _Container extends Component {
           </View>
           <Right />
           {this.renderPriceDts()}
+          
+          <ListItem style={{ borderBottomWidth: 0 }}>
+              <CheckBox
+                checked={this.state.AgreeTerms}
+                onPress={() => {
+                    this.setState({ AgreeTerms: !this.state.AgreeTerms })
+                }}
+              />
+              <Body>
+                <Text> I have read and agree to the Terms and Conditions of Service</Text>
+              </Body>
+          </ListItem>
+
           {this.renderTotalPrice()}
 
           <Button
             style={{
               backgroundColor: "#183E61",
               marginBottom: 30,
-              marginTop: 10
+              marginTop: 10,
+              marginHorizontal: 5
             }}
             full
             rounded
@@ -226,7 +289,7 @@ class _Container extends Component {
               this.saveData();
             }}
           >
-            <Text>Next</Text>
+            <Text>Pay Now</Text>
           </Button>
         </Content>
         {error && <AlertView type="error" />}

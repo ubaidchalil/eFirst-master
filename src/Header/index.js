@@ -18,7 +18,7 @@ import {
 } from "native-base";
 import IconFontAwesome from "react-native-vector-icons/FontAwesome";
 
-export default ({ navigation, header }) => (
+export default ({ navigation, header, onBackPressed }) => (
   <View
     style={{ flexDirection: "row", backgroundColor: "#183E61", height: 60 }}
   >
@@ -29,7 +29,7 @@ export default ({ navigation, header }) => (
             <Icon style={{ color: "white" }} name="menu" />
           </Button>
           {header != "Dashboard" && (
-            <Button transparent onPress={() => navigation.goBack()}>
+            <Button style={{ paddingHorizontal:5 }} transparent onPress={() => !onBackPressed ? navigation.goBack() : onBackPressed() }>
               <IconFontAwesome
                 style={[
                   { color: "white", marginLeft: 5 },

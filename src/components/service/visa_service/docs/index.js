@@ -44,7 +44,7 @@ class _Container extends Component {
   };
   componentDidUpdate() {}
 
-  openlaunchCamera = doc => {
+  openlaunchCamera = (doc, index) => {
     const options = {
       title: "Select Avatar",
       storageOptions: {
@@ -76,7 +76,14 @@ class _Container extends Component {
         this.state.docItem.push(file);
 
         _docs.push(doc);
-        _docNames[doc] = res.fileName;
+
+        if(index<0)
+        {
+          _docNames[doc] = !Array.isArray ? [] : _docNames[doc] ;
+          _docNames[doc].push(res.fileName); 
+        }
+        else
+          _docNames[doc][index] = res.fileName;
 
         this.setState({docsAttached : _docs});
         this.setState({docNames : _docNames});
@@ -86,7 +93,7 @@ class _Container extends Component {
     });
   };
 
-  openFile = doc => {
+  openFile = (doc, index) => {
     var _docs = this.state.docsAttached;
     var _docNames = this.state.docNames;
 
@@ -104,7 +111,15 @@ class _Container extends Component {
         );
         console.log(_docs);
         _docs.push(doc);
-        _docNames[doc] = res.fileName;
+        
+        if(index<0)
+        {
+          _docNames[doc] = !Array.isArray(_docNames[doc]) ? [] : _docNames[doc] ;
+          _docNames[doc].push(res.fileName); 
+        }
+        else
+          _docNames[doc][index] = res.fileName;
+
 
         this.setState({docsAttached : _docs});
         this.setState({docNames : _docNames});
@@ -141,6 +156,7 @@ class _Container extends Component {
       IsRequired: false,
       value: this.state.iban
     };
+
     docsAndPayment.AdditionalNotes = {
       Text: "Additional Notes",
       Name: "AdditionalNotes",
@@ -163,6 +179,8 @@ class _Container extends Component {
         Value: this.state.courier_charge
       });
     docsAndPayment.PriceDetils = price_details;
+    docsAndPayment.Notes = this.props.navigation.state.params.details.Notes;
+    docsAndPayment.OriginalDocumentRequired = this.props.navigation.state.params.details.OriginalDocumentRequired;
 
     this.props.navigation.navigate("VisaServiceDetails", {
       data: data,
@@ -173,6 +191,112 @@ class _Container extends Component {
       docsAndPayment: docsAndPayment
     });
   };
+  
+  renderDocNew = (doc) => {
+    const _doc = doc;
+      return (
+        <View>
+        <View>
+        <Text
+          style={{
+            textAlign: "center",
+            color: "#B2BABB",
+            padding: 10
+          }}
+        >
+          {"Select File"}
+        </Text>
+      </View>
+      <View style={{ alignItems: "center", marginTop: 7 }}>
+        <View
+          style={{
+            flexDirection: "row",
+            borderWidth: 1,
+            borderColor: "#CACFD2",
+            borderRadius: 10
+          }}
+        >
+          <Button
+            transparent
+            dark
+            style={{ alignItems: "center" }}
+            onPress={() => this.openlaunchCamera(_doc, -1)}
+          >
+            <Icon name="camera" />
+            <Text>Camera</Text>
+          </Button>
+          <Button
+            transparent
+            dark
+            style={{
+              borderLeftWidth: 1,
+              borderLeftColor: "#CACFD2",
+              alignItems: "center"
+            }}
+            onPress={() => this.openFile(_doc, -1)}
+          >
+            <Icon name="albums" />
+            <Text>Album</Text>
+          </Button>
+        </View>
+      </View>
+      </View>
+      );
+  }
+
+  renderDocArr = (doc) => {
+    const _doc = doc;
+    return this.state.docNames[doc] ? this.state.docNames[doc].map(doc => {
+      return (
+        <View>
+        <View>
+        <Text
+          style={{
+            textAlign: "center",
+            color: "#B2BABB",
+            padding: 10
+          }}
+        >
+          {doc || "Select File"}
+        </Text>
+      </View>
+      <View style={{ alignItems: "center", marginTop: 7 }}>
+        <View
+          style={{
+            flexDirection: "row",
+            borderWidth: 1,
+            borderColor: "#CACFD2",
+            borderRadius: 10
+          }}
+        >
+          <Button
+            transparent
+            dark
+            style={{ alignItems: "center" }}
+            onPress={() => this.openlaunchCamera(_doc, index)}
+          >
+            <Icon name="camera" />
+            <Text>Camera</Text>
+          </Button>
+          <Button
+            transparent
+            dark
+            style={{
+              borderLeftWidth: 1,
+              borderLeftColor: "#CACFD2",
+              alignItems: "center"
+            }}
+            onPress={() => this.openFile(_doc, index)}
+          >
+            <Icon name="albums" />
+            <Text>Album</Text>
+          </Button>
+        </View>
+      </View>
+      </View>
+      );
+    }) : (<View />)
+  }
 
   renderDocs = () => {
     return this.props.navigation.state.params.details.docs.map(doc => {
@@ -181,50 +305,8 @@ class _Container extends Component {
           <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }}>
             <Text style={{ padding: 10 }}>{doc} </Text>
           </Item>
-          <View>
-            <Text
-              style={{
-                textAlign: "center",
-                color: "#B2BABB",
-                padding: 10
-              }}
-            >
-              {this.state.docNames[doc] || "Select File"}
-            </Text>
-          </View>
-          <View style={{ alignItems: "center", marginTop: 7 }}>
-            <View
-              style={{
-                flexDirection: "row",
-                borderWidth: 1,
-                borderColor: "#CACFD2",
-                borderRadius: 10
-              }}
-            >
-              <Button
-                transparent
-                dark
-                style={{ alignItems: "center" }}
-                onPress={() => this.openlaunchCamera(doc)}
-              >
-                <Icon name="camera" />
-                <Text>Camera</Text>
-              </Button>
-              <Button
-                transparent
-                dark
-                style={{
-                  borderLeftWidth: 1,
-                  borderLeftColor: "#CACFD2",
-                  alignItems: "center"
-                }}
-                onPress={() => this.openFile(doc)}
-              >
-                <Icon name="albums" />
-                <Text>Album</Text>
-              </Button>
-            </View>
-          </View>
+          {this.renderDocArr(doc)}
+          {this.renderDocNew(doc)}
         </View>
       );
     });
@@ -250,7 +332,7 @@ class _Container extends Component {
           </View>
           <Right />
         </View>
-        <Content>
+        <Content style={{ padding: 10 }}>
           <Item>
             <Text style={{ fontSize: 16, padding: 10, fontWeight: "bold" }}>
               Original Document Submission Type
@@ -345,7 +427,8 @@ class _Container extends Component {
             style={{
               backgroundColor: "#183E61",
               marginBottom: 30,
-              marginTop: 10
+              marginTop: 10,
+              marginHorizontal: 5
             }}
             full
             rounded

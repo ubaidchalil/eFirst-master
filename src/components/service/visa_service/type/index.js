@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Home from "./screen";
 import { connect } from "react-redux";
-import { View } from "react-native";
+import { View, BackHandler } from "react-native";
 import {
   Container,
   Content,
@@ -25,8 +24,21 @@ class _Container extends Component {
         options : []
       },
       selectedOption : "",
-      pageData : []
+      pageData : [],
+      _prev_options : {
+        title : "",
+        options : []
+      },
+      _prev_pageData : []
     };
+    this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
+  }
+  componentWillMount = () => {
+      BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonClick);
+  }
+
+  componentWillUnmount = () =>{
+      BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick);
   }
 
   componentDidMount = () => {
@@ -34,7 +46,18 @@ class _Container extends Component {
     const pageData = this.props.navigation.state.params.pageData;
     this.setState({options : options});
     this.setState({pageData : pageData});
+    this.setState({_prev_options : options});
+    this.setState({_prev_pageData : pageData});
   };
+
+  handleBackButtonClick = () => {
+    this.setState({
+        pageData: this.state.pageData.pop(),
+      }, () => {
+      this.props.navigation.goBack(null);
+     });
+    return true;
+  }
 
   componentDidUpdate() {
     
@@ -51,15 +74,19 @@ class _Container extends Component {
       Value : option,
       ControlType: "Radio"
     })
+    this.setState({pageData : pageData},
+      () => {
+        console.log(pageData);
+        if(this.state.options[option]["title"])
+          this.props.navigation.push('VisaServceType', {options :this.state.options[option], pageData: pageData, data: this.props.navigation.state.params.data} )
+        else
+        {
+          var data = this.props.navigation.state.params.data;
+          this.props.navigation.navigate('VisaServiceDocs', {details :this.state.options[option], data: data, pageData : pageData} )
+        }
+      }
+    );
 
-
-    if(this.state.options[option]["title"])
-      this.props.navigation.push('VisaServceType', {options :this.state.options[option], pageData: pageData, data: this.props.navigation.state.params.data} )
-    else
-    {
-      var data = this.props.navigation.state.params.data;
-      this.props.navigation.navigate('VisaServiceDocs', {details :this.state.options[option], data: data, pageData : pageData} )
-    }
   }
 
   renderRadio = () => {
@@ -82,7 +109,7 @@ class _Container extends Component {
   render = () => {
     return (
       <Container>
-        <MyHeader navigation={this.props.navigation} header="My Services" />
+        <MyHeader navigation={this.props.navigation} onBackPressed={this.handleBackButtonClick} header="Visa Service" />
   
         <View
           style={{
@@ -94,7 +121,7 @@ class _Container extends Component {
         >
           <View>
             <Text style={{ color: "#AAACAC", fontSize: 17, marginLeft: 5 }}>
-              {this.state.options.title}
+              {this.state.options.title} *
             </Text>
           </View>
           <Right>

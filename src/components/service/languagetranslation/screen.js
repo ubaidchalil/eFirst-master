@@ -206,6 +206,7 @@ const LanguageTranslation = ({
         value={language.LanguageID}
       />
     ));
+    
   const languageTranslationRateByLanguages = (toLanguage, fromLanguage) => {
     if (toLanguage && fromLanguage) {
       translationPrice({
@@ -215,6 +216,7 @@ const LanguageTranslation = ({
       });
     }
   };
+
   const renderDocumentTypes = () =>
     documenttypes.data.map(doc => (
       <Picker.Item
@@ -286,6 +288,7 @@ const LanguageTranslation = ({
                 placeholder="Mobile *"
                 name="PersonalPhone"
                 label="Mobile *"
+                keyboardType="numeric"
                 onChangeText={value => setFieldValue("PersonalPhone", value)}
                 value={values.PersonalPhone}
                 error={touched.PersonalPhone && errors.PersonalPhone}
@@ -301,9 +304,10 @@ const LanguageTranslation = ({
             </Item>
             <Item>
               <Input
-                placeholder="Land Phone"
+                placeholder="Land Phone*"
                 name="Office"
-                label="Land Phone"
+                label="Land Phone*"
+                keyboardType="numeric"
                 onChangeText={value => setFieldValue("OfficePhone", value)}
                 value={values.OfficePhone}
                 error={touched.OfficePhone && errors.OfficePhone}
@@ -320,10 +324,10 @@ const LanguageTranslation = ({
 
             <Item style={styles.item_margin}>
               <Input
-                placeholder="Address Line 1"
+                placeholder="Address Line 1*"
                 underline
                 name="Address"
-                label="Address Line 1"
+                label="Address Line 1*"
                 onChangeText={value => setFieldValue("Address1", value)}
                 value={values.Address1}
                 error={touched.Address1 && errors.Address1}
@@ -350,7 +354,7 @@ const LanguageTranslation = ({
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.Address && (
+              {errors.Street && (
                 <Text style={{ color: "red" }} visible={errors.Street}>
                   {errors.Street}
                 </Text>
@@ -676,11 +680,14 @@ export default withFormik({
       .email("Email not valid")
       .required("Required"),
     PersonalPhone: Yup.string().required("Required"),
+    OfficePhone: Yup.string().required("Required"),
+    Address1: Yup.string().required("Required"),
     SelectedDocumentTypeId: Yup.string().required("Required"),
     SelectedFromDocumentLanguageId: Yup.string().required("Required"),
     SelectedToDocumentLanguageId: Yup.string().required("Required"),
     AddressCountry: Yup.string().required("Required"),
     Street: Yup.string().required("Required"),
+    Zip: Yup.string().required("Required"),
     City: Yup.string().required("Required"),
     SelectedState: Yup.string().required("Required")
   }),

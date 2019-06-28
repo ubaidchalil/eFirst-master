@@ -170,9 +170,9 @@ const DocumentAttestation = ({
             </Item>
             <Item>
               <Input
-                placeholder="Land Phone"
+                placeholder="Land Phone *"
                 name="Office"
-                label="Land Phone"
+                label="Land Phone *"
                 onChangeText={value => setFieldValue("OfficePhone", value)}
                 value={values.OfficePhone}
                 error={touched.OfficePhone && errors.OfficePhone}
@@ -276,8 +276,8 @@ const DocumentAttestation = ({
                 name="Zip"
                 label="PO Box"
                 onChangeText={value => setFieldValue("Zip", value)}
-                value={values.POBox}
-                error={touched.POBox && errors.POBox}
+                value={values.Zip}
+                error={touched.Zip && errors.Zip}
                 underlineColor={Color.secondary}
               />
             </Item>
@@ -494,6 +494,9 @@ export default withFormik({
       .email("Email not valid")
       .required("Required"),
     PersonalPhone: Yup.string().required("Required"),
+    OfficePhone: Yup.string().required("Required"),
+    Address1: Yup.string().required("Required"),
+    Zip: Yup.string().required("Required"),
     SelectedCountryId: Yup.string().required("Required"),
     SelectedCertificateType: Yup.string().required("Required"),
     AddressCountry: Yup.string().required("Required"),

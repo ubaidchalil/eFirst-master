@@ -25,6 +25,7 @@ import * as Yup from "yup";
 import { Color } from "../../../../constants";
 import MyHeader from "../../../../Header";
 import visa_options from "./data";
+import DateTimePicker from "react-native-modal-datetime-picker";
 
 const styles = {
   item_margin: {
@@ -52,27 +53,21 @@ const DocumentAttestation = ({
   navigation,
   state
 }) => {
-  const renderDocumentCountries = () =>
-    countries.data.map(country => (
-      <Picker.Item
-        key={country.CountryID}
-        label={country.CountryName}
-        value={country.CountryID}
-      />
-    ));
-
-  const renderCertificateTypes = () =>
-    certificatetype.data.map(cert => (
-      <Picker.Item
-        key={cert.CertificateTypeID}
-        label={cert.CertificateTypeName}
-        value={cert.CertificateTypeID}
-      />
-    ));
+    
+  const ShowDateTimePicker = () => setFieldValue("IsDatePickerVisible", true);
+  const HideDateTimePicker = () => setFieldValue("IsDatePickerVisible", false);
+  const HandleDatePicked = date => {
+    setFieldValue("PassportExiryDate", dateFormat(date));
+    HideDateTimePicker();
+  }
 
   componentDidUpdate = () => {
     console.log(attestationPrice);
   };
+
+  dateFormat = (date) => {
+    return date.getDate()+"/"+ (date.getMonth()+1)+"/"+date.getFullYear()
+  }
 
   const attestationRateByCountryandDCType = (CountryId, CertificateType) => {
     console.log("CountryId", CountryId);
@@ -156,6 +151,7 @@ const DocumentAttestation = ({
                 placeholder="Mobile *"
                 name="PersonalPhone"
                 label="Mobile *"
+                keyboardType="numeric"
                 onChangeText={value => setFieldValue("PersonalPhone", value)}
                 value={values.PersonalPhone}
                 error={touched.PersonalPhone && errors.PersonalPhone}
@@ -171,9 +167,10 @@ const DocumentAttestation = ({
             </Item>
             <Item>
               <Input
-                placeholder="Land Phone"
+                placeholder="Land Phone*"
                 name="Office"
-                label="Land Phone"
+                label="Land Phone*"
+                keyboardType="numeric"
                 onChangeText={value => setFieldValue("OfficePhone", value)}
                 value={values.OfficePhone}
                 error={touched.OfficePhone && errors.OfficePhone}
@@ -277,8 +274,8 @@ const DocumentAttestation = ({
                 name="Zip"
                 label="PO Box"
                 onChangeText={value => setFieldValue("Zip", value)}
-                value={values.POBox}
-                error={touched.POBox && errors.POBox}
+                value={values.Zip}
+                error={touched.Zip && errors.Zip}
                 underlineColor={Color.secondary}
               />
             </Item>
@@ -321,12 +318,12 @@ const DocumentAttestation = ({
                 label="Nationality *"
                 onChangeText={value => setFieldValue("Nationality", value)}
                 value={values.Nationality}
-                error={touched.Street && errors.Nationality}
+                error={touched.Nationality && errors.Nationality}
                 underlineColor={Color.secondary}
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.Street && (
+              {errors.Nationality && (
                 <Text style={{ color: "red" }} visible={errors.Nationality}>
                   {errors.Nationality}
                 </Text>
@@ -334,6 +331,7 @@ const DocumentAttestation = ({
             </Item>
             <Item style={styles.item_margin}>
               <Input
+                onTouchStart={ShowDateTimePicker}
                 placeholder="Passport Expiry Date *"
                 underline
                 name="PassportExpiryDate"
@@ -342,12 +340,12 @@ const DocumentAttestation = ({
                   setFieldValue("PassportExiryDate", value)
                 }
                 value={values.PassportExiryDate}
-                error={touched.Street && errors.PassportExiryDate}
+                error={touched.PassportExiryDate && errors.PassportExiryDate}
                 underlineColor={Color.secondary}
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.Street && (
+              {errors.PassportExiryDate && (
                 <Text
                   style={{ color: "red" }}
                   visible={errors.PassportExiryDate}
@@ -366,6 +364,12 @@ const DocumentAttestation = ({
             </Button>
           </Form>
         </ScrollView>
+        
+        <DateTimePicker
+          isVisible={values.IsDatePickerVisible}
+          onConfirm={HandleDatePicked}
+          onCancel={HideDateTimePicker}
+        />
       </Content>
     </Container>
   );
@@ -410,8 +414,11 @@ export default withFormik({
       .min(4, "Must be longer than 4 characters")
       .email("Email not valid")
       .required("Required"),
-    PersonalPhone: Yup.string().required("Required"),
+    PersonalPhone: Yup.number("Invalid No.").required("Required"),
+    OfficePhone: Yup.number("Invalid No.").required("Required"),
     AddressCountry: Yup.string().required("Required"),
+    Zip: Yup.string().required("Required"),
+    Address1: Yup.string().required("Required"),
     Street: Yup.string().required("Required"),
     City: Yup.string().required("Required"),
     SelectedState: Yup.string().required("Required"),

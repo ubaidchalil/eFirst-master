@@ -94,12 +94,14 @@ const OfficeDetails = ({
                 )}
               </Item>
             </Col>
+          </Row>
+          <Row>
             <Col>
               {!values.ShowEditOffice ? (
                 <Text style={styles.text_detail}>
                   Phone: {officedetail.CompanyPhone}
                 </Text>
-              ) : (
+              ) : ( 
                 <Item>
                   <Input
                     placeholder="Phone"
@@ -136,6 +138,8 @@ const OfficeDetails = ({
                 </Item>
               )}
             </Col>
+          </Row>
+          <Row>
             <Col>
               {!values.ShowEditOffice ? (
                 <Text style={styles.text_detail}>

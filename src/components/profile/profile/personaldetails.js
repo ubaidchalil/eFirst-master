@@ -95,6 +95,8 @@ const PersonalDetails = ({
                 </Item>
               )}
             </Col>
+          </Row>
+          <Row>
             <Col>
               {!values.ShowEditPersonal ? (
                 <Text style={styles.text_detail}>

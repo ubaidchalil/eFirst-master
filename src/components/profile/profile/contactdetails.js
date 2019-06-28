@@ -89,25 +89,12 @@ const ContactDetails = ({
                 </Item>
               )}
             </Col>
+          </Row>
+          <Row>
             <Col>
-              {!values.ShowEditContact ? (
                 <Text style={styles.text_detail}>
                   Email: {contactdetail.Email}
                 </Text>
-              ) : (
-                <Item>
-                  <Input
-                    placeholder="Email"
-                    name="Email"
-                    label="Email"
-                    onChangeText={value => setFieldValue("Email", value)}
-                    value={values.Email}
-                    error={touched.Email && errors.Email}
-                    underlineColor={Color.secondary}
-                    style={{ fontSize: 13 }}
-                  />
-                </Item>
-              )}
             </Col>
           </Row>
           <Row>
@@ -132,6 +119,8 @@ const ContactDetails = ({
               )}
             </Col>
 
+          </Row>
+          <Row>
             <Col>
               {!values.ShowEditContact ? (
                 <Text style={styles.text_detail}>
