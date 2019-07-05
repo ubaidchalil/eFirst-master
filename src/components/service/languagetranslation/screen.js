@@ -304,9 +304,9 @@ const LanguageTranslation = ({
             </Item>
             <Item>
               <Input
-                placeholder="Land Phone*"
+                placeholder="Land Phone"
                 name="Office"
-                label="Land Phone*"
+                label="Land Phone"
                 keyboardType="numeric"
                 onChangeText={value => setFieldValue("OfficePhone", value)}
                 value={values.OfficePhone}
@@ -680,7 +680,6 @@ export default withFormik({
       .email("Email not valid")
       .required("Required"),
     PersonalPhone: Yup.string().required("Required"),
-    OfficePhone: Yup.string().required("Required"),
     Address1: Yup.string().required("Required"),
     SelectedDocumentTypeId: Yup.string().required("Required"),
     SelectedFromDocumentLanguageId: Yup.string().required("Required"),

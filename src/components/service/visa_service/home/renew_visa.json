@@ -1,0 +1,1867 @@
+"Renew Visa": {
+    "title": "Visa Type",
+    "options": [
+      "Partner/Investor Visa",
+      "Family Visa"
+    ],
+    "Partner/Investor Visa": {
+      "title": "Renewal Process Speed",
+      "options": [
+        "Normal",
+        "Urgent"
+      ],
+        "Normal": {
+          "docs": [
+            "Sponsor's emirates ID",
+            "Trade License, Page 1",
+            "Trade License, Page 2",
+            "Immigration card",
+            "Memorandum of association",
+            "Passport (Front)",
+            "Passport (Back)",
+            "Medical result",
+            "Emirates id application paper",
+            "Insurance",
+            "Visa",
+            "1 photo (white background)"
+          ],
+          "PriceDetails": [
+            {"Text": "Gov. fees","Value": 850 },
+            {"Text": "Service charge","Value": 105 }
+          ],
+          "Notes": {  
+               "Text":"Notes",
+               "Name":"Notes",
+               "Options":[  
+                 "These visa are for those who have a valid Dubai trade license and has a share of more than AED 72000 duly signed by all the parties and attested in Notary Public of any emirates."
+               ]
+           },
+           "OriginalDocumentRequired":{  
+               "Text":"Original Document Required",
+               "Name":"OriginalDocumentRequired",
+               "Options":[  
+                 "Sponsors Emirates ID"
+               ]
+           }
+         },
+        "Urgent": {
+          "docs": [
+            "Sponsor's emirates ID",
+            "Trade License, Page 1",
+            "Trade License, Page 2",
+            "Immigration card",
+            "Memorandum of association",
+            "Passport (Front)",
+            "Passport (Back)",
+            "Medical result",
+            "Emirates id application paper",
+            "Insurance",
+            "Visa",
+            "1 photo (white background)"
+          ],
+          "PriceDetails": [
+            {"Text": "Gov. fees","Value": 850 },
+            {"Text": "Service charge","Value": 105 }
+          ]
+         }
+    },
+    "Family Visa": {
+      "title": "Sponsor Type",
+      "options": [
+        "Partner/Investor",
+        "Employee"
+      ],
+      "Partner/Investor": {
+        "title": "Whome to Renew",
+        "options": [
+          "Husband/Wife",
+          "Parents",
+          "Child"
+        ],
+        "Husband/Wife": {
+          "title": "Visa Duration",
+          "options": [
+            "2 Years",
+            "3 Years"
+          ],
+          "2 Years": {
+            "title": "Renewal Process Speed",
+            "options": [
+              "Normal",
+              "Urgent"
+            ],
+            "Normal": {
+              "docs": [
+                "Sponsor's emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum Of Association",
+                "Sponsor's passport",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Sponsor visa",
+                "Residential ejari",
+                "Sponsored passport",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                {"Text": "Gov. fees","Value": 700 },
+                {"Text": "Service charge","Value": 105 }
+              ]
+             },
+            "Urgent": {
+              "docs": [
+                "Sponsor's emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "Sponsored passport (Front)",
+                "Sponsored passport (Back)",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                {"Text": "Gov. fees","Value": 800 },
+                {"Text": "Service charge","Value": 105 }
+              ]
+             }
+          },
+          "3 Years": {
+            "title": "Renewal Process Speed",
+            "options": [
+              "Normal",
+              "Urgent"
+            ],
+            "Normal": {
+              "docs": [
+                "Sponsor's emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                {"Text": "Gov. fees","Value": 700 },
+                {"Text": "Service charge","Value": 105 }
+              ]
+             },
+            "Urgent": {
+              "docs": [
+                "Sponsor's emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                {"Text": "Gov. fees","Value": 800 },
+                {"Text": "Service charge","Value": 105 }
+              ]
+             }
+          }
+        },
+        "Parents": {
+          "title": "Select Parents",
+          "options": [
+            "Mother",
+            "Father",
+            "Mother & Father"
+          ],
+          "Mother" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          },
+          "Father" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          },
+          "Mother & Father" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          }
+        },
+        "Child": {
+          "title": "Select Child Age",
+          "options": [
+            "Below 18",
+            "Girl Above 18",
+            "Boy 18 - 21",
+            "Boy Above 21"
+          ],
+          "Below 18" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          },
+          "Girl Above 18" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          },
+          "Boy 18 - 21" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          },
+          "Boy Above 21" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Employee": {
+        "title": "Whome to Renew",
+        "options": [
+          "Husband/Wife",
+          "Parents",
+          "Child"
+        ],
+        "Husband/Wife": {
+          "title": "Visa Duration",
+          "options": [
+            "2 Years",
+            "3 Years"
+          ],
+          "2 Years": {
+            "title": "Renewal Process Speed",
+            "options": [
+              "Normal",
+              "Urgent"
+            ],
+            "Normal": {
+              "docs": [
+                "Sponsor's emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum Of Association",
+                "Sponsor's passport",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Sponsor visa",
+                "Residential ejari",
+                "Sponsored passport",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                {"Text": "Gov. fees","Value": 700 },
+                {"Text": "Service charge","Value": 105 }
+              ]
+             },
+            "Urgent": {
+              "docs": [
+                "Sponsor's emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "Sponsored passport (Front)",
+                "Sponsored passport (Back)",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                {"Text": "Gov. fees","Value": 800 },
+                {"Text": "Service charge","Value": 105 }
+              ]
+             }
+          },
+          "3 Years": {
+            "title": "Renewal Process Speed",
+            "options": [
+              "Normal",
+              "Urgent"
+            ],
+            "Normal": {
+              "docs": [
+                "Sponsor's emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                {"Text": "Gov. fees","Value": 700 },
+                {"Text": "Service charge","Value": 105 }
+              ]
+             },
+            "Urgent": {
+              "docs": [
+                "Sponsor's emirates ID",
+                "Trade License, Page 1",
+                "Trade License, Page 2",
+                "Immigration card",
+                "Memorandum of association",
+                "Sponsor's passport (Front)",
+                "Sponsor's passport (Back)",
+                "Medical result",
+                "Emirates id application paper",
+                "Insurance",
+                "Sponsor's visa",
+                "Residential ejari",
+                "1 photo (white background)"
+              ],
+              "PriceDetails": [
+                {"Text": "Gov. fees","Value": 800 },
+                {"Text": "Service charge","Value": 105 }
+              ]
+             }
+          }
+        },
+        "Parents": {
+          "title": "Select Parents",
+          "options": [
+            "Mother",
+            "Father",
+            "Mother & Father"
+          ],
+          "Mother" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          },
+          "Father" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          },
+          "Mother & Father" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          }
+        },
+        "Child": {
+          "title": "Select Child Age",
+          "options": [
+            "Below 18",
+            "Girl Above 18",
+            "Boy 18 - 21",
+            "Boy Above 21"
+          ],
+          "Below 18" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          },
+          "Girl Above 18" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          },
+          "Boy 18 - 21" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          },
+          "Boy Above 21" : {
+            "title": "Visa Duration",
+            "options": [
+              "3 Years",
+              "2 Years"
+            ],
+            "3 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "Sponsored passport (Front)",
+                  "Sponsored passport (Back)",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            },
+            "2 Years": {
+              "title": "Renewal Process Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              },
+              "Urgent": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Trade License, Page 1",
+                  "Trade License, Page 2",
+                  "Immigration card",
+                  "Memorandum of association",
+                  "Sponsor's passport (Front)",
+                  "Sponsor's passport (Back)",
+                  "Medical result",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Sponsor's visa",
+                  "Residential ejari",
+                  "1 photo (white background)"
+                ],
+                "PriceDetails": [
+                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Service charge","Value": 105 }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
