@@ -89,6 +89,12 @@ const DocumentAttestation = ({
     navigation.dispatch(navigateAction);
   };
 
+  setExpDateInit = () => {
+    var dt = new Date();
+    dt.setMonth( dt.getMonth() + 6 );
+    return dt;
+  }
+
   return (
     <Container>
       <MyHeader navigation={navigation} header="Visa Service" />
@@ -168,9 +174,9 @@ const DocumentAttestation = ({
             </Item>
             <Item>
               <Input
-                placeholder="Land Phone*"
+                placeholder="Land Phone"
                 name="Office"
-                label="Land Phone*"
+                label="Land Phone"
                 keyboardType="numeric"
                 onChangeText={value => setFieldValue("OfficePhone", value)}
                 value={values.OfficePhone}
@@ -355,6 +361,11 @@ const DocumentAttestation = ({
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
+                <Text>
+                Note: Passport Validity should be more than 6 months while applying for any Visa
+                </Text>
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }}>
               {errors.PassportExiryDate && (
                 <Text
                   style={{ color: "red" }}
@@ -379,6 +390,7 @@ const DocumentAttestation = ({
           isVisible={values.IsDatePickerVisible}
           onConfirm={HandleDatePicked}
           onCancel={HideDateTimePicker}
+          minimumDate={this.setExpDateInit()}
         />
       </Content>
     </Container>
@@ -400,7 +412,6 @@ export default withFormik({
     CustomerName: profile.data.userdetail.FirstName,
     Email: profile.data.contactdetail.Email,
     PersonalPhone: profile.data.contactdetail.Phone,
-    OfficePhone: profile.data.officedetail.FirstName,
     Address1: profile.data.contactdetail.Addressline1,
     Zip: "",
     AddressCountry: "United Arab Emirates",

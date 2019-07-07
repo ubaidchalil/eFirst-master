@@ -131,14 +131,14 @@ export default ({ navigation, dashboard, servicesData, token }) => {
       case 3: {
         navigation.navigate("MyRequests", {
           headerTitle: "Completed",
-          noDataLabel: "No recent Completed service request"
+          noDataLabel: "No recent completed service request"
         });
         break;
       }
       case 4: {
         navigation.navigate("MyRequests", {
           headerTitle: "Rejected",
-          noDataLabel: "No recent Rejected service request"
+          noDataLabel: "No recent rejected service request"
         });
         break;
       }
