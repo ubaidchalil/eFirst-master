@@ -29,6 +29,15 @@ class Container1 extends Component {
     this.props.navigation.dispatch(navigateAction);
     this.props.navigation.dispatch(DrawerActions.closeDrawer());
   };
+  navigateToHome = route => () => {
+    const { token } = this.props.token;
+    this.props.DashboardData(token);
+    const navigateAction = NavigationActions.navigate({
+      routeName: route
+    });
+    this.props.navigation.dispatch(navigateAction);
+    this.props.navigation.dispatch(DrawerActions.closeDrawer());
+  };
   componentDidUpdate() {
     if (!this.props.logout.loading) {
       if (this.props.logout.success) {
@@ -43,11 +52,6 @@ class Container1 extends Component {
     this.props.Logout(token);
   };
 
-  loadDashboardData() {
-    const { token } = this.props.token;
-    this.props.DashboardData(token);
-    this.navigateToScreen("HomeScreen");
-  }
   render() {
     return (
       <Container>
@@ -99,13 +103,29 @@ class Container1 extends Component {
           <ScrollView>
             <TouchableOpacity
               style={styles.listItem}
-              onPress={() => this.loadDashboardData()}
+              onPress={this.navigateToHome("HomeScreen")}
             >
               <View style={styles.left}>
                 <Icon style={styles.icon} name="arrow-dropright" />
               </View>
               <View style={styles.body}>
                 <Text style={styles.text}>Dashboard</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.listItem}
+              onPress={() =>
+                this.props.navigation.navigate("MyRequests", {
+                  headerTitle: "My Requests",
+                  noDataLabel: "No recent service request"
+                })
+              }
+            >
+              <View style={styles.left}>
+                <Icon style={styles.icon} name="arrow-dropright" />
+              </View>
+              <View style={styles.body}>
+                <Text style={styles.text}>My Requests</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity

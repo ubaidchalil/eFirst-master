@@ -6,6 +6,7 @@ import { servicesData } from "../components/service/action";
 import IconAntDesign from "react-native-vector-icons/AntDesign";
 import { connect } from "react-redux";
 import { DashboardData } from "../components/dashboard/action";
+
 class FooterTabs extends Component {
   navigateToScreen = route => () => {
     const resetAction = NavigationActions.reset({

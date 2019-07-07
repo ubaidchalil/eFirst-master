@@ -20,7 +20,7 @@ import {
   Text,
   ListItem,
   Button,
-  Textarea,
+  Radio,
   Header,
   Left,
   Right,
@@ -30,7 +30,6 @@ import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
 var ImagePicker = require("react-native-image-picker");
-
 import {
   DocumentPicker,
   DocumentPickerUtil
@@ -48,7 +47,8 @@ const LanguageTranslation = ({
   translationrate,
   documenttypes,
   token,
-  navigation
+  navigation,
+  showToast
 }) => {
   openlaunchCamera = i => {
     const options = {
@@ -85,6 +85,28 @@ const LanguageTranslation = ({
     });
   };
 
+  validateFileTypeAndSize = ({ fileName, fileSize }) => {
+    const filetypes = [
+      "jpeg",
+      "jpg",
+      "png",
+      "docx",
+      "doc",
+      "xls",
+      "xlsx",
+      "pdf"
+    ];
+    const ext = fileName.split(".").pop();
+    const validateType = filetypes.includes(ext);
+    const validateSize = fileSize <= 5242880;
+
+    const result = {
+      validateType,
+      validateSize
+    };
+    return result;
+  };
+
   openFile = i => {
     DocumentPicker.show(
       {
@@ -98,16 +120,20 @@ const LanguageTranslation = ({
             res.fileName,
             res.fileSize
           );
-
-          const file = {
-            uri: res.uri,
-            type: res.type,
-            name: res.fileName
-          };
-          var files = values.Files;
-          if (i == 0) files.push(file);
-          else files[i] = file;
-          setFieldValue("Files", files);
+          const valdateRes = validateFileTypeAndSize(res);
+          if (valdateRes.validateSize && valdateRes.validateType) {
+            const file = {
+              uri: res.uri,
+              type: res.type,
+              name: res.fileName
+            };
+            var files = values.Files;
+            if (i == 0) files.push(file);
+            else files[i] = file;
+            setFieldValue("Files", files);
+          } else {
+            showToast("- Invalid file type.\n- File must be smaller than 5 MB");
+          }
         }
       }
     );
@@ -206,7 +232,7 @@ const LanguageTranslation = ({
         value={language.LanguageID}
       />
     ));
-    
+
   const languageTranslationRateByLanguages = (toLanguage, fromLanguage) => {
     if (toLanguage && fromLanguage) {
       translationPrice({
@@ -321,7 +347,6 @@ const LanguageTranslation = ({
                 </Text>
               )}
             </Item>
-
             <Item style={styles.item_margin}>
               <Input
                 placeholder="Address Line 1*"
@@ -396,7 +421,6 @@ const LanguageTranslation = ({
                 </Text>
               )}
             </Item>
-
             <Item style={styles.item_margin}>
               <Input
                 placeholder="City *"
@@ -447,7 +471,6 @@ const LanguageTranslation = ({
                 </Text>
               )}
             </Item>
-
             <Item style={styles.item_margin}>
               <Picker
                 mode="dropdown"
@@ -556,6 +579,52 @@ const LanguageTranslation = ({
                 <Text>Legal Stamp</Text>
               </Body>
             </ListItem>
+            {values.LegalStamp && (
+              <ListItem style={[styles.item_margin, { borderBottomWidth: 0 }]}>
+                <Radio
+                  selected={values.PickUpandDropOption == "Direct Delivery"}
+                  onPress={() => {
+                    if (attestationrate.data) {
+                      setFieldValue("Rate", attestationrate.data.Rate);
+                    }
+                    setFieldValue("PickUpandDropOption", "Direct Delivery");
+                  }}
+                />
+                <Body>
+                  <TouchableOpacity
+                    onPress={() => {
+                      if (attestationrate.data) {
+                        setFieldValue("Rate", attestationrate.data.Rate);
+                      }
+                      setFieldValue("PickUpandDropOption", "Direct Delivery");
+                    }}
+                  >
+                    <Text>Direct Delivery</Text>
+                  </TouchableOpacity>
+                </Body>
+                <Radio
+                  selected={values.PickUpandDropOption == "Through Courier"}
+                  onPress={() => {
+                    if (attestationrate.data) {
+                      setFieldValue("Rate", attestationrate.data.Rate);
+                    }
+                    setFieldValue("PickUpandDropOption", "Through Courier");
+                  }}
+                />
+                <Body>
+                  <TouchableOpacity
+                    onPress={() => {
+                      if (attestationrate.data) {
+                        setFieldValue("Rate", attestationrate.data.Rate);
+                      }
+                      setFieldValue("PickUpandDropOption", "Through Courier");
+                    }}
+                  >
+                    <Text>Through Courier</Text>
+                  </TouchableOpacity>
+                </Body>
+              </ListItem>
+            )}
             <Item style={{ borderBottomWidth: 0 }}>
               <Text>Upload File </Text>
             </Item>
@@ -607,7 +676,35 @@ const LanguageTranslation = ({
                 </View>
               </View>
             </View>
-
+            <View
+              style={{
+                paddingTop: 10,
+                paddingLeft: 10,
+                paddingRight: 10,
+                flexDirection: "row"
+              }}
+            >
+              <Text style={{ fontWeight: "500", fontSize: 12 }}>
+                File format:
+              </Text>
+              <Text style={{ fontSize: 12 }}>
+                {" "}
+                .jpeg, .jpg, .png, .docx, .doc, .xlx, .xlxs, .pdf
+              </Text>
+            </View>
+            <View
+              style={{
+                paddingTop: 10,
+                paddingLeft: 10,
+                paddingRight: 10,
+                flexDirection: "row"
+              }}
+            >
+              <Text style={{ fontWeight: "500", fontSize: 12 }}>
+                File size:
+              </Text>
+              <Text style={{ fontSize: 12 }}> 5MB</Text>
+            </View>
             <View>
               <Text
                 style={{
@@ -665,6 +762,7 @@ export default withFormik({
     SelectedFromDocumentLanguageId: "",
     SelectedToDocumentLanguageId: "",
     LegalStamp: false,
+    PickUpandDropOption: "Direct Delivery",
     Files: [],
     doclangTransCreate,
     ShowInfo: false

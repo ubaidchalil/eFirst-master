@@ -124,6 +124,7 @@ const UserDetails = ({
               error={touched.FirstName && errors.FirstName}
               underlineColor={Color.secondary}
               style={{ fontSize: 13 }}
+              editable={false}
             />
           </Item>
         )}

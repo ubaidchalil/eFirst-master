@@ -26,7 +26,7 @@ import { Color } from "../../../../constants";
 import MyHeader from "../../../../Header";
 import visa_options from "./data";
 import DateTimePicker from "react-native-modal-datetime-picker";
-
+import { nationalities } from "./NationalityPicker";
 const styles = {
   item_margin: {
     marginTop: 5
@@ -53,21 +53,22 @@ const DocumentAttestation = ({
   navigation,
   state
 }) => {
-    
   const ShowDateTimePicker = () => setFieldValue("IsDatePickerVisible", true);
   const HideDateTimePicker = () => setFieldValue("IsDatePickerVisible", false);
   const HandleDatePicked = date => {
     setFieldValue("PassportExiryDate", dateFormat(date));
     HideDateTimePicker();
-  }
+  };
 
   componentDidUpdate = () => {
     console.log(attestationPrice);
   };
 
-  dateFormat = (date) => {
-    return date.getDate()+"/"+ (date.getMonth()+1)+"/"+date.getFullYear()
-  }
+  dateFormat = date => {
+    return (
+      date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()
+    );
+  };
 
   const attestationRateByCountryandDCType = (CountryId, CertificateType) => {
     console.log("CountryId", CountryId);
@@ -159,11 +160,11 @@ const DocumentAttestation = ({
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-                {errors.PersonalPhone && (
-                  <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
-                    {errors.PersonalPhone}
-                  </Text>
-                )}
+              {errors.PersonalPhone && (
+                <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
+                  {errors.PersonalPhone}
+                </Text>
+              )}
             </Item>
             <Item>
               <Input
@@ -311,16 +312,25 @@ const DocumentAttestation = ({
               )}
             </Item>
             <Item style={styles.item_margin}>
-              <Input
+              <Picker
+                mode="dropdown"
+                iosIcon={<Icon name="arrow-down" />}
+                style={{ width: undefined }}
                 placeholder="Nationality *"
-                underline
-                name="Nationality"
-                label="Nationality *"
-                onChangeText={value => setFieldValue("Nationality", value)}
-                value={values.Nationality}
-                error={touched.Nationality && errors.Nationality}
-                underlineColor={Color.secondary}
-              />
+                placeholderStyle={{ color: "#bfc6ea" }}
+                placeholderIconColor="#007aff"
+                selectedValue={values.Nationality}
+                onValueChange={value => setFieldValue("Nationality", value)}
+              >
+                <Picker.Item value="" label="Nationality *" key="-1" />
+                {nationalities.map((nationality, index) => (
+                  <Picker.Item
+                    value={nationality.value}
+                    label={nationality.value}
+                    key={index}
+                  />
+                ))}
+              </Picker>
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
               {errors.Nationality && (
@@ -364,7 +374,7 @@ const DocumentAttestation = ({
             </Button>
           </Form>
         </ScrollView>
-        
+
         <DateTimePicker
           isVisible={values.IsDatePickerVisible}
           onConfirm={HandleDatePicked}

@@ -12,6 +12,8 @@ import {
 import { View } from "react-native";
 import Loader from "../../styled/loader";
 import AlertView from "../../styled/alert-view";
+import Toast, { DURATION } from "react-native-easy-toast";
+
 class Container extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +31,9 @@ class Container extends Component {
     this.props.getdoclanguage(this.props.token.token);
     this.props.documentationTypes(this.props.token.token);
   };
-
+  showToast = text => {
+    this.refs.validationToasts.show(text, 3000);
+  };
   componentDidUpdate() {
     console.log(
       "Doc Attest Upd: result = >",
@@ -92,9 +96,18 @@ class Container extends Component {
       <View style={{ flex: 1 }}>
         {/* <Loader loading={loading} /> */}
         <LanguageTranslation
+          showToast={this.showToast}
           setRequestedValue={this.setRequestedValue}
           {...this.props}
           state={this.state}
+        />
+        <Toast
+          ref="validationToasts"
+          style={{
+            backgroundColor: "#d12626",
+            bottom: 25
+          }}
+          position="bottom"
         />
         {error && <AlertView type="error" />}
         {success && <AlertView type="success" />}
