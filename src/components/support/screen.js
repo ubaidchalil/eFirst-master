@@ -30,15 +30,15 @@ const renderList = () => {
   return data.map((datum, index) => {
     return (
       <View key={index} style={styles.item_border}>
-        <View style={{ flexDirection: "row" }} >
+        <View style={{ flexDirection: "row" }}>
           <Text style={styles.label}>Phone </Text>
           <Text style={styles.value}> {datum.phone} </Text>
         </View>
-        <View style={{ flexDirection: "row" }} >
+        <View style={{ flexDirection: "row" }}>
           <Text style={styles.label}> Email </Text>
           <Text style={styles.value}> {datum.email} </Text>
         </View>
-        <View style={{ flexDirection: "row" }} >
+        <View style={{ flexDirection: "row" }}>
           <Text style={styles.label}> Address </Text>
           <Text style={styles.value}> {datum.address} </Text>
         </View>
@@ -49,24 +49,28 @@ const renderList = () => {
 
 const data = [
   {
-    phone : "+971 55 277 7731 +971 56 555 4999",
-    email : "welcome@efirst.ae",
-    address : "Emirates First Business Service LLC\nOffice No.1, Al Hilal Bank Building,\nNear Al Twar Centre, Al Qusais \nDubai, UAE"
+    phone: "+971 55 277 7731 +971 56 555 4999",
+    email: "welcome@efirst.ae",
+    address:
+      "Emirates First Business Service LLC\nOffice No.1, Al Hilal Bank Building,\nNear Al Twar Centre, Al Qusais \nDubai, UAE"
   },
   {
-    phone : "+971 55 277 7731 +971 56 555 4999",
-    email : "welcome@efirst.ae",
-    address : "Emirates First Business Service LLC\nOffice # G08,\nB-Block, Business Village,\nNear Clock Tower,Deira,\nDubai, UAE"
+    phone: "+971 55 277 7731 +971 56 555 4999",
+    email: "welcome@efirst.ae",
+    address:
+      "Emirates First Business Service LLC\nOffice # G08,\nB-Block, Business Village,\nNear Clock Tower,Deira,\nDubai, UAE"
   },
   {
-    phone : "+971 55 277 7731 +971 56 555 4999",
-    email : "welcome@efirst.ae",
-    address : "Emirates First Business Service LLC\nOffice No.1, Al Hilal Bank Building,\nNear Al Twar Centre, Al Qusais \nDubai, UAE"
+    phone: "+971 55 277 7731 +971 56 555 4999",
+    email: "welcome@efirst.ae",
+    address:
+      "Emirates First Business Service LLC\nOffice No.1, Al Hilal Bank Building,\nNear Al Twar Centre, Al Qusais \nDubai, UAE"
   },
   {
-    phone : "+971 55 277 7731 +971 56 555 4999",
-    email : "welcome@efirst.ae",
-    address : "Emirates First Business Service LLC\nOffice No.1, Al Hilal Bank Building,\nNear Al Twar Centre, Al Qusais \nDubai, UAE"
+    phone: "+971 55 277 7731 +971 56 555 4999",
+    email: "welcome@efirst.ae",
+    address:
+      "Emirates First Business Service LLC\nOffice No.1, Al Hilal Bank Building,\nNear Al Twar Centre, Al Qusais \nDubai, UAE"
   }
 ];
 const Support = ({
@@ -78,7 +82,8 @@ const Support = ({
   errors,
   touched,
   token,
-  navigation
+  navigation,
+  profile
 }) => (
   <Container>
     <MyHeader navigation={navigation} header="Support" />
@@ -96,12 +101,12 @@ const Support = ({
               underlineColor={Color.secondary}
             />
           </Item>
-          <Item style={{ borderBottomWidth: 0 }} >
-              {errors.CustomerName && (
-                <Text style={{ color:'red' }}  visible={errors.CustomerName}>
-                  {errors.CustomerName}
-                </Text>
-              )}
+          <Item style={{ borderBottomWidth: 0 }}>
+            {errors.CustomerName && (
+              <Text style={{ color: "red" }} visible={errors.CustomerName}>
+                {errors.CustomerName}
+              </Text>
+            )}
           </Item>
           <Item style={styles.item_margin}>
             <Input
@@ -114,12 +119,12 @@ const Support = ({
               underlineColor={Color.secondary}
             />
           </Item>
-          <Item style={{ borderBottomWidth: 0 }} >
-              {errors.CustomerMail && (
-                <Text style={{ color:'red' }}  visible={errors.CustomerMail}>
-                  {errors.CustomerMail}
-                </Text>
-              )}
+          <Item style={{ borderBottomWidth: 0 }}>
+            {errors.CustomerMail && (
+              <Text style={{ color: "red" }} visible={errors.CustomerMail}>
+                {errors.CustomerMail}
+              </Text>
+            )}
           </Item>
           <Item style={styles.item_margin}>
             <Input
@@ -141,22 +146,22 @@ const Support = ({
               underlineColor={Color.secondary}
             />
           </Item>
-          <Item style={{ borderBottomWidth: 0 }} >
-              {errors.PersonalPhone && (
-                <Text style={{ color:'red' }}  visible={errors.PersonalPhone}>
-                  {errors.PersonalPhone}
-                </Text>
-              )}
-              {errors.OfficePhone && (
-                <Text style={{ color:'red' }}  visible={errors.OfficePhone}>
-                  {errors.OfficePhone}
-                </Text>
-              )}
+          <Item style={{ borderBottomWidth: 0 }}>
+            {errors.PersonalPhone && (
+              <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
+                {errors.PersonalPhone}
+              </Text>
+            )}
+            {errors.OfficePhone && (
+              <Text style={{ color: "red" }} visible={errors.OfficePhone}>
+                {errors.OfficePhone}
+              </Text>
+            )}
           </Item>
           <Item style={styles.item_margin}>
             <Textarea
               rowSpan={5}
-              placeholder="Address"
+              placeholder="Message"
               name="Message"
               label="Message"
               onChangeText={value => setFieldValue("Message", value)}
@@ -166,12 +171,12 @@ const Support = ({
               underline
             />
           </Item>
-          <Item style={{ borderBottomWidth: 0 }} >
-              {errors.Message && (
-                <Text style={{ color:'red' }}  visible={errors.Message}>
-                  {errors.Message}
-                </Text>
-              )}
+          <Item style={{ borderBottomWidth: 0 }}>
+            {errors.Message && (
+              <Text style={{ color: "red" }} visible={errors.Message}>
+                {errors.Message}
+              </Text>
+            )}
           </Item>
           <Button
             onPress={handleSubmit}
@@ -190,11 +195,11 @@ const Support = ({
 );
 
 export default withFormik({
-  mapPropsToValues: ({ supportCreate, token }) => ({
-    CustomerName: "",
-    CustomerMail: "",
-    PersonalPhone: "",
-    OfficePhone: "",
+  mapPropsToValues: ({ supportCreate, token, profile }) => ({
+    CustomerName: profile.data.userdetail.FirstName,
+    CustomerMail: profile.data.contactdetail.Email,
+    PersonalPhone: profile.data.contactdetail.Phone,
+    OfficePhone: profile.data.officedetail.CompanyPhone,
     Message: "",
     supportCreate
   }),
@@ -220,7 +225,7 @@ const styles = {
     borderWidth: 1,
     borderRadius: 8,
     borderColor: "#ECF0F1",
-    padding: 10,
+    padding: 10
   },
   label: { fontSize: 13 },
   value: { color: "#A6ACAF", fontSize: 13 }

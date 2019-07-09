@@ -13,6 +13,7 @@ import {
   ListItem,
   Button,
   Textarea,
+  CheckBox,
   Header,
   Left,
   Right,
@@ -24,7 +25,8 @@ import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
 import MyHeader from "../../../Header";
-
+import Modal from "react-native-modal";
+import TermsandConditon from "../../termsandcondition";
 const styles = {
   item_margin: {
     marginTop: 5
@@ -49,6 +51,7 @@ const DocumentAttestation = ({
   token,
   attestationPrice,
   navigation,
+  setShowTerms,
   state
 }) => {
   const renderDocumentCountries = () =>
@@ -112,6 +115,9 @@ const DocumentAttestation = ({
         <Right />
       </View>
       <Content style={{ padding: 10 }}>
+        <Modal isVisible={state.ShowTerms}>
+          <TermsandConditon setShowTerms={setShowTerms} />
+        </Modal>
         <ScrollView>
           <Form>
             <Item>
@@ -440,6 +446,42 @@ const DocumentAttestation = ({
                 AED
               </Text>
             </View>
+
+            <View>
+              <ListItem style={{ borderBottomWidth: 0 }}>
+                <CheckBox
+                  checked={values.AgreeTerms}
+                  onPress={() => {
+                    setFieldValue("AgreeTerms", !values.AgreeTerms);
+                  }}
+                />
+                <Body>
+                  <View style={{ flexDirection: "row" }}>
+                    <Text> I have read and agree to the </Text>
+
+                    <TouchableOpacity onPress={() => setShowTerms(true)}>
+                      <Text
+                        style={{
+                          textDecorationLine: "underline",
+                          marginLeft: -11
+                        }}
+                      >
+                        Terms and
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                  <TouchableOpacity onPress={() => setShowTerms(true)}>
+                    <Text
+                      style={{
+                        textDecorationLine: "underline"
+                      }}
+                    >
+                      Conditions of Service
+                    </Text>
+                  </TouchableOpacity>
+                </Body>
+              </ListItem>
+            </View>
             <Button
               style={{ backgroundColor: "#183E61", marginBottom: 50 }}
               full
@@ -475,6 +517,7 @@ export default withFormik({
     AddressCountry: "United Arab Emirates",
     Street: "",
     City: "",
+    AgreeTerms: false,
     SelectedState: "",
     SelectedCountryId: "",
     SelectedCertificateType: "",
@@ -483,7 +526,6 @@ export default withFormik({
     docAttestationCreate
   }),
   validateOnChange: false,
-
   validationSchema: Yup.object().shape({
     CustomerName: Yup.string()
       .min(3, "Must be longer than 3 characters")
@@ -493,9 +535,7 @@ export default withFormik({
       .email("Email not valid")
       .required("Required"),
     PersonalPhone: Yup.string().required("Required"),
-    OfficePhone: Yup.string().required("Required"),
     Address1: Yup.string().required("Required"),
-    Zip: Yup.string().required("Required"),
     SelectedCountryId: Yup.string().required("Required"),
     SelectedCertificateType: Yup.string().required("Required"),
     AddressCountry: Yup.string().required("Required"),

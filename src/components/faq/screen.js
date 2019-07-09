@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { View, Text, FlatList, TouchableOpacity, RefreshControl } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  RefreshControl
+} from "react-native";
 import MyHeader from "../../Header";
 import {
   Container,
@@ -64,7 +70,7 @@ export default class FAQ extends Component {
           style={{ backgroundColor: "white", fontSize: 16, color: "black" }}
         >
           {" "}
-          {item.FAQuestion}
+          {item.FAQCategoryName}
         </Text>
       </View>
     );
@@ -84,52 +90,30 @@ export default class FAQ extends Component {
       <Container>
         <MyHeader navigation={navigation} header="FAQ" />
         <Content>
-          <Item>
-            <Text
-              style={{
-                backgroundColor: "white",
-                color: "black",
-                fontSize: 16,
-                padding: 10,
-                paddingHorizontal: 15
-              }}
-            >
-              Categories
-            </Text>
-          </Item>
-
-          <FlatList
-            horizonal={true}
-            data={this.state.data}
-            style={styles.tabList}
-            horizontal={true}
-            showsHorizontalScrollIndicator={false}
-            renderItem={({ item, index }) => (
+          {this.state.data.map(item => (
+            <Item>
               <TouchableOpacity
-                key={index}
-                onPress={() => this._onTabListPressed(index, item)}
+                onPress={() =>
+                  this.props.navigation.navigate("FAQDetail", {
+                    faq: item.faq,
+                    title: item.FAQCategoryName
+                  })
+                }
               >
                 <Text
-                  style={[
-                    styles.tabItemText,
-                    this.state.selectedTabIndex == index
-                      ? styles.tabItemTextSelected
-                      : {}
-                  ]}
+                  style={{
+                    backgroundColor: "white",
+                    color: "black",
+                    fontSize: 16,
+                    padding: 10,
+                    paddingHorizontal: 15
+                  }}
                 >
                   {item.FAQCategoryName}
                 </Text>
               </TouchableOpacity>
-            )}
-            extraData={this.state}
-          />
-          <Accordion
-            style={{ borderBottomColor: "#EAEDED", borderBottomWidth: 1 }}
-            dataArray={this.state.faq}
-            expanded={false}
-            renderHeader={this._renderAccordionHeader}
-            renderContent={this._renderAccordionContent}
-          />
+            </Item>
+          ))}
         </Content>
       </Container>
     );

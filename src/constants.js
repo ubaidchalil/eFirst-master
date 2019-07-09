@@ -2,7 +2,18 @@ export const Color = {
   main: "#7c7c7c",
   secondary: "#b61e89"
 };
+export const validateFileTypeAndSize = ({ fileName, fileSize }) => {
+  const filetypes = ["jpeg", "jpg", "png", "docx", "doc", "xls", "xlsx", "pdf"];
+  const ext = fileName.split(".").pop();
+  const validateType = filetypes.includes(ext);
+  const validateSize = fileSize <= 5242880;
 
+  const result = {
+    validateType,
+    validateSize
+  };
+  return result;
+};
 /// BASE URL ///
 export const BASE_URL = "http://api.efirst.ae/";
 export const PROFILE_BASE_URL =

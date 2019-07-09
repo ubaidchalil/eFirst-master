@@ -18,9 +18,10 @@ class Container extends Component {
   }
 }
 
-const mapStateToProps = ({ token, support }) => ({
+const mapStateToProps = ({ token, support, profile }) => ({
   token,
-  support
+  support,
+  profile
 });
 
 const mapDispatchToProps = dispatch => ({

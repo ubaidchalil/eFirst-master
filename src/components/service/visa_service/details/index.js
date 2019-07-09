@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { View } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import {
   Container,
   Content,
@@ -20,13 +20,16 @@ import MyHeader from "../../../../Header";
 import { visaServiceCreate, updAttestationSRAmt } from "../../action";
 import Loader from "../../../styled/loader";
 import AlertView from "../../../styled/alert-view";
+import Modal from "react-native-modal";
+import TermsandConditon from "../../../termsandcondition";
 
 class _Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
       totalBillAmt: 0,
-      AgreeTerms: false
+      AgreeTerms: false,
+      ShowTerms: false
     };
   }
 
@@ -36,6 +39,9 @@ class _Container extends Component {
       0
     );
     this.setState({ totalBillAmt: total });
+  };
+  setShowTerms = state => {
+    this.setState({ ShowTerms: state });
   };
   componentDidUpdate() {
     console.log(
@@ -195,7 +201,10 @@ class _Container extends Component {
           </View>
           <Right />
         </View>
-        <Content style={{ padding: 10 }} >
+        <Content style={{ padding: 10 }}>
+          <Modal isVisible={this.state.ShowTerms}>
+            <TermsandConditon setShowTerms={this.setShowTerms} />
+          </Modal>
           {this.renderPageData()}
 
           <View
@@ -249,9 +258,12 @@ class _Container extends Component {
             </View>
             <Right />
           </View>
-          
+
           <Text style={{ padding: 10 }}>
-            {this.props.navigation.state.params.docsAndPayment.OriginalDocumentRequired.Options[0]}
+            {
+              this.props.navigation.state.params.docsAndPayment
+                .OriginalDocumentRequired.Options[0]
+            }
           </Text>
 
           <View>
@@ -261,21 +273,45 @@ class _Container extends Component {
           </View>
           <Right />
           {this.renderPriceDts()}
-          
-          <ListItem style={{ borderBottomWidth: 0 }}>
+
+          {this.renderTotalPrice()}
+          <View>
+            <ListItem style={{ borderBottomWidth: 0 }}>
               <CheckBox
                 checked={this.state.AgreeTerms}
                 onPress={() => {
-                    this.setState({ AgreeTerms: !this.state.AgreeTerms })
+                  this.setState(previousState => {
+                    AgreeTerms: !previousState.AgreeTerms;
+                  });
                 }}
               />
               <Body>
-                <Text> I have read and agree to the Terms and Conditions of Service</Text>
+                <View style={{ flexDirection: "row" }}>
+                  <Text> I have read and agree to the </Text>
+
+                  <TouchableOpacity onPress={() => this.setShowTerms(true)}>
+                    <Text
+                      style={{
+                        textDecorationLine: "underline",
+                        marginLeft: -11
+                      }}
+                    >
+                      Terms and
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+                <TouchableOpacity onPress={() => this.setShowTerms(true)}>
+                  <Text
+                    style={{
+                      textDecorationLine: "underline"
+                    }}
+                  >
+                    Conditions of Service
+                  </Text>
+                </TouchableOpacity>
               </Body>
-          </ListItem>
-
-          {this.renderTotalPrice()}
-
+            </ListItem>
+          </View>
           <Button
             style={{
               backgroundColor: "#183E61",

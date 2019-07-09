@@ -24,11 +24,15 @@ import {
   Header,
   Left,
   Right,
-  Body
+  Body,
+  state
 } from "native-base";
+import Modal from "react-native-modal";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
+import TermsandConditon from "../../termsandcondition";
+import { validateFileTypeAndSize } from "../../../constants";
 var ImagePicker = require("react-native-image-picker");
 import {
   DocumentPicker,
@@ -47,8 +51,10 @@ const LanguageTranslation = ({
   translationrate,
   documenttypes,
   token,
+  state,
   navigation,
-  showToast
+  showToast,
+  setShowTerms
 }) => {
   openlaunchCamera = i => {
     const options = {
@@ -83,28 +89,6 @@ const LanguageTranslation = ({
         setFieldValue("Files", files);
       }
     });
-  };
-
-  validateFileTypeAndSize = ({ fileName, fileSize }) => {
-    const filetypes = [
-      "jpeg",
-      "jpg",
-      "png",
-      "docx",
-      "doc",
-      "xls",
-      "xlsx",
-      "pdf"
-    ];
-    const ext = fileName.split(".").pop();
-    const validateType = filetypes.includes(ext);
-    const validateSize = fileSize <= 5242880;
-
-    const result = {
-      validateType,
-      validateSize
-    };
-    return result;
   };
 
   openFile = i => {
@@ -271,6 +255,9 @@ const LanguageTranslation = ({
         <Right />
       </View>
       <Content style={{ padding: 10 }}>
+        <Modal isVisible={state.ShowTerms}>
+          <TermsandConditon setShowTerms={setShowTerms} />
+        </Modal>
         <ScrollView>
           <Form>
             <Item>
@@ -723,6 +710,41 @@ const LanguageTranslation = ({
                 AED
               </Text>
             </View>
+            <View>
+              <ListItem style={{ borderBottomWidth: 0 }}>
+                <CheckBox
+                  checked={values.AgreeTerms}
+                  onPress={() => {
+                    setFieldValue("AgreeTerms", !values.AgreeTerms);
+                  }}
+                />
+                <Body>
+                  <View style={{ flexDirection: "row" }}>
+                    <Text> I have read and agree to the </Text>
+
+                    <TouchableOpacity onPress={() => setShowTerms(true)}>
+                      <Text
+                        style={{
+                          textDecorationLine: "underline",
+                          marginLeft: -11
+                        }}
+                      >
+                        Terms and
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                  <TouchableOpacity onPress={() => setShowTerms(true)}>
+                    <Text
+                      style={{
+                        textDecorationLine: "underline"
+                      }}
+                    >
+                      Conditions of Service
+                    </Text>
+                  </TouchableOpacity>
+                </Body>
+              </ListItem>
+            </View>
             <Button
               style={{ backgroundColor: "#183E61", marginBottom: 50 }}
               full
@@ -764,8 +786,9 @@ export default withFormik({
     LegalStamp: false,
     PickUpandDropOption: "Direct Delivery",
     Files: [],
+    AgreeTerms: false,
     doclangTransCreate,
-    ShowInfo: false
+    ShowTerms: false
   }),
   validateOnChange: false,
 
@@ -784,7 +807,6 @@ export default withFormik({
     SelectedToDocumentLanguageId: Yup.string().required("Required"),
     AddressCountry: Yup.string().required("Required"),
     Street: Yup.string().required("Required"),
-    Zip: Yup.string().required("Required"),
     City: Yup.string().required("Required"),
     SelectedState: Yup.string().required("Required")
   }),

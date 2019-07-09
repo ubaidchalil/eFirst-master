@@ -20,11 +20,15 @@ class Container extends Component {
       showPopUp: false,
       Requested: false,
       UpdatedSRAmount: false,
-      SRAmount: "0"
+      SRAmount: "0",
+      ShowTerms: false
     };
   }
   setRequestedValue = amount => {
     this.setState({ Requested: true, SRAmount: amount });
+  };
+  setShowTerms = state => {
+    this.setState({ ShowTerms: state });
   };
   componentDidMount = () => {
     this.props.getCountries(this.props.token.token);
@@ -93,6 +97,7 @@ class Container extends Component {
           setRequestedValue={this.setRequestedValue}
           {...this.props}
           state={this.state}
+          setShowTerms={this.setShowTerms}
         />
         {error && <AlertView type="error" />}
         {success && <AlertView type="success" />}

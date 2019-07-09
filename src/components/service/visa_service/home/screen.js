@@ -91,9 +91,9 @@ const DocumentAttestation = ({
 
   setExpDateInit = () => {
     var dt = new Date();
-    dt.setMonth( dt.getMonth() + 6 );
+    dt.setMonth(dt.getMonth() + 6);
     return dt;
-  }
+  };
 
   return (
     <Container>
@@ -360,11 +360,7 @@ const DocumentAttestation = ({
                 underlineColor={Color.secondary}
               />
             </Item>
-            <Item style={{ borderBottomWidth: 0 }}>
-                <Text>
-                Note: Passport Validity should be more than 6 months while applying for any Visa
-                </Text>
-            </Item>
+
             <Item style={{ borderBottomWidth: 0 }}>
               {errors.PassportExiryDate && (
                 <Text
@@ -374,6 +370,12 @@ const DocumentAttestation = ({
                   {errors.PassportExiryDate}
                 </Text>
               )}
+            </Item>
+            <Item style={styles.item_margin}>
+              <Text>
+                Note: Passport Validity should be more than 6 months while
+                applying for any Visa
+              </Text>
             </Item>
             <Button
               style={{ backgroundColor: "#183E61", marginBottom: 50 }}
@@ -436,9 +438,7 @@ export default withFormik({
       .email("Email not valid")
       .required("Required"),
     PersonalPhone: Yup.number("Invalid No.").required("Required"),
-    OfficePhone: Yup.number("Invalid No.").required("Required"),
     AddressCountry: Yup.string().required("Required"),
-    Zip: Yup.string().required("Required"),
     Address1: Yup.string().required("Required"),
     Street: Yup.string().required("Required"),
     City: Yup.string().required("Required"),

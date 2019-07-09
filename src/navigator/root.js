@@ -20,6 +20,7 @@ import Profile from "../components/profile/profile";
 import ServiceDetail from "../components/service/servicerequest";
 import VisaServiceStack from "./visaservice_stack";
 import VisaServiceScreen from "../components/service/file_upload";
+import FAQDetail from "../components/faq/faqdetail";
 export const RequestServiceStack = createStackNavigator(
   {
     SelectService: {
@@ -53,6 +54,7 @@ const Tabs = createBottomTabNavigator(
     MyRequests: { screen: UserActions },
     Profile: { screen: Profile },
     FAQ: { screen: FAQ },
+    FAQDetail: { screen: FAQDetail },
     Support: { screen: Support },
     ServiceDetail: { screen: ServiceDetail },
     VisaServiceScreen: { screen: VisaServiceScreen }

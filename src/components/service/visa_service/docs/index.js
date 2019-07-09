@@ -21,6 +21,8 @@ import {
   DocumentPickerUtil
 } from "react-native-document-picker";
 var ImagePicker = require("react-native-image-picker");
+import { validateFileTypeAndSize } from "../../../../constants";
+import Toast, { DURATION } from "react-native-easy-toast";
 
 class _Container extends Component {
   constructor(props) {
@@ -43,7 +45,9 @@ class _Container extends Component {
     );
   };
   componentDidUpdate() {}
-
+  showToast = text => {
+    this.refs.validationToasts.show(text, 3000);
+  };
   openlaunchCamera = (doc, index) => {
     const options = {
       title: "Select Avatar",
@@ -66,8 +70,6 @@ class _Container extends Component {
       } else if (response.customButton) {
         console.log("User tapped custom button: ", response.customButton);
       } else {
-        const source = { uri: response.uri };
-
         const file = {
           uri: response.uri,
           type: response.type,
@@ -77,16 +79,13 @@ class _Container extends Component {
 
         _docs.push(doc);
 
-        if(index<0)
-        {
-          _docNames[doc] = !Array.isArray ? [] : _docNames[doc] ;
-          _docNames[doc].push(res.fileName); 
-        }
-        else
-          _docNames[doc][index] = res.fileName;
+        if (index < 0) {
+          _docNames[doc] = !Array.isArray ? [] : _docNames[doc];
+          _docNames[doc].push(res.fileName);
+        } else _docNames[doc][index] = res.fileName;
 
-        this.setState({docsAttached : _docs});
-        this.setState({docNames : _docNames});
+        this.setState({ docsAttached: _docs });
+        this.setState({ docNames: _docNames });
 
         console.log(JSON.stringify(file));
       }
@@ -99,7 +98,7 @@ class _Container extends Component {
 
     DocumentPicker.show(
       {
-        filetype: [DocumentPickerUtil.images()]
+        filetype: [DocumentPickerUtil.allFiles()]
       },
       (error, res) => {
         // Android
@@ -110,27 +109,32 @@ class _Container extends Component {
           res.fileSize
         );
         console.log(_docs);
-        _docs.push(doc);
-        
-        if(index<0)
-        {
-          _docNames[doc] = !Array.isArray(_docNames[doc]) ? [] : _docNames[doc] ;
-          _docNames[doc].push(res.fileName); 
+        const valdateRes = validateFileTypeAndSize(res);
+        if (valdateRes.validateSize && valdateRes.validateType) {
+          _docs.push(doc);
+
+          if (index < 0) {
+            _docNames[doc] = !Array.isArray(_docNames[doc])
+              ? []
+              : _docNames[doc];
+            _docNames[doc].push(res.fileName);
+          } else _docNames[doc][index] = res.fileName;
+
+          this.setState({ docsAttached: _docs });
+          this.setState({ docNames: _docNames });
+
+          const file = {
+            uri: res.uri,
+            type: res.type,
+            name: res.fileName
+          };
+
+          this.state.docItem.push(file);
+        } else {
+          this.showToast(
+            "- Invalid file type.\n- File must be smaller than 5 MB"
+          );
         }
-        else
-          _docNames[doc][index] = res.fileName;
-
-
-        this.setState({docsAttached : _docs});
-        this.setState({docNames : _docNames});
-
-        const file = {
-          uri: res.uri,
-          type: res.type,
-          name: res.fileName
-        };
-
-        this.state.docItem.push(file);
       }
     );
   };
@@ -191,112 +195,116 @@ class _Container extends Component {
       docsAndPayment: docsAndPayment
     });
   };
-  
-  renderDocNew = (doc) => {
-    const _doc = doc;
-      return (
-        <View>
-        <View>
-        <Text
-          style={{
-            textAlign: "center",
-            color: "#B2BABB",
-            padding: 10
-          }}
-        >
-          {"Select File"}
-        </Text>
-      </View>
-      <View style={{ alignItems: "center", marginTop: 7 }}>
-        <View
-          style={{
-            flexDirection: "row",
-            borderWidth: 1,
-            borderColor: "#CACFD2",
-            borderRadius: 10
-          }}
-        >
-          <Button
-            transparent
-            dark
-            style={{ alignItems: "center" }}
-            onPress={() => this.openlaunchCamera(_doc, -1)}
-          >
-            <Icon name="camera" />
-            <Text>Camera</Text>
-          </Button>
-          <Button
-            transparent
-            dark
-            style={{
-              borderLeftWidth: 1,
-              borderLeftColor: "#CACFD2",
-              alignItems: "center"
-            }}
-            onPress={() => this.openFile(_doc, -1)}
-          >
-            <Icon name="albums" />
-            <Text>Album</Text>
-          </Button>
-        </View>
-      </View>
-      </View>
-      );
-  }
 
-  renderDocArr = (doc) => {
+  renderDocNew = doc => {
     const _doc = doc;
-    return this.state.docNames[doc] ? this.state.docNames[doc].map(doc => {
-      return (
+    return (
+      <View>
         <View>
-        <View>
-        <Text
-          style={{
-            textAlign: "center",
-            color: "#B2BABB",
-            padding: 10
-          }}
-        >
-          {doc || "Select File"}
-        </Text>
-      </View>
-      <View style={{ alignItems: "center", marginTop: 7 }}>
-        <View
-          style={{
-            flexDirection: "row",
-            borderWidth: 1,
-            borderColor: "#CACFD2",
-            borderRadius: 10
-          }}
-        >
-          <Button
-            transparent
-            dark
-            style={{ alignItems: "center" }}
-            onPress={() => this.openlaunchCamera(_doc, index)}
-          >
-            <Icon name="camera" />
-            <Text>Camera</Text>
-          </Button>
-          <Button
-            transparent
-            dark
+          <Text
             style={{
-              borderLeftWidth: 1,
-              borderLeftColor: "#CACFD2",
-              alignItems: "center"
+              textAlign: "center",
+              color: "#B2BABB",
+              padding: 10
             }}
-            onPress={() => this.openFile(_doc, index)}
           >
-            <Icon name="albums" />
-            <Text>Album</Text>
-          </Button>
+            {"Select File"}
+          </Text>
+        </View>
+        <View style={{ alignItems: "center", marginTop: 7 }}>
+          <View
+            style={{
+              flexDirection: "row",
+              borderWidth: 1,
+              borderColor: "#CACFD2",
+              borderRadius: 10
+            }}
+          >
+            <Button
+              transparent
+              dark
+              style={{ alignItems: "center" }}
+              onPress={() => this.openlaunchCamera(_doc, -1)}
+            >
+              <Icon name="camera" />
+              <Text>Camera</Text>
+            </Button>
+            <Button
+              transparent
+              dark
+              style={{
+                borderLeftWidth: 1,
+                borderLeftColor: "#CACFD2",
+                alignItems: "center"
+              }}
+              onPress={() => this.openFile(_doc, -1)}
+            >
+              <Icon name="albums" />
+              <Text>Album</Text>
+            </Button>
+          </View>
         </View>
       </View>
-      </View>
-      );
-    }) : (<View />)
-  }
+    );
+  };
+
+  renderDocArr = doc => {
+    const _doc = doc;
+    return this.state.docNames[doc] ? (
+      this.state.docNames[doc].map(doc => {
+        return (
+          <View>
+            <View>
+              <Text
+                style={{
+                  textAlign: "center",
+                  color: "#B2BABB",
+                  padding: 10
+                }}
+              >
+                {doc || "Select File"}
+              </Text>
+            </View>
+            <View style={{ alignItems: "center", marginTop: 7 }}>
+              <View
+                style={{
+                  flexDirection: "row",
+                  borderWidth: 1,
+                  borderColor: "#CACFD2",
+                  borderRadius: 10
+                }}
+              >
+                <Button
+                  transparent
+                  dark
+                  style={{ alignItems: "center" }}
+                  onPress={() => this.openlaunchCamera(_doc, index)}
+                >
+                  <Icon name="camera" />
+                  <Text>Camera</Text>
+                </Button>
+                <Button
+                  transparent
+                  dark
+                  style={{
+                    borderLeftWidth: 1,
+                    borderLeftColor: "#CACFD2",
+                    alignItems: "center"
+                  }}
+                  onPress={() => this.openFile(_doc, index)}
+                >
+                  <Icon name="albums" />
+                  <Text>Album</Text>
+                </Button>
+              </View>
+            </View>
+          </View>
+        );
+      })
+    ) : (
+      <View />
+    );
+  };
 
   renderDocs = () => {
     return this.props.navigation.state.params.details.docs.map(doc => {
@@ -374,6 +382,22 @@ class _Container extends Component {
               Upload Document Copies
             </Text>
           </Item>
+          <View
+            style={{
+              paddingTop: 10,
+              paddingLeft: 10,
+              paddingRight: 10,
+              flexDirection: "row"
+            }}
+          >
+            <Text style={{ fontWeight: "500", fontSize: 12 }}>
+              File format:
+            </Text>
+            <Text style={{ fontSize: 12 }}>
+              {" "}
+              .jpeg, .jpg, .png, .docx, .doc, .xlx, .xlxs, .pdf
+            </Text>
+          </View>
           {this.renderDocs()}
 
           {this.props.navigation.state.params.details["IBAN number"] !=
@@ -439,6 +463,14 @@ class _Container extends Component {
             <Text>Next</Text>
           </Button>
         </Content>
+        <Toast
+          ref="validationToasts"
+          style={{
+            backgroundColor: "#d12626",
+            bottom: 25
+          }}
+          position="bottom"
+        />
       </Container>
     );
   };

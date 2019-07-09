@@ -21,11 +21,15 @@ class Container extends Component {
       showPopUp: false,
       Requested: false,
       UpdatedSRAmount: false,
-      SRAmount: "0"
+      SRAmount: "0",
+      ShowTerms: false
     };
   }
   setRequestedValue = amount => {
     this.setState({ Requested: true, SRAmount: amount });
+  };
+  setShowTerms = state => {
+    this.setState({ ShowTerms: state });
   };
   componentDidMount = () => {
     this.props.getdoclanguage(this.props.token.token);
@@ -100,6 +104,7 @@ class Container extends Component {
           setRequestedValue={this.setRequestedValue}
           {...this.props}
           state={this.state}
+          setShowTerms={this.setShowTerms}
         />
         <Toast
           ref="validationToasts"
