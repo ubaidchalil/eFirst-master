@@ -32,7 +32,7 @@ import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
 import TermsandConditon from "../../termsandcondition";
-import { validateFileTypeAndSize } from "../../../constants";
+import { validateFileTypeAndSizeForTranslation } from "../../../constants";
 var ImagePicker = require("react-native-image-picker");
 import {
   DocumentPicker,
@@ -94,7 +94,7 @@ const LanguageTranslation = ({
   openFile = i => {
     DocumentPicker.show(
       {
-        filetype: [DocumentPickerUtil.allFiles()]
+        filetype: [DocumentPickerUtil.images()]
       },
       (error, res) => {
         if (res) {
@@ -104,7 +104,7 @@ const LanguageTranslation = ({
             res.fileName,
             res.fileSize
           );
-          const valdateRes = validateFileTypeAndSize(res);
+          const valdateRes = validateFileTypeAndSizeForTranslation(res);
           if (valdateRes.validateSize && valdateRes.validateType) {
             const file = {
               uri: res.uri,
@@ -571,8 +571,8 @@ const LanguageTranslation = ({
                 <Radio
                   selected={values.PickUpandDropOption == "Direct Delivery"}
                   onPress={() => {
-                    if (attestationrate.data) {
-                      setFieldValue("Rate", attestationrate.data.Rate);
+                    if (translationrate.data) {
+                      setFieldValue("Rate", translationrate.data.Rate);
                     }
                     setFieldValue("PickUpandDropOption", "Direct Delivery");
                   }}
@@ -580,8 +580,8 @@ const LanguageTranslation = ({
                 <Body>
                   <TouchableOpacity
                     onPress={() => {
-                      if (attestationrate.data) {
-                        setFieldValue("Rate", attestationrate.data.Rate);
+                      if (translationrate.data) {
+                        setFieldValue("Rate", translationrate.data.Rate);
                       }
                       setFieldValue("PickUpandDropOption", "Direct Delivery");
                     }}
@@ -592,8 +592,8 @@ const LanguageTranslation = ({
                 <Radio
                   selected={values.PickUpandDropOption == "Through Courier"}
                   onPress={() => {
-                    if (attestationrate.data) {
-                      setFieldValue("Rate", attestationrate.data.Rate);
+                    if (translationrate.data) {
+                      setFieldValue("Rate", translationrate.data.Rate);
                     }
                     setFieldValue("PickUpandDropOption", "Through Courier");
                   }}
@@ -601,8 +601,8 @@ const LanguageTranslation = ({
                 <Body>
                   <TouchableOpacity
                     onPress={() => {
-                      if (attestationrate.data) {
-                        setFieldValue("Rate", attestationrate.data.Rate);
+                      if (translationrate.data) {
+                        setFieldValue("Rate", translationrate.data.Rate);
                       }
                       setFieldValue("PickUpandDropOption", "Through Courier");
                     }}
@@ -674,10 +674,7 @@ const LanguageTranslation = ({
               <Text style={{ fontWeight: "500", fontSize: 12 }}>
                 File format:
               </Text>
-              <Text style={{ fontSize: 12 }}>
-                {" "}
-                .jpeg, .jpg, .png, .docx, .doc, .xlx, .xlxs, .pdf
-              </Text>
+              <Text style={{ fontSize: 12 }}> .jpeg, .jpg, .png</Text>
             </View>
             <View
               style={{
@@ -704,7 +701,9 @@ const LanguageTranslation = ({
                 Rate :{" "}
                 {translationrate.data
                   ? values.LegalStamp == true
-                    ? translationrate.data.Rate * values.Files.length + 15
+                    ? values.PickUpandDropOption == "Through Courier"
+                      ? translationrate.data.Rate * values.Files.length + 15 + 5
+                      : translationrate.data.Rate * values.Files.length + 15
                     : translationrate.data.Rate * values.Files.length
                   : 0}{" "}
                 AED
@@ -816,8 +815,12 @@ export default withFormik({
     const token = props.token.token;
     const docRate = translationrate.data ? translationrate.data.Rate : 0;
     const totalDocRate = docRate * values.Files.length;
-    var Rate = values.LegalStamp == true ? totalDocRate + 15 : totalDocRate;
-
+    var Rate =
+      values.LegalStamp == true
+        ? values.PickUpandDropOption == "Through Courier"
+          ? totalDocRate + 15 + 5
+          : totalDocRate + 15
+        : totalDocRate;
     setRequestedValue(Rate);
     const address = `${values.Address1},${values.Street} ${values.City}, ${
       values.SelectedState

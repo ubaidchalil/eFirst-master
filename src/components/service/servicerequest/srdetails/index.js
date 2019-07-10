@@ -14,11 +14,16 @@ import VisaServiceDt from "./visaservicedt";
 
 class SRInfo extends Component {
   certtificateTypeName = SelectedCertificateType => {
+    console.log("certificateParams =>", SelectedCertificateType);
     const { certificatetype } = this.props;
     const selectCertType = certificatetype.data.filter(
       cert => cert.CertificateTypeID == SelectedCertificateType
     );
-    return selectCertType[0].CertificateTypeName;
+    if (selectCertType.length > 0) {
+      return selectCertType[0].CertificateTypeName;
+    } else {
+      return "";
+    }
   };
 
   countryName = SelectedCountryId => {
@@ -26,7 +31,11 @@ class SRInfo extends Component {
     const selectCountry = countries.data.filter(
       country => country.CountryID == SelectedCountryId
     );
-    return selectCountry[0].CountryName;
+    if (selectCountry.length > 0) {
+      return selectCountry[0].CountryName;
+    } else {
+      return "";
+    }
   };
 
   documentTypesName = documentTypeId => {
@@ -34,7 +43,11 @@ class SRInfo extends Component {
     const selectDocumentType = documenttypes.data.filter(
       doc => doc.DocumentTypeId == documentTypeId
     );
-    return selectDocumentType[0].DocumentTypeName;
+    if (selectDocumentType.length > 0) {
+      return selectDocumentType[0].DocumentTypeName;
+    } else {
+      return "";
+    }
   };
 
   languageName = languageId => {
@@ -42,7 +55,11 @@ class SRInfo extends Component {
     const selectedLanguage = documentlanguage.data.filter(
       lang => lang.LanguageID == languageId
     );
-    return selectedLanguage[0].LanguageName;
+    if (selectedLanguage.length > 0) {
+      return selectedLanguage[0].LanguageName;
+    } else {
+      return "";
+    }
   };
 
   render() {

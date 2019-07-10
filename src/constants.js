@@ -14,6 +14,22 @@ export const validateFileTypeAndSize = ({ fileName, fileSize }) => {
   };
   return result;
 };
+
+export const validateFileTypeAndSizeForTranslation = ({
+  fileName,
+  fileSize
+}) => {
+  const filetypes = ["jpeg", "jpg", "png"];
+  const ext = fileName.split(".").pop();
+  const validateType = filetypes.includes(ext);
+  const validateSize = fileSize <= 5242880;
+
+  const result = {
+    validateType,
+    validateSize
+  };
+  return result;
+};
 /// BASE URL ///
 export const BASE_URL = "http://api.efirst.ae/";
 export const PROFILE_BASE_URL =

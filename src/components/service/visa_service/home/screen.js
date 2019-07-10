@@ -371,12 +371,12 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <Item style={styles.item_margin}>
-              <Text>
+            <View style={{ marginBottom: 10, marginTop: 10, padding: 10 }}>
+              <Text style={{ fontSize: 13 }}>
                 Note: Passport Validity should be more than 6 months while
                 applying for any Visa
               </Text>
-            </Item>
+            </View>
             <Button
               style={{ backgroundColor: "#183E61", marginBottom: 50 }}
               full
