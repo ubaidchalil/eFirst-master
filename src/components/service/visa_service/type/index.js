@@ -51,11 +51,14 @@ class _Container extends Component {
   };
 
   handleBackButtonClick = () => {
-    this.setState({
-        pageData: this.state.pageData.pop(),
-      }, () => {
+    if(Array.isArray(this.state.pageData))
+      this.setState({
+          pageData: this.state.pageData.pop(),
+        }, () => {
+        this.props.navigation.goBack(null);
+      });
+    else
       this.props.navigation.goBack(null);
-     });
     return true;
   }
 
