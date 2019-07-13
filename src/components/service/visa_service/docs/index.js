@@ -251,7 +251,7 @@ class _Container extends Component {
   renderDocArr = doc => {
     const _doc = doc;
     return this.state.docNames[doc] ? (
-      this.state.docNames[doc].map(doc => {
+      this.state.docNames[doc].map((doc, index) => {
         return (
           <View>
             <View>
