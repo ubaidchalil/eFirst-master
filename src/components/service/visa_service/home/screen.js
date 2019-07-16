@@ -431,15 +431,21 @@ export default withFormik({
 
   validationSchema: Yup.object().shape({
     CustomerName: Yup.string()
+      .nullable()
       .min(3, "Must be longer than 3 characters")
       .required("Required"),
     Email: Yup.string()
+      .nullable()
       .min(4, "Must be longer than 4 characters")
       .email("Email not valid")
       .required("Required"),
-    PersonalPhone: Yup.number("Invalid No.").required("Required"),
+    PersonalPhone: Yup.number("Invalid No.")
+      .nullable()
+      .required("Required"),
     AddressCountry: Yup.string().required("Required"),
-    Address1: Yup.string().required("Required"),
+    Address1: Yup.string()
+      .nullable()
+      .required("Required"),
     Street: Yup.string().required("Required"),
     City: Yup.string().required("Required"),
     SelectedState: Yup.string().required("Required"),

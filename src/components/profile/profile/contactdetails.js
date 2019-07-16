@@ -80,6 +80,7 @@ const ContactDetails = ({
                     placeholder="Phone"
                     name="Phone"
                     label="Phone"
+                    keyboardType="numeric"
                     onChangeText={value => setFieldValue("Phone", value)}
                     value={values.Phone}
                     error={touched.Phone && errors.Phone}
@@ -92,9 +93,9 @@ const ContactDetails = ({
           </Row>
           <Row>
             <Col>
-                <Text style={styles.text_detail}>
-                  Email: {contactdetail.Email}
-                </Text>
+              <Text style={styles.text_detail}>
+                Email: {contactdetail.Email}
+              </Text>
             </Col>
           </Row>
           <Row>
@@ -118,7 +119,6 @@ const ContactDetails = ({
                 </Item>
               )}
             </Col>
-
           </Row>
           <Row>
             <Col>
@@ -163,7 +163,9 @@ export default withFormik({
     ShowEditContact: Yup.boolean(),
     Phone: Yup.string().when("ShowEditContact", {
       is: true,
-      then: Yup.string().required("Must enter company name")
+      then: Yup.string()
+        .nullable()
+        .required("Must enter company name")
     })
   }),
 

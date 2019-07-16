@@ -52,11 +52,10 @@ class SplashScreen extends Component {
         return false;
       }
     } else {
-      return true;
+      return false;
     }
   }
   render = () => {
-    console.log("SplashScreen");
     const { loading, error } = this.props.dashboard;
     return (
       <View style={{ flex: 1 }}>

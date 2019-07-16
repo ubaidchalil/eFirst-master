@@ -793,14 +793,20 @@ export default withFormik({
 
   validationSchema: Yup.object().shape({
     CustomerName: Yup.string()
+      .nullable()
       .min(3, "Must be longer than 3 characters")
       .required("Required"),
     Email: Yup.string()
+      .nullable()
       .min(4, "Must be longer than 4 characters")
       .email("Email not valid")
       .required("Required"),
-    PersonalPhone: Yup.string().required("Required"),
-    Address1: Yup.string().required("Required"),
+    PersonalPhone: Yup.string()
+      .nullable()
+      .required("Required"),
+    Address1: Yup.string()
+      .nullable()
+      .required("Required"),
     SelectedDocumentTypeId: Yup.string().required("Required"),
     SelectedFromDocumentLanguageId: Yup.string().required("Required"),
     SelectedToDocumentLanguageId: Yup.string().required("Required"),

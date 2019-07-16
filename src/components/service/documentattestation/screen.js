@@ -161,6 +161,7 @@ const DocumentAttestation = ({
                 placeholder="Mobile *"
                 name="PersonalPhone"
                 label="Mobile *"
+                keyboardType="numeric"
                 onChangeText={value => setFieldValue("PersonalPhone", value)}
                 value={values.PersonalPhone}
                 error={touched.PersonalPhone && errors.PersonalPhone}
@@ -179,6 +180,7 @@ const DocumentAttestation = ({
                 placeholder="Land Phone"
                 name="Office"
                 label="Land Phone"
+                keyboardType="numeric"
                 onChangeText={value => setFieldValue("OfficePhone", value)}
                 value={values.OfficePhone}
                 error={touched.OfficePhone && errors.OfficePhone}
@@ -440,7 +442,7 @@ const DocumentAttestation = ({
                 Rate :{" "}
                 {attestationrate.data
                   ? values.PickUpandDropOption == "Through Courier"
-                    ? attestationrate.data.Rate + 5
+                    ? attestationrate.data.Rate + 10
                     : attestationrate.data.Rate
                   : 0}{" "}
                 AED
@@ -528,14 +530,20 @@ export default withFormik({
   validateOnChange: false,
   validationSchema: Yup.object().shape({
     CustomerName: Yup.string()
+      .nullable()
       .min(3, "Must be longer than 3 characters")
       .required("Required"),
     Email: Yup.string()
+      .nullable()
       .min(4, "Must be longer than 4 characters")
       .email("Email not valid")
       .required("Required"),
-    PersonalPhone: Yup.string().required("Required"),
-    Address1: Yup.string().required("Required"),
+    PersonalPhone: Yup.string()
+      .nullable()
+      .required("Required"),
+    Address1: Yup.string()
+      .nullable()
+      .required("Required"),
     SelectedCountryId: Yup.string().required("Required"),
     SelectedCertificateType: Yup.string().required("Required"),
     AddressCountry: Yup.string().required("Required"),
@@ -552,7 +560,7 @@ export default withFormik({
     } ${values.AddressCountry} ZIP- ${values.Zip}`;
     var Rate = attestationrate.data
       ? values.PickUpandDropOption == "Through Courier"
-        ? attestationrate.data.Rate + 5
+        ? attestationrate.data.Rate + 10
         : attestationrate.data.Rate
       : 0;
     const ServiceName = "ATTESTATION SERVICE";

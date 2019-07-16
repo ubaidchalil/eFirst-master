@@ -202,7 +202,9 @@ export default withFormik({
     ShowEditUser: Yup.boolean(),
     FirstName: Yup.string().when("ShowEditUser", {
       is: true,
-      then: Yup.string().required("Please enter a user name")
+      then: Yup.string()
+        .nullable()
+        .required("Please enter a user name")
     })
   }),
 

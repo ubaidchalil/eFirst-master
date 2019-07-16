@@ -92,7 +92,7 @@ const Support = ({
         <Form>
           <Item>
             <Input
-              placeholder="Name"
+              placeholder="Name *"
               name="CustomerName"
               label="Name"
               onChangeText={value => setFieldValue("CustomerName", value)}
@@ -110,9 +110,9 @@ const Support = ({
           </Item>
           <Item style={styles.item_margin}>
             <Input
-              placeholder="Email"
+              placeholder="Email *"
               name="CustomerMail"
-              label="Name"
+              label="Email"
               onChangeText={value => setFieldValue("CustomerMail", value)}
               value={values.CustomerMail}
               error={touched.CustomerMail && errors.CustomerMail}
@@ -128,9 +128,10 @@ const Support = ({
           </Item>
           <Item style={styles.item_margin}>
             <Input
-              placeholder="Mobile"
+              placeholder="Mobile *"
               name="PersonalPhone"
               label="Name"
+              keyboardType="numeric"
               onChangeText={value => setFieldValue("PersonalPhone", value)}
               value={values.PersonalPhone}
               error={touched.PersonalPhone && errors.PersonalPhone}
@@ -140,6 +141,7 @@ const Support = ({
               placeholder="Office"
               name="OfficePhone"
               label="Office"
+              keyboardType="numeric"
               onChangeText={value => setFieldValue("OfficePhone", value)}
               value={values.OfficePhone}
               error={touched.OfficePhone && errors.OfficePhone}
@@ -160,8 +162,9 @@ const Support = ({
           </Item>
           <Item style={styles.item_margin}>
             <Textarea
+              style={{ fontSize: 17 }}
               rowSpan={5}
-              placeholder="Message"
+              placeholder="Message *"
               name="Message"
               label="Message"
               onChangeText={value => setFieldValue("Message", value)}
@@ -206,8 +209,19 @@ export default withFormik({
   validateOnChange: false,
 
   validationSchema: Yup.object().shape({
-    PersonalPhone: Yup.string().required("Required"),
-    Message: Yup.string().required("Required")
+    PersonalPhone: Yup.string()
+      .nullable()
+      .required("Required"),
+    Message: Yup.string()
+      .nullable()
+      .required("Required"),
+    CustomerName: Yup.string()
+      .nullable()
+      .required("Required"),
+    CustomerMail: Yup.string()
+      .nullable()
+      .required("Required")
+      .email("Invalid")
   }),
 
   handleSubmit: (values, { props }) => {

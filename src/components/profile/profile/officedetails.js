@@ -101,12 +101,13 @@ const OfficeDetails = ({
                 <Text style={styles.text_detail}>
                   Phone: {officedetail.CompanyPhone}
                 </Text>
-              ) : ( 
+              ) : (
                 <Item>
                   <Input
                     placeholder="Phone"
                     name="CompanyPhone"
                     label="Phone"
+                    keyboardType="numeric"
                     onChangeText={value => setFieldValue("CompanyPhone", value)}
                     value={values.CompanyPhone}
                     error={touched.CompanyPhone && errors.CompanyPhone}
@@ -183,7 +184,9 @@ export default withFormik({
   validateOnChange: false,
 
   validationSchema: Yup.object().shape({
-    Company: Yup.string().required("Required")
+    Company: Yup.string()
+      .nullable()
+      .required("Required")
   }),
 
   handleSubmit: (values, { props }) => {

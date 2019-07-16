@@ -30,10 +30,12 @@ const PersonalDetails = ({
     setFieldValue("DOB", new Date(date).toDateString());
     HideDateTimePicker();
   };
-  
-  dateFormat = (date) => {
-    return date.getDate()+"/"+ (date.getMonth()+1)+"/"+date.getFullYear()
-  }
+
+  dateFormat = date => {
+    return (
+      date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()
+    );
+  };
 
   return (
     <View>
@@ -147,7 +149,9 @@ export default withFormik({
     ShowEditPersonal: Yup.boolean(),
     DOB: Yup.string().when("ShowEditPersonal", {
       is: true,
-      then: Yup.string().required("Must enter DOB")
+      then: Yup.string()
+        .nullable()
+        .required("Must enter DOB")
     })
   }),
   handleSubmit: (values, { props }) => {

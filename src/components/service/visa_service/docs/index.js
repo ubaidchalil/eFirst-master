@@ -76,17 +76,13 @@ class _Container extends Component {
           name: response.fileName
         };
         this.state.docItem.push(file);
-
         _docs.push(doc);
-
         if (index < 0) {
-          _docNames[doc] = !Array.isArray ? [] : _docNames[doc];
+          _docNames[doc] = !Array.isArray(_docNames[doc]) ? [] : _docNames[doc];
           _docNames[doc].push(response.fileName);
         } else _docNames[doc][index] = response.fileName;
-
         this.setState({ docsAttached: _docs });
         this.setState({ docNames: _docNames });
-
         console.log(JSON.stringify(file));
       }
     });
