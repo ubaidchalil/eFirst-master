@@ -23,8 +23,6 @@ class SplashScreen extends Component {
     const { dashboardDataLoaded } = this.state;
 
     if (!loading && !error && data && dashboardDataLoaded) {
-      console.log(nextProps);
-      this.setState({ dashboardDataLoaded: false });
       const {
         ActionRequiredNewUpdateCount,
         ActionRequiredTotalUpdateCount,
@@ -45,10 +43,16 @@ class SplashScreen extends Component {
         RejectedNewUpdateCount +
         RejectedTotalUpdateCount;
       if (total == 0) {
-        this.props.navigation.navigate("SelectService");
-        return false;
+        this.setState({ dashboardDataLoaded: false }, () => {
+          this.props.navigation.navigate("SelectService");
+          return false;
+        });
       } else {
-        this.props.navigation.navigate("Home");
+        this.setState({ dashboardDataLoaded: false }, () => {
+          this.props.navigation.navigate("Home");
+          return false;
+        });
+
         return false;
       }
     } else {
