@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, ScrollView, StyleSheet } from "react-native";
+import { View, ScrollView, StyleSheet, Linking } from "react-native";
 import {
   Container,
   Content,
@@ -76,7 +76,8 @@ class SRInfo extends Component {
         SelectedDocumentTypeId,
         SelectedFromDocumentLanguageId,
         SelectedToDocumentLanguageId
-      }
+      },
+      srDetail: { TrackingNo }
     } = this.props;
 
     const pageData = this.props.srInfo.PageData || null;
@@ -89,6 +90,7 @@ class SRInfo extends Component {
     const PickUpandDropOption = this.props.srInfo.PickUpandDropOption
       ? this.props.srInfo.PickUpandDropOption
       : "";
+    console.log("PICKUP==>", PickUpandDropOption);
     return (
       <Container>
         <ScrollView>
@@ -191,6 +193,58 @@ class SRInfo extends Component {
                 </Text>
               </View>
             )}
+
+            {(ServiceName === "TRANSLATION SERVICE" ||
+              ServiceName == "TRANSLATION") &&
+              legalStamp == true && (
+                <View style={styles.item_border}>
+                  <Text style={styles.label}>Pick Up & Drop Option : </Text>
+                  <Text style={styles.value}>{PickUpandDropOption}</Text>
+                </View>
+              )}
+
+            {(ServiceName === "TRANSLATION SERVICE" ||
+              ServiceName == "TRANSLATION") &&
+              legalStamp == true &&
+              PickUpandDropOption == "Through Courier" && (
+                <View style={styles.item_border}>
+                  <Text style={styles.label}>Shipment Tracking No : </Text>
+                  <Text
+                    onPress={() =>
+                      Linking.openURL(
+                        "https://track.easypick.me/track-shipment"
+                      )
+                    }
+                    style={[
+                      styles.value,
+                      { color: "#337ab7", textDecorationLine: "underline" }
+                    ]}
+                  >
+                    {TrackingNo}
+                  </Text>
+                </View>
+              )}
+
+            {ServiceName === "ATTESTATION SERVICE" &&
+              PickUpandDropOption == "Through Courier" && (
+                <View style={styles.item_border}>
+                  <Text style={styles.label}>Shipment Tracking No : </Text>
+                  <Text
+                    onPress={() =>
+                      Linking.openURL(
+                        "https://track.easypick.me/track-shipment"
+                      )
+                    }
+                    style={[
+                      styles.value,
+                      { color: "#337ab7", textDecorationLine: "underline" }
+                    ]}
+                  >
+                    {TrackingNo}
+                  </Text>
+                </View>
+              )}
+
             {ServiceName != "VISA SERVICE" && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Bill Amount :</Text>

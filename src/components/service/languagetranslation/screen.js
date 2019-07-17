@@ -689,21 +689,53 @@ const LanguageTranslation = ({
               </Text>
               <Text style={{ fontSize: 12 }}> 5MB</Text>
             </View>
-            <View>
+            <View style={{ padding: 10 }}>
+              <Text style={{ marginTop: 8, fontWeight: "bold", fontSize: 18 }}>
+                Your Bill Amount
+              </Text>
+              <Text style={{ marginTop: 8 }}>
+                Translation Charge:{" "}
+                {translationrate.data
+                  ? translationrate.data.Rate * values.Files.length
+                  : 0}{" "}
+                AED
+              </Text>
+              <Text style={{ marginTop: 8 }}>
+                Service Charge:{" "}
+                {translationrate.data ? translationrate.data.ServiceCharge : 0}{" "}
+                AED
+              </Text>
+              {translationrate.data && values.LegalStamp == true && (
+                <Text style={{ marginTop: 8 }}>
+                  Legal Stamp Charge: {translationrate.data.LeagualStampRate}{" "}
+                  AED
+                </Text>
+              )}
+              {translationrate.data &&
+                values.LegalStamp == true &&
+                values.PickUpandDropOption == "Through Courier" && (
+                  <Text style={{ marginTop: 8 }}>
+                    Courier Charge : {translationrate.data.CourierCharge} AED
+                  </Text>
+                )}
               <Text
                 style={{
-                  textAlign: "center",
                   color: "red",
-                  padding: 10,
+                  marginTop: 10,
                   fontWeight: "bold"
                 }}
               >
-                Rate :{" "}
+                Your Total Bill Amount :{" "}
                 {translationrate.data
                   ? values.LegalStamp == true
                     ? values.PickUpandDropOption == "Through Courier"
-                      ? translationrate.data.Rate * values.Files.length + 15 + 5
-                      : translationrate.data.Rate * values.Files.length + 15
+                      ? translationrate.data.Rate * values.Files.length +
+                        translationrate.data.LeagualStampRate +
+                        translationrate.data.CourierCharge +
+                        translationrate.data.ServiceCharge
+                      : translationrate.data.Rate * values.Files.length +
+                        translationrate.data.LeagualStampRate +
+                        translationrate.data.ServiceCharge
                     : translationrate.data.Rate * values.Files.length
                   : 0}{" "}
                 AED
@@ -744,14 +776,24 @@ const LanguageTranslation = ({
                 </Body>
               </ListItem>
             </View>
-            <Button
-              style={{ backgroundColor: "#183E61", marginBottom: 50 }}
-              full
-              rounded
-              onPress={handleSubmit}
-            >
-              <Text> Pay Now </Text>
-            </Button>
+            {values.AgreeTerms ? (
+              <Button
+                style={{ backgroundColor: "#183E61", marginBottom: 50 }}
+                full
+                rounded
+                onPress={handleSubmit}
+              >
+                <Text> Pay Now </Text>
+              </Button>
+            ) : (
+              <Button
+                style={{ backgroundColor: "#818182", marginBottom: 50 }}
+                full
+                rounded
+              >
+                <Text> Pay Now </Text>
+              </Button>
+            )}
           </Form>
         </ScrollView>
       </Content>
@@ -820,12 +862,21 @@ export default withFormik({
     const { translationrate, setRequestedValue } = props;
     const token = props.token.token;
     const docRate = translationrate.data ? translationrate.data.Rate : 0;
+    const courierCharge = translationrate.data
+      ? translationrate.data.CourierCharge
+      : 0;
+    const leagualStampRate = translationrate.data
+      ? translationrate.data.LeagualStampRate
+      : 0;
+    const serviceCharge = translationrate.data
+      ? translationrate.data.ServiceCharge
+      : 0;
     const totalDocRate = docRate * values.Files.length;
     var Rate =
       values.LegalStamp == true
         ? values.PickUpandDropOption == "Through Courier"
-          ? totalDocRate + 15 + 5
-          : totalDocRate + 15
+          ? totalDocRate + leagualStampRate + courierCharge + serviceCharge
+          : totalDocRate + leagualStampRate + serviceCharge
         : totalDocRate;
     setRequestedValue(Rate);
     const address = `${values.Address1},${values.Street} ${values.City}, ${
@@ -849,12 +900,12 @@ export default withFormik({
     );
     data.append("LegalStamp", values.LegalStamp);
     values.Files.map((item, index) => data.append("Files[]", item, item.name));
-
     // data.append("Files", values.Files);
     data.append("Rate", Rate);
-    data.append("ServiceId", 1);
+    data.append("ServiceId", 7);
     data.append("ServiceName", "TRANSLATION SERVICE");
-
+    data.append("PickUpandDropOption", values.PickUpandDropOption);
+    data.append("DocumentCount", values.Files.length);
     return values.doclangTransCreate({ data, token });
   }
 })(LanguageTranslation);

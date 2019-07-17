@@ -430,20 +430,44 @@ const DocumentAttestation = ({
                 </TouchableOpacity>
               </Body>
             </ListItem>
-            <View>
+            <View style={{ padding: 10 }}>
+              <Text style={{ marginTop: 8, fontWeight: "bold", fontSize: 18 }}>
+                Your Bill Amount
+              </Text>
+              <Text style={{ marginTop: 8 }}>
+                Attestation Charge:{" "}
+                {attestationrate.data ? attestationrate.data.Rate : 0} AED
+              </Text>
+              <Text style={{ marginTop: 8 }}>
+                Service Charge:{" "}
+                {attestationrate.data ? attestationrate.data.ServiceCharge : 0}{" "}
+                AED
+              </Text>
+              {attestationrate.data &&
+                values.PickUpandDropOption == "Through Courier" && (
+                  <Text style={{ marginTop: 8 }}>
+                    Courier Charge:{" "}
+                    {attestationrate.data
+                      ? attestationrate.data.CourierCharge
+                      : 0}{" "}
+                    AED
+                  </Text>
+                )}
               <Text
                 style={{
-                  textAlign: "center",
                   color: "red",
-                  padding: 10,
+                  marginTop: 10,
                   fontWeight: "bold"
                 }}
               >
-                Rate :{" "}
+                Your Total Bill Amount :{" "}
                 {attestationrate.data
                   ? values.PickUpandDropOption == "Through Courier"
-                    ? attestationrate.data.Rate + 10
-                    : attestationrate.data.Rate
+                    ? attestationrate.data.Rate +
+                      attestationrate.data.CourierCharge +
+                      attestationrate.data.ServiceCharge
+                    : attestationrate.data.Rate +
+                      attestationrate.data.ServiceCharge
                   : 0}{" "}
                 AED
               </Text>
@@ -484,14 +508,24 @@ const DocumentAttestation = ({
                 </Body>
               </ListItem>
             </View>
-            <Button
-              style={{ backgroundColor: "#183E61", marginBottom: 50 }}
-              full
-              rounded
-              onPress={handleSubmit}
-            >
-              <Text> Pay Now </Text>
-            </Button>
+            {values.AgreeTerms ? (
+              <Button
+                style={{ backgroundColor: "#183E61", marginBottom: 50 }}
+                full
+                rounded
+                onPress={handleSubmit}
+              >
+                <Text> Pay Now </Text>
+              </Button>
+            ) : (
+              <Button
+                style={{ backgroundColor: "#818182", marginBottom: 50 }}
+                full
+                rounded
+              >
+                <Text> Pay Now </Text>
+              </Button>
+            )}
           </Form>
         </ScrollView>
       </Content>
@@ -560,8 +594,10 @@ export default withFormik({
     } ${values.AddressCountry} ZIP- ${values.Zip}`;
     var Rate = attestationrate.data
       ? values.PickUpandDropOption == "Through Courier"
-        ? attestationrate.data.Rate + 10
-        : attestationrate.data.Rate
+        ? attestationrate.data.Rate +
+          attestationrate.data.CourierCharge +
+          attestationrate.data.ServiceCharge
+        : attestationrate.data.Rate + attestationrate.data.ServiceCharge
       : 0;
     const ServiceName = "ATTESTATION SERVICE";
     setRequestedValue(Rate);
