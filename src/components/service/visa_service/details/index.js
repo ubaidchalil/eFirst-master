@@ -79,7 +79,7 @@ class _Container extends Component {
   }
   saveData = () => {
     const { token } = this.props.token;
-    var _data = this.props.navigation.state.params.data;
+    var _data = {};
     var pageData = this.props.navigation.state.params.pageData;
     var docsAndPayment = this.props.navigation.state.params.docsAndPayment;
     var Documents = [];
@@ -102,15 +102,13 @@ class _Container extends Component {
     pageData.push(docsAndPayment);
     _data.PageData = pageData;
 
-    const serviceData = JSON.stringify(_data);
-
     const docItem = this.props.navigation.state.params.docItem;
-    let data = new FormData();
-    data.append("ServiceData", serviceData);
-    docItem.map((item, index) => data.append("Files[]", item, item.name));
-    console.log("data", data);
-    this.setState({ Requested: true });
-    return this.props.visaServiceCreate({ data, token });
+
+    this.props.navigation.navigate("VisaServiceHome", {
+      data: _data,
+      docItem
+    });
+
   };
 
   renderPageData = () => {
@@ -275,43 +273,7 @@ class _Container extends Component {
           {this.renderPriceDts()}
 
           {this.renderTotalPrice()}
-          <View>
-            <ListItem style={{ borderBottomWidth: 0 }}>
-              <CheckBox
-                checked={this.state.AgreeTerms}
-                onPress={() => {
-                  this.setState(previousState => {
-                    AgreeTerms: !previousState.AgreeTerms;
-                  });
-                }}
-              />
-              <Body>
-                <View style={{ flexDirection: "row" }}>
-                  <Text> I have read and agree to the </Text>
-
-                  <TouchableOpacity onPress={() => this.setShowTerms(true)}>
-                    <Text
-                      style={{
-                        textDecorationLine: "underline",
-                        marginLeft: -11
-                      }}
-                    >
-                      Terms and
-                    </Text>
-                  </TouchableOpacity>
-                </View>
-                <TouchableOpacity onPress={() => this.setShowTerms(true)}>
-                  <Text
-                    style={{
-                      textDecorationLine: "underline"
-                    }}
-                  >
-                    Conditions of Service
-                  </Text>
-                </TouchableOpacity>
-              </Body>
-            </ListItem>
-          </View>
+          
           <Button
             style={{
               backgroundColor: "#183E61",
@@ -325,7 +287,7 @@ class _Container extends Component {
               this.saveData();
             }}
           >
-            <Text>Pay Now</Text>
+            <Text>Next</Text>
           </Button>
         </Content>
         {error && <AlertView type="error" />}

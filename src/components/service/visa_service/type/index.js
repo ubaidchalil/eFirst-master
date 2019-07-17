@@ -12,6 +12,7 @@ import {
   Button
 } from "native-base";
 import MyHeader from "../../../../Header";
+import visa_options from "./data";
 
 class _Container extends Component {
   constructor(props) {
@@ -47,8 +48,8 @@ class _Container extends Component {
   };
 
   componentDidMount = () => {
-    const options = this.props.navigation.state.params.options;
-    const pageData = this.props.navigation.state.params.pageData;
+    const options = this.props.navigation.state.params ? this.props.navigation.state.params.options : visa_options;
+    const pageData = this.props.navigation.state.params ? this.props.navigation.state.params.pageData : [];
     this.setState({ options: options });
     this.setState({ pageData: pageData });
     this.setState({ _prev_options: options });
@@ -88,13 +89,10 @@ class _Container extends Component {
         this.props.navigation.push("VisaServceType", {
           options: this.state.options[option],
           pageData: pageData,
-          data: this.props.navigation.state.params.data
         });
       else {
-        var data = this.props.navigation.state.params.data;
         this.props.navigation.navigate("VisaServiceDocs", {
           details: this.state.options[option],
-          data: data,
           pageData: pageData
         });
       }

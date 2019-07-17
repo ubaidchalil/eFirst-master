@@ -7,9 +7,6 @@ import VisaServiceDetails from "../components/service/visa_service/details";
 
 export default (VisaServiceStack = createStackNavigator(
   {
-    VisaServiceHome: {
-      screen: VisaServiceHome
-    },
     VisaServceType: {
       screen: VisaServceType
     },
@@ -18,7 +15,10 @@ export default (VisaServiceStack = createStackNavigator(
     },
     VisaServiceDetails: {
       screen: VisaServiceDetails
-    }
+    },
+    VisaServiceHome: {
+      screen: VisaServiceHome
+    },
   },
   {
     defaultNavigationOptions: {

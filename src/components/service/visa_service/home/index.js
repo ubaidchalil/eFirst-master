@@ -7,7 +7,8 @@ import {
   attestationPrice,
   docAttestationCreate,
   servicesData,
-  updAttestationSRAmt
+  updAttestationSRAmt,
+  visaServiceCreate
 } from "../../action";
 import Loader from "../../../styled/loader";
 import { View } from "react-native";
@@ -127,7 +128,8 @@ const mapDispatchToProps = dispatch => ({
   getcertificateType: payload => dispatch(getcertificateType(payload)),
   docAttestationCreate: payload => dispatch(docAttestationCreate(payload)),
   servicesData: payload => dispatch(servicesData(payload)),
-  updAttestationSRAmt: payload => dispatch(updAttestationSRAmt(payload))
+  updAttestationSRAmt: payload => dispatch(updAttestationSRAmt(payload)),
+  visaServiceCreate: payload => dispatch(updAttestationSRAmt(payload)),
 });
 
 export default connect(

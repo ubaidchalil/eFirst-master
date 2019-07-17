@@ -39,10 +39,7 @@ class _Container extends Component {
   }
 
   componentDidMount = () => {
-    console.log(
-      "result = > data : ",
-      JSON.stringify(this.props.navigation.state.params.data)
-    );
+    
   };
   componentDidUpdate() {}
   showToast = text => {
@@ -136,7 +133,6 @@ class _Container extends Component {
   };
 
   goToDetails = () => {
-    var data = this.props.navigation.state.params.data;
     var pageData = this.props.navigation.state.params.pageData;
     var price_details = this.props.navigation.state.params.details.PriceDetails;
 
@@ -183,7 +179,6 @@ class _Container extends Component {
     docsAndPayment.OriginalDocumentRequired = this.props.navigation.state.params.details.OriginalDocumentRequired;
 
     this.props.navigation.navigate("VisaServiceDetails", {
-      data: data,
       pageData: pageData,
       docs: this.props.navigation.state.params.details.docs,
       docsAttached: this.state.docsAttached,

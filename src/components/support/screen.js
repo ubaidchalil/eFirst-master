@@ -32,15 +32,21 @@ const renderList = () => {
       <View key={index} style={styles.item_border}>
         <View style={{ flexDirection: "row" }}>
           <Text style={styles.label}>Phone </Text>
-          <Text style={styles.value}> {datum.phone} </Text>
+        </View>
+        <View>
+          <Text style={styles.value}>{datum.phone} </Text>
         </View>
         <View style={{ flexDirection: "row" }}>
-          <Text style={styles.label}> Email </Text>
-          <Text style={styles.value}> {datum.email} </Text>
+          <Text style={styles.label}>Email </Text>
+        </View>
+        <View>
+          <Text style={styles.value}>{datum.email} </Text>
         </View>
         <View style={{ flexDirection: "row" }}>
-          <Text style={styles.label}> Address </Text>
-          <Text style={styles.value}> {datum.address} </Text>
+          <Text style={styles.label}>Address </Text>
+        </View>
+        <View>
+          <Text style={styles.value}>{datum.address} </Text>
         </View>
       </View>
     );
@@ -241,6 +247,6 @@ const styles = {
     borderColor: "#ECF0F1",
     padding: 10
   },
-  label: { fontSize: 13 },
-  value: { color: "#A6ACAF", fontSize: 13 }
+  label: { fontSize: 13, paddingTop:5 },
+  value: { color: "#A6ACAF", fontSize: 13, paddingTop:5, paddingLeft:5 }
 };

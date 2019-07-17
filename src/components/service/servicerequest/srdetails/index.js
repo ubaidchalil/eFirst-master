@@ -115,7 +115,9 @@ class SRInfo extends Component {
             )}
             <View style={styles.item_border}>
               <Text style={styles.label}>Address : </Text>
-              <Text style={styles.value}> {Address} </Text>
+              <View style={{flex:1}} >
+                <Text style={styles.value}> {Address} </Text>
+              </View>
             </View>
             {ServiceName === "ATTESTATION SERVICE" && (
               <View style={styles.item_border}>
@@ -270,7 +272,7 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   label: { fontSize: 16 },
-  value: { color: "#A6ACAF", fontSize: 16 }
+  value: { color: "#A6ACAF", fontSize: 16, flexGrow: 1 }
 });
 
 const mapStateToProps = ({

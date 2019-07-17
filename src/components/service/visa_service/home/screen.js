@@ -17,16 +17,18 @@ import {
   Left,
   Right,
   Body,
-  Title
+  CheckBox
 } from "native-base";
 import { NavigationActions } from "react-navigation";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../../constants";
 import MyHeader from "../../../../Header";
-import visa_options from "./data";
 import DateTimePicker from "react-native-modal-datetime-picker";
 import { nationalities } from "./NationalityPicker";
+import Modal from "react-native-modal";
+import TermsandConditon from "../../../termsandcondition";
+
 const styles = {
   item_margin: {
     marginTop: 5
@@ -50,6 +52,7 @@ const DocumentAttestation = ({
   attestationrate,
   token,
   attestationPrice,
+  visaServiceCreate,
   navigation,
   state
 }) => {
@@ -61,7 +64,7 @@ const DocumentAttestation = ({
   };
 
   componentDidUpdate = () => {
-    console.log(attestationPrice);
+    
   };
 
   dateFormat = date => {
@@ -70,17 +73,6 @@ const DocumentAttestation = ({
     );
   };
 
-  const attestationRateByCountryandDCType = (CountryId, CertificateType) => {
-    console.log("CountryId", CountryId);
-    console.log("CertificateType", CertificateType);
-    if (CountryId && CertificateType) {
-      attestationPrice({
-        CountryId: CountryId,
-        CertificateType: CertificateType,
-        token: token.token
-      });
-    }
-  };
 
   navigateToScreen = route => {
     const navigateAction = NavigationActions.navigate({
@@ -95,6 +87,9 @@ const DocumentAttestation = ({
     return dt;
   };
 
+  setShowTerms = state => {
+    setFieldValue("ShowTerms", state);
+  };
   return (
     <Container>
       <MyHeader navigation={navigation} header="Visa Service" />
@@ -115,6 +110,10 @@ const DocumentAttestation = ({
         <Right />
       </View>
       <Content style={{ padding: 10 }}>
+      
+          <Modal isVisible={values.ShowTerms}>
+            <TermsandConditon setShowTerms={this.setShowTerms(false)} />
+          </Modal>
         <ScrollView>
           <Form>
             <Item>
@@ -377,13 +376,15 @@ const DocumentAttestation = ({
                 applying for any Visa
               </Text>
             </View>
+            
+          
             <Button
               style={{ backgroundColor: "#183E61", marginBottom: 50 }}
               full
               rounded
               onPress={handleSubmit}
             >
-              <Text> Next </Text>
+              <Text> Pay Now </Text>
             </Button>
           </Form>
         </ScrollView>
@@ -425,6 +426,8 @@ export default withFormik({
     Nationality: "",
     PassportExiryDate: "",
     ShowInfo: false,
+    AgreeTerms : false,
+    ShowTerms: false,
     docAttestationCreate
   }),
   validateOnChange: false,
@@ -456,25 +459,32 @@ export default withFormik({
   handleSubmit: (values, { props }) => {
     const { navigation } = props;
     const token = props.token.token;
-    const data = {
-      CustomerName: values.CustomerName,
-      Email: values.Email,
-      PersonalPhone: values.PersonalPhone,
-      OfficePhone: values.OfficePhone,
-      Address: values.Address1,
-      Street: values.Street,
-      City: values.City,
-      Zip: values.Zip,
-      AddressCountry: values.AddressCountry,
-      AddressState: values.SelectedState,
-      Nationality: values.Nationality,
-      PassportExiryDate: values.PassportExiryDate
-    };
+    const data = navigation.state.params.data;
+    data.CustomerName = values.CustomerName;
+    data.Email = values.Email;
+    data.PersonalPhone = values.PersonalPhone;
+    data.OfficePhone = values.OfficePhone;
+    data.Address = values.Address1;
+    data.Street = values.Street;
+    data.City = values.City;
+    data.Zip = values.Zip;
+    data.AddressCountry = values.AddressCountry;
+    data.AddressState = values.SelectedState;
+    data.Nationality = values.Nationality;
+    data.PassportExiryDate = values.PassportExiryDate;
+
     console.log("JSON", "result = > " + JSON.stringify(data));
     navigation.navigate("VisaServceType", {
-      options: visa_options,
-      data: data,
-      pageData: []
+      data: data
     });
+    
+    const serviceData = JSON.stringify(data);
+    const docItem = navigation.state.params.docItem;
+
+    let _data = new FormData();
+    _data.append("ServiceData", serviceData);
+    docItem.map((item, index) => data.append("Files[]", item, item.name));
+    console.log("data", _data);
+  //  this.props.visaServiceCreate({ _data, token });
   }
 })(DocumentAttestation);
