@@ -15,8 +15,8 @@ class Container extends Component {
   componentDidMount = () => {
     const srid = this.props.navigation.state.params.srid;
     console.log("srid", srid);
-    this.props.activateSR({ srid: srid, token: this.props.token.token });
-    this.setState({ Requested: true });
+  //  this.props.activateSR({ srid: srid, token: this.props.token.token });
+  //  this.setState({ Requested: true });
   };
 
   componentDidUpdate() {
@@ -55,7 +55,7 @@ class Container extends Component {
         <Loader loading={loading} />
         <WebView
           source={{
-            uri: `https://staging.efirst.ae/MobilePayment/Index?srid=${srid}&userId=${userid}`
+            uri: `https://efirstweb-stagingweb.azurewebsites.net/MobilePayment/Index?srid=${srid}&userId=${userid}`
           }}
           userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
           style={{ marginTop: 20 }}

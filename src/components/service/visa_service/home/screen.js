@@ -521,7 +521,7 @@ export default withFormik({
     let _data = new FormData();
     _data.append("ServiceData", serviceData);
     docItem.map((item, index) => _data.append("Files[]", item, item.name));
-    console.log("data==>", _data);
+    console.log("data==>", JSON.stringify(_data));
     return props.visaServiceCreate({ _data, token });
   }
 })(DocumentAttestation);
