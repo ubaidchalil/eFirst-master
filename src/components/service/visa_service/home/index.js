@@ -18,59 +18,56 @@ class Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showPopUp: false
+      showPopUp: false,
+      ShowTerms: false,
+      totalBillAmt: 0,
+      UpdatedSRAmount: false,
+      Requested: false
     };
   }
-
+  setShowTerms = state => {
+    this.setState({ ShowTerms: state });
+  };
+  updateTotalAmount = totalBillAmt =>
+    this.setState({ totalBillAmt, Requested: true });
   componentDidMount = () => {
     this.props.getCountries(this.props.token.token);
     this.props.getcertificateType(this.props.token.token);
   };
-  // componentDidUpdate() {
-  //   const {
-  //     countries,
-  //     certificatetype,
-  //     attestationrate,
-  //     documentattestation,
-  //     profile
-  //   } = this.props;
-  //   const loading =
-  //     documentattestation.loading ||
-  //     countries.loading ||
-  //     certificatetype.loading ||
-  //     attestationrate.loading;
-
-  //   console.log("Doc Attest Upd: result = >", JSON.stringify(this.props.documentattestation));
-  //   if (!this.props.documentattestation.loading) {
-  //     if (this.props.documentattestation.success) {
-  //       const { token } = this.props.token;
-  //       const statusId = null;
-  //       this.props.servicesData({ statusId, token });
-  //       console.log("result = > "+ JSON.stringify(this.props.documentattestation.data));
-  //   //    alert(this.props.documentattestation.data.SRID);
-  //       var SRID = this.props.documentattestation.data.SRID;
-  //       if(!this.props.docSRAmUpdation.loading)
-  //       {
-  //         if(!this.props.docSRAmUpdation.success && !this.props.docSRAmUpdation.error)
-  //         {
-  //           console.log("Requesting UpdSRAmt","result = > "+ JSON.stringify(this.props.docSRAmUpdation));
-  //           this.props.updAttestationSRAmt({token: this.props.token.token, SRID: SRID, amount: 100});
-  //         }
-  //         else{
-  //           console.log("Request Complete","result = > "+ JSON.stringify(this.props.docSRAmUpdation));
-  //           if(this.props.docSRAmUpdation.success)
-  //             this.props.navigation.navigate("PayfortPay",{srid: SRID, userid: "4"});
-
-  //         }
-
-  //       }
-
-  //    //   if(this.props.docSRAmUpdation.success)
-  //    //     this.props.navigation.navigate("PayfortPay");
-  //       //this.props.navigation.navigate("MyRequests");
-  //     }
-  //   }
-  // }
+  componentDidUpdate() {
+    console.log(
+      "Doc Attest Upd: result = >",
+      JSON.stringify(this.props.visaservice)
+    );
+    if (
+      !this.props.visaservice.loading &&
+      !this.props.visaservice.error &&
+      this.props.visaservice.success &&
+      this.state.Requested
+    ) {
+      this.setState({ Requested: false, UpdatedSRAmount: true });
+      var SRID = this.props.visaservice.data.Result.SRID;
+      this.props.updAttestationSRAmt({
+        token: this.props.token.token,
+        SRID: SRID,
+        amount: this.state.totalBillAmt
+      });
+    }
+    if (
+      !this.props.docSRAmUpdation.loading &&
+      !this.props.docSRAmUpdation.error &&
+      this.props.docSRAmUpdation.success &&
+      this.state.UpdatedSRAmount
+    ) {
+      this.setState({ UpdatedSRAmount: false });
+      const { UserId } = this.props.profile.data.userdetail;
+      var SRID = this.props.visaservice.data.Result.SRID;
+      this.props.navigation.navigate("PayfortPay", {
+        srid: SRID,
+        userid: UserId
+      });
+    }
+  }
   render = () => {
     const {
       countries,
@@ -96,7 +93,12 @@ class Container extends Component {
     return (
       <View style={{ flex: 1 }}>
         {/* <Loader loading={loading} /> */}
-        <DocumentAttestation {...this.props} state={this.state} />
+        <DocumentAttestation
+          setShowTerms={this.setShowTerms}
+          updateTotalAmount={this.updateTotalAmount}
+          {...this.props}
+          state={this.state}
+        />
         {error && <AlertView type="error" />}
         {success && <AlertView type="success" />}
       </View>
@@ -111,7 +113,8 @@ const mapStateToProps = ({
   docSRAmUpdation,
   profile,
   token,
-  srActivation
+  srActivation,
+  visaservice
 }) => ({
   countries,
   certificatetype,
@@ -120,7 +123,8 @@ const mapStateToProps = ({
   docSRAmUpdation,
   profile,
   token,
-  srActivation
+  srActivation,
+  visaservice
 });
 const mapDispatchToProps = dispatch => ({
   attestationPrice: payload => dispatch(attestationPrice(payload)),
@@ -129,7 +133,7 @@ const mapDispatchToProps = dispatch => ({
   docAttestationCreate: payload => dispatch(docAttestationCreate(payload)),
   servicesData: payload => dispatch(servicesData(payload)),
   updAttestationSRAmt: payload => dispatch(updAttestationSRAmt(payload)),
-  visaServiceCreate: payload => dispatch(updAttestationSRAmt(payload)),
+  visaServiceCreate: payload => dispatch(visaServiceCreate(payload))
 });
 
 export default connect(

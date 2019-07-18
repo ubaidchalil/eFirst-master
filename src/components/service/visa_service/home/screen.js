@@ -10,6 +10,7 @@ import {
   Icon,
   Radio,
   Text,
+  CheckBox,
   ListItem,
   Button,
   Textarea,
@@ -63,26 +64,10 @@ const DocumentAttestation = ({
     HideDateTimePicker();
   };
 
-  componentDidUpdate = () => {
-    console.log(attestationPrice);
-  };
-
   dateFormat = date => {
     return (
       date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()
     );
-  };
-
-  const attestationRateByCountryandDCType = (CountryId, CertificateType) => {
-    console.log("CountryId", CountryId);
-    console.log("CertificateType", CertificateType);
-    if (CountryId && CertificateType) {
-      attestationPrice({
-        CountryId: CountryId,
-        CertificateType: CertificateType,
-        token: token.token
-      });
-    }
   };
 
   navigateToScreen = route => {
@@ -121,10 +106,9 @@ const DocumentAttestation = ({
         <Right />
       </View>
       <Content style={{ padding: 10 }}>
-      
-          <Modal isVisible={values.ShowTerms}>
-            <TermsandConditon setShowTerms={this.setShowTerms(false)} />
-          </Modal>
+        <Modal isVisible={values.ShowTerms}>
+          <TermsandConditon setShowTerms={this.setShowTerms} />
+        </Modal>
         <ScrollView>
           <Form>
             <Item>
@@ -387,51 +371,61 @@ const DocumentAttestation = ({
                 applying for any Visa
               </Text>
             </View>
-            
-          <View>
-            <ListItem style={{ borderBottomWidth: 0 }}>
-              <CheckBox
-                checked={values.AgreeTerms}
-                onPress={() => {
-                  setFieldValue("AgreeTerms", !values.AgreeTerms)
-                }}
-              />
-              <Body>
-                <View style={{ flexDirection: "row" }}>
-                  <Text> I have read and agree to the </Text>
 
+            <View>
+              <ListItem style={{ borderBottomWidth: 0 }}>
+                <CheckBox
+                  checked={values.AgreeTerms}
+                  onPress={() => {
+                    setFieldValue("AgreeTerms", !values.AgreeTerms);
+                  }}
+                />
+                <Body>
+                  <View style={{ flexDirection: "row" }}>
+                    <Text> I have read and agree to the </Text>
+
+                    <TouchableOpacity onPress={() => this.setShowTerms(true)}>
+                      <Text
+                        style={{
+                          textDecorationLine: "underline",
+                          marginLeft: -11
+                        }}
+                      >
+                        Terms and
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
                   <TouchableOpacity onPress={() => this.setShowTerms(true)}>
                     <Text
                       style={{
-                        textDecorationLine: "underline",
-                        marginLeft: -11
+                        textDecorationLine: "underline"
                       }}
                     >
-                      Terms and
+                      Conditions of Service
                     </Text>
                   </TouchableOpacity>
-                </View>
-                <TouchableOpacity onPress={() => this.setShowTerms(true)}>
-                  <Text
-                    style={{
-                      textDecorationLine: "underline"
-                    }}
-                  >
-                    Conditions of Service
-                  </Text>
-                </TouchableOpacity>
-              </Body>
-            </ListItem>
-          </View>
-          
-            <Button
-              style={{ backgroundColor: "#183E61", marginBottom: 50 }}
-              full
-              rounded
-              onPress={handleSubmit}
-            >
-              <Text> Pay Now </Text>
-            </Button>
+                </Body>
+              </ListItem>
+            </View>
+
+            {values.AgreeTerms ? (
+              <Button
+                style={{ backgroundColor: "#183E61", marginBottom: 50 }}
+                full
+                rounded
+                onPress={handleSubmit}
+              >
+                <Text> Pay Now </Text>
+              </Button>
+            ) : (
+              <Button
+                style={{ backgroundColor: "#818182", marginBottom: 50 }}
+                full
+                rounded
+              >
+                <Text> Pay Now </Text>
+              </Button>
+            )}
           </Form>
         </ScrollView>
 
@@ -472,7 +466,7 @@ export default withFormik({
     Nationality: "",
     PassportExiryDate: "",
     ShowInfo: false,
-    AgreeTerms : false,
+    AgreeTerms: false,
     ShowTerms: false,
     docAttestationCreate
   }),
@@ -503,7 +497,7 @@ export default withFormik({
   }),
 
   handleSubmit: (values, { props }) => {
-    const { navigation } = props;
+    const { navigation, updateTotalAmount } = props;
     const token = props.token.token;
     const data = navigation.state.params.data;
     data.CustomerName = values.CustomerName;
@@ -520,17 +514,14 @@ export default withFormik({
     data.PassportExiryDate = values.PassportExiryDate;
 
     console.log("JSON", "result = > " + JSON.stringify(data));
-    navigation.navigate("VisaServceType", {
-      data: data
-    });
-    
+    updateTotalAmount(data.TotalBillAmount);
     const serviceData = JSON.stringify(data);
     const docItem = navigation.state.params.docItem;
 
     let _data = new FormData();
     _data.append("ServiceData", serviceData);
-    docItem.map((item, index) => data.append("Files[]", item, item.name));
-    console.log("data", _data);
-  //  this.props.visaServiceCreate({ _data, token });
+    docItem.map((item, index) => _data.append("Files[]", item, item.name));
+    console.log("data==>", _data);
+    return props.visaServiceCreate({ _data, token });
   }
 })(DocumentAttestation);

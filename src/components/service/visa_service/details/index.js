@@ -40,43 +40,7 @@ class _Container extends Component {
     );
     this.setState({ totalBillAmt: total });
   };
-  setShowTerms = state => {
-    this.setState({ ShowTerms: state });
-  };
-  componentDidUpdate() {
-    console.log(
-      "Doc Attest Upd: result = >",
-      JSON.stringify(this.props.visaservice)
-    );
-    if (
-      !this.props.visaservice.loading &&
-      !this.props.visaservice.error &&
-      this.props.visaservice.success &&
-      this.state.Requested
-    ) {
-      this.setState({ Requested: false, UpdatedSRAmount: true });
-      var SRID = this.props.visaservice.data.Result.SRID;
-      this.props.updAttestationSRAmt({
-        token: this.props.token.token,
-        SRID: SRID,
-        amount: this.state.totalBillAmt
-      });
-    }
-    if (
-      !this.props.docSRAmUpdation.loading &&
-      !this.props.docSRAmUpdation.error &&
-      this.props.docSRAmUpdation.success &&
-      this.state.UpdatedSRAmount
-    ) {
-      this.setState({ UpdatedSRAmount: false });
-      const { UserId } = this.props.profile.data.userdetail;
-      var SRID = this.props.visaservice.data.Result.SRID;
-      this.props.navigation.navigate("PayfortPay", {
-        srid: SRID,
-        userid: UserId
-      });
-    }
-  }
+
   saveData = () => {
     const { token } = this.props.token;
     var _data = {};
@@ -108,7 +72,6 @@ class _Container extends Component {
       data: _data,
       docItem
     });
-
   };
 
   renderPageData = () => {
@@ -273,7 +236,7 @@ class _Container extends Component {
           {this.renderPriceDts()}
 
           {this.renderTotalPrice()}
-          
+
           <Button
             style={{
               backgroundColor: "#183E61",

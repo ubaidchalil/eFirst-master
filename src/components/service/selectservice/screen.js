@@ -33,34 +33,49 @@ export default ({ navigation }) => {
           <View style={styles.title}>
             <H3 style={styles.title_text}>ATTESTATION SERVICE</H3>
           </View>
-          
-            <TouchableOpacity style={styles.footer}
-              onPress={() => navigation.navigate("DocumentAttestation")}
-            >
-              <Text style={styles.footer_text}>Apply Now</Text>
-            </TouchableOpacity>
+          <View style={styles.body}>
+            <Text style={styles.body_text}>
+              Get your certificates attested as legally required
+            </Text>
+          </View>
+          <TouchableOpacity
+            style={styles.footer}
+            onPress={() => navigation.navigate("DocumentAttestation")}
+          >
+            <Text style={styles.footer_text}>Apply Now</Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.main}>
           <View style={styles.title}>
             <H3 style={styles.title_text}>TRANSLATION SERVICE</H3>
           </View>
-          
-            <TouchableOpacity style={styles.footer}
-              onPress={() => navigation.navigate("LanguageTranslation")}
-            >
-              <Text style={styles.footer_text}>Apply Now</Text>
-            </TouchableOpacity>
+          <View style={styles.body}>
+            <Text style={styles.body_text}>
+              Get your documents translated as legally required
+            </Text>
+          </View>
+          <TouchableOpacity
+            style={styles.footer}
+            onPress={() => navigation.navigate("LanguageTranslation")}
+          >
+            <Text style={styles.footer_text}>Apply Now</Text>
+          </TouchableOpacity>
         </View>
-        <View style={styles.main}>
+        <View style={[styles.main, { marginBottom: 20 }]}>
           <View style={styles.title}>
             <H3 style={styles.title_text}>VISA SERVICE</H3>
           </View>
-          
-            <TouchableOpacity style={styles.footer}
-              onPress={() => navigation.navigate("VisaService")}
-            >
-              <Text style={styles.footer_text}>Apply Now</Text>
-            </TouchableOpacity>
+          <View style={styles.body}>
+            <Text style={styles.body_text}>
+              Apply for New VISA, renewals & cancellations
+            </Text>
+          </View>
+          <TouchableOpacity
+            style={styles.footer}
+            onPress={() => navigation.navigate("VisaService")}
+          >
+            <Text style={styles.footer_text}>Apply Now</Text>
+          </TouchableOpacity>
         </View>
       </Content>
     </Container>
