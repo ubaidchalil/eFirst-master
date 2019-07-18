@@ -9,7 +9,7 @@ import Loader from "../../styled/loader";
 class Container extends Component {
   constructor(props) {
     super(props);
-    this.state = { token: "", Requested: false };
+    this.state = { token: "", Requested: false, showLoader: true };
   }
 
   componentDidMount = () => {
@@ -52,8 +52,9 @@ class Container extends Component {
     const userid = this.props.navigation.state.params.userid;
     return (
       <View style={{ flex: 1 }}>
-        <Loader loading={loading} />
+        <Loader loading={loading || this.state.showLoader} />
         <WebView
+          onLoad={() => this.setState({ showLoader: false })}
           source={{
             uri: `https://efirstweb-stagingweb.azurewebsites.net/MobilePayment/Index?srid=${srid}&userId=${userid}`
           }}
