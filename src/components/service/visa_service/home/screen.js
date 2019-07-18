@@ -17,7 +17,7 @@ import {
   Left,
   Right,
   Body,
-  CheckBox
+  Title
 } from "native-base";
 import { NavigationActions } from "react-navigation";
 import { withFormik } from "formik";
@@ -64,7 +64,7 @@ const DocumentAttestation = ({
   };
 
   componentDidUpdate = () => {
-    
+    console.log(attestationPrice);
   };
 
   dateFormat = date => {
@@ -73,6 +73,17 @@ const DocumentAttestation = ({
     );
   };
 
+  const attestationRateByCountryandDCType = (CountryId, CertificateType) => {
+    console.log("CountryId", CountryId);
+    console.log("CertificateType", CertificateType);
+    if (CountryId && CertificateType) {
+      attestationPrice({
+        CountryId: CountryId,
+        CertificateType: CertificateType,
+        token: token.token
+      });
+    }
+  };
 
   navigateToScreen = route => {
     const navigateAction = NavigationActions.navigate({
@@ -377,6 +388,41 @@ const DocumentAttestation = ({
               </Text>
             </View>
             
+          <View>
+            <ListItem style={{ borderBottomWidth: 0 }}>
+              <CheckBox
+                checked={values.AgreeTerms}
+                onPress={() => {
+                  setFieldValue("AgreeTerms", !values.AgreeTerms)
+                }}
+              />
+              <Body>
+                <View style={{ flexDirection: "row" }}>
+                  <Text> I have read and agree to the </Text>
+
+                  <TouchableOpacity onPress={() => this.setShowTerms(true)}>
+                    <Text
+                      style={{
+                        textDecorationLine: "underline",
+                        marginLeft: -11
+                      }}
+                    >
+                      Terms and
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+                <TouchableOpacity onPress={() => this.setShowTerms(true)}>
+                  <Text
+                    style={{
+                      textDecorationLine: "underline"
+                    }}
+                  >
+                    Conditions of Service
+                  </Text>
+                </TouchableOpacity>
+              </Body>
+            </ListItem>
+          </View>
           
             <Button
               style={{ backgroundColor: "#183E61", marginBottom: 50 }}
