@@ -9,11 +9,13 @@ import Loader from "../../styled/loader";
 class Container extends Component {
   constructor(props) {
     super(props);
-<<<<<<< HEAD
-    this.state = { token: "", Requested: false, showWeb: true };
-=======
-    this.state = { token: "", Requested: false, showLoader: true };
->>>>>>> faeecafa78cad3e57f5dd10ad5ea4b526f22016f
+
+    this.state = {
+      token: "",
+      Requested: false,
+      showLoader: true,
+      showWeb: true
+    };
   }
 
   componentDidMount = () => {
@@ -39,7 +41,7 @@ class Container extends Component {
   }
 
   _onNavigationStateChange = webViewState => {
-    console.log("urls =>",webViewState.url);
+    console.log("urls =>", webViewState.url);
     var str = webViewState.url;
     var n = str.indexOf("return3DsTnxStatus");
     const srid = this.props.navigation.state.params.srid;
@@ -56,22 +58,18 @@ class Container extends Component {
     const userid = this.props.navigation.state.params.userid;
     return (
       <View style={{ flex: 1 }}>
-<<<<<<< HEAD
-        <Loader loading={loading} />
-        {this.state.showWeb && (
-=======
         <Loader loading={loading || this.state.showLoader} />
->>>>>>> faeecafa78cad3e57f5dd10ad5ea4b526f22016f
-        <WebView
-          onLoad={() => this.setState({ showLoader: false })}
-          source={{
-            uri: `https://efirstweb-stagingweb.azurewebsites.net/MobilePayment/Index?srid=${srid}&userId=${userid}`
-          }}
-          userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
-          style={{ marginTop: 20 }}
-          onNavigationStateChange={this._onNavigationStateChange.bind(this)}
-        />
-      )}
+        {this.state.showWeb && (
+          <WebView
+            onLoad={() => this.setState({ showLoader: false })}
+            source={{
+              uri: `https://efirstweb-stagingweb.azurewebsites.net/MobilePayment/Index?srid=${srid}&userId=${userid}`
+            }}
+            userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+            style={{ marginTop: 20 }}
+            onNavigationStateChange={this._onNavigationStateChange.bind(this)}
+          />
+        )}
       </View>
     );
   };
