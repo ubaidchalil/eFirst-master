@@ -217,6 +217,7 @@ export const docAttestationCreate = payload => dispatch => {
 export const visaServiceCreate = payload => dispatch => {
   const { token, data } = payload;
   const body = data;
+  console.log("result = > ", body);
   return openAttestationFetcher(
     async () => {
       const result = await fetch(VISASERVICE_URL, {

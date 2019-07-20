@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { View, WebView } from "react-native";
+import { View, WebView, Platform } from "react-native";
 import { getUserInfo, activateSR, servicesData } from "../action";
 
 import { WEBSITE_URL } from "../../../constants";
@@ -9,7 +9,7 @@ import Loader from "../../styled/loader";
 class Container extends Component {
   constructor(props) {
     super(props);
-    this.state = { token: "", Requested: false };
+    this.state = { token: "", Requested: false, showWeb: true };
   }
 
   componentDidMount = () => {
@@ -35,13 +35,13 @@ class Container extends Component {
   }
 
   _onNavigationStateChange = webViewState => {
-    console.log(webViewState.url);
+    console.log("urls =>",webViewState.url);
     var str = webViewState.url;
-    var n = str.indexOf("Success");
+    var n = str.indexOf("return3DsTnxStatus");
     const srid = this.props.navigation.state.params.srid;
     if (n >= 0) {
       this.props.activateSR({ srid: srid, token: this.props.token.token });
-      this.setState({ Requested: true });
+      this.setState({ Requested: true, showWeb: false });
     }
     //    this.props.navigation.navigate("MyRequests");
   };
@@ -53,6 +53,7 @@ class Container extends Component {
     return (
       <View style={{ flex: 1 }}>
         <Loader loading={loading} />
+        {this.state.showWeb && (
         <WebView
           source={{
             uri: `https://efirstweb-stagingweb.azurewebsites.net/MobilePayment/Index?srid=${srid}&userId=${userid}`
@@ -61,6 +62,7 @@ class Container extends Component {
           style={{ marginTop: 20 }}
           onNavigationStateChange={this._onNavigationStateChange.bind(this)}
         />
+      )}
       </View>
     );
   };
