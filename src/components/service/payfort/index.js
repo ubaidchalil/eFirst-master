@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { View, WebView } from "react-native";
+import { View, WebView, Platform } from "react-native";
 import { getUserInfo, activateSR, servicesData } from "../action";
 
 import { WEBSITE_URL } from "../../../constants";
@@ -9,7 +9,11 @@ import Loader from "../../styled/loader";
 class Container extends Component {
   constructor(props) {
     super(props);
+<<<<<<< HEAD
+    this.state = { token: "", Requested: false, showWeb: true };
+=======
     this.state = { token: "", Requested: false, showLoader: true };
+>>>>>>> faeecafa78cad3e57f5dd10ad5ea4b526f22016f
   }
 
   componentDidMount = () => {
@@ -35,13 +39,13 @@ class Container extends Component {
   }
 
   _onNavigationStateChange = webViewState => {
-    console.log(webViewState.url);
+    console.log("urls =>",webViewState.url);
     var str = webViewState.url;
-    var n = str.indexOf("Success");
+    var n = str.indexOf("return3DsTnxStatus");
     const srid = this.props.navigation.state.params.srid;
     if (n >= 0) {
       this.props.activateSR({ srid: srid, token: this.props.token.token });
-      this.setState({ Requested: true });
+      this.setState({ Requested: true, showWeb: false });
     }
     //    this.props.navigation.navigate("MyRequests");
   };
@@ -52,7 +56,12 @@ class Container extends Component {
     const userid = this.props.navigation.state.params.userid;
     return (
       <View style={{ flex: 1 }}>
+<<<<<<< HEAD
+        <Loader loading={loading} />
+        {this.state.showWeb && (
+=======
         <Loader loading={loading || this.state.showLoader} />
+>>>>>>> faeecafa78cad3e57f5dd10ad5ea4b526f22016f
         <WebView
           onLoad={() => this.setState({ showLoader: false })}
           source={{
@@ -62,6 +71,7 @@ class Container extends Component {
           style={{ marginTop: 20 }}
           onNavigationStateChange={this._onNavigationStateChange.bind(this)}
         />
+      )}
       </View>
     );
   };

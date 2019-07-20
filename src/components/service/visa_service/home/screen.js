@@ -515,13 +515,149 @@ export default withFormik({
 
     console.log("JSON", "result = > " + JSON.stringify(data));
     updateTotalAmount(data.TotalBillAmount);
-    const serviceData = JSON.stringify(data);
+    const serviceData = `{
+      "TotalBillAmount": 1281,
+      "CurrencyUsed": "AED",
+      "MinimumServiceCharge": 105,
+      "PageData": [
+        {
+          "Text": "Select Service",
+          "Name": "SelectService1",
+          "Value": "New Visa",
+          "ControlType": "Radio"
+        },
+        {
+          "Text": "Service Type",
+          "Name": "ServiceType1",
+          "Value": "Entry Permit",
+          "ControlType": "Radio"
+        },
+        {
+          "Text": "Visa Type",
+          "Name": "VisaType1",
+          "Value": "Partner/Investor Visa",
+          "ControlType": "Radio"
+        },
+        {
+          "Text": "Location",
+          "Name": "Location1",
+          "Value": "Inside Country",
+          "ControlType": "Radio"
+        },
+        {
+          "Text": "Documents and Payment Collection",
+          "Name": "PIFV_New_EntryPermit_FamilyVisa_PartnerOrInvestor_HusbandOrWife_InsideCountry",
+          "ControlType": "AdditionalDetaiswls",
+          "Value": "",
+          "IsRequired": false,
+          "IsVisible": true,
+          "IBANNumber": {
+            "Text": "IBAN Number",
+            "Name": "IBANNumber",
+            "IsRequired": false,
+            "value": ""
+          },
+          "AdditionalNotes": {
+            "Text": "Additional Notes",
+            "Name": "AdditionalNotes",
+            "IsRequired": false,
+            "value": ""
+          },
+          "OriginalDocumentSubmissionType": {
+            "Text": "Original Document Submission Type",
+            "Name": "OriginalDocumentSubmissionType",
+            "IsRequired": true,
+            "Options": [
+              "Through Courier",
+              "Direct Submission at Office"
+            ],
+            "Value": "Direct Submission at Office",
+            "CourierCharge": 10
+          },
+          "PriceDetils": [
+            {
+              "Text": "Gov. fees",
+              "Value": 1176
+            },
+            {
+              "Text": "Service charge",
+              "Value": 105
+            }
+          ],
+          "Notes": {
+            "Text": "Notes",
+            "Name": "Notes",
+            "Options": [
+              "These visa are for those who have a valid Dubai trade license and has a share of more than AED 72000 duly signed by all the parties and attested in Notary Public of any emirates."
+            ]
+          },
+          "OriginalDocumentRequired": {
+            "Text": "Original Document Required",
+            "Name": "OriginalDocumentRequired",
+            "Options": [
+              "Sponsor\'s Emirates ID"
+            ]
+          },
+          "Documents": [
+            {
+              "Text": "Sponsor\'s emirates ID",
+              "Name": "Sponsor\'semiratesID",
+              "FileUploaded": "YES"
+            },
+            {
+              "Text": "License",
+              "Name": "License",
+              "FileUploaded": "NO"
+            },
+            {
+              "Text": "Immigration card",
+              "Name": "Immigrationcard",
+              "FileUploaded": "NO"
+            },
+            {
+              "Text": "Memorandum of association (MOA)",
+              "Name": "Memorandumofassociation(MOA)",
+              "FileUploaded": "NO"
+            },
+            {
+              "Text": "Passport (Front)",
+              "Name": "Passport(Front)",
+              "FileUploaded": "NO"
+            },
+            {
+              "Text": "Passport (Back)",
+              "Name": "Passport(Back)",
+              "FileUploaded": "NO"
+            },
+            {
+              "Text": "1 photo (White background)",
+              "Name": "1photo(Whitebackground)",
+              "FileUploaded": "NO"
+            }
+          ]
+        }
+      ],
+      "CustomerName": "Anees",
+      "Email": "thanikalanees@yahoo.com",
+      "PersonalPhone": "9686957085",
+      "OfficePhone": "11111",
+      "Address": "Indirangar, Bangalore",
+      "Street": "gfhgfh",
+      "City": "ugjh",
+      "Zip": "123",
+      "AddressCountry": "United Arab Emirates",
+      "AddressState": "Ajman",
+      "Nationality": "Afghanistan",
+      "PassportExiryDate": "19/1/2020"
+    }`;
+    //JSON.stringify(data);
     const docItem = navigation.state.params.docItem;
 
     let _data = new FormData();
+    docItem.map((item, index) => _data.append("Files[]", item));
     _data.append("ServiceData", serviceData);
-    docItem.map((item, index) => _data.append("Files[]", item, item.name));
+    console.log("result = > ", serviceData);
     console.log("data==>", JSON.stringify(_data));
-    return props.visaServiceCreate({ _data, token });
+    return props.visaServiceCreate({ data: _data, token });
   }
 })(DocumentAttestation);
