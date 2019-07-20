@@ -879,16 +879,16 @@ export default withFormik({
           : totalDocRate + leagualStampRate + serviceCharge
         : totalDocRate;
     setRequestedValue(Rate);
-    const address = `${values.Address1},${values.Street} ${values.City}, ${
-      values.SelectedState
-    } ${values.AddressCountry} ZIP- ${values.Zip}`;
+    // const address = `${values.Address1},${values.Street} ${values.City}, ${
+    //   values.SelectedState
+    // } ${values.AddressCountry} ZIP- ${values.Zip}`;
 
     let data = new FormData();
     data.append("CustomerName", values.CustomerName);
     data.append("Email", values.Email);
     data.append("PersonalPhone", values.PersonalPhone);
     data.append("OfficePhone", values.OfficePhone);
-    data.append("Address", address);
+    // data.append("Address", address);
     data.append("SelectedDocumentTypeId", values.SelectedDocumentTypeId);
     data.append(
       "SelectedFromDocumentLanguageId",
@@ -900,12 +900,18 @@ export default withFormik({
     );
     data.append("LegalStamp", values.LegalStamp);
     values.Files.map((item, index) => data.append("Files[]", item, item.name));
-    // data.append("Files", values.Files);
     data.append("Rate", Rate);
     data.append("ServiceId", 7);
     data.append("ServiceName", "TRANSLATION SERVICE");
     data.append("PickUpandDropOption", values.PickUpandDropOption);
     data.append("DocumentCount", values.Files.length);
+    data.append("AddressLine1", values.Address1);
+    data.append("POBox", values.Zip);
+    data.append("Country", values.AddressCountry);
+    data.append("StreetAddress", values.Street);
+    data.append("City", values.City);
+    data.append("State", values.SelectedState);
+
     return values.doclangTransCreate({ data, token });
   }
 })(LanguageTranslation);
