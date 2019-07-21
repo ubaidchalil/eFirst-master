@@ -9,18 +9,14 @@ import Loader from "../../styled/loader";
 class Container extends Component {
   constructor(props) {
     super(props);
-<<<<<<< HEAD
     this.state = { token: "", Requested: false, showWeb: true };
-=======
-    this.state = { token: "", Requested: false, showLoader: true };
->>>>>>> faeecafa78cad3e57f5dd10ad5ea4b526f22016f
   }
 
   componentDidMount = () => {
     const srid = this.props.navigation.state.params.srid;
     console.log("srid", srid);
-    //  this.props.activateSR({ srid: srid, token: this.props.token.token });
-    //  this.setState({ Requested: true });
+  //  this.props.activateSR({ srid: srid, token: this.props.token.token });
+  //  this.setState({ Requested: true });
   };
 
   componentDidUpdate() {
@@ -56,14 +52,9 @@ class Container extends Component {
     const userid = this.props.navigation.state.params.userid;
     return (
       <View style={{ flex: 1 }}>
-<<<<<<< HEAD
         <Loader loading={loading} />
         {this.state.showWeb && (
-=======
-        <Loader loading={loading || this.state.showLoader} />
->>>>>>> faeecafa78cad3e57f5dd10ad5ea4b526f22016f
         <WebView
-          onLoad={() => this.setState({ showLoader: false })}
           source={{
             uri: `https://efirstweb-stagingweb.azurewebsites.net/MobilePayment/Index?srid=${srid}&userId=${userid}`
           }}

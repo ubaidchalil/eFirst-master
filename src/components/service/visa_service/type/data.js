@@ -31,8 +31,7 @@ export default visa_options = {
             "License",
             "Immigration card",
             "Memorandum of association (MOA)",
-            "Passport (Front)",
-            "Passport (Back)",
+            "Passport",
             "1 photo (White background)"
           ],
           "PriceDetails": [
@@ -66,8 +65,7 @@ export default visa_options = {
             "License",
             "Immigration card",
             "Memorandum of association (MOA)",
-            "Passport (Front)",
-            "Passport (Back)",
+            "Passport",
             "1 photo (White background)"
           ],
           "PriceDetails": [
@@ -118,14 +116,12 @@ export default visa_options = {
             "Inside Country": {
               "docs": [
                 "Sponsor's emirates ID",
-                "Sponsor's Passport(Front)",
-                "Sponsor's Passport(Back)",
+                "Sponsor's Passport",
                 "Sponsor Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Memorandum of association (MOA)",
                 "Marriage certificate attested",
-                "Sponsored Passport(Front)",
-                "Sponsored Passport(Back)",
+                "Sponsored Passport",
                 "1 photo (White background)",
                 "Last 3 months bank statement (if available)"
               ],
@@ -162,14 +158,12 @@ export default visa_options = {
             "Outside Country": {
               "docs": [
                 "Sponsor's emirates ID",
-                "Sponsor's Passport(Front)",
-                "Sponsor's Passport(Back)",
+                "Sponsor's Passport",
                 "Sponsor Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Memorandum of association (MOA)",
                 "Marriage certificate attested",
-                "Sponsored Passport(Front)",
-                "Sponsored Passport(Back)",
+                "Sponsored Passport",
                 "1 photo (White background)",
                 "Last 3 months bank statement (if available)"
               ],
@@ -220,15 +214,13 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Death certiﬁcate attested (if mother or father is dead)",
@@ -264,15 +256,13 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Death certiﬁcate attested (if mother or father is dead)",
@@ -315,15 +305,13 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Death certiﬁcate attested (if mother or father is dead)",
@@ -359,15 +347,13 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Death certiﬁcate attested (if mother or father is dead)",
@@ -410,15 +396,13 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Death certiﬁcate attested (if mother or father is dead)",
@@ -454,15 +438,13 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Death certiﬁcate attested (if mother or father is dead)",
@@ -514,14 +496,12 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -554,14 +534,12 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -601,14 +579,12 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Undertaking Letter from sponsor showing that she is not married"
@@ -642,14 +618,12 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Undertaking Letter from sponsor showing that she is not married"
@@ -690,14 +664,12 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "College certiﬁcate or continuity certiﬁcate of uae"
@@ -731,14 +703,12 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "College certiﬁcate or continuity certiﬁcate of uae"
@@ -779,14 +749,12 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "College certiﬁcate or continuity certiﬁcate of uae"
@@ -820,14 +788,12 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "College certiﬁcate or continuity certiﬁcate of uae"
@@ -877,14 +843,12 @@ export default visa_options = {
             "Inside Country": {
               "docs": [
                 "Sponsor's emirates ID",
-                "Sponsor's Passport(Front)",
-                "Sponsor's Passport(Back)",
+                "Sponsor's Passport",
                 "Sponsor Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Labour contract",
                 "Marriage certificate attested",
-                "Sponsored Passport(Front)",
-                "Sponsored Passport(Back)",
+                "Sponsored Passport",
                 "1 photo (White background)",
                 "Last 3 months bank statement (if available)"
               ],
@@ -917,14 +881,12 @@ export default visa_options = {
             "Outside Country": {
               "docs": [
                 "Sponsor's emirates ID",
-                "Sponsor's Passport(Front)",
-                "Sponsor's Passport(Back)",
+                "Sponsor's Passport",
                 "Sponsor Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Labour contract",
                 "Marriage certificate attested",
-                "Sponsored Passport(Front)",
-                "Sponsored Passport(Back)",
+                "Sponsored Passport",
                 "1 photo (White background)",
                 "Last 3 months bank statement (if available)"
               ],
@@ -971,14 +933,12 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Death certiﬁcate attested (if mother or father is dead)",
@@ -1014,14 +974,12 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Death certiﬁcate attested (if mother or father is dead)",
@@ -1064,15 +1022,13 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Death certiﬁcate attested (if mother or father is dead)",
@@ -1108,15 +1064,13 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Death certiﬁcate attested (if mother or father is dead)",
@@ -1159,14 +1113,12 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
@@ -1200,14 +1152,12 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "License",
                   "Relationship certiﬁcate from embassy (Attested)",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
@@ -1257,14 +1207,12 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -1297,14 +1245,12 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -1344,14 +1290,12 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Undertaking Letter from sponsor showing that she is not married"
@@ -1385,14 +1329,12 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "Undertaking Letter from sponsor showing that she is not married"
@@ -1433,14 +1375,12 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "College certiﬁcate or continuity certiﬁcate of uae"
@@ -1474,14 +1414,12 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "College certiﬁcate or continuity certiﬁcate of uae"
@@ -1522,14 +1460,12 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "College certiﬁcate or continuity certiﬁcate of uae"
@@ -1563,14 +1499,12 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's Passport(Front)",
-                  "Sponsor's Passport(Back)",
+                  "Sponsor's Passport",
                   "Sponsor Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
-                  "Sponsored Passport(Front)",
-                  "Sponsored Passport(Back)",
+                  "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement (if available)",
                   "College certiﬁcate or continuity certiﬁcate of uae"
@@ -1618,8 +1552,7 @@ export default visa_options = {
           "Old Visa",
           "Immigration Card",
           "Liscense",
-          "Passport (Front)",
-          "Passport (Back)",
+          "Passport",
           "Sponsor emirates id"
         ],
         "PriceDetails": [
@@ -1653,8 +1586,7 @@ export default visa_options = {
           "Old Visa",
           "Immigration Card",
           "Liscense",
-          "Passport (Front)",
-          "Passport (Back)",
+          "Passport",
           "Sponsor emirates id"
         ],
         "PriceDetails": [
@@ -2070,7 +2002,7 @@ export default visa_options = {
               "Insurance",
               "Birth certificate attested",
               "License and MOA",
-              "Sponsor's passport (Front)",
+              "Sponsor's passport",
               "Sponsor's visa",
               "Sponsor's emirates id",
               "Ejari under Sponsor's name"
@@ -2115,7 +2047,7 @@ export default visa_options = {
               "Insurance",
               "Birth certificate attested",
               "Labour contract",
-              "Sponsor's passport (Front)",
+              "Sponsor's passport",
               "Sponsor's visa",
               "Sponsor's emirates id",
               "Ejari under Sponsor's name"
@@ -2213,8 +2145,7 @@ export default visa_options = {
               "License",
               "Immigration card",
               "Memorandum of association (MOA)",
-              "Passport (Front)",
-              "Passport (Back)",
+              "Passport",,
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
@@ -2265,8 +2196,7 @@ export default visa_options = {
               "License",
               "Immigration card",
               "Memorandum of association (MOA)",
-              "Passport (Front)",
-              "Passport (Back)",
+              "Passport",
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
@@ -2317,8 +2247,7 @@ export default visa_options = {
               "License",
               "Immigration card",
               "Memorandum of association (MOA)",
-              "Passport (Front)",
-              "Passport (Back)",
+              "Passport",
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
@@ -2369,8 +2298,7 @@ export default visa_options = {
               "License",
               "Immigration card",
               "Memorandum of association (MOA)",
-              "Passport (Front)",
-              "Passport (Back)",
+              "Passport",
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
@@ -2421,8 +2349,7 @@ export default visa_options = {
               "License",
               "Immigration card",
               "Memorandum of association (MOA)",
-              "Passport (Front)",
-              "Passport (Back)",
+              "Passport",
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
@@ -2483,8 +2410,7 @@ export default visa_options = {
               "License",
               "Immigration card",
               "Memorandum of association (MOA)",
-              "Passport (Front)",
-              "Passport (Back)",
+              "Passport",
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
@@ -2535,8 +2461,7 @@ export default visa_options = {
               "License",
               "Immigration card",
               "Memorandum of association (MOA)",
-              "Passport (Front)",
-              "Passport (Back)",
+              "Passport",
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
@@ -2587,8 +2512,7 @@ export default visa_options = {
               "License",
               "Immigration card",
               "Memorandum of association (MOA)",
-              "Passport (Front)",
-              "Passport (Back)",
+              "Passport",
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
             ],
@@ -2748,7 +2672,8 @@ export default visa_options = {
         "Partner/Investor": {
           "title": "Whom to Sponsor?",
           "options": [
-            "Husband/Wife",
+            "Husband",
+            "Wife",
             "Parents",
             "Child"
           ],
@@ -2769,14 +2694,12 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Sponsor's passport",
                   "Sponsor visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -2825,14 +2748,12 @@ export default visa_options = {
               "48 Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Sponsor's passport",
                   "Sponsor visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -2881,14 +2802,12 @@ export default visa_options = {
               "24  Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Sponsor's passport",
                   "Sponsor visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -2937,14 +2856,12 @@ export default visa_options = {
               "5 Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Sponsor's passport",
                   "Sponsor visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -3002,14 +2919,12 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Sponsor's passport",
                   "Sponsor visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -3058,14 +2973,12 @@ export default visa_options = {
               "48 Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Sponsor's passport",
                   "Sponsor visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -3114,14 +3027,12 @@ export default visa_options = {
               "24  Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Sponsor's passport",
                   "Sponsor visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -3170,14 +3081,12 @@ export default visa_options = {
               "5 Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Sponsor's passport",
                   "Sponsor visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -3248,14 +3157,12 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -3304,14 +3211,12 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -3360,14 +3265,12 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -3416,14 +3319,12 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -3481,14 +3382,12 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -3537,14 +3436,12 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -3593,14 +3490,12 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -3649,14 +3544,12 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -3721,14 +3614,12 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -3777,14 +3668,12 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -3833,14 +3722,12 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -3889,14 +3776,12 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -3954,14 +3839,12 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -4010,14 +3893,12 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -4066,14 +3947,12 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -4122,14 +4001,12 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)"
                   ],
@@ -4202,15 +4079,13 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -4262,15 +4137,13 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -4322,15 +4195,13 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -4382,15 +4253,13 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -4451,15 +4320,13 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -4511,15 +4378,13 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -4571,15 +4436,13 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -4631,15 +4494,13 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -4707,15 +4568,13 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -4767,15 +4626,13 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -4827,15 +4684,13 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -4887,15 +4742,13 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -4956,15 +4809,13 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -5016,15 +4867,13 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -5076,15 +4925,13 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -5136,15 +4983,13 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -5212,15 +5057,13 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -5272,15 +5115,13 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -5332,15 +5173,13 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -5392,15 +5231,13 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -5461,15 +5298,13 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -5521,15 +5356,13 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -5581,15 +5414,13 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -5641,15 +5472,13 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Death certiﬁcate attested (if mother or father is dead)",
@@ -5718,14 +5547,12 @@ export default visa_options = {
               "Inside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Sponsor's passport",
                   "Sponsor visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -5774,14 +5601,12 @@ export default visa_options = {
               "Outside Country": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Sponsor's passport",
                   "Sponsor visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
                   "Last 3 months bank statement (if available)"
                 ],
@@ -5845,14 +5670,12 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
@@ -5902,14 +5725,12 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
@@ -5959,14 +5780,12 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
@@ -6016,14 +5835,12 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
                     "Last 3 months bank statement (if available)",
                     "Undertaking Letter from sponsor showing that she is not married"
