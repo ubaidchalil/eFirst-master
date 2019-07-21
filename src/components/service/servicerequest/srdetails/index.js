@@ -115,7 +115,7 @@ class SRInfo extends Component {
             )}
             <View style={styles.item_border}>
               <Text style={styles.label}>Address : </Text>
-              <View style={{flex:1}} >
+              <View style={{ flex: 1 }}>
                 <Text style={styles.value}> {Address} </Text>
               </View>
             </View>
@@ -205,7 +205,7 @@ class SRInfo extends Component {
                 </View>
               )}
 
-            {(ServiceName === "TRANSLATION SERVICE" ||
+            {/* {(ServiceName === "TRANSLATION SERVICE" ||
               ServiceName == "TRANSLATION") &&
               legalStamp == true &&
               PickUpandDropOption == "Through Courier" && (
@@ -225,7 +225,7 @@ class SRInfo extends Component {
                     {TrackingNo}
                   </Text>
                 </View>
-              )}
+              )} */}
 
             {ServiceName === "ATTESTATION SERVICE" &&
               PickUpandDropOption == "Through Courier" && (
