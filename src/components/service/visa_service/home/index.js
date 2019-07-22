@@ -92,7 +92,7 @@ class Container extends Component {
     const success = documentattestation.success;
     return (
       <View style={{ flex: 1 }}>
-        {/* <Loader loading={loading} /> */}
+        <Loader loading={loading} />
         <DocumentAttestation
           setShowTerms={this.setShowTerms}
           updateTotalAmount={this.updateTotalAmount}
@@ -100,7 +100,7 @@ class Container extends Component {
           state={this.state}
         />
         {error && <AlertView type="error" />}
-        {success && <AlertView type="success" />}
+        {/* {success && <AlertView type="success" />} */}
       </View>
     );
   };

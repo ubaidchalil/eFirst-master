@@ -15,8 +15,8 @@ class Container extends Component {
   componentDidMount = () => {
     const srid = this.props.navigation.state.params.srid;
     console.log("srid", srid);
-  //  this.props.activateSR({ srid: srid, token: this.props.token.token });
-  //  this.setState({ Requested: true });
+    //  this.props.activateSR({ srid: srid, token: this.props.token.token });
+    //  this.setState({ Requested: true });
   };
 
   componentDidUpdate() {
@@ -30,14 +30,19 @@ class Container extends Component {
       const { token } = this.props.token;
       const statusId = null;
       this.props.servicesData({ statusId, token });
-      this.props.navigation.navigate("MyRequests");
+      this.props.navigation.navigate("MyRequests", {
+        headerTitle: "My Requests",
+        noDataLabel: "No recent service request"
+      });
     }
   }
 
   _onNavigationStateChange = webViewState => {
-    console.log("urls =>",webViewState.url);
+    console.log("urls =>", webViewState.url);
     var str = webViewState.url;
-    var n = str.indexOf("return3DsTnxStatus");
+    console.log("string===>", str);
+    var n = str.indexOf("Success");
+    console.log("n==>", n);
     const srid = this.props.navigation.state.params.srid;
     if (n >= 0) {
       this.props.activateSR({ srid: srid, token: this.props.token.token });
@@ -54,15 +59,15 @@ class Container extends Component {
       <View style={{ flex: 1 }}>
         <Loader loading={loading} />
         {this.state.showWeb && (
-        <WebView
-          source={{
-            uri: `https://efirstweb-stagingweb.azurewebsites.net/MobilePayment/Index?srid=${srid}&userId=${userid}`
-          }}
-          userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
-          style={{ marginTop: 20 }}
-          onNavigationStateChange={this._onNavigationStateChange.bind(this)}
-        />
-      )}
+          <WebView
+            source={{
+              uri: `https://efirstweb-stagingweb.azurewebsites.net/MobilePayment/Index?srid=${srid}&userId=${userid}`
+            }}
+            userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+            style={{ marginTop: 20 }}
+            onNavigationStateChange={this._onNavigationStateChange.bind(this)}
+          />
+        )}
       </View>
     );
   };

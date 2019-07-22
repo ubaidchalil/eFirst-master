@@ -115,7 +115,7 @@ class Container extends Component {
           position="bottom"
         />
         {error && <AlertView type="error" />}
-        {success && <AlertView type="success" />}
+        {/* {success && <AlertView type="success" />} */}
       </View>
     );
   };

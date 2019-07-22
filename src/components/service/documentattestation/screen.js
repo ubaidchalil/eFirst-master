@@ -591,7 +591,7 @@ export default withFormik({
     const token = props.token.token;
     const Address = `${values.Address1},${values.Street} ${values.City}, ${
       values.SelectedState
-    } ${values.AddressCountry} ZIP- ${values.Zip}`;
+    } ${values.AddressCountry} - ${values.Zip}`;
     var Rate = attestationrate.data
       ? values.PickUpandDropOption == "Through Courier"
         ? attestationrate.data.Rate +
