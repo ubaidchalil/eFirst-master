@@ -28,10 +28,10 @@ export default visa_options = {
         "Inside Country": {
           "docs": [
             "Sponsor's emirates ID",
-            "License",
+            "Trade License",
             "Immigration card",
             "Memorandum of association (MOA)",
-            "Passport",
+            "Passport ",
             "1 photo (White background)"
           ],
           "PriceDetails": [
@@ -62,16 +62,16 @@ export default visa_options = {
         "Outside Country": {
           "docs": [
             "Sponsor's emirates ID",
-            "License",
+            "Trade License",
             "Immigration card",
             "Memorandum of association (MOA)",
-            "Passport",
+            "Passport ",
             "1 photo (White background)"
           ],
           "PriceDetails": [
             {
               "Text": "Gov. fees",
-              "Value": 535
+              "Value": 526
             },
             {
               "Text": "Service charge",
@@ -117,13 +117,13 @@ export default visa_options = {
               "docs": [
                 "Sponsor's emirates ID",
                 "Sponsor's Passport",
-                "Sponsor Visa",
+                "Sponsor's Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Memorandum of association (MOA)",
                 "Marriage certificate attested",
                 "Sponsored Passport",
                 "1 photo (White background)",
-                "Last 3 months bank statement (if available)"
+                "Last 3 months bank statement"
               ],
               "PriceDetails": [
                 {
@@ -131,8 +131,12 @@ export default visa_options = {
                   "Value": 324
                 },
                 {
+                  "Text": "Security Deposit",
+                  "Value": 3060
+                },
+                {
                   "Text": "Gov. fees",
-                  "Value": 4222
+                  "Value": 1138
                 },
                 {
                   "Text": "Service charge",
@@ -159,13 +163,13 @@ export default visa_options = {
               "docs": [
                 "Sponsor's emirates ID",
                 "Sponsor's Passport",
-                "Sponsor Visa",
+                "Sponsor's Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Memorandum of association (MOA)",
                 "Marriage certificate attested",
                 "Sponsored Passport",
                 "1 photo (White background)",
-                "Last 3 months bank statement (if available)"
+                "Last 3 months bank statement"
               ],
               "PriceDetails": [
                 {
@@ -173,8 +177,12 @@ export default visa_options = {
                   "Value": 324
                 },
                 {
+                  "Text": "Security Deposit",
+                  "Value": 3060
+                },
+                {
                   "Text": "Gov. fees",
-                  "Value": 3575
+                  "Value": 470
                 },
                 {
                   "Text": "Service charge",
@@ -215,27 +223,31 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
-                  "Residential ejari (under Sponsor's name)",
+                  "Sponsor's Visa",
+                  "Residential ejari (under sponsors name, 2 bedroom and hall)",
                   "Memorandum of association (MOA)",
-                  "License",
+                  "Trade License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "Last 3 months bank statement ",
+                  "Death certiﬁcate attested (if father is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
                 "PriceDetails": [
-                  {
-                    "Text": "Gov. fees",
-                    "Value": 6165
-                  },
-                  {
-                    "Text": "Service charge",
-                    "Value": 105
-                  }
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Gov. fees",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Service charge",
+                      "Value": 105
+                    }
                 ],
                 "IBAN number": "",
                 "Notes": {
@@ -257,22 +269,26 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
-                  "Residential ejari (under Sponsor's name)",
+                  "Sponsor's Visa",
+                  "Residential ejari (under sponsors name, 2 bedroom and hall)",
                   "Memorandum of association (MOA)",
-                  "License",
+                  "Trade License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "Last 3 months bank statement",
+                  "Death certiﬁcate attested (if father is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 5550
+                    "Value": 470
                   },
                   {
                     "Text": "Service charge",
@@ -306,22 +322,26 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
-                  "Residential ejari (under Sponsor's name)",
+                  "Sponsor's Visa",
+                  "Residential ejari (under sponsors name, 2 bedroom and hall)",
                   "Memorandum of association (MOA)",
-                  "License",
+                  "Trade License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "Last 3 months bank statement",
+                  "Death certiﬁcate attested (if mother is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 6165
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -348,22 +368,26 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
-                  "Residential ejari (under Sponsor's name)",
+                  "Sponsor's Visa",
+                  "Residential ejari (under sponsors name, 2 bedroom and hall)",
                   "Memorandum of association (MOA)",
-                  "License",
+                  "Trade License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "Last 3 months bank statement",
+                  "Death certiﬁcate attested (if mother is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 5550
+                    "Value": 470
                   },
                   {
                     "Text": "Service charge",
@@ -397,22 +421,24 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
-                  "Residential ejari (under Sponsor's name)",
+                  "Sponsor's Visa",
+                  "Residential ejari (under sponsors name, 2 bedroom and hall)",
                   "Memorandum of association (MOA)",
-                  "License",
+                  "Trade License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
-                  "If divorced (divorce letter)",
+                  "Last 3 months bank statement",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 6165
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -439,22 +465,24 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
-                  "Residential ejari (under Sponsor's name)",
+                  "Sponsor's Visa",
+                  "Residential ejari (under sponsors name, 2 bedroom and hall)",
                   "Memorandum of association (MOA)",
-                  "License",
+                  "Trade License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
-                  "If divorced (divorce letter)",
+                  "Last 3 months bank statement",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 5550
+                    "Value": 470
                   },
                   {
                     "Text": "Service charge",
@@ -497,18 +525,22 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement "
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 4222
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -535,18 +567,22 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 3575
+                    "Value": 470
                   },
                   {
                     "Text": "Service charge",
@@ -580,19 +616,23 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
+                  "Last 3 months bank statement ",
                   "Undertaking Letter from sponsor showing that she is not married"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 4222
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -619,19 +659,23 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
+                  "Last 3 months bank statement ",
                   "Undertaking Letter from sponsor showing that she is not married"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 3575
+                    "Value": 470
                   },
                   {
                     "Text": "Service charge",
@@ -665,19 +709,23 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "College certiﬁcate or continuity certiﬁcate of uae"
+                  "Last 3 months bank statement",
+                  "College certiﬁcate or continuity certiﬁcate of UAE"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 4222
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -704,19 +752,23 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "College certiﬁcate or continuity certiﬁcate of uae"
+                  "Last 3 months bank statement",
+                  "College certiﬁcate or continuity certiﬁcate of UAE"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 3575
+                    "Value": 470
                   },
                   {
                     "Text": "Service charge",
@@ -750,19 +802,23 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "College certiﬁcate or continuity certiﬁcate of uae"
+                  "Last 3 months bank statement",
+                  "College certiﬁcate or continuity certiﬁcate of UAE"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 4222
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -789,19 +845,23 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "College certiﬁcate or continuity certiﬁcate of uae"
+                  "Last 3 months bank statement",
+                  "College certiﬁcate or continuity certiﬁcate of UAE"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 3575
+                    "Value": 470
                   },
                   {
                     "Text": "Service charge",
@@ -844,18 +904,18 @@ export default visa_options = {
               "docs": [
                 "Sponsor's emirates ID",
                 "Sponsor's Passport",
-                "Sponsor Visa",
+                "Sponsor's Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Labour contract",
                 "Marriage certificate attested",
                 "Sponsored Passport",
                 "1 photo (White background)",
-                "Last 3 months bank statement (if available)"
+                "Last 3 months bank statement "
               ],
               "PriceDetails": [
                 {
                   "Text": "Gov. fees",
-                  "Value": 1182
+                  "Value": 1138
                 },
                 {
                   "Text": "Service charge",
@@ -882,18 +942,18 @@ export default visa_options = {
               "docs": [
                 "Sponsor's emirates ID",
                 "Sponsor's Passport",
-                "Sponsor Visa",
+                "Sponsor's Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Labour contract",
                 "Marriage certificate attested",
                 "Sponsored Passport",
                 "1 photo (White background)",
-                "Last 3 months bank statement (if available)"
+                "Last 3 months bank statement "
               ],
               "PriceDetails": [
                 {
                   "Text": "Gov. fees",
-                  "Value": 535
+                  "Value": 488.09
                 },
                 {
                   "Text": "Service charge",
@@ -934,21 +994,25 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
-                  "Residential ejari (under Sponsor's name)",
-                  "License",
+                  "Sponsor's Visa",
+                  "Residential ejari (under Sponsor's name, 2 bedroom and hall)",
+                  "Labour Contract",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "Last 3 months bank statement ",
+                  "Death certiﬁcate attested (if father is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 5060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 6165
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -975,21 +1039,25 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
-                  "Residential ejari (under Sponsor's name)",
-                  "License",
+                  "Sponsor's Visa",
+                  "Residential ejari (under Sponsor's name, 2 bedroom and hall)",
+                  "Labour Contract",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "Last 3 months bank statement ",
+                  "Death certiﬁcate attested (if father is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 5060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 5550
+                    "Value": 488.09
                   },
                   {
                     "Text": "Service charge",
@@ -1023,22 +1091,25 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
-                  "Residential ejari (under Sponsor's name)",
-                  "Memorandum of association (MOA)",
-                  "License",
+                  "Sponsor's Visa",
+                  "Residential ejari (under Sponsor's name, 2 bedroom and hall)",
+                  "Labour Contract",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "Last 3 months bank statement ",
+                  "Death certiﬁcate attested (if mother is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 5060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 6165
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -1065,22 +1136,25 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
-                  "Residential ejari (under Sponsor's name)",
-                  "Memorandum of association (MOA)",
-                  "License",
+                  "Sponsor's Visa",
+                  "Residential ejari (under Sponsor's name, 2 bedroom and hall)",
+                  "Labour Contract",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "Death certiﬁcate attested (if mother or father is dead)",
+                  "Last 3 months bank statement ",
+                  "Death certiﬁcate attested (if mother is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 5060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 5550
+                    "Value": 488.09
                   },
                   {
                     "Text": "Service charge",
@@ -1114,19 +1188,23 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
-                  "Residential ejari (under Sponsor's name)",
-                  "License",
+                  "Sponsor's Visa",
+                  "Residential ejari (under Sponsor's name, 2 bedroom and hall)",
+                  "Labour Contract",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
+                  "Last 3 months bank statement ",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 5060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 6165
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -1153,19 +1231,23 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
-                  "Residential ejari (under Sponsor's name)",
-                  "License",
+                  "Sponsor's Visa",
+                  "Residential ejari (under Sponsor's name, 2 bedroom and hall)",
+                  "Labour Contract",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
+                  "Last 3 months bank statement ",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 5060
+                  },
+                  {
                     "Text": "Gov. fees",
-                    "Value": 5550
+                    "Value": 488.09
                   },
                   {
                     "Text": "Service charge",
@@ -1208,18 +1290,18 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 1182
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -1246,18 +1328,18 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 535
+                    "Value": 488.09
                   },
                   {
                     "Text": "Service charge",
@@ -1291,19 +1373,19 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
+                  "Last 3 months bank statement",
                   "Undertaking Letter from sponsor showing that she is not married"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 1182
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -1330,19 +1412,19 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
+                  "Last 3 months bank statement",
                   "Undertaking Letter from sponsor showing that she is not married"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 535
+                    "Value": 488.09
                   },
                   {
                     "Text": "Service charge",
@@ -1376,19 +1458,19 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "College certiﬁcate or continuity certiﬁcate of uae"
+                  "Last 3 months bank statement",
+                  "College certiﬁcate or continuity certiﬁcate of UAE"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 1182
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -1415,19 +1497,19 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "College certiﬁcate or continuity certiﬁcate of uae"
+                  "Last 3 months bank statement",
+                  "College certiﬁcate or continuity certiﬁcate of UAE"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 535
+                    "Value": 488.09
                   },
                   {
                     "Text": "Service charge",
@@ -1461,19 +1543,19 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
+                  "Last 3 months bank statement",
                   "College certiﬁcate or continuity certiﬁcate of uae"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 1182
+                    "Value": 1138
                   },
                   {
                     "Text": "Service charge",
@@ -1500,19 +1582,19 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's Passport",
-                  "Sponsor Visa",
+                  "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement (if available)",
-                  "College certiﬁcate or continuity certiﬁcate of uae"
+                  "Last 3 months bank statement",
+                  "College certiﬁcate or continuity certiﬁcate of UAE"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 535
+                    "Value": 488.09
                   },
                   {
                     "Text": "Service charge",
@@ -1551,9 +1633,9 @@ export default visa_options = {
           "New Visa",
           "Old Visa",
           "Immigration Card",
-          "Liscense",
-          "Passport",
-          "Sponsor emirates id"
+          "Trade Liscense",
+          "Passport ",
+          "Sponsor's emirates id"
         ],
         "PriceDetails": [
           {
@@ -1569,7 +1651,7 @@ export default visa_options = {
           "Text": "Notes",
           "Name": "Notes",
           "Options": [
-            "This process is done for those who have taken the inside country visa. To take the inside country visa, either the person has to have an visit visa or might be under the cancellation period. Fine payment for change status: If a person exceeds the final day of change status, fine payment will be as follows\n\n\n\nIf under visit visa, a person gets 90days time to do the change status. If not the very next day onwards the fine will be 100 aed for one day and goes on.\n\n\n\nIf a person is under cancelled visa and exceeds the last day of change status, fine starts from aed 25 for 180 days. If\nnot the next 180 days will be of 50 days fine and then the fine increases to 100 aed per day.\n\n\nThe service charge will be 105 in addition to the fine.EndFragment    "
+            "This process is done for those who have taken the inside country visa. To take the inside country visa, either the person has to have an visit visa or might be under the cancellation period. Fine payment for change status: If a person exceeds the final day of change status, fine payment will be as follows        If under visit visa, a person gets 90days time to do the change status. If not the very next day onwards the fine will be 100 aed for one day and goes on.        If a person is under cancelled visa and exceeds the last day of change status, fine starts from aed 25 for 180 days. If  not the next 180 days will be of 50 days fine and then the fine increases to 100 aed per day.      The service charge will be 105 in addition to the fine.EndFragment    "
           ]
         },
         "OriginalDocumentRequired": {
@@ -1585,14 +1667,14 @@ export default visa_options = {
           "New Visa",
           "Old Visa",
           "Immigration Card",
-          "Liscense",
-          "Passport",
-          "Sponsor emirates id"
+          "Trade Liscense",
+          "Passport ",
+          "Sponsor's emirates id"
         ],
         "PriceDetails": [
           {
             "Text": "Gov. fees",
-            "Value": 682
+            "Value": 640
           },
           {
             "Text": "Service charge",
@@ -1603,7 +1685,7 @@ export default visa_options = {
           "Text": "Notes",
           "Name": "Notes",
           "Options": [
-            "\n\n\n\n\n\nStartFragment\n\n\nThis process is done for those who have\ntaken the inside country visa. To take the inside country visa, either the\nperson has to have an visit visa or might be under the cancellation period.\n\n\n\nFine payment for change status:\n\n\n\n If\na person exceeds the final day of change status, fine payment will be as\nfollows\n\n\n\nIf under visit visa, a person gets 90days\ntime to do the change status. If not the very next day onwards the fine will be\n100 aed for one day and goes on.\n\n\n\nIf a person is under cancelled visa and\nexceeds the last day of change status, fine starts from aed 25 for 180 days. If\nnot the next 180 days will be of 50 days fine and then the fine increases to\n100 aed per day.\n\n\nThe service charge will be 105 in\naddition to the fine.EndFragment    "
+            " This process is done for those who have  taken the inside country visa. To take the inside country visa, either the  person has to have an visit visa or might be under the cancellation period.        Fine payment for change status:         If  a person exceeds the final day of change status, fine payment will be as  follows        If under visit visa, a person gets 90days  time to do the change status. If not the very next day onwards the fine will be  100 aed for one day and goes on.        If a person is under cancelled visa and  exceeds the last day of change status, fine starts from aed 25 for 180 days. If  not the next 180 days will be of 50 days fine and then the fine increases to  100 aed per day.      The service charge will be 105 in  addition to the fine.EndFragment    "
           ]
         },
         "OriginalDocumentRequired": {
@@ -1635,13 +1717,12 @@ export default visa_options = {
             "Insurance",
             "Visa page",
             "Sponsor's emirates id",
-            "Immigration card for company visas",
-            "Sponsor's visa page for family"
+            "Immigration card for company visas"
           ],
           "PriceDetails": [
             {
               "Text": "Gov. fees",
-              "Value": 850
+              "Value": 847
             },
             {
               "Text": "Service charge",
@@ -1670,13 +1751,12 @@ export default visa_options = {
             "Insurance",
             "Visa page",
             "Sponsor's emirates id",
-            "Immigration card for company visas",
-            "Sponsor's visa page for family"
+            "Immigration card for company visas"
           ],
           "PriceDetails": [
             {
               "Text": "Gov. fees",
-              "Value": 970
+              "Value": 926
             },
             {
               "Text": "Service charge",
@@ -1723,8 +1803,8 @@ export default visa_options = {
             ],
             "PriceDetails": [
               {
-                "Text": "Gov. fees",
-                "Value": 700
+                "Text": "Gov. fees (3 yrs visa)",
+                "Value": 671.75
               },
               {
                 "Text": "Service charge",
@@ -1758,8 +1838,8 @@ export default visa_options = {
             ],
             "PriceDetails": [
               {
-                "Text": "Gov. fees",
-                "Value": 800
+                "Text": "Gov. fees (3 yrs visa)",
+                "Value": 751.75
               },
               {
                 "Text": "Service charge",
@@ -1807,7 +1887,7 @@ export default visa_options = {
               "PriceDetails": [
                 {
                   "Text": "Gov. fees",
-                  "Value": 625
+                  "Value": 460
                 },
                 {
                   "Text": "Service charge",
@@ -1842,7 +1922,7 @@ export default visa_options = {
               "PriceDetails": [
                 {
                   "Text": "Gov. fees",
-                  "Value": 705
+                  "Value": 540
                 },
                 {
                   "Text": "Service charge",
@@ -1884,7 +1964,7 @@ export default visa_options = {
               "PriceDetails": [
                 {
                   "Text": "Gov. fees",
-                  "Value": 500
+                  "Value": 460
                 },
                 {
                   "Text": "Service charge",
@@ -1919,7 +1999,7 @@ export default visa_options = {
               "PriceDetails": [
                 {
                   "Text": "Gov. fees",
-                  "Value": 600
+                  "Value": 540
                 },
                 {
                   "Text": "Service charge",
@@ -1964,7 +2044,7 @@ export default visa_options = {
               "Insurance",
               "Birth certificate attested",
               "License and MOA",
-              "Sponsor's passport (Front)",
+              "Sponsor's passport",
               "Sponsor's visa",
               "Sponsor's emirates id",
               "Ejari under Sponsor's name"
@@ -1972,7 +2052,7 @@ export default visa_options = {
             "PriceDetails": [
               {
                 "Text": "Gov. fees",
-                "Value": 633
+                "Value": 671.75
               },
               {
                 "Text": "Service charge",
@@ -1983,14 +2063,14 @@ export default visa_options = {
               "Text": "Notes",
               "Name": "Notes",
               "Options": [
-                "Kids passport has to be made within 60 days of birth.\nNew born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
+                "Kids passport has to be made within 60 days of birth.  New born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
               ]
             },
             "OriginalDocumentRequired": {
               "Text": "Original Document Required",
               "Name": "OriginalDocumentRequired",
               "Options": [
-                "Sponsor's Emirates ID\nChild Passport"
+                "Sponsor's Emirates ID  Child Passport"
               ]
             }
           },
@@ -2010,7 +2090,7 @@ export default visa_options = {
             "PriceDetails": [
               {
                 "Text": "Gov. fees",
-                "Value": 713
+                "Value": 751.75
               },
               {
                 "Text": "Service charge",
@@ -2021,14 +2101,14 @@ export default visa_options = {
               "Text": "Notes",
               "Name": "Notes",
               "Options": [
-                "Kids passport has to be made within 60 days of birth.\nNew born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
+                "Kids passport has to be made within 60 days of birth.  New born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
               ]
             },
             "OriginalDocumentRequired": {
               "Text": "Original Document Required",
               "Name": "OriginalDocumentRequired",
               "Options": [
-                "Sponsor's Emirates ID\nChild Passport"
+                "Sponsor's Emirates ID  Child Passport"
               ]
             }
           }
@@ -2055,7 +2135,7 @@ export default visa_options = {
             "PriceDetails": [
               {
                 "Text": "Gov. fees",
-                "Value": 633
+                "Value": 460
               },
               {
                 "Text": "Service charge",
@@ -2066,14 +2146,14 @@ export default visa_options = {
               "Text": "Notes",
               "Name": "Notes",
               "Options": [
-                "Kids passport has to be made within 60 days of birth.\nNew born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
+                "Kids passport has to be made within 60 days of birth.  New born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
               ]
             },
             "OriginalDocumentRequired": {
               "Text": "Original Document Required",
               "Name": "OriginalDocumentRequired",
               "Options": [
-                "Sponsor's Emirates ID\nChild Passport"
+                "Sponsor's Emirates ID  Child Passport"
               ]
             }
           },
@@ -2084,8 +2164,8 @@ export default visa_options = {
               "Emirates id application paper",
               "Insurance",
               "Birth certificate attested",
-              "License and MOA",
-              "Sponsor's passport (Front)",
+              "Labour Contract",
+              "Sponsor's passport",
               "Sponsor's visa",
               "Sponsor's emirates id",
               "Ejari under Sponsor's name"
@@ -2093,7 +2173,7 @@ export default visa_options = {
             "PriceDetails": [
               {
                 "Text": "Gov. fees",
-                "Value": 713
+                "Value": 540
               },
               {
                 "Text": "Service charge",
@@ -2104,14 +2184,14 @@ export default visa_options = {
               "Text": "Notes",
               "Name": "Notes",
               "Options": [
-                "Kids passport has to be made within 60 days of birth.\nNew born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
+                "Kids passport has to be made within 60 days of birth.  New born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
               ]
             },
             "OriginalDocumentRequired": {
               "Text": "Original Document Required",
               "Name": "OriginalDocumentRequired",
               "Options": [
-                "Sponsor's Emirates ID\nChild Passport"
+                "Sponsor's Emirates ID  Child Passport"
               ]
             }
           }
@@ -2142,12 +2222,11 @@ export default visa_options = {
           "Normal": {
             "docs": [
               "Sponsor's emirates ID",
-              "License",
+              "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
-              "Passport",,
-              "1 photo (White background)",
-              "Memmorandum of association (MOA)"
+              "Passport",
+              "1 photo (White background)"
             ],
             "PriceDetails": [
               {
@@ -2171,7 +2250,7 @@ export default visa_options = {
                 "Value": 773.85
               },
               {
-                "Text": "Emirates ID Price (3 yrs)",
+                "Text": "Emirates ID Price - 3 years",
                 "Value": 374
               }
             ],
@@ -2193,9 +2272,8 @@ export default visa_options = {
           "48 Hours": {
             "docs": [
               "Sponsor's emirates ID",
-              "License",
+              "Trade License",
               "Immigration card",
-              "Memorandum of association (MOA)",
               "Passport",
               "1 photo (White background)",
               "Memmorandum of association (MOA)"
@@ -2222,7 +2300,7 @@ export default visa_options = {
                 "Value": 773.85
               },
               {
-                "Text": "Emirates ID Price (3 yrs)",
+                "Text": "Emirates ID Price - 3 years",
                 "Value": 374
               }
             ],
@@ -2244,12 +2322,11 @@ export default visa_options = {
           "24  Hours": {
             "docs": [
               "Sponsor's emirates ID",
-              "License",
+              "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)",
-              "Memmorandum of association (MOA)"
+              "1 photo (White background)"
             ],
             "PriceDetails": [
               {
@@ -2273,7 +2350,7 @@ export default visa_options = {
                 "Value": 773.85
               },
               {
-                "Text": "Emirates ID Price (3 yrs)",
+                "Text": "Emirates ID Price - 3 years",
                 "Value": 374
               }
             ],
@@ -2295,12 +2372,11 @@ export default visa_options = {
           "5 Hours": {
             "docs": [
               "Sponsor's emirates ID",
-              "License",
+              "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)",
-              "Memmorandum of association (MOA)"
+              "1 photo (White background)"
             ],
             "PriceDetails": [
               {
@@ -2316,7 +2392,7 @@ export default visa_options = {
                 "Value": 847
               },
               {
-                "Text": "Medical Charges",
+                "Text": "Medical Charge - VIP",
                 "Value": 754
               },
               {
@@ -2346,12 +2422,11 @@ export default visa_options = {
           "2 Hours": {
             "docs": [
               "Sponsor's emirates ID",
-              "License",
+              "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)",
-              "Memmorandum of association (MOA)"
+              "1 photo (White background)"
             ],
             "PriceDetails": [
               {
@@ -2367,7 +2442,7 @@ export default visa_options = {
                 "Value": 847
               },
               {
-                "Text": "Medical Charges - VVIP",
+                "Text": "Medical Charge - VVIP",
                 "Value": 1184
               },
               {
@@ -2407,21 +2482,16 @@ export default visa_options = {
           "Normal": {
             "docs": [
               "Sponsor's emirates ID",
-              "License",
+              "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)",
-              "Memmorandum of association (MOA)"
+              "1 photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
                 "Value": 526
-              },
-              {
-                "Text": "Change Status",
-                "Value": 677
               },
               {
                 "Text": "Stamping",
@@ -2436,7 +2506,7 @@ export default visa_options = {
                 "Value": 773.85
               },
               {
-                "Text": "Emirates ID Price (3 yrs)",
+                "Text": "Emirates ID Price - 3 years",
                 "Value": 374
               }
             ],
@@ -2458,21 +2528,16 @@ export default visa_options = {
           "48 Hours": {
             "docs": [
               "Sponsor's emirates ID",
-              "License",
+              "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)",
-              "Memmorandum of association (MOA)"
+              "1 photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
                 "Value": 526
-              },
-              {
-                "Text": "Change Status",
-                "Value": 677
               },
               {
                 "Text": "Stamping",
@@ -2487,7 +2552,7 @@ export default visa_options = {
                 "Value": 773.85
               },
               {
-                "Text": "Emirates ID Price (3 yrs)",
+                "Text": "Emirates ID Price - 3 years",
                 "Value": 374
               }
             ],
@@ -2509,21 +2574,16 @@ export default visa_options = {
           "24  Hours": {
             "docs": [
               "Sponsor's emirates ID",
-              "License",
+              "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)",
-              "Memmorandum of association (MOA)"
+              "1 photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
                 "Value": 526
-              },
-              {
-                "Text": "Change Status",
-                "Value": 677
               },
               {
                 "Text": "Stamping",
@@ -2538,7 +2598,7 @@ export default visa_options = {
                 "Value": 773.85
               },
               {
-                "Text": "Emirates ID Price (3 yrs)",
+                "Text": "Emirates ID Price - 3 years",
                 "Value": 374
               }
             ],
@@ -2560,13 +2620,11 @@ export default visa_options = {
           "5 Hours": {
             "docs": [
               "Sponsor's emirates ID",
-              "License",
+              "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
-              "Passport (Front)",
-              "Passport (Back)",
-              "1 photo (White background)",
-              "Memmorandum of association (MOA)"
+              "Passport",
+              "1 photo (White background)"
             ],
             "PriceDetails": [
               {
@@ -2574,15 +2632,11 @@ export default visa_options = {
                 "Value": 526
               },
               {
-                "Text": "Change Status",
-                "Value": 677
-              },
-              {
                 "Text": "Stamping",
                 "Value": 847
               },
               {
-                "Text": "Medical Charges",
+                "Text": "Medical Charges - VIP",
                 "Value": 754
               },
               {
@@ -2590,7 +2644,7 @@ export default visa_options = {
                 "Value": 773.85
               },
               {
-                "Text": "Emirates ID Price (3 yrs)",
+                "Text": "Emirates ID Price - 3 years",
                 "Value": 374
               }
             ],
@@ -2612,22 +2666,16 @@ export default visa_options = {
           "2 Hours": {
             "docs": [
               "Sponsor's emirates ID",
-              "License",
+              "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
-              "Passport (Front)",
-              "Passport (Back)",
-              "1 photo (White background)",
-              "Memmorandum of association (MOA)"
+              "Passport",
+              "1 photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
                 "Value": 526
-              },
-              {
-                "Text": "Change Status",
-                "Value": 677
               },
               {
                 "Text": "Stamping",
@@ -2642,7 +2690,7 @@ export default visa_options = {
                 "Value": 773.85
               },
               {
-                "Text": "Emirates ID Price (3 yrs)",
+                "Text": "Emirates ID Price - 3 years",
                 "Value": 374
               }
             ],
@@ -2689,32 +2737,37 @@ export default visa_options = {
                 "Normal",
                 "48 Hours",
                 "24  Hours",
-                "5 Hours"
+                "5 Hours",
+                "2 Hours"
               ],
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's passport",
-                  "Sponsor visa",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Entry Permit",
-                    "Value": 0
+                    "Value": 1138
                   },
                   {
                     "Text": "Change Status",
-                    "Value": 0
+                    "Value": 640
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 671.75
                   },
                   {
                     "Text": "Medical Charges",
@@ -2725,7 +2778,7 @@ export default visa_options = {
                     "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -2749,37 +2802,41 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's passport",
-                  "Sponsor visa",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Entry Permit",
-                    "Value": 0
+                    "Value": 1138
                   },
                   {
                     "Text": "Change Status",
-                    "Value": 0
+                    "Value": 640
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 671.75
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 440
+                    "Value": 434
                   },
                   {
                     "Text": "Insurance",
                     "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -2803,37 +2860,41 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's passport",
-                  "Sponsor visa",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Entry Permit",
-                    "Value": 0
+                    "Value": 1138
                   },
                   {
                     "Text": "Change Status",
-                    "Value": 0
+                    "Value": 640
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 671.75
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 440
+                    "Value": 534
                   },
                   {
                     "Text": "Insurance",
                     "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -2857,37 +2918,99 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's passport",
-                  "Sponsor visa",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Entry Permit",
-                    "Value": 0
+                    "Value": 1138
                   },
                   {
                     "Text": "Change Status",
-                    "Value": 0
+                    "Value": 640
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 671.75
                   },
                   {
-                    "Text": "Medical Charges",
-                    "Value": 752
+                    "Text": "Medical Charges - VVIP",
+                    "Value": 1184
                   },
                   {
                     "Text": "Insurance",
                     "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
+                    "Value": 374
+                  }
+                ],
+                "IBAN Number": "",
+                "Notes": {
+                  "Text": "Notes",
+                  "Name": "Notes",
+                  "Options": [
+                    ""
+                  ]
+                },
+                "OriginalDocumentRequired": {
+                  "Text": "Original Document Required",
+                  "Name": "OriginalDocumentRequired",
+                  "Options": [
+                    "Sponsor's Emirates ID"
+                  ]
+                }
+              },
+              "2 Hours": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
+                  "Residential ejari (under Sponsor's name)",
+                  "Memorandum of association (MOA)",
+                  "Marriage certiﬁcate attested",
+                  "Sponsored passport",
+                  "1 photo (white background)",
+                  "Last 3 months bank statement"
+                ],
+                "PriceDetails": [
+                  {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
+                    "Text": "Entry Permit",
+                    "Value": 1138
+                  },
+                  {
+                    "Text": "Change Status",
+                    "Value": 640
+                  },
+                  {
+                    "Text": "Stamping",
+                    "Value": 671.75
+                  },
+                  {
+                    "Text": "Medical Charges - VIP",
+                    "Value": 754
+                  },
+                  {
+                    "Text": "Insurance",
+                    "Value": 695.10
+                  },
+                  {
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -2914,32 +3037,33 @@ export default visa_options = {
                 "Normal",
                 "48 Hours",
                 "24  Hours",
-                "5 Hours"
+                "5 Hours",
+                "2 Hours"
               ],
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's passport",
-                  "Sponsor visa",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
-                    "Text": "Entry Permit",
-                    "Value": 0
+                    "Text": "Security Deposit",
+                    "Value": 3060
                   },
                   {
-                    "Text": "Change Status",
-                    "Value": 0
+                    "Text": "Entry Permit",
+                    "Value": 470
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 671.75
                   },
                   {
                     "Text": "Medical Charges",
@@ -2950,7 +3074,7 @@ export default visa_options = {
                     "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -2974,37 +3098,37 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's passport",
-                  "Sponsor visa",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
-                    "Text": "Entry Permit",
-                    "Value": 0
+                    "Text": "Security Deposit",
+                    "Value": 3060
                   },
                   {
-                    "Text": "Change Status",
-                    "Value": 0
+                    "Text": "Entry Permit",
+                    "Value": 470
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 671.75
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 440
+                    "Value": 434
                   },
                   {
                     "Text": "Insurance",
                     "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -3028,37 +3152,37 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's passport",
-                  "Sponsor visa",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
-                    "Text": "Entry Permit",
-                    "Value": 0
+                    "Text": "Security Deposit",
+                    "Value": 3060
                   },
                   {
-                    "Text": "Change Status",
-                    "Value": 0
+                    "Text": "Entry Permit",
+                    "Value": 470
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 671.75
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 550
+                    "Value": 534
                   },
                   {
                     "Text": "Insurance",
                     "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -3082,37 +3206,91 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's passport",
-                  "Sponsor visa",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
-                    "Text": "Entry Permit",
-                    "Value": 0
+                    "Text": "Security Deposit",
+                    "Value": 3060
                   },
                   {
-                    "Text": "Change Status",
-                    "Value": 0
+                    "Text": "Entry Permit",
+                    "Value": 470
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 671.75
                   },
                   {
-                    "Text": "Medical Charges",
-                    "Value": 752
+                    "Text": "Medical Charges - VIP",
+                    "Value": 754
                   },
                   {
                     "Text": "Insurance",
                     "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
+                    "Value": 374
+                  }
+                ],
+                "IBAN Number": "",
+                "Notes": {
+                  "Text": "Notes",
+                  "Name": "Notes",
+                  "Options": [
+                    ""
+                  ]
+                },
+                "OriginalDocumentRequired": {
+                  "Text": "Original Document Required",
+                  "Name": "OriginalDocumentRequired",
+                  "Options": [
+                    "Sponsor's Emirates ID"
+                  ]
+                }
+              },
+              "2 Hours": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
+                  "Residential ejari (under Sponsor's name)",
+                  "Memorandum of association (MOA)",
+                  "Marriage certiﬁcate attested",
+                  "Sponsored passport",
+                  "1 photo (white background)",
+                  "Last 3 months bank statement"
+                ],
+                "PriceDetails": [
+                  {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
+                    "Text": "Entry Permit",
+                    "Value": 470
+                  },
+                  {
+                    "Text": "Stamping",
+                    "Value": 671.75
+                  },
+                  {
+                    "Text": "Medical Charges - VVIP",
+                    "Value": 1184
+                  },
+                  {
+                    "Text": "Insurance",
+                    "Value": 695.10
+                  },
+                  {
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -3152,7 +3330,8 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
@@ -3164,20 +3343,24 @@ export default visa_options = {
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -3188,7 +3371,7 @@ export default visa_options = {
                       "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3212,37 +3395,41 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3266,37 +3453,41 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3320,37 +3511,99 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Memorandum of association (MOA)",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 1771.35
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3377,32 +3630,33 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 1138
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -3413,7 +3667,7 @@ export default visa_options = {
                       "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3443,31 +3697,31 @@ export default visa_options = {
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 1138
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3487,44 +3741,44 @@ export default visa_options = {
                     ]
                   }
                 },
-                "24  Hours": {
-                  "docs": [
-                    "Sponsor's emirates ID",
-                    "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
-                    "Memorandum of association (MOA)",
-                    "Marriage certiﬁcate attested",
-                    "Sponsored passport",
-                    "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
-                  ],
-                  "PriceDetails": [
-                    {
-                      "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Stamping",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Medical Charges",
-                      "Value": 550
-                    },
-                    {
-                      "Text": "Insurance",
-                      "Value": 1771.35
-                    },
-                    {
-                      "Text": "Emirates ID Price (3 yrs)",
-                      "Value": 374
-                    }
-                  ],
+                "24 Hours": {
+                "docs": [
+                  "Sponsor's emirates ID",
+                  "Sponsor's passport",
+                  "Sponsor visa",
+                  "Residential ejari (under Sponsor's name)",
+                  "Memorandum of association (MOA)",
+                  "Marriage certiﬁcate attested",
+                  "Sponsored passport",
+                  "1 photo (white background)",
+                  "Last 3 months bank statement"
+                ],
+                "PriceDetails": [
+                  {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
+                    "Text": "Entry Permit",
+                    "Value": 1138
+                  },
+                  {
+                    "Text": "Stamping",
+                    "Value": 671.75
+                  },
+                  {
+                    "Text": "Medical Charges",
+                    "Value": 534
+                  },
+                  {
+                    "Text": "Insurance",
+                    "Value": 1771.35
+                  },
+                  {
+                    "Text": "Emirates ID Price - 3 years",
+                    "Value": 374
+                  }
+                ],
                   "IBAN Number": "",
                   "Notes": {
                     "Text": "Notes",
@@ -3551,31 +3805,85 @@ export default visa_options = {
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 1138
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Memorandum of association (MOA)",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 1771.35
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3609,32 +3917,37 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -3645,7 +3958,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3669,37 +3982,41 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3723,37 +4040,41 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3777,37 +4098,99 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Memorandum of association (MOA)",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3840,26 +4223,26 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -3870,7 +4253,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3894,37 +4277,37 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -3948,37 +4331,37 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4002,37 +4385,91 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 752
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Memorandum of association (MOA)",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 470
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4074,36 +4511,41 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -4114,7 +4556,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4138,41 +4580,45 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4196,41 +4642,45 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4254,41 +4704,107 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
+                    "Memorandum of association (MOA)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if father is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4315,36 +4831,37 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -4355,7 +4872,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4379,41 +4896,41 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4437,41 +4954,41 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4495,41 +5012,99 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
+                    "Memorandum of association (MOA)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if father is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 470
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4563,36 +5138,41 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -4603,7 +5183,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4627,41 +5207,45 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4685,41 +5269,45 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4743,41 +5331,107 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
+                    "Memorandum of association (MOA)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4804,36 +5458,37 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -4844,7 +5499,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4868,41 +5523,41 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4926,41 +5581,41 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -4984,41 +5639,99 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
+                    "Memorandum of association (MOA)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 470
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5052,36 +5765,39 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -5092,7 +5808,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5116,41 +5832,43 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5174,41 +5892,43 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5232,41 +5952,103 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
+                    "Memorandum of association (MOA)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5292,37 +6074,36 @@ export default visa_options = {
                 "options": [
                   "Normal",
                   "48 Hours",
-                  "24  Hours",
-                  "5 Hours"
+                  "24 Hours",
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -5333,7 +6114,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5357,41 +6138,39 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5415,41 +6194,39 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5473,41 +6250,95 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
                     "Memorandum of association (MOA)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under sponsors name, 2 bedroom and hall) ",
+                    "Memorandum of association (MOA)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 470
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5548,37 +6379,37 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's passport",
-                  "Sponsor visa",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
+                    "Text": "Security Deposit",
+                    "Value": 3060
+                  },
+                  {
                     "Text": "Entry Permit",
-                    "Value": 0
+                    "Value": 1138
                   },
                   {
                     "Text": "Change Status",
-                    "Value": 0
+                    "Value": 640
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
-                  },
-                  {
-                    "Text": "Medical Charges",
-                    "Value": 324
+                    "Value": 671.75
                   },
                   {
                     "Text": "Insurance",
                     "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -5602,37 +6433,33 @@ export default visa_options = {
                 "docs": [
                   "Sponsor's emirates ID",
                   "Sponsor's passport",
-                  "Sponsor visa",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
-                    "Text": "Entry Permit",
-                    "Value": 0
+                    "Text": "Security Deposit",
+                    "Value": 3060
                   },
                   {
-                    "Text": "Change Status",
-                    "Value": 0
+                    "Text": "Entry Permit",
+                    "Value": 470
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
-                  },
-                  {
-                    "Text": "Medical Charges",
-                    "Value": 324
+                    "Value": 671.75
                   },
                   {
                     "Text": "Insurance",
                     "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -5665,33 +6492,38 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -5702,7 +6534,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5726,38 +6558,42 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5781,38 +6617,42 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5836,38 +6676,101 @@ export default visa_options = {
                   "docs": [
                     "Sponsor's emirates ID",
                     "Sponsor's passport",
-                    "Sponsor visa",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Memorandum of association (MOA)",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Undertaking Letter from sponsor showing that she is not married"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5894,46 +6797,45 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 424
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -5956,41 +6858,39 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6013,41 +6913,39 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6070,41 +6968,94 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Memorandum of association (MOA)",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Undertaking Letter from sponsor showing that she is not married"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 470
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6138,35 +7089,38 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "College certiﬁcate or continuity certiﬁcate of uae"
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -6177,7 +7131,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6200,41 +7154,43 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "College certiﬁcate or continuity certiﬁcate of uae"
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6257,41 +7213,43 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "College certiﬁcate or continuity certiﬁcate of uae"
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6314,41 +7272,102 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Memorandum of association (MOA)",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of uae"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6375,35 +7394,34 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -6414,7 +7432,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6437,41 +7455,39 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "College certiﬁcate or continuity certiﬁcate of uae"
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6494,41 +7510,39 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6551,41 +7565,94 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "College certiﬁcate or continuity certiﬁcate of uae"
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Memorandum of association (MOA)",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of UAE"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 470
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6619,35 +7686,38 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "College certiﬁcate or continuity certiﬁcate of uae"
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -6658,7 +7728,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6681,41 +7751,43 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6738,41 +7810,43 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6795,41 +7869,102 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Memorandum of association (MOA)",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of uae"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6856,35 +7991,34 @@ export default visa_options = {
                   "Normal",
                   "48 Hours",
                   "24  Hours",
-                  "5 Hours"
+                  "5 Hours",
+                  "2 Hours"
                 ],
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "College certiﬁcate or continuity certiﬁcate of uae"
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
@@ -6895,7 +8029,7 @@ export default visa_options = {
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6918,41 +8052,39 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -6975,41 +8107,39 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "College certiﬁcate or continuity certiﬁcate of uae"
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -7032,41 +8162,94 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "College certiﬁcate or continuity certiﬁcate of uae"
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 3060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 470
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 671.75
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Memorandum of association (MOA)",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "College certiﬁcate or continuity certiﬁcate of UAE"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 3060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 470
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 671.75
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -7093,11 +8276,12 @@ export default visa_options = {
         "Employee": {
           "title": "Whom to Sponsor?",
           "options": [
-            "Husband/Wife",
+            "Husband",
+            "Wife",
             "Parents",
             "Child"
           ],
-          "Husband/Wife": {
+          "Husband": {
             "title": "Select Location",
             "options": [
               "Inside Country",
@@ -7115,29 +8299,27 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
-                  "Sponsor visa",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 0
+                    "Value": 1138
                   },
                   {
                     "Text": "Change Status",
-                    "Value": 0
+                    "Value": 640
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 460
                   },
                   {
                     "Text": "Medical Charges",
@@ -7145,10 +8327,10 @@ export default visa_options = {
                   },
                   {
                     "Text": "Insurance",
-                    "Value": 1550
+                    "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -7171,40 +8353,38 @@ export default visa_options = {
               "48 Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
-                  "Sponsor visa",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 0
+                    "Value": 1138
                   },
                   {
                     "Text": "Change Status",
-                    "Value": 0
+                    "Value": 640
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 460
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 440
+                    "Value": 434
                   },
                   {
                     "Text": "Insurance",
-                    "Value": 1550
+                    "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -7227,40 +8407,38 @@ export default visa_options = {
               "24  Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
-                  "Sponsor visa",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 0
+                    "Value": 1138
                   },
                   {
                     "Text": "Change Status",
-                    "Value": 0
+                    "Value": 640
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 460
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 550
+                    "Value": 534
                   },
                   {
                     "Text": "Insurance",
-                    "Value": 1550
+                    "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -7283,40 +8461,38 @@ export default visa_options = {
               "5 Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
-                  "Sponsor visa",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 0
+                    "Value": 1138
                   },
                   {
                     "Text": "Change Status",
-                    "Value": 0
+                    "Value": 640
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 460
                   },
                   {
-                    "Text": "Medical Charges",
-                    "Value": 752
+                    "Text": "Medical Charges VIP",
+                    "Value": 754
                   },
                   {
                     "Text": "Insurance",
-                    "Value": 1550
+                    "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -7339,40 +8515,38 @@ export default visa_options = {
               "2 Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
-                  "Sponsor visa",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 0
+                    "Value": 1138
                   },
                   {
                     "Text": "Change Status",
-                    "Value": 0
+                    "Value": 640
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 460
                   },
                   {
-                    "Text": "Medical Charges - VVIP",
+                    "Text": "Medical Charges VVIP",
                     "Value": 1184
                   },
                   {
                     "Text": "Insurance",
-                    "Value": 1550
+                    "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -7405,29 +8579,23 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
-                  "Sponsor visa",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 0
-                  },
-                  {
-                    "Text": "Change Status",
-                    "Value": 0
+                    "Value": 488
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 460
                   },
                   {
                     "Text": "Medical Charges",
@@ -7435,10 +8603,10 @@ export default visa_options = {
                   },
                   {
                     "Text": "Insurance",
-                    "Value": 1550
+                    "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -7461,40 +8629,34 @@ export default visa_options = {
               "48 Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
-                  "Sponsor visa",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 0
-                  },
-                  {
-                    "Text": "Change Status",
-                    "Value": 0
+                    "Value": 488
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 460
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 440
+                    "Value": 424
                   },
                   {
                     "Text": "Insurance",
-                    "Value": 1550
+                    "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -7517,40 +8679,34 @@ export default visa_options = {
               "24  Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
-                  "Sponsor visa",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 0
-                  },
-                  {
-                    "Text": "Change Status",
-                    "Value": 0
+                    "Value": 488
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 460
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 550
+                    "Value": 534
                   },
                   {
                     "Text": "Insurance",
-                    "Value": 1550
+                    "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -7573,40 +8729,34 @@ export default visa_options = {
               "5 Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
-                  "Sponsor visa",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 0
-                  },
-                  {
-                    "Text": "Change Status",
-                    "Value": 0
+                    "Value": 488
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 460
                   },
                   {
-                    "Text": "Medical Charges",
-                    "Value": 752
+                    "Text": "Medical Charges - VIP",
+                    "Value": 754
                   },
                   {
                     "Text": "Insurance",
-                    "Value": 1550
+                    "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -7629,29 +8779,23 @@ export default visa_options = {
               "2 Hours": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
-                  "Sponsor visa",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Marriage certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 0
-                  },
-                  {
-                    "Text": "Change Status",
-                    "Value": 0
+                    "Value": 488
                   },
                   {
                     "Text": "Stamping",
-                    "Value": 0
+                    "Value": 460
                   },
                   {
                     "Text": "Medical Charges - VVIP",
@@ -7659,10 +8803,10 @@ export default visa_options = {
                   },
                   {
                     "Text": "Insurance",
-                    "Value": 1550
+                    "Value": 695.10
                   },
                   {
-                    "Text": "Emirates ID Price (3 yrs)",
+                    "Text": "Emirates ID Price - 3 years",
                     "Value": 374
                   }
                 ],
@@ -7684,14 +8828,13 @@ export default visa_options = {
               }
             }
           },
-          "Parents": {
-            "title": "Select Parents",
+          "Wife": {
+            "title": "Select Age",
             "options": [
-              "Mother",
-              "Father",
-              "Mother & Father"
+              "Below 45",
+              "Above 45"
             ],
-            "Mother": {
+            "Below 45" : {
               "title": "Select Location",
               "options": [
                 "Inside Country",
@@ -7709,32 +8852,27 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
-                    "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
-                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 740
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
@@ -7742,10 +8880,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -7768,43 +8906,38 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
-                    "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
-                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 740
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -7827,43 +8960,38 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
-                    "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
-                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 740
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -7886,43 +9014,38 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
-                    "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
-                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 740
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -7945,32 +9068,27 @@ export default visa_options = {
                 "2 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
-                    "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
-                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 740
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges - VVIP",
@@ -7978,10 +9096,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8014,32 +9132,23 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
-                    "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
-                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
@@ -8047,10 +9156,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8073,43 +9182,34 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
-                    "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
-                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8132,43 +9232,34 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
-                    "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
-                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8191,43 +9282,34 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
-                    "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
-                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                    "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 1771.35
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8250,43 +9332,1206 @@ export default visa_options = {
                 "2 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
-                    "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 488.09
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 1771.35
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                }
+              }
+            },
+            "Above 45" : {
+              "title": "Select Location",
+              "options": [
+                "Inside Country",
+                "Outside Country"
+              ],
+              "Inside Country": {
+                "title": "Medical Certificate Process Speed",
+                "options": [
+                  "Normal",
+                  "48 Hours",
+                  "24  Hours",
+                  "5 Hours",
+                  "2 Hours"
+                ],
+                "Normal": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 324
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "48 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 434
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "24  Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 534
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "5 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges - VIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                }
+              },
+              "Outside Country": {
+                "title": "Medical Certificate Process Speed",
+                "options": [
+                  "Normal",
+                  "48 Hours",
+                  "24  Hours",
+                  "5 Hours",
+                  "2 Hours"
+                ],
+                "Normal": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 488.09
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 324
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "48 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 488.09
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 434
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "24  Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 488.09
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 534
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "5 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 488.09
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour Contract",
+                    "Marriage certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 488.09
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "Parents": {
+            "title": "Select Parents",
+            "options": [
+              "Mother",
+              "Father",
+              "Mother & Father"
+            ],
+            "Mother": {
+              "title": "Select Location",
+              "options": [
+                "Inside Country",
+                "Outside Country"
+              ],
+              "Inside Country": {
+                "title": "Medical Certificate Process Speed",
+                "options": [
+                  "Normal",
+                  "48 Hours",
+                  "24  Hours",
+                  "5 Hours",
+                  "2 Hours"
+                ],
+                "Normal": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
+                      "Value": 324
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "48 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 434
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "24  Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 534
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "5 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 1138
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 640
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
                       "Value": 1184
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                }
+              },
+              "Outside Country": {
+                "title": "Medical Certificate Process Speed",
+                "options": [
+                  "Normal",
+                  "48 Hours",
+                  "24  Hours",
+                  "5 Hours",
+                  "2 Hours"
+                ],
+                "Normal": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 488.09
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 324
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "48 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 488.09
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 434
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "24  Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 488.09
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 534
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "5 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 488.09
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Trade License",
+                    "Relationship certiﬁcate from embassy (Attested)",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement",
+                    "Death certiﬁcate attested (if mother or father is dead)",
+                    "If divorced (divorce letter)",
+                    "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 488.09
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 460
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 695.10
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8326,32 +10571,34 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
@@ -8359,10 +10606,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8385,43 +10632,45 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8444,43 +10693,45 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8503,43 +10754,45 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8562,43 +10815,45 @@ export default visa_options = {
                 "2 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
-                      "Text": "Medical Charges",
+                      "Text": "Medical Charges - VVIP",
                       "Value": 1184
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8631,32 +10886,30 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 5060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
@@ -8664,10 +10917,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8690,43 +10943,41 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 5060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8749,43 +11000,41 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 5060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8808,43 +11057,41 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 5060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8867,32 +11114,30 @@ export default visa_options = {
                 "2 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 5060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges - VVIP",
@@ -8900,10 +11145,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -8943,32 +11188,32 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
@@ -8976,10 +11221,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9002,43 +11247,43 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9061,43 +11306,43 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9120,43 +11365,43 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9179,32 +11424,32 @@ export default visa_options = {
                 "2 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
+                      "Text": "Security Deposit",
+                      "Value": 5060
+                    },
+                    {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges - VVIP",
@@ -9212,10 +11457,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9248,32 +11493,28 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 5060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
@@ -9281,10 +11522,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9307,43 +11548,39 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 5060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9366,43 +11603,39 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 5060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9425,43 +11658,39 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 5060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9484,32 +11713,28 @@ export default visa_options = {
                 "2 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
-                    "License",
+                    "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
-                    "Death certiﬁcate attested (if mother or father is dead)",
-                    "If divorced (divorce letter)",
+                    "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
                   "PriceDetails": [
                     {
-                      "Text": "Entry Permit",
-                      "Value": 0
+                      "Text": "Security Deposit",
+                      "Value": 5060
                     },
                     {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Text": "Entry Permit",
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges - VVIP",
@@ -9517,10 +11742,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9558,103 +11783,563 @@ export default visa_options = {
                 "Outside Country"
               ],
               "Inside Country": {
-                "docs": [
-                  "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
-                  "Sponsor visa",
-                  "Residential ejari (under Sponsor's name)",
-                  "Labour contract",
-                  "Birth certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
-                  "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                "title": "Medical Certificate Process Speed",
+                "options": [
+                  "Normal",
+                  "48 Hours",
+                  "24  Hours",
+                  "5 Hours",
+                  "2 Hours"
                 ],
-                "PriceDetails": [
-                  {
-                    "Text": "Entry Permit",
-                    "Value": 1138
+                "Normal": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour contract",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 324
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
                   },
-                  {
-                    "Text": "Change Status",
-                    "Value": 640
-                  },
-                  {
-                    "Text": "Stamping",
-                    "Value": 460
-                  },
-                  {
-                    "Text": "Insurance",
-                    "Value": 695.10
-                  },
-                  {
-                    "Text": "Emirates ID Price (3 yrs)",
-                    "Value": 374
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
                   }
-                ],
-                "IBAN Number": "",
-                "Notes": {
-                  "Text": "Notes",
-                  "Name": "Notes",
-                  "Options": [
-                    ""
-                  ]
                 },
-                "OriginalDocumentRequired": {
-                  "Text": "Original Document Required",
-                  "Name": "OriginalDocumentRequired",
-                  "Options": [
-                    "Sponsor's Emirates ID"
-                  ]
+                "48 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour contract",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 440
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "24  Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour contract",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 550
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "5 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour contract",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 752
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour contract",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
                 }
               },
               "Outside Country": {
-                "docs": [
-                  "Sponsor's emirates ID",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
-                  "Sponsor visa",
-                  "Residential ejari (under Sponsor's name)",
-                  "Labour contract",
-                  "Birth certiﬁcate attested",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
-                  "1 photo (white background)",
-                  "Last 3 months bank statement (if available)"
+                "title": "Medical Certificate Process Speed",
+                "options": [
+                  "Normal",
+                  "48 Hours",
+                  "24  Hours",
+                  "5 Hours",
+                  "2 Hours"
                 ],
-                "PriceDetails": [
-                  {
-                    "Text": "Entry Permit",
-                    "Value": 488.09
+                "Normal": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour contract",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 324
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
                   },
-                  {
-                    "Text": "Stamping",
-                    "Value": 460
-                  },
-                  {
-                    "Text": "Insurance",
-                    "Value": 695.10
-                  },
-                  {
-                    "Text": "Emirates ID Price (3 yrs)",
-                    "Value": 374
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
                   }
-                ],
-                "IBAN Number": "",
-                "Notes": {
-                  "Text": "Notes",
-                  "Name": "Notes",
-                  "Options": [
-                    ""
-                  ]
                 },
-                "OriginalDocumentRequired": {
-                  "Text": "Original Document Required",
-                  "Name": "OriginalDocumentRequired",
-                  "Options": [
-                    "Sponsor's Emirates ID"
-                  ]
+                "48 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour contract",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 440
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "24  Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour contract",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 550
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "5 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour contract",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Medical Charges",
+                      "Value": 752
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
+                },
+                "2 Hours": {
+                  "docs": [
+                    "Sponsor's emirates ID",
+                    "Sponsor's passport",
+                    "Sponsor visa",
+                    "Residential ejari (under Sponsor's name)",
+                    "Labour contract",
+                    "Birth certiﬁcate attested",
+                    "Sponsored passport",
+                    "1 photo (white background)",
+                    "Last 3 months bank statement"
+                  ],
+                  "PriceDetails": [
+                    {
+                      "Text": "Entry Permit",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Change Status",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Stamping",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Medical Charges - VVIP",
+                      "Value": 1184
+                    },
+                    {
+                      "Text": "Insurance",
+                      "Value": 0
+                    },
+                    {
+                      "Text": "Emirates ID Price - 3 years",
+                      "Value": 374
+                    }
+                  ],
+                  "IBAN Number": "",
+                  "Notes": {
+                    "Text": "Notes",
+                    "Name": "Notes",
+                    "Options": [
+                      ""
+                    ]
+                  },
+                  "OriginalDocumentRequired": {
+                    "Text": "Original Document Required",
+                    "Name": "OriginalDocumentRequired",
+                    "Options": [
+                      "Sponsor's Emirates ID"
+                    ]
+                  }
                 }
               }
             },
@@ -9676,30 +12361,28 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
@@ -9707,10 +12390,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9733,41 +12416,39 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9790,41 +12471,39 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9847,41 +12526,39 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9904,30 +12581,28 @@ export default visa_options = {
                 "2 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges - VVIP",
@@ -9935,10 +12610,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -9971,30 +12646,24 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
@@ -10002,10 +12671,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10028,41 +12697,35 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10085,41 +12748,35 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10142,41 +12799,35 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10199,30 +12850,24 @@ export default visa_options = {
                 "2 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges - VVIP",
@@ -10230,10 +12875,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10273,30 +12918,28 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
@@ -10304,10 +12947,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10330,41 +12973,39 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10387,41 +13028,39 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10444,41 +13083,39 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10501,30 +13138,28 @@ export default visa_options = {
                 "2 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges - VVIP",
@@ -10532,10 +13167,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10568,30 +13203,24 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
@@ -10599,10 +13228,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10625,41 +13254,35 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10682,41 +13305,35 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10739,41 +13356,35 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10793,33 +13404,27 @@ export default visa_options = {
                     ]
                   }
                 },
-                "5 Hours": {
+                "2 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges - VVIP",
@@ -10827,10 +13432,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10870,30 +13475,28 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
@@ -10901,10 +13504,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10927,41 +13530,39 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -10984,41 +13585,39 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -11041,41 +13640,39 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -11098,30 +13695,28 @@ export default visa_options = {
                 "2 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
-                    "Sponsor visa",
+                    "Sponsor's passport",
+                    "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
+                      "Value": 1138
                     },
                     {
                       "Text": "Change Status",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 460
                     },
                     {
                       "Text": "Medical Charges - VVIP",
@@ -11129,10 +13724,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -11165,30 +13760,24 @@ export default visa_options = {
                 "Normal": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Medical Charges",
@@ -11196,10 +13785,10 @@ export default visa_options = {
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -11222,41 +13811,35 @@ export default visa_options = {
                 "48 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 440
+                      "Value": 434
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -11279,41 +13862,35 @@ export default visa_options = {
                 "24  Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 550
+                      "Value": 534
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -11336,41 +13913,35 @@ export default visa_options = {
                 "5 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
-                      "Text": "Medical Charges",
-                      "Value": 752
+                      "Text": "Medical Charges - VIP",
+                      "Value": 754
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -11393,41 +13964,35 @@ export default visa_options = {
                 "2 Hours": {
                   "docs": [
                     "Sponsor's emirates ID",
-                    "Sponsor's passport (Front)",
-                    "Sponsor's passport (Back)",
+                    "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour contract",
                     "Birth certiﬁcate attested",
-                    "Sponsored passport (Front)",
-                    "Sponsored passport (Back)",
+                    "Sponsored passport",
                     "1 photo (white background)",
-                    "Last 3 months bank statement (if available)",
+                    "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
+                      "Value": 488.09
                     },
                     {
                       "Text": "Stamping",
-                      "Value": 0
+                      "Value": 640
                     },
                     {
-                      "Text": "Medical Charges",
+                      "Text": "Medical Charges - VVIP",
                       "Value": 1184
                     },
                     {
                       "Text": "Insurance",
-                      "Value": 0
+                      "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price (3 yrs)",
+                      "Text": "Emirates ID Price - 3 years",
                       "Value": 374
                     }
                   ],
@@ -11469,12 +14034,10 @@ export default visa_options = {
         "Normal": {
           "docs": [
             "Sponsor's emirates ID",
-            "Trade License, Page 1",
-            "Trade License, Page 2",
+            "Trade License",
             "Immigration card",
-            "Memorandum of association",
-            "Passport (Front)",
-            "Passport (Back)",
+            "Memorandum of association (MOA)",
+            "Passport",
             "Medical result",
             "Emirates id application paper",
             "Insurance",
@@ -11482,7 +14045,7 @@ export default visa_options = {
             "1 photo (white background)"
           ],
           "PriceDetails": [
-            {"Text": "Gov. fees","Value": 850 },
+            {"Text": "Gov. fees","Value": 847 },
             {"Text": "Service charge","Value": 105 }
           ],
           "Notes": {  
@@ -11503,12 +14066,10 @@ export default visa_options = {
         "Urgent": {
           "docs": [
             "Sponsor's emirates ID",
-            "Trade License, Page 1",
-            "Trade License, Page 2",
+            "Trade License",
             "Immigration card",
-            "Memorandum of association",
-            "Passport (Front)",
-            "Passport (Back)",
+            "Memorandum of association (MOA)",
+            "Passport",
             "Medical result",
             "Emirates id application paper",
             "Insurance",
@@ -11516,7 +14077,7 @@ export default visa_options = {
             "1 photo (white background)"
           ],
           "PriceDetails": [
-            {"Text": "Gov. fees","Value": 850 },
+            {"Text": "Gov. fees","Value": 926 },
             {"Text": "Service charge","Value": 105 }
           ],
           "Notes": {  
@@ -11563,10 +14124,9 @@ export default visa_options = {
             "Normal": {
               "docs": [
                 "Sponsor's emirates ID",
-                "Trade License, Page 1",
-                "Trade License, Page 2",
+                "Trade License",
                 "Immigration card",
-                "Memorandum Of Association",
+                "Memorandum Of Association (MOA)",
                 "Sponsor's passport",
                 "Medical result",
                 "Emirates id application paper",
@@ -11578,7 +14138,7 @@ export default visa_options = {
                 "1 photo (white background)"
               ],
               "PriceDetails": [
-                {"Text": "Gov. fees","Value": 700 },
+                {"Text": "Gov. fees","Value": 671.75 },
                 {"Text": "Service charge","Value": 105 }
               ],
               "Notes": {  
@@ -11599,23 +14159,20 @@ export default visa_options = {
             "Urgent": {
               "docs": [
                 "Sponsor's emirates ID",
-                "Trade License, Page 1",
-                "Trade License, Page 2",
+                "Trade License",
                 "Immigration card",
-                "Memorandum of association",
-                "Sponsor's passport (Front)",
-                "Sponsor's passport (Back)",
+                "Memorandum of association (MOA)",
+                "Sponsor's passport",
                 "Medical result",
                 "Emirates id application paper",
                 "Insurance",
                 "Sponsor's visa",
                 "Residential ejari",
-                "Sponsored passport (Front)",
-                "Sponsored passport (Back)",
+                "Sponsored passport",
                 "1 photo (white background)"
               ],
               "PriceDetails": [
-                {"Text": "Gov. fees","Value": 800 },
+                {"Text": "Gov. fees","Value": 751.75 },
                 {"Text": "Service charge","Value": 105 }
               ],
               "Notes": {  
@@ -11643,12 +14200,10 @@ export default visa_options = {
             "Normal": {
               "docs": [
                 "Sponsor's emirates ID",
-                "Trade License, Page 1",
-                "Trade License, Page 2",
+                "Trade License",
                 "Immigration card",
-                "Memorandum of association",
-                "Sponsor's passport (Front)",
-                "Sponsor's passport (Back)",
+                "Memorandum of association (MOA)",
+                "Sponsor's passport",
                 "Medical result",
                 "Emirates id application paper",
                 "Insurance",
@@ -11657,7 +14212,7 @@ export default visa_options = {
                 "1 photo (white background)"
               ],
               "PriceDetails": [
-                {"Text": "Gov. fees","Value": 700 },
+                {"Text": "Gov. fees","Value": 671.75 },
                 {"Text": "Service charge","Value": 105 }
               ],
               "Notes": {  
@@ -11678,12 +14233,10 @@ export default visa_options = {
             "Urgent": {
               "docs": [
                 "Sponsor's emirates ID",
-                "Trade License, Page 1",
-                "Trade License, Page 2",
+                "Trade License",
                 "Immigration card",
-                "Memorandum of association",
-                "Sponsor's passport (Front)",
-                "Sponsor's passport (Back)",
+                "Memorandum of association (MOA)",
+                "Sponsor's passport",
                 "Medical result",
                 "Emirates id application paper",
                 "Insurance",
@@ -11692,7 +14245,7 @@ export default visa_options = {
                 "1 photo (white background)"
               ],
               "PriceDetails": [
-                {"Text": "Gov. fees","Value": 800 },
+                {"Text": "Gov. fees","Value": 751.75 },
                 {"Text": "Service charge","Value": 105 }
               ],
               "Notes": {  
@@ -11734,23 +14287,20 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -11771,23 +14321,20 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -11815,12 +14362,10 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
@@ -11829,7 +14374,7 @@ export default visa_options = {
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -11850,12 +14395,10 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
@@ -11864,7 +14407,7 @@ export default visa_options = {
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -11899,23 +14442,20 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -11936,23 +14476,20 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -11980,12 +14517,10 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
@@ -11994,7 +14529,7 @@ export default visa_options = {
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12015,12 +14550,10 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
@@ -12029,7 +14562,7 @@ export default visa_options = {
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12064,23 +14597,20 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12101,23 +14631,20 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12145,21 +14672,20 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12180,21 +14706,20 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12238,23 +14763,20 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12275,23 +14797,20 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12319,12 +14838,10 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
@@ -12333,7 +14850,7 @@ export default visa_options = {
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12354,12 +14871,10 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
@@ -12368,7 +14883,7 @@ export default visa_options = {
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12403,23 +14918,20 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12440,23 +14952,20 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12484,12 +14993,10 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
@@ -12498,7 +15005,7 @@ export default visa_options = {
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12519,12 +15026,10 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
@@ -12533,7 +15038,7 @@ export default visa_options = {
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12568,23 +15073,20 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12605,23 +15107,20 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12649,21 +15148,20 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12684,21 +15182,20 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12733,23 +15230,20 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12770,23 +15264,20 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "Sponsored passport (Front)",
-                  "Sponsored passport (Back)",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12814,21 +15305,20 @@ export default visa_options = {
               "Normal": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 700 },
+                  {"Text": "Gov. fees","Value": 671 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12849,21 +15339,20 @@ export default visa_options = {
               "Urgent": {
                 "docs": [
                   "Sponsor's emirates ID",
-                  "Trade License, Page 1",
-                  "Trade License, Page 2",
+                  "Trade License",
                   "Immigration card",
-                  "Memorandum of association",
-                  "Sponsor's passport (Front)",
-                  "Sponsor's passport (Back)",
+                  "Memorandum of association (MOA)",
+                  "Sponsor's passport",
                   "Medical result",
                   "Emirates id application paper",
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
+                  "Sponsored passport",
                   "1 photo (white background)"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 800 },
+                  {"Text": "Gov. fees","Value": 751.75 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -12919,7 +15408,7 @@ export default visa_options = {
                 "1 photo ( white background )"
               ],
               "PriceDetails": [
-                {"Text": "Gov. fees","Value": 444 },
+                {"Text": "Gov. fees","Value": 460 },
                 {"Text": "Service charge","Value": 105 }
               ],
               "Notes": {  
@@ -12952,7 +15441,7 @@ export default visa_options = {
                 "1 photo ( white background )"
               ],
               "PriceDetails": [
-                {"Text": "Gov. fees","Value": 525 },
+                {"Text": "Gov. fees","Value": 540 },
                 {"Text": "Service charge","Value": 105 }
               ],
               "Notes": {  
@@ -12992,7 +15481,7 @@ export default visa_options = {
                 "1 photo ( white background )"
               ],
               "PriceDetails": [
-                {"Text": "Gov. fees","Value": 444 },
+                {"Text": "Gov. fees","Value": 460 },
                 {"Text": "Service charge","Value": 105 }
               ],
               "Notes": {  
@@ -13025,7 +15514,7 @@ export default visa_options = {
                 "1 photo ( white background )"
               ],
               "PriceDetails": [
-                {"Text": "Gov. fees","Value": 525 },
+                {"Text": "Gov. fees","Value": 540 },
                 {"Text": "Service charge","Value": 105 }
               ],
               "Notes": {  
@@ -13079,7 +15568,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13112,7 +15601,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13152,7 +15641,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13185,7 +15674,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13232,7 +15721,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13265,7 +15754,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13305,7 +15794,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13338,7 +15827,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13385,7 +15874,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13418,7 +15907,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13458,7 +15947,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13491,7 +15980,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13547,7 +16036,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13580,7 +16069,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13620,7 +16109,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13653,7 +16142,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13700,7 +16189,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13733,7 +16222,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13773,7 +16262,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13806,7 +16295,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13853,7 +16342,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13886,7 +16375,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13926,7 +16415,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -13959,7 +16448,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -14006,7 +16495,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -14039,7 +16528,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -14079,7 +16568,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 444 },
+                  {"Text": "Gov. fees","Value": 460 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -14112,7 +16601,7 @@ export default visa_options = {
                   "1 photo ( white background )"
                 ],
                 "PriceDetails": [
-                  {"Text": "Gov. fees","Value": 525 },
+                  {"Text": "Gov. fees","Value": 540 },
                   {"Text": "Service charge","Value": 105 }
                 ],
                 "Notes": {  
@@ -14151,18 +16640,16 @@ export default visa_options = {
       "Inside Country": {
         "docs": [
           "Immigration card",
-          "Trade License, Page 1",
-          "Trade License, Page 2",
+          "Trade License",
           "Visa",
-          "Passport (Front)",
-          "Passport (Back)",
+          "Passport",
           "Sponsor's emriates ID",
           "Share sale agreement"
         ],
         "PriceDetails": [
           {
             "Text": "Gov. fees",
-            "Value": 230
+            "Value": 226
           },
           {
             "Text": "Service charge",
@@ -14173,7 +16660,7 @@ export default visa_options = {
           "Text": "Notes",
           "Name": "Notes",
           "Options": [
-            "\n\n\n\n\n\nStartFragment\n\n\nKindly note that for any of the\ncancellation whose outside the country less than six months, any of the\nfollowing conditions has to be met\n\n\n\n•Original passport has to be submitted\n\n\n\n•Residence should be expired from outside \n\n\n\n•Death from abroad \n\n\n\nFor any cancellation outside the country\nwho is abroad for more than six months usual procedure will be followed for all\ncategories.\n\n\nEndFragment"
+            "Kindly note that for any of the cancellation whose outside the country less than six months, any of the  following conditions has to be met        •Original passport has to be submitted        •Residence should be expired from outside         •Death from abroad         For any cancellation outside the country  who is abroad for more than six months usual procedure will be followed for all  categories.      EndFragment"
           ]
         },
         "OriginalDocumentRequired": {
@@ -14187,18 +16674,16 @@ export default visa_options = {
       "Outside Country": {
         "docs": [
           "Immigration card",
-          "Trade License, Page 1",
-          "Trade License, Page 2",
+          "Trade License",
           "Visa",
-          "Passport (Front)",
-          "Passport (Back)",
+          "Passport",
           "Sponsor's emriates ID",
           "Share sale agreement"
         ],
         "PriceDetails": [
           {
             "Text": "Gov. fees",
-            "Value": 328
+            "Value": 326
           },
           {
             "Text": "Service charge",
@@ -14209,7 +16694,7 @@ export default visa_options = {
           "Text": "Notes",
           "Name": "Notes",
           "Options": [
-            "\n\n\n\n\n\nStartFragment\n\n\nKindly note that for any of the\ncancellation whose outside the country less than six months, any of the\nfollowing conditions has to be met\n\n\n\n•Original passport has to be submitted\n\n\n\n•Residence should be expired from outside \n\n\n\n•Death from abroad \n\n\n\nFor any cancellation outside the country\nwho is abroad for more than six months usual procedure will be followed for all\ncategories.\n\n\nEndFragment"
+            " Kindly note that for any of the  cancellation whose outside the country less than six months, any of the  following conditions has to be met        •Original passport has to be submitted        •Residence should be expired from outside         •Death from abroad         For any cancellation outside the country  who is abroad for more than six months usual procedure will be followed for all  categories.      EndFragment"
           ]
         },
         "OriginalDocumentRequired": {
@@ -14231,14 +16716,13 @@ export default visa_options = {
         "docs": [
           "Sponsor's emriates ID",
           "Sponsor's visa",
-          "Sponsored passport (Front)",
-          "Sponsored passport (Back)",
+          "Sponsored passport",
           "Sponsored visa"
         ],
         "PriceDetails": [
           {
             "Text": "Gov. fees",
-            "Value": 230
+            "Value": 190
           },
           {
             "Text": "Service charge",
@@ -14249,7 +16733,7 @@ export default visa_options = {
           "Text": "Notes",
           "Name": "Notes",
           "Options": [
-            "\n\n\n\n\n\nStartFragment\n\n\nKindly note that for any of the\ncancellation whose outside the country less than six months, any of the\nfollowing conditions has to be met\n\n\n\n•Original passport has to be submitted\n\n\n\n•Residence should be expired from outside \n\n\n\n•Death from abroad \n\n\n\nFor any cancellation outside the country\nwho is abroad for more than six months usual procedure will be followed for all\ncategories.\n\n\nEndFragment"
+            " Kindly note that for any of the  cancellation whose outside the country less than six months, any of the  following conditions has to be met        •Original passport has to be submitted        •Residence should be expired from outside         •Death from abroad         For any cancellation outside the country  who is abroad for more than six months usual procedure will be followed for all  categories.      EndFragment"
           ]
         },
         "OriginalDocumentRequired": {
@@ -14264,14 +16748,13 @@ export default visa_options = {
         "docs": [
           "Sponsor's emriates ID",
           "Sponsor's visa",
-          "Sponsored passport (Front)",
-          "Sponsored passport (Back)",
+          "Sponsored passport",
           "Sponsored visa"
         ],
         "PriceDetails": [
           {
             "Text": "Gov. fees",
-            "Value": 328
+            "Value": 290
           },
           {
             "Text": "Service charge",
@@ -14282,7 +16765,7 @@ export default visa_options = {
           "Text": "Notes",
           "Name": "Notes",
           "Options": [
-            "\n\n\n\n\n\nStartFragment\n\n\nKindly note that for any of the\ncancellation whose outside the country less than six months, any of the\nfollowing conditions has to be met\n\n\n\n•Original passport has to be submitted\n\n\n\n•Residence should be expired from outside \n\n\n\n•Death from abroad \n\n\n\nFor any cancellation outside the country\nwho is abroad for more than six months usual procedure will be followed for all\ncategories.\n\n\nEndFragment"
+            " Kindly note that for any of the  cancellation whose outside the country less than six months, any of the  following conditions has to be met        •Original passport has to be submitted        •Residence should be expired from outside         •Death from abroad         For any cancellation outside the country  who is abroad for more than six months usual procedure will be followed for all  categories.      EndFragment"
           ]
         },
         "OriginalDocumentRequired": {

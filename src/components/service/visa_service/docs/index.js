@@ -169,11 +169,12 @@ class _Container extends Component {
       CourierCharge: 10
     };
 
-    if (this.state.submissionType == "Through Courier")
+ /*   if (this.state.submissionType == "Through Courier")
       price_details.push({
         Text: "Courier Charge",
         Value: this.state.courier_charge
       });
+  */
     docsAndPayment.PriceDetils = price_details;
     docsAndPayment.Notes = this.props.navigation.state.params.details.Notes;
     docsAndPayment.OriginalDocumentRequired = this.props.navigation.state.params.details.OriginalDocumentRequired;

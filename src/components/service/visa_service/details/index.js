@@ -34,10 +34,12 @@ class _Container extends Component {
   }
 
   componentDidMount = () => {
-    const total = this.props.navigation.state.params.docsAndPayment.PriceDetils.reduce(
+    let total = this.props.navigation.state.params.docsAndPayment.PriceDetils.reduce(
       (accumulator, item) => accumulator + parseFloat(item.Value),
       0
     );
+    if(this.props.navigation.state.params.docsAndPayment.OriginalDocumentSubmissionType.Value == "Through Courier")
+      total += 10;
     this.setState({ totalBillAmt: total });
   };
 
@@ -234,7 +236,20 @@ class _Container extends Component {
           </View>
           <Right />
           {this.renderPriceDts()}
-
+          {
+            this.props.navigation.state.params.docsAndPayment.OriginalDocumentSubmissionType.Value == "Through Courier" ?
+            (
+              <Item>
+                <Text style={{ padding: 10, fontWeight: "bold" }}>
+                  Courier Charge : 
+                </Text>
+                <Right>
+                  <Text style={{ padding: 10 }}>AED. 10</Text>
+                </Right>
+              </Item>
+              ) :
+              (<View />)
+          }
           {this.renderTotalPrice()}
 
           <Button
