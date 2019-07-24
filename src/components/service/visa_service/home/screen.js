@@ -500,16 +500,14 @@ export default withFormik({
     const { navigation, updateTotalAmount } = props;
     const token = props.token.token;
     const data = navigation.state.params.data;
+    const Address =`${values.Address1},${values.Street} ${values.City}, ${
+      values.SelectedState
+    } ${values.AddressCountry} - ${values.Zip}`;
     data.CustomerName = values.CustomerName;
     data.Email = values.Email;
     data.PersonalPhone = values.PersonalPhone;
     data.OfficePhone = values.OfficePhone;
-    data.Address = values.Address1;
-    data.Street = values.Street;
-    data.City = values.City;
-    data.Zip = values.Zip;
-    data.AddressCountry = values.AddressCountry;
-    data.AddressState = values.SelectedState;
+    data.Address = Address;
     data.Nationality = values.Nationality;
     data.PassportExiryDate = values.PassportExiryDate;
 

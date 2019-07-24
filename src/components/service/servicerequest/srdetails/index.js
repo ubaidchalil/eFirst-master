@@ -118,7 +118,7 @@ class SRInfo extends Component {
               <View style={{ flex: 1 }}>
                 <Text style={styles.value}> {Address} </Text>
               </View>
-            </View>
+            </View> 
             {ServiceName === "ATTESTATION SERVICE" && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Country : </Text>
