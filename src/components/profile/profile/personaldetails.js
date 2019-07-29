@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { View, TouchableOpacity, StyleSheet } from "react-native";
+import {
+  View,
+  TouchableOpacity,
+  StyleSheet,
+  Dimensions,
+  Platform
+} from "react-native";
 import {
   Icon,
   Text,
@@ -15,6 +21,9 @@ import DateTimePicker from "react-native-modal-datetime-picker";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
+
+const deviceWidth = Dimensions.get("window").width;
+
 const PersonalDetails = ({
   personaldetail,
   handleSubmit,
@@ -58,7 +67,7 @@ const PersonalDetails = ({
               transparent
               onPress={() => setFieldValue("ShowEditPersonal", true)}
             >
-              <Icon style={{ color: "black", fontSize: 23 }} name="create" />
+              <Icon style={{ color: "black", fontSize: 25 }} name="create" />
             </Button>
           ) : (
             <Button
@@ -68,7 +77,10 @@ const PersonalDetails = ({
                 setFieldValue("ShowEditPersonal", false);
               }}
             >
-              <Icon style={{ color: "black", fontSize: 23 }} name="checkmark" />
+              <Icon
+                style={{ color: "black", fontSize: 25 }}
+                name="md-checkmark-circle"
+              />
             </Button>
           )}
         </View>
@@ -109,7 +121,15 @@ const PersonalDetails = ({
                   <Picker
                     mode="dropdown"
                     iosIcon={<Icon name="arrow-down" />}
-                    style={{ width: undefined }}
+                    style={
+                      Platform.OS === "ios"
+                        ? {
+                            width: deviceWidth - 30,
+                            marginLeft: -10
+                          }
+                        : { width: undefined }
+                    }
+                    textStyle={{ fontSize: 13 }}
                     placeholder="Gender"
                     placeholderStyle={{ color: "#bfc6ea" }}
                     placeholderIconColor="#007aff"

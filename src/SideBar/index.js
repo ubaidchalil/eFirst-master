@@ -106,7 +106,7 @@ class Container1 extends Component {
               onPress={this.navigateToHome("HomeScreen")}
             >
               <View style={styles.left}>
-                <Icon style={styles.icon} name="arrow-dropright" />
+                <Icon style={styles.icon} name="md-arrow-dropright" />
               </View>
               <View style={styles.body}>
                 <Text style={styles.text}>Dashboard</Text>
@@ -122,7 +122,7 @@ class Container1 extends Component {
               }
             >
               <View style={styles.left}>
-                <Icon style={styles.icon} name="arrow-dropright" />
+                <Icon style={styles.icon} name="md-arrow-dropright" />
               </View>
               <View style={styles.body}>
                 <Text style={styles.text}>My Requests</Text>
@@ -133,7 +133,7 @@ class Container1 extends Component {
               onPress={this.navigateToScreen("SelectService")}
             >
               <View style={styles.left}>
-                <Icon style={styles.icon} name="arrow-dropright" />
+                <Icon style={styles.icon} name="md-arrow-dropright" />
               </View>
               <View style={styles.body}>
                 <Text style={styles.text}>Request a Service</Text>
@@ -144,7 +144,7 @@ class Container1 extends Component {
               onPress={this.navigateToScreen("Profile")}
             >
               <View style={styles.left}>
-                <Icon style={styles.icon} name="arrow-dropright" />
+                <Icon style={styles.icon} name="md-arrow-dropright" />
               </View>
               <View style={styles.body}>
                 <Text style={styles.text}>My Profile</Text>
@@ -155,7 +155,7 @@ class Container1 extends Component {
               onPress={this.navigateToScreen("FAQ")}
             >
               <View style={styles.left}>
-                <Icon style={styles.icon} name="arrow-dropright" />
+                <Icon style={styles.icon} name="md-arrow-dropright" />
               </View>
               <View style={styles.body}>
                 <Text style={styles.text}>FAQ</Text>
@@ -166,7 +166,7 @@ class Container1 extends Component {
               onPress={this.navigateToScreen("Support")}
             >
               <View style={styles.left}>
-                <Icon style={styles.icon} name="arrow-dropright" />
+                <Icon style={styles.icon} name="md-arrow-dropright" />
               </View>
               <View style={styles.body}>
                 <Text style={styles.text}>Support</Text>
@@ -177,7 +177,7 @@ class Container1 extends Component {
               onPress={this.props.Logout}
             >
               <View style={styles.left}>
-                <Icon style={styles.icon} name="arrow-dropright" />
+                <Icon style={styles.icon} name="md-arrow-dropright" />
               </View>
               <View style={styles.body}>
                 <Text style={styles.text}>Logout</Text>
@@ -232,7 +232,8 @@ const styles = {
     color: "white"
   },
   body: {
-    flex: 0.8
+    flex: 0.8,
+    paddingTop: 5
   },
   left: {
     flex: 0.2

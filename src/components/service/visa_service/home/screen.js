@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { View, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+  Dimensions,
+  Platform
+} from "react-native";
 import {
   Container,
   Picker,
@@ -30,6 +37,8 @@ import { nationalities } from "./NationalityPicker";
 import Modal from "react-native-modal";
 import TermsandConditon from "../../../termsandcondition";
 
+const deviceWidth = Dimensions.get("window").width;
+
 const styles = {
   item_margin: {
     marginTop: 5
@@ -38,7 +47,14 @@ const styles = {
     backgroundColor: "white",
     borderRadius: 13,
     borderColor: "rgba(0, 0, 0, 0.1)"
-  }
+  },
+  pickerStyle:
+    Platform.OS === "ios"
+      ? {
+          width: deviceWidth - 30,
+          marginLeft: -10
+        }
+      : { width: undefined }
 };
 
 const DocumentAttestation = ({
@@ -227,7 +243,7 @@ const DocumentAttestation = ({
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }}
+                style={styles.pickerStyle}
                 placeholder="State *"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
@@ -315,7 +331,7 @@ const DocumentAttestation = ({
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }}
+                style={styles.pickerStyle}
                 placeholder="Nationality *"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
@@ -375,6 +391,7 @@ const DocumentAttestation = ({
             <View>
               <ListItem style={{ borderBottomWidth: 0 }}>
                 <CheckBox
+                  color="green"
                   checked={values.AgreeTerms}
                   onPress={() => {
                     setFieldValue("AgreeTerms", !values.AgreeTerms);
@@ -500,7 +517,7 @@ export default withFormik({
     const { navigation, updateTotalAmount } = props;
     const token = props.token.token;
     const data = navigation.state.params.data;
-    const Address =`${values.Address1},${values.Street} ${values.City}, ${
+    const Address = `${values.Address1},${values.Street} ${values.City}, ${
       values.SelectedState
     } ${values.AddressCountry} - ${values.Zip}`;
     data.CustomerName = values.CustomerName;

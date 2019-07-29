@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { View, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+  Dimensions,
+  Platform
+} from "react-native";
 import {
   Container,
   Picker,
@@ -27,6 +34,9 @@ import { Color } from "../../../constants";
 import MyHeader from "../../../Header";
 import Modal from "react-native-modal";
 import TermsandConditon from "../../termsandcondition";
+
+const deviceWidth = Dimensions.get("window").width;
+
 const styles = {
   item_margin: {
     marginTop: 5
@@ -35,7 +45,14 @@ const styles = {
     backgroundColor: "white",
     borderRadius: 13,
     borderColor: "rgba(0, 0, 0, 0.1)"
-  }
+  },
+  pickerStyle:
+    Platform.OS === "ios"
+      ? {
+          width: deviceWidth - 30,
+          marginLeft: -10
+        }
+      : { width: undefined }
 };
 
 const DocumentAttestation = ({
@@ -236,7 +253,7 @@ const DocumentAttestation = ({
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }}
+                style={styles.pickerStyle}
                 placeholder="State *"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
@@ -324,7 +341,7 @@ const DocumentAttestation = ({
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }}
+                style={styles.pickerStyle}
                 placeholder="Country"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
@@ -359,7 +376,7 @@ const DocumentAttestation = ({
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }}
+                style={styles.pickerStyle}
                 placeholder="Certificate Type"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"

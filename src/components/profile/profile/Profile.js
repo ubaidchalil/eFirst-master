@@ -125,7 +125,7 @@ export default class ListAvatarExample extends Component {
                 </TouchableOpacity>
               ) : (
                 <TouchableOpacity onPress={() => this.SaveUser()}>
-                  <Icon style={{ color: "black" }} name="checkmark" />
+                  <Icon style={{ color: "black" }} name="md-checkmark-circle" />
                 </TouchableOpacity>
               )}
             </View>
@@ -149,7 +149,7 @@ export default class ListAvatarExample extends Component {
                 </TouchableOpacity>
               ) : (
                 <TouchableOpacity onPress={() => this.SavePersonalDts()}>
-                  <Icon style={{ color: "black" }} name="checkmark" />
+                  <Icon style={{ color: "black" }} name="md-checkmark-circle" />
                 </TouchableOpacity>
               )}
             </View>
@@ -233,7 +233,7 @@ export default class ListAvatarExample extends Component {
                 </TouchableOpacity>
               ) : (
                 <TouchableOpacity onPress={() => this.SaveOfficeDts()}>
-                  <Icon style={{ color: "black" }} name="checkmark" />
+                  <Icon style={{ color: "black" }} name="md-checkmark-circle" />
                 </TouchableOpacity>
               )}
             </View>

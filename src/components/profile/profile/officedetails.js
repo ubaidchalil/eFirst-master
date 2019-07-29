@@ -55,11 +55,14 @@ const OfficeDetails = ({
               transparent
               onPress={() => setFieldValue("ShowEditOffice", true)}
             >
-              <Icon style={{ color: "black", fontSize: 23 }} name="create" />
+              <Icon style={{ color: "black", fontSize: 25 }} name="create" />
             </Button>
           ) : (
             <Button transparent onPress={submit}>
-              <Icon style={{ color: "black", fontSize: 23 }} name="checkmark" />
+              <Icon
+                style={{ color: "black", fontSize: 25 }}
+                name="md-checkmark-circle"
+              />
             </Button>
           )}
         </View>
@@ -219,6 +222,6 @@ onPress={() => {
   setFieldValue("ShowEditOffice", false);
 }}
 >
-<Icon style={{ color: "black", fontSize: 20 }} name="checkmark" />
+<Icon style={{ color: "black", fontSize: 20 }} name="md-checkmark-circle" />
 </TouchableOpacity> */
 }

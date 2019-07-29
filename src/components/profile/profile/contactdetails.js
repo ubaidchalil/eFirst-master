@@ -51,7 +51,7 @@ const ContactDetails = ({
               transparent
               onPress={() => setFieldValue("ShowEditContact", true)}
             >
-              <Icon style={{ color: "black", fontSize: 23 }} name="create" />
+              <Icon style={{ color: "black", fontSize: 25 }} name="create" />
             </Button>
           ) : (
             <Button
@@ -61,7 +61,10 @@ const ContactDetails = ({
                 setFieldValue("ShowEditContact", false);
               }}
             >
-              <Icon style={{ color: "black", fontSize: 23 }} name="checkmark" />
+              <Icon
+                style={{ color: "black", fontSize: 25 }}
+                name="md-checkmark-circle"
+              />
             </Button>
           )}
         </View>

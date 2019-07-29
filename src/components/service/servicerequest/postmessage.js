@@ -56,12 +56,14 @@ const PostMessage = ({
                   value={values.MessageTitle}
                   error={touched.MessageTitle && errors.MessageTitle}
                   underlineColor={Color.secondary}
+                  style={{ fontSize: 15, paddingLeft: 10 }}
                 />
               ) : (
                 <Input
                   placeholder="Message Title"
                   name="MessageTitle"
                   label="Title"
+                  style={{ fontSize: 15, paddingLeft: 10 }}
                   value={action.Title}
                   error={touched.MessageTitle && errors.MessageTitle}
                   underlineColor={Color.secondary}

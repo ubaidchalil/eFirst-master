@@ -5,7 +5,8 @@ import {
   ScrollView,
   StyleSheet,
   Platform,
-  TouchableOpacity
+  TouchableOpacity,
+  Dimensions
 } from "react-native";
 
 import {
@@ -38,6 +39,8 @@ import {
   DocumentPicker,
   DocumentPickerUtil
 } from "react-native-document-picker";
+
+const deviceWidth = Dimensions.get("window").width;
 
 const LanguageTranslation = ({
   handleSubmit,
@@ -376,7 +379,7 @@ const LanguageTranslation = ({
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }}
+                style={styles.pickerStyle}
                 placeholder="State *"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
@@ -462,7 +465,7 @@ const LanguageTranslation = ({
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }}
+                style={styles.pickerStyle}
                 placeholder="Document Type *"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
@@ -489,7 +492,7 @@ const LanguageTranslation = ({
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }}
+                style={styles.pickerStyle}
                 placeholder="Document Language *"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
@@ -520,7 +523,7 @@ const LanguageTranslation = ({
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }}
+                style={styles.pickerStyle}
                 placeholder="Document to be Translated *"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
@@ -964,5 +967,12 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 13,
     borderColor: "rgba(0, 0, 0, 0.1)"
-  }
+  },
+  pickerStyle:
+    Platform.OS === "ios"
+      ? {
+          width: deviceWidth - 30,
+          marginLeft: -10
+        }
+      : { width: undefined }
 });
