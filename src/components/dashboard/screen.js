@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Image, StyleSheet, TouchableOpacity, ScrollView, RefreshControl } from "react-native";
 import { navigation } from "react-navigation";
 
 import {
@@ -106,11 +106,14 @@ let styles = StyleSheet.create({
   }
 });
 
-export default ({ navigation, dashboard, servicesData, token }) => {
+export default ({ navigation, dashboard, servicesData, token, _onRefresh, state }) => {
+  
   const loadServiceRequestsByStatus = statusId => {
     navigateToMyRequestWithTitleandLabel(statusId);
     servicesData({ statusId, token: token.token });
   };
+  
+
   const navigateToMyRequestWithTitleandLabel = statusId => {
     switch (statusId) {
       case 1: {
@@ -149,7 +152,14 @@ export default ({ navigation, dashboard, servicesData, token }) => {
   return (
     <Container>
       <MyHeader navigation={navigation} header="Dashboard" />
-      <Content>
+        <ScrollView 
+          refreshControl={
+            <RefreshControl
+              refreshing={state.Refreshing}
+              onRefresh={_onRefresh}
+            />
+          } 
+        >
         <View
           style={{
             flex: 1,
@@ -180,7 +190,7 @@ export default ({ navigation, dashboard, servicesData, token }) => {
         </View>
 
         <TouchableOpacity
-          onPress={() => loadServiceRequestsByStatus(1)}
+          onPress={_onRefresh}
           style={[styles.card_outer, styles.required_bgcolor]}
         >
           <View style={styles.card_inner}>
@@ -339,7 +349,7 @@ export default ({ navigation, dashboard, servicesData, token }) => {
             />
           </View>
         </TouchableOpacity>
-      </Content>
+        </ScrollView>
     </Container>
   );
 };

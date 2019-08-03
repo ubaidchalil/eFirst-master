@@ -30,12 +30,18 @@ const renderList = () => {
   return data.map((datum, index) => {
     return (
       <View key={index} style={styles.item_border}>
-        <View style={{ flexDirection: "row" }}>
-          <Text style={styles.label}>Phone </Text>
-        </View>
-        <View>
-          <Text style={styles.value}>{datum.phone} </Text>
-        </View>
+        {(datum.phone != "") ?
+          <View >
+            <View style={{ flexDirection: "row" }}>
+              <Text style={styles.label}>Phone </Text>
+            </View>
+            <View>
+              <Text style={styles.value}>{datum.phone} </Text>
+            </View>
+          </View>
+          :
+          <View />
+        }
         <View style={{ flexDirection: "row" }}>
           <Text style={styles.label}>Email </Text>
         </View>
@@ -61,22 +67,16 @@ const data = [
       "Emirates First Business Service LLC\nOffice No.1, Al Hilal Bank Building,\nNear Al Twar Centre, Al Qusais \nDubai, UAE"
   },
   {
-    phone: "+971 55 277 7731 +971 56 555 4999",
+    phone: "+971 42 588 894",
     email: "welcome@efirst.ae",
     address:
       "Emirates First Business Service LLC\nOffice # G08,\nB-Block, Business Village,\nNear Clock Tower,Deira,\nDubai, UAE"
   },
   {
-    phone: "+971 55 277 7731 +971 56 555 4999",
-    email: "welcome@efirst.ae",
+    phone: "+1(647)354-1222",
+    email: "welcome@efirst.ca",
     address:
-      "Emirates First Business Service LLC\nOffice No.1, Al Hilal Bank Building,\nNear Al Twar Centre, Al Qusais \nDubai, UAE"
-  },
-  {
-    phone: "+971 55 277 7731 +971 56 555 4999",
-    email: "welcome@efirst.ae",
-    address:
-      "Emirates First Business Service LLC\nOffice No.1, Al Hilal Bank Building,\nNear Al Twar Centre, Al Qusais \nDubai, UAE"
+      "Emirates First Business Service LLC\n180 Northfield Drive West,\nUnit 4, 1st Floor\nWaterloo, Ontario, N2L 0C7,\nCanada."
   }
 ];
 const Support = ({
