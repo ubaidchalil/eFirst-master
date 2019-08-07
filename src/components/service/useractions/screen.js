@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import { View, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, ScrollView, RefreshControl, TouchableOpacity } from "react-native";
 import {
   Container,
   Content,
   Icon,
   Input,
   Text,
-  Button,
+  Item,
   StyleProvider,
-  Header,
+  Button,
   Left,
   Right,
   Title,
@@ -25,7 +25,10 @@ export default ({
   services,
   serviceRequestData,
   headerTitle,
-  noDataLabel
+  noDataLabel,
+  setSearchText,
+  state,
+  _onRefresh
 }) => {
   const renderList = () =>
     services.data.map(service => <Greeting service={service} />);
@@ -42,6 +45,7 @@ export default ({
     serviceRequestData({ serviceId, token: token1 });
     navigation.navigate("ServiceDetail");
   };
+
   const getTextandBackgroundColor = status => {
     switch (status) {
       case "In Review":
@@ -81,8 +85,27 @@ export default ({
       <Container>
         <MyHeader navigation={navigation} header={headerTitle} />
         <Content style={{ padding: 5 }}>
+          
+          <Item >
+            <Icon name="ios-search" />
+            <Input placeholder="Search" style={{ fontSize:14 }}
+              onChangeText={(searchText)=>{setSearchText(searchText)}}
+              value={state.searchText}
+            />
+            <Button transparent onPress={() => setSearchText("")}>
+              <Icon name="close" />
+            </Button>
+          </Item>
+          <ScrollView 
+            refreshControl={
+              <RefreshControl
+                refreshing={state.Refreshing}
+                onRefresh={_onRefresh}
+              />
+            } 
+          >
           {services.data.length > 0 ? (
-            services.data.map(service => {
+            services.data.filter(service => (service.SRTitle.toString().toLowerCase() + " - SR" + service.SRID.toString().toLowerCase()).includes(state.searchText.toLowerCase())).map(service => {
               const res = getTextandBackgroundColor(service.SRStatusName);
 
               return (
@@ -108,6 +131,7 @@ export default ({
               <Text>{noDataLabel}</Text>
             </View>
           )}
+          </ScrollView>
         </Content>
       </Container>
     </StyleProvider>

@@ -7,73 +7,35 @@ import Loader from "../../styled/loader";
 import AlertView from "../../styled/alert-view";
 
 class Container extends Component {
-  // componentDidMount = () => {
-  //   const statusId = this.props.navigation.state.params
-  //     ? this.props.navigation.state.params.statusId
-  //     : null;
-  //   const token = this.props.token.token;
-  //   this.props.servicesData({ statusId, token });
-  // };
-
-  // componentDidUpdate = () => {
-  //   const statusId = this.props.navigation.state.params
-  //     ? this.props.navigation.state.params.statusId
-  //     : null;
-  //   const token = this.props.token.token;
-  //   this.props.servicesData({ statusId, token });
-  // };
+  
   constructor(props) {
     super(props);
     this.state = {
       headerTitle: "",
-      noDataLabel: ""
+      noDataLabel: "",
+      searchText : "",
+      Refreshing : false
     };
   }
-  componentDidMount = () => {
-    // this.updateTitleandLabel(statusId);
-  };
-  // updateTitleandLabel = statusId => {
-  //   switch (statusId) {
-  //     case 0: {
-  //       this.setState({
-  //         headerTitle: "My Requests",
-  //         noDataLabel: "No recent service request"
-  //       });
-  //       break;
-  //     }
-  //     case 1: {
-  //       this.setState({
-  //         headerTitle: "Action Required",
-  //         noDataLabel: "No new action required item available"
-  //       });
-  //       break;
-  //     }
-  //     case 2: {
-  //       this.setState({
-  //         headerTitle: "In Review",
-  //         noDataLabel: "Service not requested"
-  //       });
-  //       break;
-  //     }
 
-  //     case 3: {
-  //       this.setState({
-  //         headerTitle: "Completed",
-  //         noDataLabel: "No recent Completed service request"
-  //       });
-  //       break;
-  //     }
-  //     case 4: {
-  //       this.setState({
-  //         headerTitle: "Rejected",
-  //         noDataLabel: "No recent Rejected service request"
-  //       });
-  //       break;
-  //     }
-  //     default:
-  //       break;
-  //   }
-  // };
+  componentDidUpdate = () => {
+    const { loading, error, data } = this.props.services;
+    console.log("result => ",`${loading} - ${error} - ${data}`)
+    if (!loading && !error && data && this.state.Refreshing) {
+      this.setState({ Refreshing : false })
+    }
+  };
+
+  _onRefresh = () => {
+    this.setState({ Refreshing : true })
+    const { token } = this.props.token;
+    this.props.servicesData({ statusId: null, token });
+  } 
+  
+  setSearchText = (searchText) => {
+    this.setState({searchText});
+  }
+
   render = () => {
     const {
       services: { error, loading }
@@ -85,7 +47,9 @@ class Container extends Component {
     return (
       <View style={styles.container}>
         <Loader loading={loading} />
-        <UserActions {...this.props} {...this.props.navigation.state.params} />
+        <UserActions 
+        _onRefresh={this._onRefresh}
+        {...this.props} state={this.state} {...this.props.navigation.state.params} setSearchText={this.setSearchText} />
         {error && <AlertView type="error" />}
         {success && <AlertView type="success" />}
       </View>

@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { View } from "react-native";
 import { DashboardData } from "../dashboard/action";
 import Loader from "../styled/loader";
-var ImagePicker = require("react-native-image-picker");
 
 class SplashScreen extends Component {
   constructor(props) {
@@ -12,6 +11,7 @@ class SplashScreen extends Component {
       dashboardDataLoaded: false
     };
   }
+
   componentDidMount() {
     const { token } = this.props.token;
     this.props.DashboardData(token);
@@ -45,12 +45,10 @@ class SplashScreen extends Component {
         InReviewTotalUpdateCount +
         RejectedNewUpdateCount +
         RejectedTotalUpdateCount;
-      if (total == 0) {
-          this.props.navigation.navigate("SelectService");
-      } else {
+        
           this.props.navigation.navigate("Home");
-      }
     }
+    
   }
   
   render = () => {

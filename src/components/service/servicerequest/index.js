@@ -110,12 +110,23 @@ class ServiceDetails extends Component {
               </Text>
             </Left>
             <Right>
-              <Button transparent onPress={() => this.MessageModal(SRID, 0)}>
-                <IconMaterialIcons
-                  name="chat"
-                  style={{ fontSize: 20, color: "black" }}
-                />
-              </Button>
+              <View style={{ flexDirection: "row", width:60, justifyContent: "space-between" }} >
+                <Button transparent onPress={() => {
+                      const { token } = this.props;
+                      this.props.serviceRequestData({ serviceId: SRID, token: token.token });
+                  }}>
+                  <IconMaterialIcons
+                    name="refresh"
+                    style={{ fontSize: 20, color: "black" }}
+                  />
+                </Button>
+                <Button transparent onPress={() => this.MessageModal(SRID, 0)}>
+                  <IconMaterialIcons
+                    name="chat"
+                    style={{ fontSize: 20, color: "black" }}
+                  />
+                </Button>
+              </View>
             </Right>
           </View>
           <Tabs>

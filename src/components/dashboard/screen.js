@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Image, StyleSheet, TouchableOpacity, ScrollView, RefreshControl } from "react-native";
+import { View, Image, StyleSheet, TouchableOpacity, ScrollView, RefreshControl, Dimensions } from "react-native";
 import { navigation } from "react-navigation";
 
 import {
@@ -21,6 +21,9 @@ import material from "../../../native-base-theme/variables/material";
 import IconFontAwesome from "react-native-vector-icons/FontAwesome";
 import MyHeader from "../../Header";
 
+const { height } = Dimensions.get('window');
+const cardHeight = height/5<150 ? 150 : height/5;
+
 let styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
@@ -40,7 +43,7 @@ let styles = StyleSheet.create({
     padding: 5
   },
   card_outer: {
-    height: 150,
+    height: cardHeight,
     alignItems: "center"
   },
   card_inner: {
@@ -190,7 +193,7 @@ export default ({ navigation, dashboard, servicesData, token, _onRefresh, state 
         </View>
 
         <TouchableOpacity
-          onPress={_onRefresh}
+          onPress={() => loadServiceRequestsByStatus(1)}
           style={[styles.card_outer, styles.required_bgcolor]}
         >
           <View style={styles.card_inner}>
