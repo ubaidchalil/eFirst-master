@@ -18,12 +18,13 @@ class Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Refreshing : false
-    }
+      Refreshing: false
+    };
   }
-  
+
   componentDidMount = () => {
     const { token } = this.props.token;
+    this.props.DashboardData(token);
     this.props.profileData(token);
     this.props.ClearFaq();
     this.props.FAQCategoryData(token);
@@ -32,20 +33,20 @@ class Container extends Component {
     this.props.getdoclanguage(token);
     this.props.documentationTypes(token);
   };
-  
+
   componentDidUpdate = () => {
     const { loading, error, data } = this.props.dashboard;
-    
+
     if (!loading && !error && data && this.state.Refreshing) {
-      this.setState({ Refreshing : false })
+      this.setState({ Refreshing: false });
     }
   };
 
-  _onRefresh = ()=>{
-    this.setState({ Refreshing : true })
+  _onRefresh = () => {
+    this.setState({ Refreshing: true });
     const { token } = this.props.token;
     this.props.DashboardData(token);
-  } 
+  };
 
   render = () => {
     const { dashboard } = this.props;
@@ -53,9 +54,11 @@ class Container extends Component {
     return (
       <View style={{ flex: 1 }}>
         <Loader loading={loading} />
-        <HomeScreen {...this.props}
-        _onRefresh={this._onRefresh}
-        state={this.state} />
+        <HomeScreen
+          {...this.props}
+          _onRefresh={this._onRefresh}
+          state={this.state}
+        />
         {error && <AlertView type="error" />}
       </View>
     );

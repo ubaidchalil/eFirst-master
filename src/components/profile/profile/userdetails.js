@@ -54,18 +54,26 @@ const UserDetails = ({
         console.log("User tapped custom button: ", response.customButton);
       } else {
         let source = { uri: response.uri };
+        let imgName = response.fileName;
+        if (Platform.OS === "ios") {
+          // on iOS, using camera returns undefined fileName. This fixes that issue, so API can work.
+          var getFilename = response.uri.split("/");
+          imgName = getFilename[getFilename.length - 1];
+        }
+
         const pic =
           Platform.OS === "ios"
             ? {
                 uri: response.uri,
                 type: response.type,
-                name: response.fileName
+                name: imgName
               }
             : {
                 uri: response.uri,
                 type: response.type,
-                name: response.fileName
+                name: imgName
               };
+        console.log("PiC====>", pic);
         setFieldValue("ProfilePic", pic);
         setFieldValue("ProfilePicName", response.fileName);
         setFieldValue("ImageUrl", source);

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { View } from "react-native";
+import { View, Platform } from "react-native";
 import {
   Container,
   Content,
@@ -38,9 +38,7 @@ class _Container extends Component {
     };
   }
 
-  componentDidMount = () => {
-    
-  };
+  componentDidMount = () => {};
   componentDidUpdate() {}
   showToast = text => {
     this.refs.validationToasts.show(text, 3000);
@@ -67,11 +65,18 @@ class _Container extends Component {
       } else if (response.customButton) {
         console.log("User tapped custom button: ", response.customButton);
       } else {
+        let imgName = response.fileName;
+        if (Platform.OS === "ios") {
+          // on iOS, using camera returns undefined fileName. This fixes that issue, so API can work.
+          var getFilename = response.uri.split("/");
+          imgName = getFilename[getFilename.length - 1];
+        }
         const file = {
           uri: response.uri,
           type: response.type,
-          name: response.fileName
+          name: imgName
         };
+
         this.state.docItem.push(file);
         _docs.push(doc);
         if (index < 0) {
@@ -169,7 +174,7 @@ class _Container extends Component {
       CourierCharge: 10
     };
 
- /*   if (this.state.submissionType == "Through Courier")
+    /*   if (this.state.submissionType == "Through Courier")
       price_details.push({
         Text: "Courier Charge",
         Value: this.state.courier_charge

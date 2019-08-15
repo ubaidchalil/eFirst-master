@@ -79,11 +79,16 @@ const LanguageTranslation = ({
         console.log("User tapped custom button: ", response.customButton);
       } else {
         const source = { uri: response.uri };
-
+        let imgName = response.fileName;
+        if (Platform.OS === "ios") {
+          // on iOS, using camera returns undefined fileName. This fixes that issue, so API can work.
+          var getFilename = response.uri.split("/");
+          imgName = getFilename[getFilename.length - 1];
+        }
         const file = {
           uri: response.uri,
           type: response.type,
-          name: response.fileName
+          name: imgName
         };
 
         var files = values.Files;

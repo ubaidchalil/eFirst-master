@@ -18,8 +18,7 @@ class SplashScreen extends Component {
     this.setState({ dashboardDataLoaded: true });
   }
 
-  componentDidUpdate() {
-
+  componentDidUpdate(prevProps) {
     const { dashboard } = this.props;
     const { loading, error, data } = dashboard;
     const { dashboardDataLoaded } = this.state;
@@ -45,18 +44,16 @@ class SplashScreen extends Component {
         InReviewTotalUpdateCount +
         RejectedNewUpdateCount +
         RejectedTotalUpdateCount;
-        
-          this.props.navigation.navigate("Home");
+
+      //this.props.navigation.navigate("Home");
     }
-    
   }
-  
+
   render = () => {
+    this.props.navigation.navigate("Home");
     const { loading, error } = this.props.dashboard;
     return (
-      <View style={{ flex: 1 }}>
-        <Loader loading={loading} />
-      </View>
+      <View style={{ flex: 1 }}>{/* <Loader loading={loading} /> */}</View>
     );
   };
 }

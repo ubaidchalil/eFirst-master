@@ -30,8 +30,8 @@ const renderList = () => {
   return data.map((datum, index) => {
     return (
       <View key={index} style={styles.item_border}>
-        {(datum.phone != "") ?
-          <View >
+        {datum.phone != "" ? (
+          <View>
             <View style={{ flexDirection: "row" }}>
               <Text style={styles.label}>Phone </Text>
             </View>
@@ -39,9 +39,9 @@ const renderList = () => {
               <Text style={styles.value}>{datum.phone} </Text>
             </View>
           </View>
-          :
+        ) : (
           <View />
-        }
+        )}
         <View style={{ flexDirection: "row" }}>
           <Text style={styles.label}>Email </Text>
         </View>
@@ -230,8 +230,9 @@ export default withFormik({
       .email("Invalid")
   }),
 
-  handleSubmit: (values, { props }) => {
+  handleSubmit: (values, { props, setFieldValue }) => {
     const token = props.token.token;
+    setFieldValue("Message", "");
     return values.supportCreate({ ...values, token });
   }
 })(Support);
@@ -247,6 +248,6 @@ const styles = {
     borderColor: "#ECF0F1",
     padding: 10
   },
-  label: { fontSize: 13, paddingTop:5 },
-  value: { color: "#A6ACAF", fontSize: 13, paddingTop:5, paddingLeft:5 }
+  label: { fontSize: 13, paddingTop: 5 },
+  value: { color: "#A6ACAF", fontSize: 13, paddingTop: 5, paddingLeft: 5 }
 };

@@ -68,11 +68,18 @@ const LanguageTranslation = ({
       } else {
         const source = { uri: response.uri };
 
+        let imgName = response.fileName;
+        if (Platform.OS === "ios") {
+          // on iOS, using camera returns undefined fileName. This fixes that issue, so API can work.
+          var getFilename = response.uri.split("/");
+          imgName = getFilename[getFilename.length - 1];
+        }
         const file = {
           uri: response.uri,
           type: response.type,
-          name: response.fileName
+          name: imgName
         };
+
         // values.Files.push(file);
         setFieldValue("Files", file);
         // You can also display the image using data:
@@ -303,7 +310,6 @@ const LanguageTranslation = ({
               )}
             </Item>
 
-
             <Item style={styles.item_margin}>
               <Textarea
                 rowSpan={5}
@@ -353,9 +359,7 @@ const LanguageTranslation = ({
                 placeholderStyle={{ color: "#bfc6ea" }}
                 placeholderIconColor="#007aff"
                 selectedValue={values.State}
-                onValueChange={value =>
-                  setFieldValue("State", value)
-                }
+                onValueChange={value => setFieldValue("State", value)}
               >
                 <Picker.Item key="0" label="State" value="0" />
                 {renderDocumentTypes()}
@@ -363,15 +367,12 @@ const LanguageTranslation = ({
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
               {errors.State && (
-                <Text
-                  style={{ color: "red" }}
-                  visible={errors.State}
-                >
+                <Text style={{ color: "red" }} visible={errors.State}>
                   {errors.State}
                 </Text>
               )}
             </Item>
-            
+
             <Item style={styles.item_margin}>
               <Input
                 placeholder="City"
@@ -423,8 +424,6 @@ const LanguageTranslation = ({
               )}
             </Item>
 
-
-            
             <Item picker style={styles.item_margin}>
               <Picker
                 mode="dropdown"

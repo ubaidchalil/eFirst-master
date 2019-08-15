@@ -54,6 +54,7 @@
 		C82ADC64555E4EFEB5FA0D53 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA18557DA34C32BB887EC3 /* MaterialIcons.ttf */; };
 		E328403C22A02C890063EDD4 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E328403922A02C750063EDD4 /* libRNGestureHandler.a */; };
 		E328408422A032730063EDD4 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E328408322A032670063EDD4 /* libRNImagePicker.a */; };
+		E339D4FB22FD8FD50011107A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E339D4FA22FD8FD50011107A /* CloudKit.framework */; };
 		E373E02222BB64A90025DF03 /* libRNDocumentPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E373E01E22BB648E0025DF03 /* libRNDocumentPicker.a */; };
 		EA8E09529A9342109000E442 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41230007495148AC8F5B1945 /* Roboto.ttf */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
@@ -384,7 +385,7 @@
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = efirst3/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = efirst3/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = efirst3/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "/Users/ubaidchalil/Desktop/eFirstApp/eFirst-master/ios/efirst3/Images.xcassets"; sourceTree = "<absolute>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = efirst3/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = efirst3/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
@@ -411,6 +412,7 @@
 		DCBBDD32147149A6B4F6D0C1 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		E328400622A02C750063EDD4 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		E328405722A032660063EDD4 /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
+		E339D4FA22FD8FD50011107A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E373DFF422BB648E0025DF03 /* RNDocumentPicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNDocumentPicker.xcodeproj; path = "../node_modules/react-native-document-picker/ios/RNDocumentPicker.xcodeproj"; sourceTree = "<group>"; };
 		E373E02322BB65CB0025DF03 /* efirst3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = efirst3.entitlements; path = efirst3/efirst3.entitlements; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -442,6 +444,7 @@
 				E328408422A032730063EDD4 /* libRNImagePicker.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
+				E339D4FB22FD8FD50011107A /* CloudKit.framework in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				E328403C22A02C890063EDD4 /* libRNGestureHandler.a in Frameworks */,
@@ -599,6 +602,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E339D4FA22FD8FD50011107A /* CloudKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
@@ -831,6 +835,9 @@
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 3F939LJVSH;
 						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.iCloud = {
 								enabled = 1;
 							};

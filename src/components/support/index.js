@@ -4,15 +4,22 @@ import Support from "./screen";
 import { supportCreate } from "./action";
 import Loader from "../styled/loader";
 import { View } from "react-native";
+import AlertView from "../styled/alert-view";
 class Container extends Component {
   render() {
     const {
-      support: { loading }
+      support: { loading, success }
     } = this.props;
     return (
       <View style={{ flex: 1 }}>
         <Loader loading={loading} />
         <Support {...this.props} />
+        {success && (
+          <AlertView
+            type="success"
+            message="Your information has been submitted."
+          />
+        )}
       </View>
     );
   }
