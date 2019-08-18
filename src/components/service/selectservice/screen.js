@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, TouchableOpacity, StyleSheet, Alert } from "react-native";
+import { View, TouchableOpacity, StyleSheet, Dimensions } from "react-native";
 import {
   Container,
   Content,
@@ -16,6 +16,9 @@ import {
 } from "native-base";
 import { NavigationActions } from "react-navigation";
 import MyHeader from "../../../Header";
+
+const { height } = Dimensions.get('window');
+const cardHeight = height/8;//<150 ? 150 : height/3;
 
 export default ({ navigation }) => {
   navigateToScreen = route => {
@@ -104,12 +107,17 @@ const styles = StyleSheet.create({
   },
   body: {
     backgroundColor: "#183E61",
-    padding: 15
+    padding: 15,
+    height: cardHeight,
+    alignItems:"center",
+    flexDirection: "row"
   },
   body_text: {
     textAlign: "center",
     fontSize: 17,
-    color: "white"
+    color: "white",
+    alignSelf: "center",
+    flex: 1
   },
   footer: {
     alignItems: "center",

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { View, Platform } from "react-native";
+import { View, Platform, BackHandler } from "react-native";
 import {
   Container,
   Content,
@@ -31,18 +31,51 @@ class _Container extends Component {
       submissionType: "Direct Submission at Office",
       docsAttached: [],
       docNames: [],
+      docsNotRequired: [],
       docItem: [],
       courier_charge: 10,
       notes: "",
-      iban: ""
+      iban: "",
+      validationMsg: ""
     };
+    this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
 
   componentDidMount = () => {};
-  componentDidUpdate() {}
+  
+  componentWillMount = () => {
+    BackHandler.addEventListener(
+      "hardwareBackPress",
+      this.handleBackButtonClick
+    );
+  };
+
+  componentWillUnmount = () => {
+    BackHandler.removeEventListener(
+      "hardwareBackPress",
+      this.handleBackButtonClick
+    );
+  };
+
+  
+  handleBackButtonClick = () => {
+    if (Array.isArray(this.state.pageData))
+      this.setState(
+        {
+          pageData: this.state.pageData.pop()
+        },
+        () => {
+          this.props.navigation.goBack(null);
+        }
+      );
+    else this.props.navigation.goBack(null);
+    return true;
+  };
+
   showToast = text => {
     this.refs.validationToasts.show(text, 3000);
   };
+
   openlaunchCamera = (doc, index) => {
     const options = {
       title: "Select Avatar",
@@ -59,11 +92,11 @@ class _Container extends Component {
       var _docNames = this.state.docNames;
 
       if (response.didCancel) {
-        console.log("User cancelled image picker");
+        console.log("result => ","User cancelled image picker");
       } else if (response.error) {
-        console.log("ImagePicker Error: ", response.error);
+        console.log("result => ","ImagePicker Error: ", response.error);
       } else if (response.customButton) {
-        console.log("User tapped custom button: ", response.customButton);
+        console.log("result => ","User tapped custom button: ", response.customButton);
       } else {
         let imgName = response.fileName;
         if (Platform.OS === "ios") {
@@ -99,6 +132,7 @@ class _Container extends Component {
         filetype: [DocumentPickerUtil.allFiles()]
       },
       (error, res) => {
+        if(error) return;
         // Android
         console.log(
           res.uri,
@@ -106,7 +140,7 @@ class _Container extends Component {
           res.fileName,
           res.fileSize
         );
-        console.log(_docs);
+        
         const valdateRes = validateFileTypeAndSize(res);
         if (valdateRes.validateSize && valdateRes.validateType) {
           _docs.push(doc);
@@ -138,6 +172,25 @@ class _Container extends Component {
   };
 
   goToDetails = () => {
+
+    var docsNotRequired = this.props.navigation.state.params.details.docsNotRequired || [];
+    var docs = this.props.navigation.state.params.details.docs || [];
+    var docsAttached = this.state.docsAttached || [];
+    
+    this.setState({ validationMsg : "" });
+
+    var validationErr = false;
+    docs.forEach(doc => {
+      if(docsAttached.indexOf(doc) == -1 && docsNotRequired.indexOf(doc) == -1)
+          validationErr = true;
+    });
+
+    if(validationErr)
+    {
+      this.setState({ validationMsg : "Please select all required files" });
+      return;
+    }
+
     var pageData = this.props.navigation.state.params.pageData;
     var price_details = this.props.navigation.state.params.details.PriceDetails;
 
@@ -273,7 +326,6 @@ class _Container extends Component {
               >
                 <Button
                   transparent
-                  dark
                   style={{ alignItems: "center" }}
                   onPress={() => this.openlaunchCamera(_doc, index)}
                 >
@@ -282,7 +334,6 @@ class _Container extends Component {
                 </Button>
                 <Button
                   transparent
-                  dark
                   style={{
                     borderLeftWidth: 1,
                     borderLeftColor: "#CACFD2",
@@ -304,11 +355,15 @@ class _Container extends Component {
   };
 
   renderDocs = () => {
+    
+    var docsNotRequired = this.props.navigation.state.params.details.docsNotRequired || null;
+
     return this.props.navigation.state.params.details.docs.map(doc => {
+      var IsRequired = docsNotRequired != null ? (docsNotRequired.indexOf(doc) >= 0 ? "" : "*") : "*";
       return (
         <View style={{ marginTop: 10 }}>
           <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }}>
-            <Text style={{ padding: 10 }}>{doc} </Text>
+            <Text style={{ padding: 10 }}>{doc} {IsRequired} </Text>
           </Item>
           {this.renderDocArr(doc)}
           {this.renderDocNew(doc)}
@@ -442,6 +497,12 @@ class _Container extends Component {
               onChangeText={value => this.setState({ notes: value })}
               value={this.state.notes}
             />
+          </Item>
+
+          <Item style={{borderBottomWidth : 0}} >
+            <Text style={{ fontSize: 14, padding: 10, color: "red" }}>
+              {this.state.validationMsg}
+            </Text>
           </Item>
 
           <Button

@@ -23,7 +23,14 @@ export default class VisaServiceDt extends Component {
   }
 
   componentDidMount = () => {
-    
+    const docsAndPayment = this.props.pageData[this.props.pageData.length-1];
+    let total = docsAndPayment.PriceDetils.reduce(
+      (accumulator, item) => accumulator + parseFloat(item.Value),
+      0
+    );
+    if(docsAndPayment.OriginalDocumentSubmissionType.Value == "Through Courier")
+      total += 10;
+    this.setState({ totalBillAmt: total });
   };
   componentDidUpdate() {
     
@@ -49,7 +56,9 @@ export default class VisaServiceDt extends Component {
       return (
         <Item>
           <Text style={{padding:10, fontWeight:'bold'}} >{datum.Text} : </Text>
-          <Text style={{padding:10 }} >{datum.FileUploaded}</Text>
+          <Right>
+            <Text style={{padding:10 }} >{datum.FileUploaded}</Text>
+          </Right>
         </Item>
       )
     })
@@ -62,22 +71,21 @@ export default class VisaServiceDt extends Component {
       return (
         <Item>
           <Text style={{padding:10, fontWeight:'bold'}} >{datum.Text} : </Text>
-          <Text style={{padding:10 }} >AED {datum.Value}</Text>
+          <Right>
+            <Text style={{padding:10 }} >AED {datum.Value}</Text> 
+          </Right>
         </Item>
       )
     })
   }
   
   renderTotalPrice = () => {
-    var total = 0;
-    const docsAndPayment = this.props.pageData[this.props.pageData.length-1];
-    docsAndPayment.PriceDetils.forEach(function(item){
-        total += parseFloat(item.Value);
-      });
       return (
         <Item>
           <Text style={{padding:10, fontWeight:'bold'}} >Total : </Text>
-          <Text style={{padding:10, fontWeight:'bold' }} >AED {total}</Text>
+          <Right>
+            <Text style={{padding:10, fontWeight:'bold' }} >AED {this.state.totalBillAmt}</Text>
+          </Right>
         </Item>
       )
   }
@@ -140,6 +148,20 @@ export default class VisaServiceDt extends Component {
           </Right>
         </View>
         {  this.renderPriceDts()  }
+          {
+            this.props.pageData[this.props.pageData.length-1].OriginalDocumentSubmissionType.Value == "Through Courier" ?
+            (
+              <Item>
+                <Text style={{ padding: 10, fontWeight: "bold" }}>
+                  Courier Charge : 
+                </Text>
+                <Right>
+                  <Text style={{ padding: 10 }}>AED 10</Text>
+                </Right>
+              </Item>
+              ) :
+              (<View />)
+          }
         {  this.renderTotalPrice()  }
         
         <View

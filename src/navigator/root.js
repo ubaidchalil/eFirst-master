@@ -10,17 +10,15 @@ import DocumentAttestation from "../components/service/documentattestation";
 import LanguageTranslation from "../components/service/languagetranslation";
 import SelectService from "../components/service/selectservice";
 import PayfortPay from "../components/service/payfort";
-import UserActions from "../components/service/useractions";
-import FAQ from "../components/faq";
+import FAQStack from "./faq_stack";
 import Support from "../components/support";
 import AuthStack from "./accountstack";
 import SideBar from "../SideBar";
 import BottomBar from "../BottomBar";
 import Profile from "../components/profile/profile";
-import ServiceDetail from "../components/service/servicerequest";
+import SRStack from "./sr_stack";
 import VisaServiceStack from "./visaservice_stack";
 import VisaServiceScreen from "../components/service/file_upload";
-import FAQDetail from "../components/faq/faqdetail";
 export const RequestServiceStack = createStackNavigator(
   {
     SelectService: {
@@ -38,7 +36,7 @@ export const RequestServiceStack = createStackNavigator(
     PayfortPay: {
       screen: PayfortPay
     },
-    MyRequests: { screen: UserActions }
+    MyRequests: { screen: SRStack }
   },
   {
     defaultNavigationOptions: {
@@ -51,12 +49,10 @@ const Tabs = createBottomTabNavigator(
   {
     HomeScreen: { screen: HomeScreen },
     RequestService: { screen: RequestServiceStack },
-    MyRequests: { screen: UserActions },
+    MyRequests: { screen: SRStack },
     Profile: { screen: Profile },
-    FAQ: { screen: FAQ },
-    FAQDetail: { screen: FAQDetail },
+    FAQ: { screen: FAQStack },
     Support: { screen: Support },
-    ServiceDetail: { screen: ServiceDetail },
     VisaServiceScreen: { screen: VisaServiceScreen }
   },
   {

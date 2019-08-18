@@ -17,7 +17,7 @@ class Container extends Component {
         {success && (
           <AlertView
             type="success"
-            message="Your information has been submitted."
+            message="Your request has been submitted"
           />
         )}
       </View>

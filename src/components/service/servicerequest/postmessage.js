@@ -1,5 +1,10 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  TouchableWithoutFeedback,
+  TouchableOpacity,
+  Keyboard
+} from "react-native";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";

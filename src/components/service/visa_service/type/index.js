@@ -50,10 +50,10 @@ class _Container extends Component {
   componentDidMount = () => {
     const options = this.props.navigation.state.params ? this.props.navigation.state.params.options : visa_options;
     const pageData = this.props.navigation.state.params ? this.props.navigation.state.params.pageData : [];
+    
+    console.log("result => mount ",JSON.stringify(pageData));
     this.setState({ options: options });
     this.setState({ pageData: pageData });
-    this.setState({ _prev_options: options });
-    this.setState({ _prev_pageData: pageData });
   };
 
   handleBackButtonClick = () => {
@@ -76,6 +76,15 @@ class _Container extends Component {
     this.setState({ selectedOption: option });
 
     var pageData = this.state.pageData;
+
+    console.log("result =>",JSON.stringify(pageData));
+    if(this.state.options)
+    {
+      let obj = pageData.find(o => o.Text === this.state.options.title);
+      if(obj)pageData.pop();
+    }
+    else
+      pageData.pop();
     var i = 1;
     pageData.push({
       Text: this.state.options.title,
