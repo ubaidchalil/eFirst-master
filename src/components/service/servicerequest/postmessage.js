@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, TouchableWithoutFeedback, TouchableOpacity, Keyboard } from "react-native";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
@@ -27,6 +27,7 @@ const PostMessage = ({
 
   return (
     <Modal isVisible={action.IsVisible}>
+      <TouchableWithoutFeedback onPress={() => {Keyboard.dismiss()}} >
       <View style={styles.modalContent}>
         <Item style={{ flexDirection: "row", padding: 7 }}>
           <Text
@@ -102,7 +103,8 @@ const PostMessage = ({
             </Button>
           </Form>
         </View>
-      </View>
+        </View>
+      </TouchableWithoutFeedback>
     </Modal>
   );
 };

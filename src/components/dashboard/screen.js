@@ -22,7 +22,7 @@ import IconFontAwesome from "react-native-vector-icons/FontAwesome";
 import MyHeader from "../../Header";
 
 const { height } = Dimensions.get('window');
-const cardHeight = height/5<150 ? 150 : height/5;
+const cardHeight = (height-202)/4<150 ? 150 : (height-202)/4;
 
 let styles = StyleSheet.create({
   backgroundImage: {
@@ -81,25 +81,25 @@ let styles = StyleSheet.create({
     color: "#515A5A"
   },
   required_bgcolor: {
-    backgroundColor: "#FFECC3"
+    backgroundColor: "#FFECC3"//"#FAAC00"
   },
   required_updates_color: {
     color: "#F8AB19"
   },
   review_bgcolor: {
-    backgroundColor: "#CEECFD"
+    backgroundColor: "#CEECFD"//"028EFB"
   },
   review_updates_color: {
     color: "#1991F8"
   },
   completed_bgcolor: {
-    backgroundColor: "#E0FCD8"
+    backgroundColor: "#E0FCD8"//"00B358"
   },
   completed_updates_color: {
     color: "#12B25C"
   },
   rejected_bgcolor: {
-    backgroundColor: "#FFDEDE"
+    backgroundColor: "#FFDEDE"//"FF0000"
   },
   rejected_updates_color: {
     color: "#FF0000"

@@ -248,6 +248,6 @@ const styles = {
     borderColor: "#ECF0F1",
     padding: 10
   },
-  label: { fontSize: 13, paddingTop: 5 },
-  value: { color: "#A6ACAF", fontSize: 13, paddingTop: 5, paddingLeft: 5 }
+  label: { fontSize: 13, paddingTop: 5, fontWeight: "bold" },
+  value: { fontSize: 13, paddingTop: 5, paddingLeft: 5 }
 };

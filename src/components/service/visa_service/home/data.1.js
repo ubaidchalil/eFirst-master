@@ -2280,10 +2280,6 @@ export default visa_options = {
             ],
             "PriceDetails": [
               {
-                "Text": "Service Charge",
-                "Value": 105
-              },
-              {
                 "Text": "Entry Permit",
                 "Value": 1176
               },
@@ -2338,10 +2334,6 @@ export default visa_options = {
                 "Value": 1176
               },
               {
-                "Text": "Service Charge",
-                "Value": 105
-              },
-              {
                 "Text": "Change Status",
                 "Value": 677
               },
@@ -2392,10 +2384,6 @@ export default visa_options = {
                 "Value": 1176
               },
               {
-                "Text": "Service Charge",
-                "Value": 105
-              },
-              {
                 "Text": "Change Status",
                 "Value": 677
               },
@@ -2444,10 +2432,6 @@ export default visa_options = {
               {
                 "Text": "Entry Permit",
                 "Value": 1176
-              },
-              {
-                "Text": "Service Charge",
-                "Value": 105
               },
               {
                 "Text": "Change Status",
@@ -2510,10 +2494,6 @@ export default visa_options = {
                 "Value": 526
               },
               {
-                "Text": "Service Charge",
-                "Value": 105
-              },
-              {
                 "Text": "Stamping",
                 "Value": 847
               },
@@ -2558,10 +2538,6 @@ export default visa_options = {
               {
                 "Text": "Entry Permit",
                 "Value": 526
-              },
-              {
-                "Text": "Service Charge",
-                "Value": 105
               },
               {
                 "Text": "Stamping",
@@ -2610,10 +2586,6 @@ export default visa_options = {
                 "Value": 526
               },
               {
-                "Text": "Service Charge",
-                "Value": 105
-              },
-              {
                 "Text": "Stamping",
                 "Value": 847
               },
@@ -2660,10 +2632,6 @@ export default visa_options = {
                 "Value": 526
               },
               {
-                "Text": "Service Charge",
-                "Value": 105
-              },
-              {
                 "Text": "Stamping",
                 "Value": 847
               },
@@ -2708,10 +2676,6 @@ export default visa_options = {
               {
                 "Text": "Entry Permit",
                 "Value": 526
-              },
-              {
-                "Text": "Service Charge",
-                "Value": 105
               },
               {
                 "Text": "Stamping",
