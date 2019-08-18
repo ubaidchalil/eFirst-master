@@ -276,21 +276,21 @@ class _Container extends Component {
               style={{ alignItems: "center" }}
               onPress={() => this.openlaunchCamera(_doc, -1)}
             >
-              <Icon name="camera" />
-              <Text>Camera</Text>
+              <Icon style={styles.uploadBtnIcon} name="camera" />
+              <Text style={styles.uploadBtnText}>Camera</Text>
             </Button>
             <Button
               transparent
               dark
               style={{
                 borderLeftWidth: 1,
-                borderLeftColor: "#CACFD2",
+                borderLeftColor: "#7f8385",
                 alignItems: "center"
               }}
               onPress={() => this.openFile(_doc, -1)}
             >
-              <Icon name="albums" />
-              <Text>Album</Text>
+              <Icon style={styles.uploadBtnIcon} name="albums" />
+              <Text style={styles.uploadBtnText}>Album</Text>
             </Button>
           </View>
         </View>
@@ -329,20 +329,20 @@ class _Container extends Component {
                   style={{ alignItems: "center" }}
                   onPress={() => this.openlaunchCamera(_doc, index)}
                 >
-                  <Icon name="camera" />
-                  <Text>Camera</Text>
+                  <Icon style={styles.uploadBtnIcon} name="camera" />
+                  <Text style={styles.uploadBtnText} >Camera</Text>
                 </Button>
                 <Button
                   transparent
                   style={{
                     borderLeftWidth: 1,
-                    borderLeftColor: "#CACFD2",
+                    borderLeftColor: "#7f8385",
                     alignItems: "center"
                   }}
                   onPress={() => this.openFile(_doc, index)}
                 >
-                  <Icon name="albums" />
-                  <Text>Album</Text>
+                  <Icon style={styles.uploadBtnIcon} name="albums" />
+                  <Text style={styles.uploadBtnText}>Album</Text>
                 </Button>
               </View>
             </View>
@@ -533,6 +533,18 @@ class _Container extends Component {
     );
   };
 }
+
+const styles = {
+  uploadBtnIcon : {
+    color: "black"
+  },
+  uploadBtnText : {
+    color: "black"
+  },
+  uploadBtn: {
+    borderColor: "black"
+  }
+};
 
 const mapStateToProps = ({}) => ({});
 

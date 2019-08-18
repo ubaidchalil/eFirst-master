@@ -161,8 +161,8 @@ const LanguageTranslation = ({
                 style={{ alignItems: "center" }}
                 onPress={() => this.openlaunchCamera(i)}
               >
-                <Icon name="camera" />
-                <Text>Camera</Text>
+                <Icon style={styles.uploadBtnIcon} name="camera" />
+                <Text style={styles.uploadBtnIcon}>Camera</Text>
               </Button>
               <Button
                 transparent
@@ -173,8 +173,8 @@ const LanguageTranslation = ({
                 }}
                 onPress={() => this.openFile(i)}
               >
-                <Icon name="albums" />
-                <Text>Album</Text>
+                <Icon style={styles.uploadBtnIcon} name="albums" />
+                <Text style={styles.uploadBtnIcon}>Album</Text>
               </Button>
             </View>
           </View>
@@ -649,8 +649,8 @@ const LanguageTranslation = ({
                     style={{ alignItems: "center" }}
                     onPress={() => this.openlaunchCamera(0)}
                   >
-                    <Icon name="camera" />
-                    <Text>Camera</Text>
+                    <Icon style={styles.uploadBtnIcon} name="camera" />
+                    <Text style={styles.uploadBtnText}>Camera</Text>
                   </Button>
                   <Button
                     transparent
@@ -662,8 +662,8 @@ const LanguageTranslation = ({
                     }}
                     onPress={() => this.openFile(0)}
                   >
-                    <Icon name="albums" />
-                    <Text>Album</Text>
+                    <Icon style={styles.uploadBtnIcon} name="albums" />
+                    <Text style={styles.uploadBtnText}>Album</Text>
                   </Button>
                 </View>
               </View>
@@ -970,6 +970,12 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     borderColor: "rgba(0, 0, 0, 0.1)"
   },
+  uploadBtnIcon : {
+    color: "black"
+  },
+  uploadBtnText : {
+    color: "black"
+  },
   pickerStyle:
     Platform.OS === "ios"
       ? {
@@ -978,3 +984,4 @@ const styles = StyleSheet.create({
         }
       : { width: undefined }
 });
+
