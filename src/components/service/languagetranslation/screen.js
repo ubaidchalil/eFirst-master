@@ -158,7 +158,6 @@ const LanguageTranslation = ({
             >
               <Button
                 transparent
-                dark
                 style={{ alignItems: "center" }}
                 onPress={() => this.openlaunchCamera(i)}
               >
@@ -167,7 +166,6 @@ const LanguageTranslation = ({
               </Button>
               <Button
                 transparent
-                dark
                 style={{
                   borderLeftWidth: 1,
                   borderLeftColor: "#CACFD2",
@@ -648,7 +646,6 @@ const LanguageTranslation = ({
                 >
                   <Button
                     transparent
-                    dark
                     style={{ alignItems: "center" }}
                     onPress={() => this.openlaunchCamera(0)}
                   >

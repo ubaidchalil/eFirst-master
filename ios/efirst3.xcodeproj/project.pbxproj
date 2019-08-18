@@ -52,9 +52,11 @@
 		AEEE1CF8AB644A4DB62A35A2 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAEE08466BB54E9CA0F901E1 /* AntDesign.ttf */; };
 		C3DB733C41BF479BB1C2E842 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F07A97BA5B70446D963C3639 /* FontAwesome5_Regular.ttf */; };
 		C82ADC64555E4EFEB5FA0D53 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA18557DA34C32BB887EC3 /* MaterialIcons.ttf */; };
+		D0C61577760E4F46BCAE424B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7461677103B64F0C8EDCA30D /* libz.tbd */; };
 		E328403C22A02C890063EDD4 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E328403922A02C750063EDD4 /* libRNGestureHandler.a */; };
 		E328408422A032730063EDD4 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E328408322A032670063EDD4 /* libRNImagePicker.a */; };
 		E339D4FB22FD8FD50011107A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E339D4FA22FD8FD50011107A /* CloudKit.framework */; };
+		E371C9A22306D42F00F3D5A2 /* libRNSentry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E371C99F2306D41D00F3D5A2 /* libRNSentry.a */; };
 		E373E02222BB64A90025DF03 /* libRNDocumentPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E373E01E22BB648E0025DF03 /* libRNDocumentPicker.a */; };
 		EA8E09529A9342109000E442 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41230007495148AC8F5B1945 /* Roboto.ttf */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
@@ -359,6 +361,20 @@
 			remoteGlobalIDString = 014A3B5C1C6CF33500B6D375;
 			remoteInfo = RNImagePicker;
 		};
+		E371C99E2306D41D00F3D5A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E371C96F2306D41D00F3D5A2 /* RNSentry.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNSentry;
+		};
+		E371C9A02306D41D00F3D5A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E371C96F2306D41D00F3D5A2 /* RNSentry.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 274692C321B4414400BF91A8;
+			remoteInfo = "RNSentry-tvOS";
+		};
 		E373E01D22BB648E0025DF03 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E373DFF422BB648E0025DF03 /* RNDocumentPicker.xcodeproj */;
@@ -399,6 +415,7 @@
 		62E44C6F4D154BF480D21016 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		6AFA18557DA34C32BB887EC3 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		714070066E9E46E5B243D154 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		7461677103B64F0C8EDCA30D /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		890A20F48CAA40A1907B6C07 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
@@ -413,6 +430,7 @@
 		E328400622A02C750063EDD4 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		E328405722A032660063EDD4 /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
 		E339D4FA22FD8FD50011107A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		E371C96F2306D41D00F3D5A2 /* RNSentry.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSentry.xcodeproj; path = "../node_modules/react-native-sentry/ios/RNSentry.xcodeproj"; sourceTree = "<group>"; };
 		E373DFF422BB648E0025DF03 /* RNDocumentPicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNDocumentPicker.xcodeproj; path = "../node_modules/react-native-document-picker/ios/RNDocumentPicker.xcodeproj"; sourceTree = "<group>"; };
 		E373E02322BB65CB0025DF03 /* efirst3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = efirst3.entitlements; path = efirst3/efirst3.entitlements; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -449,9 +467,11 @@
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				E328403C22A02C890063EDD4 /* libRNGestureHandler.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
+				E371C9A22306D42F00F3D5A2 /* libRNSentry.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				D0C61577760E4F46BCAE424B /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +626,7 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				7461677103B64F0C8EDCA30D /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -656,6 +677,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				E371C96F2306D41D00F3D5A2 /* RNSentry.xcodeproj */,
 				E373DFF422BB648E0025DF03 /* RNDocumentPicker.xcodeproj */,
 				E328405722A032660063EDD4 /* RNImagePicker.xcodeproj */,
 				E328400622A02C750063EDD4 /* RNGestureHandler.xcodeproj */,
@@ -736,6 +758,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E371C9702306D41D00F3D5A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E371C99F2306D41D00F3D5A2 /* libRNSentry.a */,
+				E371C9A12306D41D00F3D5A2 /* libRNSentry-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E373DFF522BB648E0025DF03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -773,6 +804,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				4D004FAE0DE9455CBC75325B /* Upload Debug Symbols to Sentry */,
 			);
 			buildRules = (
 			);
@@ -926,6 +958,10 @@
 				{
 					ProductGroup = E328405822A032660063EDD4 /* Products */;
 					ProjectRef = E328405722A032660063EDD4 /* RNImagePicker.xcodeproj */;
+				},
+				{
+					ProductGroup = E371C9702306D41D00F3D5A2 /* Products */;
+					ProjectRef = E371C96F2306D41D00F3D5A2 /* RNSentry.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1219,6 +1255,20 @@
 			remoteRef = E328408222A032670063EDD4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		E371C99F2306D41D00F3D5A2 /* libRNSentry.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSentry.a;
+			remoteRef = E371C99E2306D41D00F3D5A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E371C9A12306D41D00F3D5A2 /* libRNSentry-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNSentry-tvOS.a";
+			remoteRef = E371C9A02306D41D00F3D5A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		E373E01E22BB648E0025DF03 /* libRNDocumentPicker.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1293,7 +1343,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export SENTRY_PROPERTIES=sentry.properties\nexport NODE_BINARY=node\n../node_modules/@sentry/cli/bin/sentry-cli react-native xcode ../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1307,7 +1357,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export SENTRY_PROPERTIES=sentry.properties\nexport NODE_BINARY=node\n../node_modules/@sentry/cli/bin/sentry-cli react-native xcode ../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		4D004FAE0DE9455CBC75325B /* Upload Debug Symbols to Sentry */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Upload Debug Symbols to Sentry";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export SENTRY_PROPERTIES=sentry.properties\n../node_modules/@sentry/cli/bin/sentry-cli upload-dsym";
 		};
 /* End PBXShellScriptBuildPhase section */
 
