@@ -93,120 +93,119 @@ class SRInfo extends Component {
     const { ThruCourier } = this.props.srDetail;
     console.log("PICKUP==>", PickUpandDropOption);
     return (
-      <Container>
-        <ScrollView>
-          <Content style={{ padding: 10 }}>
+      <ScrollView>
+        <View style={{ padding: 10 }}>
+          <View style={styles.item_border}>
+            <Text style={styles.label}>Name : </Text>
+            <Text style={styles.value}> {CustomerName} </Text>
+          </View>
+          <View style={styles.item_border}>
+            <Text style={styles.label}>E-mail : </Text>
+            <Text style={styles.value}> {Email} </Text>
+          </View>
+          <View style={styles.item_border}>
+            <Text style={styles.label}>Phone : </Text>
+            <Text style={styles.value}> {PersonalPhone} </Text>
+          </View>
+          {OfficePhone && OfficePhone != "undefined" && (
             <View style={styles.item_border}>
-              <Text style={styles.label}>Name : </Text>
-              <Text style={styles.value}> {CustomerName} </Text>
+              <Text style={styles.label}>Office : </Text>
+              <Text style={styles.value}> {OfficePhone} </Text>
             </View>
+          )}
+          <View style={styles.item_border}>
+            <Text style={styles.label}>Address : </Text>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.value}> {Address} </Text>
+            </View>
+          </View>
+          {ServiceName === "ATTESTATION SERVICE" && (
             <View style={styles.item_border}>
-              <Text style={styles.label}>E-mail : </Text>
-              <Text style={styles.value}> {Email} </Text>
+              <Text style={styles.label}>Country : </Text>
+              <Text style={styles.value}>
+                {" "}
+                {this.props.countries.data
+                  ? this.countryName(SelectedCountryId)
+                  : ""}{" "}
+              </Text>
             </View>
+          )}
+          {ServiceName === "ATTESTATION SERVICE" && (
             <View style={styles.item_border}>
-              <Text style={styles.label}>Phone : </Text>
-              <Text style={styles.value}> {PersonalPhone} </Text>
+              <Text style={styles.label}>Certificate Type : </Text>
+              <Text style={styles.value}>
+                {" "}
+                {this.props.certificatetype.data
+                  ? this.certtificateTypeName(SelectedCertificateType)
+                  : ""}{" "}
+              </Text>
             </View>
-            {OfficePhone && OfficePhone != "undefined" && (
-              <View style={styles.item_border}>
-                <Text style={styles.label}>Office : </Text>
-                <Text style={styles.value}> {OfficePhone} </Text>
-              </View>
-            )}
-            <View style={styles.item_border}>
-              <Text style={styles.label}>Address : </Text>
-              <View style={{ flex: 1 }}>
-                <Text style={styles.value}> {Address} </Text>
-              </View>
-            </View>
-            {ServiceName === "ATTESTATION SERVICE" && (
-              <View style={styles.item_border}>
-                <Text style={styles.label}>Country : </Text>
-                <Text style={styles.value}>
-                  {" "}
-                  {this.props.countries.data
-                    ? this.countryName(SelectedCountryId)
-                    : ""}{" "}
-                </Text>
-              </View>
-            )}
-            {ServiceName === "ATTESTATION SERVICE" && (
-              <View style={styles.item_border}>
-                <Text style={styles.label}>Certificate Type : </Text>
-                <Text style={styles.value}>
-                  {" "}
-                  {this.props.certificatetype.data
-                    ? this.certtificateTypeName(SelectedCertificateType)
-                    : ""}{" "}
-                </Text>
-              </View>
-            )}
+          )}
 
-            {(ServiceName === "TRANSLATION SERVICE" ||
-              ServiceName == "TRANSLATION") && (
-              <View style={styles.item_border}>
-                <Text style={styles.label}>Document Type : </Text>
-                <Text style={styles.value}>
-                  {" "}
-                  {this.props.certificatetype.data
-                    ? this.documentTypesName(SelectedDocumentTypeId)
-                    : ""}{" "}
-                </Text>
-              </View>
-            )}
+          {(ServiceName === "TRANSLATION SERVICE" ||
+            ServiceName == "TRANSLATION") && (
+            <View style={styles.item_border}>
+              <Text style={styles.label}>Document Type : </Text>
+              <Text style={styles.value}>
+                {" "}
+                {this.props.certificatetype.data
+                  ? this.documentTypesName(SelectedDocumentTypeId)
+                  : ""}{" "}
+              </Text>
+            </View>
+          )}
 
-            {(ServiceName === "TRANSLATION SERVICE" ||
-              ServiceName == "TRANSLATION") && (
-              <View style={styles.item_border}>
-                <Text style={styles.label}>Document Language : </Text>
-                <Text style={styles.value}>
-                  {" "}
-                  {this.props.certificatetype.data
-                    ? this.languageName(SelectedFromDocumentLanguageId)
-                    : ""}{" "}
-                </Text>
-              </View>
-            )}
+          {(ServiceName === "TRANSLATION SERVICE" ||
+            ServiceName == "TRANSLATION") && (
+            <View style={styles.item_border}>
+              <Text style={styles.label}>Document Language : </Text>
+              <Text style={styles.value}>
+                {" "}
+                {this.props.certificatetype.data
+                  ? this.languageName(SelectedFromDocumentLanguageId)
+                  : ""}{" "}
+              </Text>
+            </View>
+          )}
 
-            {(ServiceName === "TRANSLATION SERVICE" ||
-              ServiceName == "TRANSLATION") && (
-              <View style={styles.item_border}>
-                <Text style={styles.label}>Document to be Translated : </Text>
-                <Text style={styles.value}>
-                  {" "}
-                  {this.props.certificatetype.data
-                    ? this.languageName(SelectedToDocumentLanguageId)
-                    : ""}{" "}
-                </Text>
-              </View>
-            )}
-            {ServiceName === "ATTESTATION SERVICE" && (
+          {(ServiceName === "TRANSLATION SERVICE" ||
+            ServiceName == "TRANSLATION") && (
+            <View style={styles.item_border}>
+              <Text style={styles.label}>Document to be Translated : </Text>
+              <Text style={styles.value}>
+                {" "}
+                {this.props.certificatetype.data
+                  ? this.languageName(SelectedToDocumentLanguageId)
+                  : ""}{" "}
+              </Text>
+            </View>
+          )}
+          {ServiceName === "ATTESTATION SERVICE" && (
+            <View style={styles.item_border}>
+              <Text style={styles.label}>Pick Up & Drop Option : </Text>
+              <Text style={styles.value}> {PickUpandDropOption} </Text>
+            </View>
+          )}
+          {(ServiceName === "TRANSLATION SERVICE" ||
+            ServiceName == "TRANSLATION") && (
+            <View style={styles.item_border}>
+              <Text style={styles.label}>Legal Stamp : </Text>
+              <Text style={styles.value}>
+                {legalStamp == true ? "Yes" : "No"}
+              </Text>
+            </View>
+          )}
+
+          {(ServiceName === "TRANSLATION SERVICE" ||
+            ServiceName == "TRANSLATION") &&
+            legalStamp == true && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Pick Up & Drop Option : </Text>
-                <Text style={styles.value}> {PickUpandDropOption} </Text>
-              </View>
-            )}
-            {(ServiceName === "TRANSLATION SERVICE" ||
-              ServiceName == "TRANSLATION") && (
-              <View style={styles.item_border}>
-                <Text style={styles.label}>Legal Stamp : </Text>
-                <Text style={styles.value}>
-                  {legalStamp == true ? "Yes" : "No"}
-                </Text>
+                <Text style={styles.value}>{PickUpandDropOption}</Text>
               </View>
             )}
 
-            {(ServiceName === "TRANSLATION SERVICE" ||
-              ServiceName == "TRANSLATION") &&
-              legalStamp == true && (
-                <View style={styles.item_border}>
-                  <Text style={styles.label}>Pick Up & Drop Option : </Text>
-                  <Text style={styles.value}>{PickUpandDropOption}</Text>
-                </View>
-              )}
-
-            {/* {(ServiceName === "TRANSLATION SERVICE" ||
+          {/* {(ServiceName === "TRANSLATION SERVICE" ||
               ServiceName == "TRANSLATION") &&
               legalStamp == true &&
               PickUpandDropOption == "Through Courier" && (
@@ -228,27 +227,8 @@ class SRInfo extends Component {
                 </View>
               )} */}
 
-            {ServiceName === "ATTESTATION SERVICE" &&
-              PickUpandDropOption == "Through Courier" && (
-                <View style={styles.item_border}>
-                  <Text style={styles.label}>Shipment Tracking No : </Text>
-                  <Text
-                    onPress={() =>
-                      Linking.openURL(
-                        "https://track.easypick.me/track-shipment"
-                      )
-                    }
-                    style={[
-                      styles.value,
-                      { color: "#337ab7", textDecorationLine: "underline" }
-                    ]}
-                  >
-                    {TrackingNo}
-                  </Text>
-                </View>
-              )}
-
-            {ServiceName === "VISA SERVICE" && ThruCourier && (
+          {ServiceName === "ATTESTATION SERVICE" &&
+            PickUpandDropOption == "Through Courier" && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Shipment Tracking No : </Text>
                 <Text
@@ -265,17 +245,32 @@ class SRInfo extends Component {
               </View>
             )}
 
-            {ServiceName != "VISA SERVICE" && (
-              <View style={styles.item_border}>
-                <Text style={styles.label}>Bill Amount :</Text>
-                <Text style={styles.value}> {TotalRate} AED </Text>
-              </View>
-            )}
-            <View style={{ marginBottom: 10 }} />
-            {pageData && <VisaServiceDt pageData={pageData} />}
-          </Content>
-        </ScrollView>
-      </Container>
+          {ServiceName === "VISA SERVICE" && ThruCourier && (
+            <View style={styles.item_border}>
+              <Text style={styles.label}>Shipment Tracking No : </Text>
+              <Text
+                onPress={() =>
+                  Linking.openURL("https://track.easypick.me/track-shipment")
+                }
+                style={[
+                  styles.value,
+                  { color: "#337ab7", textDecorationLine: "underline" }
+                ]}
+              >
+                {TrackingNo}
+              </Text>
+            </View>
+          )}
+          {ServiceName != "VISA SERVICE" && (
+            <View style={styles.item_border}>
+              <Text style={styles.label}>Bill Amount :</Text>
+              <Text style={styles.value}> {TotalRate} AED </Text>
+            </View>
+          )}
+          <View style={{ marginBottom: 10 }} />
+          {pageData && <VisaServiceDt pageData={pageData} />}
+        </View>
+      </ScrollView>
     );
   }
 }

@@ -83,8 +83,8 @@ export default ({
   return (
     <StyleProvider style={getTheme(material)}>
       <Container>
-        <MyHeader navigation={navigation} header={headerTitle} />
-        <Content style={{ padding: 5 }}>
+        <MyHeader navigation={navigation} header={headerTitle} toDashboard={true} />
+        <Content style={{ padding: 5, marginBottom: 30 }}>
           
           <Item >
             <Icon name="ios-search" />
@@ -125,7 +125,8 @@ export default ({
               style={{
                 flex: 1,
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
+                padding:5
               }}
             >
               <Text>{noDataLabel}</Text>

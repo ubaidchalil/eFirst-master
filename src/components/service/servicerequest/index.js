@@ -79,7 +79,7 @@ class ServiceDetails extends Component {
 
     return (
       <StyleProvider style={getTheme(material)}>
-        <Container>
+        <Container  >
           <Loader loading={loading} />
           <PostMessage
             changeRequestMessageState={this.changeRequestMessageState}
@@ -140,8 +140,8 @@ class ServiceDetails extends Component {
               <SRInfo />
             </Tab>
           </Tabs>
-          {dtError && <AlertView type="error" />}
-          {success && <AlertView type="success" />}
+          {dtError && <AlertView type="error" message="Sorry! An error has occured, Try again" />}
+          {success && <AlertView type="success" message="Message has been submitted successfully" />}
         </Container>
       </StyleProvider>
     );

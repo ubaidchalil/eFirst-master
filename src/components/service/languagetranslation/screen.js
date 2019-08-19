@@ -146,6 +146,7 @@ const LanguageTranslation = ({
             >
               <Button
                 transparent
+                dark
                 style={{ alignItems: "center" }}
                 onPress={() => this.openlaunchCamera(i)}
               >
@@ -634,6 +635,7 @@ const LanguageTranslation = ({
                 >
                   <Button
                     transparent
+                    dark
                     style={{ alignItems: "center" }}
                     onPress={() => this.openlaunchCamera(0)}
                   >
@@ -642,6 +644,7 @@ const LanguageTranslation = ({
                   </Button>
                   <Button
                     transparent
+                    dark
                     style={{
                       borderLeftWidth: 1,
                       borderLeftColor: "#CACFD2",
@@ -903,7 +906,8 @@ export default withFormik({
     data.append("StreetAddress", values.Street);
     data.append("City", values.City);
     data.append("State", values.SelectedState);
-
+    console.log("result =>", JSON.stringify(data));
+    
     return values.doclangTransCreate({ data, token });
   }
 })(LanguageTranslation);
@@ -957,10 +961,10 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     borderColor: "rgba(0, 0, 0, 0.1)"
   },
-  uploadBtnIcon: {
+  uploadBtnIcon : {
     color: "black"
   },
-  uploadBtnText: {
+  uploadBtnText : {
     color: "black"
   },
   pickerStyle:
@@ -971,3 +975,4 @@ const styles = StyleSheet.create({
         }
       : { width: undefined }
 });
+

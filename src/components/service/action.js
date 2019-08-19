@@ -299,9 +299,8 @@ export const activateSR = payload => dispatch => {
 
 export const sendOrReplyMessage = payload => dispatch => {
   const { token, ...bodyData } = payload;
-
+  console.log("Body Data", bodyData);
   const body = JSON.stringify(bodyData);
-  console.log("Body Data", body);
   console.log(body);
   return openFetcher(
     async () => {

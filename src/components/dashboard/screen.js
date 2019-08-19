@@ -71,7 +71,7 @@ let styles = StyleSheet.create({
   },
   catd_content_main: {
     fontSize: 22,
-    color: "#767676"
+    color: "#FFF"
   },
   card_content_left: {
     fontSize: 13
@@ -81,28 +81,28 @@ let styles = StyleSheet.create({
     color: "#515A5A"
   },
   required_bgcolor: {
-    backgroundColor: "#FFECC3"//"#FAAC00"
+    backgroundColor: "#F8AB19"//"#FAAC00"
   },
   required_updates_color: {
-    color: "#F8AB19"
+    color: "#FFF"
   },
   review_bgcolor: {
-    backgroundColor: "#CEECFD"//"028EFB"
+    backgroundColor: "#1991F8"//"028EFB"
   },
   review_updates_color: {
-    color: "#1991F8"
+    color: "#FFF"
   },
   completed_bgcolor: {
-    backgroundColor: "#E0FCD8"//"00B358"
+    backgroundColor: "#12B25C"//"00B358"
   },
   completed_updates_color: {
-    color: "#12B25C"
+    color: "#FFF"
   },
   rejected_bgcolor: {
-    backgroundColor: "#FFDEDE"//"FF0000"
+    backgroundColor: "#FF3B00"//"FF0000"
   },
   rejected_updates_color: {
-    color: "#FF0000"
+    color: "#FFF"
   },
   icon_font_awesome: {
     fontSize: 20
@@ -120,14 +120,14 @@ export default ({ navigation, dashboard, servicesData, token, _onRefresh, state 
   const navigateToMyRequestWithTitleandLabel = statusId => {
     switch (statusId) {
       case 1: {
-        navigation.navigate("MyRequests", {
+        navigation.navigate("UserActions", {
           headerTitle: "Action Required",
           noDataLabel: "No new action required item available"
         });
         break;
       }
       case 2: {
-        navigation.navigate("MyRequests", {
+        navigation.navigate("UserActions", {
           headerTitle: "In Review",
           noDataLabel: "Service not requested"
         });
@@ -135,14 +135,14 @@ export default ({ navigation, dashboard, servicesData, token, _onRefresh, state 
       }
 
       case 3: {
-        navigation.navigate("MyRequests", {
+        navigation.navigate("UserActions", {
           headerTitle: "Completed",
           noDataLabel: "No recent completed service request"
         });
         break;
       }
       case 4: {
-        navigation.navigate("MyRequests", {
+        navigation.navigate("UserActions", {
           headerTitle: "Rejected",
           noDataLabel: "No recent rejected service request"
         });
@@ -215,12 +215,10 @@ export default ({ navigation, dashboard, servicesData, token, _onRefresh, state 
                       styles.required_updates_color
                     ]}
                   >
-                    {dashboard.data.Tiles.ActionRequiredNewUpdateCount} Updates
+                    {dashboard.data.Tiles.ActionRequiredNewUpdateCount} New updates
                   </Text>
                   <Text style={styles.card_content_right}>
                     {" "}
-                    | {dashboard.data.Tiles.ActionRequiredTotalUpdateCount}{" "}
-                    Updates
                   </Text>
                 </View>
               )}
@@ -256,11 +254,10 @@ export default ({ navigation, dashboard, servicesData, token, _onRefresh, state 
                       styles.review_updates_color
                     ]}
                   >
-                    {dashboard.data.Tiles.InReviewNewUpdateCount} Updates
+                    {dashboard.data.Tiles.InReviewNewUpdateCount} New updates
                   </Text>
                   <Text style={styles.card_content_right}>
                     {" "}
-                    | {dashboard.data.Tiles.InReviewTotalUpdateCount} Updates
                   </Text>
                 </View>
               )}
@@ -296,11 +293,10 @@ export default ({ navigation, dashboard, servicesData, token, _onRefresh, state 
                       styles.completed_updates_color
                     ]}
                   >
-                    {dashboard.data.Tiles.CompletedNewUpdateCount} Updates
+                    {dashboard.data.Tiles.CompletedNewUpdateCount} New updates
                   </Text>
                   <Text style={styles.card_content_right}>
                     {" "}
-                    | {dashboard.data.Tiles.CompletedTotalUpdateCount} Updates
                   </Text>
                 </View>
               )}
@@ -336,11 +332,10 @@ export default ({ navigation, dashboard, servicesData, token, _onRefresh, state 
                       styles.rejected_updates_color
                     ]}
                   >
-                    {dashboard.data.Tiles.RejectedNewUpdateCount} Updates
+                    {dashboard.data.Tiles.RejectedNewUpdateCount} New updates
                   </Text>
                   <Text style={styles.card_content_right}>
                     {" "}
-                    | {dashboard.data.Tiles.RejectedTotalUpdateCount} Updates
                   </Text>
                 </View>
               )}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {
   View,
-  FlatList,
+  ScrollView,
   TouchableOpacity,
   Image,
   StyleSheet
@@ -30,19 +30,20 @@ class Details extends Component {
     console.log(MessageModal);
 
     return (
-      <Container>
-        <Content style={{ padding: 10 }}>
-          <Messages
-            messages={messages}
-            messageList={messageList}
-            MessageModal={MessageModal}
-          />
-          <Status statusList={statusList} />
-        </Content>
-      </Container>
+        <ScrollView style={{ padding: 10 }}>
+          <View style={{marginBottom: 30}} >
+            <Messages
+              messages={messages}
+              messageList={messageList}
+              MessageModal={MessageModal}
+            />
+            <Status statusList={statusList} />
+          </View>
+        </ScrollView>
     );
   }
 }
+
 const mapStateToProps = ({
   servicerequest: { messages, messageList, statusList }
 }) => ({

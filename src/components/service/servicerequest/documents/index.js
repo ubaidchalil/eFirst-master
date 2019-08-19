@@ -12,7 +12,9 @@ import {
 import GridList from "react-native-grid-list";
 import { connect } from "react-redux";
 class Documents extends Component {
-  renderItem = ({ item, index }) => (
+  renderItem = ({ item, index }) => {
+    console.log("result => ",JSON.stringify(item));
+  return (
     <View style={styles.doc_main}>
       <Image
         style={styles.image}
@@ -30,13 +32,13 @@ class Documents extends Component {
         {item.FileName.length>12 ? item.FileName.substr(0,12) + "..." : item.FileName}
       </Text>
     </View>
-  );
+  )
+};
 
   render() {
     const { documents } = this.props;
     return (
-      <Container>
-        <Content style={{ padding: 10 }}>
+        <View style={{ padding: 10 }}>
           <GridList
             showSeparator
             data={documents}
@@ -44,8 +46,7 @@ class Documents extends Component {
             renderItem={this.renderItem}
             itemStyle={{ padding: 5 }}
           />
-        </Content>
-      </Container>
+        </View>
     );
   }
 }

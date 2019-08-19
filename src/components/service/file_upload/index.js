@@ -128,6 +128,7 @@ class Container1 extends Component {
             >
               <Button
                 transparent
+                dark
                 style={{ alignItems: "center" }}
                 onPress={() => this.openlaunchCamera()}
               >
@@ -136,6 +137,7 @@ class Container1 extends Component {
               </Button>
               <Button
                 transparent
+                dark
                 style={{
                   borderLeftWidth: 1,
                   borderLeftColor: "#CACFD2",
@@ -176,6 +178,7 @@ class Container1 extends Component {
             >
               <Button
                 transparent
+                dark
                 style={{ alignItems: "center" }}
                 onPress={() => this.openlaunchCamera()}
               >
@@ -184,6 +187,7 @@ class Container1 extends Component {
               </Button>
               <Button
                 transparent
+                dark
                 style={{
                   borderLeftWidth: 1,
                   borderLeftColor: "#CACFD2",
@@ -224,6 +228,7 @@ class Container1 extends Component {
             >
               <Button
                 transparent
+                dark
                 style={{ alignItems: "center" }}
                 onPress={() => this.openlaunchCamera()}
               >
@@ -232,6 +237,7 @@ class Container1 extends Component {
               </Button>
               <Button
                 transparent
+                dark
                 style={{
                   borderLeftWidth: 1,
                   borderLeftColor: "#CACFD2",
@@ -248,6 +254,7 @@ class Container1 extends Component {
         <View style={{ margin: 30 }}>
           <Button
             transparent
+            dark
             style={{
               borderLeftWidth: 1,
               borderLeftColor: "#CACFD2",

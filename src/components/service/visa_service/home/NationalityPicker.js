@@ -1,6 +1,6 @@
 export const nationalities = [
   { value: "Afghanistan", label: "Afghanistan" },
-  { value: "Ã…land Islands", label: "Ã…land Islands" },
+  { value: "Aland Islands", label: "Aland Islands" },
   { value: "Albania", label: "Albania" },
   { value: "Algeria", label: "Algeria" },
   { value: "American Samoa", label: "American Samoa" },

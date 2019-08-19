@@ -144,7 +144,7 @@ class _Container extends Component {
           }}
         >
           <View>
-            <Text style={{ color: "#AAACAC", fontSize: 17, marginLeft: 5 }}>
+            <Text style={{ color: "#000", fontSize: 17, marginLeft: 5, fontWeight: "bold" }}>
               {this.state.options.title} *
             </Text>
           </View>
