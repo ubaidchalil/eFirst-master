@@ -13,8 +13,7 @@ class Container extends Component {
   }
 
   componentDidMount = () => {
-    const srid = this.props.navigation.state.params.srid;
-    console.log("srid", srid);
+    
     //  this.props.activateSR({ srid: srid, token: this.props.token.token });
     //  this.setState({ Requested: true });
   };
@@ -27,12 +26,10 @@ class Container extends Component {
       this.state.Requested
     ) {
       this.setState({ Requested: false });
-      const { token } = this.props.token;
-      const statusId = null;
-      this.props.servicesData({ statusId, token });
-      this.props.navigation.navigate("UserActions", {
-        headerTitle: "My Requests",
-        noDataLabel: "No recent service request"
+      const srid = this.props.navigation.state.params.srid;
+      
+      this.props.navigation.navigate("PaymentSuccess", {
+        srid: srid,
       });
     }
   }

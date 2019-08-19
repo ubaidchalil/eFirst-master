@@ -13,8 +13,6 @@ export default (variables /*: * */ = variable) => {
     justifyContent: "center",
     borderLeftWidth: 1,
     borderLeftColor: "#CCD1D1",
-    borderBottomWidth: 1,
-    borderBottomColor: "#CCD1D1",
     ".scrollable": {
       paddingHorizontal: 20,
       flex: platform === "android" ? 0 : 1,

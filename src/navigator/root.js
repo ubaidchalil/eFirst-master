@@ -10,6 +10,7 @@ import DocumentAttestation from "../components/service/documentattestation";
 import LanguageTranslation from "../components/service/languagetranslation";
 import SelectService from "../components/service/selectservice";
 import PayfortPay from "../components/service/payfort";
+import PaymentSuccess from "../components/service/payfort/success";
 import FAQStack from "./faq_stack";
 import Support from "../components/support";
 import AuthStack from "./accountstack";
@@ -84,6 +85,9 @@ const root = createStackNavigator(
     },
     Home: {
       screen: Drawer
+    },
+    PaymentSuccess: {
+      screen: PaymentSuccess
     }
   },
   {
