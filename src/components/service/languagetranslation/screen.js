@@ -60,49 +60,51 @@ const LanguageTranslation = ({
     const options = {
       quality: 1.0,
       maxWidth: 500,
-      maxHeight: 500,
-      storageOptions: {
-        skipBackup: true
-      }
+      maxHeight: 500
     };
+    try {
+      ImagePicker.showImagePicker(options, response => {
+        console.log("Response = ", response);
 
-    ImagePicker.showImagePicker(options, response => {
-      console.log("Response = ", response);
+        if (response.didCancel) {
+          console.log("User cancelled photo picker");
+        } else if (response.error) {
+          console.log("ImagePicker Error: ", response.error);
+        } else if (response.customButton) {
+          console.log("User tapped custom button: ", response.customButton);
+        } else {
+          let source = { uri: response.uri };
+          let imgName = response.fileName;
+          if (Platform.OS === "ios") {
+            // on iOS, using camera returns undefined fileName. This fixes that issue, so API can work.
+            var getFilename = response.uri.split("/");
+            imgName = getFilename[getFilename.length - 1];
+          }
 
-      if (response.didCancel) {
-        console.log("User cancelled photo picker");
-      } else if (response.error) {
-        console.log("ImagePicker Error: ", response.error);
-      } else if (response.customButton) {
-        console.log("User tapped custom button: ", response.customButton);
-      } else {
-        let source = { uri: response.uri };
-        let imgName = response.fileName;
-        if (Platform.OS === "ios") {
-          // on iOS, using camera returns undefined fileName. This fixes that issue, so API can work.
-          var getFilename = response.uri.split("/");
-          imgName = getFilename[getFilename.length - 1];
+          const pic =
+            Platform.OS === "ios"
+              ? {
+                  uri: response.uri,
+                  type: response.type,
+                  name: imgName
+                }
+              : {
+                  uri: response.uri,
+                  type: response.type,
+                  name: imgName
+                };
+          console.log("PiC====>", pic);
+          var files = values.Files;
+          if (i == 0) files.push(pic);
+          else files[i] = pic;
+          setFieldValue("Files", files);
+
+          return;
         }
-
-        const pic =
-          Platform.OS === "ios"
-            ? {
-                uri: response.uri,
-                type: response.type,
-                name: imgName
-              }
-            : {
-                uri: response.uri,
-                type: response.type,
-                name: imgName
-              };
-        console.log("PiC====>", pic);
-        var files = values.Files;
-        if (i == 0) files.push(pic);
-        else files[i] = pic;
-        setFieldValue("Files", files);
-      }
-    });
+      });
+    } catch (err) {
+      alert(err);
+    }
   };
   openlaunchCamera_ = i => {
     const options = {

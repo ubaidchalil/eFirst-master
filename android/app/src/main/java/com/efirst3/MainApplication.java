@@ -3,6 +3,8 @@ package com.efirst3;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.vinzscam.reactnativefileviewer.RNFileViewerPackage;
+import com.rnfs.RNFSPackage;
 import io.github.elyx0.reactnativedocumentpicker.DocumentPickerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import co.apptailor.googlesignin.RNGoogleSigninPackage;
@@ -29,6 +31,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNFileViewerPackage(),
+            new RNFSPackage(),
             new DocumentPickerPackage(),
             new VectorIconsPackage(),
             new RNGoogleSigninPackage(),

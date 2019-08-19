@@ -149,7 +149,6 @@ const openFetcher = async (fetchData, type, dispatch) => {
 };
 
 const openAttestationFetcher = async (fetchData, type, dispatch) => {
-  console.log("type", type);
   dispatch(setInStore(true, type.LOADING));
   dispatch(setInStore(false, type.SUCCESS));
   dispatch(setInStore(null, type.ERROR));
@@ -175,7 +174,7 @@ const Fetcher = async (fetchData, type, dispatch) => {
   dispatch(setInStore(null, type.ERROR));
   try {
     const result = await fetchData();
-    console.log("result =>",JSON.stringify(result));
+    console.log("result =>", JSON.stringify(result));
     if (checkResult(result, dispatch, error => setInStore(error, type.ERROR))) {
       dispatch(setInStore(result.data, type.DONE));
       dispatch(setInStore(true, type.SUCCESS));

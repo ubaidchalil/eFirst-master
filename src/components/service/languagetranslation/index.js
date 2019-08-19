@@ -38,16 +38,14 @@ class Container extends Component {
   showToast = text => {
     this.refs.validationToasts.show(text, 3000);
   };
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     console.log(
       "Doc Attest Upd: result = >",
       JSON.stringify(this.props.langtranslation)
     );
     if (
-      !this.props.langtranslation.loading &&
-      !this.props.langtranslation.error &&
       this.props.langtranslation.success &&
-      this.state.Requested
+      !prevProps.langtranslation.success
     ) {
       this.setState({ Requested: false, UpdatedSRAmount: true });
       console.log("this.state", this.state);

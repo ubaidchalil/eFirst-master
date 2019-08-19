@@ -34,17 +34,8 @@ class Container extends Component {
     this.props.getCountries(this.props.token.token);
     this.props.getcertificateType(this.props.token.token);
   };
-  componentDidUpdate() {
-    console.log(
-      "Doc Attest Upd: result = >",
-      JSON.stringify(this.props.visaservice)
-    );
-    if (
-      !this.props.visaservice.loading &&
-      !this.props.visaservice.error &&
-      this.props.visaservice.success &&
-      this.state.Requested
-    ) {
+  componentDidUpdate(prevProps) {
+    if (this.props.visaservice.success && !prevProps.visaservice.success) {
       this.setState({ Requested: false, UpdatedSRAmount: true });
       var SRID = this.props.visaservice.data.Result.SRID;
       this.props.updAttestationSRAmt({

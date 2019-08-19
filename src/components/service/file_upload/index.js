@@ -132,7 +132,7 @@ class Container1 extends Component {
                 onPress={() => this.openlaunchCamera()}
               >
                 <Icon name="camera" />
-                <Text>Camera</Text>
+                <Text>Photo</Text>
               </Button>
               <Button
                 transparent
@@ -144,7 +144,7 @@ class Container1 extends Component {
                 onPress={() => this.openFile()}
               >
                 <Icon name="albums" />
-                <Text>Album</Text>
+                <Text>File</Text>
               </Button>
             </View>
           </View>
@@ -180,7 +180,7 @@ class Container1 extends Component {
                 onPress={() => this.openlaunchCamera()}
               >
                 <Icon name="camera" />
-                <Text>Camera</Text>
+                <Text>Photo</Text>
               </Button>
               <Button
                 transparent
@@ -192,7 +192,7 @@ class Container1 extends Component {
                 onPress={() => this.openFile()}
               >
                 <Icon name="albums" />
-                <Text>Album</Text>
+                <Text>File</Text>
               </Button>
             </View>
           </View>
@@ -228,7 +228,7 @@ class Container1 extends Component {
                 onPress={() => this.openlaunchCamera()}
               >
                 <Icon name="camera" />
-                <Text>Camera</Text>
+                <Text>Photo</Text>
               </Button>
               <Button
                 transparent
@@ -240,7 +240,7 @@ class Container1 extends Component {
                 onPress={() => this.openFile()}
               >
                 <Icon name="albums" />
-                <Text>Album</Text>
+                <Text>File</Text>
               </Button>
             </View>
           </View>

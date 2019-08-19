@@ -34,16 +34,14 @@ class Container extends Component {
     this.props.getCountries(this.props.token.token);
     this.props.getcertificateType(this.props.token.token);
   };
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     console.log(
       "Doc Attest Upd: result = >",
       JSON.stringify(this.props.documentattestation)
     );
     if (
-      !this.props.documentattestation.loading &&
-      !this.props.documentattestation.error &&
       this.props.documentattestation.success &&
-      this.state.Requested
+      !prevProps.documentattestation.success
     ) {
       this.setState({ Requested: false, UpdatedSRAmount: true });
       var SRID = this.props.documentattestation.data.SRID;

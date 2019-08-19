@@ -21,9 +21,9 @@ class Container extends Component {
 
   componentDidUpdate() {
     if (
-    //  !this.props.srActivation.loading &&
-    //  !this.props.srActivation.error &&
-    //  this.props.srActivation.success &&
+      //  !this.props.srActivation.loading &&
+      //  !this.props.srActivation.error &&
+      //  this.props.srActivation.success &&
       this.state.Requested
     ) {
       this.setState({ Requested: false });
@@ -45,7 +45,7 @@ class Container extends Component {
     console.log("n==>", n);
     const srid = this.props.navigation.state.params.srid;
     if (n >= 0) {
-    //  this.props.activateSR({ srid: srid, token: this.props.token.token });
+      //  this.props.activateSR({ srid: srid, token: this.props.token.token });
       this.setState({ Requested: true, showWeb: false });
     }
     //    this.props.navigation.navigate("MyRequests");
@@ -54,6 +54,8 @@ class Container extends Component {
   render = () => {
     const { loading } = this.props.srActivation;
     const srid = this.props.navigation.state.params.srid;
+
+    console.log("SRId Payfort===>", srid);
     const userid = this.props.navigation.state.params.userid;
     return (
       <View style={{ flex: 1 }}>
