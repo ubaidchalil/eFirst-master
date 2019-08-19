@@ -16,10 +16,7 @@ import {
   Input
 } from "native-base";
 import MyHeader from "../../../../Header";
-import {
-  DocumentPicker,
-  DocumentPickerUtil
-} from "react-native-document-picker";
+import DocumentPicker from "react-native-document-picker";
 var ImagePicker = require("react-native-image-picker");
 import { validateFileTypeAndSize } from "../../../../constants";
 import Toast, { DURATION } from "react-native-easy-toast";
@@ -42,7 +39,7 @@ class _Container extends Component {
   }
 
   componentDidMount = () => {};
-  
+
   componentWillMount = () => {
     BackHandler.addEventListener(
       "hardwareBackPress",
@@ -57,7 +54,6 @@ class _Container extends Component {
     );
   };
 
-  
   handleBackButtonClick = () => {
     if (Array.isArray(this.state.pageData))
       this.setState(
@@ -78,6 +74,59 @@ class _Container extends Component {
 
   openlaunchCamera = (doc, index) => {
     const options = {
+      quality: 1.0,
+      maxWidth: 500,
+      maxHeight: 500,
+      storageOptions: {
+        skipBackup: true
+      }
+    };
+
+    ImagePicker.showImagePicker(options, response => {
+      console.log("Response = ", response);
+      var _docs = this.state.docsAttached;
+      var _docNames = this.state.docNames;
+      if (response.didCancel) {
+        console.log("User cancelled photo picker");
+      } else if (response.error) {
+        console.log("ImagePicker Error: ", response.error);
+      } else if (response.customButton) {
+        console.log("User tapped custom button: ", response.customButton);
+      } else {
+        let source = { uri: response.uri };
+        let imgName = response.fileName;
+        if (Platform.OS === "ios") {
+          // on iOS, using camera returns undefined fileName. This fixes that issue, so API can work.
+          var getFilename = response.uri.split("/");
+          imgName = getFilename[getFilename.length - 1];
+        }
+
+        const pic =
+          Platform.OS === "ios"
+            ? {
+                uri: response.uri,
+                type: response.type,
+                name: imgName
+              }
+            : {
+                uri: response.uri,
+                type: response.type,
+                name: imgName
+              };
+        this.state.docItem.push(pic);
+        _docs.push(doc);
+        if (index < 0) {
+          _docNames[doc] = !Array.isArray(_docNames[doc]) ? [] : _docNames[doc];
+          _docNames[doc].push(response.fileName);
+        } else _docNames[doc][index] = response.fileName;
+        this.setState({ docsAttached: _docs });
+        this.setState({ docNames: _docNames });
+        console.log(JSON.stringify(pic));
+      }
+    });
+  };
+  openlaunchCamera_ = (doc, index) => {
+    const options = {
       title: "Select Avatar",
       storageOptions: {
         cameraRoll: true,
@@ -92,11 +141,15 @@ class _Container extends Component {
       var _docNames = this.state.docNames;
 
       if (response.didCancel) {
-        console.log("result => ","User cancelled image picker");
+        console.log("result => ", "User cancelled image picker");
       } else if (response.error) {
-        console.log("result => ","ImagePicker Error: ", response.error);
+        console.log("result => ", "ImagePicker Error: ", response.error);
       } else if (response.customButton) {
-        console.log("result => ","User tapped custom button: ", response.customButton);
+        console.log(
+          "result => ",
+          "User tapped custom button: ",
+          response.customButton
+        );
       } else {
         let imgName = response.fileName;
         if (Platform.OS === "ios") {
@@ -118,30 +171,24 @@ class _Container extends Component {
         } else _docNames[doc][index] = response.fileName;
         this.setState({ docsAttached: _docs });
         this.setState({ docNames: _docNames });
-        console.log(JSON.stringify(file));
       }
     });
   };
 
-  openFile = (doc, index) => {
+  openFile = async (doc, index) => {
     var _docs = this.state.docsAttached;
     var _docNames = this.state.docNames;
+    try {
+      const res = await DocumentPicker.pick({
+        type: [DocumentPicker.types.allFiles]
+      });
 
-    DocumentPicker.show(
-      {
-        filetype: [DocumentPickerUtil.allFiles()]
-      },
-      (error, res) => {
-        if(error) return;
-        // Android
-        console.log(
-          res.uri,
-          res.type, // mime type
-          res.fileName,
-          res.fileSize
-        );
-        
-        const valdateRes = validateFileTypeAndSize(res);
+      if (res) {
+        const { name, size } = res;
+        const valdateRes = validateFileTypeAndSize({
+          fileName: name,
+          fileSize: size
+        });
         if (valdateRes.validateSize && valdateRes.validateType) {
           _docs.push(doc);
 
@@ -149,8 +196,8 @@ class _Container extends Component {
             _docNames[doc] = !Array.isArray(_docNames[doc])
               ? []
               : _docNames[doc];
-            _docNames[doc].push(res.fileName);
-          } else _docNames[doc][index] = res.fileName;
+            _docNames[doc].push(res.name);
+          } else _docNames[doc][index] = res.name;
 
           this.setState({ docsAttached: _docs });
           this.setState({ docNames: _docNames });
@@ -158,36 +205,35 @@ class _Container extends Component {
           const file = {
             uri: res.uri,
             type: res.type,
-            name: res.fileName
+            name: res.name
           };
 
           this.state.docItem.push(file);
         } else {
-          this.showToast(
-            "- Invalid file type.\n- File must be smaller than 5 MB"
-          );
+          showToast("- Invalid file type.\n- File must be smaller than 5 MB");
         }
       }
-    );
+    } catch (err) {
+      console.log("ERROR", err);
+    }
   };
 
   goToDetails = () => {
-
-    var docsNotRequired = this.props.navigation.state.params.details.docsNotRequired || [];
+    var docsNotRequired =
+      this.props.navigation.state.params.details.docsNotRequired || [];
     var docs = this.props.navigation.state.params.details.docs || [];
     var docsAttached = this.state.docsAttached || [];
-    
-    this.setState({ validationMsg : "" });
+
+    this.setState({ validationMsg: "" });
 
     var validationErr = false;
     docs.forEach(doc => {
-      if(docsAttached.indexOf(doc) == -1 && docsNotRequired.indexOf(doc) == -1)
-          validationErr = true;
+      if (docsAttached.indexOf(doc) == -1 && docsNotRequired.indexOf(doc) == -1)
+        validationErr = true;
     });
 
-    if(validationErr)
-    {
-      this.setState({ validationMsg : "Please select all required files" });
+    if (validationErr) {
+      this.setState({ validationMsg: "Please select all required files" });
       return;
     }
 
@@ -227,12 +273,6 @@ class _Container extends Component {
       CourierCharge: 10
     };
 
-    /*   if (this.state.submissionType == "Through Courier")
-      price_details.push({
-        Text: "Courier Charge",
-        Value: this.state.courier_charge
-      });
-  */
     docsAndPayment.PriceDetils = price_details;
     docsAndPayment.Notes = this.props.navigation.state.params.details.Notes;
     docsAndPayment.OriginalDocumentRequired = this.props.navigation.state.params.details.OriginalDocumentRequired;
@@ -272,16 +312,14 @@ class _Container extends Component {
           >
             <Button
               transparent
-              dark
               style={{ alignItems: "center" }}
               onPress={() => this.openlaunchCamera(_doc, -1)}
             >
               <Icon style={styles.uploadBtnIcon} name="camera" />
-              <Text style={styles.uploadBtnText}>Camera</Text>
+              <Text style={styles.uploadBtnText}>Photo</Text>
             </Button>
             <Button
               transparent
-              dark
               style={{
                 borderLeftWidth: 1,
                 borderLeftColor: "#7f8385",
@@ -290,7 +328,7 @@ class _Container extends Component {
               onPress={() => this.openFile(_doc, -1)}
             >
               <Icon style={styles.uploadBtnIcon} name="albums" />
-              <Text style={styles.uploadBtnText}>Album</Text>
+              <Text style={styles.uploadBtnText}>File</Text>
             </Button>
           </View>
         </View>
@@ -330,7 +368,7 @@ class _Container extends Component {
                   onPress={() => this.openlaunchCamera(_doc, index)}
                 >
                   <Icon style={styles.uploadBtnIcon} name="camera" />
-                  <Text style={styles.uploadBtnText} >Camera</Text>
+                  <Text style={styles.uploadBtnText}>Photo</Text>
                 </Button>
                 <Button
                   transparent
@@ -342,7 +380,7 @@ class _Container extends Component {
                   onPress={() => this.openFile(_doc, index)}
                 >
                   <Icon style={styles.uploadBtnIcon} name="albums" />
-                  <Text style={styles.uploadBtnText}>Album</Text>
+                  <Text style={styles.uploadBtnText}>File</Text>
                 </Button>
               </View>
             </View>
@@ -355,15 +393,22 @@ class _Container extends Component {
   };
 
   renderDocs = () => {
-    
-    var docsNotRequired = this.props.navigation.state.params.details.docsNotRequired || null;
+    var docsNotRequired =
+      this.props.navigation.state.params.details.docsNotRequired || null;
 
     return this.props.navigation.state.params.details.docs.map(doc => {
-      var IsRequired = docsNotRequired != null ? (docsNotRequired.indexOf(doc) >= 0 ? "" : "*") : "*";
+      var IsRequired =
+        docsNotRequired != null
+          ? docsNotRequired.indexOf(doc) >= 0
+            ? ""
+            : "*"
+          : "*";
       return (
         <View style={{ marginTop: 10 }}>
           <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }}>
-            <Text style={{ padding: 10 }}>{doc} {IsRequired} </Text>
+            <Text style={{ padding: 10 }}>
+              {doc} {IsRequired}{" "}
+            </Text>
           </Item>
           {this.renderDocArr(doc)}
           {this.renderDocNew(doc)}
@@ -499,7 +544,7 @@ class _Container extends Component {
             />
           </Item>
 
-          <Item style={{borderBottomWidth : 0}} >
+          <Item style={{ borderBottomWidth: 0 }}>
             <Text style={{ fontSize: 14, padding: 10, color: "red" }}>
               {this.state.validationMsg}
             </Text>
@@ -535,10 +580,10 @@ class _Container extends Component {
 }
 
 const styles = {
-  uploadBtnIcon : {
+  uploadBtnIcon: {
     color: "black"
   },
-  uploadBtnText : {
+  uploadBtnText: {
     color: "black"
   },
   uploadBtn: {

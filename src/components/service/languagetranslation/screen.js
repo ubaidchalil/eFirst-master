@@ -58,6 +58,54 @@ const LanguageTranslation = ({
 }) => {
   openlaunchCamera = i => {
     const options = {
+      quality: 1.0,
+      maxWidth: 500,
+      maxHeight: 500,
+      storageOptions: {
+        skipBackup: true
+      }
+    };
+
+    ImagePicker.showImagePicker(options, response => {
+      console.log("Response = ", response);
+
+      if (response.didCancel) {
+        console.log("User cancelled photo picker");
+      } else if (response.error) {
+        console.log("ImagePicker Error: ", response.error);
+      } else if (response.customButton) {
+        console.log("User tapped custom button: ", response.customButton);
+      } else {
+        let source = { uri: response.uri };
+        let imgName = response.fileName;
+        if (Platform.OS === "ios") {
+          // on iOS, using camera returns undefined fileName. This fixes that issue, so API can work.
+          var getFilename = response.uri.split("/");
+          imgName = getFilename[getFilename.length - 1];
+        }
+
+        const pic =
+          Platform.OS === "ios"
+            ? {
+                uri: response.uri,
+                type: response.type,
+                name: imgName
+              }
+            : {
+                uri: response.uri,
+                type: response.type,
+                name: imgName
+              };
+        console.log("PiC====>", pic);
+        var files = values.Files;
+        if (i == 0) files.push(pic);
+        else files[i] = pic;
+        setFieldValue("Files", files);
+      }
+    });
+  };
+  openlaunchCamera_ = i => {
+    const options = {
       title: "Select Avatar",
       storageOptions: {
         cameraRoll: true,
@@ -92,31 +140,38 @@ const LanguageTranslation = ({
         if (i == 0) files.push(file);
         else files[i] = file;
         setFieldValue("Files", files);
+        return null;
       }
     });
   };
 
   const openFile = async i => {
-    const res = await DocumentPicker.pick({
-      type: [DocumentPicker.types.images]
-    });
+    try {
+      const res = await DocumentPicker.pick({
+        type: [DocumentPicker.types.images]
+      });
 
-    if (res) {
-      const valdateRes = validateFileTypeAndSizeForTranslation(res);
-      if (valdateRes.validateSize && valdateRes.validateType) {
-        const file = {
-          uri: res.uri,
-          type: res.type,
-          name: res.name
-        };
-        var files = values.Files;
-        if (i == 0) files.push(file);
-        else files[i] = file;
-        setFieldValue("Files", files);
-      } else {
-        showToast("- Invalid file type.\n- File must be smaller than 5 MB");
+      if (res) {
+        const { name, size } = res;
+        const valdateRes = validateFileTypeAndSizeForTranslation({
+          fileName: name,
+          fileSize: size
+        });
+        if (valdateRes.validateSize && valdateRes.validateType) {
+          const file = {
+            uri: res.uri,
+            type: res.type,
+            name: res.name
+          };
+          var files = values.Files;
+          if (i == 0) files.push(file);
+          else files[i] = file;
+          setFieldValue("Files", files);
+        } else {
+          showToast("- Invalid file type.\n- File must be smaller than 5 MB");
+        }
       }
-    }
+    } catch (err) {}
   };
 
   renderDocs = i => {
@@ -146,12 +201,11 @@ const LanguageTranslation = ({
             >
               <Button
                 transparent
-                dark
                 style={{ alignItems: "center" }}
                 onPress={() => this.openlaunchCamera(i)}
               >
                 <Icon style={styles.uploadBtnIcon} name="camera" />
-                <Text style={styles.uploadBtnIcon}>Camera</Text>
+                <Text style={styles.uploadBtnIcon}>Photo</Text>
               </Button>
               <Button
                 transparent
@@ -635,16 +689,14 @@ const LanguageTranslation = ({
                 >
                   <Button
                     transparent
-                    dark
                     style={{ alignItems: "center" }}
                     onPress={() => this.openlaunchCamera(0)}
                   >
                     <Icon style={styles.uploadBtnIcon} name="camera" />
-                    <Text style={styles.uploadBtnText}>Camera</Text>
+                    <Text style={styles.uploadBtnText}>Photo</Text>
                   </Button>
                   <Button
                     transparent
-                    dark
                     style={{
                       borderLeftWidth: 1,
                       borderLeftColor: "#CACFD2",
@@ -653,7 +705,7 @@ const LanguageTranslation = ({
                     onPress={() => openFile(0)}
                   >
                     <Icon style={styles.uploadBtnIcon} name="albums" />
-                    <Text style={styles.uploadBtnText}>Album</Text>
+                    <Text style={styles.uploadBtnText}>File</Text>
                   </Button>
                 </View>
               </View>
@@ -907,7 +959,7 @@ export default withFormik({
     data.append("City", values.City);
     data.append("State", values.SelectedState);
     console.log("result =>", JSON.stringify(data));
-    
+
     return values.doclangTransCreate({ data, token });
   }
 })(LanguageTranslation);
@@ -961,10 +1013,10 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     borderColor: "rgba(0, 0, 0, 0.1)"
   },
-  uploadBtnIcon : {
+  uploadBtnIcon: {
     color: "black"
   },
-  uploadBtnText : {
+  uploadBtnText: {
     color: "black"
   },
   pickerStyle:
@@ -975,4 +1027,3 @@ const styles = StyleSheet.create({
         }
       : { width: undefined }
 });
-
