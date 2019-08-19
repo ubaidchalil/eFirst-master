@@ -118,7 +118,7 @@ class SRInfo extends Component {
               <View style={{ flex: 1 }}>
                 <Text style={styles.value}> {Address} </Text>
               </View>
-            </View> 
+            </View>
             {ServiceName === "ATTESTATION SERVICE" && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Country : </Text>
@@ -246,6 +246,23 @@ class SRInfo extends Component {
                   </Text>
                 </View>
               )}
+
+            {ServiceName === "VISA SERVICE" && TrackingNo && (
+              <View style={styles.item_border}>
+                <Text style={styles.label}>Shipment Tracking No : </Text>
+                <Text
+                  onPress={() =>
+                    Linking.openURL("https://track.easypick.me/track-shipment")
+                  }
+                  style={[
+                    styles.value,
+                    { color: "#337ab7", textDecorationLine: "underline" }
+                  ]}
+                >
+                  {TrackingNo}
+                </Text>
+              </View>
+            )}
 
             {ServiceName != "VISA SERVICE" && (
               <View style={styles.item_border}>

@@ -654,7 +654,6 @@ const LanguageTranslation = ({
                   </Button>
                   <Button
                     transparent
-                    dark
                     style={{
                       borderLeftWidth: 1,
                       borderLeftColor: "#CACFD2",
@@ -970,10 +969,10 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     borderColor: "rgba(0, 0, 0, 0.1)"
   },
-  uploadBtnIcon : {
+  uploadBtnIcon: {
     color: "black"
   },
-  uploadBtnText : {
+  uploadBtnText: {
     color: "black"
   },
   pickerStyle:
@@ -984,4 +983,3 @@ const styles = StyleSheet.create({
         }
       : { width: undefined }
 });
-
