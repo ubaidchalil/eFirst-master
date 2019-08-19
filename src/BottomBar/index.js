@@ -21,7 +21,7 @@ class FooterTabs extends Component {
     const statusId = null;
     this.props.servicesData({ statusId, token });
 
-    this.props.navigation.navigate("MyRequests", {
+    this.props.navigation.navigate("UserActions", {
       headerTitle: "My Requests",
       noDataLabel: "No recent service request"
     });

@@ -92,9 +92,8 @@ class SRInfo extends Component {
       : "";
     console.log("PICKUP==>", PickUpandDropOption);
     return (
-      <Container>
         <ScrollView>
-          <Content style={{ padding: 10 }}>
+          <View style={{ padding: 10 }}>
             <View style={styles.item_border}>
               <Text style={styles.label}>Name : </Text>
               <Text style={styles.value}> {CustomerName} </Text>
@@ -118,7 +117,7 @@ class SRInfo extends Component {
               <View style={{ flex: 1 }}>
                 <Text style={styles.value}> {Address} </Text>
               </View>
-            </View>
+            </View> 
             {ServiceName === "ATTESTATION SERVICE" && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Country : </Text>
@@ -247,23 +246,6 @@ class SRInfo extends Component {
                 </View>
               )}
 
-            {ServiceName === "VISA SERVICE" && TrackingNo && (
-              <View style={styles.item_border}>
-                <Text style={styles.label}>Shipment Tracking No : </Text>
-                <Text
-                  onPress={() =>
-                    Linking.openURL("https://track.easypick.me/track-shipment")
-                  }
-                  style={[
-                    styles.value,
-                    { color: "#337ab7", textDecorationLine: "underline" }
-                  ]}
-                >
-                  {TrackingNo}
-                </Text>
-              </View>
-            )}
-
             {ServiceName != "VISA SERVICE" && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Bill Amount :</Text>
@@ -272,9 +254,8 @@ class SRInfo extends Component {
             )}
             <View style={{ marginBottom: 10 }} />
             {pageData && <VisaServiceDt pageData={pageData} />}
-          </Content>
+          </View>
         </ScrollView>
-      </Container>
     );
   }
 }

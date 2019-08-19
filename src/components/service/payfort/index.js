@@ -21,16 +21,16 @@ class Container extends Component {
 
   componentDidUpdate() {
     if (
-      !this.props.srActivation.loading &&
-      !this.props.srActivation.error &&
-      this.props.srActivation.success &&
+    //  !this.props.srActivation.loading &&
+    //  !this.props.srActivation.error &&
+    //  this.props.srActivation.success &&
       this.state.Requested
     ) {
       this.setState({ Requested: false });
       const { token } = this.props.token;
       const statusId = null;
       this.props.servicesData({ statusId, token });
-      this.props.navigation.navigate("MyRequests", {
+      this.props.navigation.navigate("UserActions", {
         headerTitle: "My Requests",
         noDataLabel: "No recent service request"
       });
@@ -45,7 +45,7 @@ class Container extends Component {
     console.log("n==>", n);
     const srid = this.props.navigation.state.params.srid;
     if (n >= 0) {
-      this.props.activateSR({ srid: srid, token: this.props.token.token });
+    //  this.props.activateSR({ srid: srid, token: this.props.token.token });
       this.setState({ Requested: true, showWeb: false });
     }
     //    this.props.navigation.navigate("MyRequests");

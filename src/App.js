@@ -9,10 +9,6 @@ import { StatusBar, View, Platform } from "react-native";
 import { Provider as PaperProvider } from "react-native-paper";
 const { store, persistor } = initStore();
 const STATUS_BAR_HEIGHT = Platform.OS === "ios" ? 40 : StatusBar.currentHeight;
-import { Sentry } from "react-native-sentry";
-Sentry.config("https://1d19dbd920d1454d848c6e17d358f6b5@sentry.io/1531525", {
-  deactivateStacktraceMerging: false
-}).install();
 export default class App extends Component {
   render = () => (
     <Provider store={store}>
