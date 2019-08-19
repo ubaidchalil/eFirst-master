@@ -98,7 +98,7 @@ class Container extends Component {
     const success = langtranslation.success;
     return (
       <View style={{ flex: 1 }}>
-        <Loader loading={loading} />
+        {/* <Loader loading={loading} /> */}
         <LanguageTranslation
           showToast={this.showToast}
           setRequestedValue={this.setRequestedValue}

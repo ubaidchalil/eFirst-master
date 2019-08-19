@@ -35,10 +35,7 @@ import { Color } from "../../../constants";
 import TermsandConditon from "../../termsandcondition";
 import { validateFileTypeAndSizeForTranslation } from "../../../constants";
 var ImagePicker = require("react-native-image-picker");
-import {
-  DocumentPicker,
-  DocumentPickerUtil
-} from "react-native-document-picker";
+import DocumentPicker from "react-native-document-picker";
 
 const deviceWidth = Dimensions.get("window").width;
 
@@ -99,36 +96,27 @@ const LanguageTranslation = ({
     });
   };
 
-  openFile = i => {
-    DocumentPicker.show(
-      {
-        filetype: [DocumentPickerUtil.images()]
-      },
-      (error, res) => {
-        if (res) {
-          console.log(
-            res.uri,
-            res.type, // mime type
-            res.fileName,
-            res.fileSize
-          );
-          const valdateRes = validateFileTypeAndSizeForTranslation(res);
-          if (valdateRes.validateSize && valdateRes.validateType) {
-            const file = {
-              uri: res.uri,
-              type: res.type,
-              name: res.fileName
-            };
-            var files = values.Files;
-            if (i == 0) files.push(file);
-            else files[i] = file;
-            setFieldValue("Files", files);
-          } else {
-            showToast("- Invalid file type.\n- File must be smaller than 5 MB");
-          }
-        }
+  const openFile = async i => {
+    const res = await DocumentPicker.pick({
+      type: [DocumentPicker.types.images]
+    });
+
+    if (res) {
+      const valdateRes = validateFileTypeAndSizeForTranslation(res);
+      if (valdateRes.validateSize && valdateRes.validateType) {
+        const file = {
+          uri: res.uri,
+          type: res.type,
+          name: res.name
+        };
+        var files = values.Files;
+        if (i == 0) files.push(file);
+        else files[i] = file;
+        setFieldValue("Files", files);
+      } else {
+        showToast("- Invalid file type.\n- File must be smaller than 5 MB");
       }
-    );
+    }
   };
 
   renderDocs = i => {
@@ -171,7 +159,7 @@ const LanguageTranslation = ({
                   borderLeftColor: "#CACFD2",
                   alignItems: "center"
                 }}
-                onPress={() => this.openFile(i)}
+                onPress={() => openFile(i)}
               >
                 <Icon style={styles.uploadBtnIcon} name="albums" />
                 <Text style={styles.uploadBtnIcon}>Album</Text>
@@ -659,7 +647,7 @@ const LanguageTranslation = ({
                       borderLeftColor: "#CACFD2",
                       alignItems: "center"
                     }}
-                    onPress={() => this.openFile(0)}
+                    onPress={() => openFile(0)}
                   >
                     <Icon style={styles.uploadBtnIcon} name="albums" />
                     <Text style={styles.uploadBtnText}>Album</Text>

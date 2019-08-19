@@ -90,6 +90,7 @@ class SRInfo extends Component {
     const PickUpandDropOption = this.props.srInfo.PickUpandDropOption
       ? this.props.srInfo.PickUpandDropOption
       : "";
+    const { ThruCourier } = this.props.srDetail;
     console.log("PICKUP==>", PickUpandDropOption);
     return (
       <Container>
@@ -247,7 +248,7 @@ class SRInfo extends Component {
                 </View>
               )}
 
-            {ServiceName === "VISA SERVICE" && TrackingNo && (
+            {ServiceName === "VISA SERVICE" && ThruCourier && (
               <View style={styles.item_border}>
                 <Text style={styles.label}>Shipment Tracking No : </Text>
                 <Text

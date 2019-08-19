@@ -368,6 +368,7 @@ const DocumentAttestation = ({
                 value={values.PassportExiryDate}
                 error={touched.PassportExiryDate && errors.PassportExiryDate}
                 underlineColor={Color.secondary}
+                editable={false}
               />
             </Item>
 

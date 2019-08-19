@@ -3,8 +3,10 @@ package com.efirst3;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.github.elyx0.reactnativedocumentpicker.DocumentPickerPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
 import io.sentry.RNSentryPackage;
-import com.reactnativedocumentpicker.ReactNativeDocumentPicker;
 import com.imagepicker.ImagePickerPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.facebook.react.ReactNativeHost;
@@ -27,8 +29,10 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new DocumentPickerPackage(),
+            new VectorIconsPackage(),
+            new RNGoogleSigninPackage(),
             new RNSentryPackage(),
-            new ReactNativeDocumentPicker(),
             new ImagePickerPackage(),
             new RNGestureHandlerPackage()
       );
