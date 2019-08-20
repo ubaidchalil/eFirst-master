@@ -1,62 +1,79 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { View } from "react-native";
-import { DashboardData } from "../dashboard/action";
+import { DASHBOARD_DATA_URL } from "../../constants";
+import AlertView from "../styled/alert-view";
 import Loader from "../styled/loader";
 
 class SplashScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dashboardDataLoaded: false
+      loading: true,
+      error: ""
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const { token } = this.props.token;
-    this.props.DashboardData(token);
-    this.setState({ dashboardDataLoaded: true });
-  }
+    const result = await fetch(DASHBOARD_DATA_URL, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`
+      }
+    })
+    .catch((error) => {
+      this.setState({ error });
+      this.setState({ loading: false });
+      return;
+    });
 
-  componentDidUpdate(prevProps) {
-    const { dashboard } = this.props;
-    const { loading, error, data } = dashboard;
-    const { dashboardDataLoaded } = this.state;
+    const data = await result.json();
+    const {
+      ActionRequiredNewUpdateCount,
+      ActionRequiredTotalUpdateCount,
+      CompletedNewUpdateCount,
+      CompletedTotalUpdateCount,
+      InReviewNewUpdateCount,
+      InReviewTotalUpdateCount,
+      RejectedNewUpdateCount,
+      RejectedTotalUpdateCount
+    } = data.Tiles;
 
-    if (!loading && !error && data) {
-      console.log("in if");
-      const {
-        ActionRequiredNewUpdateCount,
-        ActionRequiredTotalUpdateCount,
-        CompletedNewUpdateCount,
-        CompletedTotalUpdateCount,
-        InReviewNewUpdateCount,
-        InReviewTotalUpdateCount,
-        RejectedNewUpdateCount,
-        RejectedTotalUpdateCount
-      } = dashboard.data.Tiles;
-      const total =
-        ActionRequiredNewUpdateCount +
-        ActionRequiredTotalUpdateCount +
-        CompletedNewUpdateCount +
-        CompletedTotalUpdateCount +
-        InReviewNewUpdateCount +
-        InReviewTotalUpdateCount +
-        RejectedNewUpdateCount +
-        RejectedTotalUpdateCount;
-
-      //this.props.navigation.navigate("Home");
-    }
+    const total =
+    ActionRequiredNewUpdateCount +
+    ActionRequiredTotalUpdateCount +
+    CompletedNewUpdateCount +
+    CompletedTotalUpdateCount +
+    InReviewNewUpdateCount +
+    InReviewTotalUpdateCount +
+    RejectedNewUpdateCount +
+    RejectedTotalUpdateCount;
+    
+    console.log("result =>", total);
+    this.setState({ loading:false });
+    if(total > 0)
+      this.props.navigation.navigate("Home");
+    else
+      this.props.navigation.navigate("SelectService");
+    
   }
 
   render = () => {
-    this.props.navigation.navigate("Home");
-    const { loading, error } = this.props.dashboard;
     return (
-      <View style={{ flex: 1 }}>{/* <Loader loading={loading} /> */}</View>
+      <View style={{ flex: 1 }}>{ <Loader loading={this.state.loading} /> }
+        {this.state.error != "" && (
+          <AlertView
+            type="error"
+            message="Sorry, No Internet connection"
+          />
+        )}
+      </View>
     );
   };
 }
+
 const mapStateToProps = ({ dashboard, token }) => ({ dashboard, token });
 const mapDispatchToProps = dispatch => ({
   DashboardData: payload => dispatch(DashboardData(payload))
