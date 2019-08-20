@@ -1625,15 +1625,15 @@ export default visa_options = {
     "Change Status": {
       "title": "Visa Type",
       "options": [
-        "Partner/Investor/Employee Visa",
+        "Partner/Investor Visa",
         "Family Visa"
       ],
-      "Partner/Investor/Employee Visa": {
+      "Partner/Investor Visa": {
         "docs": [
           "New Visa",
-          "Old Visa",
+          "Old visa/Visit visa",
           "Immigration Card",
-          "Trade Liscense",
+          "Trade License",
           "Passport ",
           "Sponsor's emirates id"
         ],
@@ -1665,11 +1665,10 @@ export default visa_options = {
       "Family Visa": {
         "docs": [
           "New Visa",
-          "Old Visa",
-          "Immigration Card",
-          "Trade Liscense",
-          "Passport ",
-          "Sponsor's emirates id"
+          "Old visa/Visit visa",
+			"Sponsored Passport",
+          "Sponsor Passport",
+          "Sponsor Visa"
         ],
         "PriceDetails": [
           {
@@ -1716,7 +1715,6 @@ export default visa_options = {
             "Emirates ID application",
             "Insurance",
             "Visa page",
-            "Sponsor's emirates id",
             "Immigration card for company visas"
           ],
           "PriceDetails": [
@@ -1750,7 +1748,6 @@ export default visa_options = {
             "Emirates ID application",
             "Insurance",
             "Visa page",
-            "Sponsor's emirates id",
             "Immigration card for company visas"
           ],
           "PriceDetails": [
@@ -1797,7 +1794,6 @@ export default visa_options = {
               "Emirates ID application",
               "Insurance",
               "Visa page",
-              "Sponsor's emirates id",
               "Immigration card for company visas",
               "Sponsor's visa page for family"
             ],
@@ -1832,7 +1828,6 @@ export default visa_options = {
               "Emirates ID application",
               "Insurance",
               "Visa page",
-              "Sponsor's emirates id",
               "Immigration card for company visas",
               "Sponsor's visa page for family"
             ],
@@ -1880,7 +1875,6 @@ export default visa_options = {
                 "Emirates ID application",
                 "Insurance",
                 "Visa page",
-                "Sponsor's emirates id",
                 "Immigration card for company visas",
                 "Sponsor's visa page for family"
               ],
@@ -1915,7 +1909,6 @@ export default visa_options = {
                 "Emirates ID application",
                 "Insurance",
                 "Visa page",
-                "Sponsor's emirates id",
                 "Immigration card for company visas",
                 "Sponsor's visa page for family"
               ],
@@ -1956,8 +1949,7 @@ export default visa_options = {
                 "Medical result",
                 "Emirates ID application",
                 "Insurance",
-                "Visa page",
-                "Sponsor's emirates id",
+                "Visa page",,
                 "Immigration card for company visas",
                 "Sponsor's visa page for family"
               ],
@@ -1992,7 +1984,6 @@ export default visa_options = {
                 "Emirates ID application",
                 "Insurance",
                 "Visa page",
-                "Sponsor's emirates id",
                 "Immigration card for company visas",
                 "Sponsor's visa page for family"
               ],
@@ -2046,7 +2037,6 @@ export default visa_options = {
               "License and MOA",
               "Sponsor's passport",
               "Sponsor's visa",
-              "Sponsor's emirates id",
               "Ejari under Sponsor's name"
             ],
             "PriceDetails": [
@@ -2084,7 +2074,6 @@ export default visa_options = {
               "License and MOA",
               "Sponsor's passport",
               "Sponsor's visa",
-              "Sponsor's emirates id",
               "Ejari under Sponsor's name"
             ],
             "PriceDetails": [
@@ -2129,7 +2118,6 @@ export default visa_options = {
               "Labour contract",
               "Sponsor's passport",
               "Sponsor's visa",
-              "Sponsor's emirates id",
               "Ejari under Sponsor's name"
             ],
             "PriceDetails": [
@@ -2167,7 +2155,6 @@ export default visa_options = {
               "Labour Contract",
               "Sponsor's passport",
               "Sponsor's visa",
-              "Sponsor's emirates id",
               "Ejari under Sponsor's name"
             ],
             "PriceDetails": [
@@ -2221,7 +2208,6 @@ export default visa_options = {
           ],
           "Normal": {
             "docs": [
-              "Sponsor's emirates ID",
               "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
@@ -2252,6 +2238,10 @@ export default visa_options = {
               {
                 "Text": "Emirates ID Price - 3 years",
                 "Value": 374
+              },
+              {
+                "Text": "Service charge",
+                "Value": 105
               }
             ],
             "Notes": {
@@ -2271,7 +2261,6 @@ export default visa_options = {
           },
           "48 Hours": {
             "docs": [
-              "Sponsor's emirates ID",
               "Trade License",
               "Immigration card",
               "Passport",
@@ -2325,7 +2314,6 @@ export default visa_options = {
           },
           "24  Hours": {
             "docs": [
-              "Sponsor's emirates ID",
               "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
@@ -2379,7 +2367,6 @@ export default visa_options = {
           },
           "5 Hours": {
             "docs": [
-              "Sponsor's emirates ID",
               "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
@@ -2433,7 +2420,6 @@ export default visa_options = {
           },
           "2 Hours": {
             "docs": [
-              "Sponsor's emirates ID",
               "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
@@ -2497,7 +2483,6 @@ export default visa_options = {
           ],
           "Normal": {
             "docs": [
-              "Sponsor's emirates ID",
               "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
@@ -2547,7 +2532,6 @@ export default visa_options = {
           },
           "48 Hours": {
             "docs": [
-              "Sponsor's emirates ID",
               "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
@@ -2597,7 +2581,6 @@ export default visa_options = {
           },
           "24  Hours": {
             "docs": [
-              "Sponsor's emirates ID",
               "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
@@ -2647,7 +2630,6 @@ export default visa_options = {
           },
           "5 Hours": {
             "docs": [
-              "Sponsor's emirates ID",
               "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
@@ -2697,7 +2679,6 @@ export default visa_options = {
           },
           "2 Hours": {
             "docs": [
-              "Sponsor's emirates ID",
               "Trade License",
               "Immigration card",
               "Memorandum of association (MOA)",
@@ -2778,7 +2759,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -2816,6 +2796,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                 "IBAN Number": "",
@@ -2836,7 +2820,6 @@ export default visa_options = {
               },
               "48 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -2874,6 +2857,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                 "IBAN Number": "",
@@ -2894,7 +2881,6 @@ export default visa_options = {
               },
               "24  Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -2932,6 +2918,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                 "IBAN Number": "",
@@ -2952,7 +2942,6 @@ export default visa_options = {
               },
               "5 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -2990,6 +2979,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                 "IBAN Number": "",
@@ -3010,7 +3003,6 @@ export default visa_options = {
               },
               "2 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -3048,6 +3040,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                 "IBAN Number": "",
@@ -3078,7 +3074,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -3112,6 +3107,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                 "IBAN Number": "",
@@ -3132,7 +3131,6 @@ export default visa_options = {
               },
               "48 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -3166,6 +3164,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                 "IBAN Number": "",
@@ -3186,7 +3188,6 @@ export default visa_options = {
               },
               "24  Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -3220,6 +3221,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                 "IBAN Number": "",
@@ -3240,7 +3245,6 @@ export default visa_options = {
               },
               "5 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -3274,6 +3278,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                 "IBAN Number": "",
@@ -3294,7 +3302,6 @@ export default visa_options = {
               },
               "2 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -3328,6 +3335,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                 "IBAN Number": "",
@@ -3371,7 +3382,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -3409,7 +3419,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -3429,7 +3443,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -3467,7 +3480,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -3487,7 +3504,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -3525,7 +3541,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -3545,7 +3565,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -3583,7 +3602,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -3603,7 +3626,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -3641,7 +3663,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -3671,7 +3697,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -3705,7 +3730,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -3725,7 +3754,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -3759,7 +3787,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -3779,7 +3811,6 @@ export default visa_options = {
                 },
                 "24 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor visa",
                   "Residential ejari (under Sponsor's name)",
@@ -3813,6 +3844,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                   "IBAN Number": "",
@@ -3833,7 +3868,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -3867,7 +3901,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -3887,7 +3925,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -3921,7 +3958,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -3958,7 +3999,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -3996,7 +4036,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4016,7 +4060,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -4054,7 +4097,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4074,7 +4121,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -4112,7 +4158,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4132,7 +4182,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -4170,7 +4219,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4190,7 +4243,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -4228,7 +4280,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4257,7 +4313,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -4291,7 +4346,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4311,7 +4370,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -4345,7 +4403,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4365,7 +4427,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -4399,7 +4460,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4419,7 +4484,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -4453,7 +4517,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4473,7 +4541,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -4507,7 +4574,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4552,7 +4623,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -4594,7 +4664,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4614,7 +4688,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -4656,7 +4729,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4676,7 +4753,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -4718,7 +4794,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4738,7 +4818,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -4780,7 +4859,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4800,7 +4883,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -4842,7 +4924,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4872,7 +4958,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -4910,7 +4995,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4930,7 +5019,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -4968,7 +5056,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4988,7 +5080,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5026,7 +5117,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5046,7 +5141,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5084,7 +5178,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5104,7 +5202,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5142,7 +5239,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5179,7 +5280,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5221,7 +5321,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5241,7 +5345,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5283,7 +5386,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5303,7 +5410,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5345,7 +5451,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5365,7 +5475,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5407,7 +5516,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5427,7 +5540,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5469,7 +5581,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5499,7 +5615,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5537,7 +5652,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5557,7 +5676,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5595,7 +5713,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5615,7 +5737,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5653,7 +5774,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5673,7 +5798,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5711,7 +5835,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5731,7 +5859,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5769,7 +5896,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5806,7 +5937,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5846,7 +5976,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5866,7 +6000,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5906,7 +6039,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5926,7 +6063,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -5966,7 +6102,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -5986,7 +6126,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -6026,7 +6165,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6046,7 +6189,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -6086,7 +6228,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6116,7 +6262,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -6152,7 +6297,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6172,7 +6321,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -6208,7 +6356,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6228,7 +6380,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -6264,7 +6415,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6284,7 +6439,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -6320,7 +6474,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6340,7 +6498,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under sponsors name, 2 bedroom and hall) ",
@@ -6376,7 +6533,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6413,7 +6574,6 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -6447,6 +6607,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                 "IBAN Number": "",
@@ -6467,7 +6631,6 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -6497,6 +6660,10 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
                 ],
                 "IBAN Number": "",
@@ -6533,7 +6700,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -6572,7 +6738,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6592,7 +6762,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -6631,7 +6800,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6651,7 +6824,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -6690,7 +6862,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6710,7 +6886,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -6749,7 +6924,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6769,7 +6948,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -6808,7 +6986,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6838,7 +7020,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -6873,7 +7054,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6893,7 +7078,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -6928,7 +7112,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -6948,7 +7136,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -6983,7 +7170,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7003,7 +7194,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7038,7 +7228,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7058,7 +7252,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7093,7 +7286,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7130,7 +7327,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7169,7 +7365,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7189,7 +7389,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7228,7 +7427,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7248,7 +7451,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7287,7 +7489,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7307,7 +7513,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7346,7 +7551,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7366,7 +7575,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7405,7 +7613,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7435,7 +7647,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7470,7 +7681,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7490,7 +7705,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7525,7 +7739,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7545,7 +7763,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7580,7 +7797,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7600,7 +7821,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7635,7 +7855,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7655,7 +7879,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7690,7 +7913,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7727,7 +7954,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7766,7 +7992,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7786,7 +8016,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7825,7 +8054,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7845,7 +8078,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7884,7 +8116,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7904,7 +8140,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -7943,7 +8178,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -7963,7 +8202,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -8002,7 +8240,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -8032,7 +8274,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -8067,7 +8308,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -8087,7 +8332,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -8122,7 +8366,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -8142,7 +8390,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -8177,7 +8424,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -8197,7 +8448,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -8232,7 +8482,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -8252,7 +8506,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -8287,7 +8540,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -8334,7 +8591,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -8368,7 +8624,11 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
-                  }
+                  },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                 ],
                 "IBAN Number": "",
                 "Notes": {
@@ -8388,7 +8648,6 @@ export default visa_options = {
               },
               "48 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -8422,7 +8681,11 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
-                  }
+                  },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                 ],
                 "IBAN Number": "",
                 "Notes": {
@@ -8442,7 +8705,6 @@ export default visa_options = {
               },
               "24  Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -8476,7 +8738,11 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
-                  }
+                  },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                 ],
                 "IBAN Number": "",
                 "Notes": {
@@ -8496,7 +8762,6 @@ export default visa_options = {
               },
               "5 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -8530,7 +8795,11 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
-                  }
+                  },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                 ],
                 "IBAN Number": "",
                 "Notes": {
@@ -8550,7 +8819,6 @@ export default visa_options = {
               },
               "2 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -8584,7 +8852,11 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
-                  }
+                  },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                 ],
                 "IBAN Number": "",
                 "Notes": {
@@ -8614,7 +8886,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -8644,7 +8915,11 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
-                  }
+                  },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                 ],
                 "IBAN Number": "",
                 "Notes": {
@@ -8664,7 +8939,6 @@ export default visa_options = {
               },
               "48 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -8694,7 +8968,11 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
-                  }
+                  },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                 ],
                 "IBAN Number": "",
                 "Notes": {
@@ -8714,7 +8992,6 @@ export default visa_options = {
               },
               "24  Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -8744,7 +9021,11 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
-                  }
+                  },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                 ],
                 "IBAN Number": "",
                 "Notes": {
@@ -8764,7 +9045,6 @@ export default visa_options = {
               },
               "5 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -8794,7 +9074,11 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
-                  }
+                  },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                 ],
                 "IBAN Number": "",
                 "Notes": {
@@ -8814,7 +9098,6 @@ export default visa_options = {
               },
               "2 Hours": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's passport",
                   "Sponsor's visa",
                   "Residential ejari (under Sponsor's name)",
@@ -8844,7 +9127,11 @@ export default visa_options = {
                   {
                     "Text": "Emirates ID Price - 3 years",
                     "Value": 374
-                  }
+                  },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                 ],
                 "IBAN Number": "",
                 "Notes": {
@@ -8921,7 +9208,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -8941,7 +9232,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -8975,7 +9265,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -8995,7 +9289,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9029,7 +9322,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9049,7 +9346,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9083,7 +9379,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9103,7 +9403,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9137,7 +9436,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9167,7 +9470,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9197,7 +9499,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9217,7 +9523,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9247,7 +9552,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9267,7 +9576,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9297,7 +9605,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9317,7 +9629,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9347,7 +9658,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9367,7 +9682,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9397,7 +9711,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9434,7 +9752,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9468,7 +9785,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9488,7 +9809,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9522,7 +9842,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9542,7 +9866,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9576,7 +9899,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9596,7 +9923,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9630,7 +9956,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9650,7 +9980,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9684,7 +10013,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9714,7 +10047,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9744,7 +10076,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9764,7 +10100,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9794,7 +10129,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9814,7 +10153,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9844,7 +10182,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9864,7 +10206,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9894,7 +10235,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9914,7 +10259,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -9944,7 +10288,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -9989,7 +10337,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10030,7 +10377,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10050,7 +10401,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10091,7 +10441,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10111,7 +10465,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10152,7 +10505,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10172,7 +10529,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10213,7 +10569,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10233,7 +10593,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10274,7 +10633,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10304,7 +10667,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10341,7 +10703,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10361,7 +10727,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10398,7 +10763,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10418,7 +10787,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10455,7 +10823,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10475,7 +10847,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10512,7 +10883,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10532,7 +10907,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10569,7 +10943,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10606,7 +10984,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10647,7 +11024,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10667,7 +11048,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10708,7 +11088,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10728,7 +11112,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10769,7 +11152,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10789,7 +11176,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10830,7 +11216,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10850,7 +11240,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10891,7 +11280,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10921,7 +11314,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -10958,7 +11350,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -10978,7 +11374,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11015,7 +11410,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11035,7 +11434,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11072,7 +11470,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11092,7 +11494,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11129,7 +11530,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11149,7 +11554,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11186,7 +11590,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11223,7 +11631,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11262,7 +11669,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11282,7 +11693,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11321,7 +11731,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11341,7 +11755,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11380,7 +11793,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11400,7 +11817,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11439,7 +11855,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11459,7 +11879,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11498,7 +11917,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11528,7 +11951,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11563,7 +11985,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11583,7 +12009,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11618,7 +12043,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11638,7 +12067,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11673,7 +12101,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11693,7 +12125,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11728,7 +12159,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11748,7 +12183,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -11783,7 +12217,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+              {
+                "Text": "Service charge",
+                "Value": 105
+              }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -11819,563 +12257,105 @@ export default visa_options = {
                 "Outside Country"
               ],
               "Inside Country": {
-                "title": "Medical Certificate Process Speed",
-                "options": [
-                  "Normal",
-                  "48 Hours",
-                  "24  Hours",
-                  "5 Hours",
-                  "2 Hours"
+                "docs": [
+                  "Sponsor's passport",
+                  "Sponsor's visa",
+                  "Residential ejari (under Sponsor's name)",
+                  "Labour Contract",
+                  "Birth certiﬁcate attested",
+                  "Sponsored passport",
+                  "1 photo (white background)",
+                  "Last 3 months bank statement"
                 ],
-                "Normal": {
-                  "docs": [
-                    "Sponsor's emirates ID",
-                    "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
-                    "Labour contract",
-                    "Birth certiﬁcate attested",
-                    "Sponsored passport",
-                    "1 photo (white background)",
-                    "Last 3 months bank statement"
-                  ],
-                  "PriceDetails": [
-                    {
-                      "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Stamping",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Medical Charges",
-                      "Value": 324
-                    },
-                    {
-                      "Text": "Insurance",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
-                    }
-                  ],
-                  "IBAN Number": "",
-                  "Notes": {
-                    "Text": "Notes",
-                    "Name": "Notes",
-                    "Options": [
-                      ""
-                    ]
+                "PriceDetails": [
+                  {
+                    "Text": "Entry Permit",
+                    "Value": 1138
                   },
-                  "OriginalDocumentRequired": {
-                    "Text": "Original Document Required",
-                    "Name": "OriginalDocumentRequired",
-                    "Options": [
-                      "Sponsor's Emirates ID"
-                    ]
+                  {
+                    "Text": "Change Status",
+                    "Value": 640
+                  },
+                  {
+                    "Text": "Stamping",
+                    "Value": 460
+                  },
+                  {
+                    "Text": "Insurance",
+                    "Value": 695.10
+                  },
+                  {
+                    "Text": "Emirates ID Price - 3 years",
+                    "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
+                ],
+                "IBAN Number": "",
+                "Notes": {
+                  "Text": "Notes",
+                  "Name": "Notes",
+                  "Options": [
+                    ""
+                  ]
                 },
-                "48 Hours": {
-                  "docs": [
-                    "Sponsor's emirates ID",
-                    "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
-                    "Labour contract",
-                    "Birth certiﬁcate attested",
-                    "Sponsored passport",
-                    "1 photo (white background)",
-                    "Last 3 months bank statement"
-                  ],
-                  "PriceDetails": [
-                    {
-                      "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Stamping",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Medical Charges",
-                      "Value": 440
-                    },
-                    {
-                      "Text": "Insurance",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
-                    }
-                  ],
-                  "IBAN Number": "",
-                  "Notes": {
-                    "Text": "Notes",
-                    "Name": "Notes",
-                    "Options": [
-                      ""
-                    ]
-                  },
-                  "OriginalDocumentRequired": {
-                    "Text": "Original Document Required",
-                    "Name": "OriginalDocumentRequired",
-                    "Options": [
-                      "Sponsor's Emirates ID"
-                    ]
-                  }
-                },
-                "24  Hours": {
-                  "docs": [
-                    "Sponsor's emirates ID",
-                    "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
-                    "Labour contract",
-                    "Birth certiﬁcate attested",
-                    "Sponsored passport",
-                    "1 photo (white background)",
-                    "Last 3 months bank statement"
-                  ],
-                  "PriceDetails": [
-                    {
-                      "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Stamping",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Medical Charges",
-                      "Value": 550
-                    },
-                    {
-                      "Text": "Insurance",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
-                    }
-                  ],
-                  "IBAN Number": "",
-                  "Notes": {
-                    "Text": "Notes",
-                    "Name": "Notes",
-                    "Options": [
-                      ""
-                    ]
-                  },
-                  "OriginalDocumentRequired": {
-                    "Text": "Original Document Required",
-                    "Name": "OriginalDocumentRequired",
-                    "Options": [
-                      "Sponsor's Emirates ID"
-                    ]
-                  }
-                },
-                "5 Hours": {
-                  "docs": [
-                    "Sponsor's emirates ID",
-                    "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
-                    "Labour contract",
-                    "Birth certiﬁcate attested",
-                    "Sponsored passport",
-                    "1 photo (white background)",
-                    "Last 3 months bank statement"
-                  ],
-                  "PriceDetails": [
-                    {
-                      "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Stamping",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Medical Charges",
-                      "Value": 752
-                    },
-                    {
-                      "Text": "Insurance",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
-                    }
-                  ],
-                  "IBAN Number": "",
-                  "Notes": {
-                    "Text": "Notes",
-                    "Name": "Notes",
-                    "Options": [
-                      ""
-                    ]
-                  },
-                  "OriginalDocumentRequired": {
-                    "Text": "Original Document Required",
-                    "Name": "OriginalDocumentRequired",
-                    "Options": [
-                      "Sponsor's Emirates ID"
-                    ]
-                  }
-                },
-                "2 Hours": {
-                  "docs": [
-                    "Sponsor's emirates ID",
-                    "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
-                    "Labour contract",
-                    "Birth certiﬁcate attested",
-                    "Sponsored passport",
-                    "1 photo (white background)",
-                    "Last 3 months bank statement"
-                  ],
-                  "PriceDetails": [
-                    {
-                      "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Stamping",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Medical Charges - VVIP",
-                      "Value": 1184
-                    },
-                    {
-                      "Text": "Insurance",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
-                    }
-                  ],
-                  "IBAN Number": "",
-                  "Notes": {
-                    "Text": "Notes",
-                    "Name": "Notes",
-                    "Options": [
-                      ""
-                    ]
-                  },
-                  "OriginalDocumentRequired": {
-                    "Text": "Original Document Required",
-                    "Name": "OriginalDocumentRequired",
-                    "Options": [
-                      "Sponsor's Emirates ID"
-                    ]
-                  }
+                "OriginalDocumentRequired": {
+                  "Text": "Original Document Required",
+                  "Name": "OriginalDocumentRequired",
+                  "Options": [
+                    "Sponsor's Emirates ID"
+                  ]
                 }
               },
               "Outside Country": {
-                "title": "Medical Certificate Process Speed",
-                "options": [
-                  "Normal",
-                  "48 Hours",
-                  "24  Hours",
-                  "5 Hours",
-                  "2 Hours"
+                "docs": [
+                  "Sponsor's passport",
+                  "Sponsor's visa",
+                  "Residential ejari (under Sponsor's name)",
+                  "Labour Contract",
+                  "Birth certiﬁcate attested",
+                  "Sponsored passport",
+                  "1 photo (white background)",
+                  "Last 3 months bank statement"
                 ],
-                "Normal": {
-                  "docs": [
-                    "Sponsor's emirates ID",
-                    "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
-                    "Labour contract",
-                    "Birth certiﬁcate attested",
-                    "Sponsored passport",
-                    "1 photo (white background)",
-                    "Last 3 months bank statement"
-                  ],
-                  "PriceDetails": [
-                    {
-                      "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Stamping",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Medical Charges",
-                      "Value": 324
-                    },
-                    {
-                      "Text": "Insurance",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
-                    }
-                  ],
-                  "IBAN Number": "",
-                  "Notes": {
-                    "Text": "Notes",
-                    "Name": "Notes",
-                    "Options": [
-                      ""
-                    ]
+                "PriceDetails": [
+                  {
+                    "Text": "Entry Permit",
+                    "Value": 488.09
                   },
-                  "OriginalDocumentRequired": {
-                    "Text": "Original Document Required",
-                    "Name": "OriginalDocumentRequired",
-                    "Options": [
-                      "Sponsor's Emirates ID"
-                    ]
+                  {
+                    "Text": "Stamping",
+                    "Value": 460
+                  },
+                  {
+                    "Text": "Insurance",
+                    "Value": 695.10
+                  },
+                  {
+                    "Text": "Emirates ID Price - 3 years",
+                    "Value": 374
+                  },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
                   }
+                ],
+                "IBAN Number": "",
+                "Notes": {
+                  "Text": "Notes",
+                  "Name": "Notes",
+                  "Options": [
+                    ""
+                  ]
                 },
-                "48 Hours": {
-                  "docs": [
-                    "Sponsor's emirates ID",
-                    "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
-                    "Labour contract",
-                    "Birth certiﬁcate attested",
-                    "Sponsored passport",
-                    "1 photo (white background)",
-                    "Last 3 months bank statement"
-                  ],
-                  "PriceDetails": [
-                    {
-                      "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Stamping",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Medical Charges",
-                      "Value": 440
-                    },
-                    {
-                      "Text": "Insurance",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
-                    }
-                  ],
-                  "IBAN Number": "",
-                  "Notes": {
-                    "Text": "Notes",
-                    "Name": "Notes",
-                    "Options": [
-                      ""
-                    ]
-                  },
-                  "OriginalDocumentRequired": {
-                    "Text": "Original Document Required",
-                    "Name": "OriginalDocumentRequired",
-                    "Options": [
-                      "Sponsor's Emirates ID"
-                    ]
-                  }
-                },
-                "24  Hours": {
-                  "docs": [
-                    "Sponsor's emirates ID",
-                    "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
-                    "Labour contract",
-                    "Birth certiﬁcate attested",
-                    "Sponsored passport",
-                    "1 photo (white background)",
-                    "Last 3 months bank statement"
-                  ],
-                  "PriceDetails": [
-                    {
-                      "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Stamping",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Medical Charges",
-                      "Value": 550
-                    },
-                    {
-                      "Text": "Insurance",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
-                    }
-                  ],
-                  "IBAN Number": "",
-                  "Notes": {
-                    "Text": "Notes",
-                    "Name": "Notes",
-                    "Options": [
-                      ""
-                    ]
-                  },
-                  "OriginalDocumentRequired": {
-                    "Text": "Original Document Required",
-                    "Name": "OriginalDocumentRequired",
-                    "Options": [
-                      "Sponsor's Emirates ID"
-                    ]
-                  }
-                },
-                "5 Hours": {
-                  "docs": [
-                    "Sponsor's emirates ID",
-                    "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
-                    "Labour contract",
-                    "Birth certiﬁcate attested",
-                    "Sponsored passport",
-                    "1 photo (white background)",
-                    "Last 3 months bank statement"
-                  ],
-                  "PriceDetails": [
-                    {
-                      "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Stamping",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Medical Charges",
-                      "Value": 752
-                    },
-                    {
-                      "Text": "Insurance",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
-                    }
-                  ],
-                  "IBAN Number": "",
-                  "Notes": {
-                    "Text": "Notes",
-                    "Name": "Notes",
-                    "Options": [
-                      ""
-                    ]
-                  },
-                  "OriginalDocumentRequired": {
-                    "Text": "Original Document Required",
-                    "Name": "OriginalDocumentRequired",
-                    "Options": [
-                      "Sponsor's Emirates ID"
-                    ]
-                  }
-                },
-                "2 Hours": {
-                  "docs": [
-                    "Sponsor's emirates ID",
-                    "Sponsor's passport",
-                    "Sponsor visa",
-                    "Residential ejari (under Sponsor's name)",
-                    "Labour contract",
-                    "Birth certiﬁcate attested",
-                    "Sponsored passport",
-                    "1 photo (white background)",
-                    "Last 3 months bank statement"
-                  ],
-                  "PriceDetails": [
-                    {
-                      "Text": "Entry Permit",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Change Status",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Stamping",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Medical Charges - VVIP",
-                      "Value": 1184
-                    },
-                    {
-                      "Text": "Insurance",
-                      "Value": 0
-                    },
-                    {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
-                    }
-                  ],
-                  "IBAN Number": "",
-                  "Notes": {
-                    "Text": "Notes",
-                    "Name": "Notes",
-                    "Options": [
-                      ""
-                    ]
-                  },
-                  "OriginalDocumentRequired": {
-                    "Text": "Original Document Required",
-                    "Name": "OriginalDocumentRequired",
-                    "Options": [
-                      "Sponsor's Emirates ID"
-                    ]
-                  }
+                "OriginalDocumentRequired": {
+                  "Text": "Original Document Required",
+                  "Name": "OriginalDocumentRequired",
+                  "Options": [
+                    "Sponsor's Emirates ID"
+                  ]
                 }
               }
             },
@@ -12396,7 +12376,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -12431,7 +12410,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -12451,7 +12434,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -12486,7 +12468,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -12506,7 +12492,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -12541,7 +12526,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -12561,7 +12550,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -12596,7 +12584,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -12616,7 +12608,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -12651,7 +12642,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -12681,7 +12676,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -12712,7 +12706,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -12732,7 +12730,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -12763,7 +12760,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -12783,7 +12784,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -12814,7 +12814,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -12834,7 +12838,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -12865,7 +12868,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -12885,7 +12892,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -12916,7 +12922,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -12953,7 +12963,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -12988,7 +12997,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13008,7 +13021,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13043,7 +13055,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13063,7 +13079,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13098,7 +13113,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13118,7 +13137,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13153,7 +13171,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13173,7 +13195,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13208,7 +13229,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13238,7 +13263,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13269,7 +13293,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13289,7 +13317,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13320,7 +13347,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13340,7 +13371,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13371,7 +13401,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13391,7 +13425,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13422,7 +13455,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13442,7 +13479,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13473,7 +13509,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13510,7 +13550,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13545,7 +13584,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13565,7 +13608,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13600,7 +13642,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13620,7 +13666,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13655,7 +13700,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13675,7 +13724,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13710,7 +13758,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13730,7 +13782,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13765,7 +13816,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13795,7 +13850,6 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13826,7 +13880,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13846,7 +13904,6 @@ export default visa_options = {
                 },
                 "48 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13877,7 +13934,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13897,7 +13958,6 @@ export default visa_options = {
                 },
                 "24  Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13928,7 +13988,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13948,7 +14012,6 @@ export default visa_options = {
                 },
                 "5 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -13979,7 +14042,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -13999,7 +14066,6 @@ export default visa_options = {
                 },
                 "2 Hours": {
                   "docs": [
-                    "Sponsor's emirates ID",
                     "Sponsor's passport",
                     "Sponsor visa",
                     "Residential ejari (under Sponsor's name)",
@@ -14030,7 +14096,11 @@ export default visa_options = {
                     {
                       "Text": "Emirates ID Price - 3 years",
                       "Value": 374
-                    }
+                    },
+                  {
+                    "Text": "Service Charge",
+                    "Value": 105
+                  }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -14069,7 +14139,6 @@ export default visa_options = {
       ],
         "Normal": {
           "docs": [
-            "Sponsor's emirates ID",
             "Trade License",
             "Immigration card",
             "Memorandum of association (MOA)",
@@ -14101,7 +14170,6 @@ export default visa_options = {
          },
         "Urgent": {
           "docs": [
-            "Sponsor's emirates ID",
             "Trade License",
             "Immigration card",
             "Memorandum of association (MOA)",
@@ -14159,7 +14227,6 @@ export default visa_options = {
             ],
             "Normal": {
               "docs": [
-                "Sponsor's emirates ID",
                 "Trade License",
                 "Immigration card",
                 "Memorandum Of Association (MOA)",
@@ -14194,7 +14261,6 @@ export default visa_options = {
              },
             "Urgent": {
               "docs": [
-                "Sponsor's emirates ID",
                 "Trade License",
                 "Immigration card",
                 "Memorandum of association (MOA)",
@@ -14235,7 +14301,6 @@ export default visa_options = {
             ],
             "Normal": {
               "docs": [
-                "Sponsor's emirates ID",
                 "Trade License",
                 "Immigration card",
                 "Memorandum of association (MOA)",
@@ -14268,7 +14333,6 @@ export default visa_options = {
              },
             "Urgent": {
               "docs": [
-                "Sponsor's emirates ID",
                 "Trade License",
                 "Immigration card",
                 "Memorandum of association (MOA)",
@@ -14322,7 +14386,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14356,7 +14419,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14397,7 +14459,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14430,7 +14491,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14477,7 +14537,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14511,7 +14570,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14552,7 +14610,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14585,7 +14642,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14632,7 +14688,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14666,7 +14721,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14707,7 +14761,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14741,7 +14794,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14798,7 +14850,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14832,7 +14883,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14873,7 +14923,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14906,7 +14955,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14953,7 +15001,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -14987,7 +15034,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -15028,7 +15074,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -15061,7 +15106,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -15108,7 +15152,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -15142,7 +15185,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -15183,7 +15225,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -15217,7 +15258,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -15265,7 +15305,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -15299,7 +15338,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -15340,7 +15378,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -15374,7 +15411,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Trade License",
                   "Immigration card",
                   "Memorandum of association (MOA)",
@@ -15431,7 +15467,6 @@ export default visa_options = {
             ],
             "Normal": {
               "docs": [
-                "Sponsor’s emirates ID",
                 "Sponsor’s Passport",
                 "Labour Contract",
                 "Medical Result",
@@ -15464,7 +15499,6 @@ export default visa_options = {
              },
             "Urgent": {
               "docs": [
-                "Sponsor’s emirates ID",
                 "Sponsor’s Passport",
                 "Labour Contract",
                 "Medical Result",
@@ -15504,7 +15538,6 @@ export default visa_options = {
             ],
             "Normal": {
               "docs": [
-                "Sponsor’s emirates ID",
                 "Sponsor’s Passport",
                 "Labour Contract",
                 "Medical Result",
@@ -15537,7 +15570,6 @@ export default visa_options = {
              },
             "Urgent": {
               "docs": [
-                "Sponsor’s emirates ID",
                 "Sponsor’s Passport",
                 "Labour Contract",
                 "Medical Result",
@@ -15591,7 +15623,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor’s emirates ID",
                   "Sponsor’s Passport",
                   "Labour Contract",
                   "Medical Result",
@@ -15624,7 +15655,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor’s emirates ID",
                   "Sponsor’s Passport",
                   "Labour Contract",
                   "Medical Result",
@@ -15664,7 +15694,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor’s emirates ID",
                   "Sponsor’s Passport",
                   "Labour Contract",
                   "Medical Result",
@@ -15697,7 +15726,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor’s emirates ID",
                   "Sponsor’s Passport",
                   "Labour Contract",
                   "Medical Result",
@@ -15744,7 +15772,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor’s emirates ID",
                   "Sponsor’s Passport",
                   "Labour Contract",
                   "Medical Result",
@@ -15777,7 +15804,6 @@ export default visa_options = {
               },
               "Urgent": {
                 "docs": [
-                  "Sponsor’s emirates ID",
                   "Sponsor’s Passport",
                   "Labour Contract",
                   "Medical Result",
@@ -15817,7 +15843,6 @@ export default visa_options = {
               ],
               "Normal": {
                 "docs": [
-                  "Sponsor’s emirates ID",
                   "Sponsor’s Passport",
                   "Labour Contract",
                   "Medical Result",
