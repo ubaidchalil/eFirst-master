@@ -7,34 +7,33 @@ import Loader from "../../styled/loader";
 import AlertView from "../../styled/alert-view";
 
 class Container extends Component {
-  
   constructor(props) {
     super(props);
     this.state = {
       headerTitle: "",
       noDataLabel: "",
-      searchText : "",
-      Refreshing : false
+      searchText: "",
+      Refreshing: false
     };
   }
 
   componentDidUpdate = () => {
     const { loading, error, data } = this.props.services;
-    console.log("result => ",`${loading} - ${error} - ${data}`)
+    console.log("result => ", `${loading} - ${error} - ${data}`);
     if (!loading && !error && data && this.state.Refreshing) {
-      this.setState({ Refreshing : false })
+      this.setState({ Refreshing: false });
     }
   };
 
   _onRefresh = () => {
-    this.setState({ Refreshing : true })
+    this.setState({ Refreshing: true });
     const { token } = this.props.token;
     this.props.servicesData({ statusId: null, token });
-  } 
-  
-  setSearchText = (searchText) => {
-    this.setState({searchText});
-  }
+  };
+
+  setSearchText = searchText => {
+    this.setState({ searchText });
+  };
 
   render = () => {
     const {
@@ -47,11 +46,15 @@ class Container extends Component {
     return (
       <View style={styles.container}>
         <Loader loading={loading} />
-        <UserActions 
-        _onRefresh={this._onRefresh}
-        {...this.props} state={this.state} {...this.props.navigation.state.params} setSearchText={this.setSearchText} />
+        <UserActions
+          _onRefresh={this._onRefresh}
+          {...this.props}
+          state={this.state}
+          {...this.props.navigation.state.params}
+          setSearchText={this.setSearchText}
+        />
         {error && <AlertView type="error" />}
-        {success && <AlertView type="success" />}
+        {/* {success && <AlertView type="success" />} */}
       </View>
     );
   };

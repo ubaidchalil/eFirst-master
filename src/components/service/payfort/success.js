@@ -8,45 +8,44 @@ class Container extends Component {
     super(props);
   }
 
-  componentDidMount = () => {
-      
-  };
+  componentDidMount = () => {};
 
-  componentDidUpdate() {
-  }
+  componentDidUpdate() {}
 
   goHome = () => {
-      
     const { token } = this.props.token;
     const statusId = null;
     this.props.servicesData({ statusId, token });
-    
+
     this.props.navigation.navigate("UserActions", {
-        headerTitle: "My Requests",
-        noDataLabel: "No recent service request"
-    })
-  }
-  
+      headerTitle: "My Requests",
+      noDataLabel: "No recent service request"
+    });
+  };
+
   render = () => {
     const srid = this.props.navigation.state.params.srid;
     return (
       <View style={{ flex: 1, backgroundColor: "#163d62" }}>
-        <View style={styles.imageView} >
-            <Image source={require("./like.png")} style={{ width: 200, height: 200 }} />
+        <View style={styles.imageView}>
+          <Image
+            source={require("./like.png")}
+            style={{ width: 200, height: 200 }}
+          />
         </View>
         <Text style={styles.txtThankYou}>Thank you</Text>
         <Text style={styles.txtSuccess}>Payment Successful</Text>
-        <View style={{ alignItems:"center", marginTop:50 }} >
-            <Text style={styles.txtInvNo} >Your Invoice Number: #{srid}</Text>
-            <TouchableOpacity style={{ marginTop: 20 }} onPress={this.goHome} >
-                <Text style={styles.BtnText} >Back to Home</Text>
-            </TouchableOpacity>
+        <View style={{ alignItems: "center", marginTop: 50 }}>
+          <Text style={styles.txtInvNo}>Your Invoice Number: #{srid}</Text>
+          <TouchableOpacity style={styles.Btn} onPress={this.goHome}>
+            <Text style={styles.BtnText}>Back to Home</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
   };
 }
-const mapStateToProps = ({  token }) => ({
+const mapStateToProps = ({ token }) => ({
   token
 });
 
@@ -59,46 +58,47 @@ export default connect(
   mapDispatchToProps
 )(Container);
 
-
 const styles = {
-    imageView:{
-        alignItems: "center",
-        padding: 20,
-        marginTop: 30
-    },
-    txtThankYou : {
-        padding: 10,
-        fontSize: 40,
-        fontWeight: "bold",
-        color: "#FFF",
-        flexDirection: "row",
-        textAlign: "center"
-    },
-    txtSuccess : {
-        padding: 10,
-        fontSize: 30,
-        color: "#FFF",
-        flexDirection: "row",
-        textAlign: "center"
-    },
-    txtInvNo : {
-        padding: 5,
-        paddingHorizontal: 40,
-        fontSize: 25,
-        color: "#FFF",
-        textAlign: "center",
-        borderColor: "#FFF",
-        borderWidth: 1,
-        borderRadius: 30
-    },
-    BtnText : {
-        padding: 10,
-        paddingHorizontal: 40,
-        fontSize: 25,
-        color: "#FFF",
-        textAlign: "center",
-        borderColor: "#FFF",
-        backgroundColor: "#122c45",
-        borderRadius: 30
-    }
-}
+  imageView: {
+    alignItems: "center",
+    padding: 20,
+    marginTop: 30
+  },
+  txtThankYou: {
+    padding: 10,
+    fontSize: 40,
+    fontWeight: "bold",
+    color: "#FFF",
+    flexDirection: "row",
+    textAlign: "center"
+  },
+  txtSuccess: {
+    padding: 10,
+    fontSize: 30,
+    color: "#FFF",
+    flexDirection: "row",
+    textAlign: "center"
+  },
+  txtInvNo: {
+    padding: 5,
+    paddingHorizontal: 40,
+    fontSize: 25,
+    color: "#FFF",
+    textAlign: "center",
+    borderColor: "#FFF",
+    borderWidth: 1,
+    borderRadius: 25
+  },
+  BtnText: {
+    fontSize: 25,
+    color: "#FFF",
+    textAlign: "center"
+  },
+  Btn: {
+    marginTop: 20,
+    padding: 10,
+    paddingHorizontal: 40,
+    backgroundColor: "#122c45",
+    borderRadius: 25
+  }
+};

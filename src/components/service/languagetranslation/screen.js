@@ -219,7 +219,7 @@ const LanguageTranslation = ({
                 onPress={() => openFile(i)}
               >
                 <Icon style={styles.uploadBtnIcon} name="albums" />
-                <Text style={styles.uploadBtnIcon}>Album</Text>
+                <Text style={styles.uploadBtnIcon}>File</Text>
               </Button>
             </View>
           </View>

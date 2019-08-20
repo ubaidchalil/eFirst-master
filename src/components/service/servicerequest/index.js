@@ -16,7 +16,8 @@ import {
   Body,
   Right,
   Left,
-  Icon
+  Icon,
+  TabHeading
 } from "native-base";
 import getTheme from "../../../../native-base-theme/components";
 import material from "../../../../native-base-theme/variables/material";
@@ -79,7 +80,7 @@ class ServiceDetails extends Component {
 
     return (
       <StyleProvider style={getTheme(material)}>
-        <Container  >
+        <Container>
           <Loader loading={loading} />
           <PostMessage
             changeRequestMessageState={this.changeRequestMessageState}
@@ -110,11 +111,23 @@ class ServiceDetails extends Component {
               </Text>
             </Left>
             <Right>
-              <View style={{ flexDirection: "row", width:60, justifyContent: "space-between" }} >
-                <Button transparent onPress={() => {
-                      const { token } = this.props;
-                      this.props.serviceRequestData({ serviceId: SRID, token: token.token });
-                  }}>
+              <View
+                style={{
+                  flexDirection: "row",
+                  width: 60,
+                  justifyContent: "space-between"
+                }}
+              >
+                <Button
+                  transparent
+                  onPress={() => {
+                    const { token } = this.props;
+                    this.props.serviceRequestData({
+                      serviceId: SRID,
+                      token: token.token
+                    });
+                  }}
+                >
                   <IconMaterialIcons
                     name="refresh"
                     style={{ fontSize: 20, color: "black" }}
@@ -130,18 +143,46 @@ class ServiceDetails extends Component {
             </Right>
           </View>
           <Tabs>
-            <Tab heading="Details">
+            <Tab
+              heading={
+                <TabHeading>
+                  <Text>Details</Text>
+                </TabHeading>
+              }
+            >
               <Details MessageModal={this.MessageModal} />
             </Tab>
-            <Tab heading="Documents">
+            <Tab
+              heading={
+                <TabHeading>
+                  <Text>Documnets</Text>
+                </TabHeading>
+              }
+            >
               <Documents />
             </Tab>
-            <Tab heading="SR Details">
+            <Tab
+              heading={
+                <TabHeading>
+                  <Text>SR Details</Text>
+                </TabHeading>
+              }
+            >
               <SRInfo />
             </Tab>
           </Tabs>
-          {dtError && <AlertView type="error" message="Sorry! An error has occured, Try again" />}
-          {success && <AlertView type="success" message="Message has been submitted successfully" />}
+          {dtError && (
+            <AlertView
+              type="error"
+              message="Sorry! An error has occured, Try again"
+            />
+          )}
+          {success && (
+            <AlertView
+              type="success"
+              message="Message has been submitted successfully"
+            />
+          )}
         </Container>
       </StyleProvider>
     );
