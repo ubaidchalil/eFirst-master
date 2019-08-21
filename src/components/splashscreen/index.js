@@ -9,7 +9,7 @@ class SplashScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true,
+      loading: false,
       error: ""
     };
   }
@@ -22,8 +22,7 @@ class SplashScreen extends Component {
         Accept: "application/json",
         Authorization: `Bearer ${token}`
       }
-    })
-    .catch((error) => {
+    }).catch(error => {
       this.setState({ error });
       this.setState({ loading: false });
       return;
@@ -42,32 +41,27 @@ class SplashScreen extends Component {
     } = data.Tiles;
 
     const total =
-    ActionRequiredNewUpdateCount +
-    ActionRequiredTotalUpdateCount +
-    CompletedNewUpdateCount +
-    CompletedTotalUpdateCount +
-    InReviewNewUpdateCount +
-    InReviewTotalUpdateCount +
-    RejectedNewUpdateCount +
-    RejectedTotalUpdateCount;
-    
-    console.log("result =>", total);
-    this.setState({ loading:false });
-    if(total > 0)
-      this.props.navigation.navigate("Home");
-    else
-      this.props.navigation.navigate("SelectService");
-    
+      ActionRequiredNewUpdateCount +
+      ActionRequiredTotalUpdateCount +
+      CompletedNewUpdateCount +
+      CompletedTotalUpdateCount +
+      InReviewNewUpdateCount +
+      InReviewTotalUpdateCount +
+      RejectedNewUpdateCount +
+      RejectedTotalUpdateCount;
+
+    this.setState({ loading: false }, () => {
+      if (total > 0) this.props.navigation.navigate("Home");
+      else this.props.navigation.navigate("SelectService");
+    });
   }
 
   render = () => {
     return (
-      <View style={{ flex: 1 }}>{ <Loader loading={this.state.loading} /> }
+      <View style={{ flex: 1 }}>
+        {<Loader loading={this.state.loading} />}
         {this.state.error != "" && (
-          <AlertView
-            type="error"
-            message="Sorry, No Internet connection"
-          />
+          <AlertView type="error" message="Sorry, No Internet connection" />
         )}
       </View>
     );
