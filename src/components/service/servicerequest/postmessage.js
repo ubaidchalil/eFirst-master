@@ -26,7 +26,7 @@ const PostMessage = ({
   };
 
   return (
-    <Modal isVisible={action.IsVisible}  >
+    <Modal isVisible={action.IsVisible} avoidKeyboard={true}>
       <View style={styles.modalContent}>
         <Item style={{ flexDirection: "row", padding: 7 }}>
           <Text
