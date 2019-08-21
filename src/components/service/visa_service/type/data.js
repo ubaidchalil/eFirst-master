@@ -120,9 +120,12 @@ export default visa_options = {
                 "Sponsor's Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Memorandum of association (MOA)",
-                "Marriage certificate attested",
+                "Marriage certificate attested & legaly translated",
                 "Sponsored Passport",
                 "1 photo (White background)",
+                "Last 3 months bank statement"
+              ],
+              "docsNotRequired": [
                 "Last 3 months bank statement"
               ],
               "PriceDetails": [
@@ -166,9 +169,12 @@ export default visa_options = {
                 "Sponsor's Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Memorandum of association (MOA)",
-                "Marriage certificate attested",
+                "Marriage certificate attested & legaly translated",
                 "Sponsored Passport",
                 "1 photo (White background)",
+                "Last 3 months bank statement"
+              ],
+              "docsNotRequired": [
                 "Last 3 months bank statement"
               ],
               "PriceDetails": [
@@ -230,10 +236,13 @@ export default visa_options = {
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement ",
+                  "Last 3 months bank statement",
                   "Death certiﬁcate attested (if father is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                     {
@@ -280,6 +289,9 @@ export default visa_options = {
                   "Death certiﬁcate attested (if father is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -334,6 +346,9 @@ export default visa_options = {
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
+                ],
                 "PriceDetails": [
                   {
                     "Text": "Security Deposit",
@@ -379,6 +394,9 @@ export default visa_options = {
                   "Death certiﬁcate attested (if mother is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -431,6 +449,9 @@ export default visa_options = {
                   "Last 3 months bank statement",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
+                ],
                 "PriceDetails": [
                   {
                     "Text": "Security Deposit",
@@ -474,6 +495,9 @@ export default visa_options = {
                   "1 photo (White background)",
                   "Last 3 months bank statement",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -531,7 +555,11 @@ export default visa_options = {
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement "
+                  "Last 3 months bank statement",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -573,6 +601,10 @@ export default visa_options = {
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
+                  "Last 3 months bank statement",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -622,8 +654,12 @@ export default visa_options = {
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement ",
-                  "Undertaking Letter from sponsor showing that she is not married"
+                  "Last 3 months bank statement",
+                  "Undertaking Letter from sponsor showing that she is not married",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -665,8 +701,12 @@ export default visa_options = {
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement ",
-                  "Undertaking Letter from sponsor showing that she is not married"
+                  "Last 3 months bank statement",
+                  "Undertaking Letter from sponsor showing that she is not married",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -716,7 +756,11 @@ export default visa_options = {
                   "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement",
-                  "College certiﬁcate or continuity certiﬁcate of UAE"
+                  "College certiﬁcate or continuity certiﬁcate of UAE",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -759,7 +803,11 @@ export default visa_options = {
                   "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement",
-                  "College certiﬁcate or continuity certiﬁcate of UAE"
+                  "College certiﬁcate or continuity certiﬁcate of UAE",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -809,7 +857,11 @@ export default visa_options = {
                   "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement",
-                  "College certiﬁcate or continuity certiﬁcate of UAE"
+                  "College certiﬁcate or continuity certiﬁcate of UAE",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -852,7 +904,11 @@ export default visa_options = {
                   "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement",
-                  "College certiﬁcate or continuity certiﬁcate of UAE"
+                  "College certiﬁcate or continuity certiﬁcate of UAE",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -907,10 +963,13 @@ export default visa_options = {
                 "Sponsor's Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Labour contract",
-                "Marriage certificate attested",
+                "Marriage certificate attested & legaly translated",
                 "Sponsored Passport",
                 "1 photo (White background)",
-                "Last 3 months bank statement "
+                "Last 3 months bank statement"
+              ],
+              "docsNotRequired": [
+                "Last 3 months bank statement"
               ],
               "PriceDetails": [
                 {
@@ -945,10 +1004,13 @@ export default visa_options = {
                 "Sponsor's Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Labour contract",
-                "Marriage certificate attested",
+                "Marriage certificate attested & legaly translated",
                 "Sponsored Passport",
                 "1 photo (White background)",
-                "Last 3 months bank statement "
+                "Last 3 months bank statement"
+              ],
+              "docsNotRequired": [
+                "Last 3 months bank statement"
               ],
               "PriceDetails": [
                 {
@@ -1000,10 +1062,13 @@ export default visa_options = {
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement ",
+                  "Last 3 months bank statement",
                   "Death certiﬁcate attested (if father is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -1045,10 +1110,13 @@ export default visa_options = {
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement ",
+                  "Last 3 months bank statement",
                   "Death certiﬁcate attested (if father is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -1097,10 +1165,13 @@ export default visa_options = {
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement ",
+                  "Last 3 months bank statement",
                   "Death certiﬁcate attested (if mother is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -1142,10 +1213,13 @@ export default visa_options = {
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement ",
+                  "Last 3 months bank statement",
                   "Death certiﬁcate attested (if mother is dead)",
                   "If divorced (divorce letter)",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -1194,8 +1268,11 @@ export default visa_options = {
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement ",
+                  "Last 3 months bank statement",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -1237,8 +1314,11 @@ export default visa_options = {
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
                   "1 photo (White background)",
-                  "Last 3 months bank statement ",
+                  "Last 3 months bank statement",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -1296,6 +1376,10 @@ export default visa_options = {
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
+                  "Last 3 months bank statement",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -1334,6 +1418,10 @@ export default visa_options = {
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
                   "1 photo (White background)",
+                  "Last 3 months bank statement",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -1380,7 +1468,11 @@ export default visa_options = {
                   "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement",
-                  "Undertaking Letter from sponsor showing that she is not married"
+                  "Undertaking Letter from sponsor showing that she is not married",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -1419,7 +1511,11 @@ export default visa_options = {
                   "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement",
-                  "Undertaking Letter from sponsor showing that she is not married"
+                  "Undertaking Letter from sponsor showing that she is not married",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -1465,7 +1561,11 @@ export default visa_options = {
                   "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement",
-                  "College certiﬁcate or continuity certiﬁcate of UAE"
+                  "College certiﬁcate or continuity certiﬁcate of UAE",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -1504,7 +1604,11 @@ export default visa_options = {
                   "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement",
-                  "College certiﬁcate or continuity certiﬁcate of UAE"
+                  "College certiﬁcate or continuity certiﬁcate of UAE",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -1550,7 +1654,11 @@ export default visa_options = {
                   "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement",
-                  "College certiﬁcate or continuity certiﬁcate of uae"
+                  "College certiﬁcate or continuity certiﬁcate of uae",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -1589,7 +1697,11 @@ export default visa_options = {
                   "Sponsored Passport",
                   "1 photo (White background)",
                   "Last 3 months bank statement",
-                  "College certiﬁcate or continuity certiﬁcate of UAE"
+                  "College certiﬁcate or continuity certiﬁcate of UAE",
+                  "Birth certifcate legally translated"
+                ],
+                "docsNotRequired": [
+                  "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
@@ -2103,83 +2215,171 @@ export default visa_options = {
           }
         },
         "Employee": {
-          "title": "Stamping Speed",
+          "title": "Visa Duration",
           "options": [
-            "Normal",
-            "Urgent"
+            "2 years",
+            "3 years"
           ],
-          "Normal": {
-            "docs": [
-              "Child passport",
-              "White background photo",
-              "Emirates id application paper",
-              "Insurance",
-              "Birth certificate attested",
-              "Labour contract",
-              "Sponsor's passport",
-              "Sponsor's visa",
-              "Ejari under Sponsor's name"
-            ],
-            "PriceDetails": [
-              {
-                "Text": "Gov. fees",
-                "Value": 460
+          "2 years": {
+              "title": "Stamping Speed",
+              "options": [
+                "Normal",
+                "Urgent"
+              ],
+              "Normal": {
+                "docs": [
+                  "Child passport",
+                  "White background photo",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Birth certificate attested",
+                  "Labour contract",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
+                  "Ejari under Sponsor's name"
+                ],
+                "PriceDetails": [
+                  {
+                    "Text": "Gov. fees",
+                    "Value": 460
+                  },
+                  {
+                    "Text": "Service charge",
+                    "Value": 105
+                  }
+                ],
+                "Notes": {
+                  "Text": "Notes",
+                  "Name": "Notes",
+                  "Options": [
+                    "Kids passport has to be made within 60 days of birth.  New born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
+                  ]
+                },
+                "OriginalDocumentRequired": {
+                  "Text": "Original Document Required",
+                  "Name": "OriginalDocumentRequired",
+                  "Options": [
+                    "Sponsor's Emirates ID  Child Passport"
+                  ]
+                }
               },
-              {
-                "Text": "Service charge",
-                "Value": 105
+              "Urgent": {
+                "docs": [
+                  "Child passport",
+                  "White background photo",
+                  "Emirates id application paper",
+                  "Insurance",
+                  "Birth certificate attested",
+                  "Labour Contract",
+                  "Sponsor's passport",
+                  "Sponsor's visa",
+                  "Ejari under Sponsor's name"
+                ],
+                "PriceDetails": [
+                  {
+                    "Text": "Gov. fees",
+                    "Value": 540
+                  },
+                  {
+                    "Text": "Service charge",
+                    "Value": 105
+                  }
+                ],
+                "Notes": {
+                  "Text": "Notes",
+                  "Name": "Notes",
+                  "Options": [
+                    "Kids passport has to be made within 60 days of birth.  New born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
+                  ]
+                },
+                "OriginalDocumentRequired": {
+                  "Text": "Original Document Required",
+                  "Name": "OriginalDocumentRequired",
+                  "Options": [
+                    "Sponsor's Emirates ID  Child Passport"
+                  ]
+                }
               }
-            ],
-            "Notes": {
-              "Text": "Notes",
-              "Name": "Notes",
-              "Options": [
-                "Kids passport has to be made within 60 days of birth.  New born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
-              ]
-            },
-            "OriginalDocumentRequired": {
-              "Text": "Original Document Required",
-              "Name": "OriginalDocumentRequired",
-              "Options": [
-                "Sponsor's Emirates ID  Child Passport"
-              ]
-            }
           },
-          "Urgent": {
-            "docs": [
-              "Child passport",
-              "White background photo",
-              "Emirates id application paper",
-              "Insurance",
-              "Birth certificate attested",
-              "Labour Contract",
-              "Sponsor's passport",
-              "Sponsor's visa",
-              "Ejari under Sponsor's name"
+          "3 years": {
+            "title": "Stamping Speed",
+            "options": [
+              "Normal",
+              "Urgent"
             ],
-            "PriceDetails": [
-              {
-                "Text": "Gov. fees",
-                "Value": 540
+            "Normal": {
+              "docs": [
+                "Child passport",
+                "White background photo",
+                "Emirates id application paper",
+                "Insurance",
+                "Birth certificate attested",
+                "Labour contract",
+                "Sponsor's passport",
+                "Sponsor's visa",
+                "Ejari under Sponsor's name"
+              ],
+              "PriceDetails": [
+                {
+                  "Text": "Gov. fees",
+                  "Value": 460
+                },
+                {
+                  "Text": "Service charge",
+                  "Value": 105
+                }
+              ],
+              "Notes": {
+                "Text": "Notes",
+                "Name": "Notes",
+                "Options": [
+                  "Kids passport has to be made within 60 days of birth.  New born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
+                ]
               },
-              {
-                "Text": "Service charge",
-                "Value": 105
+              "OriginalDocumentRequired": {
+                "Text": "Original Document Required",
+                "Name": "OriginalDocumentRequired",
+                "Options": [
+                  "Sponsor's Emirates ID  Child Passport"
+                ]
               }
-            ],
-            "Notes": {
-              "Text": "Notes",
-              "Name": "Notes",
-              "Options": [
-                "Kids passport has to be made within 60 days of birth.  New born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
-              ]
             },
-            "OriginalDocumentRequired": {
-              "Text": "Original Document Required",
-              "Name": "OriginalDocumentRequired",
-              "Options": [
-                "Sponsor's Emirates ID  Child Passport"
-              ]
+            "Urgent": {
+              "docs": [
+                "Child passport",
+                "White background photo",
+                "Emirates id application paper",
+                "Insurance",
+                "Birth certificate attested",
+                "Labour Contract",
+                "Sponsor's passport",
+                "Sponsor's visa",
+                "Ejari under Sponsor's name"
+              ],
+              "PriceDetails": [
+                {
+                  "Text": "Gov. fees",
+                  "Value": 540
+                },
+                {
+                  "Text": "Service charge",
+                  "Value": 105
+                }
+              ],
+              "Notes": {
+                "Text": "Notes",
+                "Name": "Notes",
+                "Options": [
+                  "Kids passport has to be made within 60 days of birth.  New born visa has to be stamped within 120 days or else ﬁne will be imposed for each day."
+                ]
+              },
+              "OriginalDocumentRequired": {
+                "Text": "Original Document Required",
+                "Name": "OriginalDocumentRequired",
+                "Options": [
+                  "Sponsor's Emirates ID  Child Passport"
+                ]
+              }
             }
           }
         }
@@ -16704,7 +16904,6 @@ export default visa_options = {
           "Trade License",
           "Visa",
           "Passport",
-          "Sponsor's emriates ID",
           "Share sale agreement"
         ],
         "PriceDetails": [
@@ -16738,7 +16937,6 @@ export default visa_options = {
           "Trade License",
           "Visa",
           "Passport",
-          "Sponsor's emriates ID",
           "Share sale agreement"
         ],
         "PriceDetails": [
@@ -16775,7 +16973,6 @@ export default visa_options = {
       ],
       "Inside Country": {
         "docs": [
-          "Sponsor's emriates ID",
           "Sponsor's visa",
           "Sponsored passport",
           "Sponsored visa"
@@ -16783,7 +16980,7 @@ export default visa_options = {
         "PriceDetails": [
           {
             "Text": "Gov. fees",
-            "Value": 190
+            "Value": 230
           },
           {
             "Text": "Service charge",
@@ -16807,7 +17004,6 @@ export default visa_options = {
       },
       "Outside Country": {
         "docs": [
-          "Sponsor's emriates ID",
           "Sponsor's visa",
           "Sponsored passport",
           "Sponsored visa"

@@ -155,7 +155,7 @@ class ServiceDetails extends Component {
             <Tab
               heading={
                 <TabHeading>
-                  <Text>Documnets</Text>
+                  <Text>Documents</Text>
                 </TabHeading>
               }
             >

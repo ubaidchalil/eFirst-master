@@ -25,7 +25,7 @@ class _Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      submissionType: "Direct Submission at Office",
+      submissionType: "Through Courier",
       docsAttached: [],
       docNames: [],
       docsNotRequired: [],
@@ -403,10 +403,11 @@ class _Container extends Component {
             ? ""
             : "*"
           : "*";
+        const fileSelected = this.state.docNames[doc] ? true : false;
       return (
         <View style={{ marginTop: 10 }}>
           <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }}>
-            <Text style={{ padding: 10 }}>
+            <Text style={[{ padding: 10 },fileSelected ? { color: "blue" } : {}]}>
               {doc} {IsRequired}{" "}
             </Text>
           </Item>
@@ -497,8 +498,6 @@ class _Container extends Component {
           </View>
           {this.renderDocs()}
 
-          {this.props.navigation.state.params.details["IBAN number"] !=
-          undefined ? (
             <View>
               <Item>
                 <Text
@@ -523,9 +522,6 @@ class _Container extends Component {
                 />
               </Item>
             </View>
-          ) : (
-            <View />
-          )}
 
           <Item>
             <Text style={{ fontSize: 16, padding: 10, fontWeight: "bold" }}>

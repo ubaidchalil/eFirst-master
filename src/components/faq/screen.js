@@ -88,7 +88,7 @@ export default class FAQ extends Component {
     const navigation = this.props.navigation;
     return (
       <Container>
-        <MyHeader navigation={navigation} header="FAQ" />
+        <MyHeader navigation={navigation} header="FAQ" toDashboard={true} />
         <Content>
           {this.state.data.map(item => (
             <Item>
