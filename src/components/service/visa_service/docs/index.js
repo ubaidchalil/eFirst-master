@@ -234,7 +234,7 @@ class _Container extends Component {
 
     if (validationErr) {
       this.setState({ validationMsg: "Please select all required files" });
-      return;
+    //  return;
     }
 
     var pageData = this.props.navigation.state.params.pageData;
