@@ -54,6 +54,10 @@ class _Container extends Component {
     console.log("result => mount ",JSON.stringify(pageData));
     this.setState({ options: options });
     this.setState({ pageData: pageData });
+
+    var visaFlow = pageData.map(obj => obj.Value).join(" > ");
+    this.setState({ visaFlow : visaFlow })
+    
   };
 
   handleBackButtonClick = () => {
@@ -134,6 +138,24 @@ class _Container extends Component {
           onBackPressed={this.handleBackButtonClick}
           header="Visa Service"
         />
+
+        <View
+          style={{
+            backgroundColor: "#F7F9F9",
+            flexDirection: "row",
+            paddingHorizontal: 10,
+            paddingVertical: 10,
+            borderBottomColor: "#CCC",
+            borderBottomWidth: 1
+          }}
+        >
+          <View>
+            <Text style={{ color: "#000", fontSize: 17, marginLeft: 5, fontWeight: "bold" }}>
+              {this.state.visaFlow}
+            </Text>
+          </View>
+          <Right />
+        </View>
 
         <View
           style={{

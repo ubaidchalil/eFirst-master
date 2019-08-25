@@ -62,6 +62,23 @@ const DocumentAttestation = ({
       >
         <View>
           <Text style={{ color: "#000", fontSize: 14, marginLeft: 5, fontWeight: "bold" }}>
+            SELECT VISA TYPE11
+          </Text>
+        </View>
+        <Right>
+        </Right>
+      </View>
+
+      <View
+        style={{
+          backgroundColor: "#F7F9F9",
+          flexDirection: "row",
+          paddingHorizontal: 10,
+          paddingVertical: 10
+        }}
+      >
+        <View>
+          <Text style={{ color: "#000", fontSize: 14, marginLeft: 5, fontWeight: "bold" }}>
             SELECT VISA TYPE
           </Text>
         </View>

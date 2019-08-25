@@ -234,7 +234,7 @@ class _Container extends Component {
 
     if (validationErr) {
       this.setState({ validationMsg: "Please select all required files" });
-    //  return;
+      return;
     }
 
     var pageData = this.props.navigation.state.params.pageData;
@@ -288,8 +288,9 @@ class _Container extends Component {
 
   renderDocNew = doc => {
     const _doc = doc;
+    
     return (
-      <View>
+      <View >
         <View>
           <Text
             style={{
@@ -312,7 +313,7 @@ class _Container extends Component {
           >
             <Button
               transparent
-              style={{ alignItems: "center" }}
+              style={{ alignItems: "center", backgroundColor: "#D3D0C1" }}
               onPress={() => this.openlaunchCamera(_doc, -1)}
             >
               <Icon style={styles.uploadBtnIcon} name="camera" />
@@ -323,7 +324,7 @@ class _Container extends Component {
               style={{
                 borderLeftWidth: 1,
                 borderLeftColor: "#7f8385",
-                alignItems: "center"
+                alignItems: "center", backgroundColor: "#D3D0C1" 
               }}
               onPress={() => this.openFile(_doc, -1)}
             >
@@ -341,7 +342,7 @@ class _Container extends Component {
     return this.state.docNames[doc] ? (
       this.state.docNames[doc].map((doc, index) => {
         return (
-          <View>
+          <View style={{ borderRadius: 15 , borderTopLeftRadius: 0 , marginTop: 5, padding: 5 }} >
             <View>
               <Text
                 style={{
@@ -359,7 +360,8 @@ class _Container extends Component {
                   flexDirection: "row",
                   borderWidth: 1,
                   borderColor: "#CACFD2",
-                  borderRadius: 10
+                  borderRadius: 10,
+                  backgroundColor: "#D3D0C1"
                 }}
               >
                 <Button
@@ -375,7 +377,8 @@ class _Container extends Component {
                   style={{
                     borderLeftWidth: 1,
                     borderLeftColor: "#7f8385",
-                    alignItems: "center"
+                    alignItems: "center",
+                    backgroundColor: "#D3D0C1"
                   }}
                   onPress={() => this.openFile(_doc, index)}
                 >
@@ -405,9 +408,9 @@ class _Container extends Component {
           : "*";
         const fileSelected = this.state.docNames[doc] ? true : false;
       return (
-        <View style={{ marginTop: 10 }}>
+        <View style={{ marginTop: 10, backgroundColor: fileSelected ? "#E5FFE6" : "#FFE5C1", borderRadius: 15 , borderTopLeftRadius: 0 , padding: 5 }}>
           <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }}>
-            <Text style={[{ padding: 10 },fileSelected ? { color: "blue" } : {}]}>
+            <Text style={[{ padding: 10 }]}>
               {doc} {IsRequired}{" "}
             </Text>
           </Item>

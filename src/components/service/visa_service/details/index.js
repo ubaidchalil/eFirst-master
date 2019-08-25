@@ -149,6 +149,33 @@ class _Container extends Component {
         <Loader loading={loading} />
         <MyHeader navigation={this.props.navigation} header="Visa Service" />
 
+          <View style={{ backgroundColor: "#FFE5C1", borderRadius: 15 ,
+           borderTopLeftRadius: 0, margin: 5
+            }} >  
+            <View
+              style={{
+                borderBottomColor: "#D3D0C1",
+                borderBottomWidth: 1,
+                flexDirection: "row",
+                paddingHorizontal: 10,
+                paddingVertical: 10
+              }}
+            >
+              <View>
+                <Text style={{ fontSize: 14, marginLeft: 5, fontWeight: "bold" }}>
+                  Original Document Required
+                </Text>
+              </View>
+              <Right />
+            </View>
+
+            <Text style={{ padding: 10 }}>
+              {
+                this.props.navigation.state.params.docsAndPayment
+                  .OriginalDocumentRequired.Options[0]
+              }
+            </Text>
+          </View>
         <View
           style={{
             backgroundColor: "#F7F9F9",
@@ -206,28 +233,6 @@ class _Container extends Component {
             {this.props.navigation.state.params.docsAndPayment.Notes.Options[0]}
           </Text>
 
-          <View
-            style={{
-              backgroundColor: "#F7F9F9",
-              flexDirection: "row",
-              paddingHorizontal: 10,
-              paddingVertical: 10
-            }}
-          >
-            <View>
-              <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
-                Original Document Required
-              </Text>
-            </View>
-            <Right />
-          </View>
-
-          <Text style={{ padding: 10 }}>
-            {
-              this.props.navigation.state.params.docsAndPayment
-                .OriginalDocumentRequired.Options[0]
-            }
-          </Text>
 
           <View>
             <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
