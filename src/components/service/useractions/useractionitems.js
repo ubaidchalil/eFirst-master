@@ -3,9 +3,8 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 let styles = StyleSheet.create({
   outer_card: {
+    backgroundColor: 'rgba(250, 250, 250, 0.8)',
     flexDirection: "row",
-    borderColor: "#F39C12",
-    borderWidth: 1,
     borderRadius: 15,
     flex: 1,
     padding: 5

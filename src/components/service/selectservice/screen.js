@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, TouchableOpacity, StyleSheet, Dimensions } from "react-native";
+import { View, TouchableOpacity, StyleSheet, Dimensions, ImageBackground } from "react-native";
 import {
   Container,
   Content,
@@ -31,6 +31,8 @@ export default ({ navigation }) => {
   return (
     <Container>
       <MyHeader navigation={navigation} header="Request a Service" />
+      <ImageBackground source={require("../../../Assets/bg_services.jpg")} style={{width: '100%', height: '100%'}}>
+      
       <Content style={{ padding: 10 }}>
         <View style={styles.main}>
           <View style={styles.title}>
@@ -81,6 +83,7 @@ export default ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </Content>
+      </ImageBackground>
     </Container>
   );
 };

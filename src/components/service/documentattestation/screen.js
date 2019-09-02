@@ -34,8 +34,14 @@ import { Color } from "../../../constants";
 import MyHeader from "../../../Header";
 import Modal from "react-native-modal";
 import TermsandConditon from "../../termsandcondition";
+import PhoneInput from 'react-native-phone-input';
+import CountryPicker from 'react-native-country-picker-modal';
 
 const deviceWidth = Dimensions.get("window").width;
+
+const DARK_COLOR = "#18171C";
+const PLACEHOLDER_COLOR = "rgba(255,255,255,0.2)";
+const LIGHT_COLOR = "#FFF";
 
 const styles = {
   item_margin: {
@@ -54,6 +60,32 @@ const styles = {
         }
       : { width: undefined }
 };
+
+const darkTheme = StyleSheet.create({
+  modalContainer: {
+     backgroundColor: DARK_COLOR
+   },
+   contentContainer: {
+     backgroundColor: DARK_COLOR
+   },
+   header: {
+     backgroundColor: DARK_COLOR
+   },
+   itemCountryName: {
+     borderBottomWidth: 0
+   },
+   countryName: {
+     color: LIGHT_COLOR
+   },
+   letterText: {
+     color: LIGHT_COLOR
+   },
+   input: {
+     color: LIGHT_COLOR,
+     borderBottomWidth: 1,
+     borderColor: LIGHT_COLOR
+   }
+ });
 
 const DocumentAttestation = ({
   handleSubmit,
@@ -111,6 +143,17 @@ const DocumentAttestation = ({
     });
     navigation.dispatch(navigateAction);
   };
+
+  onPressFlag = () => {
+    this.countryPicker.openModal();
+  }
+
+  selectCountry = (country) => {
+    this.phone.selectCountry(country.cca2.toLowerCase());
+    setFieldValue("cca2", country.cca2 )
+    setFieldValue("callingCode", country.callingCode )
+    setFieldValue("PersonalPhone", `+${country.callingCode}`)
+  }
 
   return (
     <Container>
@@ -173,8 +216,29 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
+            <Item>
+              <CountryPicker
+                ref={(ref) => {
+                  this.countryPicker = ref;
+                }}
+                onChange={value => this.selectCountry(value)}
+                translation="eng"
+                cca2={values.cca2}
+                styles={darkTheme}
+                hideAlphabetFilter={true}
+              >
+                <View />
+              </CountryPicker>
+            </Item>
             <Item style={styles.item_margin}>
-              <Input
+              <PhoneInput
+                style={{padding: 20}}
+                ref={(ref) => {
+                  this.phone = ref;
+                }}
+                textComponent={Input}
+                onPressFlag={this.onPressFlag}
+                style={{ paddingLeft: 5 }}
                 placeholder="Mobile *"
                 name="PersonalPhone"
                 label="Mobile *"
@@ -576,6 +640,8 @@ export default withFormik({
     SelectedCertificateType: "",
     PickUpandDropOption: "Direct Delivery",
     ShowInfo: false,
+    cca2: 'AE',
+    callingCode: "971",
     docAttestationCreate
   }),
   validateOnChange: false,
@@ -606,6 +672,7 @@ export default withFormik({
   handleSubmit: (values, { props }) => {
     const { attestationrate, setRequestedValue } = props;
     const token = props.token.token;
+    values.PersonalPhone = `${values.callingCode}${values.PersonalPhone}`;
     const Address = `${values.Address1},${values.Street} ${values.City}, ${
       values.SelectedState
     } ${values.AddressCountry} - ${values.Zip}`;
