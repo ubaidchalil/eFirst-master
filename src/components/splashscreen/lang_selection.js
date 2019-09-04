@@ -1,16 +1,27 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { ImageBackground, Button, View, AsyncStorage, Text } from "react-native";
+import { ImageBackground, View, AsyncStorage, StatusBar } from "react-native";
+import { Button, Text} from "native-base";
 import { DASHBOARD_DATA_URL } from "../../constants";
+import {NavigationActions} from 'react-navigation';  
 
 class SplashScreen extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
       loading: true,
       error: ""
     };
-  }
+  }      
+  navigateTo = (page) => {
+    const resetAction = NavigationActions.reset({
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: page})
+        ] })
+    this.props.navigation.dispatch(resetAction);
+  }        
 
   async getIn() {
     const { token } = this.props.token;
@@ -74,6 +85,7 @@ class SplashScreen extends Component {
   render = () => {
     return (
         <ImageBackground source={require("../../Assets/bg/lang_selection.jpg")} style={{width: '100%', height: '100%', flexDirection: "row" , alignItems: "flex-end"}}>
+        <StatusBar hidden  />
             <View style={{ flex:1, padding :2 }} >
             {(this.state.error) ?
             (
@@ -82,11 +94,11 @@ class SplashScreen extends Component {
               </View>
               ) : 
               (!this.state.loading) ? (
-                <Button
-                    title="English"
-                    color="#003366"
+                  <Button full 
                     onPress={()=>this.props.navigation.push("SplashSlider")}
-                    />
+                    style={{ backgroundColor: "#183E61" }} >
+                    <Text style={{ fontSize:20 }} >English</Text>
+                  </Button>
               ) : (
             <View style={{marginBottom: "10%", alignItems: "center"}}>
               <Text style={{ color: "#FFF", fontSize: 17 }}>Loading..</Text>

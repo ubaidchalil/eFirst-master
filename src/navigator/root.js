@@ -3,7 +3,7 @@ import {
   createStackNavigator,
   createAppContainer,
   createBottomTabNavigator,
-  createDrawerNavigator
+  createDrawerNavigator, createSwitchNavigator
 } from "react-navigation";
 import HomeScreen from "../components/dashboard";
 import DocumentAttestation from "../components/service/documentattestation";
@@ -79,7 +79,7 @@ const Drawer = createDrawerNavigator(
   }
 );
 
-const root = createStackNavigator(
+const root = createSwitchNavigator(
   {
     SplashStack: {
       screen: SplashStack

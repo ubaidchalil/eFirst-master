@@ -28,6 +28,7 @@
     "react-native-phone-input": "^0.2.4",
     "react-native-sentry": "^0.43.2",
     "react-native-stack": "^1.0.0-alpha1",
+    "react-native-swiper": "^1.5.14",
     "react-native-vector-icons": "^6.2.0",
     "react-navigation": "^3.4.1",
     "react-navigation-fluid-transitions": "^0.3.0",

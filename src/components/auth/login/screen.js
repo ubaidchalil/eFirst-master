@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Image, StyleSheet, TouchableOpacity,ImageBackground } from "react-native";
+import { View, Image, StyleSheet, TouchableOpacity,ImageBackground, Dimensions, ScrollView } from "react-native";
 import {
   Container,
   Content,
@@ -17,10 +17,12 @@ import material from "../../../../native-base-theme/variables/material";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color, BASE_URL } from "../../../constants";
+
+const screenHeight = Dimensions.get('window').height;
+
 let styles = StyleSheet.create({
   backgroundImage: {
-    marginTop:100,
-    height: 200,
+    height: 0.30*screenHeight,
     resizeMode: "contain" // or 'stretch'
   },
   formContent: {
@@ -51,17 +53,16 @@ const LoginForm = ({
   login,
   extLoginUrls
 }) => (
-  <StyleProvider style={getTheme(material)}>
-    <Container >
         <ImageBackground source={require("../../../Assets/bg_login.jpg")} style={{width: '100%', height: '100%'}}>
-        <View style={{ flex:1 }} >
-          <View style={{ alignItems: "center" }}>
+        <View style={{ flex:1, padding: 10 }} >
+          <View style={{ flex:0.8 , flexDirection: "row", alignItems: "center"}}>
             <Image
               source={require("../../../Assets/logo.png")}
               style={styles.backgroundImage}
             />
           </View>
-          <View style={styles.formContent}>
+          <View style={{ flex:1 }} >
+            <ScrollView >
             <Item style={[styles.marginTop, {borderBottomWidth:0, backgroundColor: 'rgba(250, 250, 250, 0.13)' , paddingHorizontal:10}]}>
               <Icon active name='ios-person' style={{color:"#FFF"}} />
               <Input
@@ -188,13 +189,12 @@ const LoginForm = ({
                 </TouchableOpacity>
               </View>
             ) : (
-              <View />
+              <View style={{ height: 50 }} />
             )}
-          </View>
+            </ScrollView >
+            </View>
         </View>
         </ImageBackground>
-    </Container>
-  </StyleProvider>
 );
 
 export default withFormik({

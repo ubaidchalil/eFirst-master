@@ -33,7 +33,7 @@ export default ({ navigation }) => {
       <MyHeader navigation={navigation} header="Request a Service" />
       <ImageBackground source={require("../../../Assets/bg_services.jpg")} style={{width: '100%', height: '100%'}}>
       
-      <Content style={{ padding: 10 }}>
+      <Content style={{ padding: 10, marginBottom: 50 }}>
         <View style={styles.main}>
           <View style={styles.title}>
             <H3 style={styles.title_text}>ATTESTATION SERVICE</H3>

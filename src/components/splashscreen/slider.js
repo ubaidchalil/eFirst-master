@@ -1,9 +1,49 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { ImageBackground, Text, View, TouchableOpacity } from "react-native";
-import { Left, Right, Body } from "native-base";
+import React, { Component } from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  ImageBackground
+} from 'react-native';
 
-class Slider extends Component {
+import { Left, Right } from 'native-base';
+
+import Swiper from 'react-native-swiper';
+
+const Background = (props) => {
+  return (
+    <ImageBackground source={props.source} style={{ width:"100%", height:"100%" }} >
+
+          <View style={{ flex:1, padding :2 }} >
+              <View style={{ flex:1, padding :2 }} >
+                <Text style={{marginTop: "25%", textAlign: "center", fontSize: 22, fontWeight:"bold", color: props.color }} >
+                  {props.caption}
+                </Text>
+
+              </View>
+              <View style={{ flexDirection:"row", padding: 10 }} >
+                <Left>
+                  <TouchableOpacity style={{padding: 5}} onPress={()=>props.navigation.navigate("Auth")} >
+                    <Text style={{ color:"#FFF", fontSize:17  }} >Skip</Text>
+                  </TouchableOpacity >
+                </Left>
+                { props.last && (
+                <Right>
+                  <TouchableOpacity style={{padding: 10}}
+                    onPress={()=>props.navigation.navigate("Auth")}  >
+                    <Text style={{color:"#FFF", fontSize:17 }} >Next</Text>
+                  </TouchableOpacity >
+                </Right>
+                )}
+              </View>
+            </View>
+    </ImageBackground>
+  )
+}
+
+export default class App extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -30,55 +70,57 @@ class Slider extends Component {
       ]
     };
   }
-
-
-  NextSlide = (index) => {
-    if(index==4)
-      this.props.navigation.navigate("Auth")
-    else
-      this.props.navigation.push("SplashSlider",{ index: index+1 })
-  }
-
-  render = () => {
-    const index = this.props.navigation.getParam('index', 0);
+  
+  render(){
     return (
-        <ImageBackground source={this.state.images[index]} style={{width: '100%', height: '100%', flexDirection: "row" , alignItems: "flex-end"}}>
-            
-            <View style={{ flex:1, padding :2 }} >
-              <View style={{ flex:1, padding :2 }} >
-                <Text style={{marginTop: "25%", textAlign: "center", fontSize: 20, fontWeight:"bold", color: this.state.color[index] }} >
-                  {this.state.captions[index]}
-                </Text>
-
-              </View>
-              <View style={{ flexDirection:"row", padding: 10 }} >
-                <Left>
-                  <TouchableOpacity style={{padding: 5}} onPress={()=>this.props.navigation.navigate("Auth")} >
-                    <Text style={{ color:"#FFF", fontSize:17  }} >Skip</Text>
-                  </TouchableOpacity >
-                </Left>
-                <Body>
-                  <Text style={{ color:"#FFF" }} >{}</Text>
-                </Body>
-                <Right>
-                  <TouchableOpacity style={{padding: 10}}
-                    onPress={()=>this.NextSlide(index)}  >
-                    <Text style={{color:"#FFF", fontSize:17 }} >Next</Text>
-                  </TouchableOpacity >
-                </Right>
-              </View>
-            </View>
-        </ImageBackground>
+      <Swiper loop={false} style={styles.wrapper} showsButtons buttonWrapperStyle={styles.buttonWrapperStyle} activeDotColor="#FFF" >
+        
+        <View style={styles.slide}>
+          <Background source={this.state.images[0]} color={this.state.color[0]} caption={this.state.captions[0]} navigation={this.props.navigation} />
+        </View>
+        <View style={styles.slide}>
+          <Background source={this.state.images[1]} color={this.state.color[1]} caption={this.state.captions[1]} navigation={this.props.navigation} />
+        </View>
+        <View style={styles.slide}>
+          <Background source={this.state.images[2]} color={this.state.color[2]} caption={this.state.captions[2]} navigation={this.props.navigation} />
+        </View>
+        <View style={styles.slide}>
+          <Background source={this.state.images[3]} color={this.state.color[3]} caption={this.state.captions[3]} navigation={this.props.navigation} />
+        </View>
+        <View style={styles.slide}>
+          <Background last source={this.state.images[4]} color={this.state.color[4]} caption={this.state.captions[4]} navigation={this.props.navigation} />
+        </View>
+      </Swiper>
     );
-  };
+  }
 }
 
-const mapStateToProps = ({ token }) => ({ token });
-const mapDispatchToProps = dispatch => ({
-  
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Slider);
+const styles = StyleSheet.create({
+  wrapper: {
+  },
+  buttonWrapperStyle:{
+    backgroundColor: 'transparent', flexDirection: 'row', position: 'absolute', top: 0, left: 0, flex: 1, paddingHorizontal: 10, paddingVertical: 10, justifyContent: 'space-between', alignItems: 'flex-end'
+  },
+  slide: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  slide2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#97CAE5',
+  },
+  slide3: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#92BB',
+  },
+  text: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold',
+  }
+})
