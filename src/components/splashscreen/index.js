@@ -10,7 +10,7 @@ class SplashScreen extends Component {
     super(props);
     this.state = {
       loading: false,
-      error: ""
+      error: null
     };
   }
 
@@ -25,9 +25,8 @@ class SplashScreen extends Component {
     }).catch(error => {
       this.setState({ error });
       this.setState({ loading: false });
-      return;
     });
-
+    if(!result) return;
     const data = await result.json();
     const {
       ActionRequiredNewUpdateCount,
@@ -58,12 +57,9 @@ class SplashScreen extends Component {
 
   render = () => {
     return (
-      <View style={{ flex: 1 }}>
-        {<Loader loading={this.state.loading} />}
-        {this.state.error != "" && (
+        !this.state.error ? (
           <AlertView type="error" message="Sorry, No Internet connection" />
-        )}
-      </View>
+        ) : (<View />)
     );
   };
 }

@@ -20,6 +20,7 @@ import Profile from "../components/profile/profile";
 import SRStack from "./sr_stack";
 import VisaServiceStack from "./visaservice_stack";
 import VisaServiceScreen from "../components/service/file_upload";
+import SplashStack from "./splash_stack";
 export const RequestServiceStack = createStackNavigator(
   {
     SelectService: {
@@ -80,6 +81,9 @@ const Drawer = createDrawerNavigator(
 
 const root = createStackNavigator(
   {
+    SplashStack: {
+      screen: SplashStack
+    },
     Auth: {
       screen: AuthStack
     },

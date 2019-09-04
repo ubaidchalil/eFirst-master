@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, ScrollView, RefreshControl, TouchableOpacity } from "react-native";
+import { View, ScrollView, RefreshControl, TouchableOpacity, ImageBackground } from "react-native";
 import {
   Container,
   Content,
@@ -50,30 +50,30 @@ export default ({
     switch (status) {
       case "In Review":
         return {
-          color: "#F1C40F",
-          borderColor: "#F1C40F",
-          backgroundColor: "#ffffff",
+          color: "##6F5F0F",
+          borderColor: "#6F5F0F",
+          backgroundColor: "#ffffff00",
           statusLabel: "Review & Approval Process"
         };
       case "Completed":
         return {
           color: "#ffffff",
-          borderColor: "#ffffff",
-          backgroundColor: "#02ab2c",
+          borderColor: "#ffffff00",
+          backgroundColor: "#07AE12",
           statusLabel: status
         };
       case "Rejected":
         return {
           color: "#ffffff",
-          borderColor: "#ffffff",
-          backgroundColor: "#f71b1b",
+          borderColor: "#DB0C0C",
+          backgroundColor: "#DB0C0C",
           statusLabel: status
         };
       case "On Hold":
         return {
           color: "#ffffff",
-          borderColor: "#ffffff",
-          backgroundColor: "#f07000",
+          borderColor: "#123583",
+          backgroundColor: "#123583",
           statusLabel: status
         };
       default:
@@ -84,16 +84,19 @@ export default ({
     <StyleProvider style={getTheme(material)}>
       <Container>
         <MyHeader navigation={navigation} header={headerTitle} toDashboard={true} />
-        <Content style={{ padding: 5, marginBottom: 30 }}>
+        
+        <ImageBackground source={require("../../../Assets/bg_useractions.jpg")} style={{width: '100%', height: '100%'}}>
+        <Content style={{ padding: 5, marginBottom: 70 }}>
+        
           
           <Item >
-            <Icon name="ios-search" />
-            <Input placeholder="Search" style={{ fontSize:14 }}
+            <Icon name="ios-search" style={{color:"#FFF"}} />
+            <Input placeholder="Search" style={{ fontSize:14 }} placeholderTextColor="#FFF"
               onChangeText={(searchText)=>{setSearchText(searchText)}}
               value={state.searchText}
             />
             <Button transparent onPress={() => setSearchText("")}>
-              <Icon name="close" />
+              <Icon name="close" style={{color:"#FFF"}} />
             </Button>
           </Item>
           <ScrollView 
@@ -129,11 +132,12 @@ export default ({
                 padding:5
               }}
             >
-              <Text>{noDataLabel}</Text>
+              <Text style={{color:"#FFF"}}>{noDataLabel}</Text>
             </View>
           )}
           </ScrollView>
-        </Content>
+          </Content>
+        </ImageBackground>
       </Container>
     </StyleProvider>
   );

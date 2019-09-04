@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Image, StyleSheet, TouchableOpacity,ImageBackground } from "react-native";
 import {
   Container,
   Content,
@@ -8,7 +8,9 @@ import {
   Text,
   Button,
   StyleProvider,
-  Icon
+  Icon,
+  Left,
+  Right
 } from "native-base";
 import getTheme from "../../../../native-base-theme/components";
 import material from "../../../../native-base-theme/variables/material";
@@ -17,9 +19,9 @@ import * as Yup from "yup";
 import { Color, BASE_URL } from "../../../constants";
 let styles = StyleSheet.create({
   backgroundImage: {
-    flex: 1,
-    height: 270,
-    resizeMode: "cover" // or 'stretch'
+    marginTop:100,
+    height: 200,
+    resizeMode: "contain" // or 'stretch'
   },
   formContent: {
     flex: 1,
@@ -50,138 +52,147 @@ const LoginForm = ({
   extLoginUrls
 }) => (
   <StyleProvider style={getTheme(material)}>
-    <Container>
-      <Content>
-        <View style={{ alignItems: "center" }}>
-          <Image
-            source={require("../../../Assets/header/header_login.jpg")}
-            style={styles.backgroundImage}
-          />
-        </View>
-        <View style={styles.formContent}>
-          <Item style={styles.marginTop}>
-            <Input
-              placeholder="Email Address"
-              name="email"
-              label="Email"
-              onChangeText={value => setFieldValue("username", value)}
-              value={values.username}
-              error={touched.username && errors.username}
-              underlineColor={Color.secondary}
+    <Container >
+        <ImageBackground source={require("../../../Assets/bg_login.jpg")} style={{width: '100%', height: '100%'}}>
+        <View style={{ flex:1 }} >
+          <View style={{ alignItems: "center" }}>
+            <Image
+              source={require("../../../Assets/logo.png")}
+              style={styles.backgroundImage}
             />
-          </Item>
-          <Item style={{ borderBottomWidth: 0 }}>
-            {errors.username && (
-              <Text style={{ color: "red" }} visible={errors.username}>
-                {errors.username}
-              </Text>
-            )}
-          </Item>
-          <Item style={styles.marginTop}>
-            <Input
-              placeholder="Password"
-              name="password"
-              label="Password"
-              onChangeText={value => setFieldValue("password", value)}
-              value={values.password}
-              error={touched.password && errors.password}
-              underlineColor={Color.secondary}
-              secureTextEntry
-            />
-          </Item>
-          <Item style={{ borderBottomWidth: 0 }}>
-            {errors.password && (
-              <Text style={{ color: "red" }} visible={errors.password}>
-                {errors.password}
-              </Text>
-            )}
-          </Item>
-          <Button style={styles.marginTop} full rounded onPress={handleSubmit}>
-            <Text>Login</Text>
-          </Button>
-
-          <Button
-            full
-            transparent
-            onPress={() => navigation.navigate("Registration")}
-          >
-            <Text>New? Sign up!</Text>
-          </Button>
-
-          <Button
-            full
-            onPress={() => navigation.navigate("ForgetPassword")}
-            transparent
-          >
-            <Text>Forgot your password?</Text>
-          </Button>
-          {!extLoginUrls.error && !extLoginUrls.loading ? (
-            <View
-              style={{
-                flexDirection: "row",
-                borderRadius: 25,
-                borderColor: "#E5E8E8",
-                borderWidth: 1
-              }}
-            >
-              <TouchableOpacity
-                onPress={() =>
-                  navigation.navigate("ExternalLogin", {
-                    uri: BASE_URL + extLoginUrls.data[0].Url
-                  })
-                }
-                style={{ flex: 0.5 }}
-              >
-                <View
-                  style={{
-                    padding: 15,
-                    flexDirection: "row",
-                    justifyContent: "center",
-                    borderRightWidth: 1,
-                    borderColor: "#E5E8E8"
-                  }}
-                >
-                  <Image
-                    source={require("../../../Assets/loginwithFB.png")}
-                    style={{ width: 20, height: 20, resizeMode: "contain" }}
-                  />
-                  <Text style={{ paddingLeft: 5, color: "#B2BABB" }}>
-                    {" "}
-                    By Facebook{" "}
+          </View>
+          <View style={styles.formContent}>
+            <Item style={[styles.marginTop, {borderBottomWidth:0, backgroundColor: 'rgba(250, 250, 250, 0.13)' , paddingHorizontal:10}]}>
+              <Icon active name='ios-person' style={{color:"#FFF"}} />
+              <Input
+                style={{color:"#FFF", paddingLeft: 5}}
+                placeholderTextColor={'#FFF'}
+                placeholder="Username"
+                name="email"
+                label="Email"
+                onChangeText={value => setFieldValue("username", value)}
+                value={values.username}
+                error={touched.username && errors.username}
+                underlineColor={Color.secondary}
+              />
+            </Item>
+            <Item style={[styles.marginTop, {backgroundColor:"#FFF" , paddingHorizontal:10,borderBottomWidth:0}]}>
+              {errors.username && (
+                <Text style={{ color: "red" }} visible={errors.username}>
+                  {errors.username}
+                </Text>
+              )}
+            </Item>
+            <Item style={[styles.marginTop, {borderBottomWidth:0, backgroundColor: 'rgba(250, 250, 250, 0.13)' , paddingHorizontal:10}]}>
+              <Icon active name='home' style={{color:"#FFF"}} />
+              <Input
+                style={{color:"#FFF", paddingLeft: 5}}
+                placeholderTextColor={'#FFF'}
+                placeholder="Password"
+                name="password"
+                label="Password"
+                onChangeText={value => setFieldValue("password", value)}
+                value={values.password}
+                error={touched.password && errors.password}
+                underlineColor={Color.secondary}
+                secureTextEntry
+              />
+            </Item>
+            <Item style={{ borderBottomWidth: 0 }}>
+              {errors.password && (
+                <Text style={{ color: "red" }} visible={errors.password}>
+                  {errors.password}
+                </Text>
+              )}
+            </Item>
+            <Button style={[styles.marginTop,{ backgroundColor: 'rgba(250, 250, 250, 0.13)' }]} full rounded onPress={handleSubmit}>
+              <Text style={{ color:"black" }} >Login</Text>
+            </Button>
+            <Item style={{ borderBottomWidth: 0, paddingVertical: 15 }} >
+              <Left>
+                <Text></Text>
+              </Left>
+              <Right>
+                <TouchableOpacity  onPress={() => navigation.navigate("ForgetPassword")} >
+                  <Text style={{fontStyle: "italic", color: "#FFF"}} >
+                    Forgot Password?
                   </Text>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() =>
-                  navigation.navigate("ExternalLogin", {
-                    uri: BASE_URL + extLoginUrls.data[1].Url
-                  })
-                }
-                style={{ flex: 0.5 }}
+                </TouchableOpacity>
+              </Right>
+            </Item>
+            <Button style={[styles.marginTop,{borderWidth:1, borderColor:"#FFF"}]} full transparent  onPress={() => navigation.navigate("Registration")} >
+              <Text  style={{ color:"#FFF" }}  >Create Account</Text>
+            </Button>
+            
+            {!extLoginUrls.error && !extLoginUrls.loading ? (
+              <View
+                style={{
+                  marginTop: 10,
+                  flexDirection: "row",
+                  borderRadius: 25,
+                  borderColor: "#FFF",
+                  borderWidth: 1
+                }}
               >
-                <View
-                  style={{
-                    padding: 15,
-                    flexDirection: "row",
-                    justifyContent: "center"
-                  }}
+                <TouchableOpacity
+                  onPress={() =>
+                    navigation.navigate("ExternalLogin", {
+                      uri: BASE_URL + extLoginUrls.data[0].Url
+                    })
+                  }
+                  style={{ flex: 0.5 }}
                 >
-                  <Image
-                    source={require("../../../Assets/loginwithgoogle.png")}
-                    style={{ width: 20, height: 20, resizeMode: "contain" }}
-                  />
-                  <Text style={{ paddingLeft: 5, color: "#B2BABB" }}>
-                    {" "}
-                    By Google{" "}
-                  </Text>
-                </View>
-              </TouchableOpacity>
-            </View>
-          ) : (
-            <View />
-          )}
+                  <View
+                    style={{
+                      padding: 15,
+                      flexDirection: "row",
+                      justifyContent: "center",
+                      borderRightWidth: 1,
+                      borderColor: "#FFF"
+                    }}
+                  >
+                    <Image
+                      source={require("../../../Assets/loginwithFB.png")}
+                      style={{ width: 20, height: 20, resizeMode: "contain" }}
+                    />
+                    <Text style={{ paddingLeft: 5, color: "#FFF", fontWeight:"bold" }}>
+                      {" "}
+                      By Facebook{" "}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() =>
+                    navigation.navigate("ExternalLogin", {
+                      uri: BASE_URL + extLoginUrls.data[1].Url
+                    })
+                  }
+                  style={{ flex: 0.5 }}
+                >
+                  <View
+                    style={{
+                      padding: 15,
+                      flexDirection: "row",
+                      justifyContent: "center"
+                    }}
+                  >
+                    <Image
+                      source={require("../../../Assets/loginwithgoogle.png")}
+                      style={{ width: 20, height: 20, resizeMode: "contain" }}
+                    />
+                    <Text style={{ paddingLeft: 5, color: "#FFF", fontWeight:"bold" }}>
+                      {" "}
+                      By Google{" "}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              </View>
+            ) : (
+              <View />
+            )}
+          </View>
         </View>
-      </Content>
+        </ImageBackground>
     </Container>
   </StyleProvider>
 );
