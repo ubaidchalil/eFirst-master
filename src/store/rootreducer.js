@@ -29,7 +29,7 @@ import {
   docSRAmUpdation,
   srActivation
 } from "../components/service/reducer";
-
+import { statusBar } from "../components/splashscreen/reducer";
 import { faq, faqcategory } from "../components/faq/reducer";
 
 import { support } from "../components/support/reducer";
@@ -82,7 +82,8 @@ const config = {
     "forgetchangepassword",
     "visaservice",
     "docSRAmUpdation",
-    "srActivation"
+    "srActivation",
+    "statusBar"
   ]
 };
 
@@ -120,7 +121,8 @@ const combinedReducers = {
   forgetchangepassword,
   visaservice,
   docSRAmUpdation,
-  srActivation
+  srActivation,
+  statusBar
 };
 
 export default persistCombineReducers(config, combinedReducers);
