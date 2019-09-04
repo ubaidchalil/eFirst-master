@@ -14,13 +14,20 @@ import { connect } from "react-redux";
 import RNFS from "react-native-fs";
 import FileViewer from "react-native-file-viewer";
 import { Platform } from "react-native";
-
-const getLocalPath = url => {
-  const filename = url.split("/").pop();
+import RNFetchBlob from "rn-fetch-blob";
+import Loader from "../../../styled/loader";
+const getLocalPath = fileName => {
   // feel free to change main path according to your requirements
-  return `${RNFS.DocumentDirectoryPath}/${filename}`;
+  return `${RNFS.DocumentDirectoryPath}/${fileName}`;
 };
+
 class Documents extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: false
+    };
+  }
   viewFile = () => {
     const url =
       "https://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf";
@@ -39,11 +46,77 @@ class Documents extends Component {
         // error
       });
   };
+  downloadFile(docId) {
+    console.log("id======>", docId);
+    this.setState({ loading: true });
+    console.log("OPEN");
+    const { UserId } = this.props.profile.data.userdetail;
+    const token = this.props.token.token;
+    RNFetchBlob.fetch(
+      "POST",
+      `https://api.efirst.ae/ServiceRequest/GetSRDocument?userid=${UserId}&id=${docId}`,
+      {
+        Authorization: `Bearer ${token}`
+        // more headers  ..
+      }
+    )
+      // when response status code is 200
+      .then(res => {
+        // the conversion is done in native code
+        const data = res.base64();
 
+        // const localFile = getLocalPath(url);
+        const info = res.info();
+        const fileName = this.getFileName(info.headers["Content-Disposition"]);
+        console.log("FileName", fileName);
+        const path = getLocalPath(fileName);
+        RNFS.writeFile(path, data, "base64")
+          .then(() => {
+            this.setState({ loading: false });
+            setTimeout(() => {
+              try {
+                FileViewer.open(path, { showOpenWithDialog: true })
+                  .then(() => {
+                    this.setState({ loading: false });
+                  })
+                  .catch(error => {
+                    this.setState({ loading: false });
+                  });
+              } catch (error) {
+                console.log("Error " + error);
+              }
+            }, 50);
+
+            console.log("Image converted to jpg and saved at " + path);
+            this.setState({ loading: false });
+          })
+          .catch(error => {
+            this.setState({ loading: false });
+          });
+        //     // the following conversions are done in js, it's SYNC
+        //     console.log("The file saved to ", res.path());
+      })
+      // Status code is not 200
+      .catch((errorMessage, statusCode) => {
+        console.log("response", errorMessage);
+        this.setState({ loading: false });
+      });
+  }
+  getFileName(disposition) {
+    var filename = "";
+    if (disposition && disposition.indexOf("attachment") !== -1) {
+      var filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+      var matches = filenameRegex.exec(disposition);
+      if (matches != null && matches[1]) {
+        filename = matches[1].replace(/['"]/g, "");
+        return filename;
+      }
+    }
+    return filename;
+  }
   renderItem = ({ item, index }) => {
-    console.log("result => ", JSON.stringify(item));
     return (
-      <TouchableOpacity onPress={() => this.viewFile()}>
+      <TouchableOpacity onPress={() => this.downloadFile(item.SRDocID)}>
         <View style={styles.doc_main}>
           <Image
             style={styles.image}
@@ -71,6 +144,7 @@ class Documents extends Component {
     const { documents } = this.props;
     return (
       <View style={{ padding: 10 }}>
+        <Loader loading={this.state.loading} />
         <GridList
           showSeparator
           data={documents}
@@ -97,8 +171,14 @@ const styles = StyleSheet.create({
   }
 });
 
-const mapStateToProps = ({ servicerequest: { documents } }) => ({
-  documents
+const mapStateToProps = ({
+  servicerequest: { documents },
+  profile,
+  token
+}) => ({
+  documents,
+  profile,
+  token
 });
 const mapDispatchToProps = dispatch => ({});
 
