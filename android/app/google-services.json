@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "737346991312",
+    "firebase_url": "https://efirst-8049f.firebaseio.com",
+    "project_id": "efirst-8049f",
+    "storage_bucket": "efirst-8049f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737346991312:android:92dc0893329731b4",
+        "android_client_info": {
+          "package_name": "com.efirst3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737346991312-jq5e8dtk2sd279fab1umk2g5054qfd4q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuZWl0OilHg7rx0nxKyLXFATWAUxjVj24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737346991312-jq5e8dtk2sd279fab1umk2g5054qfd4q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "737346991312-gca0cndtelvepftbh8mf6e68ssf56nut.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.efirst3"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
