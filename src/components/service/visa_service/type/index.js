@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { View, BackHandler } from "react-native";
+import { View, BackHandler, ImageBackground } from "react-native";
 import {
   Container,
   Content,
@@ -115,7 +115,7 @@ class _Container extends Component {
   renderRadio = () => {
     return this.state.options.options.map(option => {
       return (
-        <ListItem onPress={() => this.NextOption(option)}>
+        <ListItem onPress={() => this.NextOption(option)} style={{ backgroundColor: 'rgba(250, 250, 250, 0.3)', marginLeft:0, paddingLeft: 10 }} >
           <Left>
             <Text>{option}</Text>
           </Left>
@@ -133,6 +133,7 @@ class _Container extends Component {
   render = () => {
     return (
       <Container>
+        <ImageBackground source={require("../../../../Assets/bg_login.jpg")} style={{width: '100%', height: '100%'}}>
         <MyHeader
           navigation={this.props.navigation}
           onBackPressed={this.handleBackButtonClick}
@@ -141,7 +142,7 @@ class _Container extends Component {
 
         <View
           style={{
-            backgroundColor: "#F7F9F9",
+            backgroundColor: 'rgba(250, 250, 250, 0.8)',
             flexDirection: "row",
             paddingHorizontal: 10,
             paddingVertical: 10,
@@ -159,7 +160,7 @@ class _Container extends Component {
 
         <View
           style={{
-            backgroundColor: "#F7F9F9",
+            backgroundColor: 'rgba(250, 250, 250, 0.8)',
             flexDirection: "row",
             paddingHorizontal: 10,
             paddingVertical: 10
@@ -172,7 +173,8 @@ class _Container extends Component {
           </View>
           <Right />
         </View>
-        <Content style={{ padding: 10 }}>{this.renderRadio()}</Content>
+        <Content >{this.renderRadio()}</Content>
+        </ImageBackground>
       </Container>
     );
   };
