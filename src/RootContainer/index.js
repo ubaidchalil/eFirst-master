@@ -27,9 +27,6 @@ class RootContainer extends Component {
           </View>
         ))}
       <StatusBar backgroundColor="#183E61" barStyle="light-content" />
-      {/* 
-      <StatusBar backgroundColor="rgba(52, 52, 52, 0)" barStyle="light-content" translucent /> 
-      */}
       <PaperProvider>
         <Navigator />
       </PaperProvider>

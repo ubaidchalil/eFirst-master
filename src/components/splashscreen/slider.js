@@ -4,7 +4,8 @@ import {
   Text,
   View,
   TouchableOpacity,
-  ImageBackground
+  ImageBackground,
+  StatusBar
 } from "react-native";
 
 import { Left, Right } from "native-base";
@@ -92,6 +93,7 @@ class Slider extends Component {
         buttonWrapperStyle={styles.buttonWrapperStyle}
         activeDotColor="#FFF"
       >
+      <StatusBar backgroundColor="rgba(52, 52, 52, 0)" barStyle="light-content" translucent /> 
         <View style={styles.slide}>
           <Background
             source={this.state.images[0]}
