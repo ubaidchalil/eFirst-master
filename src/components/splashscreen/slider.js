@@ -32,10 +32,10 @@ const Background = props => {
             {props.caption}
           </Text>
         </View>
-        <View style={{ flexDirection: "row", padding: 10, marginBottom: 35 }}>
+        <View style={{ flexDirection: "row", padding: 10, marginBottom: 0 }}>
           <Left>
             <TouchableOpacity
-              style={{ padding: 5 }}
+              style={{ padding: 10, backgroundColor: "rgba(250, 250, 250, 0.30)", borderRadius: 25 }}
               onPress={() => {
                 props.setStatusBar(true);
                 props.navigation.navigate("Auth");
@@ -47,7 +47,7 @@ const Background = props => {
           {props.last && (
             <Right>
               <TouchableOpacity
-                style={{ padding: 10 }}
+                style={{ padding: 10, backgroundColor: "rgba(250, 250, 250, 0.30)", borderRadius: 25 }}
                 onPress={() => {
                   props.setStatusBar(true);
                   props.navigation.navigate("Auth");
@@ -86,61 +86,67 @@ class Slider extends Component {
 
   render() {
     return (
-      <Swiper
-        loop={false}
-        style={styles.wrapper}
-        showsButtons
-        buttonWrapperStyle={styles.buttonWrapperStyle}
-        activeDotColor="#FFF"
-      >
-      <StatusBar backgroundColor="rgba(52, 52, 52, 0)" barStyle="light-content" translucent /> 
-        <View style={styles.slide}>
-          <Background
-            source={this.state.images[0]}
-            color={this.state.color[0]}
-            caption={this.state.captions[0]}
-            navigation={this.props.navigation}
-            setStatusBar={this.props.setStatusBar}
-          />
-        </View>
-        <View style={styles.slide}>
-          <Background
-            source={this.state.images[1]}
-            color={this.state.color[1]}
-            caption={this.state.captions[1]}
-            navigation={this.props.navigation}
-            setStatusBar={this.props.setStatusBar}
-          />
-        </View>
-        <View style={styles.slide}>
-          <Background
-            source={this.state.images[2]}
-            color={this.state.color[2]}
-            caption={this.state.captions[2]}
-            navigation={this.props.navigation}
-            setStatusBar={this.props.setStatusBar}
-          />
-        </View>
-        <View style={styles.slide}>
-          <Background
-            source={this.state.images[3]}
-            color={this.state.color[3]}
-            caption={this.state.captions[3]}
-            navigation={this.props.navigation}
-            setStatusBar={this.props.setStatusBar}
-          />
-        </View>
-        <View style={styles.slide}>
-          <Background
-            last
-            source={this.state.images[4]}
-            color={this.state.color[4]}
-            caption={this.state.captions[4]}
-            navigation={this.props.navigation}
-            setStatusBar={this.props.setStatusBar}
-          />
-        </View>
-      </Swiper>
+      <View style={{ flex: 1 }}>
+        <StatusBar
+          backgroundColor="rgba(52, 52, 52, 0)"
+          barStyle="light-content"
+          translucent
+        />
+        <Swiper
+          loop={false}
+          style={styles.wrapper}
+          showsButtons
+          buttonWrapperStyle={styles.buttonWrapperStyle}
+          activeDotColor="#FFF"
+        >
+          <View style={styles.slide}>
+            <Background
+              source={this.state.images[0]}
+              color={this.state.color[0]}
+              caption={this.state.captions[0]}
+              navigation={this.props.navigation}
+              setStatusBar={this.props.setStatusBar}
+            />
+          </View>
+          <View style={styles.slide}>
+            <Background
+              source={this.state.images[1]}
+              color={this.state.color[1]}
+              caption={this.state.captions[1]}
+              navigation={this.props.navigation}
+              setStatusBar={this.props.setStatusBar}
+            />
+          </View>
+          <View style={styles.slide}>
+            <Background
+              source={this.state.images[2]}
+              color={this.state.color[2]}
+              caption={this.state.captions[2]}
+              navigation={this.props.navigation}
+              setStatusBar={this.props.setStatusBar}
+            />
+          </View>
+          <View style={styles.slide}>
+            <Background
+              source={this.state.images[3]}
+              color={this.state.color[3]}
+              caption={this.state.captions[3]}
+              navigation={this.props.navigation}
+              setStatusBar={this.props.setStatusBar}
+            />
+          </View>
+          <View style={styles.slide}>
+            <Background
+              last
+              source={this.state.images[4]}
+              color={this.state.color[4]}
+              caption={this.state.captions[4]}
+              navigation={this.props.navigation}
+              setStatusBar={this.props.setStatusBar}
+            />
+          </View>
+        </Swiper>
+      </View>
     );
   }
 }

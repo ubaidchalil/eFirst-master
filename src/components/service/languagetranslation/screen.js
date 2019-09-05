@@ -36,6 +36,8 @@ import TermsandConditon from "../../termsandcondition";
 import { validateFileTypeAndSizeForTranslation } from "../../../constants";
 var ImagePicker = require("react-native-image-picker");
 import DocumentPicker from "react-native-document-picker";
+import PhoneInput from 'react-native-phone-input';
+import CountryPicker from 'react-native-country-picker-modal';
 
 const deviceWidth = Dimensions.get("window").width;
 
@@ -287,6 +289,22 @@ const LanguageTranslation = ({
       />
     ));
 
+
+    onPressFlag = () => {
+      this.countryPicker.openModal();
+    }
+  
+    selectCountry = (country) => {
+      this.phone.selectCountry(country.cca2.toLowerCase());
+      setFieldValue("cca2", country.cca2 )
+      setFieldValue("callingCode", country.callingCode )
+      setFieldValue("PersonalPhone", `+${country.callingCode}`)
+    }
+
+
+    setPhoneError = (msg) => {
+      setFieldValue("errorPhone", msg)
+    }
   return (
     <Container>
       <MyHeader navigation={navigation} header="Translation Service" />
@@ -348,7 +366,13 @@ const LanguageTranslation = ({
               )}
             </Item>
             <Item style={styles.item_margin}>
-              <Input
+              <PhoneInput
+                ref={(ref) => {
+                  this.phone = ref;
+                }}
+                textComponent={Input}
+                onPressFlag={this.onPressFlag}
+                style={{ paddingLeft: 5, padding: 15 }}
                 placeholder="Mobile *"
                 name="PersonalPhone"
                 label="Mobile *"
@@ -360,9 +384,9 @@ const LanguageTranslation = ({
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.PersonalPhone && (
-                <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
-                  {errors.PersonalPhone}
+              {values.errorPhone!="" && (
+                <Text style={{ color: "red" }} >
+                  {values.errorPhone}
                 </Text>
               )}
             </Item>
@@ -878,6 +902,9 @@ export default withFormik({
     Files: [],
     AgreeTerms: false,
     doclangTransCreate,
+    cca2: 'AE',
+    callingCode: "971",
+    errorPhone : "",
     ShowTerms: false
   }),
   validateOnChange: false,
@@ -908,6 +935,10 @@ export default withFormik({
   }),
 
   handleSubmit: (values, { props }) => {
+    this.setPhoneError("");
+    if(!this.phone.isValidNumber())
+      this.setPhoneError("Invalid number. Eg: +971XXXXXXXX");
+      
     const { translationrate, setRequestedValue } = props;
     const token = props.token.token;
     const docRate = translationrate.data ? translationrate.data.Rate : 0;

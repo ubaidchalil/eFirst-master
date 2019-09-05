@@ -115,7 +115,7 @@ class _Container extends Component {
   renderRadio = () => {
     return this.state.options.options.map(option => {
       return (
-        <ListItem onPress={() => this.NextOption(option)} style={{ backgroundColor: 'rgba(250, 250, 250, 0.3)', marginLeft:0, paddingLeft: 10 }} >
+        <ListItem onPress={() => this.NextOption(option)} style={{ backgroundColor: 'rgba(250, 250, 250, 0.4)', marginLeft:0, paddingLeft: 10 }} >
           <Left>
             <Text>{option}</Text>
           </Left>
@@ -133,7 +133,7 @@ class _Container extends Component {
   render = () => {
     return (
       <Container>
-        <ImageBackground source={require("../../../../Assets/bg_login.jpg")} style={{width: '100%', height: '100%'}}>
+        <ImageBackground source={require("../../../../Assets/bg_all.jpg")} style={{width: '100%', height: '100%'}}>
         <MyHeader
           navigation={this.props.navigation}
           onBackPressed={this.handleBackButtonClick}

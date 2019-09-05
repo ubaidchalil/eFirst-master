@@ -155,6 +155,10 @@ const DocumentAttestation = ({
     setFieldValue("PersonalPhone", `+${country.callingCode}`)
   }
 
+  setPhoneError = (msg) => {
+    setFieldValue("errorPhone", msg)
+  }
+
   return (
     <Container>
       <MyHeader navigation={navigation} header="Attestation Service" />
@@ -232,13 +236,12 @@ const DocumentAttestation = ({
             </Item>
             <Item style={styles.item_margin}>
               <PhoneInput
-                style={{padding: 20}}
                 ref={(ref) => {
                   this.phone = ref;
                 }}
                 textComponent={Input}
                 onPressFlag={this.onPressFlag}
-                style={{ paddingLeft: 5 }}
+                style={{ paddingLeft: 5, padding: 15 }}
                 placeholder="Mobile *"
                 name="PersonalPhone"
                 label="Mobile *"
@@ -250,9 +253,9 @@ const DocumentAttestation = ({
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.PersonalPhone && (
-                <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
-                  {errors.PersonalPhone}
+              {values.errorPhone!="" && (
+                <Text style={{ color: "red" }} >
+                  {values.errorPhone}
                 </Text>
               )}
             </Item>
@@ -642,6 +645,7 @@ export default withFormik({
     ShowInfo: false,
     cca2: 'AE',
     callingCode: "971",
+    errorPhone : "",
     docAttestationCreate
   }),
   validateOnChange: false,
@@ -667,12 +671,15 @@ export default withFormik({
     Street: Yup.string().required("Required"),
     City: Yup.string().required("Required"),
     SelectedState: Yup.string().required("Required")
-  }),
+   }),
 
   handleSubmit: (values, { props }) => {
+    this.setPhoneError("");
+    if(!this.phone.isValidNumber())
+      this.setPhoneError("Invalid number. Eg: +971XXXXXXXX");
+      
     const { attestationrate, setRequestedValue } = props;
     const token = props.token.token;
-    values.PersonalPhone = `${values.callingCode}${values.PersonalPhone}`;
     const Address = `${values.Address1},${values.Street} ${values.City}, ${
       values.SelectedState
     } ${values.AddressCountry} - ${values.Zip}`;

@@ -85,7 +85,7 @@ export default ({
       <Container>
         <MyHeader navigation={navigation} header={headerTitle} toDashboard={true} />
         
-        <ImageBackground source={require("../../../Assets/bg_useractions.jpg")} style={{width: '100%', height: '100%'}}>
+        <ImageBackground source={require("../../../Assets/bg_all.jpg")} style={{width: '100%', height: '100%'}}>
         <Content style={{ padding: 5, marginBottom: 70 }}>
         
           

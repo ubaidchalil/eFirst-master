@@ -408,7 +408,7 @@ class _Container extends Component {
           : "*";
         const fileSelected = this.state.docNames[doc] ? true : false;
       return (
-        <View style={{ marginTop: 10, backgroundColor: fileSelected ? "#E5FFE6" : "#FFE5C1", borderRadius: 15 , borderTopLeftRadius: 0 , padding: 5 }}>
+        <View style={{ marginTop: 10, backgroundColor: fileSelected ? "#E5FFE6" : "", borderRadius: 15 , borderTopLeftRadius: 0 , padding: 5 }}>
           <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }}>
             <Text style={[{ padding: 10 }]}>
               {doc} {IsRequired}{" "}

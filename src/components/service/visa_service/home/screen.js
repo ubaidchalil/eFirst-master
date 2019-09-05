@@ -36,6 +36,8 @@ import DateTimePicker from "react-native-modal-datetime-picker";
 import { nationalities } from "./NationalityPicker";
 import Modal from "react-native-modal";
 import TermsandConditon from "../../../termsandcondition";
+import PhoneInput from 'react-native-phone-input';
+import CountryPicker from 'react-native-country-picker-modal';
 
 const deviceWidth = Dimensions.get("window").width;
 
@@ -102,6 +104,23 @@ const DocumentAttestation = ({
   setShowTerms = state => {
     setFieldValue("ShowTerms", state);
   };
+  
+  onPressFlag = () => {
+    this.countryPicker.openModal();
+  }
+
+  selectCountry = (country) => {
+    this.phone.selectCountry(country.cca2.toLowerCase());
+    setFieldValue("cca2", country.cca2 )
+    setFieldValue("callingCode", country.callingCode )
+    setFieldValue("PersonalPhone", `+${country.callingCode}`)
+  }
+
+  setPhoneError = (msg) => {
+    setFieldValue("errorPhone", msg)
+  }
+
+
   return (
     <Container>
       <MyHeader navigation={navigation} header="Visa Service" />
@@ -164,7 +183,13 @@ const DocumentAttestation = ({
               )}
             </Item>
             <Item style={styles.item_margin}>
-              <Input
+              <PhoneInput
+                ref={(ref) => {
+                  this.phone = ref;
+                }}
+                textComponent={Input}
+                onPressFlag={this.onPressFlag}
+                style={{ paddingLeft: 5, padding: 15 }}
                 placeholder="Mobile *"
                 name="PersonalPhone"
                 label="Mobile *"
@@ -176,9 +201,9 @@ const DocumentAttestation = ({
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.PersonalPhone && (
-                <Text style={{ color: "red" }} visible={errors.PersonalPhone}>
-                  {errors.PersonalPhone}
+              {values.errorPhone!="" && (
+                <Text style={{ color: "red" }} >
+                  {values.errorPhone}
                 </Text>
               )}
             </Item>
@@ -486,6 +511,9 @@ export default withFormik({
     ShowInfo: false,
     AgreeTerms: false,
     ShowTerms: false,
+    cca2: 'AE',
+    callingCode: "971",
+    errorPhone : "",
     docAttestationCreate
   }),
   validateOnChange: false,
@@ -515,6 +543,10 @@ export default withFormik({
   }),
 
   handleSubmit: (values, { props }) => {
+    this.setPhoneError("");
+    if(!this.phone.isValidNumber())
+      this.setPhoneError("Invalid number. Eg: +971XXXXXXXX");
+      
     const { navigation, updateTotalAmount } = props;
     const token = props.token.token;
     const data = navigation.state.params.data;
