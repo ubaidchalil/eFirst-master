@@ -95,7 +95,8 @@ class SplashScreen extends Component {
           alignItems: "flex-end"
         }}
       >
-        <StatusBar hidden />
+        
+        <StatusBar backgroundColor="rgba(52, 52, 52, 0)" barStyle="light-content" translucent /> 
         <View style={{ flex: 1, padding: 2 }}>
           {this.state.error ? (
             <View style={{ marginBottom: "10%", alignItems: "center" }}>
