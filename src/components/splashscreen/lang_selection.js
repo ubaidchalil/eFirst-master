@@ -69,13 +69,13 @@ class SplashScreen extends Component {
     try {
       this.props.setStatusBar(false);
       const value = await AsyncStorage.getItem("InitialLogin");
-      if (value !== null) {
+  /*    if (value !== null) {
         if (this.props.token) await this.getIn();
         else {
           this.props.setStatusBar(true);
           this.props.navigation.push("Auth");
         }
-      } else {
+      } else */{
         AsyncStorage.setItem("InitialLogin", "1");
         this.setState({ loading: false });
       }
