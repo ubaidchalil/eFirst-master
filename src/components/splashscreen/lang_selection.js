@@ -70,11 +70,11 @@ class SplashScreen extends Component {
       this.props.setStatusBar(false);
       const value = await AsyncStorage.getItem("InitialLogin");
       if (value !== null) {
-        // if (this.props.token) await this.getIn();
-        // else {
-        //   this.props.setStatusBar(true);
-        //   this.props.navigation.push("Auth");
-        // }
+        if (this.props.token) await this.getIn();
+        else {
+          this.props.setStatusBar(true);
+          this.props.navigation.push("Auth");
+        }
       } else {
         AsyncStorage.setItem("InitialLogin", "1");
         this.setState({ loading: false });
@@ -107,7 +107,7 @@ class SplashScreen extends Component {
                 Network connection failed
               </Text>
             </View>
-          ) : this.state.loading ? (
+          ) : !this.state.loading ? (
             <Button
               full
               onPress={() => this.props.navigation.push("SplashSlider")}
