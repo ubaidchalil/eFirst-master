@@ -10,7 +10,7 @@ import {
 
 import { Left, Right } from "native-base";
 import { connect } from "react-redux";
-import Swiper from "react-native-swiper";
+import Swiper from "../../../tmp/react-native-swiper/src";
 import { setStatusBar } from "./action";
 const Background = props => {
   return (
@@ -35,7 +35,11 @@ const Background = props => {
         <View style={{ flexDirection: "row", padding: 10, marginBottom: 0 }}>
           <Left>
             <TouchableOpacity
-              style={{ padding: 10, backgroundColor: "rgba(250, 250, 250, 0.30)", borderRadius: 25 }}
+              style={{
+                padding: 10,
+                backgroundColor: "rgba(250, 250, 250, 0.30)",
+                borderRadius: 25
+              }}
               onPress={() => {
                 props.setStatusBar(true);
                 props.navigation.navigate("Auth");
@@ -47,7 +51,11 @@ const Background = props => {
           {props.last && (
             <Right>
               <TouchableOpacity
-                style={{ padding: 10, backgroundColor: "rgba(250, 250, 250, 0.30)", borderRadius: 25 }}
+                style={{
+                  padding: 10,
+                  backgroundColor: "rgba(250, 250, 250, 0.30)",
+                  borderRadius: 25
+                }}
                 onPress={() => {
                   props.setStatusBar(true);
                   props.navigation.navigate("Auth");
@@ -95,7 +103,8 @@ class Slider extends Component {
         <Swiper
           loop={false}
           style={styles.wrapper}
-          showsButtons
+          showsButtons={true}
+          index={this.state.index}
           buttonWrapperStyle={styles.buttonWrapperStyle}
           activeDotColor="#FFF"
         >
@@ -106,6 +115,7 @@ class Slider extends Component {
               caption={this.state.captions[0]}
               navigation={this.props.navigation}
               setStatusBar={this.props.setStatusBar}
+              onNext={this.onNext}
             />
           </View>
           <View style={styles.slide}>
