@@ -29,7 +29,7 @@ export default ({ navigation, header, onBackPressed, toDashboard }) => (
             <Icon style={{ color: "white" }} name="menu" />
           </Button>
           {header != "Dashboard" && (
-            <Button style={{ padding:10, borderColor:"#028EFB", borderWidth:1 }} transparent onPress={() => {
+            <Button style={{ padding:10 }} transparent onPress={() => {
               if(toDashboard)
                 navigation.navigate("HomeScreen")
               else{
@@ -65,6 +65,6 @@ export default ({ navigation, header, onBackPressed, toDashboard }) => (
 
 let styles = StyleSheet.create({
   icon_font_awesome: {
-    fontSize: 20
+    fontSize: 22
   }
 });

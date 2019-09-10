@@ -50,7 +50,7 @@ export default ({
     switch (status) {
       case "In Review":
         return {
-          color: "##6F5F0F",
+          color: "#6F5F0F",
           borderColor: "#6F5F0F",
           backgroundColor: "#ffffff00",
           statusLabel: "Review & Approval Process"
@@ -77,6 +77,12 @@ export default ({
           statusLabel: status
         };
       default:
+        return {
+          color: "#6F5F0F",
+          borderColor: "#6F5F0F",
+          backgroundColor: "#ffffff00",
+          statusLabel: status
+        };
         break;
     }
   };

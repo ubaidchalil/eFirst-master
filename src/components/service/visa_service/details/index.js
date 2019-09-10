@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { View, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity, ImageBackground } from "react-native";
 import {
   Container,
   Content,
@@ -79,12 +79,12 @@ class _Container extends Component {
   renderPageData = () => {
     return this.props.navigation.state.params.pageData.map(datum => {
       return (
-        <Item>
-          <Text style={{ padding: 10, fontWeight: "bold" }}>
+        <Item style={styles.itemTransparent}>
+          <Text style={{ padding: 10, fontWeight: "bold", color:"#FFF"  }}>
             {datum["Text"]} :{" "}
           </Text>
           <Right>
-            <Text style={{ padding: 10 }}>{datum["Value"]}</Text>
+            <Text style={{ padding: 10, color:"#FFF"  }}>{datum["Value"]}</Text>
           </Right>
         </Item>
       );
@@ -95,10 +95,10 @@ class _Container extends Component {
     const docs = this.props.navigation.state.params.docsAttached;
     return this.props.navigation.state.params.docs.map(datum => {
       return (
-        <Item>
-          <Text style={{ padding: 10, fontWeight: "bold" }}>{datum} : </Text>
+        <Item style={styles.itemTransparent}>
+          <Text style={{ padding: 10, fontWeight: "bold", color:"#FFF" }}>{datum} : </Text>
           <Right>
-            <Text style={{ padding: 10 }}>
+            <Text style={{ padding: 10, color:"#FFF" }}>
               {docs.indexOf(datum) >= 0 ? "Yes" : "No"}
             </Text>
           </Right>
@@ -111,12 +111,12 @@ class _Container extends Component {
     return this.props.navigation.state.params.docsAndPayment.PriceDetils.map(
       datum => {
         return (
-          <Item>
-            <Text style={{ padding: 10, fontWeight: "bold" }}>
+          <Item style={styles.itemTransparent} >
+            <Text style={{ padding: 10, fontWeight: "bold", color:"#FFF" }}>
               {datum.Text} :{" "}
             </Text>
             <Right>
-              <Text style={{ padding: 10 }}>AED. {datum.Value}</Text>
+              <Text style={{ padding: 10, color:"#FFF" }}>AED. {datum.Value}</Text>
             </Right>
           </Item>
         );
@@ -126,10 +126,10 @@ class _Container extends Component {
 
   renderTotalPrice = () => {
     return (
-      <Item>
-        <Text style={{ padding: 10, fontWeight: "bold" }}>Total : </Text>
+      <Item style={styles.itemTransparent} >
+        <Text style={{ padding: 10, fontWeight: "bold", color:"#FFF" }}>Total : </Text>
         <Right>
-          <Text style={{ padding: 10, fontWeight: "bold" }}>
+          <Text style={{ padding: 10, fontWeight: "bold", color:"#FFF" }}>
             AED {this.state.totalBillAmt}
           </Text>
         </Right>
@@ -148,28 +148,29 @@ class _Container extends Component {
       <Container>
         <Loader loading={loading} />
         <MyHeader navigation={this.props.navigation} header="Visa Service" />
-
-          <View style={{ backgroundColor: "#FFE5C1", borderRadius: 15 ,
-           borderTopLeftRadius: 0, margin: 5
-            }} >  
+        <ImageBackground
+          source={require("../../../../Assets/bg_all.jpg")}
+          style={{ width: "100%", height: "100%" }}
+        >
+        
+        <Content style={{ padding: 10, marginBottom: 50 }}>
+          <View style={[{ backgroundColor: "rgba(255,102,0,0.2)" }, styles.itemTransparent ]} >  
             <View
               style={{
-                borderBottomColor: "#D3D0C1",
-                borderBottomWidth: 1,
                 flexDirection: "row",
                 paddingHorizontal: 10,
                 paddingVertical: 10
               }}
             >
               <View>
-                <Text style={{ fontSize: 14, marginLeft: 5, fontWeight: "bold" }}>
+                <Text style={{ fontSize: 14, marginLeft: 5, fontWeight: "bold", color:"#FFF" }}>
                   Original Document Required
                 </Text>
               </View>
               <Right />
             </View>
 
-            <Text style={{ padding: 10 }}>
+            <Text style={{ padding: 10, color:"#FFF" }}>
               {
                 this.props.navigation.state.params.docsAndPayment
                   .OriginalDocumentRequired.Options[0]
@@ -178,20 +179,19 @@ class _Container extends Component {
           </View>
         <View
           style={{
-            backgroundColor: "#F7F9F9",
+            backgroundColor: 'rgba(250, 250, 250, 0.3)',
             flexDirection: "row",
             paddingHorizontal: 10,
             paddingVertical: 10
           }}
         >
           <View>
-            <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
+            <Text style={{ color: "#FFF", fontSize: 14, marginLeft: 5, color:"#FFF" }}>
               Application Details
             </Text>
           </View>
           <Right />
         </View>
-        <Content style={{ padding: 10 }}>
           <Modal isVisible={this.state.ShowTerms}>
             <TermsandConditon setShowTerms={this.setShowTerms} />
           </Modal>
@@ -199,14 +199,14 @@ class _Container extends Component {
 
           <View
             style={{
-              backgroundColor: "#F7F9F9",
+              backgroundColor: 'rgba(250, 250, 250, 0.3)',
               flexDirection: "row",
               paddingHorizontal: 10,
               paddingVertical: 10
             }}
           >
             <View>
-              <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
+              <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5, color:"#FFF" }}>
                 Documents Uploaded
               </Text>
             </View>
@@ -216,40 +216,88 @@ class _Container extends Component {
 
           <View
             style={{
-              backgroundColor: "#F7F9F9",
+              backgroundColor: 'rgba(250, 250, 250, 0.3)',
               flexDirection: "row",
               paddingHorizontal: 10,
               paddingVertical: 10
             }}
           >
             <View>
-              <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
+              <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5, color:"#FFF" }}>
                 Notes
               </Text>
             </View>
             <Right />
           </View>
-          <Text style={{ padding: 10 }}>
+          <Text style={{ padding: 10, color:"#FFF" }}>
             {this.props.navigation.state.params.docsAndPayment.Notes.Options[0]}
           </Text>
 
+          
+          <View
+            style={{
+              backgroundColor: 'rgba(250, 250, 250, 0.3)',
+              flexDirection: "row",
+              paddingHorizontal: 10,
+              paddingVertical: 10
+            }}
+          >
+            <View>
+              <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5, color:"#FFF" }}>
+                IBAN Number
+              </Text>
+            </View>
+            <Right />
+          </View>
+          <Text style={{ padding: 10, color:"#FFF" }}>
+            {this.props.navigation.state.params.docsAndPayment.IBANNumber.value}
+          </Text>
 
-          <View>
-            <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
-              Price Details
-            </Text>
+          <View
+            style={{
+              backgroundColor: 'rgba(250, 250, 250, 0.3)',
+              flexDirection: "row",
+              paddingHorizontal: 10,
+              paddingVertical: 10
+            }}
+          >
+            <View>
+              <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5, color:"#FFF" }}>
+                Additional Notes
+              </Text>
+            </View>
+            <Right />
+          </View>
+          <Text style={{ padding: 10, color:"#FFF" }}>
+            {this.props.navigation.state.params.docsAndPayment.AdditionalNotes.value}
+          </Text>
+
+          <View
+            style={{
+              backgroundColor: 'rgba(250, 250, 250, 0.3)',
+              flexDirection: "row",
+              paddingHorizontal: 10,
+              paddingVertical: 10
+            }}
+          >
+            <View>
+              <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5, color:"#FFF" }}>
+                Price Details
+              </Text>
+            </View>
+            <Right />
           </View>
           <Right />
           {this.renderPriceDts()}
           {
             this.props.navigation.state.params.docsAndPayment.OriginalDocumentSubmissionType.Value == "Through Courier" ?
             (
-              <Item>
-                <Text style={{ padding: 10, fontWeight: "bold" }}>
+              <Item style={styles.itemTransparent} >
+                <Text style={{ padding: 10, fontWeight: "bold", color:"#FFF" }}>
                   Courier Charge : 
                 </Text>
                 <Right>
-                  <Text style={{ padding: 10 }}>AED. 10</Text>
+                  <Text style={{ padding: 10, color:"#FFF"}}>AED. 10</Text>
                 </Right>
               </Item>
               ) :
@@ -274,6 +322,7 @@ class _Container extends Component {
           </Button>
         </Content>
         {error && <AlertView type="error" />}
+        </ImageBackground>
       </Container>
     );
   };
@@ -294,3 +343,15 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(_Container);
+
+
+const styles = {
+  itemTransparent : {
+    marginTop: 5,
+    borderBottomWidth: 0,
+    backgroundColor: "rgba(250, 250, 250, 0.13)",
+    padding: 5,
+    borderRadius: 15,
+    borderTopLeftRadius: 0
+  },
+};

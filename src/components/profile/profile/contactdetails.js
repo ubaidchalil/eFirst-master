@@ -21,6 +21,9 @@ import {
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
+import PhoneInput from 'react-native-phone-input';
+import CountryPicker from 'react-native-country-picker-modal';
+
 const ContactDetails = ({
   handleSubmit,
   setFieldValue,
@@ -30,6 +33,19 @@ const ContactDetails = ({
   touched,
   contactdetail
 }) => {
+  
+  onPressFlag = () => {
+    this.countryPicker.openModal();
+  }
+
+  selectCountry = (country) => {
+    this.phone.selectCountry(country.cca2.toLowerCase());
+    setFieldValue("cca2", country.cca2 )
+    setFieldValue("callingCode", country.callingCode )
+    setFieldValue("PersonalPhone", `+${country.callingCode}`)
+  }
+
+
   return (
     <View>
       <View
@@ -78,19 +94,40 @@ const ContactDetails = ({
                   Phone: {contactdetail.Phone}
                 </Text>
               ) : (
+                <View>
                 <Item>
-                  <Input
+                  <CountryPicker
+                    ref={(ref) => {
+                      this.countryPicker = ref;
+                    }}
+                    onChange={value => this.selectCountry(value)}
+                    translation="eng"
+                    cca2={values.cca2}
+                    styles={darkTheme}
+                    hideAlphabetFilter={true}
+                  >
+                    <View />
+                  </CountryPicker>
+                </Item>
+                <Item>
+                  <PhoneInput
+                    ref={(ref) => {
+                      this.phone = ref;
+                    }}
+                    textComponent={Input}
+                    onPressFlag={this.onPressFlag}
+                    style={{ paddingLeft: 5, padding: 10, fontSize: 13 }}
                     placeholder="Phone"
                     name="Phone"
-                    label="Phone"
+                    label="Phone *"
                     keyboardType="numeric"
                     onChangeText={value => setFieldValue("Phone", value)}
                     value={values.Phone}
                     error={touched.Phone && errors.Phone}
                     underlineColor={Color.secondary}
-                    style={{ fontSize: 13 }}
                   />
                 </Item>
+                </View>
               )}
             </Col>
           </Row>
@@ -158,6 +195,8 @@ export default withFormik({
     Website: contactdetail.Website,
     Addressline1: contactdetail.Addressline1,
     ShowEditContact: false,
+    cca2: 'AE',
+    callingCode: "971",
     userConatctDetailCreate
   }),
   validateOnChange: false,
@@ -192,3 +231,34 @@ const styles = {
     fontSize: 13
   }
 };
+
+
+const DARK_COLOR = "#18171C";
+const PLACEHOLDER_COLOR = "rgba(255,255,255,0.2)";
+const LIGHT_COLOR = "#FFF";
+
+const darkTheme = StyleSheet.create({
+  modalContainer: {
+     backgroundColor: DARK_COLOR
+   },
+   contentContainer: {
+     backgroundColor: DARK_COLOR
+   },
+   header: {
+     backgroundColor: DARK_COLOR
+   },
+   itemCountryName: {
+     borderBottomWidth: 0
+   },
+   countryName: {
+     color: LIGHT_COLOR
+   },
+   letterText: {
+     color: LIGHT_COLOR
+   },
+   input: {
+     color: LIGHT_COLOR,
+     borderBottomWidth: 1,
+     borderColor: LIGHT_COLOR
+   }
+ });

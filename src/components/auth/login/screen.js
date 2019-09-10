@@ -104,9 +104,9 @@ const LoginForm = ({
             style={[
               styles.marginTop,
               {
-                backgroundColor: "#FFF",
                 paddingHorizontal: 10,
-                borderBottomWidth: 0
+                borderBottomWidth: 0,
+                color: "red" 
               }
             ]}
           >
@@ -140,7 +140,16 @@ const LoginForm = ({
               secureTextEntry
             />
           </Item>
-          <Item style={{ borderBottomWidth: 0 }}>
+          <Item
+            style={[
+              styles.marginTop,
+              {
+                paddingHorizontal: 10,
+                borderBottomWidth: 0,
+                color: "red" 
+              }
+            ]}
+          >
             {errors.password && (
               <Text style={{ color: "red" }} visible={errors.password}>
                 {errors.password}
