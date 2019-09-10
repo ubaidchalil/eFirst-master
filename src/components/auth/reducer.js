@@ -40,6 +40,7 @@ const defaultExtUrlState = {
 };
 const defaultLogin = {
   error: null,
+  success: false,
   loading: false
 };
 
@@ -146,6 +147,8 @@ export const login = (state = defaultLogin, action) => {
   switch (action.type) {
     case loginState.ERROR:
       return { ...state, error: action.state };
+    case loginState.SUCCESS:
+      return { ...state, success: action.state };
     case loginState.LOADING:
       return { ...state, loading: action.state };
     default:

@@ -45,6 +45,8 @@ import {
 
 import { dashboard } from "../components/dashboard/reducer";
 
+import { onesignal, onesignalInfo } from "../components/onesignal/reducer";
+
 const config = {
   key: "primary",
 
@@ -83,7 +85,9 @@ const config = {
     "visaservice",
     "docSRAmUpdation",
     "srActivation",
-    "statusBar"
+    "statusBar",
+    "onesignal",
+    "onesignalInfo"
   ]
 };
 
@@ -122,7 +126,9 @@ const combinedReducers = {
   visaservice,
   docSRAmUpdation,
   srActivation,
-  statusBar
+  statusBar,
+  onesignal,
+  onesignalInfo
 };
 
 export default persistCombineReducers(config, combinedReducers);

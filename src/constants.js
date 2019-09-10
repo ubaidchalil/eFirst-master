@@ -83,3 +83,7 @@ export const SUPPORT_URL = `${BASE_URL}Support/Post`;
 
 /// MESSAGE URLS ///
 export const MESSAGE_URL = `${BASE_URL}Message/Post`;
+
+/// ONE SIGNAL URLS ///
+export const REGISTER_ONESIGNAL_URL = `${BASE_URL}/OneSignal/RegisterOneSignalUser`;
+export const UNREGISTER_ONESIGNAL_URL = `${BASE_URL}/OneSignal/UnregisterOneSignalUsers`;

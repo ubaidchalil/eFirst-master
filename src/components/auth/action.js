@@ -34,7 +34,8 @@ export const ExtRegistrationState = {
 
 export const loginState = {
   LOADING: "LOGIN_LOADING",
-  ERROR: "LOGIN_ERROR"
+  ERROR: "LOGIN_ERROR",
+  SUCCESS: "LOGIN_SUCCESS"
 };
 
 export const logoutState = {
@@ -103,6 +104,7 @@ export const openFetcher = async (fetchData, type, dispatch) => {
   //dispatch(clearData());
   dispatch(setInStore(true, type.LOADING));
   dispatch(setInStore(null, type.ERROR));
+  dispatch(setInStore(false, type.SUCCESS));
   try {
     const result = await fetchData();
 
@@ -116,6 +118,7 @@ export const openFetcher = async (fetchData, type, dispatch) => {
       } else {
         dispatch(setDone(result.data));
         dispatch(setInStore(false, type.LOADING));
+        dispatch(setInStore(true, type.SUCCESS));
       }
     } else {
       dispatch(clearData());

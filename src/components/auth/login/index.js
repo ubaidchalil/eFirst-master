@@ -1,24 +1,35 @@
 import React, { Component } from "react";
-import { Alert, View } from "react-native";
+import { Alert, View, AsyncStorage } from "react-native";
 import LoginScreen from "./screen";
 import { connect } from "react-redux";
 import { loginUser, getExtLoginUrls } from "../action";
-
+import { profileData } from "../../profile/action";
+import { registerOnesignal } from "../../onesignal/action";
 import { StateComponent } from "../../styled/components";
 import AlertView from "../../styled/alert-view";
 import Loader from "../../styled/loader";
 class Container extends Component {
-  componentDidMount = () => {
+  componentDidMount = async () => {
+    const palyerId = await AsyncStorage.getItem("playerid");
+    console.log("playerid--->", palyerId);
     if (this.props.token) {
       this.props.navigation.navigate("SplashScreen");
     }
     this.props.getExtLoginUrls("0");
   };
-  componentDidUpdate() {
-    if (!this.props.login.loading) {
+  async componentDidUpdate(prevProps) {
+    if (this.props.login.success && !prevProps.login.success) {
       if (this.props.token) {
-        this.props.navigation.navigate("SplashScreen");
+        this.props.profileData(this.props.token.token);
       }
+    }
+    if (this.props.profile.success && !prevProps.profile.success) {
+      const { UserId } = this.props.profile.data.userdetail;
+      const PlayerId = await AsyncStorage.getItem("playerid");
+      const data = { UserId, PlayerId };
+      const token = this.props.token.token;
+      this.props.registerOnesignal({ data, token });
+      this.props.navigation.navigate("SplashScreen");
     }
   }
 
@@ -41,16 +52,27 @@ class Container extends Component {
     </View>
   );
 }
-const mapStateToProps = ({ token, login, confirmemail, extLoginUrls }) => ({
+const mapStateToProps = ({
   token,
   login,
   confirmemail,
-  extLoginUrls
+  extLoginUrls,
+  onesignalInfo,
+  profile
+}) => ({
+  token,
+  login,
+  confirmemail,
+  extLoginUrls,
+  onesignalInfo,
+  profile
 });
 
 const mapDispatchToProps = dispatch => ({
   loginUser: data => dispatch(loginUser(data)),
-  getExtLoginUrls: data => dispatch(getExtLoginUrls(data))
+  getExtLoginUrls: data => dispatch(getExtLoginUrls(data)),
+  registerOnesignal: data => dispatch(registerOnesignal(data)),
+  profileData: payload => dispatch(profileData(payload))
 });
 
 export default connect(
