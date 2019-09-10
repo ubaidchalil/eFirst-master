@@ -41,6 +41,37 @@ import CountryPicker from 'react-native-country-picker-modal';
 
 const deviceWidth = Dimensions.get("window").width;
 
+const DARK_COLOR = "#18171C";
+const PLACEHOLDER_COLOR = "rgba(255,255,255,0.2)";
+const LIGHT_COLOR = "#FFF";
+
+const darkTheme = StyleSheet.create({
+  modalContainer: {
+     backgroundColor: DARK_COLOR
+   },
+   contentContainer: {
+     backgroundColor: DARK_COLOR
+   },
+   header: {
+     backgroundColor: DARK_COLOR
+   },
+   itemCountryName: {
+     borderBottomWidth: 0
+   },
+   countryName: {
+     color: LIGHT_COLOR
+   },
+   letterText: {
+     color: LIGHT_COLOR
+   },
+   input: {
+     color: LIGHT_COLOR,
+     borderBottomWidth: 1,
+     borderColor: LIGHT_COLOR
+   }
+ });
+
+
 const styles = {
   item_margin: {
     marginTop: 5
@@ -181,6 +212,20 @@ const DocumentAttestation = ({
                   {errors.Email}
                 </Text>
               )}
+            </Item>
+            <Item>
+              <CountryPicker
+                ref={(ref) => {
+                  this.countryPicker = ref;
+                }}
+                onChange={value => this.selectCountry(value)}
+                translation="eng"
+                cca2={values.cca2}
+                styles={darkTheme}
+                hideAlphabetFilter={true}
+              >
+                <View />
+              </CountryPicker>
             </Item>
             <Item style={styles.item_margin}>
               <PhoneInput
@@ -545,7 +590,10 @@ export default withFormik({
   handleSubmit: (values, { props }) => {
     this.setPhoneError("");
     if(!this.phone.isValidNumber())
+    {
       this.setPhoneError("Invalid number. Eg: +971XXXXXXXX");
+      return;
+    }
       
     const { navigation, updateTotalAmount } = props;
     const token = props.token.token;

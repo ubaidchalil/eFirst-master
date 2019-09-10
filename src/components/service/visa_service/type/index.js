@@ -115,7 +115,7 @@ class _Container extends Component {
   renderRadio = () => {
     return this.state.options.options.map(option => {
       return (
-        <ListItem onPress={() => this.NextOption(option)} style={{ backgroundColor: 'rgba(250, 250, 250, 0.4)', marginLeft:0, paddingLeft: 10 }} >
+        <ListItem onPress={() => this.NextOption(option)} style={{ backgroundColor: 'rgba(250, 250, 250, 0.13)', marginLeft:0, paddingLeft: 10 }} >
           <Left>
             <Text>{option}</Text>
           </Left>
@@ -151,7 +151,7 @@ class _Container extends Component {
           }}
         >
           <View>
-            <Text style={{ color: "#000", fontSize: 17, marginLeft: 5, fontWeight: "bold" }}>
+            <Text style={{ color: "#000", fontSize: 15, marginLeft: 5 }}>
               {this.state.visaFlow}
             </Text>
           </View>

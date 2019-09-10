@@ -101,7 +101,7 @@ const PersonalDetails = ({
                     name="DOB"
                     label="Birthday"
                     onChangeText={value => setFieldValue("DOB", value)}
-                    value={values.DOB}
+                    value={this.dateFormat(new Date(values.DOB))}
                     error={touched.DOB && errors.DOB}
                     underlineColor={Color.secondary}
                     style={{ fontSize: 13 }}

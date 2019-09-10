@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { View, Platform, BackHandler } from "react-native";
+import { View, Platform, BackHandler, ImageBackground } from "react-native";
 import {
   Container,
   Content,
@@ -234,7 +234,7 @@ class _Container extends Component {
 
     if (validationErr) {
       this.setState({ validationMsg: "Please select all required files" });
-      return;
+     // return;
     }
 
     var pageData = this.props.navigation.state.params.pageData;
@@ -294,8 +294,8 @@ class _Container extends Component {
         <View>
           <Text
             style={{
+              color: "#FFF",
               textAlign: "center",
-              color: "#B2BABB",
               padding: 10
             }}
           >
@@ -347,7 +347,7 @@ class _Container extends Component {
               <Text
                 style={{
                   textAlign: "center",
-                  color: "#B2BABB",
+                  color: "#FFF",
                   padding: 10
                 }}
               >
@@ -408,9 +408,9 @@ class _Container extends Component {
           : "*";
         const fileSelected = this.state.docNames[doc] ? true : false;
       return (
-        <View style={{ marginTop: 10, backgroundColor: fileSelected ? "#E5FFE6" : "", borderRadius: 15 , borderTopLeftRadius: 0 , padding: 5 }}>
-          <Item style={{ borderBottomWidth: 0, borderTopWidth: 1 }}>
-            <Text style={[{ padding: 10 }]}>
+        <View style={{ marginTop: 10, backgroundColor: fileSelected ? "rgba(0,153,51,0.2)" : "rgba(52, 52, 52, 0.17)", borderRadius: 15 , borderTopLeftRadius: 0 , padding: 5 }}>
+          <Item style={{ borderBottomWidth: 0 }}>
+            <Text style={[{ color:"#FFF", padding: 10 }]}>
               {doc} {IsRequired}{" "}
             </Text>
           </Item>
@@ -425,61 +425,64 @@ class _Container extends Component {
     return (
       <Container>
         <MyHeader navigation={this.props.navigation} header="Visa Service" />
-
+        <ImageBackground
+          source={require("../../../../Assets/bg_all.jpg")}
+          style={{ width: "100%", height: "100%" }}
+        >
         <View
           style={{
-            backgroundColor: "#F7F9F9",
+            backgroundColor: "rgba(52, 52, 52, 0.3)",
             flexDirection: "row",
             paddingHorizontal: 10,
             paddingVertical: 10
           }}
         >
           <View>
-            <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
+            <Text style={{  color: "#FFF", fontSize: 14, marginLeft: 5, fontWeight:"bold" }}>
               Documents
             </Text>
           </View>
           <Right />
         </View>
-        <Content style={{ padding: 10 }}>
-          <Item>
-            <Text style={{ fontSize: 16, padding: 10, fontWeight: "bold" }}>
-              Original Document Submission Type
-            </Text>
-          </Item>
+        <Content style={{ padding: 10, marginBottom: 50 }}>
+          <View style={styles.itemTransparent} >
+            <Item >
+              <Text style={{ color:"#FFF", fontSize: 16, padding: 10, fontWeight: "bold" }}>
+                Original Document Submission Type
+              </Text>
+            </Item>
 
-          <ListItem
-            onPress={() => this.setState({ submissionType: "Through Courier" })}
-          >
-            <Left>
-              <Text>Through Courier</Text>
-            </Left>
-            <Right>
-              <Radio
-                selected={this.state.submissionType == "Through Courier"}
-              />
-            </Right>
-          </ListItem>
-
-          <ListItem
-            onPress={() =>
-              this.setState({ submissionType: "Direct Submission at Office" })
-            }
-          >
-            <Left>
-              <Text>Direct Submission at Office</Text>
-            </Left>
-            <Right>
-              <Radio
-                selected={
-                  this.state.submissionType == "Direct Submission at Office"
-                }
-              />
-            </Right>
-          </ListItem>
-
-          <Item style={{ borderBottomWidth: 0 }}>
-            <Text style={{ fontSize: 16, padding: 10, fontWeight: "bold" }}>
+            <ListItem
+              onPress={() => this.setState({ submissionType: "Through Courier" })}
+            >
+              <Left>
+                <Text style={{color: "#FFF"}}>Through Courier</Text>
+              </Left>
+              <Right>
+                <Radio
+                  selected={this.state.submissionType == "Through Courier"}
+                />
+              </Right>
+            </ListItem>
+            <ListItem
+              onPress={() =>
+                this.setState({ submissionType: "Direct Submission at Office" })
+              }
+            >
+              <Left>
+                <Text style={{color: "#FFF"}}>Direct Submission at Office</Text>
+              </Left>
+              <Right>
+                <Radio
+                  selected={
+                    this.state.submissionType == "Direct Submission at Office"
+                  }
+                />
+              </Right>
+            </ListItem>
+          </View>
+          <Item style={{  }}>
+            <Text style={{ color: "#FFF", fontSize: 16, padding: 10, fontWeight: "bold" }}>
               Upload Document Copies
             </Text>
           </Item>
@@ -491,10 +494,10 @@ class _Container extends Component {
               flexDirection: "row"
             }}
           >
-            <Text style={{ fontWeight: "500", fontSize: 12 }}>
+            <Text style={{ color: "#FFF", fontWeight: "500", fontSize: 12 }}>
               File format:
             </Text>
-            <Text style={{ fontSize: 12 }}>
+            <Text style={{ color: "#FFF", fontSize: 12 }}>
               {" "}
               .jpeg, .jpg, .png, .docx, .doc, .xlx, .xlxs, .pdf
             </Text>
@@ -502,21 +505,10 @@ class _Container extends Component {
           {this.renderDocs()}
 
             <View>
-              <Item>
-                <Text
-                  style={{
-                    fontSize: 16,
-                    padding: 10,
-                    fontWeight: "bold",
-                    marginTop: 5
-                  }}
-                >
-                  IBAN Number
-                </Text>
-              </Item>
-              <Item>
+              <Item style={styles.itemTransparent} >
                 <Input
-                  style={{ fontSize: 16 }}
+                  style={{ fontSize: 16, color: "#FFF" }}
+                  placeholderTextColor={"#FFF"}
                   placeholder="IBAN Number"
                   name="Iban"
                   label="Iban"
@@ -526,13 +518,10 @@ class _Container extends Component {
               </Item>
             </View>
 
-          <Item>
-            <Text style={{ fontSize: 16, padding: 10, fontWeight: "bold" }}>
-              Additional Notes
-            </Text>
-          </Item>
-          <Item>
+          <Item style={styles.itemTransparent} >
             <Textarea
+              style={{ fontSize: 16, color: "#FFF" }}
+              placeholderTextColor={"#FFF"}
               rowSpan={5}
               placeholder="Notes"
               underline
@@ -573,6 +562,8 @@ class _Container extends Component {
           }}
           position="bottom"
         />
+
+        </ImageBackground>
       </Container>
     );
   };
@@ -587,6 +578,12 @@ const styles = {
   },
   uploadBtn: {
     borderColor: "black"
+  },
+  itemTransparent : {
+    marginTop: 5,
+    borderBottomWidth: 0,
+    backgroundColor: "rgba(250, 250, 250, 0.13)",
+    paddingHorizontal: 10
   }
 };
 

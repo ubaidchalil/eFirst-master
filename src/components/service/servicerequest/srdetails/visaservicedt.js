@@ -182,7 +182,31 @@ export default class VisaServiceDt extends Component {
         </View>
           <View>
             <Text >
-            { this.props.pageData[this.props.pageData.length-1].AdditionalNotes.Value }
+            { !this.props.pageData[this.props.pageData.length-1].AdditionalNotes ? "" :
+              this.props.pageData[this.props.pageData.length-1].AdditionalNotes.value }
+            </Text>
+          </View>
+          
+        <View
+          style={{
+            backgroundColor: "#F7F9F9",
+            flexDirection: "row",
+            paddingHorizontal: 10,
+            paddingVertical: 10
+          }}
+        >
+          <View>
+            <Text style={{ color: "#99A3A4", fontSize: 17, marginLeft: 5, fontWeight:"bold" }}>
+            IBAN Number
+            </Text>
+          </View>
+          <Right>
+          </Right>
+        </View>
+          <View>
+            <Text >
+            { !this.props.pageData[this.props.pageData.length-1].IBANNumber ? "" :
+              this.props.pageData[this.props.pageData.length-1].IBANNumber.value }
             </Text>
           </View>
         </View>
