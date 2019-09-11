@@ -48,11 +48,10 @@ const openFetcher = async (fetchData, type, dispatch) => {
   }
   dispatch(setInStore(false, type.LOADING));
 };
+
 export const registerOnesignal = payload => dispatch => {
   const { token, data } = payload;
-  console.log("DATA2---->", data);
   const body = JSON.stringify(data);
-  console.log("body--->", body);
   return openFetcher(
     async () => {
       const result = await fetch(REGISTER_ONESIGNAL_URL, {
@@ -76,14 +75,14 @@ export const registerOnesignal = payload => dispatch => {
 
 export const unregisterOnesignal = payload => dispatch => {
   const { token, data } = payload;
-  const body = data;
+  const body = JSON.stringify(data);
   return openFetcher(
     async () => {
       const result = await fetch(UNREGISTER_ONESIGNAL_URL, {
         method: "POST",
         headers: {
           Accept: "application/json",
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "application/json",
           Authorization: `Bearer ${token}`
         },
         body

@@ -24,11 +24,10 @@ class RootContainer extends Component {
     console.log("OneSignal==");
   }
   onReceived(notification) {
-    console.log("Notification received: ", notification);
+    //console.log("Notification received: ", notification);
   }
 
   onIds(device) {
-    console.log("Device info: ", device);
     const playerid = device.userId;
     AsyncStorage.setItem("playerid", playerid);
   }

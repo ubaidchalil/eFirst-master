@@ -15,9 +15,16 @@ import {
   Thumbnail
 } from "native-base";
 import { NavigationActions, DrawerActions } from "react-navigation";
-import { Image, View, ScrollView, TouchableOpacity } from "react-native";
+import {
+  Image,
+  View,
+  ScrollView,
+  TouchableOpacity,
+  AsyncStorage
+} from "react-native";
 import { connect } from "react-redux";
 import { Logout, clearLogoutState } from "../components/auth/action";
+import { unregisterOnesignal } from "../components/onesignal/action";
 import Loader from "../components/styled/loader";
 import { DashboardData } from "../components/dashboard/action";
 import { PROFILE_BASE_URL } from "../constants";
@@ -38,24 +45,31 @@ class Container1 extends Component {
     this.props.navigation.dispatch(navigateAction);
     this.props.navigation.dispatch(DrawerActions.closeDrawer());
   };
-  componentDidUpdate() {
-    if (!this.props.logout.loading) {
-      if (this.props.logout.success) {
-        this.props.navigation.navigate("Auth");
-        this.props.clearLogoutState();
-      }
+  componentDidUpdate(prevProps) {
+    if (this.props.logout.success && !prevProps.logout.success) {
+      this.props.navigation.navigate("Auth");
+      this.props.clearLogoutState();
+    }
+    if (this.props.onesignal.success && !prevProps.onesignal.success) {
+      const { token } = this.props.token;
+      this.props.Logout(token);
     }
   }
 
-  onLogout = () => {
-    const { token } = this.props.token;
-    this.props.Logout(token);
+  onLogout = async () => {
+    const { UserId } = this.props.userdetail;
+    const PlayerId = await AsyncStorage.getItem("playerid");
+    const data = { UserId, PlayerId };
+    const token = this.props.token.token;
+    this.props.unregisterOnesignal({ data, token });
   };
 
   render() {
     return (
       <Container>
-        <Loader loading={this.props.logout.loading} />
+        <Loader
+          loading={this.props.logout.loading || this.props.onesignal.loading}
+        />
         <View
           style={{
             backgroundColor: "white",
@@ -81,9 +95,7 @@ class Container1 extends Component {
                 <Thumbnail
                   small
                   source={{
-                    uri: `${PROFILE_BASE_URL}${
-                      this.props.userdetail.ProfilePic
-                    }`
+                    uri: `${PROFILE_BASE_URL}${this.props.userdetail.ProfilePic}`
                   }}
                 />
               ) : (
@@ -172,10 +184,7 @@ class Container1 extends Component {
                 <Text style={styles.text}>Support</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.listItem}
-              onPress={this.props.Logout}
-            >
+            <TouchableOpacity style={styles.listItem} onPress={this.onLogout}>
               <View style={styles.left}>
                 <Icon style={styles.icon} name="md-arrow-dropright" />
               </View>
@@ -194,17 +203,20 @@ const mapStateToProps = ({
   profile: {
     data: { userdetail }
   },
+  onesignal,
   token,
   logout
 }) => ({
   userdetail,
   token,
-  logout
+  logout,
+  onesignal
 });
 const mapDispatchToProps = dispatch => ({
   Logout: payload => dispatch(Logout(payload)),
   DashboardData: payload => dispatch(DashboardData(payload)),
-  clearLogoutState: () => dispatch(clearLogoutState())
+  clearLogoutState: () => dispatch(clearLogoutState()),
+  unregisterOnesignal: data => dispatch(unregisterOnesignal(data))
 });
 
 export default connect(
