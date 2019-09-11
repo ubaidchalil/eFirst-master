@@ -26,17 +26,19 @@ class Container extends Component {
   }
 
   onOpened(openResult) {
-    console.log(this.props);
-    console.log("Message: ", openResult.notification.payload.body);
-    console.log("Data: ", openResult.notification.payload.additionalData);
-    console.log("isActive: ", openResult.notification.isAppInFocus);
-    console.log("openResult: ", openResult);
+    //console.log("this.props---------------------------->");
+    //console.log("Message: ", openResult.notification.payload.body);
+    //console.log("Data: ", openResult.notification.payload.additionalData);
+    //console.log("isActive: ", openResult.notification.isAppInFocus);
+    //console.log("openResult: ", openResult);
     const data = openResult.notification.payload.additionalData;
     if (data) {
-      const { srId } = data;
+      const { srid } = data;
       const { token } = this.props.token;
-      this.props.serviceRequestData({ serviceId: srId, token });
-      this.props.navigation.navigate("ServiceDetail");
+      if (srid) {
+        this.props.serviceRequestData({ serviceId: srid, token });
+        this.props.navigation.navigate("ServiceDetail");
+      }
     }
   }
 
