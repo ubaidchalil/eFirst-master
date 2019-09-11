@@ -41,8 +41,10 @@ import CountryPicker from 'react-native-country-picker-modal';
 const deviceWidth = Dimensions.get("window").width;
 
 const DARK_COLOR = "#18171C";
-const PLACEHOLDER_COLOR = "rgba(255,255,255,0.2)";
+const PLACEHOLDER_COLOR = "rgba(255,255,255,0.)";
 const LIGHT_COLOR = "#FFF";
+
+import closeImgLight from "../../../Assets/close-btn.png";
 
 const styles = {
   item_margin: {
@@ -55,9 +57,11 @@ const styles = {
   },
   itemTransparent : {
     marginTop: 5,
+    marginLeft: 0,
     borderBottomWidth: 0,
-    backgroundColor: "rgba(250, 250, 250, 0.13)",
-    paddingHorizontal: 10
+    backgroundColor: "rgba(250, 250, 250, 0.9)",
+    paddingHorizontal: 10,
+    borderRadius: 10
   },
   pickerStyle:
     Platform.OS === "ios"
@@ -192,12 +196,13 @@ const DocumentAttestation = ({
         <Modal isVisible={state.ShowTerms}>
           <TermsandConditon setShowTerms={setShowTerms} />
         </Modal>
+        <View style={{ padding: 5, paddingHorizontal: 10, borderRadius: 10, backgroundColor: "rgba(250, 250, 250, 0.6)"  }} >
         <ScrollView>
           <Form>
             <Item style={styles.itemTransparent} >
               <Input
-                style={{ color: "#FFF" }}
-                placeholderTextColor={"#FFF"}
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="Name *"
                 name="CustomerName"
                 label="Name *"
@@ -216,8 +221,8 @@ const DocumentAttestation = ({
             </Item>
             <Item style={styles.itemTransparent} >
               <Input
-                style={{ color: "#FFF" }}
-                placeholderTextColor={"#FFF"}
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="Email *"
                 name="Email"
                 label="Email *"
@@ -244,6 +249,8 @@ const DocumentAttestation = ({
                 cca2={values.cca2}
                 styles={darkTheme}
                 hideAlphabetFilter={true}
+                closeButtonImage={closeImgLight}
+                closeable={true}
               >
                 <View />
               </CountryPicker>
@@ -253,8 +260,8 @@ const DocumentAttestation = ({
                 ref={(ref) => {
                   this.phone = ref;
                 }}
-                textStyle={{ color: "#FFF" }}
-                placeholderTextColor={"#FFF"}
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 textComponent={Input}
                 onPressFlag={this.onPressFlag}
                 style={{ paddingLeft: 5, padding: 15 }}
@@ -277,8 +284,8 @@ const DocumentAttestation = ({
             </Item>
             <Item style={styles.itemTransparent} >
               <Input
-                style={{ color: "#FFF" }}
-                placeholderTextColor={"#FFF"}
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="Land Phone"
                 name="Office"
                 label="Land Phone"
@@ -298,8 +305,8 @@ const DocumentAttestation = ({
             </Item>
             <Item style={styles.itemTransparent} >
               <Input
-                style={{ color: "#FFF" }}
-                placeholderTextColor={"#FFF"}
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="Address Line 1 *"
                 underline
                 name="Address1"
@@ -319,8 +326,8 @@ const DocumentAttestation = ({
             </Item>
             <Item style={styles.itemTransparent} >
               <Input
-                style={{ color: "#FFF" }}
-                placeholderTextColor={"#FFF"}
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="Street Address *"
                 underline
                 name="Street"
@@ -340,12 +347,12 @@ const DocumentAttestation = ({
             </Item>
             <Item style={styles.itemTransparent} >
               <Picker
-                placeholderTextColor={"#FFF"}
+                placeholderTextColor={"#5B5656"}
                 mode="dropdown"
-                iosIcon={<Icon style={{color: "#FFF"}} name="arrow-down" />}
-                style={[styles.pickerStyle,{color: "#FFF"}]}
+                iosIcon={<Icon style={{color: "#5B5656"}} name="arrow-down" />}
+                style={[styles.pickerStyle,{color: "#5B5656"}]}
                 placeholder="State *"
-                placeholderIconColor="#FFF"
+                placeholderIconColor="#5B5656"
                 selectedValue={values.SelectedState}
                 onValueChange={value => setFieldValue("SelectedState", value)}
               >
@@ -377,8 +384,8 @@ const DocumentAttestation = ({
 
             <Item style={styles.itemTransparent} >
               <Input
-                style={{ color: "#FFF" }}
-                placeholderTextColor={"#FFF"}
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="City *"
                 name="City"
                 label="City *"
@@ -388,8 +395,8 @@ const DocumentAttestation = ({
                 underlineColor={Color.secondary}
               />
               <Input
-                style={{ color: "#FFF" }}
-                placeholderTextColor={"#FFF"}
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="PO Box"
                 name="Zip"
                 label="PO Box"
@@ -413,8 +420,8 @@ const DocumentAttestation = ({
             </Item>
             <Item style={styles.itemTransparent} >
               <Input
-                style={{ color: "#FFF" }}
-                placeholderTextColor={"#FFF"}
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="Country *"
                 name="AddressCountry"
                 label="Country *"
@@ -434,11 +441,11 @@ const DocumentAttestation = ({
             </Item>
             <Item style={styles.itemTransparent} >
               <Picker
-                placeholderTextColor={"#FFF"}
-                placeholderIconColor="#FFF"
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={[styles.pickerStyle,{color: "#FFF"}]}
+                style={[styles.pickerStyle,{color: "#5B5656"}]}
                 placeholder="Country"
                 placeholderStyle={{ color: "#bfc6ea" }}
                 selectedValue={values.SelectedCountryId}
@@ -470,12 +477,12 @@ const DocumentAttestation = ({
             </Item>
             <Item style={styles.itemTransparent} >
               <Picker
-                placeholderTextColor={"#FFF"}
-                placeholderIconColor="#FFF"
-                placeholderStyle={{ color: "#FFF" }}
+                placeholderTextColor={"#5B5656"}
+                placeholderIconColor="#5B5656"
+                placeholderStyle={{ color: "#5B5656" }}
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
-                style={[styles.pickerStyle,{color: "#FFF"}]}
+                style={[styles.pickerStyle,{color: "#5B5656"}]}
                 placeholder="Certificate Type"
                 selectedValue={values.SelectedCertificateType}
                 onValueChange={value => {
@@ -502,7 +509,7 @@ const DocumentAttestation = ({
             </Item>
             <ListItem style={[styles.itemTransparent]}>
               <Radio
-               style={{color:"#FFF"}}
+               style={{color:"#5B5656"}}
                 selected={values.PickUpandDropOption == "Direct Delivery"}
                 onPress={() => {
                   if (attestationrate.data) {
@@ -520,12 +527,12 @@ const DocumentAttestation = ({
                     setFieldValue("PickUpandDropOption", "Direct Delivery");
                   }}
                 >
-                  <Text style={{color:"#FFF"}} >Direct Delivery</Text>
+                  <Text style={{color:"#5B5656"}} >Direct Delivery</Text>
                 </TouchableOpacity>
               </Body>
               <Radio
                 selected={values.PickUpandDropOption == "Through Courier"}
-                style={{color:"#FFF"}}
+                style={{color:"#5B5656"}}
                 onPress={() => {
                   if (attestationrate.data) {
                     setFieldValue("Rate", attestationrate.data.Rate);
@@ -542,26 +549,26 @@ const DocumentAttestation = ({
                     setFieldValue("PickUpandDropOption", "Through Courier");
                   }}
                 >
-                  <Text style={{color:"#FFF"}}>Through Courier</Text>
+                  <Text style={{color:"#5B5656"}}>Through Courier</Text>
                 </TouchableOpacity>
               </Body>
             </ListItem>
             <View style={[styles.itemTransparent, { padding: 10, borderRadius: 10 }]} >
-              <Text style={{ color:"#FFF", marginTop: 8, fontWeight: "bold", fontSize: 18 }}>
+              <Text style={{ color:"#5B5656", marginTop: 8, fontWeight: "bold", fontSize: 18 }}>
                 Your Bill Amount
               </Text>
-              <Text style={{ marginTop: 8,color:"#FFF" }}>
+              <Text style={{ marginTop: 8,color:"#5B5656" }}>
                 Attestation Charge:{" "}
                 {attestationrate.data ? attestationrate.data.Rate : 0} AED
               </Text>
-              <Text style={{ marginTop: 8,color:"#FFF" }}>
+              <Text style={{ marginTop: 8,color:"#5B5656" }}>
                 Service Charge:{" "}
                 {attestationrate.data ? attestationrate.data.ServiceCharge : 0}{" "}
                 AED
               </Text>
               {attestationrate.data &&
                 values.PickUpandDropOption == "Through Courier" && (
-                  <Text style={{ marginTop: 8,color:"#FFF" }}>
+                  <Text style={{ marginTop: 8,color:"#5B5656" }}>
                     Courier Charge:{" "}
                     {attestationrate.data
                       ? attestationrate.data.CourierCharge
@@ -599,14 +606,14 @@ const DocumentAttestation = ({
                 />
                 <Body>
                   <View style={{ flexDirection: "row" }}>
-                    <Text style={{color:"#FFF"}} > I have read and agree to the </Text>
+                    <Text style={{color:"#5B5656"}} > I have read and agree to the </Text>
 
                     <TouchableOpacity onPress={() => setShowTerms(true)}>
                       <Text
                         style={{
                           textDecorationLine: "underline",
                           marginLeft: -11,
-                          color:"#FFF"
+                          color:"#5B5656"
                         }}
                       >
                         Terms and
@@ -616,7 +623,7 @@ const DocumentAttestation = ({
                   <TouchableOpacity onPress={() => setShowTerms(true)}>
                     <Text
                       style={{
-                        color:"#FFF",
+                        color:"#5B5656",
                         textDecorationLine: "underline"
                       }}
                     >
@@ -628,7 +635,7 @@ const DocumentAttestation = ({
             </View>
             {values.AgreeTerms ? (
               <Button
-                style={{ backgroundColor: "#183E61", marginBottom: 50 }}
+                style={{ backgroundColor: "#183E61", marginBottom: 50, marginTop:5 }}
                 full
                 rounded
                 onPress={handleSubmit}
@@ -637,7 +644,7 @@ const DocumentAttestation = ({
               </Button>
             ) : (
               <Button
-                style={{ backgroundColor: "#818182", marginBottom: 50 }}
+                style={{ backgroundColor: "#818182", marginBottom: 50, marginTop:5 }}
                 full
                 rounded
               >
@@ -646,6 +653,7 @@ const DocumentAttestation = ({
             )}
           </Form>
         </ScrollView>
+        </View>
       </Content>
       </ ImageBackground>
     </Container>

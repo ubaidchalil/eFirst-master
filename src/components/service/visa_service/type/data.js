@@ -27,28 +27,29 @@ export default visa_options = {
         ],
         "Inside Country": {
           "docs": [
-            "Sponsor's emirates ID",
+             
             "Trade License",
             "Immigration card",
             "Memorandum of association (MOA)",
             "Passport ",
-            "1 photo (White background)"
+            "Sponsored Photo (White background)"
           ],
           "PriceDetails": [
             {
               "Text": "Gov. fees",
-              "Value": 1176
+              "Value": 1175.90
             },
             {
               "Text": "Service charge",
               "Value": 105
             }
           ],
+          "IBAN number": "",
           "Notes": {
             "Text": "Notes",
             "Name": "Notes",
             "Options": [
-              "These visa are for those who have a valid Dubai trade license and has a share of more than AED 72000 duly signed by all the parties and attested in Notary Public of any emirates."
+              "This visa is for those who have a valid Dubai trade license and has a share of more than AED 72000 duly signed by all the parties and attested in Notary Public of any emirates."
             ]
           },
           "OriginalDocumentRequired": {
@@ -61,28 +62,29 @@ export default visa_options = {
         },
         "Outside Country": {
           "docs": [
-            "Sponsor's emirates ID",
+             
             "Trade License",
             "Immigration card",
             "Memorandum of association (MOA)",
             "Passport ",
-            "1 photo (White background)"
+            "Sponsored Photo (White background)"
           ],
           "PriceDetails": [
             {
               "Text": "Gov. fees",
-              "Value": 526
+              "Value": 525.65
             },
             {
               "Text": "Service charge",
               "Value": 105
             }
-          ],
+           ],
+          "IBAN number": "",
           "Notes": {
             "Text": "Notes",
             "Name": "Notes",
             "Options": [
-              "These visa are for those who have a valid Dubai trade license and has a share of more than AED 72000 duly signed by all the parties and attested in Notary Public of any emirates. EndFragment"
+              "This visa is for those who have a valid Dubai trade license and has a share of more than AED 72000 duly signed by all the parties and attested in Notary Public of any emirates.  "
             ]
           },
           "OriginalDocumentRequired": {
@@ -115,15 +117,15 @@ export default visa_options = {
             ],
             "Inside Country": {
               "docs": [
-                "Sponsor's emirates ID",
+                 
                 "Sponsor's Passport",
                 "Sponsor's Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Memorandum of association (MOA)",
                 "Marriage certificate attested",
-                "Marriage certificate legaly translated",
+                " Marriage certificate legally translated",
                 "Sponsored Passport",
-                "1 photo (White background)",
+                "Sponsored Photo (White background)",
                 "Last 3 months bank statement"
               ],
               "docsNotRequired": [
@@ -132,7 +134,7 @@ export default visa_options = {
               "PriceDetails": [
                 {
                   "Text": "Sponsor File Opening",
-                  "Value": 324
+                  "Value": 320
                 },
                 {
                   "Text": "Security Deposit",
@@ -140,7 +142,7 @@ export default visa_options = {
                 },
                 {
                   "Text": "Gov. fees",
-                  "Value": 1138
+                  "Value": 1139.75
                 },
                 {
                   "Text": "Service charge",
@@ -165,15 +167,15 @@ export default visa_options = {
             },
             "Outside Country": {
               "docs": [
-                "Sponsor's emirates ID",
+                 
                 "Sponsor's Passport",
                 "Sponsor's Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Memorandum of association (MOA)",
                 "Marriage certificate attested",
-                "Marriage certificate legaly translated",
+                " Marriage certificate legally translated",
                 "Sponsored Passport",
-                "1 photo (White background)",
+                "Sponsored Photo (White background)",
                 "Last 3 months bank statement"
               ],
               "docsNotRequired": [
@@ -182,7 +184,7 @@ export default visa_options = {
               "PriceDetails": [
                 {
                   "Text": "Sponsor File Opening",
-                  "Value": 324
+                  "Value": 320
                 },
                 {
                   "Text": "Security Deposit",
@@ -190,7 +192,7 @@ export default visa_options = {
                 },
                 {
                   "Text": "Gov. fees",
-                  "Value": 470
+                  "Value": 489.75
                 },
                 {
                   "Text": "Service charge",
@@ -229,7 +231,7 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under sponsors name, 2 bedroom and hall)",
@@ -237,7 +239,7 @@ export default visa_options = {
                   "Trade License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Death certiﬁcate attested (if father is dead)",
                   "If divorced (divorce letter)",
@@ -253,7 +255,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Gov. fees",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Service charge",
@@ -278,7 +280,7 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under sponsors name, 2 bedroom and hall)",
@@ -286,7 +288,7 @@ export default visa_options = {
                   "Trade License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Death certiﬁcate attested (if father is dead)",
                   "If divorced (divorce letter)",
@@ -302,7 +304,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -334,7 +336,7 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under sponsors name, 2 bedroom and hall)",
@@ -342,7 +344,7 @@ export default visa_options = {
                   "Trade License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Death certiﬁcate attested (if mother is dead)",
                   "If divorced (divorce letter)",
@@ -358,7 +360,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -383,7 +385,7 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under sponsors name, 2 bedroom and hall)",
@@ -391,7 +393,7 @@ export default visa_options = {
                   "Trade License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Death certiﬁcate attested (if mother is dead)",
                   "If divorced (divorce letter)",
@@ -407,7 +409,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -439,7 +441,7 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under sponsors name, 2 bedroom and hall)",
@@ -447,7 +449,7 @@ export default visa_options = {
                   "Trade License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
@@ -461,7 +463,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -486,7 +488,7 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under sponsors name, 2 bedroom and hall)",
@@ -494,7 +496,7 @@ export default visa_options = {
                   "Trade License",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
@@ -508,7 +510,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -549,14 +551,14 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Birth certifcate legally translated"
                 ],
@@ -570,7 +572,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -595,14 +597,14 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Birth certifcate legally translated"
                 ],
@@ -616,7 +618,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -648,14 +650,14 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Undertaking Letter from sponsor showing that she is not married",
                   "Birth certifcate legally translated"
@@ -670,7 +672,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -695,14 +697,14 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Undertaking Letter from sponsor showing that she is not married",
                   "Birth certifcate legally translated"
@@ -717,7 +719,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -749,14 +751,14 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "College certiﬁcate or continuity certiﬁcate of UAE",
                   "Birth certifcate legally translated"
@@ -771,7 +773,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -796,14 +798,14 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "College certiﬁcate or continuity certiﬁcate of UAE",
                   "Birth certifcate legally translated"
@@ -818,7 +820,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -850,14 +852,13 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "College certiﬁcate or continuity certiﬁcate of UAE",
                   "Birth certifcate legally translated"
@@ -872,7 +873,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -897,14 +898,14 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "College certiﬁcate or continuity certiﬁcate of UAE",
                   "Birth certifcate legally translated"
@@ -919,7 +920,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -960,15 +961,15 @@ export default visa_options = {
             ],
             "Inside Country": {
               "docs": [
-                "Sponsor's emirates ID",
+                 
                 "Sponsor's Passport",
                 "Sponsor's Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Labour contract",
                 "Marriage certificate attested",
-                "Marriage certificate legaly translated",
+                " Marriage certificate legally translated",
                 "Sponsored Passport",
-                "1 photo (White background)",
+                "Sponsored Photo (White background)",
                 "Last 3 months bank statement"
               ],
               "docsNotRequired": [
@@ -977,7 +978,7 @@ export default visa_options = {
               "PriceDetails": [
                 {
                   "Text": "Gov. fees",
-                  "Value": 1138
+                  "Value": 1139.75
                 },
                 {
                   "Text": "Service charge",
@@ -1002,15 +1003,15 @@ export default visa_options = {
             },
             "Outside Country": {
               "docs": [
-                "Sponsor's emirates ID",
+                 
                 "Sponsor's Passport",
                 "Sponsor's Visa",
                 "Residential ejari (under Sponsor's name)",
                 "Labour contract",
                 "Marriage certificate attested",
-                "Marriage certificate legaly translated",
+                " Marriage certificate legally translated",
                 "Sponsored Passport",
-                "1 photo (White background)",
+                "Sponsored Photo (White background)",
                 "Last 3 months bank statement"
               ],
               "docsNotRequired": [
@@ -1019,7 +1020,7 @@ export default visa_options = {
               "PriceDetails": [
                 {
                   "Text": "Gov. fees",
-                  "Value": 488.09
+                  "Value": 489.75
                 },
                 {
                   "Text": "Service charge",
@@ -1058,14 +1059,14 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name, 2 bedroom and hall)",
                   "Labour Contract",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Death certiﬁcate attested (if father is dead)",
                   "If divorced (divorce letter)",
@@ -1081,7 +1082,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -1106,14 +1107,14 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name, 2 bedroom and hall)",
                   "Labour Contract",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Death certiﬁcate attested (if father is dead)",
                   "If divorced (divorce letter)",
@@ -1129,7 +1130,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 488.09
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -1161,14 +1162,14 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name, 2 bedroom and hall)",
                   "Labour Contract",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Death certiﬁcate attested (if mother is dead)",
                   "If divorced (divorce letter)",
@@ -1184,7 +1185,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -1209,14 +1210,13 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name, 2 bedroom and hall)",
                   "Labour Contract",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Death certiﬁcate attested (if mother is dead)",
                   "If divorced (divorce letter)",
@@ -1232,7 +1232,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 488.09
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -1264,14 +1264,13 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name, 2 bedroom and hall)",
                   "Labour Contract",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
@@ -1285,7 +1284,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -1310,14 +1309,14 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name, 2 bedroom and hall)",
                   "Labour Contract",
                   "Relationship certiﬁcate from embassy (Attested)",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                 ],
@@ -1331,7 +1330,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Gov. fees",
-                    "Value": 488.09
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -1372,14 +1371,14 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Birth certifcate legally translated"
                 ],
@@ -1389,7 +1388,7 @@ export default visa_options = {
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -1414,14 +1413,14 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Birth certifcate legally translated"
                 ],
@@ -1431,7 +1430,7 @@ export default visa_options = {
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 488.09
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -1463,14 +1462,13 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Undertaking Letter from sponsor showing that she is not married",
                   "Birth certifcate legally translated"
@@ -1481,7 +1479,7 @@ export default visa_options = {
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -1506,14 +1504,13 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "Undertaking Letter from sponsor showing that she is not married",
                   "Birth certifcate legally translated"
@@ -1524,7 +1521,7 @@ export default visa_options = {
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 488.09
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -1556,14 +1553,14 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "College certiﬁcate or continuity certiﬁcate of UAE",
                   "Birth certifcate legally translated"
@@ -1574,7 +1571,7 @@ export default visa_options = {
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -1599,14 +1596,13 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "College certiﬁcate or continuity certiﬁcate of UAE",
                   "Birth certifcate legally translated"
@@ -1617,7 +1613,7 @@ export default visa_options = {
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 488.09
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -1649,14 +1645,14 @@ export default visa_options = {
               ],
               "Inside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "College certiﬁcate or continuity certiﬁcate of uae",
                   "Birth certifcate legally translated"
@@ -1667,7 +1663,7 @@ export default visa_options = {
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Service charge",
@@ -1692,14 +1688,14 @@ export default visa_options = {
               },
               "Outside Country": {
                 "docs": [
-                  "Sponsor's emirates ID",
+                   
                   "Sponsor's Passport",
                   "Sponsor's Visa",
                   "Residential ejari (under Sponsor's name)",
                   "Labour contract",
                   "Birth certiﬁcate attested",
                   "Sponsored Passport",
-                  "1 photo (White background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement",
                   "College certiﬁcate or continuity certiﬁcate of UAE",
                   "Birth certifcate legally translated"
@@ -1710,7 +1706,7 @@ export default visa_options = {
                 "PriceDetails": [
                   {
                     "Text": "Gov. fees",
-                    "Value": 488.09
+                    "Value": 489.75
                   },
                   {
                     "Text": "Service charge",
@@ -1756,7 +1752,7 @@ export default visa_options = {
         "PriceDetails": [
           {
             "Text": "Gov. fees",
-            "Value": 677
+            "Value": 675.65
           },
           {
             "Text": "Service charge",
@@ -1767,7 +1763,7 @@ export default visa_options = {
           "Text": "Notes",
           "Name": "Notes",
           "Options": [
-            "This process is done for those who have taken the inside country visa. To take the inside country visa, either the person has to have an visit visa or might be under the cancellation period. Fine payment for change status: If a person exceeds the final day of change status, fine payment will be as follows        If under visit visa, a person gets 90days time to do the change status. If not the very next day onwards the fine will be 100 aed for one day and goes on.        If a person is under cancelled visa and exceeds the last day of change status, fine starts from aed 25 for 180 days. If  not the next 180 days will be of 50 days fine and then the fine increases to 100 aed per day.      The service charge will be 105 in addition to the fine.EndFragment    "
+            "This process is done for those who have taken the inside country visa. To take the inside country visa, either the person has to have an visit visa or might be under the cancellation period. Fine payment for change status: If a person exceeds the final day of change status, fine payment will be as follows If under visit visa, a person gets 90days time to do the change status. If not the very next day onwards the fine will be 100 aed for one day and goes on. If a person is under cancelled visa and exceeds the last day of change status, fine starts from aed 25 for 180 days. If  not the next 180 days will be of 50 days fine and then the fine increases to 100 aed per day. The service charge will be 105 in addition to the fine."
           ]
         },
         "OriginalDocumentRequired": {
@@ -1800,7 +1796,7 @@ export default visa_options = {
           "Text": "Notes",
           "Name": "Notes",
           "Options": [
-            " This process is done for those who have  taken the inside country visa. To take the inside country visa, either the  person has to have an visit visa or might be under the cancellation period.        Fine payment for change status:         If  a person exceeds the final day of change status, fine payment will be as  follows        If under visit visa, a person gets 90days  time to do the change status. If not the very next day onwards the fine will be  100 aed for one day and goes on.        If a person is under cancelled visa and  exceeds the last day of change status, fine starts from aed 25 for 180 days. If  not the next 180 days will be of 50 days fine and then the fine increases to  100 aed per day.      The service charge will be 105 in  addition to the fine.EndFragment    "
+            " This process is done for those who have  taken the inside country visa. To take the inside country visa, either the  person has to have an visit visa or might be under the cancellation period.        Fine payment for change status:         If  a person exceeds the final day of change status, fine payment will be as  follows        If under visit visa, a person gets 90days  time to do the change status. If not the very next day onwards the fine will be  100 aed for one day and goes on.        If a person is under cancelled visa and  exceeds the last day of change status, fine starts from aed 25 for 180 days. If  not the next 180 days will be of 50 days fine and then the fine increases to  100 aed per day.      The service charge will be 105 in  addition to the fine.     "
           ]
         },
         "OriginalDocumentRequired": {
@@ -1836,13 +1832,14 @@ export default visa_options = {
           "PriceDetails": [
             {
               "Text": "Gov. fees",
-              "Value": 847
+              "Value": 609.90
             },
             {
               "Text": "Service charge",
               "Value": 105
             }
-          ],
+           ],
+          "IBAN number": "",
           "Notes": {
             "Text": "Notes",
             "Name": "Notes",
@@ -1869,13 +1866,14 @@ export default visa_options = {
           "PriceDetails": [
             {
               "Text": "Gov. fees",
-              "Value": 926
+              "Value": 689.90
             },
             {
               "Text": "Service charge",
               "Value": 105
             }
-          ],
+           ],
+          "IBAN number": "",
           "Notes": {
             "Text": "Notes",
             "Name": "Notes",
@@ -1997,7 +1995,7 @@ export default visa_options = {
               "PriceDetails": [
                 {
                   "Text": "Gov. fees",
-                  "Value": 460
+                  "Value": 544.05
                 },
                 {
                   "Text": "Service charge",
@@ -2031,7 +2029,7 @@ export default visa_options = {
               "PriceDetails": [
                 {
                   "Text": "Gov. fees",
-                  "Value": 540
+                  "Value": 624.05
                 },
                 {
                   "Text": "Service charge",
@@ -2072,7 +2070,7 @@ export default visa_options = {
               "PriceDetails": [
                 {
                   "Text": "Gov. fees",
-                  "Value": 460
+                  "Value": 459.90
                 },
                 {
                   "Text": "Service charge",
@@ -2106,7 +2104,7 @@ export default visa_options = {
               "PriceDetails": [
                 {
                   "Text": "Gov. fees",
-                  "Value": 540
+                  "Value": 539.90
                 },
                 {
                   "Text": "Service charge",
@@ -2161,6 +2159,10 @@ export default visa_options = {
                 "Value": 671.75
               },
               {
+                  "Text": "Insurance",
+                  "Value": 695.10
+              },
+              {
                 "Text": "Service charge",
                 "Value": 105
               }
@@ -2196,6 +2198,10 @@ export default visa_options = {
               {
                 "Text": "Gov. fees",
                 "Value": 751.75
+              },
+              {
+                  "Text": "Insurance",
+                  "Value": 695.10
               },
               {
                 "Text": "Service charge",
@@ -2416,12 +2422,12 @@ export default visa_options = {
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)"
+              "Sponsored Photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
-                "Value": 1176
+                "Value": 1175.90
               },
               {
                 "Text": "Change Status",
@@ -2433,15 +2439,15 @@ export default visa_options = {
               },
               {
                 "Text": "Medical Charges",
-                "Value": 324
+                "Value": 320
               },
               {
-                "Text": "Insurance",
-                "Value": 773.85
+                "Text": "Insurance (Basic)",
+                "Value": 788.85
               },
               {
                 "Text": "Emirates ID Price - 3 years",
-                "Value": 374
+                "Value": 370
               },
               {
                 "Text": "Service charge",
@@ -2468,7 +2474,7 @@ export default visa_options = {
               "Trade License",
               "Immigration card",
               "Passport",
-              "1 photo (White background)",
+              "Sponsored Photo (White background)",
               "Memmorandum of association (MOA)"
             ],
             "PriceDetails": [
@@ -2478,7 +2484,7 @@ export default visa_options = {
               },
               {
                 "Text": "Entry Permit",
-                "Value": 1176
+                "Value": 1175.65
               },
               {
                 "Text": "Change Status",
@@ -2490,15 +2496,15 @@ export default visa_options = {
               },
               {
                 "Text": "Medical Charges",
-                "Value": 434
+                "Value": 430
               },
               {
-                "Text": "Insurance",
-                "Value": 773.85
+                  "Text": "Insurance (Basic)",
+                  "Value": 788.85
               },
               {
                 "Text": "Emirates ID Price - 3 years",
-                "Value": 374
+                "Value": 370
               }
             ],
             "Notes": {
@@ -2522,12 +2528,12 @@ export default visa_options = {
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)"
+              "Sponsored Photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
-                "Value": 1176
+                "Value": 1175.90
               },
               {
                 "Text": "Service Charge",
@@ -2543,15 +2549,15 @@ export default visa_options = {
               },
               {
                 "Text": "Medical Charges",
-                "Value": 534
+                "Value": 530
               },
               {
-                "Text": "Insurance",
-                "Value": 773.85
+                  "Text": "Insurance (Basic)",
+                  "Value": 788.85
               },
               {
                 "Text": "Emirates ID Price - 3 years",
-                "Value": 374
+                "Value": 370
               }
             ],
             "Notes": {
@@ -2575,12 +2581,12 @@ export default visa_options = {
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)"
+              "Sponsored Photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
-                "Value": 1176
+                "Value": 1175.90
               },
               {
                 "Text": "Service Charge",
@@ -2596,15 +2602,15 @@ export default visa_options = {
               },
               {
                 "Text": "Medical Charge - VIP",
-                "Value": 754
+                "Value": 750
               },
               {
-                "Text": "Insurance",
-                "Value": 773.85
+                  "Text": "Insurance (Basic)",
+                  "Value": 788.85
               },
               {
                 "Text": "Emirates ID Price (3 yrs)",
-                "Value": 374
+                "Value": 370
               }
             ],
             "Notes": {
@@ -2628,12 +2634,12 @@ export default visa_options = {
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)"
+              "Sponsored Photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
-                "Value": 1176
+                "Value": 1175.90
               },
               {
                 "Text": "Service Charge",
@@ -2649,15 +2655,15 @@ export default visa_options = {
               },
               {
                 "Text": "Medical Charge - VVIP",
-                "Value": 1184
+                "Value": 1070
               },
               {
-                "Text": "Insurance",
-                "Value": 773.85
+                  "Text": "Insurance (Basic)",
+                  "Value": 788.85
               },
               {
                 "Text": "Emirates ID Price (3 yrs)",
-                "Value": 374
+                "Value": 370
               }
             ],
             "Notes": {
@@ -2691,12 +2697,12 @@ export default visa_options = {
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)"
+              "Sponsored Photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
-                "Value": 526
+                "Value": 525.65
               },
               {
                 "Text": "Service Charge",
@@ -2708,15 +2714,15 @@ export default visa_options = {
               },
               {
                 "Text": "Medical Charges",
-                "Value": 324
+                "Value": 320
               },
               {
-                "Text": "Insurance",
-                "Value": 773.85
+                  "Text": "Insurance (Basic)",
+                  "Value": 788.85
               },
               {
                 "Text": "Emirates ID Price - 3 years",
-                "Value": 374
+                "Value": 370
               }
             ],
             "Notes": {
@@ -2740,12 +2746,12 @@ export default visa_options = {
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)"
+              "Sponsored Photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
-                "Value": 526
+                "Value": 525.65
               },
               {
                 "Text": "Service Charge",
@@ -2757,15 +2763,15 @@ export default visa_options = {
               },
               {
                 "Text": "Medical Charges",
-                "Value": 434
+                "Value": 430
               },
               {
-                "Text": "Insurance",
-                "Value": 773.85
+                  "Text": "Insurance (Basic)",
+                  "Value": 788.85
               },
               {
                 "Text": "Emirates ID Price - 3 years",
-                "Value": 374
+                "Value": 370
               }
             ],
             "Notes": {
@@ -2789,12 +2795,12 @@ export default visa_options = {
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)"
+              "Sponsored Photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
-                "Value": 526
+                "Value": 525.65
               },
               {
                 "Text": "Service Charge",
@@ -2806,15 +2812,15 @@ export default visa_options = {
               },
               {
                 "Text": "Medical Charges",
-                "Value": 534
+                "Value": 530
               },
               {
-                "Text": "Insurance",
-                "Value": 773.85
+                 "Text": "Insurance (Basic)",
+                 "Value": 788.85
               },
               {
                 "Text": "Emirates ID Price - 3 years",
-                "Value": 374
+                "Value": 370
               }
             ],
             "Notes": {
@@ -2838,12 +2844,12 @@ export default visa_options = {
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)"
+              "Sponsored Photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
-                "Value": 526
+                "Value": 525.65
               },
               {
                 "Text": "Service Charge",
@@ -2855,15 +2861,15 @@ export default visa_options = {
               },
               {
                 "Text": "Medical Charges - VIP",
-                "Value": 754
+                "Value": 750
               },
               {
-                "Text": "Insurance",
-                "Value": 773.85
+                  "Text": "Insurance (Basic)",
+                  "Value": 788.85
               },
               {
                 "Text": "Emirates ID Price - 3 years",
-                "Value": 374
+                "Value": 370
               }
             ],
             "Notes": {
@@ -2887,12 +2893,12 @@ export default visa_options = {
               "Immigration card",
               "Memorandum of association (MOA)",
               "Passport",
-              "1 photo (White background)"
+              "Sponsored Photo (White background)"
             ],
             "PriceDetails": [
               {
                 "Text": "Entry Permit",
-                "Value": 526
+                "Value": 525.65
               },
               {
                 "Text": "Service Charge",
@@ -2904,15 +2910,15 @@ export default visa_options = {
               },
               {
                 "Text": "Medical Charges - VVIP",
-                "Value": 1184
+                "Value": 1070
               },
               {
-                "Text": "Insurance",
-                "Value": 773.85
+                  "Text": "Insurance (Basic)",
+                  "Value": 788.85
               },
               {
                 "Text": "Emirates ID Price - 3 years",
-                "Value": 374
+                "Value": 370
               }
             ],
             "Notes": {
@@ -2969,7 +2975,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -2979,7 +2985,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Change Status",
@@ -2991,7 +2997,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 324
+                    "Value": 320
                   },
                   {
                     "Text": "Insurance",
@@ -2999,7 +3005,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -3030,7 +3036,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -3040,7 +3046,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Change Status",
@@ -3052,7 +3058,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 434
+                    "Value": 430
                   },
                   {
                     "Text": "Insurance",
@@ -3060,7 +3066,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -3091,7 +3097,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -3101,7 +3107,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Change Status",
@@ -3113,7 +3119,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 534
+                    "Value": 530
                   },
                   {
                     "Text": "Insurance",
@@ -3121,7 +3127,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -3152,7 +3158,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -3162,7 +3168,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Change Status",
@@ -3174,7 +3180,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges - VVIP",
-                    "Value": 1184
+                    "Value": 1070
                   },
                   {
                     "Text": "Insurance",
@@ -3182,7 +3188,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -3213,7 +3219,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -3223,7 +3229,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Change Status",
@@ -3235,7 +3241,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges - VIP",
-                    "Value": 754
+                    "Value": 750
                   },
                   {
                     "Text": "Insurance",
@@ -3243,7 +3249,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -3284,7 +3290,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -3294,7 +3300,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Stamping",
@@ -3302,7 +3308,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 324
+                    "Value": 320
                   },
                   {
                     "Text": "Insurance",
@@ -3310,7 +3316,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -3341,7 +3347,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -3351,7 +3357,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Stamping",
@@ -3359,7 +3365,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 434
+                    "Value": 430
                   },
                   {
                     "Text": "Insurance",
@@ -3367,7 +3373,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -3398,7 +3404,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -3408,7 +3414,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Stamping",
@@ -3416,7 +3422,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 534
+                    "Value": 530
                   },
                   {
                     "Text": "Insurance",
@@ -3424,7 +3430,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -3455,7 +3461,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -3465,7 +3471,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Stamping",
@@ -3473,7 +3479,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges - VIP",
-                    "Value": 754
+                    "Value": 750
                   },
                   {
                     "Text": "Insurance",
@@ -3481,7 +3487,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -3512,7 +3518,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -3522,7 +3528,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Stamping",
@@ -3530,7 +3536,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges - VVIP",
-                    "Value": 1184
+                    "Value": 1070
                   },
                   {
                     "Text": "Insurance",
@@ -3538,7 +3544,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -3592,7 +3598,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -3602,7 +3608,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -3614,7 +3620,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -3622,7 +3628,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -3653,7 +3659,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -3663,7 +3669,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -3675,7 +3681,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -3683,7 +3689,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -3714,7 +3720,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -3724,7 +3730,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -3736,7 +3742,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -3744,7 +3750,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -3775,7 +3781,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -3785,7 +3791,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -3797,7 +3803,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -3805,7 +3811,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -3836,7 +3842,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -3846,7 +3852,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -3858,7 +3864,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -3866,7 +3872,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -3907,7 +3913,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -3917,7 +3923,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Stamping",
@@ -3925,7 +3931,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -3933,7 +3939,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -3964,7 +3970,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -3974,7 +3980,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Stamping",
@@ -3982,7 +3988,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -3990,7 +3996,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4021,7 +4027,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -4031,7 +4037,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Stamping",
@@ -4039,7 +4045,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 534
+                    "Value": 530
                   },
                   {
                     "Text": "Insurance",
@@ -4047,7 +4053,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -4078,7 +4084,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -4088,7 +4094,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Stamping",
@@ -4096,7 +4102,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -4104,7 +4110,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4135,7 +4141,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -4145,7 +4151,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Stamping",
@@ -4153,7 +4159,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -4161,7 +4167,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4209,7 +4215,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -4219,7 +4225,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -4231,7 +4237,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -4239,7 +4245,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4270,7 +4276,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -4280,7 +4286,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -4292,7 +4298,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -4300,7 +4306,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4331,7 +4337,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -4341,7 +4347,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -4353,7 +4359,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -4361,7 +4367,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4392,7 +4398,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -4402,7 +4408,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -4414,7 +4420,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -4422,7 +4428,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4453,7 +4459,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -4463,7 +4469,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -4475,7 +4481,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -4483,7 +4489,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4523,7 +4529,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -4533,7 +4539,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -4541,7 +4547,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -4549,7 +4555,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4580,7 +4586,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -4590,7 +4596,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -4598,7 +4604,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -4606,7 +4612,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4637,7 +4643,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -4647,7 +4653,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -4655,7 +4661,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -4663,7 +4669,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4694,7 +4700,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -4704,7 +4710,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -4712,7 +4718,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -4720,7 +4726,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4751,7 +4757,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
@@ -4761,7 +4767,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -4769,7 +4775,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -4777,7 +4783,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4834,7 +4840,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
@@ -4847,7 +4853,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -4859,20 +4865,20 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
-                  {
-                    "Text": "Service Charge",
-                    "Value": 105
-                  }
+                    {
+                      "Text": "Service Charge",
+                      "Value": 105
+                    }
                   ],
                   "IBAN Number": "",
                   "Notes": {
@@ -4899,7 +4905,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
@@ -4912,7 +4918,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -4924,7 +4930,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -4932,7 +4938,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -4964,7 +4970,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
@@ -4977,7 +4983,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -4989,15 +4995,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5029,7 +5035,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
@@ -5042,7 +5048,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -5054,15 +5060,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5094,7 +5100,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
@@ -5107,7 +5113,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -5119,15 +5125,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5169,7 +5175,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
@@ -5182,7 +5188,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -5190,15 +5196,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5230,7 +5236,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
@@ -5243,7 +5249,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -5251,15 +5257,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5291,7 +5297,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
@@ -5304,7 +5310,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -5312,15 +5318,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5352,7 +5358,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
@@ -5365,7 +5371,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -5373,15 +5379,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5413,7 +5419,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if father is dead)",
                     "If divorced (divorce letter)",
@@ -5426,7 +5432,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -5434,15 +5440,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5491,7 +5497,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
@@ -5504,7 +5510,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -5516,15 +5522,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5556,7 +5562,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
@@ -5569,7 +5575,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -5581,15 +5587,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5621,7 +5627,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
@@ -5634,7 +5640,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -5646,15 +5652,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5686,7 +5692,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -5699,7 +5705,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -5711,15 +5717,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5751,7 +5757,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -5764,7 +5770,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -5776,15 +5782,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5826,7 +5832,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
@@ -5839,7 +5845,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -5847,15 +5853,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5887,7 +5893,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
@@ -5900,7 +5906,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -5908,15 +5914,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -5948,7 +5954,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
@@ -5961,7 +5967,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -5969,15 +5975,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -6009,7 +6015,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
@@ -6022,7 +6028,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -6030,15 +6036,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -6070,7 +6076,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother is dead)",
                     "If divorced (divorce letter)",
@@ -6083,7 +6089,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -6091,15 +6097,15 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
                       "Value": 695.10
                     },
                     {
-                      "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Text": "Emirates ID Price - 1 year",
+                      "Value": 174
                     },
                   {
                     "Text": "Service Charge",
@@ -6148,7 +6154,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -6159,7 +6165,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -6171,7 +6177,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -6179,7 +6185,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -6211,7 +6217,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -6222,7 +6228,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -6234,7 +6240,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -6242,7 +6248,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -6274,7 +6280,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -6285,7 +6291,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -6297,7 +6303,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -6305,7 +6311,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -6337,7 +6343,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -6348,7 +6354,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -6360,7 +6366,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -6368,7 +6374,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -6400,7 +6406,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -6411,7 +6417,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -6423,7 +6429,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -6431,7 +6437,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -6473,7 +6479,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -6484,7 +6490,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -6492,7 +6498,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -6500,7 +6506,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -6532,7 +6538,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -6543,7 +6549,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -6551,7 +6557,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -6559,7 +6565,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -6591,7 +6597,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -6602,7 +6608,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -6610,7 +6616,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -6618,7 +6624,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -6650,7 +6656,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -6661,7 +6667,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -6669,7 +6675,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -6677,7 +6683,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -6709,7 +6715,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -6720,7 +6726,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -6728,7 +6734,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -6736,7 +6742,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -6784,7 +6790,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -6794,7 +6800,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Change Status",
@@ -6810,7 +6816,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -6841,7 +6847,7 @@ export default visa_options = {
                   "Memorandum of association (MOA)",
                   "Birth certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
@@ -6851,7 +6857,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Entry Permit",
-                    "Value": 470
+                    "Value": 489.75
                   },
                   {
                     "Text": "Stamping",
@@ -6863,7 +6869,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -6910,7 +6916,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
@@ -6921,7 +6927,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -6933,7 +6939,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -6941,7 +6947,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -6972,7 +6978,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
@@ -6983,7 +6989,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -6995,7 +7001,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -7003,7 +7009,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7034,7 +7040,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
@@ -7045,7 +7051,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -7057,7 +7063,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -7065,7 +7071,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7096,7 +7102,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
@@ -7107,7 +7113,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -7119,7 +7125,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -7127,7 +7133,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7158,7 +7164,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
@@ -7169,7 +7175,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -7181,7 +7187,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -7189,7 +7195,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7230,7 +7236,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
@@ -7241,7 +7247,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -7257,7 +7263,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7288,7 +7294,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
@@ -7299,7 +7305,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -7307,7 +7313,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -7315,7 +7321,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7346,7 +7352,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
@@ -7357,7 +7363,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -7365,7 +7371,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -7373,7 +7379,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7404,7 +7410,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
@@ -7415,7 +7421,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -7423,7 +7429,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -7431,7 +7437,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7462,7 +7468,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
@@ -7473,7 +7479,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -7481,7 +7487,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -7489,7 +7495,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7537,7 +7543,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
@@ -7548,7 +7554,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -7560,7 +7566,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -7568,7 +7574,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7599,7 +7605,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
@@ -7610,7 +7616,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -7622,7 +7628,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -7630,7 +7636,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7661,7 +7667,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
@@ -7672,7 +7678,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -7684,7 +7690,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -7692,7 +7698,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7723,7 +7729,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
@@ -7734,7 +7740,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -7746,7 +7752,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -7754,7 +7760,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7785,7 +7791,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
@@ -7796,7 +7802,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -7808,7 +7814,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -7816,7 +7822,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7857,7 +7863,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
@@ -7868,7 +7874,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -7876,7 +7882,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -7884,7 +7890,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7915,7 +7921,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
@@ -7926,7 +7932,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -7934,7 +7940,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -7942,7 +7948,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -7973,7 +7979,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
@@ -7984,7 +7990,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -7992,7 +7998,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -8000,7 +8006,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8031,7 +8037,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
@@ -8042,7 +8048,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -8050,7 +8056,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -8058,7 +8064,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8089,7 +8095,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
@@ -8100,7 +8106,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -8108,7 +8114,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -8116,7 +8122,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8164,7 +8170,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
@@ -8175,7 +8181,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -8187,7 +8193,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -8195,7 +8201,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8226,7 +8232,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
@@ -8237,7 +8243,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -8249,7 +8255,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -8257,7 +8263,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8288,7 +8294,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
@@ -8299,7 +8305,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -8311,7 +8317,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -8319,7 +8325,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8350,7 +8356,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
@@ -8361,7 +8367,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -8373,7 +8379,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -8381,7 +8387,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8412,7 +8418,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
@@ -8423,7 +8429,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -8435,7 +8441,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -8443,7 +8449,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8484,7 +8490,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
@@ -8495,7 +8501,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -8503,7 +8509,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -8511,7 +8517,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8542,7 +8548,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
@@ -8553,7 +8559,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -8561,7 +8567,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -8569,7 +8575,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8600,7 +8606,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
@@ -8611,7 +8617,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -8619,7 +8625,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -8627,7 +8633,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8658,7 +8664,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
@@ -8669,7 +8675,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -8677,7 +8683,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -8685,7 +8691,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8716,7 +8722,7 @@ export default visa_options = {
                     "Memorandum of association (MOA)",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of UAE"
                   ],
@@ -8727,7 +8733,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 470
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -8735,7 +8741,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -8743,7 +8749,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -8801,13 +8807,13 @@ export default visa_options = {
                   "Labour contract",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Change Status",
@@ -8819,7 +8825,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 324
+                    "Value": 320
                   },
                   {
                     "Text": "Insurance",
@@ -8827,7 +8833,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
               {
                 "Text": "Service charge",
@@ -8858,13 +8864,13 @@ export default visa_options = {
                   "Labour contract",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Change Status",
@@ -8876,7 +8882,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 434
+                    "Value": 430
                   },
                   {
                     "Text": "Insurance",
@@ -8884,7 +8890,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
               {
                 "Text": "Service charge",
@@ -8915,13 +8921,13 @@ export default visa_options = {
                   "Labour contract",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Change Status",
@@ -8933,7 +8939,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 534
+                    "Value": 530
                   },
                   {
                     "Text": "Insurance",
@@ -8941,7 +8947,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
               {
                 "Text": "Service charge",
@@ -8972,13 +8978,13 @@ export default visa_options = {
                   "Labour contract",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Change Status",
@@ -8990,7 +8996,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges VIP",
-                    "Value": 754
+                    "Value": 750
                   },
                   {
                     "Text": "Insurance",
@@ -8998,7 +9004,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
               {
                 "Text": "Service charge",
@@ -9029,13 +9035,13 @@ export default visa_options = {
                   "Labour contract",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Change Status",
@@ -9047,7 +9053,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges VVIP",
-                    "Value": 1184
+                    "Value": 1070
                   },
                   {
                     "Text": "Insurance",
@@ -9055,7 +9061,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
               {
                 "Text": "Service charge",
@@ -9096,13 +9102,13 @@ export default visa_options = {
                   "Labour contract",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 488
+                    "Value": 489.75
                   },
                   {
                     "Text": "Stamping",
@@ -9110,7 +9116,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 324
+                    "Value": 320
                   },
                   {
                     "Text": "Insurance",
@@ -9118,7 +9124,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
               {
                 "Text": "Service charge",
@@ -9149,13 +9155,13 @@ export default visa_options = {
                   "Labour contract",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 488
+                    "Value": 489.75
                   },
                   {
                     "Text": "Stamping",
@@ -9171,7 +9177,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
               {
                 "Text": "Service charge",
@@ -9202,13 +9208,13 @@ export default visa_options = {
                   "Labour contract",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 488
+                    "Value": 489.75
                   },
                   {
                     "Text": "Stamping",
@@ -9216,7 +9222,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges",
-                    "Value": 534
+                    "Value": 530
                   },
                   {
                     "Text": "Insurance",
@@ -9224,7 +9230,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
               {
                 "Text": "Service charge",
@@ -9255,13 +9261,13 @@ export default visa_options = {
                   "Labour contract",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 488
+                    "Value": 489.75
                   },
                   {
                     "Text": "Stamping",
@@ -9269,7 +9275,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges - VIP",
-                    "Value": 754
+                    "Value": 750
                   },
                   {
                     "Text": "Insurance",
@@ -9277,7 +9283,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
               {
                 "Text": "Service charge",
@@ -9308,13 +9314,13 @@ export default visa_options = {
                   "Labour contract",
                   "Marriage certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 488
+                    "Value": 489.75
                   },
                   {
                     "Text": "Stamping",
@@ -9322,7 +9328,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Medical Charges - VVIP",
-                    "Value": 1184
+                    "Value": 1070
                   },
                   {
                     "Text": "Insurance",
@@ -9330,7 +9336,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
               {
                 "Text": "Service charge",
@@ -9378,20 +9384,20 @@ export default visa_options = {
                 ],
                 "Normal": {
                   "docs": [
-                    "Sponsor's emirates ID",
+                     
                     "Sponsor's passport",
                     "Sponsor's visa",
                     "Residential ejari (under Sponsor's name)",
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -9403,7 +9409,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -9411,7 +9417,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -9442,13 +9448,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -9460,7 +9466,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -9468,7 +9474,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -9499,13 +9505,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -9517,7 +9523,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -9525,7 +9531,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -9556,13 +9562,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -9574,7 +9580,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -9582,7 +9588,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -9613,13 +9619,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -9631,7 +9637,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -9639,7 +9645,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -9680,13 +9686,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -9694,7 +9700,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -9702,7 +9708,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -9733,13 +9739,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -9747,7 +9753,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -9755,7 +9761,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -9786,13 +9792,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -9800,7 +9806,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -9808,7 +9814,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -9839,13 +9845,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -9853,7 +9859,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -9861,7 +9867,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -9892,13 +9898,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -9906,7 +9912,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -9914,7 +9920,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -9962,13 +9968,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -9980,7 +9986,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -9988,7 +9994,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10019,13 +10025,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -10037,7 +10043,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -10045,7 +10051,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10076,13 +10082,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -10094,7 +10100,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -10102,7 +10108,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10133,13 +10139,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -10151,7 +10157,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -10159,7 +10165,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10190,13 +10196,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -10208,7 +10214,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -10216,7 +10222,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10257,13 +10263,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -10271,7 +10277,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -10279,7 +10285,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10310,13 +10316,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -10324,7 +10330,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -10332,7 +10338,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10363,13 +10369,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -10377,7 +10383,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -10385,7 +10391,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10416,13 +10422,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -10430,7 +10436,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -10438,7 +10444,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10469,13 +10475,13 @@ export default visa_options = {
                     "Labour Contract",
                     "Marriage certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -10483,7 +10489,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -10491,7 +10497,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10547,7 +10553,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -10560,7 +10566,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -10572,7 +10578,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -10580,7 +10586,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10611,7 +10617,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -10624,7 +10630,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -10636,7 +10642,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -10644,7 +10650,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10675,7 +10681,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -10688,7 +10694,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -10700,7 +10706,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -10708,7 +10714,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10739,7 +10745,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -10752,7 +10758,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -10764,7 +10770,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -10772,7 +10778,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10803,7 +10809,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -10816,7 +10822,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -10828,7 +10834,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -10836,7 +10842,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10877,7 +10883,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -10890,7 +10896,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -10898,7 +10904,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -10906,7 +10912,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10937,7 +10943,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -10950,7 +10956,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -10958,7 +10964,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -10966,7 +10972,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -10997,7 +11003,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11010,7 +11016,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -11018,7 +11024,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -11026,7 +11032,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11057,7 +11063,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11070,7 +11076,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -11078,7 +11084,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -11086,7 +11092,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11117,7 +11123,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11130,7 +11136,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -11138,7 +11144,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -11146,7 +11152,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11194,7 +11200,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11207,7 +11213,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -11219,7 +11225,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -11227,7 +11233,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11258,7 +11264,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11271,7 +11277,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -11283,7 +11289,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -11291,7 +11297,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11322,7 +11328,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11335,7 +11341,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -11347,7 +11353,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -11355,7 +11361,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11386,7 +11392,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11399,7 +11405,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -11411,7 +11417,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -11419,7 +11425,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11450,7 +11456,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11463,7 +11469,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -11475,7 +11481,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -11483,7 +11489,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11524,7 +11530,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11537,7 +11543,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -11545,7 +11551,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -11553,7 +11559,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11584,7 +11590,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11597,7 +11603,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -11605,7 +11611,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -11613,7 +11619,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11644,7 +11650,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11657,7 +11663,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -11665,7 +11671,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -11673,7 +11679,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11704,7 +11710,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11717,7 +11723,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -11725,7 +11731,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -11733,7 +11739,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11764,7 +11770,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Death certiﬁcate attested (if mother or father is dead)",
                     "If divorced (divorce letter)",
@@ -11777,7 +11783,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -11785,7 +11791,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -11793,7 +11799,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11841,7 +11847,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -11852,7 +11858,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -11864,7 +11870,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -11872,7 +11878,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11903,7 +11909,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -11914,7 +11920,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -11926,7 +11932,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -11934,7 +11940,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -11965,7 +11971,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -11976,7 +11982,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -11988,7 +11994,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -11996,7 +12002,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -12027,7 +12033,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -12038,7 +12044,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -12050,7 +12056,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -12058,7 +12064,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -12089,7 +12095,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -12100,7 +12106,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -12112,7 +12118,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -12120,7 +12126,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -12161,7 +12167,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -12172,7 +12178,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -12180,7 +12186,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -12188,7 +12194,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -12219,7 +12225,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -12230,7 +12236,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -12238,7 +12244,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -12246,7 +12252,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -12277,7 +12283,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -12288,7 +12294,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -12296,7 +12302,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -12304,7 +12310,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -12335,7 +12341,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -12346,7 +12352,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -12354,7 +12360,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -12362,7 +12368,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -12393,7 +12399,7 @@ export default visa_options = {
                     "Trade License",
                     "Relationship certiﬁcate from embassy (Attested)",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Aﬃdavit from the embassy to prove that other siblings are not capable to look after the parents"
                   ],
@@ -12404,7 +12410,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -12412,7 +12418,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -12420,7 +12426,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
               {
                 "Text": "Service charge",
@@ -12468,13 +12474,13 @@ export default visa_options = {
                   "Labour Contract",
                   "Birth certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 1138
+                    "Value": 1139.75
                   },
                   {
                     "Text": "Change Status",
@@ -12490,7 +12496,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -12521,13 +12527,13 @@ export default visa_options = {
                   "Labour Contract",
                   "Birth certiﬁcate attested",
                   "Sponsored passport",
-                  "1 photo (white background)",
+                  "Sponsored Photo (White background)",
                   "Last 3 months bank statement"
                 ],
                 "PriceDetails": [
                   {
                     "Text": "Entry Permit",
-                    "Value": 488.09
+                    "Value": 489.75
                   },
                   {
                     "Text": "Stamping",
@@ -12539,7 +12545,7 @@ export default visa_options = {
                   },
                   {
                     "Text": "Emirates ID Price - 3 years",
-                    "Value": 374
+                    "Value": 370
                   },
                   {
                     "Text": "Service Charge",
@@ -12586,14 +12592,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -12605,7 +12611,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -12613,7 +12619,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -12644,14 +12650,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -12663,7 +12669,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -12671,7 +12677,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -12702,14 +12708,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -12721,7 +12727,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -12729,7 +12735,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -12760,14 +12766,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -12779,7 +12785,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -12787,7 +12793,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -12818,14 +12824,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -12837,7 +12843,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -12845,7 +12851,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -12886,14 +12892,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -12901,7 +12907,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -12909,7 +12915,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -12940,14 +12946,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -12955,7 +12961,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -12963,7 +12969,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -12994,14 +13000,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -13009,7 +13015,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -13017,7 +13023,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13048,14 +13054,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -13063,7 +13069,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -13071,7 +13077,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13102,14 +13108,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "Undertaking Letter from sponsor showing that she is not married"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -13117,7 +13123,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -13125,7 +13131,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13173,14 +13179,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -13192,7 +13198,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -13200,7 +13206,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13231,14 +13237,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -13250,7 +13256,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -13258,7 +13264,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13289,14 +13295,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -13308,7 +13314,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -13316,7 +13322,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13347,14 +13353,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -13366,7 +13372,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -13374,7 +13380,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13405,14 +13411,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -13424,7 +13430,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -13432,7 +13438,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13473,14 +13479,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -13488,7 +13494,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -13496,7 +13502,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13527,14 +13533,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -13542,7 +13548,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -13550,7 +13556,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13581,14 +13587,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -13596,7 +13602,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -13604,7 +13610,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13635,14 +13641,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -13650,7 +13656,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -13658,7 +13664,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13689,14 +13695,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -13704,7 +13710,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -13712,7 +13718,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13760,14 +13766,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -13779,7 +13785,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -13787,7 +13793,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13818,14 +13824,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -13837,7 +13843,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -13845,7 +13851,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13876,14 +13882,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -13895,7 +13901,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -13903,7 +13909,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13934,14 +13940,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -13953,7 +13959,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -13961,7 +13967,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -13992,14 +13998,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 1138
+                      "Value": 1139.75
                     },
                     {
                       "Text": "Change Status",
@@ -14011,7 +14017,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -14019,7 +14025,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -14060,14 +14066,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -14075,7 +14081,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 324
+                      "Value": 320
                     },
                     {
                       "Text": "Insurance",
@@ -14083,7 +14089,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -14114,14 +14120,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -14129,7 +14135,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 434
+                      "Value": 430
                     },
                     {
                       "Text": "Insurance",
@@ -14137,7 +14143,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -14168,14 +14174,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -14183,7 +14189,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges",
-                      "Value": 534
+                      "Value": 530
                     },
                     {
                       "Text": "Insurance",
@@ -14191,7 +14197,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -14222,14 +14228,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -14237,7 +14243,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VIP",
-                      "Value": 754
+                      "Value": 750
                     },
                     {
                       "Text": "Insurance",
@@ -14245,7 +14251,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -14276,14 +14282,14 @@ export default visa_options = {
                     "Labour contract",
                     "Birth certiﬁcate attested",
                     "Sponsored passport",
-                    "1 photo (white background)",
+                    "Sponsored Photo (White background)",
                     "Last 3 months bank statement",
                     "College certiﬁcate or continuity certiﬁcate of uae"
                   ],
                   "PriceDetails": [
                     {
                       "Text": "Entry Permit",
-                      "Value": 488.09
+                      "Value": 489.75
                     },
                     {
                       "Text": "Stamping",
@@ -14291,7 +14297,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Medical Charges - VVIP",
-                      "Value": 1184
+                      "Value": 1070
                     },
                     {
                       "Text": "Insurance",
@@ -14299,7 +14305,7 @@ export default visa_options = {
                     },
                     {
                       "Text": "Emirates ID Price - 3 years",
-                      "Value": 374
+                      "Value": 370
                     },
                   {
                     "Text": "Service Charge",
@@ -14351,13 +14357,14 @@ export default visa_options = {
             "Emirates id application paper",
             "Insurance",
             "Visa",
-            "1 photo (white background)"
+            "Sponsored Photo (White background)"
           ],
           "PriceDetails": [
             {"Text": "Gov. fees","Value": 847 },
             {"Text": "Service charge","Value": 105 }
-          ],
-          "Notes": {  
+           ],
+          "IBAN number": "",
+          "Notes": {
                "Text":"Notes",
                "Name":"Notes",
                "Options":[  
@@ -14382,13 +14389,14 @@ export default visa_options = {
             "Emirates id application paper",
             "Insurance",
             "Visa",
-            "1 photo (white background)"
+            "Sponsored Photo (White background)"
           ],
           "PriceDetails": [
             {"Text": "Gov. fees","Value": 926 },
             {"Text": "Service charge","Value": 105 }
-          ],
-          "Notes": {  
+           ],
+          "IBAN number": "",
+          "Notes": {
                "Text":"Notes",
                "Name":"Notes",
                "Options":[  
@@ -14434,7 +14442,7 @@ export default visa_options = {
               "Insurance",
               "Sponsor's visa",
               "Residential ejari",
-              "1 photo (white background)"
+              "Sponsored Photo (White background)"
             ],
             "PriceDetails": [
               {"Text": "Gov. fees","Value": 671.75 },
@@ -14466,7 +14474,7 @@ export default visa_options = {
               "Insurance",
               "Sponsor's visa",
               "Residential ejari",
-              "1 photo (white background)"
+              "Sponsored Photo (White background)"
             ],
             "PriceDetails": [
               {"Text": "Gov. fees","Value": 751.75 },
@@ -14513,7 +14521,7 @@ export default visa_options = {
                 "Sponsor's visa",
                 "Residential ejari",
                 "Sponsored passport",
-                "1 photo (white background)"
+                "Sponsored Photo (White background)"
               ],
               "PriceDetails": [
                 {"Text": "Gov. fees","Value": 671.75 },
@@ -14546,7 +14554,7 @@ export default visa_options = {
                 "Sponsor's visa",
                 "Residential ejari",
                 "Sponsored passport",
-                "1 photo (white background)"
+                "Sponsored Photo (White background)"
               ],
               "PriceDetails": [
                 {"Text": "Gov. fees","Value": 751.75 },
@@ -14586,7 +14594,7 @@ export default visa_options = {
                 "Sponsor's visa",
                 "Residential ejari",
                 "Sponsored passport",
-                "1 photo (white background)"
+                "Sponsored Photo (White background)"
               ],
               "PriceDetails": [
                 {"Text": "Gov. fees","Value": 671.75 },
@@ -14619,7 +14627,7 @@ export default visa_options = {
                 "Sponsor's visa",
                 "Residential ejari",
                 "Sponsored passport",
-                "1 photo (white background)"
+                "Sponsored Photo (White background)"
               ],
               "PriceDetails": [
                 {"Text": "Gov. fees","Value": 751.75 },
@@ -14659,7 +14667,7 @@ export default visa_options = {
                 "Sponsor's visa",
                 "Residential ejari",
                 "Sponsored passport",
-                "1 photo (white background)"
+                "Sponsored Photo (White background)"
               ],
               "PriceDetails": [
                 {"Text": "Gov. fees","Value": 671.75 },
@@ -14692,7 +14700,7 @@ export default visa_options = {
                 "Sponsor's visa",
                 "Residential ejari",
                 "Sponsored passport",
-                "1 photo (white background)"
+                "Sponsored Photo (White background)"
               ],
               "PriceDetails": [
                 {"Text": "Gov. fees","Value": 751.75 },
@@ -14747,7 +14755,7 @@ export default visa_options = {
                   "Sponsor's visa",
                   "Residential ejari",
                   "Sponsored passport",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 671.75 },
@@ -14780,7 +14788,7 @@ export default visa_options = {
                   "Sponsor's visa",
                   "Residential ejari",
                   "Sponsored passport",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 751.75 },
@@ -14819,7 +14827,7 @@ export default visa_options = {
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 671.75 },
@@ -14851,7 +14859,7 @@ export default visa_options = {
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 751.75 },
@@ -14898,7 +14906,7 @@ export default visa_options = {
                   "Sponsor's visa",
                   "Residential ejari",
                   "Sponsored passport",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 671.75 },
@@ -14931,7 +14939,7 @@ export default visa_options = {
                   "Sponsor's visa",
                   "Residential ejari",
                   "Sponsored passport",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 751.75 },
@@ -14970,7 +14978,7 @@ export default visa_options = {
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 671.75 },
@@ -15002,7 +15010,7 @@ export default visa_options = {
                   "Insurance",
                   "Sponsor's visa",
                   "Residential ejari",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 751.75 },
@@ -15049,7 +15057,7 @@ export default visa_options = {
                   "Sponsor's visa",
                   "Residential ejari",
                   "Sponsored passport",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 671.75 },
@@ -15082,7 +15090,7 @@ export default visa_options = {
                   "Sponsor's visa",
                   "Residential ejari",
                   "Sponsored passport",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 751.75 },
@@ -15122,7 +15130,7 @@ export default visa_options = {
                   "Sponsor's visa",
                   "Residential ejari",
                   "Sponsored passport",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 671.75 },
@@ -15155,7 +15163,7 @@ export default visa_options = {
                   "Sponsor's visa",
                   "Residential ejari",
                   "Sponsored passport",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 751.75 },
@@ -15202,7 +15210,7 @@ export default visa_options = {
                   "Sponsor's visa",
                   "Residential ejari",
                   "Sponsored passport",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 671.75 },
@@ -15235,7 +15243,7 @@ export default visa_options = {
                   "Sponsor's visa",
                   "Residential ejari",
                   "Sponsored passport",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 751.75 },
@@ -15275,7 +15283,7 @@ export default visa_options = {
                   "Sponsor's visa",
                   "Residential ejari",
                   "Sponsored passport",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 671 },
@@ -15308,7 +15316,7 @@ export default visa_options = {
                   "Sponsor's visa",
                   "Residential ejari",
                   "Sponsored passport",
-                  "1 photo (white background)"
+                  "Sponsored Photo (White background)"
                 ],
                 "PriceDetails": [
                   {"Text": "Gov. fees","Value": 751.75 },
@@ -16359,7 +16367,7 @@ export default visa_options = {
         "PriceDetails": [
           {
             "Text": "Gov. fees",
-            "Value": 226
+            "Value": 225.65
           },
           {
             "Text": "Service charge",
@@ -16370,7 +16378,7 @@ export default visa_options = {
           "Text": "Notes",
           "Name": "Notes",
           "Options": [
-            "Kindly note that for any of the cancellation whose outside the country less than six months, any of the  following conditions has to be met        •Original passport has to be submitted        •Residence should be expired from outside         •Death from abroad         For any cancellation outside the country  who is abroad for more than six months usual procedure will be followed for all  categories.      EndFragment"
+            "Kindly note that for any of the cancellation whose outside the country less than six months, any of the  following conditions has to be met        •Original passport has to be submitted        •Residence should be expired from outside         •Death from abroad         For any cancellation outside the country  who is abroad for more than six months usual procedure will be followed for all  categories.       "
           ]
         },
         "OriginalDocumentRequired": {
@@ -16392,7 +16400,7 @@ export default visa_options = {
         "PriceDetails": [
           {
             "Text": "Gov. fees",
-            "Value": 326
+            "Value": 326.65
           },
           {
             "Text": "Service charge",
@@ -16403,7 +16411,7 @@ export default visa_options = {
           "Text": "Notes",
           "Name": "Notes",
           "Options": [
-            " Kindly note that for any of the  cancellation whose outside the country less than six months, any of the  following conditions has to be met        •Original passport has to be submitted        •Residence should be expired from outside         •Death from abroad         For any cancellation outside the country  who is abroad for more than six months usual procedure will be followed for all  categories.      EndFragment"
+            " Kindly note that for any of the  cancellation whose outside the country less than six months, any of the  following conditions has to be met        •Original passport has to be submitted        •Residence should be expired from outside         •Death from abroad         For any cancellation outside the country  who is abroad for more than six months usual procedure will be followed for all  categories.       "
           ]
         },
         "OriginalDocumentRequired": {
@@ -16441,7 +16449,7 @@ export default visa_options = {
           "Text": "Notes",
           "Name": "Notes",
           "Options": [
-            " Kindly note that for any of the  cancellation whose outside the country less than six months, any of the  following conditions has to be met        •Original passport has to be submitted        •Residence should be expired from outside         •Death from abroad         For any cancellation outside the country  who is abroad for more than six months usual procedure will be followed for all  categories.      EndFragment"
+            " Kindly note that for any of the  cancellation whose outside the country less than six months, any of the  following conditions has to be met        •Original passport has to be submitted        •Residence should be expired from outside         •Death from abroad         For any cancellation outside the country  who is abroad for more than six months usual procedure will be followed for all  categories.       "
           ]
         },
         "OriginalDocumentRequired": {
@@ -16472,7 +16480,7 @@ export default visa_options = {
           "Text": "Notes",
           "Name": "Notes",
           "Options": [
-            " Kindly note that for any of the  cancellation whose outside the country less than six months, any of the  following conditions has to be met        •Original passport has to be submitted        •Residence should be expired from outside         •Death from abroad         For any cancellation outside the country  who is abroad for more than six months usual procedure will be followed for all  categories.      EndFragment"
+            " Kindly note that for any of the  cancellation whose outside the country less than six months, any of the  following conditions has to be met        •Original passport has to be submitted        •Residence should be expired from outside         •Death from abroad         For any cancellation outside the country  who is abroad for more than six months usual procedure will be followed for all  categories.       "
           ]
         },
         "OriginalDocumentRequired": {

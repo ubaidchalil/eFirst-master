@@ -113,6 +113,7 @@ export default ({ navigation, dashboard, servicesData, token, _onRefresh, state 
                   onPress={() => loadServiceRequestsByStatus(1)}
                   img={require("../../Assets/dashboard-action-req.png")}
                   title="Action Required"
+                  color={"#971000"}
                   newUpdates={dashboard.data && dashboard.data.Tiles.ActionRequiredNewUpdateCount}
                 />
             </Col>
@@ -121,6 +122,7 @@ export default ({ navigation, dashboard, servicesData, token, _onRefresh, state 
                   onPress={() => loadServiceRequestsByStatus(2)}
                   img={require("../../Assets/dashboard-inreview.png")}
                   title="In Review"
+                  color={"#7500D5"}
                   newUpdates={dashboard.data && dashboard.data.Tiles.InReviewNewUpdateCount}
                 />
             </Col>
@@ -131,6 +133,7 @@ export default ({ navigation, dashboard, servicesData, token, _onRefresh, state 
                   onPress={() => loadServiceRequestsByStatus(3)}
                   img={require("../../Assets/dashboard-completed.png")}
                   title="Completed"
+                  color={"#007f00"}
                   newUpdates={dashboard.data && dashboard.data.Tiles.CompletedNewUpdateCount}
                 />
             </Col>
@@ -139,6 +142,7 @@ export default ({ navigation, dashboard, servicesData, token, _onRefresh, state 
                   onPress={() => loadServiceRequestsByStatus(4)}
                   img={require("../../Assets/dashboard-pending.png")}
                   title="Rejected"
+                  color={"#ff0030"}
                   newUpdates={dashboard.data && dashboard.data.Tiles.RejectedNewUpdateCount}
                 />
             </Col>
