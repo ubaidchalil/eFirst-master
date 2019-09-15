@@ -27,6 +27,7 @@ import { Logout, clearLogoutState } from "../components/auth/action";
 import { unregisterOnesignal } from "../components/onesignal/action";
 import Loader from "../components/styled/loader";
 import { DashboardData } from "../components/dashboard/action";
+import { servicesData } from "../components/service/action";
 import { PROFILE_BASE_URL } from "../constants";
 class Container1 extends Component {
   navigateToScreen = route => () => {
@@ -126,12 +127,20 @@ class Container1 extends Component {
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.listItem}
-              onPress={() =>
-                this.props.navigation.navigate("MyRequests", {
+              onPress={() => {
+                const { token } = this.props.token;
+                const statusId = null;
+                this.props.servicesData({ statusId, token });
+
+                this.props.navigation.navigate("UserActions", {
                   headerTitle: "My Requests",
                   noDataLabel: "No recent service request"
-                })
-              }
+                });
+                this.props.navigation.navigate("UserActions", {
+                  headerTitle: "My Requests",
+                  noDataLabel: "No recent service request"
+                });
+              }}
             >
               <View style={styles.left}>
                 <Icon style={styles.icon} name="md-arrow-dropright" />
@@ -164,7 +173,7 @@ class Container1 extends Component {
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.listItem}
-              onPress={this.navigateToScreen("FAQ")}
+              onPress={this.navigateToScreen("FAQScreen")}
             >
               <View style={styles.left}>
                 <Icon style={styles.icon} name="md-arrow-dropright" />
@@ -213,6 +222,7 @@ const mapStateToProps = ({
   onesignal
 });
 const mapDispatchToProps = dispatch => ({
+  servicesData: payload => dispatch(servicesData(payload)),
   Logout: payload => dispatch(Logout(payload)),
   DashboardData: payload => dispatch(DashboardData(payload)),
   clearLogoutState: () => dispatch(clearLogoutState()),

@@ -35,11 +35,11 @@ import { Color } from "../../../constants";
 import MyHeader from "../../../Header";
 import Modal from "react-native-modal";
 import TermsandConditon from "../../termsandcondition";
-import PhoneInput from 'react-native-phone-input';
-import CountryPicker from 'react-native-country-picker-modal';
+import PhoneInput from "react-native-phone-input";
+import CountryPicker from "react-native-country-picker-modal";
 
 const deviceWidth = Dimensions.get("window").width;
-
+const { height } = Dimensions.get("window");
 const DARK_COLOR = "#18171C";
 const PLACEHOLDER_COLOR = "rgba(255,255,255,0.)";
 const LIGHT_COLOR = "#FFF";
@@ -55,7 +55,7 @@ const styles = {
     borderRadius: 13,
     borderColor: "rgba(0, 0, 0, 0.1)"
   },
-  itemTransparent : {
+  itemTransparent: {
     marginTop: 5,
     marginLeft: 0,
     borderBottomWidth: 0,
@@ -74,29 +74,29 @@ const styles = {
 
 const darkTheme = StyleSheet.create({
   modalContainer: {
-     backgroundColor: DARK_COLOR
-   },
-   contentContainer: {
-     backgroundColor: DARK_COLOR
-   },
-   header: {
-     backgroundColor: DARK_COLOR
-   },
-   itemCountryName: {
-     borderBottomWidth: 0
-   },
-   countryName: {
-     color: LIGHT_COLOR
-   },
-   letterText: {
-     color: LIGHT_COLOR
-   },
-   input: {
-     color: LIGHT_COLOR,
-     borderBottomWidth: 1,
-     borderColor: LIGHT_COLOR
-   }
- });
+    backgroundColor: DARK_COLOR
+  },
+  contentContainer: {
+    backgroundColor: DARK_COLOR
+  },
+  header: {
+    backgroundColor: DARK_COLOR
+  },
+  itemCountryName: {
+    borderBottomWidth: 0
+  },
+  countryName: {
+    color: LIGHT_COLOR
+  },
+  letterText: {
+    color: LIGHT_COLOR
+  },
+  input: {
+    color: LIGHT_COLOR,
+    borderBottomWidth: 1,
+    borderColor: LIGHT_COLOR
+  }
+});
 
 const DocumentAttestation = ({
   handleSubmit,
@@ -131,7 +131,14 @@ const DocumentAttestation = ({
         value={cert.CertificateTypeID}
       />
     ));
-
+  checkPhoneValid = () => {
+    this.setPhoneError("");
+    if (!this.phone.isValidNumber()) {
+      this.setPhoneError("Invalid Format");
+    } else {
+      handleSubmit();
+    }
+  };
   componentDidUpdate = () => {
     console.log(attestationPrice);
   };
@@ -157,18 +164,18 @@ const DocumentAttestation = ({
 
   onPressFlag = () => {
     this.countryPicker.openModal();
-  }
+  };
 
-  selectCountry = (country) => {
+  selectCountry = country => {
     this.phone.selectCountry(country.cca2.toLowerCase());
-    setFieldValue("cca2", country.cca2 )
-    setFieldValue("callingCode", country.callingCode )
-    setFieldValue("PersonalPhone", `+${country.callingCode}`)
-  }
+    setFieldValue("cca2", country.cca2);
+    setFieldValue("callingCode", country.callingCode);
+    setFieldValue("PersonalPhone", `+${country.callingCode}`);
+  };
 
-  setPhoneError = (msg) => {
-    setFieldValue("errorPhone", msg)
-  }
+  setPhoneError = msg => {
+    setFieldValue("errorPhone", msg);
+  };
 
   return (
     <Container>
@@ -177,485 +184,543 @@ const DocumentAttestation = ({
         source={require("../../../Assets/bg_all.jpg")}
         style={{ width: "100%", height: "100%" }}
       >
-      <View
-        style={{
-          backgroundColor: "rgba(52, 52, 52, 0.3)",
-          flexDirection: "row",
-          paddingHorizontal: 10,
-          paddingVertical: 10
-        }}
-      >
-        <View>
-          <Text style={{ color: "#FFF", fontSize: 14, marginLeft: 5, fontWeight:"bold" }}>
-            ATTESTATION SERVICE
-          </Text>
+        <View
+          style={{
+            backgroundColor: "rgba(52, 52, 52, 0.3)",
+            flexDirection: "row",
+            paddingHorizontal: 10,
+            paddingVertical: 10
+          }}
+        >
+          <View>
+            <Text
+              style={{
+                color: "#FFF",
+                fontSize: 14,
+                marginLeft: 5,
+                fontWeight: "bold"
+              }}
+            >
+              ATTESTATION SERVICE
+            </Text>
+          </View>
+          <Right />
         </View>
-        <Right />
-      </View>
-      <Content style={{ padding: 10, marginBottom: 30 }}>
-        <Modal isVisible={state.ShowTerms}>
-          <TermsandConditon setShowTerms={setShowTerms} />
-        </Modal>
-        <View style={{ padding: 5, paddingHorizontal: 10, borderRadius: 10, backgroundColor: "rgba(250, 250, 250, 0.6)"  }} >
-        <ScrollView>
-          <Form>
-            <Item style={styles.itemTransparent} >
-              <Input
-                style={{ color: "#5B5656" }}
-                placeholderTextColor={"#5B5656"}
-                placeholder="Name *"
-                name="CustomerName"
-                label="Name *"
-                onChangeText={value => setFieldValue("CustomerName", value)}
-                value={values.CustomerName}
-                error={touched.CustomerName && errors.CustomerName}
-                underlineColor={Color.secondary}
-              />
-            </Item>
-            <Item style={{ borderBottomWidth: 0 }}>
-              {errors.CustomerName && (
-                <Text style={{ color: "red" }} visible={errors.CustomerName}>
-                  {errors.CustomerName}
-                </Text>
-              )}
-            </Item>
-            <Item style={styles.itemTransparent} >
-              <Input
-                style={{ color: "#5B5656" }}
-                placeholderTextColor={"#5B5656"}
-                placeholder="Email *"
-                name="Email"
-                label="Email *"
-                onChangeText={value => setFieldValue("Email", value)}
-                value={values.Email}
-                error={touched.Email && errors.Email}
-                underlineColor={Color.secondary}
-              />
-            </Item>
-            <Item style={{ borderBottomWidth: 0 }}>
-              {errors.Email && (
-                <Text style={{ color: "red" }} visible={errors.Email}>
-                  {errors.Email}
-                </Text>
-              )}
-            </Item>
-            <Item style={styles.itemTransparent} >
-              <CountryPicker
-                ref={(ref) => {
-                  this.countryPicker = ref;
-                }}
-                onChange={value => this.selectCountry(value)}
-                translation="eng"
-                cca2={values.cca2}
-                styles={darkTheme}
-                hideAlphabetFilter={true}
-                closeButtonImage={closeImgLight}
-                closeable={true}
-              >
-                <View />
-              </CountryPicker>
-            </Item>
-            <Item style={styles.itemTransparent} >
-              <PhoneInput
-                ref={(ref) => {
-                  this.phone = ref;
-                }}
-                style={{ color: "#5B5656" }}
-                placeholderTextColor={"#5B5656"}
-                textComponent={Input}
-                onPressFlag={this.onPressFlag}
-                style={{ paddingLeft: 5, padding: 15 }}
-                placeholder="Mobile *"
-                name="PersonalPhone"
-                label="Mobile *"
-                keyboardType="numeric"
-                onChangeText={value => setFieldValue("PersonalPhone", value)}
-                value={values.PersonalPhone}
-                error={touched.PersonalPhone && errors.PersonalPhone}
-                underlineColor={Color.secondary}
-              />
-            </Item>
-            <Item style={{ borderBottomWidth: 0 }}>
-              {values.errorPhone!="" && (
-                <Text style={{ color: "red" }} >
-                  {values.errorPhone}
-                </Text>
-              )}
-            </Item>
-            <Item style={styles.itemTransparent} >
-              <Input
-                style={{ color: "#5B5656" }}
-                placeholderTextColor={"#5B5656"}
-                placeholder="Land Phone"
-                name="Office"
-                label="Land Phone"
-                keyboardType="numeric"
-                onChangeText={value => setFieldValue("OfficePhone", value)}
-                value={values.OfficePhone}
-                error={touched.OfficePhone && errors.OfficePhone}
-                underlineColor={Color.secondary}
-              />
-            </Item>
-            <Item style={{ borderBottomWidth: 0 }}>
-              {errors.OfficePhone && (
-                <Text style={{ color: "red" }} visible={errors.OfficePhone}>
-                  {errors.OfficePhone}
-                </Text>
-              )}
-            </Item>
-            <Item style={styles.itemTransparent} >
-              <Input
-                style={{ color: "#5B5656" }}
-                placeholderTextColor={"#5B5656"}
-                placeholder="Address Line 1 *"
-                underline
-                name="Address1"
-                label="Address Line 1 *"
-                onChangeText={value => setFieldValue("Address1", value)}
-                value={values.Address1}
-                error={touched.Address1 && errors.Address1}
-                underlineColor={Color.secondary}
-              />
-            </Item>
-            <Item style={{ borderBottomWidth: 0 }}>
-              {errors.Address1 && (
-                <Text style={{ color: "red" }} visible={errors.Address1}>
-                  {errors.Address1}
-                </Text>
-              )}
-            </Item>
-            <Item style={styles.itemTransparent} >
-              <Input
-                style={{ color: "#5B5656" }}
-                placeholderTextColor={"#5B5656"}
-                placeholder="Street Address *"
-                underline
-                name="Street"
-                label="Street Address *"
-                onChangeText={value => setFieldValue("Street", value)}
-                value={values.Street}
-                error={touched.Street && errors.Street}
-                underlineColor={Color.secondary}
-              />
-            </Item>
-            <Item style={{ borderBottomWidth: 0 }}>
-              {errors.Street && (
-                <Text style={{ color: "red" }} visible={errors.Street}>
-                  {errors.Street}
-                </Text>
-              )}
-            </Item>
-            <Item style={styles.itemTransparent} >
-              <Picker
-                placeholderTextColor={"#5B5656"}
-                mode="dropdown"
-                iosIcon={<Icon style={{color: "#5B5656"}} name="arrow-down" />}
-                style={[styles.pickerStyle,{color: "#5B5656"}]}
-                placeholder="State *"
-                placeholderIconColor="#5B5656"
-                selectedValue={values.SelectedState}
-                onValueChange={value => setFieldValue("SelectedState", value)}
-              >
-                <Picker.Item value="0" label="State *" key="0" />
-                <Picker.Item value="Ajman" label="Ajman" key="1" />
-                <Picker.Item value="Abu Dhabi" label="Abu Dhabi" key="2" />
-                <Picker.Item value="Al Fujairah" label="Al Fujairah" key="3" />
-                <Picker.Item value="Sharjah" label="Sharjah" key="4" />
-                <Picker.Item value="Dubai" label="Dubai" key="5" />
-                <Picker.Item
-                  value="Ras Al Khaima"
-                  label="Ras Al Khaima"
-                  key="6"
-                />
-                <Picker.Item
-                  value="Umm Al Qwain"
-                  label="Umm Al Qwain"
-                  key="7"
-                />
-              </Picker>
-            </Item>
-            <Item style={{ borderBottomWidth: 0 }}>
-              {errors.SelectedState && (
-                <Text style={{ color: "red" }} visible={errors.SelectedState}>
-                  {errors.SelectedState}
-                </Text>
-              )}
-            </Item>
+        <Content style={{ padding: 10, marginBottom: 30 }}>
+          <Modal
+            style={{ top: 40, marginBottom: 50 }}
+            isVisible={state.ShowTerms}
+          >
+            <ScrollView>
+              <View>
+                <TermsandConditon setShowTerms={setShowTerms} />
+              </View>
+            </ScrollView>
+          </Modal>
+          <View
+            style={{
+              padding: 5,
+              paddingHorizontal: 10,
+              borderRadius: 10,
+              backgroundColor: "rgba(250, 250, 250, 0.6)"
+            }}
+          >
+            <ScrollView>
+              <Form>
+                <Item style={styles.itemTransparent}>
+                  <Input
+                    style={{ color: "#5B5656" }}
+                    placeholderTextColor={"#5B5656"}
+                    placeholder="Name *"
+                    name="CustomerName"
+                    label="Name *"
+                    onChangeText={value => setFieldValue("CustomerName", value)}
+                    value={values.CustomerName}
+                    error={touched.CustomerName && errors.CustomerName}
+                    underlineColor={Color.secondary}
+                  />
+                </Item>
+                <Item style={{ borderBottomWidth: 0 }}>
+                  {errors.CustomerName && (
+                    <Text
+                      style={{ color: "red" }}
+                      visible={errors.CustomerName}
+                    >
+                      {errors.CustomerName}
+                    </Text>
+                  )}
+                </Item>
+                <Item style={styles.itemTransparent}>
+                  <Input
+                    style={{ color: "#5B5656" }}
+                    placeholderTextColor={"#5B5656"}
+                    placeholder="Email *"
+                    name="Email"
+                    label="Email *"
+                    onChangeText={value => setFieldValue("Email", value)}
+                    value={values.Email}
+                    error={touched.Email && errors.Email}
+                    underlineColor={Color.secondary}
+                  />
+                </Item>
+                <Item style={{ borderBottomWidth: 0 }}>
+                  {errors.Email && (
+                    <Text style={{ color: "red" }} visible={errors.Email}>
+                      {errors.Email}
+                    </Text>
+                  )}
+                </Item>
+                <Item style={styles.itemTransparent}>
+                  <CountryPicker
+                    ref={ref => {
+                      this.countryPicker = ref;
+                    }}
+                    onChange={value => this.selectCountry(value)}
+                    translation="eng"
+                    cca2={values.cca2}
+                    styles={darkTheme}
+                    hideAlphabetFilter={true}
+                    closeButtonImage={closeImgLight}
+                    closeable={true}
+                  >
+                    <View />
+                  </CountryPicker>
+                </Item>
+                <Item style={styles.itemTransparent}>
+                  <PhoneInput
+                    ref={ref => {
+                      this.phone = ref;
+                    }}
+                    style={{ color: "#5B5656" }}
+                    placeholderTextColor={"#5B5656"}
+                    textComponent={Input}
+                    onPressFlag={this.onPressFlag}
+                    style={{ paddingLeft: 5, padding: 15 }}
+                    placeholder="Mobile *"
+                    name="PersonalPhone"
+                    label="Mobile *"
+                    keyboardType="numeric"
+                    onChangePhoneNumber={value =>
+                      setFieldValue("PersonalPhone", value)
+                    }
+                    value={values.PersonalPhone}
+                    error={touched.PersonalPhone && errors.PersonalPhone}
+                    underlineColor={Color.secondary}
+                  />
+                </Item>
+                <Item style={{ borderBottomWidth: 0 }}>
+                  {values.errorPhone != "" && (
+                    <Text style={{ color: "red" }}>{values.errorPhone}</Text>
+                  )}
+                </Item>
+                <Item style={styles.itemTransparent}>
+                  <Input
+                    style={{ color: "#5B5656" }}
+                    placeholderTextColor={"#5B5656"}
+                    placeholder="Land Phone"
+                    name="Office"
+                    label="Land Phone"
+                    keyboardType="numeric"
+                    onChangeText={value => setFieldValue("OfficePhone", value)}
+                    value={values.OfficePhone}
+                    error={touched.OfficePhone && errors.OfficePhone}
+                    underlineColor={Color.secondary}
+                  />
+                </Item>
+                <Item style={{ borderBottomWidth: 0 }}>
+                  {errors.OfficePhone && (
+                    <Text style={{ color: "red" }} visible={errors.OfficePhone}>
+                      {errors.OfficePhone}
+                    </Text>
+                  )}
+                </Item>
+                <Item style={styles.itemTransparent}>
+                  <Input
+                    style={{ color: "#5B5656" }}
+                    placeholderTextColor={"#5B5656"}
+                    placeholder="Address Line 1 *"
+                    underline
+                    name="Address1"
+                    label="Address Line 1 *"
+                    onChangeText={value => setFieldValue("Address1", value)}
+                    value={values.Address1}
+                    error={touched.Address1 && errors.Address1}
+                    underlineColor={Color.secondary}
+                  />
+                </Item>
+                <Item style={{ borderBottomWidth: 0 }}>
+                  {errors.Address1 && (
+                    <Text style={{ color: "red" }} visible={errors.Address1}>
+                      {errors.Address1}
+                    </Text>
+                  )}
+                </Item>
+                <Item style={styles.itemTransparent}>
+                  <Input
+                    style={{ color: "#5B5656" }}
+                    placeholderTextColor={"#5B5656"}
+                    placeholder="Street Address *"
+                    underline
+                    name="Street"
+                    label="Street Address *"
+                    onChangeText={value => setFieldValue("Street", value)}
+                    value={values.Street}
+                    error={touched.Street && errors.Street}
+                    underlineColor={Color.secondary}
+                  />
+                </Item>
+                <Item style={{ borderBottomWidth: 0 }}>
+                  {errors.Street && (
+                    <Text style={{ color: "red" }} visible={errors.Street}>
+                      {errors.Street}
+                    </Text>
+                  )}
+                </Item>
+                <Item style={styles.itemTransparent}>
+                  <Picker
+                    placeholderTextColor={"#5B5656"}
+                    mode="dropdown"
+                    iosIcon={
+                      <Icon style={{ color: "#5B5656" }} name="arrow-down" />
+                    }
+                    style={[styles.pickerStyle, { color: "#5B5656" }]}
+                    placeholder="State *"
+                    placeholderIconColor="#5B5656"
+                    selectedValue={values.SelectedState}
+                    onValueChange={value =>
+                      setFieldValue("SelectedState", value)
+                    }
+                  >
+                    <Picker.Item value="0" label="State *" key="0" />
+                    <Picker.Item value="Ajman" label="Ajman" key="1" />
+                    <Picker.Item value="Abu Dhabi" label="Abu Dhabi" key="2" />
+                    <Picker.Item
+                      value="Al Fujairah"
+                      label="Al Fujairah"
+                      key="3"
+                    />
+                    <Picker.Item value="Sharjah" label="Sharjah" key="4" />
+                    <Picker.Item value="Dubai" label="Dubai" key="5" />
+                    <Picker.Item
+                      value="Ras Al Khaima"
+                      label="Ras Al Khaima"
+                      key="6"
+                    />
+                    <Picker.Item
+                      value="Umm Al Qwain"
+                      label="Umm Al Qwain"
+                      key="7"
+                    />
+                  </Picker>
+                </Item>
+                <Item style={{ borderBottomWidth: 0 }}>
+                  {errors.SelectedState && (
+                    <Text
+                      style={{ color: "red" }}
+                      visible={errors.SelectedState}
+                    >
+                      {errors.SelectedState}
+                    </Text>
+                  )}
+                </Item>
 
-            <Item style={styles.itemTransparent} >
-              <Input
-                style={{ color: "#5B5656" }}
-                placeholderTextColor={"#5B5656"}
-                placeholder="City *"
-                name="City"
-                label="City *"
-                onChangeText={value => setFieldValue("City", value)}
-                value={values.City}
-                error={touched.City && errors.City}
-                underlineColor={Color.secondary}
-              />
-              <Input
-                style={{ color: "#5B5656" }}
-                placeholderTextColor={"#5B5656"}
-                placeholder="PO Box"
-                name="Zip"
-                label="PO Box"
-                onChangeText={value => setFieldValue("Zip", value)}
-                value={values.Zip}
-                error={touched.Zip && errors.Zip}
-                underlineColor={Color.secondary}
-              />
-            </Item>
-            <Item style={{ borderBottomWidth: 0 }}>
-              {errors.City && (
-                <Text style={{ color: "red" }} visible={errors.City}>
-                  {errors.City}
-                </Text>
-              )}
-              {errors.Zip && (
-                <Text style={{ color: "red" }} visible={errors.Zip}>
-                  {errors.Zip}
-                </Text>
-              )}
-            </Item>
-            <Item style={styles.itemTransparent} >
-              <Input
-                style={{ color: "#5B5656" }}
-                placeholderTextColor={"#5B5656"}
-                placeholder="Country *"
-                name="AddressCountry"
-                label="Country *"
-                onChangeText={value => setFieldValue("AddressCountry", value)}
-                value={values.AddressCountry}
-                error={touched.AddressCountry && errors.AddressCountry}
-                underlineColor={Color.secondary}
-                editable={false}
-              />
-            </Item>
-            <Item style={{ borderBottomWidth: 0 }}>
-              {errors.AddressCountry && (
-                <Text style={{ color: "red" }} visible={errors.AddressCountry}>
-                  {errors.AddressCountry}
-                </Text>
-              )}
-            </Item>
-            <Item style={styles.itemTransparent} >
-              <Picker
-                style={{ color: "#5B5656" }}
-                placeholderTextColor={"#5B5656"}
-                mode="dropdown"
-                iosIcon={<Icon name="arrow-down" />}
-                style={[styles.pickerStyle,{color: "#5B5656"}]}
-                placeholder="Country"
-                placeholderStyle={{ color: "#bfc6ea" }}
-                selectedValue={values.SelectedCountryId}
-                onValueChange={value => {
-                  setFieldValue("SelectedCountryId", value);
-                  attestationRateByCountryandDCType(
-                    value,
-                    values.SelectedCertificateType
-                  );
-                }}
-              >
-                <Picker.Item
-                  key="0"
-                  label="Certificate Issued Country *"
-                  value=""
-                />
-                {renderDocumentCountries()}
-              </Picker>
-            </Item>
-            <Item style={{ borderBottomWidth: 0 }}>
-              {errors.SelectedCountryId && (
-                <Text
-                  style={{ color: "red" }}
-                  visible={errors.SelectedCountryId}
-                >
-                  {errors.SelectedCountryId}
-                </Text>
-              )}
-            </Item>
-            <Item style={styles.itemTransparent} >
-              <Picker
-                placeholderTextColor={"#5B5656"}
-                placeholderIconColor="#5B5656"
-                placeholderStyle={{ color: "#5B5656" }}
-                mode="dropdown"
-                iosIcon={<Icon name="arrow-down" />}
-                style={[styles.pickerStyle,{color: "#5B5656"}]}
-                placeholder="Certificate Type"
-                selectedValue={values.SelectedCertificateType}
-                onValueChange={value => {
-                  setFieldValue("SelectedCertificateType", value);
-                  attestationRateByCountryandDCType(
-                    values.SelectedCountryId,
-                    value
-                  );
-                }}
-              >
-                <Picker.Item key="0" label="Certificate Type *" value="" />
-                {renderCertificateTypes()}
-              </Picker>
-            </Item>
-            <Item style={{ borderBottomWidth: 0 }}>
-              {errors.SelectedCountryId && (
-                <Text
-                  style={{ color: "red" }}
-                  visible={errors.SelectedCountryId}
-                >
-                  {errors.SelectedCountryId}
-                </Text>
-              )}
-            </Item>
-            <ListItem style={[styles.itemTransparent]}>
-              <Radio
-               style={{color:"#5B5656"}}
-                selected={values.PickUpandDropOption == "Direct Delivery"}
-                onPress={() => {
-                  if (attestationrate.data) {
-                    setFieldValue("Rate", attestationrate.data.Rate);
-                  }
-                  setFieldValue("PickUpandDropOption", "Direct Delivery");
-                }}
-              />
-              <Body>
-                <TouchableOpacity
-                  onPress={() => {
-                    if (attestationrate.data) {
-                      setFieldValue("Rate", attestationrate.data.Rate);
+                <Item style={styles.itemTransparent}>
+                  <Input
+                    style={{ color: "#5B5656" }}
+                    placeholderTextColor={"#5B5656"}
+                    placeholder="City *"
+                    name="City"
+                    label="City *"
+                    onChangeText={value => setFieldValue("City", value)}
+                    value={values.City}
+                    error={touched.City && errors.City}
+                    underlineColor={Color.secondary}
+                  />
+                  <Input
+                    style={{ color: "#5B5656" }}
+                    placeholderTextColor={"#5B5656"}
+                    placeholder="PO Box"
+                    name="Zip"
+                    label="PO Box"
+                    onChangeText={value => setFieldValue("Zip", value)}
+                    value={values.Zip}
+                    error={touched.Zip && errors.Zip}
+                    underlineColor={Color.secondary}
+                  />
+                </Item>
+                <Item style={{ borderBottomWidth: 0 }}>
+                  {errors.City && (
+                    <Text style={{ color: "red" }} visible={errors.City}>
+                      {errors.City}
+                    </Text>
+                  )}
+                  {errors.Zip && (
+                    <Text style={{ color: "red" }} visible={errors.Zip}>
+                      {errors.Zip}
+                    </Text>
+                  )}
+                </Item>
+                <Item style={styles.itemTransparent}>
+                  <Input
+                    style={{ color: "#5B5656" }}
+                    placeholderTextColor={"#5B5656"}
+                    placeholder="Country *"
+                    name="AddressCountry"
+                    label="Country *"
+                    onChangeText={value =>
+                      setFieldValue("AddressCountry", value)
                     }
-                    setFieldValue("PickUpandDropOption", "Direct Delivery");
-                  }}
+                    value={values.AddressCountry}
+                    error={touched.AddressCountry && errors.AddressCountry}
+                    underlineColor={Color.secondary}
+                    editable={false}
+                  />
+                </Item>
+                <Item style={{ borderBottomWidth: 0 }}>
+                  {errors.AddressCountry && (
+                    <Text
+                      style={{ color: "red" }}
+                      visible={errors.AddressCountry}
+                    >
+                      {errors.AddressCountry}
+                    </Text>
+                  )}
+                </Item>
+                <Item style={styles.itemTransparent}>
+                  <Picker
+                    style={{ color: "#5B5656" }}
+                    placeholderTextColor={"#5B5656"}
+                    mode="dropdown"
+                    iosIcon={<Icon name="arrow-down" />}
+                    style={[styles.pickerStyle, { color: "#5B5656" }]}
+                    placeholder="Country"
+                    placeholderStyle={{ color: "#bfc6ea" }}
+                    selectedValue={values.SelectedCountryId}
+                    onValueChange={value => {
+                      setFieldValue("SelectedCountryId", value);
+                      attestationRateByCountryandDCType(
+                        value,
+                        values.SelectedCertificateType
+                      );
+                    }}
+                  >
+                    <Picker.Item
+                      key="0"
+                      label="Certificate Issued Country *"
+                      value=""
+                    />
+                    {renderDocumentCountries()}
+                  </Picker>
+                </Item>
+                <Item style={{ borderBottomWidth: 0 }}>
+                  {errors.SelectedCountryId && (
+                    <Text
+                      style={{ color: "red" }}
+                      visible={errors.SelectedCountryId}
+                    >
+                      {errors.SelectedCountryId}
+                    </Text>
+                  )}
+                </Item>
+                <Item style={styles.itemTransparent}>
+                  <Picker
+                    placeholderTextColor={"#5B5656"}
+                    placeholderIconColor="#5B5656"
+                    placeholderStyle={{ color: "#5B5656" }}
+                    mode="dropdown"
+                    iosIcon={<Icon name="arrow-down" />}
+                    style={[styles.pickerStyle, { color: "#5B5656" }]}
+                    placeholder="Certificate Type"
+                    selectedValue={values.SelectedCertificateType}
+                    onValueChange={value => {
+                      setFieldValue("SelectedCertificateType", value);
+                      attestationRateByCountryandDCType(
+                        values.SelectedCountryId,
+                        value
+                      );
+                    }}
+                  >
+                    <Picker.Item key="0" label="Certificate Type *" value="" />
+                    {renderCertificateTypes()}
+                  </Picker>
+                </Item>
+                <Item style={{ borderBottomWidth: 0 }}>
+                  {errors.SelectedCertificateType && (
+                    <Text
+                      style={{ color: "red" }}
+                      visible={errors.SelectedCertificateType}
+                    >
+                      {errors.SelectedCertificateType}
+                    </Text>
+                  )}
+                </Item>
+                <ListItem style={[styles.itemTransparent]}>
+                  <Radio
+                    style={{ color: "#5B5656" }}
+                    selected={values.PickUpandDropOption == "Direct Delivery"}
+                    onPress={() => {
+                      if (attestationrate.data) {
+                        setFieldValue("Rate", attestationrate.data.Rate);
+                      }
+                      setFieldValue("PickUpandDropOption", "Direct Delivery");
+                    }}
+                  />
+                  <Body>
+                    <TouchableOpacity
+                      onPress={() => {
+                        if (attestationrate.data) {
+                          setFieldValue("Rate", attestationrate.data.Rate);
+                        }
+                        setFieldValue("PickUpandDropOption", "Direct Delivery");
+                      }}
+                    >
+                      <Text style={{ color: "#5B5656" }}>Direct Delivery</Text>
+                    </TouchableOpacity>
+                  </Body>
+                  <Radio
+                    selected={values.PickUpandDropOption == "Through Courier"}
+                    style={{ color: "#5B5656" }}
+                    onPress={() => {
+                      if (attestationrate.data) {
+                        setFieldValue("Rate", attestationrate.data.Rate);
+                      }
+                      setFieldValue("PickUpandDropOption", "Through Courier");
+                    }}
+                  />
+                  <Body>
+                    <TouchableOpacity
+                      onPress={() => {
+                        if (attestationrate.data) {
+                          setFieldValue("Rate", attestationrate.data.Rate);
+                        }
+                        setFieldValue("PickUpandDropOption", "Through Courier");
+                      }}
+                    >
+                      <Text style={{ color: "#5B5656" }}>Through Courier</Text>
+                    </TouchableOpacity>
+                  </Body>
+                </ListItem>
+                <View
+                  style={[
+                    styles.itemTransparent,
+                    { padding: 10, borderRadius: 10 }
+                  ]}
                 >
-                  <Text style={{color:"#5B5656"}} >Direct Delivery</Text>
-                </TouchableOpacity>
-              </Body>
-              <Radio
-                selected={values.PickUpandDropOption == "Through Courier"}
-                style={{color:"#5B5656"}}
-                onPress={() => {
-                  if (attestationrate.data) {
-                    setFieldValue("Rate", attestationrate.data.Rate);
-                  }
-                  setFieldValue("PickUpandDropOption", "Through Courier");
-                }}
-              />
-              <Body>
-                <TouchableOpacity
-                  onPress={() => {
-                    if (attestationrate.data) {
-                      setFieldValue("Rate", attestationrate.data.Rate);
-                    }
-                    setFieldValue("PickUpandDropOption", "Through Courier");
-                  }}
-                >
-                  <Text style={{color:"#5B5656"}}>Through Courier</Text>
-                </TouchableOpacity>
-              </Body>
-            </ListItem>
-            <View style={[styles.itemTransparent, { padding: 10, borderRadius: 10 }]} >
-              <Text style={{ color:"#5B5656", marginTop: 8, fontWeight: "bold", fontSize: 18 }}>
-                Your Bill Amount
-              </Text>
-              <Text style={{ marginTop: 8,color:"#5B5656" }}>
-                Attestation Charge:{" "}
-                {attestationrate.data ? attestationrate.data.Rate : 0} AED
-              </Text>
-              <Text style={{ marginTop: 8,color:"#5B5656" }}>
-                Service Charge:{" "}
-                {attestationrate.data ? attestationrate.data.ServiceCharge : 0}{" "}
-                AED
-              </Text>
-              {attestationrate.data &&
-                values.PickUpandDropOption == "Through Courier" && (
-                  <Text style={{ marginTop: 8,color:"#5B5656" }}>
-                    Courier Charge:{" "}
+                  <Text
+                    style={{
+                      color: "#5B5656",
+                      marginTop: 8,
+                      fontWeight: "bold",
+                      fontSize: 18
+                    }}
+                  >
+                    Your Bill Amount
+                  </Text>
+                  <Text style={{ marginTop: 8, color: "#5B5656" }}>
+                    Attestation Charge:{" "}
+                    {attestationrate.data ? attestationrate.data.Rate : 0} AED
+                  </Text>
+                  <Text style={{ marginTop: 8, color: "#5B5656" }}>
+                    Service Charge:{" "}
                     {attestationrate.data
-                      ? attestationrate.data.CourierCharge
+                      ? attestationrate.data.ServiceCharge
                       : 0}{" "}
                     AED
                   </Text>
-                )}
-              <Text
-                style={{
-                  color: "red",
-                  marginTop: 10,
-                  fontWeight: "bold"
-                }}
-              >
-                Your Total Bill Amount :{" "}
-                {attestationrate.data
-                  ? values.PickUpandDropOption == "Through Courier"
-                    ? attestationrate.data.Rate +
-                      attestationrate.data.CourierCharge +
-                      attestationrate.data.ServiceCharge
-                    : attestationrate.data.Rate +
-                      attestationrate.data.ServiceCharge
-                  : 0}{" "}
-                AED
-              </Text>
-            </View>
-
-            <View style={[styles.itemTransparent, { padding: 10, borderRadius: 10 }]} >
-              <ListItem style={{ borderBottomWidth: 0 }}>
-                <CheckBox
-                  checked={values.AgreeTerms}
-                  onPress={() => {
-                    setFieldValue("AgreeTerms", !values.AgreeTerms);
-                  }}
-                />
-                <Body>
-                  <View style={{ flexDirection: "row" }}>
-                    <Text style={{color:"#5B5656"}} > I have read and agree to the </Text>
-
-                    <TouchableOpacity onPress={() => setShowTerms(true)}>
-                      <Text
-                        style={{
-                          textDecorationLine: "underline",
-                          marginLeft: -11,
-                          color:"#5B5656"
-                        }}
-                      >
-                        Terms and
+                  {attestationrate.data &&
+                    values.PickUpandDropOption == "Through Courier" && (
+                      <Text style={{ marginTop: 8, color: "#5B5656" }}>
+                        Courier Charge:{" "}
+                        {attestationrate.data
+                          ? attestationrate.data.CourierCharge
+                          : 0}{" "}
+                        AED
                       </Text>
-                    </TouchableOpacity>
-                  </View>
-                  <TouchableOpacity onPress={() => setShowTerms(true)}>
-                    <Text
-                      style={{
-                        color:"#5B5656",
-                        textDecorationLine: "underline"
+                    )}
+                  <Text
+                    style={{
+                      color: "red",
+                      marginTop: 10,
+                      fontWeight: "bold"
+                    }}
+                  >
+                    Your Total Bill Amount :{" "}
+                    {attestationrate.data
+                      ? values.PickUpandDropOption == "Through Courier"
+                        ? attestationrate.data.Rate +
+                          attestationrate.data.CourierCharge +
+                          attestationrate.data.ServiceCharge
+                        : attestationrate.data.Rate +
+                          attestationrate.data.ServiceCharge
+                      : 0}{" "}
+                    AED
+                  </Text>
+                </View>
+
+                <View
+                  style={[
+                    styles.itemTransparent,
+                    { padding: 10, borderRadius: 10 }
+                  ]}
+                >
+                  <ListItem style={{ borderBottomWidth: 0 }}>
+                    <CheckBox
+                      checked={values.AgreeTerms}
+                      onPress={() => {
+                        setFieldValue("AgreeTerms", !values.AgreeTerms);
                       }}
-                    >
-                      Conditions of Service
-                    </Text>
-                  </TouchableOpacity>
-                </Body>
-              </ListItem>
-            </View>
-            {values.AgreeTerms ? (
-              <Button
-                style={{ backgroundColor: "#183E61", marginBottom: 50, marginTop:5 }}
-                full
-                rounded
-                onPress={handleSubmit}
-              >
-                <Text> Pay Now </Text>
-              </Button>
-            ) : (
-              <Button
-                style={{ backgroundColor: "#818182", marginBottom: 50, marginTop:5 }}
-                full
-                rounded
-              >
-                <Text> Pay Now </Text>
-              </Button>
-            )}
-          </Form>
-        </ScrollView>
-        </View>
-      </Content>
-      </ ImageBackground>
+                    />
+                    <Body>
+                      <View style={{ flexDirection: "row" }}>
+                        <Text style={{ color: "#5B5656" }}>
+                          {" "}
+                          I have read and agree to the{" "}
+                        </Text>
+                      </View>
+                      <TouchableOpacity onPress={() => setShowTerms(true)}>
+                        <Text
+                          style={{
+                            color: "#5B5656",
+                            textDecorationLine: "underline"
+                          }}
+                        >
+                          Terms and Conditions of Service
+                        </Text>
+                      </TouchableOpacity>
+                    </Body>
+                  </ListItem>
+                </View>
+                {values.AgreeTerms ? (
+                  <Button
+                    style={{
+                      backgroundColor: "#183E61",
+                      marginBottom: 50,
+                      marginTop: 5
+                    }}
+                    full
+                    rounded
+                    onPress={checkPhoneValid}
+                  >
+                    <Text> Pay Now </Text>
+                  </Button>
+                ) : (
+                  <Button
+                    style={{
+                      backgroundColor: "#818182",
+                      marginBottom: 50,
+                      marginTop: 5
+                    }}
+                    full
+                    rounded
+                  >
+                    <Text> Pay Now </Text>
+                  </Button>
+                )}
+              </Form>
+            </ScrollView>
+          </View>
+        </Content>
+      </ImageBackground>
     </Container>
   );
 };
@@ -674,10 +739,13 @@ export default withFormik({
   }) => ({
     CustomerName: profile.data.userdetail.FirstName,
     Email: profile.data.contactdetail.Email,
-    PersonalPhone: profile.data.contactdetail.Phone,
+    PersonalPhone: profile.data.contactdetail.Phone
+      ? profile.data.contactdetail.Phone
+      : "+971",
     Address1: profile.data.contactdetail.Addressline1,
     Zip: "",
     AddressCountry: "United Arab Emirates",
+    OfficePhone: profile.data.officedetail.CompanyPhone,
     Street: "",
     City: "",
     AgreeTerms: false,
@@ -686,9 +754,9 @@ export default withFormik({
     SelectedCertificateType: "",
     PickUpandDropOption: "Through Courier",
     ShowInfo: false,
-    cca2: 'AE',
+    cca2: "AE",
     callingCode: "971",
-    errorPhone : "",
+    errorPhone: "",
     docAttestationCreate
   }),
   validateOnChange: false,
@@ -714,21 +782,12 @@ export default withFormik({
     Street: Yup.string().required("Required"),
     City: Yup.string().required("Required"),
     SelectedState: Yup.string().required("Required")
-   }),
+  }),
 
   handleSubmit: (values, { props }) => {
-    this.setPhoneError("");
-    if(!this.phone.isValidNumber())
-    {
-      this.setPhoneError("Invalid number. Eg: +971XXXXXXXX");
-      return;
-    }
-      
     const { attestationrate, setRequestedValue } = props;
     const token = props.token.token;
-    const Address = `${values.Address1},${values.Street} ${values.City}, ${
-      values.SelectedState
-    } ${values.AddressCountry} - ${values.Zip}`;
+    const Address = `${values.Address1},${values.Street} ${values.City}, ${values.SelectedState} ${values.AddressCountry} - ${values.Zip}`;
     var Rate = attestationrate.data
       ? values.PickUpandDropOption == "Through Courier"
         ? attestationrate.data.Rate +

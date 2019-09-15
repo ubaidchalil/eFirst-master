@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { View, Image, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  BackHandler
+} from "react-native";
 import {
   Container,
   Content,
@@ -41,10 +47,12 @@ class ServiceDetails extends Component {
       NoteID: 0,
       Title: null,
       IsVisible: false,
-      MessageRequested: false
+      MessageRequested: false,
+      success: false
     };
     this.hideModal = this.hideModal.bind(this);
     this.MessageModal = this.MessageModal.bind(this);
+    this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
   changeRequestMessageState = state =>
     this.setState({ MessageRequested: state });
@@ -61,7 +69,7 @@ class ServiceDetails extends Component {
       IsVisible: false
     });
   }
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     const { error, success, loading } = this.props.message;
     const { MessageRequested } = this.state;
     if (!error && !loading && success && MessageRequested) {
@@ -71,6 +79,27 @@ class ServiceDetails extends Component {
 
       this.props.serviceRequestData({ serviceId: SRID, token: token.token });
     }
+    if (success && !prevProps.message.success) {
+      this.setState({ success: true });
+    }
+  }
+  componentDidMount() {
+    BackHandler.addEventListener(
+      "hardwareBackPress",
+      this.handleBackButtonClick
+    );
+  }
+
+  componentWillUnmount() {
+    BackHandler.removeEventListener(
+      "hardwareBackPress",
+      this.handleBackButtonClick
+    );
+  }
+
+  handleBackButtonClick() {
+    this.props.navigation.goBack();
+    return true;
   }
   render() {
     const { srDetail, loading, error, message, profile } = this.props;
@@ -177,7 +206,7 @@ class ServiceDetails extends Component {
               message="Sorry! An error has occured, Try again"
             />
           )}
-          {success && (
+          {this.state.success && (
             <AlertView
               type="success"
               message="Message has been submitted successfully"

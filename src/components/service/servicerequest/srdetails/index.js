@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, ScrollView, StyleSheet, Linking } from "react-native";
+import { View, ScrollView, StyleSheet, Linking, Clipboard } from "react-native";
 import {
   Container,
   Content,
@@ -11,6 +11,8 @@ import {
 } from "native-base";
 import { connect } from "react-redux";
 import VisaServiceDt from "./visaservicedt";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import ClipboardIcon from "react-native-vector-icons/MaterialIcons";
 
 class SRInfo extends Component {
   certtificateTypeName = SelectedCertificateType => {
@@ -61,7 +63,10 @@ class SRInfo extends Component {
       return "";
     }
   };
-
+  writeToClipboard = async text => {
+    await Clipboard.setString(text.toString());
+    alert("Copied to Clipboard!");
+  };
   render() {
     const {
       srInfo: {
@@ -242,6 +247,16 @@ class SRInfo extends Component {
                 >
                   {TrackingNo}
                 </Text>
+                <TouchableOpacity
+                  onPress={() => this.writeToClipboard(TrackingNo)}
+                >
+                  <ClipboardIcon
+                    name="content-copy"
+                    size={23}
+                    color="##0a0a0a"
+                    style={{ marginRight: 2 }}
+                  />
+                </TouchableOpacity>
               </View>
             )}
 
@@ -259,6 +274,16 @@ class SRInfo extends Component {
               >
                 {TrackingNo}
               </Text>
+              <TouchableOpacity
+                onPress={() => this.writeToClipboard(TrackingNo)}
+              >
+                <ClipboardIcon
+                  name="content-copy"
+                  size={23}
+                  color="##0a0a0a"
+                  style={{ marginRight: 2 }}
+                />
+              </TouchableOpacity>
             </View>
           )}
           {ServiceName != "VISA SERVICE" && (

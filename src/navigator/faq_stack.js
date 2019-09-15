@@ -3,9 +3,9 @@ import { createStackNavigator } from "react-navigation";
 import FAQ from "../components/faq";
 import FAQDetail from "../components/faq/faqdetail";
 
-export default (FAQStack = createStackNavigator(
+export default FAQStack = createStackNavigator(
   {
-    FAQ: {
+    FAQScreen: {
       screen: FAQ
     },
     FAQDetail: {
@@ -17,4 +17,4 @@ export default (FAQStack = createStackNavigator(
       header: null
     }
   }
-));
+);

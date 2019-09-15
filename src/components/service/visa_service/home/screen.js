@@ -36,9 +36,9 @@ import DateTimePicker from "react-native-modal-datetime-picker";
 import { nationalities } from "./NationalityPicker";
 import Modal from "react-native-modal";
 import TermsandConditon from "../../../termsandcondition";
-import PhoneInput from 'react-native-phone-input';
-import CountryPicker from 'react-native-country-picker-modal';
-
+import PhoneInput from "react-native-phone-input";
+import CountryPicker from "react-native-country-picker-modal";
+import closeImgLight from "../../../../Assets/close-btn.png";
 const deviceWidth = Dimensions.get("window").width;
 
 const DARK_COLOR = "#18171C";
@@ -47,30 +47,29 @@ const LIGHT_COLOR = "#FFF";
 
 const darkTheme = StyleSheet.create({
   modalContainer: {
-     backgroundColor: DARK_COLOR
-   },
-   contentContainer: {
-     backgroundColor: DARK_COLOR
-   },
-   header: {
-     backgroundColor: DARK_COLOR
-   },
-   itemCountryName: {
-     borderBottomWidth: 0
-   },
-   countryName: {
-     color: LIGHT_COLOR
-   },
-   letterText: {
-     color: LIGHT_COLOR
-   },
-   input: {
-     color: LIGHT_COLOR,
-     borderBottomWidth: 1,
-     borderColor: LIGHT_COLOR
-   }
- });
-
+    backgroundColor: DARK_COLOR
+  },
+  contentContainer: {
+    backgroundColor: DARK_COLOR
+  },
+  header: {
+    backgroundColor: DARK_COLOR
+  },
+  itemCountryName: {
+    borderBottomWidth: 0
+  },
+  countryName: {
+    color: LIGHT_COLOR
+  },
+  letterText: {
+    color: LIGHT_COLOR
+  },
+  input: {
+    color: LIGHT_COLOR,
+    borderBottomWidth: 1,
+    borderColor: LIGHT_COLOR
+  }
+});
 
 const styles = {
   item_margin: {
@@ -135,22 +134,28 @@ const DocumentAttestation = ({
   setShowTerms = state => {
     setFieldValue("ShowTerms", state);
   };
-  
+
   onPressFlag = () => {
     this.countryPicker.openModal();
-  }
-
-  selectCountry = (country) => {
+  };
+  checkPhoneValid = () => {
+    this.setPhoneError("");
+    if (!this.phone.isValidNumber()) {
+      this.setPhoneError("Invalid Format");
+    } else {
+      handleSubmit();
+    }
+  };
+  selectCountry = country => {
     this.phone.selectCountry(country.cca2.toLowerCase());
-    setFieldValue("cca2", country.cca2 )
-    setFieldValue("callingCode", country.callingCode )
-    setFieldValue("PersonalPhone", `+${country.callingCode}`)
-  }
+    setFieldValue("cca2", country.cca2);
+    setFieldValue("callingCode", country.callingCode);
+    setFieldValue("PersonalPhone", `+${country.callingCode}`);
+  };
 
-  setPhoneError = (msg) => {
-    setFieldValue("errorPhone", msg)
-  }
-
+  setPhoneError = msg => {
+    setFieldValue("errorPhone", msg);
+  };
 
   return (
     <Container>
@@ -215,7 +220,7 @@ const DocumentAttestation = ({
             </Item>
             <Item>
               <CountryPicker
-                ref={(ref) => {
+                ref={ref => {
                   this.countryPicker = ref;
                 }}
                 onChange={value => this.selectCountry(value)}
@@ -223,13 +228,15 @@ const DocumentAttestation = ({
                 cca2={values.cca2}
                 styles={darkTheme}
                 hideAlphabetFilter={true}
+                closeButtonImage={closeImgLight}
+                closeable={true}
               >
                 <View />
               </CountryPicker>
             </Item>
             <Item style={styles.item_margin}>
               <PhoneInput
-                ref={(ref) => {
+                ref={ref => {
                   this.phone = ref;
                 }}
                 textComponent={Input}
@@ -239,17 +246,17 @@ const DocumentAttestation = ({
                 name="PersonalPhone"
                 label="Mobile *"
                 keyboardType="numeric"
-                onChangeText={value => setFieldValue("PersonalPhone", value)}
+                onChangePhoneNumber={value =>
+                  setFieldValue("PersonalPhone", value)
+                }
                 value={values.PersonalPhone}
                 error={touched.PersonalPhone && errors.PersonalPhone}
                 underlineColor={Color.secondary}
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {values.errorPhone!="" && (
-                <Text style={{ color: "red" }} >
-                  {values.errorPhone}
-                </Text>
+              {values.errorPhone != "" && (
+                <Text style={{ color: "red" }}>{values.errorPhone}</Text>
               )}
             </Item>
             <Item>
@@ -501,7 +508,7 @@ const DocumentAttestation = ({
                 style={{ backgroundColor: "#183E61", marginBottom: 50 }}
                 full
                 rounded
-                onPress={handleSubmit}
+                onPress={checkPhoneValid}
               >
                 <Text> Pay Now </Text>
               </Button>
@@ -542,8 +549,11 @@ export default withFormik({
   }) => ({
     CustomerName: profile.data.userdetail.FirstName,
     Email: profile.data.contactdetail.Email,
-    PersonalPhone: profile.data.contactdetail.Phone,
+    PersonalPhone: profile.data.contactdetail.Phone
+      ? profile.data.contactdetail.Phone
+      : "+971",
     Address1: profile.data.contactdetail.Addressline1,
+    OfficePhone: profile.data.officedetail.CompanyPhone,
     Zip: "",
     AddressCountry: "United Arab Emirates",
     Street: "",
@@ -556,9 +566,9 @@ export default withFormik({
     ShowInfo: false,
     AgreeTerms: false,
     ShowTerms: false,
-    cca2: 'AE',
+    cca2: "AE",
     callingCode: "971",
-    errorPhone : "",
+    errorPhone: "",
     docAttestationCreate
   }),
   validateOnChange: false,
@@ -588,19 +598,10 @@ export default withFormik({
   }),
 
   handleSubmit: (values, { props }) => {
-    this.setPhoneError("");
-    if(!this.phone.isValidNumber())
-    {
-      this.setPhoneError("Invalid number. Eg: +971XXXXXXXX");
-      return;
-    }
-      
     const { navigation, updateTotalAmount } = props;
     const token = props.token.token;
     const data = navigation.state.params.data;
-    const Address = `${values.Address1},${values.Street} ${values.City}, ${
-      values.SelectedState
-    } ${values.AddressCountry} - ${values.Zip}`;
+    const Address = `${values.Address1},${values.Street} ${values.City}, ${values.SelectedState} ${values.AddressCountry} - ${values.Zip}`;
 
     data.CustomerName = values.CustomerName;
     data.Email = values.Email;

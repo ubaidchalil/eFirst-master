@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import UserActions from "./screen";
+import { BackHandler } from "react-native";
 import { servicesData, serviceRequestData } from "../action";
 import { View, StyleSheet, Text } from "react-native";
 import Loader from "../../styled/loader";
 import AlertView from "../../styled/alert-view";
 
 class Container extends Component {
+  _didFocusSubscription;
+  _willBlurSubscription;
   constructor(props) {
     super(props);
     this.state = {
@@ -15,6 +18,8 @@ class Container extends Component {
       searchText: "",
       Refreshing: false
     };
+
+    this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
 
   componentDidUpdate = () => {
@@ -35,6 +40,24 @@ class Container extends Component {
     this.setState({ searchText });
   };
 
+  componentDidMount() {
+    BackHandler.addEventListener(
+      "hardwareBackPress",
+      this.handleBackButtonClick
+    );
+  }
+
+  componentWillUnmount() {
+    BackHandler.removeEventListener(
+      "hardwareBackPress",
+      this.handleBackButtonClick
+    );
+  }
+
+  handleBackButtonClick() {
+    this.props.navigation.navigate("HomeScreen");
+    return true;
+  }
   render = () => {
     const {
       services: { error, loading }

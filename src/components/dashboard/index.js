@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BackHandler } from "react-native";
 import { connect } from "react-redux";
 import HomeScreen from "./screen";
 import { DashboardData } from "./action";
@@ -26,11 +27,6 @@ class Container extends Component {
   }
 
   onOpened(openResult) {
-    //console.log("this.props---------------------------->");
-    //console.log("Message: ", openResult.notification.payload.body);
-    //console.log("Data: ", openResult.notification.payload.additionalData);
-    //console.log("isActive: ", openResult.notification.isAppInFocus);
-    //console.log("openResult: ", openResult);
     const data = openResult.notification.payload.additionalData;
     if (data) {
       const { srid } = data;
@@ -53,7 +49,6 @@ class Container extends Component {
     this.props.getcertificateType(token);
     this.props.getdoclanguage(token);
     this.props.documentationTypes(token);
-    //this.props.navigation.navigate("ServiceDetail");
   };
 
   componentDidUpdate = () => {

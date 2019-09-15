@@ -7,7 +7,12 @@ import { profileData } from "../../profile/action";
 import { registerOnesignal } from "../../onesignal/action";
 import { StateComponent } from "../../styled/components";
 import AlertView from "../../styled/alert-view";
+import MiniOfflineSign from "../../styled/OfflineNotice";
 import Loader from "../../styled/loader";
+import NetInfo, {
+  NetInfoState,
+  NetInfoSubscription
+} from "@react-native-community/netinfo";
 class Container extends Component {
   componentDidMount = async () => {
     const palyerId = await AsyncStorage.getItem("playerid");
@@ -32,11 +37,21 @@ class Container extends Component {
       this.props.navigation.navigate("SplashScreen");
     }
   }
-
+  state = {
+    isConnected: true
+  };
+  changeInternetStatus = isConnected => {
+    console.log("isConnected,isConnected", isConnected);
+    this.setState({ isConnected });
+  };
   render = () => (
     <View style={{ flex: 1 }}>
       {/* <Loader loading={this.props.login.loading} /> */}
-      <LoginScreen {...this.props} />
+
+      <LoginScreen
+        {...this.props}
+        changeInternetStatus={this.changeInternetStatus}
+      />
       {this.props.confirmemail.success && (
         <AlertView
           type="success"
@@ -47,6 +62,12 @@ class Container extends Component {
         <AlertView
           type="error"
           message="Entered username or password is incorrect"
+        />
+      )}
+      {!this.state.isConnected && (
+        <MiniOfflineSign
+          changeInternetStatus={this.changeInternetStatus}
+          isConnected={this.state.isConnected}
         />
       )}
     </View>

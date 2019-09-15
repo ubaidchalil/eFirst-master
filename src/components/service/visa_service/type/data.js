@@ -3,7 +3,7 @@ export default visa_options = {
   "options": [
     "New Visa",
     "Renew Visa",
-    "Visa Cancelation"
+    "Visa Cancellation"
   ],
   "New Visa": {
     "title": "Service Type",
@@ -14437,6 +14437,7 @@ export default visa_options = {
               "Immigration card",
               "Memorandum of association (MOA)",
               "Sponsor's passport",
+              "Sponsored passport",
               "Medical result",
               "Emirates id application paper",
               "Insurance",
@@ -14469,6 +14470,7 @@ export default visa_options = {
               "Immigration card",
               "Memorandum of association (MOA)",
               "Sponsor's passport",
+              "Sponsored passport",
               "Medical result",
               "Emirates id application paper",
               "Insurance",
@@ -16344,7 +16346,7 @@ export default visa_options = {
       }
     }
   },
-  "Visa Cancelation": {
+  "Visa Cancellation": {
     "title": "Visa Type",
     "options": [
       "Partner/Investor",

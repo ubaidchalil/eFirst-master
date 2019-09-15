@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { View, ScrollView, RefreshControl, TouchableOpacity, ImageBackground } from "react-native";
+import {
+  View,
+  ScrollView,
+  RefreshControl,
+  TouchableOpacity,
+  ImageBackground
+} from "react-native";
 import {
   Container,
   Content,
@@ -46,14 +52,14 @@ export default ({
     navigation.navigate("ServiceDetail");
   };
 
-  const getTextandBackgroundColor = status => {
+  const getTextandBackgroundColor = (status, ProcessName) => {
     switch (status) {
       case "In Review":
         return {
           color: "#6F5F0F",
           borderColor: "#6F5F0F",
           backgroundColor: "#ffffff00",
-          statusLabel: "Review & Approval Process"
+          statusLabel: ProcessName
         };
       case "Completed":
         return {
@@ -89,59 +95,80 @@ export default ({
   return (
     <StyleProvider style={getTheme(material)}>
       <Container>
-        <MyHeader navigation={navigation} header={headerTitle} toDashboard={true} />
-        
-        <ImageBackground source={require("../../../Assets/bg_all.jpg")} style={{width: '100%', height: '100%'}}>
-        <Content style={{ padding: 5, marginBottom: 70 }}>
-        
-          
-          <Item >
-            <Icon name="ios-search" style={{color:"#FFF"}} />
-            <Input placeholder="Search" style={{ fontSize:14 }} placeholderTextColor="#FFF"
-              onChangeText={(searchText)=>{setSearchText(searchText)}}
-              value={state.searchText}
-            />
-            <Button transparent onPress={() => setSearchText("")}>
-              <Icon name="close" style={{color:"#FFF"}} />
-            </Button>
-          </Item>
-          <ScrollView 
-            refreshControl={
-              <RefreshControl
-                refreshing={state.Refreshing}
-                onRefresh={_onRefresh}
-              />
-            } 
-          >
-          {services.data.length > 0 ? (
-            services.data.filter(service => (service.SRTitle.toString().toLowerCase() + " - SR" + service.SRID.toString().toLowerCase()).includes(state.searchText.toLowerCase())).map(service => {
-              const res = getTextandBackgroundColor(service.SRStatusName);
+        <MyHeader
+          navigation={navigation}
+          header={headerTitle}
+          toDashboard={true}
+        />
 
-              return (
-                <TouchableOpacity
-                  onPress={() => navigateToDetail(service.SRID)}
-                >
-                  <Greeting
-                    service={service}
-                    {...res}
-                    navigation={navigation}
-                  />
-                </TouchableOpacity>
-              );
-            })
-          ) : (
-            <View
-              style={{
-                flex: 1,
-                alignItems: "center",
-                justifyContent: "center",
-                padding:5
-              }}
+        <ImageBackground
+          source={require("../../../Assets/bg_all.jpg")}
+          style={{ width: "100%", height: "100%" }}
+        >
+          <Content style={{ padding: 5, marginBottom: 70 }}>
+            <Item>
+              <Icon name="ios-search" style={{ color: "#FFF" }} />
+              <Input
+                placeholder="Search"
+                style={{ fontSize: 14 }}
+                placeholderTextColor="#FFF"
+                onChangeText={searchText => {
+                  setSearchText(searchText);
+                }}
+                value={state.searchText}
+              />
+              <Button transparent onPress={() => setSearchText("")}>
+                <Icon name="close" style={{ color: "#FFF" }} />
+              </Button>
+            </Item>
+            <ScrollView
+              refreshControl={
+                <RefreshControl
+                  refreshing={state.Refreshing}
+                  onRefresh={_onRefresh}
+                />
+              }
             >
-              <Text style={{color:"#FFF"}}>{noDataLabel}</Text>
-            </View>
-          )}
-          </ScrollView>
+              {services.data.length > 0 ? (
+                services.data
+                  .filter(service =>
+                    (
+                      service.SRTitle.toString().toLowerCase() +
+                      " - SR" +
+                      service.SRID.toString().toLowerCase()
+                    ).includes(state.searchText.toLowerCase())
+                  )
+                  .map(service => {
+                    const res = getTextandBackgroundColor(
+                      service.SRStatusName,
+                      service.ProcessName
+                    );
+
+                    return (
+                      <TouchableOpacity
+                        onPress={() => navigateToDetail(service.SRID)}
+                      >
+                        <Greeting
+                          service={service}
+                          {...res}
+                          navigation={navigation}
+                        />
+                      </TouchableOpacity>
+                    );
+                  })
+              ) : (
+                <View
+                  style={{
+                    flex: 1,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: 5
+                  }}
+                >
+                  <Text style={{ color: "#FFF" }}>{noDataLabel}</Text>
+                </View>
+              )}
+            </ScrollView>
           </Content>
         </ImageBackground>
       </Container>

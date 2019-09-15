@@ -36,9 +36,9 @@ import TermsandConditon from "../../termsandcondition";
 import { validateFileTypeAndSizeForTranslation } from "../../../constants";
 var ImagePicker = require("react-native-image-picker");
 import DocumentPicker from "react-native-document-picker";
-import PhoneInput from 'react-native-phone-input';
-import CountryPicker from 'react-native-country-picker-modal';
-
+import PhoneInput from "react-native-phone-input";
+import CountryPicker from "react-native-country-picker-modal";
+import closeImgLight from "../../../Assets/close-btn.png";
 const deviceWidth = Dimensions.get("window").width;
 
 const DARK_COLOR = "#18171C";
@@ -47,30 +47,29 @@ const LIGHT_COLOR = "#FFF";
 
 const darkTheme = StyleSheet.create({
   modalContainer: {
-     backgroundColor: DARK_COLOR
-   },
-   contentContainer: {
-     backgroundColor: DARK_COLOR
-   },
-   header: {
-     backgroundColor: DARK_COLOR
-   },
-   itemCountryName: {
-     borderBottomWidth: 0
-   },
-   countryName: {
-     color: LIGHT_COLOR
-   },
-   letterText: {
-     color: LIGHT_COLOR
-   },
-   input: {
-     color: LIGHT_COLOR,
-     borderBottomWidth: 1,
-     borderColor: LIGHT_COLOR
-   }
- });
-
+    backgroundColor: DARK_COLOR
+  },
+  contentContainer: {
+    backgroundColor: DARK_COLOR
+  },
+  header: {
+    backgroundColor: DARK_COLOR
+  },
+  itemCountryName: {
+    borderBottomWidth: 0
+  },
+  countryName: {
+    color: LIGHT_COLOR
+  },
+  letterText: {
+    color: LIGHT_COLOR
+  },
+  input: {
+    color: LIGHT_COLOR,
+    borderBottomWidth: 1,
+    borderColor: LIGHT_COLOR
+  }
+});
 
 const LanguageTranslation = ({
   handleSubmit,
@@ -320,22 +319,44 @@ const LanguageTranslation = ({
       />
     ));
 
+  checkPhoneValid = () => {
+    this.setPhoneError("");
 
-    onPressFlag = () => {
-      this.countryPicker.openModal();
-    }
-  
-    selectCountry = (country) => {
-      this.phone.selectCountry(country.cca2.toLowerCase());
-      setFieldValue("cca2", country.cca2 )
-      setFieldValue("callingCode", country.callingCode )
-      setFieldValue("PersonalPhone", `+${country.callingCode}`)
+    if (!this.phone.isValidNumber()) {
+      this.setPhoneError("Invalid Format");
+      return;
     }
 
-
-    setPhoneError = (msg) => {
-      setFieldValue("errorPhone", msg)
+    if (values.Files.length === 0) {
+      setFieldValue("errorFileUpload", "Upload File is Required");
+    } else {
+      setFieldValue("errorFileUpload", null);
     }
+    // if (!this.phone.isValidNumber()) {
+    //   this.setPhoneError("Invalid Format");
+    //   return;
+    // }
+    // if (values.Files.length === 0) {
+    //   setFieldValue("errorFileUpload", "Required");
+    //   return;
+    // }
+
+    handleSubmit();
+  };
+  onPressFlag = () => {
+    this.countryPicker.openModal();
+  };
+
+  selectCountry = country => {
+    this.phone.selectCountry(country.cca2.toLowerCase());
+    setFieldValue("cca2", country.cca2);
+    setFieldValue("callingCode", country.callingCode);
+    setFieldValue("PersonalPhone", `+${country.callingCode}`);
+  };
+
+  setPhoneError = msg => {
+    setFieldValue("errorPhone", msg);
+  };
   return (
     <Container>
       <MyHeader navigation={navigation} header="Translation Service" />
@@ -398,7 +419,7 @@ const LanguageTranslation = ({
             </Item>
             <Item>
               <CountryPicker
-                ref={(ref) => {
+                ref={ref => {
                   this.countryPicker = ref;
                 }}
                 onChange={value => this.selectCountry(value)}
@@ -406,13 +427,15 @@ const LanguageTranslation = ({
                 cca2={values.cca2}
                 styles={darkTheme}
                 hideAlphabetFilter={true}
+                closeButtonImage={closeImgLight}
+                closeable={true}
               >
                 <View />
               </CountryPicker>
             </Item>
             <Item style={styles.item_margin}>
               <PhoneInput
-                ref={(ref) => {
+                ref={ref => {
                   this.phone = ref;
                 }}
                 textComponent={Input}
@@ -422,17 +445,17 @@ const LanguageTranslation = ({
                 name="PersonalPhone"
                 label="Mobile *"
                 keyboardType="numeric"
-                onChangeText={value => setFieldValue("PersonalPhone", value)}
+                onChangePhoneNumber={value =>
+                  setFieldValue("PersonalPhone", value)
+                }
                 value={values.PersonalPhone}
                 error={touched.PersonalPhone && errors.PersonalPhone}
                 underlineColor={Color.secondary}
               />
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {values.errorPhone!="" && (
-                <Text style={{ color: "red" }} >
-                  {values.errorPhone}
-                </Text>
+              {values.errorPhone != "" && (
+                <Text style={{ color: "red" }}>{values.errorPhone}</Text>
               )}
             </Item>
             <Item>
@@ -662,15 +685,26 @@ const LanguageTranslation = ({
               </Picker>
             </Item>
             <Item style={{ borderBottomWidth: 0 }}>
-              {errors.SelectedFromDocumentLanguageId && (
+              {errors.SelectedToDocumentLanguageId && (
                 <Text
                   style={{ color: "red" }}
-                  visible={errors.SelectedFromDocumentLanguageId}
+                  visible={errors.SelectedToDocumentLanguageId}
                 >
-                  {errors.SelectedFromDocumentLanguageId}
+                  {errors.SelectedToDocumentLanguageId}
                 </Text>
               )}
             </Item>
+            <Item style={{ borderBottomWidth: 0 }}>
+              {values.errorSelectedLang && (
+                <Text
+                  style={{ color: "red" }}
+                  visible={values.errorSelectedLang}
+                >
+                  {values.errorSelectedLang}
+                </Text>
+              )}
+            </Item>
+
             <ListItem style={[styles.item_margin, { borderBottomWidth: 0 }]}>
               <CheckBox
                 checked={values.LegalStamp}
@@ -733,7 +767,7 @@ const LanguageTranslation = ({
               </ListItem>
             )}
             <Item style={{ borderBottomWidth: 0 }}>
-              <Text>Upload File </Text>
+              <Text>Upload File *</Text>
             </Item>
             {this.renderDocs()}
             <View style={{ marginTop: 10 }}>
@@ -806,6 +840,15 @@ const LanguageTranslation = ({
                 File size:
               </Text>
               <Text style={{ fontSize: 12 }}> 5MB</Text>
+            </View>
+            <View
+              style={{ borderBottomWidth: 0, paddingTop: 10, paddingLeft: 10 }}
+            >
+              {values.errorFileUpload && (
+                <Text style={{ color: "red" }} visible={values.errorFileUpload}>
+                  {values.errorFileUpload}
+                </Text>
+              )}
             </View>
             <View style={{ padding: 10 }}>
               <Text style={{ marginTop: 8, fontWeight: "bold", fontSize: 18 }}>
@@ -899,7 +942,7 @@ const LanguageTranslation = ({
                 style={{ backgroundColor: "#183E61", marginBottom: 50 }}
                 full
                 rounded
-                onPress={handleSubmit}
+                onPress={checkPhoneValid}
               >
                 <Text> Pay Now </Text>
               </Button>
@@ -931,8 +974,10 @@ export default withFormik({
   }) => ({
     CustomerName: profile.data.userdetail.FirstName,
     Email: profile.data.contactdetail.Email,
-    PersonalPhone: profile.data.contactdetail.Phone,
-    OfficePhone: profile.data.officedetail.FirstName,
+    PersonalPhone: profile.data.contactdetail.Phone
+      ? profile.data.contactdetail.Phone
+      : "+971",
+    OfficePhone: profile.data.officedetail.CompanyPhone,
     Address1: profile.data.contactdetail.Addressline1,
     Zip: "",
     AddressCountry: "United Arab Emirates",
@@ -947,9 +992,11 @@ export default withFormik({
     Files: [],
     AgreeTerms: false,
     doclangTransCreate,
-    cca2: 'AE',
+    cca2: "AE",
     callingCode: "971",
-    errorPhone : "",
+    errorPhone: "",
+    errorFileUpload: null,
+    errorSelectedLang: null,
     ShowTerms: false
   }),
   validateOnChange: false,
@@ -979,14 +1026,26 @@ export default withFormik({
     SelectedState: Yup.string().required("Required")
   }),
 
-  handleSubmit: (values, { props }) => {
-    this.setPhoneError("");
-    if(!this.phone.isValidNumber())
-    {
-      this.setPhoneError("Invalid number. Eg: +971XXXXXXXX");
+  handleSubmit: (values, { props, setFieldValue }) => {
+    const {
+      Files,
+      SelectedFromDocumentLanguageId,
+      SelectedToDocumentLanguageId
+    } = values;
+    if (SelectedFromDocumentLanguageId == SelectedToDocumentLanguageId) {
+      if (Files.length === 0) {
+        setFieldValue("errorFileUpload", "Upload File is Required");
+      }
+
+      if (SelectedFromDocumentLanguageId == SelectedToDocumentLanguageId) {
+        setFieldValue(
+          "errorSelectedLang",
+          "Selected languages must be different."
+        );
+      }
       return;
     }
-      
+
     const { translationrate, setRequestedValue } = props;
     const token = props.token.token;
     const docRate = translationrate.data ? translationrate.data.Rate : 0;

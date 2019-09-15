@@ -91,28 +91,27 @@ export default class FAQ extends Component {
         <MyHeader navigation={navigation} header="FAQ" toDashboard={true} />
         <Content>
           {this.state.data.map(item => (
-            <Item>
-              <TouchableOpacity
-                onPress={() =>
-                  this.props.navigation.navigate("FAQDetail", {
-                    faq: item.faq,
-                    title: item.FAQCategoryName
-                  })
-                }
+            <TouchableOpacity
+              style={{ borderBottomColor: "#aaa", borderBottomWidth: 1 }}
+              onPress={() =>
+                this.props.navigation.navigate("FAQDetail", {
+                  faq: item.faq,
+                  title: item.FAQCategoryName
+                })
+              }
+            >
+              <Text
+                style={{
+                  backgroundColor: "white",
+                  color: "black",
+                  fontSize: 16,
+                  padding: 10,
+                  paddingHorizontal: 15
+                }}
               >
-                <Text
-                  style={{
-                    backgroundColor: "white",
-                    color: "black",
-                    fontSize: 16,
-                    padding: 10,
-                    paddingHorizontal: 15
-                  }}
-                >
-                  {item.FAQCategoryName}
-                </Text>
-              </TouchableOpacity>
-            </Item>
+                {item.FAQCategoryName}
+              </Text>
+            </TouchableOpacity>
           ))}
         </Content>
       </Container>

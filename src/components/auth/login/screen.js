@@ -20,6 +20,7 @@ import {
   Left,
   Right
 } from "native-base";
+import NetInfo from "@react-native-community/netinfo";
 import getTheme from "../../../../native-base-theme/components";
 import material from "../../../../native-base-theme/variables/material";
 import { withFormik } from "formik";
@@ -67,8 +68,21 @@ const LoginForm = ({
     style={{ width: "100%", height: "100%" }}
   >
     <View style={{ flex: 1, padding: 10 }}>
-      <View style={{ flex: 0.8, flexDirection: "row", alignItems: "center", justifyContent:"center" }}>
-        <View style={{backgroundColor:"rgba(52, 52, 52, 0.1)", padding: 5, borderRadius: 12 }} >
+      <View
+        style={{
+          flex: 0.8,
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        <View
+          style={{
+            backgroundColor: "rgba(52, 52, 52, 0.1)",
+            padding: 5,
+            borderRadius: 12
+          }}
+        >
           <Image
             source={require("../../../Assets/logo.png")}
             style={[styles.backgroundImage]}
@@ -106,7 +120,7 @@ const LoginForm = ({
               {
                 paddingHorizontal: 10,
                 borderBottomWidth: 0,
-                color: "red" 
+                color: "red"
               }
             ]}
           >
@@ -146,7 +160,7 @@ const LoginForm = ({
               {
                 paddingHorizontal: 10,
                 borderBottomWidth: 0,
-                color: "red" 
+                color: "red"
               }
             ]}
           >
@@ -294,7 +308,17 @@ export default withFormik({
       .required("Required")
   }),
 
-  handleSubmit: (values, { setSubmitting }) => {
+  handleSubmit: async (values, { setSubmitting, props }) => {
+    const { changeInternetStatus } = props;
+    const { isInternetReachable } = await NetInfo.fetch();
+    console.log("reachanility", isInternetReachable);
+    if (!isInternetReachable) {
+      changeInternetStatus(false);
+      return;
+    } else {
+      changeInternetStatus(true);
+    }
+
     var formBody = [];
     for (var property in values) {
       if (property !== "loginUser") {

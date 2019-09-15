@@ -9,7 +9,6 @@ export default class AlertView extends Component {
     };
   }
   componentDidMount() {
-    console.log("A");
     setTimeout(this.hideview, 5000);
   }
   hideview = () => {

@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -73,6 +74,7 @@
 		E36A4F9F231F86E6004CCEA4 /* libRCTOneSignal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E36A4F7C231F86D4004CCEA4 /* libRCTOneSignal.a */; };
 		E36A4FEA2320525B004CCEA4 /* libRNFileViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D78AB3230B077E00D6E7AD /* libRNFileViewer.a */; };
 		E371C9A22306D42F00F3D5A2 /* libRNSentry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E371C99F2306D41D00F3D5A2 /* libRNSentry.a */; };
+		E373B695232D7B43002CC252 /* libRNCNetInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E373B688232D7B3A002CC252 /* libRNCNetInfo.a */; };
 		E3D78ABD230B081C00D6E7AD /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D78ABA230B080200D6E7AD /* libRNFS.a */; };
 		E3EFE63E2320D9BE00068B5A /* libRNFetchBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EFE6352320D9B400068B5A /* libRNFetchBlob.a */; };
 		EA8E09529A9342109000E442 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41230007495148AC8F5B1945 /* Roboto.ttf */; };
@@ -408,6 +410,20 @@
 			remoteGlobalIDString = 274692C321B4414400BF91A8;
 			remoteInfo = "RNSentry-tvOS";
 		};
+		E373B687232D7B3A002CC252 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E373B65C232D7B3A002CC252 /* RNCNetInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNCNetInfo;
+		};
+		E373B689232D7B3A002CC252 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E373B65C232D7B3A002CC252 /* RNCNetInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5027B1B2237B30F00F1AABA;
+			remoteInfo = "RNCNetInfo-tvOS";
+		};
 		E3D78AB2230B077E00D6E7AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAA43EE27CDF448E9C3BEFC7 /* RNFileViewer.xcodeproj */;
@@ -503,6 +519,7 @@
 		E3691B5F230AA3F9008F012A /* RNDocumentPicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNDocumentPicker.xcodeproj; path = "../node_modules/react-native-document-picker/ios/RNDocumentPicker.xcodeproj"; sourceTree = "<group>"; };
 		E36A4F6B231F86D4004CCEA4 /* RCTOneSignal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTOneSignal.xcodeproj; path = "../node_modules/react-native-onesignal/ios/RCTOneSignal.xcodeproj"; sourceTree = "<group>"; };
 		E371C96F2306D41D00F3D5A2 /* RNSentry.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSentry.xcodeproj; path = "../node_modules/react-native-sentry/ios/RNSentry.xcodeproj"; sourceTree = "<group>"; };
+		E373B65C232D7B3A002CC252 /* RNCNetInfo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCNetInfo.xcodeproj; path = "../node_modules/@react-native-community/netinfo/ios/RNCNetInfo.xcodeproj"; sourceTree = "<group>"; };
 		E373E02322BB65CB0025DF03 /* efirst3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = efirst3.entitlements; path = efirst3/efirst3.entitlements; sourceTree = "<group>"; };
 		E3D78AB4230B080200D6E7AD /* RNFS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNFS.xcodeproj; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; };
 		E3EFE6092320D9B400068B5A /* RNFetchBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNFetchBlob.xcodeproj; path = "../node_modules/rn-fetch-blob/ios/RNFetchBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -539,6 +556,7 @@
 				E3D78ABD230B081C00D6E7AD /* libRNFS.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
+				E373B695232D7B43002CC252 /* libRNCNetInfo.a in Frameworks */,
 				E3EFE63E2320D9BE00068B5A /* libRNFetchBlob.a in Frameworks */,
 				E339D4FB22FD8FD50011107A /* CloudKit.framework in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
@@ -772,6 +790,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				E373B65C232D7B3A002CC252 /* RNCNetInfo.xcodeproj */,
 				E3EFE6092320D9B400068B5A /* RNFetchBlob.xcodeproj */,
 				E36A4F6B231F86D4004CCEA4 /* RCTOneSignal.xcodeproj */,
 				E3D78AB4230B080200D6E7AD /* RNFS.xcodeproj */,
@@ -883,6 +902,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E373B65D232D7B3A002CC252 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E373B688232D7B3A002CC252 /* libRNCNetInfo.a */,
+				E373B68A232D7B3A002CC252 /* libRNCNetInfo-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E3D78A83230B077E00D6E7AD /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -914,22 +942,6 @@
 				E3EFE6352320D9B400068B5A /* libRNFetchBlob.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		1403BB3E8D83466C8CDC6B89 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			path = Application;
-			sourceTree = "<group>";
-		};
-		54DE72B99C6545A38C3B3EEF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1107,6 +1119,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = E373B65D232D7B3A002CC252 /* Products */;
+					ProjectRef = E373B65C232D7B3A002CC252 /* RNCNetInfo.xcodeproj */;
 				},
 				{
 					ProductGroup = E3691B60230AA3F9008F012A /* Products */;
@@ -1454,6 +1470,20 @@
 			fileType = archive.ar;
 			path = "libRNSentry-tvOS.a";
 			remoteRef = E371C9A02306D41D00F3D5A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E373B688232D7B3A002CC252 /* libRNCNetInfo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCNetInfo.a;
+			remoteRef = E373B687232D7B3A002CC252 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E373B68A232D7B3A002CC252 /* libRNCNetInfo-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNCNetInfo-tvOS.a";
+			remoteRef = E373B689232D7B3A002CC252 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		E3D78AB3230B077E00D6E7AD /* libRNFileViewer.a */ = {

@@ -1,8 +1,25 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { View, Text, BackHandler } from "react-native";
 import MyHeader from "../../../Header";
 import { Container, Accordion, Content } from "native-base";
 export default class FAQDetail extends Component {
+  componentWillUnmount() {
+    BackHandler.removeEventListener(
+      "hardwareBackPress",
+      this.handleBackButtonClick
+    );
+  }
+
+  handleBackButtonClick = () => {
+    this.props.navigation.goBack();
+    return true;
+  };
+  componentDidMount() {
+    BackHandler.addEventListener(
+      "hardwareBackPress",
+      this.handleBackButtonClick
+    );
+  }
   _renderAccordionContent(item) {
     return (
       <Text

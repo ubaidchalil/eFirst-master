@@ -3,7 +3,8 @@ import {
   createStackNavigator,
   createAppContainer,
   createBottomTabNavigator,
-  createDrawerNavigator, createSwitchNavigator
+  createDrawerNavigator,
+  createSwitchNavigator
 } from "react-navigation";
 import HomeScreen from "../components/dashboard";
 import DocumentAttestation from "../components/service/documentattestation";

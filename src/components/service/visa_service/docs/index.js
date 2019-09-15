@@ -234,7 +234,7 @@ class _Container extends Component {
 
     if (validationErr) {
       this.setState({ validationMsg: "Please select all required files" });
-     // return;
+      return;
     }
 
     var pageData = this.props.navigation.state.params.pageData;
@@ -288,9 +288,9 @@ class _Container extends Component {
 
   renderDocNew = doc => {
     const _doc = doc;
-    
+
     return (
-      <View >
+      <View>
         <View>
           <Text
             style={{
@@ -324,7 +324,8 @@ class _Container extends Component {
               style={{
                 borderLeftWidth: 1,
                 borderLeftColor: "#7f8385",
-                alignItems: "center", backgroundColor: "#D3D0C1" 
+                alignItems: "center",
+                backgroundColor: "#D3D0C1"
               }}
               onPress={() => this.openFile(_doc, -1)}
             >
@@ -342,7 +343,14 @@ class _Container extends Component {
     return this.state.docNames[doc] ? (
       this.state.docNames[doc].map((doc, index) => {
         return (
-          <View style={{ borderRadius: 15 , borderTopLeftRadius: 0 , marginTop: 5, padding: 5 }} >
+          <View
+            style={{
+              borderRadius: 15,
+              borderTopLeftRadius: 0,
+              marginTop: 5,
+              padding: 5
+            }}
+          >
             <View>
               <Text
                 style={{
@@ -406,11 +414,21 @@ class _Container extends Component {
             ? ""
             : "*"
           : "*";
-        const fileSelected = this.state.docNames[doc] ? true : false;
+      const fileSelected = this.state.docNames[doc] ? true : false;
       return (
-        <View style={{ marginTop: 10, backgroundColor: fileSelected ? "rgba(0,153,51,0.2)" : "rgba(52, 52, 52, 0.17)", borderRadius: 15 , borderTopLeftRadius: 0 , padding: 5 }}>
+        <View
+          style={{
+            marginTop: 10,
+            backgroundColor: fileSelected
+              ? "rgba(0,153,51,0.2)"
+              : "rgba(52, 52, 52, 0.17)",
+            borderRadius: 15,
+            borderTopLeftRadius: 0,
+            padding: 5
+          }}
+        >
           <Item style={{ borderBottomWidth: 0 }}>
-            <Text style={[{ color:"#FFF", padding: 10 }]}>
+            <Text style={[{ color: "#FFF", padding: 10 }]}>
               {doc} {IsRequired}{" "}
             </Text>
           </Item>
@@ -429,83 +447,110 @@ class _Container extends Component {
           source={require("../../../../Assets/bg_all.jpg")}
           style={{ width: "100%", height: "100%" }}
         >
-        <View
-          style={{
-            backgroundColor: "rgba(52, 52, 52, 0.3)",
-            flexDirection: "row",
-            paddingHorizontal: 10,
-            paddingVertical: 10
-          }}
-        >
-          <View>
-            <Text style={{  color: "#FFF", fontSize: 14, marginLeft: 5, fontWeight:"bold" }}>
-              Documents
-            </Text>
-          </View>
-          <Right />
-        </View>
-        <Content style={{ padding: 10, marginBottom: 50 }}>
-          <View style={styles.itemTransparent} >
-            <Item >
-              <Text style={{ color:"#FFF", fontSize: 16, padding: 10, fontWeight: "bold" }}>
-                Original Document Submission Type
-              </Text>
-            </Item>
-
-            <ListItem
-              onPress={() => this.setState({ submissionType: "Through Courier" })}
-            >
-              <Left>
-                <Text style={{color: "#FFF"}}>Through Courier</Text>
-              </Left>
-              <Right>
-                <Radio
-                  selected={this.state.submissionType == "Through Courier"}
-                />
-              </Right>
-            </ListItem>
-            <ListItem
-              onPress={() =>
-                this.setState({ submissionType: "Direct Submission at Office" })
-              }
-            >
-              <Left>
-                <Text style={{color: "#FFF"}}>Direct Submission at Office</Text>
-              </Left>
-              <Right>
-                <Radio
-                  selected={
-                    this.state.submissionType == "Direct Submission at Office"
-                  }
-                />
-              </Right>
-            </ListItem>
-          </View>
-          <Item style={{  }}>
-            <Text style={{ color: "#FFF", fontSize: 16, padding: 10, fontWeight: "bold" }}>
-              Upload Document Copies
-            </Text>
-          </Item>
           <View
             style={{
-              paddingTop: 10,
-              paddingLeft: 10,
-              paddingRight: 10,
-              flexDirection: "row"
+              backgroundColor: "rgba(52, 52, 52, 0.3)",
+              flexDirection: "row",
+              paddingHorizontal: 10,
+              paddingVertical: 10
             }}
           >
-            <Text style={{ color: "#FFF", fontWeight: "500", fontSize: 12 }}>
-              File format:
-            </Text>
-            <Text style={{ color: "#FFF", fontSize: 12 }}>
-              {" "}
-              .jpeg, .jpg, .png, .docx, .doc, .xlx, .xlxs, .pdf
-            </Text>
+            <View>
+              <Text
+                style={{
+                  color: "#FFF",
+                  fontSize: 14,
+                  marginLeft: 5,
+                  fontWeight: "bold"
+                }}
+              >
+                Documents
+              </Text>
+            </View>
+            <Right />
           </View>
-          {this.renderDocs()}
+          <Content style={{ padding: 10, marginBottom: 50 }}>
+            <View style={styles.itemTransparent}>
+              <Item>
+                <Text
+                  style={{
+                    color: "#FFF",
+                    fontSize: 16,
+                    padding: 10,
+                    fontWeight: "bold"
+                  }}
+                >
+                  Original Document Submission Type
+                </Text>
+              </Item>
+
+              <ListItem
+                onPress={() =>
+                  this.setState({ submissionType: "Through Courier" })
+                }
+              >
+                <Left>
+                  <Text style={{ color: "#FFF" }}>Through Courier</Text>
+                </Left>
+                <Right>
+                  <Radio
+                    selected={this.state.submissionType == "Through Courier"}
+                  />
+                </Right>
+              </ListItem>
+              <ListItem
+                onPress={() =>
+                  this.setState({
+                    submissionType: "Direct Submission at Office"
+                  })
+                }
+              >
+                <Left>
+                  <Text style={{ color: "#FFF" }}>
+                    Direct Submission at Office
+                  </Text>
+                </Left>
+                <Right>
+                  <Radio
+                    selected={
+                      this.state.submissionType == "Direct Submission at Office"
+                    }
+                  />
+                </Right>
+              </ListItem>
+            </View>
+            <Item style={{}}>
+              <Text
+                style={{
+                  color: "#FFF",
+                  fontSize: 16,
+                  padding: 10,
+                  fontWeight: "bold"
+                }}
+              >
+                Upload Document Copies
+              </Text>
+            </Item>
+            <View
+              style={{
+                paddingTop: 10,
+                paddingLeft: 10,
+                paddingRight: 10,
+                flexDirection: "row"
+              }}
+            >
+              <Text style={{ color: "#FFF", fontWeight: "500", fontSize: 12 }}>
+                File format:
+              </Text>
+              <Text style={{ color: "#FFF", fontSize: 12 }}>
+                {" "}
+                .jpeg, .jpg, .png, .docx, .doc, .xlx, .xlxs, .pdf
+              </Text>
+            </View>
+            {this.renderDocs()}
 
             <View>
-              <Item style={styles.itemTransparent} >
+              <Item style={styles.itemTransparent}>
                 <Input
                   style={{ fontSize: 16, color: "#FFF" }}
                   placeholderTextColor={"#FFF"}
@@ -518,51 +563,50 @@ class _Container extends Component {
               </Item>
             </View>
 
-          <Item style={styles.itemTransparent} >
-            <Textarea
-              style={{ fontSize: 16, color: "#FFF" }}
-              placeholderTextColor={"#FFF"}
-              rowSpan={5}
-              placeholder="Notes"
-              underline
-              name="notes"
-              label="notes"
-              onChangeText={value => this.setState({ notes: value })}
-              value={this.state.notes}
-            />
-          </Item>
+            <Item style={styles.itemTransparent}>
+              <Textarea
+                style={{ fontSize: 16, color: "#FFF" }}
+                placeholderTextColor={"#FFF"}
+                rowSpan={5}
+                placeholder="Notes"
+                underline
+                name="notes"
+                label="notes"
+                onChangeText={value => this.setState({ notes: value })}
+                value={this.state.notes}
+              />
+            </Item>
 
-          <Item style={{ borderBottomWidth: 0 }}>
-            <Text style={{ fontSize: 14, padding: 10, color: "red" }}>
-              {this.state.validationMsg}
-            </Text>
-          </Item>
+            <Item style={{ borderBottomWidth: 0 }}>
+              <Text style={{ fontSize: 14, padding: 10, color: "red" }}>
+                {this.state.validationMsg}
+              </Text>
+            </Item>
 
-          <Button
+            <Button
+              style={{
+                backgroundColor: "#183E61",
+                marginBottom: 30,
+                marginTop: 10,
+                marginHorizontal: 5
+              }}
+              full
+              rounded
+              onPress={() => {
+                this.goToDetails();
+              }}
+            >
+              <Text>Next</Text>
+            </Button>
+          </Content>
+          <Toast
+            ref="validationToasts"
             style={{
-              backgroundColor: "#183E61",
-              marginBottom: 30,
-              marginTop: 10,
-              marginHorizontal: 5
+              backgroundColor: "#d12626",
+              bottom: 25
             }}
-            full
-            rounded
-            onPress={() => {
-              this.goToDetails();
-            }}
-          >
-            <Text>Next</Text>
-          </Button>
-        </Content>
-        <Toast
-          ref="validationToasts"
-          style={{
-            backgroundColor: "#d12626",
-            bottom: 25
-          }}
-          position="bottom"
-        />
-
+            position="bottom"
+          />
         </ImageBackground>
       </Container>
     );
@@ -579,7 +623,7 @@ const styles = {
   uploadBtn: {
     borderColor: "black"
   },
-  itemTransparent : {
+  itemTransparent: {
     marginTop: 5,
     borderBottomWidth: 0,
     backgroundColor: "rgba(250, 250, 250, 0.13)",
