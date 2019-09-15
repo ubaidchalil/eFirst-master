@@ -31,8 +31,8 @@ const screenHeight = Dimensions.get("window").height;
 
 let styles = StyleSheet.create({
   backgroundImage: {
-    height: 0.3 * screenHeight,
-    width: 0.3 * screenHeight,
+    height: 0.25 * screenHeight,
+    width: 0.25 * screenHeight,
     resizeMode: "stretch" // or 'stretch'
   },
   formContent: {
@@ -41,6 +41,18 @@ let styles = StyleSheet.create({
   },
   marginTop: {
     marginTop: 15
+  },
+  inputItem : {
+    marginTop: 15,
+    borderBottomWidth: 0,
+    backgroundColor: "rgba(250, 250, 250, 0.13)",
+    paddingHorizontal: 10
+  },
+  errorItem : {
+    marginTop: 15,
+    borderBottomWidth: 0,
+    backgroundColor: "rgba(250, 250, 250, 0.13)",
+    paddingHorizontal: 10
   },
   activityIndicator: {
     flex: 1,
@@ -70,7 +82,7 @@ const LoginForm = ({
     <View style={{ flex: 1, padding: 10 }}>
       <View
         style={{
-          flex: 0.8,
+          flex: 0.6,
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center"

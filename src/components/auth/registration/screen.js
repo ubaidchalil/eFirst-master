@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, ImageBackground, Dimensions, ScrollView } from "react-native";
 import {
   Container,
   Content,
@@ -16,11 +16,13 @@ import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
 
+const screenHeight = Dimensions.get("window").height;
+
 let styles = StyleSheet.create({
   backgroundImage: {
-    flex: 1,
-    height: 270,
-    resizeMode: "cover" // or 'stretch'
+    height: 0.15 * screenHeight,
+    width: 0.15 * screenHeight,
+    resizeMode: "stretch" // or 'stretch'
   },
   formContent: {
     flex: 1,
@@ -28,7 +30,19 @@ let styles = StyleSheet.create({
   },
   marginTop: {
     marginTop: 15
-  }
+  },
+  inputItem : {
+    marginTop: 15,
+    borderBottomWidth: 0,
+    backgroundColor: "rgba(250, 250, 250, 0.13)",
+    paddingHorizontal: 10
+  },
+  errorItem : {
+    marginTop: 15,
+    borderBottomWidth: 0,
+    backgroundColor: "rgba(250, 250, 250, 0.13)",
+    paddingHorizontal: 10
+  },
 });
 
 const RegistrationForm = ({
@@ -41,18 +55,40 @@ const RegistrationForm = ({
   navigation,
   loginUser
 }) => (
-  <StyleProvider style={getTheme(material)}>
-    <Container>
-      <Content>
-        <View style={{ alignItems: "center" }}>
+      <ImageBackground
+        source={require("../../../Assets/bg_login.jpg")}
+        style={{ width: "100%", height: "100%" }}
+      >
+
+    <View style={{ flex: 1, padding: 10 }}>
+      <View
+        style={{
+          flex: 0.5,
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        <View
+          style={{
+            backgroundColor: "rgba(52, 52, 52, 0.1)",
+            padding: 5,
+            borderRadius: 12
+          }}
+        >
           <Image
-            source={require("../../../Assets/header/header_register.jpg")}
-            style={styles.backgroundImage}
+            source={require("../../../Assets/logo.png")}
+            style={[styles.backgroundImage]}
           />
         </View>
-        <View style={styles.formContent}>
-          <Item style={styles.marginTop}>
+      </View>
+      <View style={{ flex: 1 }}>
+        <ScrollView>
+          
+          <Item style={styles.inputItem}>
             <Input
+              style={{ color: "#FFF", paddingLeft: 5 }}
+              placeholderTextColor={"#FFF"}
               placeholder="Name"
               name="FirstName"
               label="Name"
@@ -62,15 +98,18 @@ const RegistrationForm = ({
               underlineColor={Color.secondary}
             />
           </Item>
-          <Item style={{ borderBottomWidth: 0 }}>
+          <Item style={styles.inputItem}>
             {errors.FirstName && (
               <Text style={{ color: "red" }} visible={errors.FirstName}>
                 {errors.FirstName}
               </Text>
             )}
           </Item>
-          <Item style={styles.marginTop}>
+         
+          <Item style={styles.inputItem}>
             <Input
+              style={{ color: "#FFF", paddingLeft: 5 }}
+              placeholderTextColor={"#FFF"}
               placeholder="Email Address"
               name="email"
               label="Email"
@@ -80,15 +119,17 @@ const RegistrationForm = ({
               underlineColor={Color.secondary}
             />
           </Item>
-          <Item style={{ borderBottomWidth: 0 }}>
+          <Item style={styles.inputItem}>
             {errors.Email && (
               <Text style={{ color: "red" }} visible={errors.Email}>
                 {errors.Email}
               </Text>
             )}
-          </Item>
-          <Item style={styles.marginTop}>
+          </Item>         
+          <Item style={styles.inputItem}>
             <Input
+              style={{ color: "#FFF", paddingLeft: 5 }}
+              placeholderTextColor={"#FFF"}
               placeholder="Mobile"
               name="MobileNumber"
               label="Mobile"
@@ -98,15 +139,17 @@ const RegistrationForm = ({
               underlineColor={Color.secondary}
             />
           </Item>
-          <Item style={{ borderBottomWidth: 0 }}>
+          <Item style={styles.inputItem}>
             {errors.MobileNumber && (
               <Text style={{ color: "red" }} visible={errors.MobileNumber}>
                 {errors.MobileNumber}
               </Text>
             )}
-          </Item>
-          <Item style={styles.marginTop}>
+          </Item>         
+          <Item style={styles.inputItem}>
             <Input
+              style={{ color: "#FFF", paddingLeft: 5 }}
+              placeholderTextColor={"#FFF"}
               placeholder="Password"
               name="password"
               label="Password"
@@ -116,15 +159,17 @@ const RegistrationForm = ({
               underlineColor={Color.secondary}
             />
           </Item>
-          <Item style={{ borderBottomWidth: 0 }}>
+          <Item style={styles.inputItem}>
             {errors.Password && (
               <Text style={{ color: "red" }} visible={errors.Password}>
                 {errors.Password}
               </Text>
             )}
-          </Item>
-          <Item style={styles.marginTop}>
+          </Item>         
+          <Item style={styles.inputItem}>
             <Input
+              style={{ color: "#FFF", paddingLeft: 5 }}
+              placeholderTextColor={"#FFF"}
               placeholder="Confirm Password"
               name="password"
               label="ConfirmPassword"
@@ -135,28 +180,30 @@ const RegistrationForm = ({
               secureTextEntry
             />
           </Item>
-          <Item style={{ borderBottomWidth: 0 }}>
+          <Item style={styles.inputItem}>
             {errors.ConfirmPassword && (
               <Text style={{ color: "red" }} visible={errors.ConfirmPassword}>
                 {errors.ConfirmPassword}
               </Text>
             )}
           </Item>
-          <Button style={styles.marginTop} onPress={handleSubmit} full rounded>
-            <Text>Register</Text>
-          </Button>
           <Button
-            style={[styles.marginTop, { backgroundColor: "#183E61" }]}
-            onPress={() => navigation.navigate("Auth")}
+            style={[
+              styles.marginTop,
+              { backgroundColor: "rgba(250, 250, 250, 0.13)" }
+            ]}
             full
             rounded
+            onPress={handleSubmit}
           >
-            <Text>Have an Account? Sign in!</Text>
+            <Text>Register</Text>
           </Button>
-        </View>
-      </Content>
-    </Container>
-  </StyleProvider>
+        
+        </ScrollView>
+      </View>
+    </View>
+    
+    </ImageBackground>
 );
 
 export default withFormik({

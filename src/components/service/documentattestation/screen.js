@@ -184,28 +184,6 @@ const DocumentAttestation = ({
         source={require("../../../Assets/bg_all.jpg")}
         style={{ width: "100%", height: "100%" }}
       >
-        <View
-          style={{
-            backgroundColor: "rgba(52, 52, 52, 0.3)",
-            flexDirection: "row",
-            paddingHorizontal: 10,
-            paddingVertical: 10
-          }}
-        >
-          <View>
-            <Text
-              style={{
-                color: "#FFF",
-                fontSize: 14,
-                marginLeft: 5,
-                fontWeight: "bold"
-              }}
-            >
-              ATTESTATION SERVICE
-            </Text>
-          </View>
-          <Right />
-        </View>
         <Content style={{ padding: 10, marginBottom: 30 }}>
           <Modal
             style={{ top: 40, marginBottom: 50 }}
@@ -423,7 +401,6 @@ const DocumentAttestation = ({
                     </Text>
                   )}
                 </Item>
-
                 <Item style={styles.itemTransparent}>
                   <Input
                     style={{ color: "#5B5656" }}
