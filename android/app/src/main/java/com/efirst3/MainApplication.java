@@ -3,6 +3,7 @@ package com.efirst3;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.reactnativecommunity.netinfo.NetInfoPackage;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
 import com.vinzscam.reactnativefileviewer.RNFileViewerPackage;
 import com.rnfs.RNFSPackage;
@@ -32,6 +33,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new NetInfoPackage(),
             new ReactNativeOneSignalPackage(),
             new RNFileViewerPackage(),
             new RNFSPackage(),
