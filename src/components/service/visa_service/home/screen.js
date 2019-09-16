@@ -5,7 +5,8 @@ import {
   StyleSheet,
   TouchableOpacity,
   Dimensions,
-  Platform
+  Platform,
+  ImageBackground
 } from "react-native";
 import {
   Container,
@@ -80,13 +81,22 @@ const styles = {
     borderRadius: 13,
     borderColor: "rgba(0, 0, 0, 0.1)"
   },
+  itemTransparent: {
+    marginTop: 5,
+    marginLeft: 0,
+    borderBottomWidth: 0,
+    backgroundColor: "rgba(250, 250, 250, 0.9)",
+    paddingHorizontal: 10,
+    borderRadius: 10
+  },
   pickerStyle:
     Platform.OS === "ios"
       ? {
           width: deviceWidth - 30,
-          marginLeft: -10
+          marginLeft: -10,
+          color: "#5B5656"
         }
-      : { width: undefined }
+      : { width: undefined, color: "#5B5656" }
 };
 
 const DocumentAttestation = ({
@@ -161,29 +171,42 @@ const DocumentAttestation = ({
     <Container>
       <MyHeader navigation={navigation} header="Visa Service" />
 
+      <ImageBackground
+        source={require("../../../../Assets/bg_all.jpg")}
+        style={{ width: "100%", height: "100%" }}
+      >
       <View
         style={{
-          backgroundColor: "#F7F9F9",
+          backgroundColor: "rgba(52, 52, 52, 0.3)",
           flexDirection: "row",
           paddingHorizontal: 10,
           paddingVertical: 10
         }}
       >
         <View>
-          <Text style={{ color: "#99A3A4", fontSize: 14, marginLeft: 5 }}>
+          <Text
+            style={{
+              color: "#FFF",
+              fontSize: 14,
+              marginLeft: 5,
+              fontWeight: "bold"
+            }}
+          >
             VISA SERVICE
           </Text>
         </View>
         <Right />
       </View>
-      <Content style={{ padding: 10 }}>
+      <Content style={{ padding: 10, marginBottom: 30 }}>
         <Modal isVisible={values.ShowTerms}>
           <TermsandConditon setShowTerms={this.setShowTerms} />
         </Modal>
         <ScrollView>
           <Form>
-            <Item>
+            <Item style={styles.itemTransparent}>
               <Input
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="Name *"
                 name="CustomerName"
                 label="Name *"
@@ -200,8 +223,10 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <Item style={styles.item_margin}>
+            <Item style={styles.itemTransparent}>
               <Input
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="Email *"
                 name="Email"
                 label="Email *"
@@ -234,14 +259,14 @@ const DocumentAttestation = ({
                 <View />
               </CountryPicker>
             </Item>
-            <Item style={styles.item_margin}>
+            <Item style={styles.itemTransparent}>
               <PhoneInput
                 ref={ref => {
                   this.phone = ref;
                 }}
                 textComponent={Input}
                 onPressFlag={this.onPressFlag}
-                style={{ paddingLeft: 5, padding: 15 }}
+                style={{ paddingLeft: 5, padding: 15, color: "#5B5656" }}
                 placeholder="Mobile *"
                 name="PersonalPhone"
                 label="Mobile *"
@@ -259,8 +284,10 @@ const DocumentAttestation = ({
                 <Text style={{ color: "red" }}>{values.errorPhone}</Text>
               )}
             </Item>
-            <Item>
+            <Item style={styles.itemTransparent}>
               <Input
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="Land Phone"
                 name="Office"
                 label="Land Phone"
@@ -278,8 +305,10 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <Item style={styles.item_margin}>
+            <Item style={styles.itemTransparent}>
               <Input
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="Address Line 1 *"
                 underline
                 name="Address1"
@@ -297,8 +326,10 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <Item style={styles.item_margin}>
+            <Item style={styles.itemTransparent}>
               <Input
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="Street Address *"
                 underline
                 name="Street"
@@ -316,14 +347,14 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <Item style={styles.item_margin}>
+            <Item style={styles.itemTransparent}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
                 style={styles.pickerStyle}
                 placeholder="State *"
-                placeholderStyle={{ color: "#bfc6ea" }}
-                placeholderIconColor="#007aff"
+                placeholderStyle={{ color: "#5B5656" }}
+                placeholderIconColor="#5B5656"
                 selectedValue={values.SelectedState}
                 onValueChange={value => setFieldValue("SelectedState", value)}
               >
@@ -353,8 +384,10 @@ const DocumentAttestation = ({
               )}
             </Item>
 
-            <Item style={styles.item_margin}>
+            <Item style={styles.itemTransparent}>
               <Input
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="City *"
                 name="City"
                 label="City *"
@@ -385,8 +418,10 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <Item style={styles.item_margin}>
+            <Item style={styles.itemTransparent}>
               <Input
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 placeholder="Country *"
                 name="AddressCountry"
                 label="Country *"
@@ -404,14 +439,14 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <Item style={styles.item_margin}>
+            <Item style={styles.itemTransparent}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
                 style={styles.pickerStyle}
                 placeholder="Nationality *"
-                placeholderStyle={{ color: "#bfc6ea" }}
-                placeholderIconColor="#007aff"
+                placeholderStyle={{ color: "#5B5656" }}
+                placeholderIconColor="#5B5656"
                 selectedValue={values.Nationality}
                 onValueChange={value => setFieldValue("Nationality", value)}
               >
@@ -432,8 +467,16 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <Item style={styles.item_margin}>
+            <View
+              style={[
+                styles.itemTransparent,
+                { padding: 10, borderRadius: 10 }
+              ]}
+           >
+            <Item style={styles.marginTop}>
               <Input
+                style={{ color: "#5B5656" }}
+                placeholderTextColor={"#5B5656"}
                 onTouchStart={ShowDateTimePicker}
                 placeholder="Passport Expiry Date *"
                 underline
@@ -448,6 +491,13 @@ const DocumentAttestation = ({
                 editable={Platform.OS === "ios" ? false : true}
               />
             </Item>
+              <View style={{ marginBottom: 10, marginTop: 10, padding: 10 }}>
+                <Text style={{ fontSize: 13 }}>
+                  Note: Passport Validity should be more than 6 months while
+                  applying for any Visa
+                </Text>
+              </View>
+            </View>
 
             <Item style={{ borderBottomWidth: 0 }}>
               {errors.PassportExiryDate && (
@@ -459,14 +509,13 @@ const DocumentAttestation = ({
                 </Text>
               )}
             </Item>
-            <View style={{ marginBottom: 10, marginTop: 10, padding: 10 }}>
-              <Text style={{ fontSize: 13 }}>
-                Note: Passport Validity should be more than 6 months while
-                applying for any Visa
-              </Text>
-            </View>
 
-            <View>
+          <View
+              style={[
+                styles.itemTransparent,
+                { padding: 10, borderRadius: 10 }
+              ]}
+           >
               <ListItem style={{ borderBottomWidth: 0 }}>
                 <CheckBox
                   color="green"
@@ -477,11 +526,12 @@ const DocumentAttestation = ({
                 />
                 <Body>
                   <View style={{ flexDirection: "row" }}>
-                    <Text> I have read and agree to the </Text>
+                  <Text style={{ color: "#5B5656" }}>I have read and agree to the </Text>
 
                     <TouchableOpacity onPress={() => this.setShowTerms(true)}>
                       <Text
                         style={{
+                          color: "#5B5656",
                           textDecorationLine: "underline",
                           marginLeft: -11
                         }}
@@ -493,6 +543,7 @@ const DocumentAttestation = ({
                   <TouchableOpacity onPress={() => this.setShowTerms(true)}>
                     <Text
                       style={{
+                        color: "#5B5656",
                         textDecorationLine: "underline"
                       }}
                     >
@@ -505,7 +556,7 @@ const DocumentAttestation = ({
 
             {values.AgreeTerms ? (
               <Button
-                style={{ backgroundColor: "#183E61", marginBottom: 50 }}
+                style={{ backgroundColor: "#183E61", marginBottom: 50, marginTop: 5  }}
                 full
                 rounded
                 onPress={checkPhoneValid}
@@ -514,7 +565,7 @@ const DocumentAttestation = ({
               </Button>
             ) : (
               <Button
-                style={{ backgroundColor: "#818182", marginBottom: 50 }}
+                style={{ backgroundColor: "#818182", marginBottom: 50, marginTop: 5  }}
                 full
                 rounded
               >
@@ -531,6 +582,7 @@ const DocumentAttestation = ({
           minimumDate={this.setExpDateInit()}
         />
       </Content>
+      </ImageBackground>
     </Container>
   );
 };
