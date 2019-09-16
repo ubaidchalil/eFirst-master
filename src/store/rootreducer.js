@@ -46,7 +46,7 @@ import {
 import { dashboard } from "../components/dashboard/reducer";
 
 import { onesignal, onesignalInfo } from "../components/onesignal/reducer";
-
+import { paymentdetail } from "../components/foloosi/reducer";
 const config = {
   key: "primary",
 
@@ -87,7 +87,8 @@ const config = {
     "srActivation",
     "statusBar",
     "onesignal",
-    "onesignalInfo"
+    "onesignalInfo",
+    "paymentdetail"
   ]
 };
 
@@ -128,7 +129,8 @@ const combinedReducers = {
   srActivation,
   statusBar,
   onesignal,
-  onesignalInfo
+  onesignalInfo,
+  paymentdetail
 };
 
 export default persistCombineReducers(config, combinedReducers);

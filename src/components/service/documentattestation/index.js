@@ -9,6 +9,8 @@ import {
   servicesData,
   updAttestationSRAmt
 } from "../action";
+
+import { getPaymentDetail } from "../../foloosi/action";
 import Loader from "../../styled/loader";
 import { View } from "react-native";
 import AlertView from "../../styled/alert-view";
@@ -34,38 +36,64 @@ class Container extends Component {
     this.props.getCountries(this.props.token.token);
     this.props.getcertificateType(this.props.token.token);
   };
+
   componentDidUpdate(prevProps) {
-    console.log(
-      "Doc Attest Upd: result = >",
-      JSON.stringify(this.props.documentattestation)
-    );
     if (
       this.props.documentattestation.success &&
       !prevProps.documentattestation.success
     ) {
       this.setState({ Requested: false, UpdatedSRAmount: true });
-      var SRID = this.props.documentattestation.data.SRID;
-      this.props.updAttestationSRAmt({
+      var SrId = this.props.documentattestation.data.SRID;
+      const { UserId } = this.props.profile.data.userdetail;
+      this.props.getPaymentDetail({
         token: this.props.token.token,
-        SRID: SRID,
-        amount: this.state.SRAmount
+        SrId,
+        Amount: this.state.SRAmount,
+        UserId
       });
     }
-    if (
-      !this.props.docSRAmUpdation.loading &&
-      !this.props.docSRAmUpdation.error &&
-      this.props.docSRAmUpdation.success &&
-      this.state.UpdatedSRAmount
-    ) {
-      this.setState({ UpdatedSRAmount: false });
+    if (this.props.paymentdetail.success && !prevProps.paymentdetail.success) {
       const { UserId } = this.props.profile.data.userdetail;
-      var SRID = this.props.documentattestation.data.SRID;
+      var { Id } = this.props.paymentdetail.data;
       this.props.navigation.navigate("PayfortPay", {
-        srid: SRID,
+        Id,
         userid: UserId
       });
     }
   }
+
+  // componentDidUpdate(prevProps) {
+  //   console.log(
+  //     "Doc Attest Upd: result = >",
+  //     JSON.stringify(this.props.documentattestation)
+  //   );
+  //   if (
+  //     this.props.documentattestation.success &&
+  //     !prevProps.documentattestation.success
+  //   ) {
+  //     this.setState({ Requested: false, UpdatedSRAmount: true });
+  //     var SRID = this.props.documentattestation.data.SRID;
+  //     this.props.updAttestationSRAmt({
+  //       token: this.props.token.token,
+  //       SRID: SRID,
+  //       amount: this.state.SRAmount
+  //     });
+  //   }
+  //   if (
+  //     !this.props.docSRAmUpdation.loading &&
+  //     !this.props.docSRAmUpdation.error &&
+  //     this.props.docSRAmUpdation.success &&
+  //     this.state.UpdatedSRAmount
+  //   ) {
+  //     this.setState({ UpdatedSRAmount: false });
+  //     const { UserId } = this.props.profile.data.userdetail;
+  //     var SRID = this.props.documentattestation.data.SRID;
+  //     this.props.navigation.navigate("PayfortPay", {
+  //       srid: SRID,
+  //       userid: UserId
+  //     });
+  //   }
+  // }
   render = () => {
     const {
       countries,
@@ -90,7 +118,7 @@ class Container extends Component {
     const success = documentattestation.success;
     return (
       <View style={{ flex: 1 }}>
-        <Loader loading={loading} />
+        {/* <Loader loading={loading} /> */}
         <DocumentAttestation
           setRequestedValue={this.setRequestedValue}
           {...this.props}
@@ -111,7 +139,8 @@ const mapStateToProps = ({
   docSRAmUpdation,
   profile,
   token,
-  srActivation
+  srActivation,
+  paymentdetail
 }) => ({
   countries,
   certificatetype,
@@ -120,7 +149,8 @@ const mapStateToProps = ({
   docSRAmUpdation,
   profile,
   token,
-  srActivation
+  srActivation,
+  paymentdetail
 });
 const mapDispatchToProps = dispatch => ({
   attestationPrice: payload => dispatch(attestationPrice(payload)),
@@ -128,7 +158,8 @@ const mapDispatchToProps = dispatch => ({
   getcertificateType: payload => dispatch(getcertificateType(payload)),
   docAttestationCreate: payload => dispatch(docAttestationCreate(payload)),
   servicesData: payload => dispatch(servicesData(payload)),
-  updAttestationSRAmt: payload => dispatch(updAttestationSRAmt(payload))
+  updAttestationSRAmt: payload => dispatch(updAttestationSRAmt(payload)),
+  getPaymentDetail: payload => dispatch(getPaymentDetail(payload))
 });
 
 export default connect(

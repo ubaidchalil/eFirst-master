@@ -13,8 +13,7 @@ class Container extends Component {
   }
 
   componentDidMount = () => {
-    
-    //  this.props.activateSR({ srid: srid, token: this.props.token.token });
+    //  this.props.activateSR({ Id: srid, token: this.props.token.token });
     //  this.setState({ Requested: true });
   };
 
@@ -26,10 +25,10 @@ class Container extends Component {
       this.state.Requested
     ) {
       this.setState({ Requested: false });
-      const srid = this.props.navigation.state.params.srid;
-      
+      const Id = this.props.navigation.state.params.Id;
+
       this.props.navigation.navigate("PaymentSuccess", {
-        srid: srid,
+        Id: Id
       });
     }
   }
@@ -40,9 +39,9 @@ class Container extends Component {
     console.log("string===>", str);
     var n = str.indexOf("Success");
     console.log("n==>", n);
-    const srid = this.props.navigation.state.params.srid;
+    const Id = this.props.navigation.state.params.Id;
     if (n >= 0) {
-      //  this.props.activateSR({ srid: srid, token: this.props.token.token });
+      //  this.props.activateSR({ Id: Id, token: this.props.token.token });
       this.setState({ Requested: true, showWeb: false });
     }
     //    this.props.navigation.navigate("MyRequests");
@@ -50,9 +49,9 @@ class Container extends Component {
 
   render = () => {
     const { loading } = this.props.srActivation;
-    const srid = this.props.navigation.state.params.srid;
+    const { Id } = this.props.navigation.state.params;
 
-    console.log("SRId Payfort===>", srid);
+    console.log("Id Payfort===>", Id);
     const userid = this.props.navigation.state.params.userid;
     return (
       <View style={{ flex: 1 }}>
@@ -60,7 +59,7 @@ class Container extends Component {
         {this.state.showWeb && (
           <WebView
             source={{
-              uri: `https://efirstweb-stagingweb.azurewebsites.net/MobilePayment/Index?srid=${srid}&userId=${userid}`
+              uri: `https://staging.efirst.ae/foloosipayment/index/${Id}`
             }}
             userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
             style={{ marginTop: 20 }}

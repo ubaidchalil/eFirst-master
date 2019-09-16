@@ -87,3 +87,6 @@ export const MESSAGE_URL = `${BASE_URL}Message/Post`;
 /// ONE SIGNAL URLS ///
 export const REGISTER_ONESIGNAL_URL = `${BASE_URL}/OneSignal/RegisterOneSignalUser`;
 export const UNREGISTER_ONESIGNAL_URL = `${BASE_URL}/OneSignal/UnregisterOneSignalUsers`;
+
+/// FOLOOSI PAYMENT DETAILS ///
+export const PAYMENT_URL = `${BASE_URL}/api/FoloosiPayment`;
