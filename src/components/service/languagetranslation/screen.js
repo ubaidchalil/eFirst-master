@@ -981,17 +981,7 @@ const LanguageTranslation = ({
                   <View style={{ flexDirection: "row" }}>
                   <Text style={{ color: "#5B5656" }}>I have read and agree to the </Text>
 
-                    <TouchableOpacity onPress={() => setShowTerms(true)}>
-                      <Text
-                        style={{
-                          color: "#5B5656",
-                          textDecorationLine: "underline",
-                          marginLeft: -11
-                        }}
-                      >
-                        Terms and
-                      </Text>
-                    </TouchableOpacity>
+                   
                   </View>
                   <TouchableOpacity onPress={() => setShowTerms(true)}>
                     <Text
@@ -1000,7 +990,7 @@ const LanguageTranslation = ({
                         textDecorationLine: "underline"
                       }}
                     >
-                      Conditions of Service
+                    Terms and Conditions of Service
                     </Text>
                   </TouchableOpacity>
                 </Body>
@@ -1105,7 +1095,7 @@ export default withFormik({
       SelectedFromDocumentLanguageId,
       SelectedToDocumentLanguageId
     } = values;
-    if (SelectedFromDocumentLanguageId == SelectedToDocumentLanguageId) {
+    if (SelectedFromDocumentLanguageId == SelectedToDocumentLanguageId||Files.length === 0 ) {
       if (Files.length === 0) {
         setFieldValue("errorFileUpload", "Upload File is Required");
       }

@@ -12,6 +12,8 @@ import LanguageTranslation from "../components/service/languagetranslation";
 import SelectService from "../components/service/selectservice";
 import PayfortPay from "../components/service/payfort";
 import PaymentSuccess from "../components/service/payfort/success";
+import Foloosi from "../components/foloosi";
+import FoloosiSuccess from "../components/foloosi/success";
 import FAQStack from "./faq_stack";
 import Support from "../components/support";
 import AuthStack from "./accountstack";
@@ -38,6 +40,9 @@ export const RequestServiceStack = createStackNavigator(
     },
     PayfortPay: {
       screen: PayfortPay
+    },
+    Foloosi: {
+      screen: Foloosi
     },
     MyRequests: { screen: SRStack }
   },
@@ -93,6 +98,9 @@ const root = createSwitchNavigator(
     },
     PaymentSuccess: {
       screen: PaymentSuccess
+    },
+    FoloosiSuccess: {
+      screen: FoloosiSuccess
     }
   },
   {

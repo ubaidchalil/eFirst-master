@@ -55,9 +55,11 @@ class Container extends Component {
     if (this.props.paymentdetail.success && !prevProps.paymentdetail.success) {
       const { UserId } = this.props.profile.data.userdetail;
       var { Id } = this.props.paymentdetail.data;
-      this.props.navigation.navigate("PayfortPay", {
+      var { SRID } = this.props.documentattestation.data;
+      this.props.navigation.navigate("Foloosi", {
         Id,
-        userid: UserId
+        userid: UserId,
+        srid: SRID
       });
     }
   }

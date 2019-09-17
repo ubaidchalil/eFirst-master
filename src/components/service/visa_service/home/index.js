@@ -13,7 +13,7 @@ import {
 import Loader from "../../../styled/loader";
 import { View } from "react-native";
 import AlertView from "../../../styled/alert-view";
-
+import { getPaymentDetail } from "../../../foloosi/action";
 class Container extends Component {
   constructor(props) {
     super(props);
@@ -34,31 +34,57 @@ class Container extends Component {
     this.props.getCountries(this.props.token.token);
     this.props.getcertificateType(this.props.token.token);
   };
+
   componentDidUpdate(prevProps) {
     if (this.props.visaservice.success && !prevProps.visaservice.success) {
       this.setState({ Requested: false, UpdatedSRAmount: true });
-      var SRID = this.props.visaservice.data.Result.SRID;
-      this.props.updAttestationSRAmt({
+
+      var SrId = this.props.visaservice.data.Result.SRID;
+      const { UserId } = this.props.profile.data.userdetail;
+      this.props.getPaymentDetail({
         token: this.props.token.token,
-        SRID: SRID,
-        amount: this.state.totalBillAmt
+        SrId,
+        Amount: this.state.totalBillAmt,
+        UserId
       });
     }
-    if (
-      !this.props.docSRAmUpdation.loading &&
-      !this.props.docSRAmUpdation.error &&
-      this.props.docSRAmUpdation.success &&
-      this.state.UpdatedSRAmount
-    ) {
-      this.setState({ UpdatedSRAmount: false });
+
+    if (this.props.paymentdetail.success && !prevProps.paymentdetail.success) {
       const { UserId } = this.props.profile.data.userdetail;
-      var SRID = this.props.visaservice.data.Result.SRID;
-      this.props.navigation.navigate("PayfortPay", {
-        srid: SRID,
-        userid: UserId
+      var { Id } = this.props.paymentdetail.data;
+      var { SRID } = this.props.visaservice.data.Result;
+      this.props.navigation.navigate("Foloosi", {
+        Id,
+        userid: UserId,
+        srid: SRID
       });
     }
   }
+  // componentDidUpdate(prevProps) {
+  //   if (this.props.visaservice.success && !prevProps.visaservice.success) {
+  //     this.setState({ Requested: false, UpdatedSRAmount: true });
+  //     var SRID = this.props.visaservice.data.Result.SRID;
+  //     this.props.updAttestationSRAmt({
+  //       token: this.props.token.token,
+  //       SRID: SRID,
+  //       amount: this.state.totalBillAmt
+  //     });
+  //   }
+  //   if (
+  //     !this.props.docSRAmUpdation.loading &&
+  //     !this.props.docSRAmUpdation.error &&
+  //     this.props.docSRAmUpdation.success &&
+  //     this.state.UpdatedSRAmount
+  //   ) {
+  //     this.setState({ UpdatedSRAmount: false });
+  //     const { UserId } = this.props.profile.data.userdetail;
+  //     var SRID = this.props.visaservice.data.Result.SRID;
+  //     this.props.navigation.navigate("PayfortPay", {
+  //       srid: SRID,
+  //       userid: UserId
+  //     });
+  //   }
+  // }
   render = () => {
     const {
       countries,
@@ -105,7 +131,8 @@ const mapStateToProps = ({
   profile,
   token,
   srActivation,
-  visaservice
+  visaservice,
+  paymentdetail
 }) => ({
   countries,
   certificatetype,
@@ -115,7 +142,8 @@ const mapStateToProps = ({
   profile,
   token,
   srActivation,
-  visaservice
+  visaservice,
+  paymentdetail
 });
 const mapDispatchToProps = dispatch => ({
   attestationPrice: payload => dispatch(attestationPrice(payload)),
@@ -124,7 +152,8 @@ const mapDispatchToProps = dispatch => ({
   docAttestationCreate: payload => dispatch(docAttestationCreate(payload)),
   servicesData: payload => dispatch(servicesData(payload)),
   updAttestationSRAmt: payload => dispatch(updAttestationSRAmt(payload)),
-  visaServiceCreate: payload => dispatch(visaServiceCreate(payload))
+  visaServiceCreate: payload => dispatch(visaServiceCreate(payload)),
+  getPaymentDetail: payload => dispatch(getPaymentDetail(payload))
 });
 
 export default connect(

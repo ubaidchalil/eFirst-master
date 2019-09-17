@@ -22,6 +22,7 @@ class Container extends Component {
     }
     this.props.getExtLoginUrls("0");
   };
+
   async componentDidUpdate(prevProps) {
     if (this.props.login.success && !prevProps.login.success) {
       if (this.props.token) {
