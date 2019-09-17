@@ -226,14 +226,17 @@ class _Container extends Component {
 
     this.setState({ validationMsg: "" });
 
-    var validationErr = false;
+    var validationErr = "";
     docs.forEach(doc => {
       if (docsAttached.indexOf(doc) == -1 && docsNotRequired.indexOf(doc) == -1)
-        validationErr = true;
+        validationErr = "Please select all required files";
     });
 
+    if(this.state.iban == "")
+      validationErr = "Please fill the IBAN No.";
+
     if (validationErr) {
-      this.setState({ validationMsg: "Please select all required files" });
+      this.setState({ validationMsg: validationErr });
       return;
     }
 
@@ -554,7 +557,7 @@ class _Container extends Component {
                 <Input
                   style={{ fontSize: 16, color: "#FFF" }}
                   placeholderTextColor={"#FFF"}
-                  placeholder="IBAN Number"
+                  placeholder="IBAN Number *"
                   name="Iban"
                   label="Iban"
                   onChangeText={value => this.setState({ iban: value })}
