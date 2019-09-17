@@ -10,8 +10,6 @@ import {
   StyleProvider,
   Icon
 } from "native-base";
-import getTheme from "../../../../native-base-theme/components";
-import material from "../../../../native-base-theme/variables/material";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
@@ -199,6 +197,15 @@ const RegistrationForm = ({
             <Text>Register</Text>
           </Button>
         
+          <Button
+            style={[styles.marginTop, { borderWidth: 1, borderColor: "#FFF" }]}
+            full
+            transparent
+            onPress={() => navigation.navigate("Auth")}
+          >
+            <Text style={{ color: "#FFF" }}>SIGN IN</Text>
+          </Button>
+
         </ScrollView>
       </View>
     </View>
