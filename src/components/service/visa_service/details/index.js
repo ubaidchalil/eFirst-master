@@ -72,6 +72,7 @@ class _Container extends Component {
 
     this.props.navigation.navigate("VisaServiceHome", {
       data: _data,
+      passportExpiry : this.props.navigation.state.params.passportExpiry,
       docItem
     });
   };

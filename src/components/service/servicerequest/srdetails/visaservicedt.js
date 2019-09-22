@@ -123,6 +123,20 @@ export default class VisaServiceDt extends Component {
         </View>
 
         {this.renderPageData()}
+        
+        {this.props.pageData[this.props.pageData.length - 1].IBANNumber && (
+          <Item>
+            <Text style={{ padding: 10, fontWeight: "bold" }}>
+              IBAN Number :{" "}
+            </Text>
+            <Text style={{ padding: 10 }}>
+              {
+                this.props.pageData[this.props.pageData.length - 1].IBANNumber
+                  .value
+              }
+            </Text>
+          </Item>
+        )}
         {this.props.pageData[this.props.pageData.length - 1]
           .AdditionalNotes && (
           <Item>
@@ -133,19 +147,6 @@ export default class VisaServiceDt extends Component {
               {
                 this.props.pageData[this.props.pageData.length - 1]
                   .AdditionalNotes.value
-              }
-            </Text>
-          </Item>
-        )}
-        {this.props.pageData[this.props.pageData.length - 1].IBANNumber && (
-          <Item>
-            <Text style={{ padding: 10, fontWeight: "bold" }}>
-              IBAN Number :{" "}
-            </Text>
-            <Text style={{ padding: 10 }}>
-              {
-                this.props.pageData[this.props.pageData.length - 1].IBANNumber
-                  .value
               }
             </Text>
           </Item>

@@ -237,7 +237,7 @@ class _Container extends Component {
 
     if (validationErr) {
       this.setState({ validationMsg: validationErr });
-      return;
+     // return;
     }
 
     var pageData = this.props.navigation.state.params.pageData;
@@ -285,7 +285,8 @@ class _Container extends Component {
       docs: this.props.navigation.state.params.details.docs,
       docsAttached: this.state.docsAttached,
       docItem: this.state.docItem,
-      docsAndPayment: docsAndPayment
+      docsAndPayment: docsAndPayment,
+      passportExpiry: this.props.navigation.state.params.details.PassportExpiry ? false : true
     });
   };
 
