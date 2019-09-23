@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { View, WebView } from "react-native";
-
+import { servicesData } from "../service/action";
 import { PAYMENT_WEB_URL } from "../../constants";
 import success from "./success";
+import Loader from "../styled/loader";
 
 class Container extends Component {
   constructor(props) {
@@ -12,31 +13,58 @@ class Container extends Component {
       token: "",
       Requested: false,
       showWeb: true,
-      type: "success"
+      type: "success",
+      loading: false
     };
   }
   componentDidUpdate() {
     const { srid } = this.props.navigation.state.params;
-    console.log(this.props.navigation.state.params);
+
     if (this.state.Requested) {
-      this.props.navigation.navigate("FoloosiSuccess", {
-        srid
-      });
+      // this.props.navigation.navigate("FoloosiSuccess", {
+      //   srid
+      // });
+      if (this.state.type == "success") {
+        const { token } = this.props.token;
+        const statusId = null;
+        this.props.servicesData({ statusId, token });
+
+        this.props.navigation.navigate("UserActions", {
+          headerTitle: "My Requests",
+          noDataLabel: "No recent service request"
+        });
+      } else {
+        this.props.navigation.navigate("SelectService");
+      }
     }
   }
+  showAndHideLoader = val => {
+    console.log("On Load===>", val);
+    this.setState({ loading: val });
+  };
   _onNavigationStateChange = webViewState => {
-    console.log("urls =>", webViewState.url);
     var str = webViewState.url;
-    console.log("string===>", str);
+    console.log("str========>", str);
     var s = str.indexOf("Success");
-    var e = str.indexOf("Error Occured");
+    var e = str.indexOf("Error");
     if (s >= 0) {
       this.WebView.stopLoading();
-      this.setState({ Requested: true, showWeb: false, type: "success" });
+      this.setState({
+        Requested: true,
+        showWeb: false,
+        type: "success",
+        loading: false
+      });
     }
     if (e >= 0) {
+      console.log("Error========>", e);
       this.WebView.stopLoading();
-      this.setState({ Requested: true, showWeb: false, type: "error" });
+      this.setState({
+        Requested: true,
+        showWeb: false,
+        type: "error",
+        loading: false
+      });
     }
   };
 
@@ -45,6 +73,7 @@ class Container extends Component {
 
     return (
       <View style={{ flex: 1 }}>
+        <Loader loading={this.state.loading} />
         {this.state.showWeb && (
           <WebView
             source={{
@@ -56,6 +85,8 @@ class Container extends Component {
             ref={c => {
               this.WebView = c;
             }}
+            onLoadStart={() => this.showAndHideLoader(true)}
+            onLoadEnd={() => this.showAndHideLoader(false)}
           />
         )}
       </View>
@@ -67,8 +98,10 @@ const mapStateToProps = ({ extUserInfo, token }) => ({
   extUserInfo,
   token
 });
-
+const mapDispatchToProps = dispatch => ({
+  servicesData: payload => dispatch(servicesData(payload))
+});
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(Container);

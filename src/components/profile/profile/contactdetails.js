@@ -21,9 +21,9 @@ import {
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
-import PhoneInput from "react-native-phone-input";
+import PhoneInput from "../../../../tmp/react-native-phone-input/lib";
 import CountryPicker from "react-native-country-picker-modal";
-
+import closeImgLight from "../../../Assets/close-btn.png";
 const ContactDetails = ({
   handleSubmit,
   setFieldValue,
@@ -44,6 +44,16 @@ const ContactDetails = ({
     setFieldValue("Phone", `+${country.callingCode}`);
   };
 
+  checkPhoneValid = () => {
+    setFieldValue("phoneError", null);
+    if (values.Phone) {
+      if (!this.phone.isValidNumber()) {
+        setFieldValue("phoneError", "Invalid Format");
+        return;
+      }
+    }
+    handleSubmit();
+  };
   return (
     <View>
       <View
@@ -68,13 +78,7 @@ const ContactDetails = ({
               <Icon style={{ color: "black", fontSize: 25 }} name="create" />
             </Button>
           ) : (
-            <Button
-              transparent
-              onPress={() => {
-                handleSubmit();
-                setFieldValue("ShowEditContact", false);
-              }}
-            >
+            <Button transparent onPress={checkPhoneValid}>
               <Icon
                 style={{ color: "black", fontSize: 25 }}
                 name="md-checkmark-circle"
@@ -103,6 +107,8 @@ const ContactDetails = ({
                       cca2={values.cca2}
                       styles={darkTheme}
                       hideAlphabetFilter={true}
+                      closeButtonImage={closeImgLight}
+                      closeable={true}
                     >
                       <View />
                     </CountryPicker>
@@ -112,10 +118,12 @@ const ContactDetails = ({
                       ref={ref => {
                         this.phone = ref;
                       }}
+                      textStyle={{ fontSize: 13 }}
                       textComponent={Input}
                       onPressFlag={this.onPressFlag}
-                      style={{ paddingLeft: 5, padding: 10, fontSize: 13 }}
+                      style={{ paddingLeft: 5, padding: 10, fontSize: 9 }}
                       placeholder="Phone"
+                      flagStyle={{ width: 30, height: 20 }}
                       name="Phone"
                       label="Phone *"
                       keyboardType="numeric"
@@ -129,6 +137,18 @@ const ContactDetails = ({
                   </Item>
                 </View>
               )}
+              <View>
+                <Item style={{ borderBottomWidth: 0, padding: 10 }}>
+                  {values.phoneError && (
+                    <Text
+                      style={{ color: "red", fontSize: 13 }}
+                      visible={values.phoneError}
+                    >
+                      {values.phoneError}
+                    </Text>
+                  )}
+                </Item>
+              </View>
             </Col>
           </Row>
           <Row>
@@ -190,28 +210,30 @@ const ContactDetails = ({
 
 export default withFormik({
   mapPropsToValues: ({ userConatctDetailCreate, contactdetail }) => ({
-    Phone: contactdetail.Phone,
+    Phone: contactdetail.Phone ? contactdetail.Phone : "+971",
     Email: contactdetail.Email,
     Website: contactdetail.Website,
     Addressline1: contactdetail.Addressline1,
     ShowEditContact: false,
     cca2: "AE",
     callingCode: "971",
+    phoneError: null,
     userConatctDetailCreate
   }),
   validateOnChange: false,
 
-  validationSchema: Yup.object().shape({
-    ShowEditContact: Yup.boolean(),
-    Phone: Yup.string().when("ShowEditContact", {
-      is: true,
-      then: Yup.string()
-        .nullable()
-        .required("Must enter company name")
-    })
-  }),
+  // validationSchema: Yup.object().shape({
+  //   ShowEditContact: Yup.boolean(),
+  //   Phone: Yup.string().when("ShowEditContact", {
+  //     is: true,
+  //     then: Yup.string()
+  //       .nullable()
+  //       .required("Must enter company name")
+  //   })
+  // }),
 
-  handleSubmit: (values, { props }) => {
+  handleSubmit: (values, { props, setFieldValue }) => {
+    setFieldValue("ShowEditContact", false);
     const token = props.token.token;
     const { Phone, Email, Website, Addressline1 } = values;
     values.userConatctDetailCreate({

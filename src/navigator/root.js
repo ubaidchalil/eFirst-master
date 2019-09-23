@@ -41,6 +41,7 @@ export const RequestServiceStack = createStackNavigator(
     PayfortPay: {
       screen: PayfortPay
     },
+    Support: { screen: Support },
     Foloosi: {
       screen: Foloosi
     },
@@ -60,7 +61,6 @@ const Tabs = createBottomTabNavigator(
     MyRequests: { screen: SRStack },
     Profile: { screen: Profile },
     FAQ: { screen: FAQStack },
-    Support: { screen: Support },
     VisaServiceScreen: { screen: VisaServiceScreen }
   },
   {

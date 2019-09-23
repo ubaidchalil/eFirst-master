@@ -15,10 +15,7 @@ class Container extends Component {
         <Loader loading={loading} />
         <Support {...this.props} />
         {success && (
-          <AlertView
-            type="success"
-            message="Your request has been submitted"
-          />
+          <AlertView type="success" message="Your request has been submitted" />
         )}
       </View>
     );

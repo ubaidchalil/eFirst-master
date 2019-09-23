@@ -26,7 +26,7 @@ class Container extends Component {
         {error ? <AlertView type="error" message="Invalid code" /> : null}
         <AlertView
           type="success"
-          message="Please check your email to get verification code"
+          message="Please check your email for verification code"
         />
       </View>
     );

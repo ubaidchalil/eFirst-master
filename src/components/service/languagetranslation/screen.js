@@ -37,7 +37,7 @@ import TermsandConditon from "../../termsandcondition";
 import { validateFileTypeAndSizeForTranslation } from "../../../constants";
 var ImagePicker = require("react-native-image-picker");
 import DocumentPicker from "react-native-document-picker";
-import PhoneInput from "react-native-phone-input";
+import PhoneInput from "../../../../tmp/react-native-phone-input/lib";
 import CountryPicker from "react-native-country-picker-modal";
 import closeImgLight from "../../../Assets/close-btn.png";
 const deviceWidth = Dimensions.get("window").width;
@@ -382,7 +382,7 @@ const LanguageTranslation = ({
               fontWeight: "bold"
             }}
           >
-            TRANSLATION SERVICE
+            Applicant details
           </Text>
         </View>
         <Right />

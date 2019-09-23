@@ -2,11 +2,19 @@ import React, { Component } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Container, Footer, FooterTab, Button, Text, Icon } from "native-base";
 import { NavigationActions } from "react-navigation";
-import { servicesData } from "../components/service/action";
 import IconAntDesign from "react-native-vector-icons/AntDesign";
 import { connect } from "react-redux";
 import { DashboardData } from "../components/dashboard/action";
-
+import { profileData } from "../components/profile/action";
+import {
+  servicesData,
+  countries,
+  getcertificateType,
+  getdoclanguage,
+  documentationTypes,
+  serviceRequestData
+} from "../components/service/action";
+import { FAQCategoryData, clearFaq } from "../components/faq/action";
 class FooterTabs extends Component {
   navigateToScreen = route => () => {
     const resetAction = NavigationActions.reset({
@@ -16,6 +24,17 @@ class FooterTabs extends Component {
 
     this.props.navigation.dispatch(resetAction);
   };
+  componentDidMount() {
+    const { token } = this.props.token;
+    this.props.DashboardData(token);
+    this.props.profileData(token);
+    this.props.ClearFaq();
+    this.props.FAQCategoryData(token);
+    this.props.countries(token);
+    this.props.getcertificateType(token);
+    this.props.getdoclanguage(token);
+    this.props.documentationTypes(token);
+  }
   getServiceData() {
     const { token } = this.props.token;
     const statusId = null;
@@ -114,7 +133,15 @@ const mapStateToProps = ({ services, token }) => ({
 });
 const mapDispatchToProps = dispatch => ({
   servicesData: payload => dispatch(servicesData(payload)),
-  DashboardData: payload => dispatch(DashboardData(payload))
+  DashboardData: payload => dispatch(DashboardData(payload)),
+  profileData: payload => dispatch(profileData(payload)),
+  FAQCategoryData: payload => dispatch(FAQCategoryData(payload)),
+  ClearFaq: () => dispatch(clearFaq()),
+  countries: payload => dispatch(countries(payload)),
+  getcertificateType: payload => dispatch(getcertificateType(payload)),
+  getdoclanguage: payload => dispatch(getdoclanguage(payload)),
+  documentationTypes: payload => dispatch(documentationTypes(payload)),
+  serviceRequestData: payload => dispatch(serviceRequestData(payload))
 });
 
 export default connect(

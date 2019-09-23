@@ -21,8 +21,9 @@ import {
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { Color } from "../../../constants";
-import PhoneInput from "react-native-phone-input";
+import PhoneInput from "../../../../tmp/react-native-phone-input/lib";
 import CountryPicker from "react-native-country-picker-modal";
+import closeImgLight from "../../../Assets/close-btn.png";
 
 const OfficeDetails = ({
   handleSubmit,
@@ -49,6 +50,16 @@ const OfficeDetails = ({
     setFieldValue("CompanyPhone", `+${country.callingCode}`);
   };
 
+  checkPhoneValid = () => {
+    setFieldValue("phoneError", null);
+    if (values.CompanyPhone) {
+      if (!this.phone.isValidNumber()) {
+        setFieldValue("phoneError", "Invalid Format");
+        return;
+      }
+    }
+    handleSubmit();
+  };
   return (
     <View>
       <View
@@ -73,7 +84,7 @@ const OfficeDetails = ({
               <Icon style={{ color: "black", fontSize: 25 }} name="create" />
             </Button>
           ) : (
-            <Button transparent onPress={submit}>
+            <Button transparent onPress={checkPhoneValid}>
               <Icon
                 style={{ color: "black", fontSize: 25 }}
                 name="md-checkmark-circle"
@@ -131,6 +142,8 @@ const OfficeDetails = ({
                       cca2={values.cca2}
                       styles={darkTheme}
                       hideAlphabetFilter={true}
+                      closeButtonImage={closeImgLight}
+                      closeable={true}
                     >
                       <View />
                     </CountryPicker>
@@ -141,8 +154,10 @@ const OfficeDetails = ({
                         this.phone = ref;
                       }}
                       textComponent={Input}
+                      textStyle={{ fontSize: 13 }}
                       onPressFlag={this.onPressFlag}
                       style={{ paddingLeft: 5, padding: 10, fontSize: 13 }}
+                      flagStyle={{ width: 30, height: 20 }}
                       placeholder="Phone"
                       name="CompanyPhone"
                       label="Phone *"
@@ -157,6 +172,18 @@ const OfficeDetails = ({
                   </Item>
                 </View>
               )}
+              <View>
+                <Item style={{ borderBottomWidth: 0, padding: 10 }}>
+                  {values.phoneError && (
+                    <Text
+                      style={{ color: "red", fontSize: 13 }}
+                      visible={values.phoneError}
+                    >
+                      {values.phoneError}
+                    </Text>
+                  )}
+                </Item>
+              </View>
             </Col>
           </Row>
           <Row>
@@ -215,24 +242,28 @@ export default withFormik({
   mapPropsToValues: ({ userOfficeAddressCreate, officedetail }) => ({
     Company: officedetail.Company ? officedetail.Company : "",
     CompanyEmail: officedetail.CompanyEmail ? officedetail.CompanyEmail : "",
-    CompanyPhone: officedetail.CompanyPhone ? officedetail.CompanyPhone : "",
+    CompanyPhone: officedetail.CompanyPhone
+      ? officedetail.CompanyPhone
+      : "+971",
     CompanyWebsite: officedetail.CompanyWebsite
       ? officedetail.CompanyWebsite
       : "",
     ShowEditOffice: false,
     cca2: "AE",
     callingCode: "971",
+    phoneError: null,
     userOfficeAddressCreate
   }),
   validateOnChange: false,
 
-  validationSchema: Yup.object().shape({
-    Company: Yup.string()
-      .nullable()
-      .required("Required")
-  }),
+  // validationSchema: Yup.object().shape({
+  //   Company: Yup.string()
+  //     .nullable()
+  //     .required("Required")
+  // }),
 
-  handleSubmit: (values, { props }) => {
+  handleSubmit: (values, { props, setFieldValue }) => {
+    setFieldValue("ShowEditOffice", false);
     const token = props.token.token;
     const { Company, CompanyEmail, CompanyPhone, CompanyWebsite } = values;
     console.log(props);

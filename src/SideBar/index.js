@@ -51,10 +51,10 @@ class Container1 extends Component {
       this.props.navigation.navigate("Auth");
       this.props.clearLogoutState();
     }
-    if (this.props.onesignal.success && !prevProps.onesignal.success) {
-      const { token } = this.props.token;
-      this.props.Logout(token);
-    }
+    // if (this.props.onesignal.success && !prevProps.onesignal.success) {
+    //   const { token } = this.props.token;
+    //   this.props.Logout(token);
+    // }
   }
 
   onLogout = async () => {
@@ -63,6 +63,7 @@ class Container1 extends Component {
     const data = { UserId, PlayerId };
     const token = this.props.token.token;
     this.props.unregisterOnesignal({ data, token });
+    setTimeout(() => this.props.Logout(token), 50);
   };
 
   render() {

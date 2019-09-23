@@ -35,7 +35,7 @@ import { Color } from "../../../constants";
 import MyHeader from "../../../Header";
 import Modal from "react-native-modal";
 import TermsandConditon from "../../termsandcondition";
-import PhoneInput from "react-native-phone-input";
+import PhoneInput from "../../../../tmp/react-native-phone-input/lib";
 import CountryPicker from "react-native-country-picker-modal";
 
 const deviceWidth = Dimensions.get("window").width;
@@ -184,6 +184,28 @@ const DocumentAttestation = ({
         source={require("../../../Assets/bg_all.jpg")}
         style={{ width: "100%", height: "100%" }}
       >
+        <View
+          style={{
+            backgroundColor: "rgba(52, 52, 52, 0.3)",
+            flexDirection: "row",
+            paddingHorizontal: 10,
+            paddingVertical: 10
+          }}
+        >
+          <View>
+            <Text
+              style={{
+                color: "#FFF",
+                fontSize: 14,
+                marginLeft: 5,
+                fontWeight: "bold"
+              }}
+            >
+              Applicant details
+            </Text>
+          </View>
+          <Right />
+        </View>
         <Content style={{ padding: 10, marginBottom: 30 }}>
           <Modal
             style={{ top: 40, marginBottom: 50 }}

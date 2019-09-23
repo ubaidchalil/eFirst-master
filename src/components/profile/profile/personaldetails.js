@@ -41,9 +41,13 @@ const PersonalDetails = ({
   };
 
   dateFormat = date => {
-    return (
-      date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()
-    );
+    return date
+      ? new Date(date).getDate() +
+          "/" +
+          (new Date(date).getMonth() + 1) +
+          "/" +
+          new Date(date).getFullYear()
+      : "";
   };
 
   return (
@@ -70,13 +74,7 @@ const PersonalDetails = ({
               <Icon style={{ color: "black", fontSize: 25 }} name="create" />
             </Button>
           ) : (
-            <Button
-              transparent
-              onPress={() => {
-                handleSubmit();
-                setFieldValue("ShowEditPersonal", false);
-              }}
-            >
+            <Button transparent onPress={handleSubmit}>
               <Icon
                 style={{ color: "black", fontSize: 25 }}
                 name="md-checkmark-circle"
@@ -91,7 +89,7 @@ const PersonalDetails = ({
             <Col>
               {!values.ShowEditPersonal ? (
                 <Text style={styles.text_detail}>
-                  Birthday: {this.dateFormat(new Date(personaldetail.Dob))}
+                  Birthday: {this.dateFormat(personaldetail.Dob)}
                 </Text>
               ) : (
                 <Item>
@@ -101,7 +99,7 @@ const PersonalDetails = ({
                     name="DOB"
                     label="Birthday"
                     onChangeText={value => setFieldValue("DOB", value)}
-                    value={this.dateFormat(new Date(values.DOB))}
+                    value={this.dateFormat(values.DOB)}
                     error={touched.DOB && errors.DOB}
                     underlineColor={Color.secondary}
                     style={{ fontSize: 13 }}
@@ -150,6 +148,7 @@ const PersonalDetails = ({
           isVisible={values.IsDatePickerVisible}
           onConfirm={HandleDatePicked}
           onCancel={HideDateTimePicker}
+          date={new Date("01/01/1947")}
         />
       </View>
     </View>
@@ -165,16 +164,8 @@ export default withFormik({
     userPersonalDetailCreate
   }),
   validateOnChange: false,
-  validationSchema: Yup.object().shape({
-    ShowEditPersonal: Yup.boolean(),
-    DOB: Yup.string().when("ShowEditPersonal", {
-      is: true,
-      then: Yup.string()
-        .nullable()
-        .required("Must enter DOB")
-    })
-  }),
-  handleSubmit: (values, { props }) => {
+  handleSubmit: (values, { props, setFieldValue }) => {
+    setFieldValue("ShowEditPersonal", false);
     const token = props.token.token;
     const { DOB, Gender } = values;
     values.userPersonalDetailCreate({ DOB, Gender, token });

@@ -116,6 +116,7 @@ export const userProfileCreate = payload => dispatch => {
 export const userPersonalDetailCreate = payload => dispatch => {
   const { token, ...bodyData } = payload;
   const body = JSON.stringify(bodyData);
+  console.log("body=====>", body);
   return openFetcher(
     async () => {
       const result = await fetch(USER_PERSDETL_CREATE_URL, {

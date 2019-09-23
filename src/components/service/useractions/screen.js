@@ -138,7 +138,7 @@ export default ({
                       service.SRID.toString().toLowerCase()
                     ).includes(state.searchText.toLowerCase())
                   )
-                  .map(service => {
+                  .map((service, index) => {
                     const res = getTextandBackgroundColor(
                       service.SRStatusName,
                       service.ProcessName
@@ -146,6 +146,7 @@ export default ({
 
                     return (
                       <TouchableOpacity
+                        key={index}
                         onPress={() => navigateToDetail(service.SRID)}
                       >
                         <Greeting
