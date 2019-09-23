@@ -500,12 +500,16 @@ const DocumentAttestation = ({
                     editable={Platform.OS === "ios" ? false : true}
                   />
                 </Item>
-                <View style={{ marginBottom: 10, marginTop: 10, padding: 10 }}>
-                  <Text style={{ fontSize: 13 }}>
-                    Note: Passport Validity should be more than 6 months while
-                    applying for any Visa
-                  </Text>
-                </View>
+                {!navigation.state.params.passportExpiry && (
+                    <View
+                      style={{ marginBottom: 10, marginTop: 10, padding: 10 }}
+                    >
+                      <Text style={{ fontSize: 13 }}>
+                        Note: Passport Validity should be more than 6 months
+                        while applying for any Visa
+                      </Text>
+                    </View>
+                  ) && <View>No Expiry</View>}
               </View>
 
               <Item style={{ borderBottomWidth: 0 }}>
@@ -598,7 +602,11 @@ const DocumentAttestation = ({
             isVisible={values.IsDatePickerVisible}
             onConfirm={HandleDatePicked}
             onCancel={HideDateTimePicker}
-            minimumDate={this.setExpDateInit()}
+            minimumDate={
+              navigation.state.params.passportExpiry
+                ? this.setExpDateInit()
+                : new Date()
+            }
           />
         </Content>
       </ImageBackground>
